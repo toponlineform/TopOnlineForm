@@ -1,0 +1,208 @@
+:root {
+  --sarkari-red: #ab1e1e;
+  --sarkari-green: #008000; /* Ye Green Note ke liye use hoga */
+  --sarkari-blue: #1e73be; /* Ye Naya Professional Blue (Tables ke liye) */
+  --border-color: #000000;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+a { text-decoration: none; }
+
+/* --- STICKY WRAPPER --- */
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* --- HEADER --- */
+.header {
+  background-color: var(--sarkari-red);
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+}
+.header h1 { margin: 0; font-size: 28px; font-weight: 900; letter-spacing: 1px; }
+.header p { margin: 5px 0 0; font-size: 14px; color: #ffe6e6; }
+
+/* --- NAVBAR --- */
+.navbar {
+  background-color: #000;
+  text-align: center;
+  border-top: 2px solid white;
+}
+.navbar a {
+  display: inline-block;
+  color: white;
+  padding: 12px 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.navbar a:hover { background-color: #444; color: #ffcc00; }
+
+/* --- CLEAN NOTE (Ye Green hi rahega) --- */
+.clean-note {
+  background-color: #e6fffa;
+  border-bottom: 1px solid #b2f5ea;
+  padding: 8px;
+  text-align: center;
+  color: #006600; /* Dark Green Text */
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* --- GRID SYSTEM --- */
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- ACTION CELLS (Buttons & Search inside Grid) --- */
+.action-cell {
+  margin-bottom: 5px; 
+}
+
+/* Social Buttons */
+.social-btn {
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.full-width {
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.whatsapp { background-color: #25D366; }
+.whatsapp:hover { background-color: #128C7E; }
+
+.telegram { background-color: #0088cc; }
+.telegram:hover { background-color: #005580; }
+
+/* Grid Search Form */
+.grid-search-form {
+  display: flex;
+  width: 100%;
+}
+
+.grid-search-form input {
+  flex: 1; 
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+}
+
+.grid-search-form button {
+  padding: 11px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+.grid-search-form button:hover { background-color: #000; }
+
+
+/* --- BOXES --- */
+.box-column {
+  border: 2px solid var(--border-color);
+  background: white;
+}
+
+.box-header {
+  background-color: var(--sarkari-red);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.box-list { list-style: none; padding: 0; margin: 0; }
+.box-list li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.box-list li a { color: #0000EE; }
+.box-list li a:hover { color: red; text-decoration: underline; }
+
+/* --- JOB DETAILS PAGE --- */
+.job-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background: white;
+}
+.job-title {
+  color: var(--sarkari-red);
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-bottom: 20px; 
+  border: 2px solid var(--border-color); 
+}
+
+th, td { 
+  border: 1px solid var(--border-color); 
+  padding: 12px; 
+  vertical-align: top; 
+}
+
+/* --- CHANGES HERE: Ab ye BLUE ho gaya hai --- */
+.green-header, .section-header { 
+  background-color: var(--sarkari-blue); /* Changed from Green to Blue */
+  color: white; 
+  text-align: center; 
+  font-size: 18px; 
+  font-weight: bold; 
+}
+
+.section-header { 
+  padding: 10px; 
+  margin-top: 20px; 
+  border: 2px solid var(--border-color); 
+}
+
+.important-links a, .click-here { 
+  color: blue !important; 
+  font-weight: bold; 
+  text-decoration: underline; 
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  .main-grid { grid-template-columns: 1fr; gap: 10px; padding: 10px; }
+  
+  .action-cell {
+    margin-bottom: 0px; 
+  }
+  
+  .navbar a { padding: 10px 8px; font-size: 12px; }
+}
