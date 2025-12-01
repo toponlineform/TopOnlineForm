@@ -5,7 +5,7 @@ export const jobsData = [
     shortTitle: "Bank of Baroda Apprentice Recruitment 2025",
     title: "Bank of Baroda Apprentice Recruitment 2025 Apply Online for 2700 Posts | Notification PDF",
     shortInfo: "Bank of Baroda (BOB) has released the official notification for the recruitment of 2700 Apprentice posts across various states. Candidates holding a Graduation Degree in any stream can apply online before the last date. Check State-wise Vacancy, Age Limit, Selection Process, and Exam Pattern here.",
-    postDate: "01/12/2025",
+    postDate: "11/11/2025",
     category: "Latest Jobs",
     
     // --- NEW: Salary / Stipend Added Here ---
