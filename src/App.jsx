@@ -12,7 +12,6 @@ import ActiveJobs from './ActiveJobs';
 // --- Navbar ---
 function Navbar() {
   const [searchTerm, setSearchTerm] = useState("");
-  const navigate = useNavigate();
   const handleSearch = (e) => {
     e.preventDefault();
     if(searchTerm.trim()) alert("Search functionality coming soon for: " + searchTerm); 
@@ -31,12 +30,12 @@ function Navbar() {
   );
 }
 
-// --- Home Component (SORTING FIXED HERE) ---
+// --- Home Component (FIXED SORTING: Newest ID First) ---
 function Home() {
-  // Helper to sort by ID descending (Badi ID upar aayegi)
+  // Helper to sort by ID descending (Badi ID upar)
   const sortNewest = (a, b) => b.id - a.id;
 
-  // Apply sorting to ALL categories consistently
+  // Sabhi categories par sortNewest lagaya hai
   const latestJobs = jobsData.filter(j => j.category === "Latest Jobs").sort(sortNewest).slice(0, 20);
   const admitCards = jobsData.filter(j => j.category === "Admit Card").sort(sortNewest).slice(0, 20);
   const results = jobsData.filter(j => j.category === "Result").sort(sortNewest).slice(0, 20);
@@ -81,7 +80,7 @@ function Home() {
   );
 }
 
-// --- Job Details (Sequence: Vacancy -> Salary -> Selection) ---
+// --- Job Details ---
 function JobDetails() {
   const { slug } = useParams();
   const job = jobsData.find((j) => j.slug === slug);
@@ -116,12 +115,14 @@ function JobDetails() {
       <p style={{marginBottom:'10px', textAlign:'justify'}}><strong>Post Date : </strong> {job.postDate}</p>
       <p style={{marginBottom:'20px', textAlign:'justify'}}><strong>Short Info : </strong> {job.shortInfo}</p>
       
+      {/* 1. Dates & Fees (Blue Headers) */}
       {job.importantDates.length > 0 && (
         <table><tbody><tr><th className="green-header">Dates</th><th className="green-header">Fees</th></tr>
         <tr><td><ul>{job.importantDates.map((d,i)=><li key={i}><strong>{d.label}:</strong> {d.value}</li>)}</ul></td>
         <td><ul>{job.applicationFee.map((f,i)=><li key={i}><strong>{f.category}:</strong> {f.amount}</li>)}</ul></td></tr></tbody></table>
       )}
       
+      {/* 2. Age Limit */}
       {job.ageLimit && (
         <>
           <div className="section-header">Age Limit</div>
@@ -137,6 +138,7 @@ function JobDetails() {
         </>
       )}
 
+      {/* 3. Vacancy Details */}
       {job.vacancyDetails.length > 0 && (
         <>
           <div className="section-header">Vacancy Details</div>
@@ -145,6 +147,7 @@ function JobDetails() {
         </>
       )}
 
+      {/* 4. State Wise Vacancy */}
       {job.stateWiseVacancy && (
         <>
           <div className="section-header">State Wise Vacancy Details</div>
@@ -162,6 +165,7 @@ function JobDetails() {
         </>
       )}
 
+      {/* 5. Salary */}
       {job.salary && (
         <>
           <div className="section-header">Pay Scale / Salary</div>
@@ -169,6 +173,7 @@ function JobDetails() {
         </>
       )}
 
+      {/* 6. Detailed Salary Table */}
       {job.salaryDetails && (
         <>
           <div className="section-header">Post Wise Salary / Pay Level</div>
@@ -185,6 +190,7 @@ function JobDetails() {
         </>
       )}
 
+      {/* 7. Selection Process */}
       {job.selectionProcess && (
         <>
           <div className="section-header">Selection Process</div>
@@ -192,6 +198,7 @@ function JobDetails() {
         </>
       )}
 
+      {/* 8. Exam Pattern (FIXED: Duplicate Row Removed) */}
       {job.examPattern && (
         <>
           <div className="section-header">Exam Pattern</div>
@@ -200,12 +207,14 @@ function JobDetails() {
             {job.examPattern.table && (
               <table><thead><tr style={{background: '#f2f2f2'}}><th>Subject</th><th>No. of Questions</th><th>Marks</th></tr></thead>
               <tbody>{job.examPattern.table.map((row, i) => (<tr key={i}><td>{row.subject}</td><td>{row.questions}</td><td>{row.marks}</td></tr>))}
-              <tr style={{fontWeight: 'bold', background: '#e9e9e9'}}><td>Total</td><td>100</td><td>400</td></tr></tbody></table>
+              {/* Yahan se maine hardcoded Total row hata di hai, kyunki data me already hai */}
+              </tbody></table>
             )}
           </div>
         </>
       )}
 
+      {/* 9. How to Apply */}
       {job.howToApply && (
         <>
           <div className="section-header">How to Apply</div>
