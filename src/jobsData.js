@@ -2,7 +2,13 @@ export const jobsData = [
   {
     id: 1,
     slug: "bank-of-baroda-apprentice-recruitment-2025",
+    
+    // 1. HOME PAGE KE LIYE CHOTA NAAM
+    shortTitle: "Bank of Baroda Apprentice Recruitment 2025",
+    
+    // 2. JOB PAGE (SEO) KE LIYE BADA NAAM
     title: "Bank of Baroda Apprentice Recruitment 2025 Apply Online for 2700 Posts | Notification PDF",
+    
     shortInfo: "Bank of Baroda (BOB) has released the official notification for the recruitment of 2700 Apprentice posts across various states. Candidates holding a Graduation Degree in any stream can apply online before the last date. Check State-wise Vacancy, Age Limit, and Selection Process here.",
     postDate: "01/12/2025",
     category: "Latest Jobs",
@@ -30,9 +36,9 @@ export const jobsData = [
     ],
 
     links: {
-      applyOnline: "https://www.bankofbaroda.in/career",
-      notification: "https://www.bankofbaroda.in/career",
-      officialWebsite: "https://www.bankofbaroda.in/"
+      applyOnline: "https://nats.education.gov.in/",
+      notification: "chrome-extension://kdpelmjpfafjppnhbloffcjpeomlnpah/https://bankofbaroda.bank.in/-/media/Project/BOB/CountryWebsites/India/Career/2025/25-11/11-11-2025-Advertisement-Apprenticeship-10-34.pdf",
+      officialWebsite: "https://bankofbaroda.bank.in/career/current-opportunities"
     }
   }
 ];
