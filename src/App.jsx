@@ -61,7 +61,12 @@ function Home() {
       <div className="box-header">{title}</div>
       <ul className="box-list">
         {jobs.length > 0 ? jobs.map(job => (
-          <li key={job.id}><Link to={`/${job.slug}`}>{job.title}</Link></li>
+          <li key={job.id}>
+            <Link to={`/${job.slug}`}>
+                {/* --- UPDATE: Short Title Logic Added Here --- */}
+                {job.shortTitle ? job.shortTitle : job.title}
+            </Link>
+          </li>
         )) : <li style={{padding:'10px', textAlign:'center', color:'#666'}}>Coming Soon...</li>}
         <li style={{textAlign:'right'}}><Link to={linkTo} style={{fontWeight:'bold', fontSize:'13px'}}>View More...</Link></li>
       </ul>
@@ -98,11 +103,11 @@ function JobDetails() {
   const job = jobsData.find((j) => j.slug === slug);
   if (!job) return <h2 style={{textAlign:'center', marginTop:'20px'}}>Job Not Found</h2>;
 
-  // 1. Date Converter Helper (27/10/2025 -> 2025-10-27)
+  // 1. Date Converter Helper
   const convertDate = (dateStr) => {
     if(!dateStr) return new Date().toISOString().split('T')[0];
     const parts = dateStr.split('/');
-    return `${parts[2]}-${parts[1]}-${parts[0]}`; // YYYY-MM-DD
+    return `${parts[2]}-${parts[1]}-${parts[0]}`; 
   };
 
   // 2. Find Last Date for Schema
@@ -110,7 +115,7 @@ function JobDetails() {
   const validThrough = lastDateItem ? convertDate(lastDateItem.value) : null;
   const datePosted = convertDate(job.postDate);
 
-  // 3. Schema Object Construction (Google Jobs Code)
+  // 3. Schema Object Construction
   const jobSchema = {
     "@context": "https://schema.org/",
     "@type": "JobPosting",
@@ -136,7 +141,7 @@ function JobDetails() {
     <div className="job-container">
       <SEO title={job.title} description={job.shortInfo} keywords={job.title} url={`https://toponlineform.com/${job.slug}`} />
       
-      {/* INJECT SCHEMA INTO HEAD (Adrishya Code for Google) */}
+      {/* INJECT SCHEMA INTO HEAD */}
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(jobSchema)}
