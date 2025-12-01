@@ -1,21 +1,21 @@
 export const jobsData = [
   
-  {
+    {
     id: 5,
     slug: "rrb-ntpc-recruitment-2025",
     shortTitle: "RRB NTPC Recruitment 2025",
-    title: "RRB NTPC Recruitment 2025 Apply Online for 8868 Posts (Graduate & UG) | Notification CEN 06/2025 & 07/2025",
-    shortInfo: "Railway Recruitment Board (RRB) has released the official notifications (CEN 06/2025 & CEN 07/2025) for the recruitment of Non-Technical Popular Categories (NTPC). A total of 8868 vacancies are available for Graduate and Undergraduate posts like Station Master, TTE, Clerk, and Goods Guard. Check Zone-wise Vacancy, Eligibility, and Exam Date here.",
-    postDate: "04/10/2025",
+    title: "RRB NTPC Recruitment 2025 Apply Online for 8113 Posts (Graduate & UG) | Notification CEN 05/2025 & 06/2025",
+    shortInfo: "Railway Recruitment Board (RRB) has released the official notifications (CEN 05/2025 & CEN 06/2025) for the recruitment of Non-Technical Popular Categories (NTPC). A total of 8113 vacancies are available for Graduate and Undergraduate posts like Station Master, TTE, Clerk, and Goods Guard. Check Zone-wise Vacancy, Eligibility, and Exam Date here.",
+    postDate: "02/12/2025",
     category: "Latest Jobs",
 
     salary: "Level 2 to Level 6 (As per 7th CPC)",
 
     importantDates: [
-      { label: "Application Start (Graduate)", value: "21/10/2025" },
-      { label: "Last Date (Graduate)", value: "27/11/2025" },
-      { label: "Application Start (Undergraduate)", value: "28/10/2025" },
-      { label: "Last Date (Undergraduate)", value: "04/12/2025 (Extended)" },
+      { label: "Application Start (Graduate)", value: "14/09/2025" },
+      { label: "Last Date (Graduate)", value: "13/10/2025" },
+      { label: "Application Start (Undergraduate)", value: "21/09/2025" },
+      { label: "Last Date (Undergraduate)", value: "20/10/2025" },
       { label: "Exam Date (CBT-1)", value: "To be notified" }
     ],
 
@@ -35,26 +35,47 @@ export const jobsData = [
     ],
 
     vacancyDetails: [
-      // Graduate Level Posts (CEN 06/2025)
-      { postName: "Chief Commercial cum Ticket Supervisor", totalPost: 161, eligibility: "Bachelor Degree" },
-      { postName: "Station Master", totalPost: 615, eligibility: "Bachelor Degree" },
-      { postName: "Goods Train Manager", totalPost: 3416, eligibility: "Bachelor Degree" },
-      { postName: "Junior Account Assistant cum Typist", totalPost: 921, eligibility: "Bachelor Degree + Typing" },
-      { postName: "Senior Clerk cum Typist", totalPost: 638, eligibility: "Bachelor Degree + Typing" },
-      // Undergraduate Level Posts (CEN 07/2025)
-      { postName: "Commercial cum Ticket Clerk", totalPost: 2424, eligibility: "12th Pass (50% Marks)" },
-      { postName: "Accounts Clerk cum Typist", totalPost: 384, eligibility: "12th Pass + Typing" },
-      { postName: "Junior Clerk cum Typist", totalPost: 163, eligibility: "12th Pass + Typing" },
-      { postName: "Trains Clerk", totalPost: 77, eligibility: "12th Pass (50% Marks)" }
+      // Graduate Level Posts (CEN 05/2025)
+      { postName: "Chief Commercial cum Ticket Supervisor", totalPost: 1736, eligibility: "Bachelor Degree" },
+      { postName: "Station Master", totalPost: 994, eligibility: "Bachelor Degree" },
+      { postName: "Goods Train Manager", totalPost: 3144, eligibility: "Bachelor Degree" },
+      { postName: "Junior Account Assistant cum Typist", totalPost: 1507, eligibility: "Bachelor Degree + Typing" },
+      { postName: "Senior Clerk cum Typist", totalPost: 732, eligibility: "Bachelor Degree + Typing" },
+      // Undergraduate Level Posts (CEN 06/2025)
+      { postName: "Commercial cum Ticket Clerk", totalPost: 2022, eligibility: "12th Pass (50% Marks)" },
+      { postName: "Accounts Clerk cum Typist", totalPost: 361, eligibility: "12th Pass + Typing" },
+      { postName: "Junior Clerk cum Typist", totalPost: 990, eligibility: "12th Pass + Typing" },
+      { postName: "Trains Clerk", totalPost: 72, eligibility: "12th Pass (50% Marks)" }
     ],
     
-    // Special Header for Table
     vacancyTableTitle: "Post Wise Vacancy Details (Graduate & UG)",
     vacancyColumnName: "Post Name",
 
-    // Note: State wise data is too large for RRB (Zone wise), so we keep it simplified or empty if not needed.
-    // If you want zone wise, we can add a link to PDF. For now, keeping it clean.
-
+    // --- 1. Zone Wise Vacancy (Corrected from Screenshot) ---
+    stateWiseVacancy: [
+        { state: "RRB AHMEDABAD", total: "79 (Grad) + 153 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB AJMER", total: "345 (Grad) + 116 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB BANGALORE", total: "241 (Grad) + 54 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB BHOPAL", total: "382 (Grad) + 123 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB BHUBANESWAR", total: "231 (Grad) + 18 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB BILASPUR", total: "864 (Grad) + 69 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB CHANDIGARH", total: "199 (Grad) + 24 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB CHENNAI", total: "187 (Grad) + 80 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB GORAKHPUR", total: "111 (Grad) + 173 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB GUWAHATI", total: "56 (Grad) + 135 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB JAMMU-SRINAGAR", total: "32 (Grad) + 137 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB KOLKATA", total: "685 (Grad) + 499 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB MALDA", total: "522 (Grad) + 196 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB MUMBAI", total: "596 (Grad) + 494 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB MUZAFFARPUR", total: "21 (Grad) + 39 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB PATNA", total: "23 (Grad) + 24 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB PRAYAGRAJ", total: "110 (Grad) + 303 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB RANCHI", total: "651 (Grad) + 56 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB SECUNDERABAD", total: "396 (Grad) + 272 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB SILIGURI", total: "21 (Grad) + 07 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB THIRUVANANTHAPURAM", total: "58 (Grad) + 86 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" }
+    ],
+    
     salaryDetails: [
       { post: "Station Master / Commercial Supervisor", level: "Level 6 (₹35,400 + Allowances)" },
       { post: "Goods Train Manager / Sr. Clerk", level: "Level 5 (₹29,200 + Allowances)" },
@@ -70,35 +91,44 @@ export const jobsData = [
       "Document Verification & Medical Exam"
     ],
 
+    // --- 3. Detailed Exam Pattern (CBT 1 & CBT 2) ---
     examPattern: {
       details: [
-        "Mode: Computer Based Test (CBT-1)",
-        "Duration: 90 Minutes",
-        "Total Questions: 100",
+        "Mode: Online Computer Based Test",
         "Negative Marking: 1/3rd Marks deducted for each wrong answer."
       ],
-      table: [
+      // CBT 1 Table
+      generalistObjective: [
         { subject: "General Awareness", questions: 40, marks: 40 },
         { subject: "Mathematics", questions: 30, marks: 30 },
-        { subject: "General Intelligence & Reasoning", questions: 30, marks: 30 },
-        // Total Auto Calculated: 100 Q, 100 Marks
+        { subject: "General Intelligence & Reasoning", questions: 30, marks: 30 }
+      ],
+      // CBT 2 Table
+      specialistObjective: [
+        { subject: "General Awareness", questions: 50, marks: 50 },
+        { subject: "Mathematics", questions: 35, marks: 35 },
+        { subject: "General Intelligence & Reasoning", questions: 35, marks: 35 }
       ]
     },
 
     howToApply: [
       "Visit the official RRB website (rrbapply.gov.in).",
       "Create an account if you are a new user.",
-      "Select the notification (CEN 06/2025 for Graduate OR CEN 07/2025 for UG).",
+      "Select the notification (CEN 05/2025 for Graduate OR CEN 06/2025 for UG).",
       "Fill in the application form and upload required documents.",
       "Pay the application fee online.",
       "Select your RRB Zone carefully (Zone cannot be changed later).",
       "Submit the form and print the receipt."
     ],
 
+    // --- 4. More Important Links (From Screenshot) ---
     links: {
       applyOnline: "https://www.rrbapply.gov.in/", 
       notification: "https://indianrailways.gov.in/railwayboard/view_section.jsp?lang=0&id=0,7,1281", 
-      officialWebsite: "https://indianrailways.gov.in/" 
+      officialWebsite: "https://indianrailways.gov.in/",
+      // Custom extra links will be handled by a small App.jsx tweak below or you can just use these standard ones.
+      // Currently App.jsx supports 3 standard links. 
+      // To add more, we need to update App.jsx slightly.
     }
   },
   {
