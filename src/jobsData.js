@@ -204,11 +204,11 @@ export const jobsData = [
     }
   },
   {
-    id: 3, // Isse Unique ID dein (e.g. 3)
+    id: 3,
     slug: "ecgc-po-recruitment-2025",
     shortTitle: "ECGC PO Recruitment 2025",
     title: "ECGC PO Recruitment 2025 Apply Online for 30 Posts | Salary ₹20 Lakh CTC | Exam Date",
-    shortInfo: "ECGC Limited (A Govt. of India Enterprise) has released the official notification for the recruitment of Probationary Officers (PO) in the cadre of Executive Officer. Eligible graduates can apply online for Generalist and Specialist posts. The current CTC for this post is approximately ₹20 Lakhs per annum in Mumbai.",
+    shortInfo: "ECGC Limited has released the official notification for the recruitment of Probationary Officers (PO). Eligible graduates can apply online for Generalist and Specialist posts. The selection will be based on an Online Exam and Interview.",
     postDate: "02/12/2025",
     category: "Latest Jobs",
 
@@ -217,8 +217,6 @@ export const jobsData = [
     importantDates: [
       { label: "Application Begin", value: "11/11/2025" },
       { label: "Last Date for Apply", value: "02/12/2025" },
-      { label: "Fee Payment Last Date", value: "02/12/2025" },
-      { label: "Admit Card Download", value: "January 2026 (1st Week)" },
       { label: "Online Exam Date", value: "11/01/2026" },
       { label: "Result Declaration", value: "31/01/2026 (Tentative)" }
     ],
@@ -226,22 +224,21 @@ export const jobsData = [
     applicationFee: [
       { category: "General / OBC / EWS", amount: "₹950/-" },
       { category: "SC / ST / PwBD", amount: "₹175/-" },
-      { category: "Payment Mode", amount: "Online (Debit/Credit Card/UPI/Net Banking)" }
+      { category: "Payment Mode", amount: "Online" }
     ],
 
-    ageLimit: "Min: 21 Years | Max: 30 Years (As on 01/04/2025). Age Relaxation: SC/ST +5 Yrs, OBC +3 Yrs.",
+    ageLimit: "21-30 Years (As on 01/04/2025). Relaxation: SC/ST+5, OBC+3.",
 
     vacancyDetails: [
-      { postName: "Probationary Officer (PO)", totalPost: 30, eligibility: "Graduation in Any Discipline (Generalist) OR Master's in Hindi/English (Specialist)" }
+      { postName: "PO (Generalist)", totalPost: 28, eligibility: "Graduation in Any Discipline" },
+      { postName: "PO (Specialist)", totalPost: 2, eligibility: "Master's in Hindi/English (Rajbhasha)" }
     ],
 
-    // --- Category Wise Vacancy ---
     stateWiseVacancy: [
       { state: "Unreserved (UR)", total: 12, sc: "N/A", st: "N/A", obc: "N/A", ews: "N/A", ur: 12 },
       { state: "OBC", total: 10, sc: "N/A", st: "N/A", obc: 10, ews: "N/A", ur: "N/A" },
       { state: "SC", total: 5, sc: 5, st: "N/A", obc: "N/A", ews: "N/A", ur: "N/A" },
-      { state: "EWS", total: 3, sc: "N/A", st: "N/A", obc: "N/A", ews: 3, ur: "N/A" },
-      { state: "ST", total: 0, sc: "N/A", st: 0, obc: "N/A", ews: "N/A", ur: "N/A" }
+      { state: "EWS", total: 3, sc: "N/A", st: "N/A", obc: "N/A", ews: 3, ur: "N/A" }
     ],
 
     selectionProcess: [
@@ -251,28 +248,45 @@ export const jobsData = [
       "Medical Examination"
     ],
 
+    // --- CORRECTED EXAM PATTERN (Generalist & Specialist) ---
     examPattern: {
       details: [
         "Mode: Online Computer Based Test",
-        "Total Duration: 140 Minutes (Objective) + 40 Minutes (Descriptive)",
-        "Negative Marking: 0.25 Marks for each wrong answer",
-        "Total Marks: 200 (Objective) + 40 (Descriptive)"
+        "Negative Marking: 0.25 Marks deducted for each wrong answer in Objective Test.",
+        "Descriptive Paper: 40 Marks (40 Minutes)."
       ],
-      table: [
-        { subject: "Reasoning Ability", questions: 50, marks: 50 },
-        { subject: "English Language", questions: 40, marks: 40 },
-        { subject: "Computer Knowledge", questions: 20, marks: 20 },
-        { subject: "General Awareness", questions: 40, marks: 40 },
-        { subject: "Quantitative Aptitude", questions: 50, marks: 50 },
-        { subject: "Total Objective", questions: 200, marks: 200 },
-        { subject: "Descriptive (Essay & Precis)", questions: 2, marks: 40 }
+      // Generalist (Objective)
+      generalistObjective: [
+        { subject: "Reasoning Ability (40 Mins)", questions: 50, marks: 50 },
+        { subject: "English Language (30 Mins)", questions: 40, marks: 40 },
+        { subject: "Computer Knowledge (10 Mins)", questions: 20, marks: 20 },
+        { subject: "General Awareness (20 Mins)", questions: 40, marks: 40 },
+        { subject: "Quantitative Aptitude (40 Mins)", questions: 50, marks: 50 }
+      ],
+      // Generalist (Descriptive)
+      generalistDescriptive: [
+        { subject: "Essay Writing (One out of two)", questions: 1, marks: 20 },
+        { subject: "Precis Writing (One out of two)", questions: 1, marks: 20 }
+      ],
+      // Specialist (Objective)
+      specialistObjective: [
+        { subject: "Reasoning Ability (30 Mins)", questions: 40, marks: 40 },
+        { subject: "English Language (20 Mins)", questions: 40, marks: 40 },
+        { subject: "General Awareness (10 Mins)", questions: 30, marks: 30 },
+        { subject: "Quantitative Aptitude (40 Mins)", questions: 40, marks: 40 },
+        { subject: "Professional Knowledge (40 Mins)", questions: 50, marks: 50 }
+      ],
+      // Specialist (Descriptive)
+      specialistDescriptive: [
+        { subject: "Essay Writing (One out of two)", questions: 1, marks: 20 },
+        { subject: "Translation (One out of two)", questions: 1, marks: 20 }
       ]
     },
 
     howToApply: [
       "Visit the official website ecgc.in.",
       "Click on 'Career with ECGC' and select 'Click here to Apply Online'.",
-      "Register yourself by clicking 'Click here for New Registration'.",
+      "Register yourself and get a Registration Number.",
       "Fill in the details and upload Photo, Signature, Left Thumb Impression, and Handwritten Declaration.",
       "Pay the application fee online.",
       "Submit the final form and take a printout."
@@ -284,4 +298,4 @@ export const jobsData = [
       officialWebsite: "https://www.ecgc.in/" 
     }
   }
-];
+  ]
