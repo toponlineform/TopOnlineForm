@@ -33,9 +33,10 @@ function Navbar() {
 
 // --- Home Component (SORTED NEWEST FIRST) ---
 function Home() {
-  // Helper to sort by ID descending (Newest First)
+  // Helper to sort by ID descending (Badi ID upar)
   const sortNewest = (a, b) => b.id - a.id;
 
+  // Apply sorting to ALL categories consistently
   const latestJobs = jobsData.filter(j => j.category === "Latest Jobs").sort(sortNewest).slice(0, 20);
   const admitCards = jobsData.filter(j => j.category === "Admit Card").sort(sortNewest).slice(0, 20);
   const results = jobsData.filter(j => j.category === "Result").sort(sortNewest).slice(0, 20);
@@ -165,7 +166,7 @@ function JobDetails() {
         </>
       )}
 
-      {/* 5. Salary */}
+      {/* 5. Salary (Text) */}
       {job.salary && (
         <>
           <div className="section-header">Pay Scale / Salary</div>
@@ -173,7 +174,7 @@ function JobDetails() {
         </>
       )}
 
-      {/* 6. Detailed Salary Table */}
+      {/* 6. Detailed Salary Table (Added this missing part) */}
       {job.salaryDetails && (
         <>
           <div className="section-header">Post Wise Salary / Pay Level</div>
@@ -198,16 +199,30 @@ function JobDetails() {
         </>
       )}
 
-      {/* 8. Exam Pattern (FIXED: Duplicate Total Row Removed) */}
+      {/* 8. Exam Pattern (AUTOMATIC TOTAL) */}
       {job.examPattern && (
         <>
           <div className="section-header">Exam Pattern</div>
           <div style={{padding: '10px'}}>
             {job.examPattern.details && (<ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>{job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}</ul>)}
+            
             {job.examPattern.table && (
-              <table><thead><tr style={{background: '#f2f2f2'}}><th>Subject</th><th>No. of Questions</th><th>Marks</th></tr></thead>
-              <tbody>{job.examPattern.table.map((row, i) => (<tr key={i}><td>{row.subject}</td><td>{row.questions}</td><td>{row.marks}</td></tr>))}
-              </tbody></table>
+              <table>
+                <thead>
+                  <tr style={{background: '#f2f2f2'}}><th>Subject</th><th>No. of Questions</th><th>Marks</th></tr>
+                </thead>
+                <tbody>
+                  {job.examPattern.table.map((row, i) => (
+                    <tr key={i}><td>{row.subject}</td><td>{row.questions}</td><td>{row.marks}</td></tr>
+                  ))}
+                  {/* Automatic Calculation Row */}
+                  <tr style={{fontWeight: 'bold', background: '#e9e9e9'}}>
+                    <td>Total</td>
+                    <td>{job.examPattern.table.reduce((sum, item) => sum + Number(item.questions), 0)}</td>
+                    <td>{job.examPattern.table.reduce((sum, item) => sum + Number(item.marks), 0)}</td>
+                  </tr>
+                </tbody>
+              </table>
             )}
           </div>
         </>
