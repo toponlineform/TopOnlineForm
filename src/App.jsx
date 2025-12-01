@@ -203,43 +203,87 @@ function JobDetails() {
         </>
       )}
 
-      {/* 4. Smart Vacancy Table (State or Category) */}
+      {/* 4. Smart Vacancy TableS (State/Zone) */}
+      
+      {/* --- Helper Function for Vacancy Table --- */}
+      {/* Note: Is helper function ko JobDetails ke andar upar define kar sakte hain, ya seedha yahan logic likh dein. 
+          Simplicity ke liye main seedha yahan do baar logic likh raha hu. */}
+
+      {/* A. Standard State Wise (For Bank of Baroda etc.) */}
       {job.stateWiseVacancy && (
         <>
-          {/* Dynamic Header: Agar title diya hai to wo, nahi to default */}
-          <div className="section-header">
-            {job.vacancyTableTitle ? job.vacancyTableTitle : "State Wise Vacancy Details"}
-          </div>
-          
+          <div className="section-header">{job.vacancyTableTitle || "State Wise Vacancy Details"}</div>
           <div style={{overflowX: 'auto'}}>
             <table style={{minWidth: '100%'}}>
               <thead>
                 <tr style={{background: '#f2f2f2'}}>
-                  {/* Dynamic Column Name */}
-                  <th>{job.vacancyColumnName ? job.vacancyColumnName : "State/UT"}</th>
-                  <th>Total Seats</th><th>UR</th><th>EWS</th><th>OBC</th><th>SC</th><th>ST</th>
+                  <th>{job.vacancyColumnName || "State/UT"}</th><th>Total Seats</th><th>UR</th><th>EWS</th><th>OBC</th><th>SC</th><th>ST</th>
                 </tr>
               </thead>
               <tbody>
                 {job.stateWiseVacancy.map((row, index) => (
+                  <tr key={index}><td style={{fontWeight:'500'}}>{row.state}</td><td style={{fontWeight:'bold', color:'blue'}}>{row.total}</td><td>{row.ur}</td><td>{row.ews}</td><td>{row.obc}</td><td>{row.sc}</td><td>{row.st}</td></tr>
+                ))}
+                <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}><td>TOTAL</td><td style={{color:'red'}}>{job.stateWiseVacancy.reduce((sum, item) => sum + (Number(item.total) || 0), 0)}</td><td colSpan="5" style={{textAlign:'center', fontSize:'12px'}}>Check Notification</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
+
+      {/* B. RRB Graduate Zone Wise */}
+      {job.zoneWiseGraduate && (
+        <>
+          <div className="section-header">RRB NTPC Graduate Level Vacancy (Zone Wise)</div>
+          <div style={{overflowX: 'auto'}}>
+            <table style={{minWidth: '100%'}}>
+              <thead>
+                <tr style={{background: '#f2f2f2'}}>
+                  <th>RRB Zone</th><th>Total</th><th>UR</th><th>SC</th><th>ST</th><th>OBC</th><th>EWS</th>
+                </tr>
+              </thead>
+              <tbody>
+                {job.zoneWiseGraduate.map((row, index) => (
                   <tr key={index}>
                     <td style={{fontWeight:'500'}}>{row.state}</td>
                     <td style={{fontWeight:'bold', color:'blue'}}>{row.total}</td>
-                    <td>{row.ur}</td><td>{row.ews}</td><td>{row.obc}</td><td>{row.sc}</td><td>{row.st}</td>
+                    <td>{row.ur}</td><td>{row.sc}</td><td>{row.st}</td><td>{row.obc}</td><td>{row.ews}</td>
                   </tr>
                 ))}
-                
-                {/* SMART TOTAL ROW */}
                 <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}>
                   <td>TOTAL</td>
-                  <td style={{color:'red'}}>
-                    {/* Yeh line ab 'N/A' ko ignore karke sirf numbers jodegi */}
-                    {job.stateWiseVacancy.reduce((sum, item) => {
-                      const val = Number(item.total);
-                      return sum + (isNaN(val) ? 0 : val);
-                    }, 0)}
-                  </td>
-                  <td colSpan="5" style={{textAlign:'center', fontSize:'12px'}}>Check Notification for PwBD details</td>
+                  <td style={{color:'red'}}>{job.zoneWiseGraduate.reduce((sum, item) => sum + (Number(item.total) || 0), 0)}</td>
+                  <td colSpan="5"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
+
+      {/* C. RRB Undergraduate Zone Wise */}
+      {job.zoneWiseUG && (
+        <>
+          <div className="section-header">RRB NTPC Undergraduate Level Vacancy (Zone Wise)</div>
+          <div style={{overflowX: 'auto'}}>
+            <table style={{minWidth: '100%'}}>
+              <thead>
+                <tr style={{background: '#f2f2f2'}}>
+                  <th>RRB Zone</th><th>Total</th><th>UR</th><th>SC</th><th>ST</th><th>OBC</th><th>EWS</th>
+                </tr>
+              </thead>
+              <tbody>
+                {job.zoneWiseUG.map((row, index) => (
+                  <tr key={index}>
+                    <td style={{fontWeight:'500'}}>{row.state}</td>
+                    <td style={{fontWeight:'bold', color:'blue'}}>{row.total}</td>
+                    <td>{row.ur}</td><td>{row.sc}</td><td>{row.st}</td><td>{row.obc}</td><td>{row.ews}</td>
+                  </tr>
+                ))}
+                <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}>
+                  <td>TOTAL</td>
+                  <td style={{color:'red'}}>{job.zoneWiseUG.reduce((sum, item) => sum + (Number(item.total) || 0), 0)}</td>
+                  <td colSpan="5"></td>
                 </tr>
               </tbody>
             </table>
