@@ -8,6 +8,9 @@ export const jobsData = [
     postDate: "01/12/2025",
     category: "Latest Jobs",
     
+    // --- NEW: Salary / Stipend Added Here ---
+    salary: "Rs. 9,000/- per month (Stipend)",
+
     importantDates: [
       { label: "Application Begin", value: "11/11/2025" },
       { label: "Last Date for Apply", value: "01/12/2025" },
@@ -38,7 +41,6 @@ export const jobsData = [
       }
     ],
 
-    // --- State Wise Vacancy Data (Corrected from Image) ---
     stateWiseVacancy: [
       { state: "Andhra Pradesh", total: 38, sc: 6, st: 3, obc: 10, ews: 4, ur: 15 },
       { state: "Assam", total: 21, sc: 1, st: 1, obc: 7, ews: 2, ur: 10 },
@@ -100,9 +102,9 @@ export const jobsData = [
     ],
 
     links: {
-      applyOnline: "https://nats.education.gov.in/",
-      notification: "chrome-extension://kdpelmjpfafjppnhbloffcjpeomlnpah/https://bankofbaroda.bank.in/-/media/Project/BOB/CountryWebsites/India/Career/2025/25-11/11-11-2025-Advertisement-Apprenticeship-10-34.pdf",
-      officialWebsite: "https://bankofbaroda.bank.in/career/current-opportunities"
+      applyOnline: "https://www.bankofbaroda.in/career",
+      notification: "https://www.bankofbaroda.in/career",
+      officialWebsite: "https://www.bankofbaroda.in/"
     }
   }
 ];
