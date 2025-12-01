@@ -31,9 +31,9 @@ function Navbar() {
   );
 }
 
-// --- Home Component ---
+// --- Home Component (FIXED SORTING: Newest ID First) ---
 function Home() {
-  // Helper to sort by ID descending (Newest First)
+  // Helper to sort by ID descending (Badi ID upar)
   const sortNewest = (a, b) => b.id - a.id;
 
   const latestJobs = jobsData.filter(j => j.category === "Latest Jobs").sort(sortNewest).slice(0, 20);
@@ -109,29 +109,31 @@ function JobDetails() {
   // Helper to render Exam Pattern Table with Auto Total
   const RenderExamTable = ({ data, title }) => (
     <>
-      {title && <div className="section-header">{title}</div>} {/* Optional Title */}
-      <table>
-        <thead>
-          <tr style={{background: '#f2f2f2'}}>
-            <th>Subject</th><th>No. of Questions</th><th>Marks</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((row, i) => (
-            <tr key={i}>
-              <td>{row.subject}</td>
-              <td>{row.questions}</td>
-              <td>{row.marks}</td>
+      {title && <div className="section-header">{title}</div>}
+      <div style={{overflowX: 'auto'}}>
+        <table style={{minWidth: '100%'}}>
+          <thead>
+            <tr style={{background: '#f2f2f2'}}>
+              <th>Subject</th><th>No. of Questions</th><th>Marks</th>
             </tr>
-          ))}
-          {/* --- AUTOMATIC TOTAL CALCULATION --- */}
-          <tr style={{fontWeight: 'bold', background: '#e9e9e9'}}>
-            <td>Total</td>
-            <td>{data.reduce((sum, item) => sum + Number(item.questions), 0)}</td>
-            <td>{data.reduce((sum, item) => sum + Number(item.marks), 0)}</td>
-          </tr>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {data.map((row, i) => (
+              <tr key={i}>
+                <td>{row.subject}</td>
+                <td>{row.questions}</td>
+                <td>{row.marks}</td>
+              </tr>
+            ))}
+            {/* --- AUTOMATIC TOTAL CALCULATION --- */}
+            <tr style={{fontWeight: 'bold', background: '#e9e9e9'}}>
+              <td>Total</td>
+              <td>{data.reduce((sum, item) => sum + Number(item.questions), 0)}</td>
+              <td>{data.reduce((sum, item) => sum + Number(item.marks), 0)}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </>
   );
 
@@ -144,14 +146,14 @@ function JobDetails() {
       <p style={{marginBottom:'10px', textAlign:'justify'}}><strong>Post Date : </strong> {job.postDate}</p>
       <p style={{marginBottom:'20px', textAlign:'justify'}}><strong>Short Info : </strong> {job.shortInfo}</p>
       
-      {/* Dates & Fees */}
+      {/* 1. Dates & Fees (Fixed Width 50%) */}
       {job.importantDates.length > 0 && (
         <table><tbody><tr><th className="green-header" width="50%">Dates</th><th className="green-header" width="50%">Fees</th></tr>
         <tr><td><ul>{job.importantDates.map((d,i)=><li key={i}><strong>{d.label}:</strong> {d.value}</li>)}</ul></td>
         <td><ul>{job.applicationFee.map((f,i)=><li key={i}><strong>{f.category}:</strong> {f.amount}</li>)}</ul></td></tr></tbody></table>
       )}
       
-      {/* Age Limit */}
+      {/* 2. Age Limit */}
       {job.ageLimit && (
         <>
           <div className="section-header">Age Limit</div>
@@ -167,7 +169,7 @@ function JobDetails() {
         </>
       )}
 
-      {/* Vacancy Details */}
+      {/* 3. Vacancy Details */}
       {job.vacancyDetails.length > 0 && (
         <>
           <div className="section-header">Vacancy Details</div>
@@ -176,7 +178,7 @@ function JobDetails() {
         </>
       )}
 
-      {/* State Wise Vacancy */}
+      {/* 4. State Wise Vacancy */}
       {job.stateWiseVacancy && (
         <>
           <div className="section-header">State Wise Vacancy Details</div>
@@ -194,7 +196,7 @@ function JobDetails() {
         </>
       )}
 
-      {/* Salary Text */}
+      {/* 5. Salary (Correct Position: After Vacancy, Before Selection) */}
       {job.salary && (
         <>
           <div className="section-header">Pay Scale / Salary</div>
@@ -202,7 +204,7 @@ function JobDetails() {
         </>
       )}
 
-      {/* Salary Details Table */}
+      {/* 6. Detailed Salary Table */}
       {job.salaryDetails && (
         <>
           <div className="section-header">Post Wise Salary / Pay Level</div>
@@ -219,7 +221,7 @@ function JobDetails() {
         </>
       )}
 
-      {/* Selection Process */}
+      {/* 7. Selection Process */}
       {job.selectionProcess && (
         <>
           <div className="section-header">Selection Process</div>
@@ -227,17 +229,17 @@ function JobDetails() {
         </>
       )}
 
-      {/* Exam Pattern (SMART UPDATED) */}
+      {/* 8. Exam Pattern */}
       {job.examPattern && (
         <>
           <div className="section-header">Exam Pattern</div>
           <div style={{padding: '10px'}}>
             {job.examPattern.details && (<ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>{job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}</ul>)}
             
-            {/* Single Table Logic */}
+            {/* Single Table */}
             {job.examPattern.table && <RenderExamTable data={job.examPattern.table} />}
 
-            {/* Multiple Tables Logic (For ECGC) */}
+            {/* Multiple Tables (ECGC etc) */}
             {job.examPattern.generalistObjective && <RenderExamTable data={job.examPattern.generalistObjective} title="1. Generalist - Objective Test" />}
             {job.examPattern.generalistDescriptive && <RenderExamTable data={job.examPattern.generalistDescriptive} title="2. Generalist - Descriptive Test" />}
             {job.examPattern.specialistObjective && <RenderExamTable data={job.examPattern.specialistObjective} title="3. Specialist - Objective Test" />}
@@ -246,7 +248,7 @@ function JobDetails() {
         </>
       )}
 
-      {/* How to Apply */}
+      {/* 9. How to Apply */}
       {job.howToApply && (
         <>
           <div className="section-header">How to Apply</div>
