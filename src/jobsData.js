@@ -172,8 +172,7 @@ export const jobsData = [
       ],
       table: [
         { subject: "General Knowledge & Aptitude + Computer", questions: 20, marks: 80 },
-        { subject: "Domain Specific (Subject Knowledge)", questions: 80, marks: 320 },
-        { subject: "Total", questions: 100, marks: 400 } 
+        { subject: "Domain Specific (Subject Knowledge)", questions: 80, marks: 320 }, 
       ]
     },
 
