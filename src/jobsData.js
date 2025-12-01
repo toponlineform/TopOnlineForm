@@ -6,7 +6,7 @@ export const jobsData = [
     shortTitle: "ECGC PO Recruitment 2025",
     title: "ECGC PO Recruitment 2025 Apply Online for 30 Posts | Salary ₹20 Lakh CTC | Exam Date",
     shortInfo: "ECGC Limited has released the official notification for the recruitment of Probationary Officers (PO). Eligible graduates can apply online for Generalist and Specialist posts. The selection will be based on an Online Exam and Interview.",
-    postDate: "02/12/2025",
+    postDate: "11/11/2025",
     category: "Latest Jobs",
 
     salary: "Basic Pay ₹88,635 - ₹1,69,025 (CTC ≈ ₹20 LPA)",
@@ -88,8 +88,8 @@ export const jobsData = [
     ],
 
     links: {
-      applyOnline: "https://ibpsonline.ibps.in/ecgcoct25/", 
-      notification: "https://www.ecgc.in/acad/Recruitment_PO_2025.pdf", 
+      applyOnline: "https://ibpsreg.ibps.in/ecgcsep25/", 
+      notification: "https://main.ecgc.in/english/wp-content/themes/pcwebecgc/images/pcECGPagePDF/careerwithecgc/Detailed%20Advertisement%20for%20Recruitment%20of%20Probationary%20officers%20FY%202025-26.pdf", 
       officialWebsite: "https://www.ecgc.in/" 
     }
   },
@@ -101,7 +101,7 @@ export const jobsData = [
     shortTitle: "AIIMS CRE-4 Group B & C Recruitment 2025",
     title: "AIIMS CRE-4 Recruitment 2025 Apply Online for Group B & C Posts | Exam Date, Salary & Syllabus",
     shortInfo: "All India Institute of Medical Sciences (AIIMS), New Delhi has released the Detailed Recruitment Advertisement (DRA) for the Common Recruitment Examination (CRE-4). This exam is for the recruitment of various Group B and Group C posts.",
-    postDate: "02/12/2025",
+    postDate: "11/11/2025",
     category: "Latest Jobs",
 
     salary: "Level 1 to Level 7 (Post Wise)",
@@ -173,8 +173,8 @@ export const jobsData = [
     ],
 
     links: {
-      applyOnline: "https://www.aiimsexams.ac.in/", 
-      notification: "https://www.aiimsexams.ac.in/", 
+      applyOnline: "https://aiimsexams.ac.in/advertisement/6915d3056d76b75af3e2187d", 
+      notification: "https://aiimsexams.ac.in/notification/6915d3056d76b75af3e2187d", 
       officialWebsite: "https://www.aiimsexams.ac.in/" 
     }
   },
@@ -186,7 +186,7 @@ export const jobsData = [
     shortTitle: "Bank of Baroda Apprentice Recruitment 2025",
     title: "Bank of Baroda Apprentice Recruitment 2025 Apply Online for 2700 Posts | Notification PDF",
     shortInfo: "Bank of Baroda (BOB) has released the official notification for the recruitment of 2700 Apprentice posts across various states. Candidates holding a Graduation Degree in any stream can apply online before the last date. Check State-wise Vacancy, Age Limit, Selection Process, and Exam Pattern here.",
-    postDate: "01/12/2025",
+    postDate: "11/11/2025",
     category: "Latest Jobs",
     
     salary: "Rs. 15,000/- per month (Stipend)",
@@ -288,8 +288,8 @@ export const jobsData = [
     ],
 
     links: {
-      applyOnline: "https://www.bankofbaroda.in/career",
-      notification: "https://www.bankofbaroda.in/career",
+      applyOnline: "https://nats.education.gov.in",
+      notification: "https://bankofbaroda.bank.in/-/media/Project/BOB/CountryWebsites/India/Career/2025/25-11/11-11-2025-Advertisement-Apprenticeship-10-34.pdf",
       officialWebsite: "https://www.bankofbaroda.in/"
     }
   }
