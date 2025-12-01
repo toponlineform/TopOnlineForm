@@ -4,8 +4,8 @@ export const jobsData = [
     id: 5,
     slug: "rrb-ntpc-recruitment-2025",
     shortTitle: "RRB NTPC Recruitment 2025",
-    title: "RRB NTPC Recruitment 2025 Apply Online for 8113 Posts (Graduate & UG) | Notification CEN 05/2025 & 06/2025",
-    shortInfo: "Railway Recruitment Board (RRB) has released the official notifications (CEN 05/2025 & CEN 06/2025) for the recruitment of Non-Technical Popular Categories (NTPC). A total of 8113 vacancies are available for Graduate and Undergraduate posts like Station Master, TTE, Clerk, and Goods Guard. Check Zone-wise Vacancy, Eligibility, and Exam Date here.",
+    title: "RRB NTPC Recruitment 2025 Apply Online for 8868 Posts (Graduate & UG) | Notification CEN 05/2025 & 06/2025",
+    shortInfo: "Railway Recruitment Board (RRB) has released the official notifications (CEN 05/2025 & CEN 06/2025) for the recruitment of Non-Technical Popular Categories (NTPC). A total of 8868 vacancies are available for Graduate and Undergraduate posts like Station Master, TTE, Clerk, and Goods Guard. Check Zone-wise Vacancy, Eligibility, and Exam Date here.",
     postDate: "02/12/2025",
     category: "Latest Jobs",
 
@@ -46,31 +46,56 @@ export const jobsData = [
       { postName: "Trains Clerk", totalPost: 72, eligibility: "12th Pass (50% Marks)" }
     ],
     
-    vacancyTableTitle: "Post Wise Vacancy Details (Graduate & UG)",
-    vacancyColumnName: "Post Name",
+    // --- ZONE WISE DATA (Separated & Accurate from Screenshots) ---
+    
+    // Table 1: Graduate Level (CEN 05/2025) [Cite: IMG_7649.jpg]
+    zoneWiseGraduate: [
+        { state: "RRB AHMEDABAD", ur: 43, sc: 12, st: 3, obc: 15, ews: 6, total: 79 },
+        { state: "RRB AJMER", ur: 121, sc: 64, st: 12, obc: 111, ews: 37, total: 345 },
+        { state: "RRB BANGALORE", ur: 115, sc: 32, st: 17, obc: 47, ews: 30, total: 241 },
+        { state: "RRB BHOPAL", ur: 151, sc: 60, st: 27, obc: 106, ews: 38, total: 382 },
+        { state: "RRB BHUBANESWAR", ur: 64, sc: 37, st: 21, obc: 56, ews: 53, total: 231 },
+        { state: "RRB BILASPUR", ur: 350, sc: 126, st: 64, obc: 236, ews: 88, total: 864 },
+        { state: "RRB CHANDIGARH", ur: 85, sc: 27, st: 16, obc: 51, ews: 20, total: 199 },
+        { state: "RRB CHENNAI", ur: 73, sc: 31, st: 22, obc: 43, ews: 18, total: 187 },
+        { state: "RRB GORAKHPUR", ur: 48, sc: 16, st: 10, obc: 27, ews: 10, total: 111 },
+        { state: "RRB GUWAHATI", ur: 20, sc: 10, st: 4, obc: 14, ews: 8, total: 56 },
+        { state: "RRB JAMMU-SRINAGAR", ur: 15, sc: 5, st: 3, obc: 8, ews: 1, total: 32 },
+        { state: "RRB KOLKATA", ur: 284, sc: 103, st: 46, obc: 186, ews: 66, total: 685 },
+        { state: "RRB MALDA", ur: 213, sc: 83, st: 46, obc: 133, ews: 47, total: 522 },
+        { state: "RRB MUMBAI", ur: 254, sc: 89, st: 43, obc: 153, ews: 57, total: 596 },
+        { state: "RRB MUZAFFARPUR", ur: 8, sc: 4, st: 2, obc: 5, ews: 2, total: 21 },
+        { state: "RRB PATNA", ur: 0, sc: 10, st: 12, obc: 0, ews: 1, total: 23 },
+        { state: "RRB PRAYAGRAJ", ur: 51, sc: 19, st: 18, obc: 16, ews: 6, total: 110 },
+        { state: "RRB RANCHI", ur: 255, sc: 118, st: 45, obc: 166, ews: 67, total: 651 },
+        { state: "RRB SECUNDERABAD", ur: 145, sc: 59, st: 32, obc: 119, ews: 41, total: 396 },
+        { state: "RRB SILIGURI", ur: 8, sc: 4, st: 1, obc: 6, ews: 2, total: 21 },
+        { state: "RRB THIRUVANANTHAPURAM", ur: 18, sc: 13, st: 13, obc: 10, ews: 4, total: 58 }
+    ],
 
-    stateWiseVacancy: [
-        { state: "RRB AHMEDABAD", total: "232", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB AJMER", total: "461", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB BANGALORE", total: "295", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB BHOPAL", total: "505", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB BHUBANESWAR", total: "249", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB BILASPUR", total: "933", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB CHANDIGARH", total: "223", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB CHENNAI", total: "267", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB GORAKHPUR", total: "284", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB GUWAHATI", total: "191", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB JAMMU-SRINAGAR", total: "169", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB KOLKATA", total: "1184", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB MALDA", total: "718", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB MUMBAI", total: "1090", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB MUZAFFARPUR", total: "60", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB PATNA", total: "47", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB PRAYAGRAJ", total: "413", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB RANCHI", total: "707", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB SECUNDERABAD", total: "668", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB SILIGURI", total: "28", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB THIRUVANANTHAPURAM", total: "144", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" }
+    // Table 2: Undergraduate Level (CEN 06/2025) [Cite: IMG_7650.jpg]
+    zoneWiseUG: [
+        { state: "RRB AHMEDABAD", ur: 58, sc: 23, st: 13, obc: 43, ews: 16, total: 153 },
+        { state: "RRB AJMER", ur: 65, sc: 13, st: 5, obc: 25, ews: 8, total: 116 },
+        { state: "RRB BANGALORE", ur: 27, sc: 9, st: 4, obc: 7, ews: 7, total: 54 },
+        { state: "RRB BHOPAL", ur: 53, sc: 21, st: 8, obc: 30, ews: 11, total: 123 },
+        { state: "RRB BHUBANESWAR", ur: 10, sc: 2, st: 2, obc: 3, ews: 1, total: 18 },
+        { state: "RRB BILASPUR", ur: 26, sc: 11, st: 5, obc: 19, ews: 8, total: 69 },
+        { state: "RRB CHANDIGARH", ur: 10, sc: 3, st: 3, obc: 6, ews: 2, total: 24 },
+        { state: "RRB CHENNAI", ur: 33, sc: 11, st: 5, obc: 23, ews: 8, total: 80 },
+        { state: "RRB GORAKHPUR", ur: 68, sc: 25, st: 15, obc: 48, ews: 17, total: 173 },
+        { state: "RRB GUWAHATI", ur: 57, sc: 21, st: 8, obc: 36, ews: 13, total: 135 },
+        { state: "RRB JAMMU-SRINAGAR", ur: 58, sc: 21, st: 13, obc: 34, ews: 11, total: 137 },
+        { state: "RRB KOLKATA", ur: 215, sc: 76, st: 38, obc: 129, ews: 41, total: 499 },
+        { state: "RRB MALDA", ur: 79, sc: 29, st: 16, obc: 52, ews: 20, total: 196 },
+        { state: "RRB MUMBAI", ur: 190, sc: 72, st: 39, obc: 140, ews: 53, total: 494 },
+        { state: "RRB MUZAFFARPUR", ur: 16, sc: 5, st: 3, obc: 11, ews: 4, total: 39 },
+        { state: "RRB PATNA", ur: 9, sc: 3, st: 4, obc: 5, ews: 3, total: 24 },
+        { state: "RRB PRAYAGRAJ", ur: 128, sc: 53, st: 54, obc: 50, ews: 18, total: 303 },
+        { state: "RRB RANCHI", ur: 21, sc: 10, st: 3, obc: 16, ews: 6, total: 56 },
+        { state: "RRB SECUNDERABAD", ur: 115, sc: 40, st: 25, obc: 68, ews: 24, total: 272 },
+        { state: "RRB SILIGURI", ur: 3, sc: 1, st: 0, obc: 2, ews: 1, total: 7 },
+        { state: "RRB THIRUVANANTHAPURAM", ur: 39, sc: 12, st: 1, obc: 26, ews: 8, total: 86 }
     ],
     
     salaryDetails: [
@@ -88,17 +113,13 @@ export const jobsData = [
       "Document Verification & Medical Exam"
     ],
 
-    // --- CORRECTED EXAM PATTERN (Detailed + CBT 1 & 2 Specific) ---
     examPattern: {
-      // Details wapas daal di hain
       details: [
         "Mode: Computer Based Test (CBT-1 & CBT-2)",
         "Duration: 90 Minutes (For each Stage)",
         "Total Questions: 100 (CBT-1) / 120 (CBT-2)",
         "Negative Marking: 1/3rd Marks deducted for each wrong answer."
       ],
-      
-      // Special Keys for RRB NTPC so App.jsx shows correct title
       cbt1: [
         { subject: "General Awareness", questions: 40, marks: 40 },
         { subject: "Mathematics", questions: 30, marks: 30 },
