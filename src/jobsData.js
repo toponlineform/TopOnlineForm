@@ -9,7 +9,7 @@ export const jobsData = [
     category: "Latest Jobs",
     
     // --- NEW: Salary / Stipend Added Here ---
-    salary: "Rs. 9,000/- per month (Stipend)",
+    salary: "Rs. 15,000/- per month (Stipend)",
 
     importantDates: [
       { label: "Application Begin", value: "11/11/2025" },
@@ -102,9 +102,9 @@ export const jobsData = [
     ],
 
     links: {
-      applyOnline: "https://www.bankofbaroda.in/career",
-      notification: "https://www.bankofbaroda.in/career",
-      officialWebsite: "https://www.bankofbaroda.in/"
+      applyOnline: "https://nats.education.gov.in/",
+      notification: "chrome-extension://kdpelmjpfafjppnhbloffcjpeomlnpah/https://bankofbaroda.bank.in/-/media/Project/BOB/CountryWebsites/India/Career/2025/25-11/11-11-2025-Advertisement-Apprenticeship-10-34.pdf",
+      officialWebsite: "https://bankofbaroda.bank.in/career/current-opportunities"
     }
   }
 ];
