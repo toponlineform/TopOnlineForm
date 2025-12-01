@@ -4,14 +4,16 @@ import { jobsData } from './jobsData';
 import SEO from './SEO';
 
 function CategoryPage({ category, title }) {
-  // Jo category mangi gayi hai, sirf wahi filter karo
-  const filteredJobs = jobsData.filter(job => job.category === category);
+  // 1. Filter jobs by category
+  // 2. Sort them: Newest First (Descending Order by ID)
+  const filteredJobs = jobsData
+    .filter(job => job.category === category)
+    .sort((a, b) => b.id - a.id); 
 
-  // SEO ke liye description banana
   const seoDescription = `Find all latest ${title} updates here. Check list of all announcements related to ${category}.`;
 
   return (
-    <div className="main-grid" style={{ display: 'block' }}> {/* Block display for full width */}
+    <div className="main-grid" style={{ display: 'block' }}> 
       <SEO
         title={`${title} List 2025 | TopOnlineForm`}
         description={seoDescription}
@@ -25,11 +27,10 @@ function CategoryPage({ category, title }) {
           {filteredJobs.length > 0 ? (
             filteredJobs.map(job => (
               <li key={job.id} style={{ padding: '15px' }}>
-                {/* Clean URL Slug Link */}
                 <Link to={`/${job.slug}`} style={{ fontSize: '16px', fontWeight: '500' }}>
-                  {job.title}
+                  {/* --- FIX: Use Short Title if available --- */}
+                  {job.shortTitle ? job.shortTitle : job.title}
                 </Link>
-                {/* Date removed as requested */}
               </li>
             ))
           ) : (
