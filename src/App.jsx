@@ -372,6 +372,8 @@ function JobDetails() {
           <tr><td><strong>Official Website</strong></td><td align="center"><a href={job.links.officialWebsite} className="click-here" target="_blank" rel="noreferrer">Click Here</a></td></tr>
         </tbody>
       </table>
+      </div>
+  );
 }
 
 function Footer() {
