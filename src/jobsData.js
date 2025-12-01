@@ -38,30 +38,35 @@ export const jobsData = [
       }
     ],
 
-    // --- State Wise Vacancy Data ---
+    // --- State Wise Vacancy Data (Corrected from Image) ---
     stateWiseVacancy: [
-      { state: "Gujarat", total: 400, ur: 114, ews: 37, obc: 144, sc: 28, st: 77 },
-      { state: "Karnataka", total: 440, ur: 141, ews: 51, obc: 138, sc: 74, st: 36 },
-      { state: "Uttar Pradesh", total: 307, ur: 113, ews: 27, obc: 113, sc: 50, st: 4 },
-      { state: "Maharashtra", total: 297, ur: 113, ews: 29, obc: 92, sc: 34, st: 29 },
-      { state: "Rajasthan", total: 215, ur: 58, ews: 15, obc: 58, sc: 45, st: 39 },
-      { state: "Tamil Nadu", total: 159, ur: 59, ews: 14, obc: 51, sc: 33, st: 2 },
-      { state: "Telangana", total: 154, ur: 49, ews: 18, obc: 49, sc: 26, st: 12 },
-      { state: "Delhi (UT)", total: 119, ur: 42, ews: 10, obc: 38, sc: 17, st: 12 },
-      { state: "West Bengal", total: 104, ur: 42, ews: 10, obc: 27, sc: 19, st: 6 },
-      { state: "Punjab", total: 96, ur: 30, ews: 6, obc: 27, sc: 33, st: 0 },
-      { state: "Madhya Pradesh", total: 56, ur: 23, ews: 6, obc: 5, sc: 6, st: 16 },
-      { state: "Kerala", total: 52, ur: 27, ews: 6, obc: 14, sc: 5, st: 0 },
-      { state: "Chhattisgarh", total: 48, ur: 14, ews: 4, obc: 1, sc: 5, st: 24 },
-      { state: "Bihar", total: 47, ur: 23, ews: 3, obc: 10, sc: 11, st: 0 },
-      { state: "Andhra Pradesh", total: 38, ur: 15, ews: 4, obc: 10, sc: 6, st: 3 },
-      { state: "Haryana", total: 36, ur: 14, ews: 5, obc: 13, sc: 4, st: 0 },
-      { state: "Odisha", total: 29, ur: 11, ews: 2, obc: 2, sc: 6, st: 8 },
-      { state: "Uttarakhand", total: 22, ur: 12, ews: 2, obc: 3, sc: 5, st: 0 },
-      { state: "Assam", total: 21, ur: 10, ews: 2, obc: 7, sc: 1, st: 1 },
-      { state: "Jharkhand", total: 15, ur: 6, ews: 3, obc: 2, sc: 1, st: 3 },
-      { state: "Chandigarh", total: 12, ur: 6, ews: 1, obc: 3, sc: 2, st: 0 },
-      { state: "Himachal/Other", total: 32, ur: 15, ews: 3, obc: 5, sc: 4, st: 5 } 
+      { state: "Andhra Pradesh", total: 38, sc: 6, st: 3, obc: 10, ews: 4, ur: 15 },
+      { state: "Assam", total: 21, sc: 1, st: 1, obc: 7, ews: 2, ur: 10 },
+      { state: "Bihar", total: 47, sc: 11, st: 0, obc: 10, ews: 3, ur: 23 },
+      { state: "Chandigarh (UT)", total: 12, sc: 2, st: 0, obc: 3, ews: 1, ur: 6 },
+      { state: "Chhattisgarh", total: 48, sc: 5, st: 24, obc: 1, ews: 4, ur: 14 },
+      { state: "Dadra and Nagar Haveli (UT)", total: 5, sc: 0, st: 2, obc: 0, ews: 0, ur: 3 },
+      { state: "Delhi (UT)", total: 119, sc: 17, st: 12, obc: 38, ews: 10, ur: 42 },
+      { state: "Goa", total: 10, sc: 0, st: 1, obc: 1, ews: 1, ur: 7 },
+      { state: "Gujarat", total: 400, sc: 28, st: 77, obc: 144, ews: 37, ur: 114 },
+      { state: "Haryana", total: 36, sc: 4, st: 0, obc: 13, ews: 5, ur: 14 },
+      { state: "Jammu and Kashmir", total: 5, sc: 0, st: 0, obc: 2, ews: 1, ur: 2 },
+      { state: "Jharkhand", total: 15, sc: 1, st: 3, obc: 2, ews: 3, ur: 6 },
+      { state: "Karnataka", total: 440, sc: 74, st: 36, obc: 138, ews: 51, ur: 141 },
+      { state: "Kerala", total: 52, sc: 5, st: 0, obc: 14, ews: 6, ur: 27 },
+      { state: "Madhya Pradesh", total: 56, sc: 6, st: 16, obc: 5, ews: 6, ur: 23 },
+      { state: "Maharashtra", total: 297, sc: 34, st: 29, obc: 92, ews: 29, ur: 113 },
+      { state: "Manipur", total: 2, sc: 0, st: 1, obc: 0, ews: 0, ur: 1 },
+      { state: "Mizoram", total: 5, sc: 0, st: 2, obc: 0, ews: 0, ur: 3 },
+      { state: "ODISHA", total: 29, sc: 6, st: 8, obc: 2, ews: 2, ur: 11 },
+      { state: "Puducherry (UT)", total: 6, sc: 1, st: 0, obc: 1, ews: 1, ur: 3 },
+      { state: "Punjab", total: 96, sc: 33, st: 0, obc: 27, ews: 6, ur: 30 },
+      { state: "Rajasthan", total: 215, sc: 45, st: 39, obc: 58, ews: 15, ur: 58 },
+      { state: "Tamil Nadu", total: 159, sc: 33, st: 2, obc: 51, ews: 14, ur: 59 },
+      { state: "Telangana", total: 154, sc: 26, st: 12, obc: 49, ews: 18, ur: 49 },
+      { state: "Uttar Pradesh", total: 307, sc: 50, st: 4, obc: 113, ews: 27, ur: 113 },
+      { state: "Uttarakhand", total: 22, sc: 5, st: 0, obc: 3, ews: 2, ur: 12 },
+      { state: "West Bengal", total: 104, sc: 19, st: 6, obc: 27, ews: 10, ur: 42 }
     ],
 
     selectionProcess: [
@@ -95,9 +100,9 @@ export const jobsData = [
     ],
 
     links: {
-      applyOnline: "https://nats.education.gov.in/",
-      notification: "chrome-extension://kdpelmjpfafjppnhbloffcjpeomlnpah/https://bankofbaroda.bank.in/-/media/Project/BOB/CountryWebsites/India/Career/2025/25-11/11-11-2025-Advertisement-Apprenticeship-10-34.pdf",
-      officialWebsite: "https://bankofbaroda.bank.in/career/current-opportunities"
+      applyOnline: "https://www.bankofbaroda.in/career",
+      notification: "https://www.bankofbaroda.in/career",
+      officialWebsite: "https://www.bankofbaroda.in/"
     }
   }
 ];
