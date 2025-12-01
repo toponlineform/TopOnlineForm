@@ -4,25 +4,41 @@ export const jobsData = [
     slug: "bank-of-baroda-apprentice-recruitment-2025",
     shortTitle: "Bank of Baroda Apprentice Recruitment 2025",
     title: "Bank of Baroda Apprentice Recruitment 2025 Apply Online for 2700 Posts | Notification PDF",
-    shortInfo: "Bank of Baroda (BOB) has released the official notification for the recruitment of 2700 Apprentice posts across various states. Candidates holding a Graduation Degree in any stream can apply online before the last date.",
+    shortInfo: "Bank of Baroda (BOB) has released the official notification for the recruitment of 2700 Apprentice posts across various states. Candidates holding a Graduation Degree in any stream can apply online before the last date. Check State-wise Vacancy, Age Limit, Selection Process, and Exam Pattern here.",
     postDate: "01/12/2025",
     category: "Latest Jobs",
     
     importantDates: [
       { label: "Application Begin", value: "11/11/2025" },
-      { label: "Last Date for Apply", value: "01/12/2025" }
+      { label: "Last Date for Apply", value: "01/12/2025" },
+      { label: "Exam Date", value: "To be notified" }
     ],
-    applicationFee: [
-      { category: "Gen / OBC / EWS", amount: "₹800 + Taxes" },
-      { category: "SC / ST / PwBD", amount: "₹400 + Taxes" }
-    ],
-    ageLimit: "20-28 Years",
     
-    vacancyDetails: [
-      { postName: "Apprentice", totalPost: 2700, eligibility: "Bachelor Degree in Any Stream" }
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹800 + Taxes" },
+      { category: "SC / ST / Female", amount: "₹0 (Nil)" },
+      { category: "PwBD", amount: "₹400 + Taxes" }
     ],
 
-    // --- NEW: State Wise Vacancy Data (From your photo) ---
+    ageLimit: "Min: 20 Years | Max: 28 Years (As on 01/11/2025)",
+    
+    ageRelaxation: [
+      "SC/ST: 5 years",
+      "OBC (Non-Creamy Layer): 3 years",
+      "PwBD (UR/EWS): 10 years",
+      "PwBD (OBC): 13 years",
+      "PwBD (SC/ST): 15 years"
+    ],
+
+    vacancyDetails: [
+      { 
+        postName: "Apprentice", 
+        totalPost: 2700, 
+        eligibility: "Bachelor Degree in Any Stream from a Recognized University." 
+      }
+    ],
+
+    // --- State Wise Vacancy Data ---
     stateWiseVacancy: [
       { state: "Gujarat", total: 400, ur: 114, ews: 37, obc: 144, sc: 28, st: 77 },
       { state: "Karnataka", total: 440, ur: 141, ews: 51, obc: 138, sc: 74, st: 36 },
@@ -48,13 +64,40 @@ export const jobsData = [
       { state: "Himachal/Other", total: 32, ur: 15, ews: 3, obc: 5, sc: 4, st: 5 } 
     ],
 
-    // ... Baaki purana data (Selection Process, Links etc) same rakhein
-    selectionProcess: ["Online Written Test", "Language Proficiency Test"],
+    selectionProcess: [
+      "Online Written Examination",
+      "Document Verification",
+      "Language Proficiency Test",
+      "Medical Examination"
+    ],
+
+    examPattern: {
+      details: [
+        "Online examination.",
+        "Total Marks: 100.",
+        "No negative marking.",
+        "Duration: 60 minutes."
+      ],
+      table: [
+        { subject: "General/Financial Awareness", questions: 25, marks: 25 },
+        { subject: "Quantitative & Reasoning Aptitude", questions: 25, marks: 25 },
+        { subject: "Computer Knowledge", questions: 25, marks: 25 },
+        { subject: "General English", questions: 25, marks: 25 }
+      ]
+    },
+
+    howToApply: [
+      "Register on Apprenticeship Portals (NATS: nats.education.gov.in or NAPS: apprenticeshipindia.gov.in).",
+      "After registration, apply for 'Bank of Baroda Apprentice Recruitment 2025' by searching for 'Bank of Baroda' on the portal.",
+      "Receive an email from BFSI SSC with a link to fill the final application form and pay the fee.",
+      "Upload necessary documents (Aadhaar, PAN, mark sheets, passport-size photo).",
+      "Submit the application and note down the acknowledgment number for future reference."
+    ],
+
     links: {
       applyOnline: "https://www.bankofbaroda.in/career",
       notification: "https://www.bankofbaroda.in/career",
       officialWebsite: "https://www.bankofbaroda.in/"
     }
-  },
-  // ... Doosri jobs ka code yahan aayega
+  }
 ];
