@@ -4,15 +4,20 @@ import { jobsData } from './jobsData';
 import SEO from './SEO';
 
 function ActiveJobs() {
-  // Helper: Date string (DD/MM/YYYY) ko asli Date object mein badalna
+  // Helper: Date parser jo extra text (jaise "Upto 5 PM") ko ignore karega
   const parseDate = (dateStr) => {
     if (!dateStr) return null;
-    const parts = dateStr.split('/'); // 15/12/2025 -> ["15", "12", "2025"]
-    // Month 0-indexed hota hai JS mein, isliye -1 kiya
+    
+    // Step 1: Sirf pehla hissa (DD/MM/YYYY) uthao, baaki space ke baad ka hata do
+    const cleanDateStr = dateStr.split(' ')[0]; 
+    
+    const parts = cleanDateStr.split('/'); 
+    if(parts.length < 3) return null; // Agar date sahi format me nahi hai to chod do
+    
     return new Date(parts[2], parts[1] - 1, parts[0]); 
   };
 
-  // Helper: Job me se "Last Date" nikalna
+  // Helper: Last Date nikalne ke liye
   const getLastDateString = (job) => {
     if (!job.importantDates) return null;
     const lastDateObj = job.importantDates.find(d => d.label.toLowerCase().includes("last date"));
@@ -21,26 +26,21 @@ function ActiveJobs() {
 
   // --- MAGIC LOGIC ---
   const today = new Date();
-  today.setHours(0, 0, 0, 0); // Aaj ka time 00:00 kar diya comparison ke liye
+  today.setHours(0, 0, 0, 0); 
 
   const activeJobsList = jobsData
     .filter(job => {
-      // 1. Sirf Latest Jobs honi chahiye
       if (job.category !== "Latest Jobs") return false;
-
-      // 2. Last Date check karo
       const lastDateStr = getLastDateString(job);
-      if (!lastDateStr) return true; // Agar date nahi mili toh dikha do (Safe side)
-
+      if (!lastDateStr) return true; 
+      
       const lastDate = parseDate(lastDateStr);
-      // Agar Last Date aaj ya aane wale kal ki hai, toh dikhao. Agar beet gayi toh hata do.
-      return lastDate >= today;
+      // Agar date invalid thi (null), to job ko dikha do (safe side), warna check karo
+      return lastDate ? lastDate >= today : true;
     })
     .sort((a, b) => {
-      // 3. Sorting: Jiski date paas hai wo upar
-      const dateA = parseDate(getLastDateString(a));
-      const dateB = parseDate(getLastDateString(b));
-      return dateA - dateB;
+      // Sort by ID descending (Newest first)
+      return b.id - a.id; 
     });
 
   return (
@@ -57,7 +57,7 @@ function ActiveJobs() {
       </div>
       
       <p style={{ padding: '0 10px 15px', fontSize: '14px', color: '#555' }}>
-        Currently active government jobs are listed below according to their Last Date. Expired jobs are automatically removed.
+        Currently active government jobs are listed below. Expired jobs are automatically removed.
       </p>
 
       <table className="data-table" style={{ border: '1px solid #ccc' }}>
@@ -76,8 +76,8 @@ function ActiveJobs() {
                 </td>
                 <td style={{padding: '12px'}}>
                   <Link to={`/${job.slug}`} style={{ textDecoration: 'none', color: 'blue', fontWeight: '500', fontSize: '15px' }}>
-  {job.title}
-</Link>
+                    {job.title}
+                  </Link>
                 </td>
               </tr>
             ))
