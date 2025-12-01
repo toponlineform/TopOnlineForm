@@ -280,21 +280,32 @@ function JobDetails() {
         </>
       )}
 
-      {/* 8. Exam Pattern */}
+      {/* 8. Exam Pattern (UPDATED for RRB & Others) */}
       {job.examPattern && (
         <>
           <div className="section-header">Exam Pattern</div>
           <div style={{padding: '10px'}}>
-            {job.examPattern.details && (<ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>{job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}</ul>)}
             
-            {/* Single Table */}
+            {/* Details List (Mode, Negative Marking etc.) */}
+            {job.examPattern.details && (
+              <ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>
+                {job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}
+              </ul>
+            )}
+            
+            {/* AIIMS Style (Single Table) */}
             {job.examPattern.table && <RenderExamTable data={job.examPattern.table} />}
 
-            {/* Multiple Tables (ECGC etc) */}
+            {/* RRB NTPC Style (CBT 1 & CBT 2) */}
+            {job.examPattern.cbt1 && <RenderExamTable data={job.examPattern.cbt1} title="1st Stage Computer Based Test (CBT-1)" />}
+            {job.examPattern.cbt2 && <RenderExamTable data={job.examPattern.cbt2} title="2nd Stage Computer Based Test (CBT-2)" />}
+
+            {/* ECGC Style (Generalist/Specialist) */}
             {job.examPattern.generalistObjective && <RenderExamTable data={job.examPattern.generalistObjective} title="1. Generalist - Objective Test" />}
             {job.examPattern.generalistDescriptive && <RenderExamTable data={job.examPattern.generalistDescriptive} title="2. Generalist - Descriptive Test" />}
             {job.examPattern.specialistObjective && <RenderExamTable data={job.examPattern.specialistObjective} title="3. Specialist - Objective Test" />}
             {job.examPattern.specialistDescriptive && <RenderExamTable data={job.examPattern.specialistDescriptive} title="4. Specialist - Descriptive Test" />}
+            
           </div>
         </>
       )}
