@@ -177,13 +177,15 @@ export const jobsData = [
     },
 
     vacancyDetails: [
-      { postName: "Junior Administrative Assistant (LDC)", totalPost: "Various", eligibility: "12th Pass + Typing (35 wpm Eng / 30 wpm Hindi)" },
-      { postName: "Store Keeper / Clerk", totalPost: "Various", eligibility: "Degree / PG Diploma in Material Mgmt" },
-      { postName: "Junior Engineer (JE)", totalPost: "Various", eligibility: "Diploma/Degree in Engineering" },
-      { postName: "Lab Technician", totalPost: "Various", eligibility: "10+2 + DMLT / B.Sc MLT" },
-      { postName: "Pharmacist", totalPost: "Various", eligibility: "Diploma in Pharmacy + Registered" },
-      { postName: "Stenographer", totalPost: "Various", eligibility: "12th Pass + Dictation/Transcription Skill" },
-      { postName: "Hospital Attendant", totalPost: "Various", eligibility: "10th Pass + First Aid Certificate" }
+      { postName: "Assistant Administrative Officer", totalPost: "Various", eligibility: "Degree + Computer Proficiency" },
+      { postName: "Junior Engineer (Civil/Elect/Mech)", totalPost: "Various", eligibility: "Diploma/Degree in Engineering" },
+      { postName: "Lower Division Clerk (LDC) / JAA", totalPost: "Various", eligibility: "12th Pass + Typing" },
+      { postName: "Stenographer / Personal Assistant", totalPost: "Various", eligibility: "12th/Degree + Steno Skill" },
+      { postName: "Store Keeper", totalPost: "Various", eligibility: "Degree/Diploma in Material Mgmt" },
+      { postName: "Lab Technician / Attendant", totalPost: "Various", eligibility: "10+2 Science + DMLT/BMLT" },
+      { postName: "Pharmacist", totalPost: "Various", eligibility: "Diploma in Pharmacy + Reg." },
+      { postName: "Hospital Attendant (Nursing Orderly)", totalPost: "Various", eligibility: "10th Pass + Certificate" },
+      { postName: "Other Posts (Dietician, Librarian, etc.)", totalPost: "Various", eligibility: "As per post requirement" }
     ],
 
     howToApply: [
