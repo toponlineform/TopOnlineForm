@@ -106,5 +106,81 @@ export const jobsData = [
       notification: "chrome-extension://kdpelmjpfafjppnhbloffcjpeomlnpah/https://bankofbaroda.bank.in/-/media/Project/BOB/CountryWebsites/India/Career/2025/25-11/11-11-2025-Advertisement-Apprenticeship-10-34.pdf",
       officialWebsite: "https://bankofbaroda.bank.in/career/current-opportunities"
     }
+  },
+  {
+    id: 2,
+    slug: "aiims-cre-4-recruitment-2025",
+    shortTitle: "AIIMS CRE-4 Group B & C Recruitment 2025",
+    title: "AIIMS CRE-4 Recruitment 2025 Apply Online for Group B & C Posts | Exam Date & Syllabus",
+    shortInfo: "All India Institute of Medical Sciences (AIIMS), New Delhi has released the Detailed Recruitment Advertisement (DRA) for the Common Recruitment Examination (CRE-4). This exam is for the recruitment of various Group B and Group C posts (Clerk, JE, Steno, Assistant, etc.) in participating AIIMS and other Central Govt Institutes. Interested candidates can apply online before the last date.",
+    postDate: "14/11/2025",
+    category: "Latest Jobs",
+
+    importantDates: [
+      { label: "Application Begin", value: "14/11/2025" },
+      { label: "Last Date for Apply", value: "02/12/2025 (Upto 5:00 PM)" },
+      { label: "Admit Card Status", value: "08/12/2025" },
+      { label: "CBT Exam Date", value: "22/12/2025 to 24/12/2025 (Tentative)" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC", amount: "₹3000/-" },
+      { category: "SC / ST / EWS", amount: "₹2400/-" },
+      { category: "PwBD", amount: "₹0 (Exempted)" },
+      { category: "Payment Mode", amount: "Online (Debit/Credit Card/Net Banking)" }
+    ],
+
+    ageLimit: "Varies Post Wise (Mostly 18-30 Years or 21-35 Years) as on 02/12/2025. Age Relaxation applicable as per rules.",
+
+    selectionProcess: [
+      "Computer Based Test (CBT)",
+      "Skill Test (if applicable for the post)",
+      "Document Verification",
+      "Medical Examination"
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Computer Based Test (CBT)",
+        "Duration: 90 Minutes",
+        "Total Questions: 100 MCQs",
+        "Total Marks: 400",
+        "Marking Scheme: 4 Marks for correct answer, -1 Mark for wrong answer (Negative Marking)."
+      ],
+      table: [
+        { subject: "General Knowledge & Aptitude", questions: 10, marks: 40 },
+        { subject: "Computer Knowledge", questions: 10, marks: 40 },
+        { subject: "Domain Specific (Subject Knowledge)", questions: 80, marks: 320 },
+        { subject: "Total", questions: 100, marks: 400 }
+      ]
+    },
+
+    vacancyDetails: [
+      { postName: "Assistant Administrative Officer", totalPost: "Various", eligibility: "Degree + Computer Proficiency" },
+      { postName: "Junior Engineer (Civil/Elect/Mech)", totalPost: "Various", eligibility: "Diploma/Degree in Engineering" },
+      { postName: "Lower Division Clerk (LDC) / JAA", totalPost: "Various", eligibility: "12th Pass + Typing" },
+      { postName: "Stenographer / Personal Assistant", totalPost: "Various", eligibility: "12th/Degree + Steno Skill" },
+      { postName: "Store Keeper", totalPost: "Various", eligibility: "Degree/Diploma in Material Mgmt" },
+      { postName: "Lab Technician / Attendant", totalPost: "Various", eligibility: "10+2 Science + DMLT/BMLT" },
+      { postName: "Pharmacist", totalPost: "Various", eligibility: "Diploma in Pharmacy + Reg." },
+      { postName: "Hospital Attendant (Nursing Orderly)", totalPost: "Various", eligibility: "10th Pass + Certificate" },
+      { postName: "Other Posts (Dietician, Librarian, etc.)", totalPost: "Various", eligibility: "As per post requirement" }
+    ],
+
+    howToApply: [
+      "Visit the official website of AIIMS Exams (aiimsexams.ac.in).",
+      "Click on 'Recruitments' and select 'Common Recruitment Examination (CRE-4)'.",
+      "Register yourself and login using generated credentials.",
+      "Fill the detailed application form and upload photo, signature, and thumb impression.",
+      "Pay the examination fee online.",
+      "Select your city choice for the examination.",
+      "Submit the form and take a printout for future reference."
+    ],
+
+    links: {
+      applyOnline: "https://www.aiimsexams.ac.in/", 
+      notification: "https://www.aiimsexams.ac.in/", 
+      officialWebsite: "https://www.aiimsexams.ac.in/" 
+    }
   }
 ];
