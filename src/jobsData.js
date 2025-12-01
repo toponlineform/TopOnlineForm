@@ -1,7 +1,7 @@
 export const jobsData = [
   // --- 1. ECGC PO (NEWEST) ---
   {
-    {
+    
     id: 4,
     slug: "wbssc-group-c-d-recruitment-2025",
     shortTitle: "WBSSC Group C & D Recruitment 2025",
