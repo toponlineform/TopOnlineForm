@@ -107,14 +107,17 @@ export const jobsData = [
       officialWebsite: "https://bankofbaroda.bank.in/career/current-opportunities"
     }
   },
-  {
+ {
     id: 2,
     slug: "aiims-cre-4-recruitment-2025",
     shortTitle: "AIIMS CRE-4 Group B & C Recruitment 2025",
-    title: "AIIMS CRE-4 Recruitment 2025 Apply Online for Group B & C Posts | Exam Date & Syllabus",
-    shortInfo: "All India Institute of Medical Sciences (AIIMS), New Delhi has released the Detailed Recruitment Advertisement (DRA) for the Common Recruitment Examination (CRE-4). This exam is for the recruitment of various Group B and Group C posts (Clerk, JE, Steno, Assistant, etc.) in participating AIIMS and other Central Govt Institutes. Interested candidates can apply online before the last date.",
-    postDate: "14/11/2025",
+    title: "AIIMS CRE-4 Recruitment 2025 Apply Online for Group B & C Posts | Exam Date, Salary & Syllabus",
+    shortInfo: "All India Institute of Medical Sciences (AIIMS), New Delhi has released the Detailed Recruitment Advertisement (DRA) for the Common Recruitment Examination (CRE-4). This exam is for the recruitment of various Group B and Group C posts (Clerk, JE, Steno, Assistant, etc.) in participating AIIMS and other Central Govt Institutes. Check Post-wise Salary, Exam Pattern, and Eligibility here.",
+    postDate: "02/12/2025",
     category: "Latest Jobs",
+
+    // Highlighted Salary
+    salary: "Level 1 to Level 7 (Post Wise)",
 
     importantDates: [
       { label: "Application Begin", value: "14/11/2025" },
@@ -126,61 +129,81 @@ export const jobsData = [
     applicationFee: [
       { category: "General / OBC", amount: "₹3000/-" },
       { category: "SC / ST / EWS", amount: "₹2400/-" },
-      { category: "PwBD", amount: "₹0 (Exempted)" },
-      { category: "Payment Mode", amount: "Online (Debit/Credit Card/Net Banking)" }
+      { category: "PwBD", amount: "₹0 (Exempted)" }
     ],
 
-    ageLimit: "Varies Post Wise (Mostly 18-30 Years or 21-35 Years) as on 02/12/2025. Age Relaxation applicable as per rules.",
+    ageLimit: "Varies Post Wise (Mostly 18-30 or 21-35 Years) as on 02/12/2025",
+
+    // --- NEW: Detailed Age Relaxation Table ---
+    ageRelaxation: [
+      "SC/ST: 5 Years",
+      "OBC (NCL): 3 Years",
+      "PwBD: 10 Years",
+      "PwBD + OBC: 13 Years",
+      "PwBD + SC/ST: 15 Years",
+      "Ex-Servicemen: Service Duration + 3 Years",
+      "Central Govt. Civilian Employees: 5 Years (for Group B) / Upto 40 Years (for Group C)"
+    ],
+
+    // --- NEW: Detailed Salary Structure Table ---
+    salaryDetails: [
+      { post: "Assistant Administrative Officer", level: "Level 7" },
+      { post: "Dietician / Assistant Dietician", level: "Level 7 / Level 6" },
+      { post: "Junior Engineer (Civil/Elect/Mech)", level: "Level 6" },
+      { post: "Lab Technician / Technical Assistant", level: "Level 6" },
+      { post: "Store Keeper", level: "Level 6" },
+      { post: "Lower Division Clerk (LDC) / Jr Admin Asst", level: "Level 2" },
+      { post: "Stenographer / Personal Assistant", level: "Level 4 / Level 6" },
+      { post: "Hospital Attendant (Nursing Orderly)", level: "Level 1" },
+      { post: "Pharmacist", level: "Level 5" }
+    ],
 
     selectionProcess: [
       "Computer Based Test (CBT)",
-      "Skill Test (if applicable for the post)",
+      "Skill Test (Typing/Steno) - If applicable for the post",
       "Document Verification",
       "Medical Examination"
     ],
 
+    // --- CORRECT Exam Pattern (As per PDF Page 14) ---
     examPattern: {
       details: [
         "Mode: Computer Based Test (CBT)",
         "Duration: 90 Minutes",
         "Total Questions: 100 MCQs",
-        "Total Marks: 400",
-        "Marking Scheme: 4 Marks for correct answer, -1 Mark for wrong answer (Negative Marking)."
+        "Total Marks: 400 (4 Marks per question)",
+        "Negative Marking: 1 Mark deduction for each wrong answer."
       ],
       table: [
-        { subject: "General Knowledge & Aptitude", questions: 10, marks: 40 },
-        { subject: "Computer Knowledge", questions: 10, marks: 40 },
+        { subject: "General Knowledge & Aptitude + Computer", questions: 20, marks: 80 },
         { subject: "Domain Specific (Subject Knowledge)", questions: 80, marks: 320 },
         { subject: "Total", questions: 100, marks: 400 }
       ]
     },
 
     vacancyDetails: [
-      { postName: "Assistant Administrative Officer", totalPost: "Various", eligibility: "Degree + Computer Proficiency" },
-      { postName: "Junior Engineer (Civil/Elect/Mech)", totalPost: "Various", eligibility: "Diploma/Degree in Engineering" },
-      { postName: "Lower Division Clerk (LDC) / JAA", totalPost: "Various", eligibility: "12th Pass + Typing" },
-      { postName: "Stenographer / Personal Assistant", totalPost: "Various", eligibility: "12th/Degree + Steno Skill" },
-      { postName: "Store Keeper", totalPost: "Various", eligibility: "Degree/Diploma in Material Mgmt" },
-      { postName: "Lab Technician / Attendant", totalPost: "Various", eligibility: "10+2 Science + DMLT/BMLT" },
-      { postName: "Pharmacist", totalPost: "Various", eligibility: "Diploma in Pharmacy + Reg." },
-      { postName: "Hospital Attendant (Nursing Orderly)", totalPost: "Various", eligibility: "10th Pass + Certificate" },
-      { postName: "Other Posts (Dietician, Librarian, etc.)", totalPost: "Various", eligibility: "As per post requirement" }
+      { postName: "Junior Administrative Assistant (LDC)", totalPost: "Various", eligibility: "12th Pass + Typing (35 wpm Eng / 30 wpm Hindi)" },
+      { postName: "Store Keeper / Clerk", totalPost: "Various", eligibility: "Degree / PG Diploma in Material Mgmt" },
+      { postName: "Junior Engineer (JE)", totalPost: "Various", eligibility: "Diploma/Degree in Engineering" },
+      { postName: "Lab Technician", totalPost: "Various", eligibility: "10+2 + DMLT / B.Sc MLT" },
+      { postName: "Pharmacist", totalPost: "Various", eligibility: "Diploma in Pharmacy + Registered" },
+      { postName: "Stenographer", totalPost: "Various", eligibility: "12th Pass + Dictation/Transcription Skill" },
+      { postName: "Hospital Attendant", totalPost: "Various", eligibility: "10th Pass + First Aid Certificate" }
     ],
 
     howToApply: [
-      "Visit the official website of AIIMS Exams (aiimsexams.ac.in).",
-      "Click on 'Recruitments' and select 'Common Recruitment Examination (CRE-4)'.",
-      "Register yourself and login using generated credentials.",
-      "Fill the detailed application form and upload photo, signature, and thumb impression.",
-      "Pay the examination fee online.",
-      "Select your city choice for the examination.",
-      "Submit the form and take a printout for future reference."
+      "Visit the official website aiimsexams.ac.in.",
+      "Complete the Registration and Login with your credentials.",
+      "Select the 'Group' you want to apply for (You can apply for multiple groups by paying separately).",
+      "Fill the details, upload Photo, Signature, and Thumb Impression.",
+      "Pay the examination fee and submit the form.",
+      "Print the final application form for future reference."
     ],
 
     links: {
-      applyOnline: "https://www.aiimsexams.ac.in/", 
-      notification: "https://www.aiimsexams.ac.in/", 
-      officialWebsite: "https://www.aiimsexams.ac.in/" 
+      applyOnline: "https://aiimsexams.ac.in/advertisement/6915d3056d76b75af3e2187d", 
+      notification: "https://aiimsexams.ac.in/notification/6915d3056d76b75af3e2187d", 
+      officialWebsite: "https://aiimsexams.ac.in/featuredAdvertisement/677cd052a3d0265727e3d10f/" 
     }
   }
 ];
