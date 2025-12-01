@@ -4,43 +4,47 @@ import { jobsData } from './jobsData';
 import SEO from './SEO';
 
 function ActiveJobs() {
-  // Helper: Date parser jo extra text (jaise "Upto 5 PM") ko ignore karega
+  // Helper: Date parser (Handles "02/12/2025 (Upto 5 PM)")
   const parseDate = (dateStr) => {
     if (!dateStr) return null;
-    
-    // Step 1: Sirf pehla hissa (DD/MM/YYYY) uthao, baaki space ke baad ka hata do
-    const cleanDateStr = dateStr.split(' ')[0]; 
-    
+    const cleanDateStr = dateStr.split(' ')[0]; // Sirf date uthao, time hatao
     const parts = cleanDateStr.split('/'); 
-    if(parts.length < 3) return null; // Agar date sahi format me nahi hai to chod do
-    
+    if(parts.length < 3) return null;
     return new Date(parts[2], parts[1] - 1, parts[0]); 
   };
 
-  // Helper: Last Date nikalne ke liye
+  // Helper: Last Date string nikalna
   const getLastDateString = (job) => {
     if (!job.importantDates) return null;
     const lastDateObj = job.importantDates.find(d => d.label.toLowerCase().includes("last date"));
     return lastDateObj ? lastDateObj.value : null;
   };
 
-  // --- MAGIC LOGIC ---
   const today = new Date();
   today.setHours(0, 0, 0, 0); 
 
   const activeJobsList = jobsData
     .filter(job => {
+      // 1. Sirf Latest Jobs dikhani hain
       if (job.category !== "Latest Jobs") return false;
+
+      // 2. Expired Jobs hatani hain
       const lastDateStr = getLastDateString(job);
       if (!lastDateStr) return true; 
-      
       const lastDate = parseDate(lastDateStr);
-      // Agar date invalid thi (null), to job ko dikha do (safe side), warna check karo
       return lastDate ? lastDate >= today : true;
     })
     .sort((a, b) => {
-      // Sort by ID descending (Newest first)
-      return b.id - a.id; 
+      // --- SORTING LOGIC CHANGED ---
+      // Pehle ID se sort tha, ab Date se sort hoga (Ascending: Jo pehle expire hoga wo upar)
+      const dateA = parseDate(getLastDateString(a));
+      const dateB = parseDate(getLastDateString(b));
+      
+      // Agar date nahi hai to sabse neeche phenk do
+      if (!dateA) return 1;
+      if (!dateB) return -1;
+
+      return dateA - dateB; // Ascending (Pass wali date pehle)
     });
 
   return (
@@ -57,37 +61,40 @@ function ActiveJobs() {
       </div>
       
       <p style={{ padding: '0 10px 15px', fontSize: '14px', color: '#555' }}>
-        Currently active government jobs are listed below. Expired jobs are automatically removed.
+        Currently active government jobs are listed below according to their Last Date. Expired jobs are automatically removed.
       </p>
 
-      <table className="data-table" style={{ border: '1px solid #ccc' }}>
-        <thead>
-          <tr style={{ background: '#f8f9fa' }}>
-            <th style={{ width: '25%', textAlign: 'center', background: '#eee' }}>Last Date</th>
-            <th style={{ textAlign: 'left', background: '#eee' }}>Post Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          {activeJobsList.length > 0 ? (
-            activeJobsList.map(job => (
-              <tr key={job.id} style={{borderBottom: '1px solid #ddd'}}>
-                <td style={{ textAlign: 'center', fontWeight: 'bold', color: '#ab1e1e', padding: '12px' }}>
-                  {getLastDateString(job)}
-                </td>
-                <td style={{padding: '12px'}}>
-                  <Link to={`/${job.slug}`} style={{ textDecoration: 'none', color: 'blue', fontWeight: '500', fontSize: '15px' }}>
-                    {job.title}
-                  </Link>
-                </td>
-              </tr>
-            ))
-          ) : (
-            <tr>
-              <td colSpan="2" style={{textAlign: 'center', padding: '20px'}}>No Active Jobs Found</td>
+      <div style={{overflowX: 'auto'}}>
+        <table className="data-table" style={{ border: '1px solid #ccc', minWidth: '100%' }}>
+          <thead>
+            <tr style={{ background: '#f8f9fa' }}>
+              <th style={{ width: '30%', textAlign: 'center', background: '#eee', padding: '10px' }}>Last Date</th>
+              <th style={{ textAlign: 'left', background: '#eee', padding: '10px' }}>Post Details</th>
             </tr>
-          )}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {activeJobsList.length > 0 ? (
+              activeJobsList.map(job => (
+                <tr key={job.id} style={{borderBottom: '1px solid #ddd'}}>
+                  <td style={{ textAlign: 'center', fontWeight: 'bold', color: '#ab1e1e', padding: '12px', whiteSpace: 'nowrap' }}>
+                    {getLastDateString(job)}
+                  </td>
+                  <td style={{padding: '12px'}}>
+                    <Link to={`/${job.slug}`} style={{ textDecoration: 'none', color: 'blue', fontWeight: '500', fontSize: '15px' }}>
+                      {/* --- TITLE FIX: Use Short Title --- */}
+                      {job.shortTitle ? job.shortTitle : job.title}
+                    </Link>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="2" style={{textAlign: 'center', padding: '20px'}}>No Active Jobs Found</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
