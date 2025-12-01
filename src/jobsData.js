@@ -35,13 +35,11 @@ export const jobsData = [
     ],
 
     vacancyDetails: [
-      // Graduate Level Posts (CEN 05/2025)
       { postName: "Chief Commercial cum Ticket Supervisor", totalPost: 1736, eligibility: "Bachelor Degree" },
       { postName: "Station Master", totalPost: 994, eligibility: "Bachelor Degree" },
       { postName: "Goods Train Manager", totalPost: 3144, eligibility: "Bachelor Degree" },
       { postName: "Junior Account Assistant cum Typist", totalPost: 1507, eligibility: "Bachelor Degree + Typing" },
       { postName: "Senior Clerk cum Typist", totalPost: 732, eligibility: "Bachelor Degree + Typing" },
-      // Undergraduate Level Posts (CEN 06/2025)
       { postName: "Commercial cum Ticket Clerk", totalPost: 2022, eligibility: "12th Pass (50% Marks)" },
       { postName: "Accounts Clerk cum Typist", totalPost: 361, eligibility: "12th Pass + Typing" },
       { postName: "Junior Clerk cum Typist", totalPost: 990, eligibility: "12th Pass + Typing" },
@@ -51,29 +49,28 @@ export const jobsData = [
     vacancyTableTitle: "Post Wise Vacancy Details (Graduate & UG)",
     vacancyColumnName: "Post Name",
 
-    // --- 1. Zone Wise Vacancy (Corrected from Screenshot) ---
     stateWiseVacancy: [
-        { state: "RRB AHMEDABAD", total: "79 (Grad) + 153 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB AJMER", total: "345 (Grad) + 116 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB BANGALORE", total: "241 (Grad) + 54 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB BHOPAL", total: "382 (Grad) + 123 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB BHUBANESWAR", total: "231 (Grad) + 18 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB BILASPUR", total: "864 (Grad) + 69 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB CHANDIGARH", total: "199 (Grad) + 24 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB CHENNAI", total: "187 (Grad) + 80 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB GORAKHPUR", total: "111 (Grad) + 173 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB GUWAHATI", total: "56 (Grad) + 135 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB JAMMU-SRINAGAR", total: "32 (Grad) + 137 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB KOLKATA", total: "685 (Grad) + 499 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB MALDA", total: "522 (Grad) + 196 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB MUMBAI", total: "596 (Grad) + 494 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB MUZAFFARPUR", total: "21 (Grad) + 39 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB PATNA", total: "23 (Grad) + 24 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB PRAYAGRAJ", total: "110 (Grad) + 303 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB RANCHI", total: "651 (Grad) + 56 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB SECUNDERABAD", total: "396 (Grad) + 272 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB SILIGURI", total: "21 (Grad) + 07 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
-        { state: "RRB THIRUVANANTHAPURAM", total: "58 (Grad) + 86 (UG)", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" }
+        { state: "RRB AHMEDABAD", total: "232", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB AJMER", total: "461", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB BANGALORE", total: "295", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB BHOPAL", total: "505", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB BHUBANESWAR", total: "249", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB BILASPUR", total: "933", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB CHANDIGARH", total: "223", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB CHENNAI", total: "267", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB GORAKHPUR", total: "284", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB GUWAHATI", total: "191", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB JAMMU-SRINAGAR", total: "169", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB KOLKATA", total: "1184", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB MALDA", total: "718", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB MUMBAI", total: "1090", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB MUZAFFARPUR", total: "60", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB PATNA", total: "47", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB PRAYAGRAJ", total: "413", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB RANCHI", total: "707", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB SECUNDERABAD", total: "668", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB SILIGURI", total: "28", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+        { state: "RRB THIRUVANANTHAPURAM", total: "144", ur: "-", ews: "-", obc: "-", sc: "-", st: "-" }
     ],
     
     salaryDetails: [
@@ -91,20 +88,23 @@ export const jobsData = [
       "Document Verification & Medical Exam"
     ],
 
-    // --- 3. Detailed Exam Pattern (CBT 1 & CBT 2) ---
+    // --- CORRECTED EXAM PATTERN (Detailed + CBT 1 & 2 Specific) ---
     examPattern: {
+      // Details wapas daal di hain
       details: [
-        "Mode: Online Computer Based Test",
+        "Mode: Computer Based Test (CBT-1 & CBT-2)",
+        "Duration: 90 Minutes (For each Stage)",
+        "Total Questions: 100 (CBT-1) / 120 (CBT-2)",
         "Negative Marking: 1/3rd Marks deducted for each wrong answer."
       ],
-      // CBT 1 Table
-      generalistObjective: [
+      
+      // Special Keys for RRB NTPC so App.jsx shows correct title
+      cbt1: [
         { subject: "General Awareness", questions: 40, marks: 40 },
         { subject: "Mathematics", questions: 30, marks: 30 },
         { subject: "General Intelligence & Reasoning", questions: 30, marks: 30 }
       ],
-      // CBT 2 Table
-      specialistObjective: [
+      cbt2: [
         { subject: "General Awareness", questions: 50, marks: 50 },
         { subject: "Mathematics", questions: 35, marks: 35 },
         { subject: "General Intelligence & Reasoning", questions: 35, marks: 35 }
@@ -121,14 +121,10 @@ export const jobsData = [
       "Submit the form and print the receipt."
     ],
 
-    // --- 4. More Important Links (From Screenshot) ---
     links: {
       applyOnline: "https://www.rrbapply.gov.in/", 
       notification: "https://indianrailways.gov.in/railwayboard/view_section.jsp?lang=0&id=0,7,1281", 
-      officialWebsite: "https://indianrailways.gov.in/",
-      // Custom extra links will be handled by a small App.jsx tweak below or you can just use these standard ones.
-      // Currently App.jsx supports 3 standard links. 
-      // To add more, we need to update App.jsx slightly.
+      officialWebsite: "https://indianrailways.gov.in/" 
     }
   },
   {
