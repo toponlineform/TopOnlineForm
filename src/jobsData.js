@@ -1,6 +1,82 @@
 export const jobsData = [
   // --- 1. ECGC PO (NEWEST) ---
   {
+    {
+    id: 4,
+    slug: "wbssc-group-c-d-recruitment-2025",
+    shortTitle: "WBSSC Group C & D Recruitment 2025",
+    title: "WBSSC Group C & D Recruitment 2025 Apply Online for 8477 Posts | Clerk & Non-Teaching Staff",
+    shortInfo: "The West Bengal Central School Service Commission (WBSSC) has released the notification for the 1st State Level Selection Test (SLST) 2025 to recruit Non-Teaching Staff (Clerk & Group D). Eligible candidates can apply online for 8000+ vacancies in Govt. Aided/Sponsored Schools.",
+    postDate: "09/10/2025",
+    category: "Latest Jobs",
+
+    salary: "As per State Govt Norms (Pay Level 6 for Clerk / Level 1 for Group D)",
+
+    importantDates: [
+      { label: "Application Begin", value: "03/11/2025" },
+      { label: "Last Date for Apply", value: "03/12/2025 (Upto 5:00 PM)" },
+      { label: "Fee Payment Last Date", value: "03/12/2025" },
+      { label: "Written Exam Date", value: "January 2026 (Tentative)" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹400/-" },
+      { category: "SC / ST / PH", amount: "₹150/-" },
+      { category: "Payment Mode", amount: "Online (Internet Banking/Cards)" }
+    ],
+
+    ageLimit: "Min: 18 Years | Max: 40 Years (As on 01/01/2025)",
+
+    ageRelaxation: [
+      "SC/ST: 5 Years",
+      "OBC: 3 Years",
+      "Physically Handicapped (PH): 8 Years"
+    ],
+
+    vacancyDetails: [
+      { postName: "Clerk (Group C)", totalPost: 2989, eligibility: "Passed Madhyamik (10th) or Equivalent" },
+      { postName: "Group D Staff", totalPost: 5488, eligibility: "Passed Class VIII from recognized School" }
+    ],
+
+    selectionProcess: [
+      "Written Examination (OMR Based)",
+      "Academic Evaluation (For Clerk)",
+      "Typing/Computer Proficiency Test (For Clerk)",
+      "Personality Test / Interview"
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: OMR Based Written Examination",
+        "Marking: 1 Mark for each correct answer",
+        "Negative Marking: No Negative Marking",
+        "Language: English and Bengali"
+      ],
+      table: [
+        { subject: "General Knowledge", questions: 15, marks: 15 },
+        { subject: "Current Affairs", questions: 15, marks: 15 },
+        { subject: "General English", questions: 15, marks: 15 },
+        { subject: "Arithmetic", questions: 15, marks: 15 }
+      ]
+      // Note: Exact syllabus distribution will be uploaded later, this is tentative standard pattern.
+    },
+
+    howToApply: [
+      "Visit the official website westbengalssc.com.",
+      "Click on 'Application for 1st SLST (NTS) 2025'.",
+      "Register with Name, Father's Name, DOB (as per Madhyamik Certificate).",
+      "Fill the application form carefully (No rectification allowed later).",
+      "Upload Photo and Signature.",
+      "Pay the examination fee online.",
+      "Submit the form and print the confirmation page."
+    ],
+
+    links: {
+      applyOnline: "https://www.westbengalssc.com/otrgrpcd/register/", 
+      notification: "http://old.westbengalssc.com/sscorg/wbssc/download/notice/Notification_1stSLST_2025_NTS_09_October_2025.pdf", 
+      officialWebsite: "https://www.westbengalssc.com" 
+    }
+  },
     id: 3,
     slug: "ecgc-po-recruitment-2025",
     shortTitle: "ECGC PO Recruitment 2025",
