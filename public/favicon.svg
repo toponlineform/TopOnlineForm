@@ -1,8 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect width="512" height="512" rx="100" fill="#ab1e1e"/>
   
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" 
-        font-family="Arial, sans-serif" font-weight="bold" font-size="350" fill="#ffffff" dy="25">
-    T
-  </text>
+  <path d="M180 150 V120 A40 40 0 0 1 332 120 V150" fill="none" stroke="#ffffff" stroke-width="30"/>
+  
+  <rect x="80" y="150" width="352" height="260" rx="20" fill="#ffffff"/>
+  
+  <g fill="#ab1e1e" font-family="Arial, sans-serif" font-weight="900" font-size="150">
+    <text x="95" y="350">T</text>
+    
+    <circle cx="256" cy="305" r="50" fill="none" stroke="#ab1e1e" stroke-width="22"/>
+    <line x1="292" y1="350" x2="335" y2="404" stroke="#ab1e1e" stroke-width="22" stroke-linecap="round"/>
+    
+    <text x="320" y="350">F</text>
+  </g>
 </svg>
