@@ -107,7 +107,7 @@ export const jobsData = [
       officialWebsite: "https://bankofbaroda.bank.in/career/current-opportunities"
     }
   },
- {
+{
     id: 2,
     slug: "aiims-cre-4-recruitment-2025",
     shortTitle: "AIIMS CRE-4 Group B & C Recruitment 2025",
@@ -116,7 +116,6 @@ export const jobsData = [
     postDate: "02/12/2025",
     category: "Latest Jobs",
 
-    // Highlighted Salary
     salary: "Level 1 to Level 7 (Post Wise)",
 
     importantDates: [
@@ -134,7 +133,6 @@ export const jobsData = [
 
     ageLimit: "Varies Post Wise (Mostly 18-30 or 21-35 Years) as on 02/12/2025",
 
-    // --- NEW: Detailed Age Relaxation Table ---
     ageRelaxation: [
       "SC/ST: 5 Years",
       "OBC (NCL): 3 Years",
@@ -145,7 +143,6 @@ export const jobsData = [
       "Central Govt. Civilian Employees: 5 Years (for Group B) / Upto 40 Years (for Group C)"
     ],
 
-    // --- NEW: Detailed Salary Structure Table ---
     salaryDetails: [
       { post: "Assistant Administrative Officer", level: "Level 7" },
       { post: "Dietician / Assistant Dietician", level: "Level 7 / Level 6" },
@@ -165,7 +162,6 @@ export const jobsData = [
       "Medical Examination"
     ],
 
-    // --- CORRECT Exam Pattern (As per PDF Page 14) ---
     examPattern: {
       details: [
         "Mode: Computer Based Test (CBT)",
@@ -177,7 +173,7 @@ export const jobsData = [
       table: [
         { subject: "General Knowledge & Aptitude + Computer", questions: 20, marks: 80 },
         { subject: "Domain Specific (Subject Knowledge)", questions: 80, marks: 320 },
-        { subject: "Total", questions: 100, marks: 400 }
+        { subject: "Total", questions: 100, marks: 400 } 
       ]
     },
 
