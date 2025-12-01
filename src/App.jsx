@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link, useParams, useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async'; // SEO Schema ke liye Import kiya
+import { Helmet } from 'react-helmet-async';
 import { jobsData } from './jobsData';
 import About from './About';
 import Contact from './Contact';
@@ -12,7 +12,6 @@ import ActiveJobs from './ActiveJobs';
 // --- Navbar & Search Component ---
 function Navbar() {
   const [searchTerm, setSearchTerm] = useState("");
-  const navigate = useNavigate();
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -63,7 +62,6 @@ function Home() {
         {jobs.length > 0 ? jobs.map(job => (
           <li key={job.id}>
             <Link to={`/${job.slug}`}>
-                {/* --- UPDATE: Short Title Logic Added Here --- */}
                 {job.shortTitle ? job.shortTitle : job.title}
             </Link>
           </li>
@@ -77,7 +75,6 @@ function Home() {
     <div className="main-grid">
       <SEO title="Sarkari Result 2025" description="Latest Govt Jobs" keywords="Sarkari Result" url="https://toponlineform.com/" />
       
-      {/* Action Row Inside Grid */}
       <div className="action-cell"><a href="https://whatsapp.com" target="_blank" className="social-btn whatsapp full-width">Join WhatsApp Group</a></div>
       <div className="action-cell"><a href="https://telegram.org" target="_blank" className="social-btn telegram full-width">Join Telegram Channel</a></div>
       <div className="action-cell">
@@ -97,25 +94,22 @@ function Home() {
   );
 }
 
-// --- Job Details (WITH SCHEMA MARKUP) ---
+// --- Job Details (Updated with New Sections) ---
 function JobDetails() {
   const { slug } = useParams();
   const job = jobsData.find((j) => j.slug === slug);
   if (!job) return <h2 style={{textAlign:'center', marginTop:'20px'}}>Job Not Found</h2>;
 
-  // 1. Date Converter Helper
   const convertDate = (dateStr) => {
     if(!dateStr) return new Date().toISOString().split('T')[0];
     const parts = dateStr.split('/');
     return `${parts[2]}-${parts[1]}-${parts[0]}`; 
   };
 
-  // 2. Find Last Date for Schema
   const lastDateItem = job.importantDates.find(d => d.label.toLowerCase().includes('last'));
   const validThrough = lastDateItem ? convertDate(lastDateItem.value) : null;
   const datePosted = convertDate(job.postDate);
 
-  // 3. Schema Object Construction
   const jobSchema = {
     "@context": "https://schema.org/",
     "@type": "JobPosting",
@@ -141,7 +135,6 @@ function JobDetails() {
     <div className="job-container">
       <SEO title={job.title} description={job.shortInfo} keywords={job.title} url={`https://toponlineform.com/${job.slug}`} />
       
-      {/* INJECT SCHEMA INTO HEAD */}
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(jobSchema)}
@@ -158,13 +151,86 @@ function JobDetails() {
         <td><ul>{job.applicationFee.map((f,i)=><li key={i}><strong>{f.category}:</strong> {f.amount}</li>)}</ul></td></tr></tbody></table>
       )}
       
-      {job.ageLimit && (<><div className="section-header">Age Limit</div><p style={{textAlign: 'center', border: '1px solid #000', padding: '10px'}}>{job.ageLimit}</p></>)}
+      {job.ageLimit && (
+        <>
+          <div className="section-header">Age Limit</div>
+          <p style={{textAlign: 'center', border: '1px solid #000', padding: '10px'}}>{job.ageLimit}</p>
+          {/* --- NEW: Age Relaxation --- */}
+          {job.ageRelaxation && (
+            <div style={{marginTop: '15px', padding: '0 10px'}}>
+              <strong>Age Relaxation:</strong>
+              <ul style={{listStyleType: 'disc', marginLeft: '30px', marginTop: '5px'}}>
+                {job.ageRelaxation.map((item, index) => <li key={index} style={{marginBottom: '5px'}}>{item}</li>)}
+              </ul>
+            </div>
+          )}
+        </>
+      )}
+
+      {/* --- NEW: Selection Process --- */}
+      {job.selectionProcess && (
+        <>
+          <div className="section-header">Selection Process</div>
+          <ol style={{marginLeft: '30px', padding: '10px 0'}}>
+            {job.selectionProcess.map((item, index) => <li key={index} style={{marginBottom: '5px'}}><strong>Stage {index + 1}:</strong> {item}</li>)}
+          </ol>
+        </>
+      )}
+
+      {/* --- NEW: Exam Pattern --- */}
+      {job.examPattern && (
+        <>
+          <div className="section-header">Exam Pattern</div>
+          <div style={{padding: '10px'}}>
+            {job.examPattern.details && (
+              <ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>
+                {job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}
+              </ul>
+            )}
+            {job.examPattern.table && (
+              <table>
+                <thead>
+                  <tr style={{background: '#f2f2f2'}}>
+                    <th>Subject</th>
+                    <th>No. of Questions</th>
+                    <th>Marks</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {job.examPattern.table.map((row, i) => (
+                    <tr key={i}>
+                      <td>{row.subject}</td>
+                      <td>{row.questions}</td>
+                      <td>{row.marks}</td>
+                    </tr>
+                  ))}
+                  <tr style={{fontWeight: 'bold', background: '#e9e9e9'}}>
+                    <td>Total</td>
+                    <td>100</td>
+                    <td>100</td>
+                  </tr>
+                </tbody>
+              </table>
+            )}
+          </div>
+        </>
+      )}
       
       {job.vacancyDetails.length > 0 && (
         <>
           <div className="section-header">Vacancy Details</div>
           <table><thead><tr style={{background: '#f2f2f2'}}><th>Post Name</th><th>Total</th><th>Eligibility</th></tr></thead>
           <tbody>{job.vacancyDetails.map((item, index) => (<tr key={index}><td>{item.postName}</td><td>{item.totalPost}</td><td>{item.eligibility}</td></tr>))}</tbody></table>
+        </>
+      )}
+
+      {/* --- NEW: How to Apply --- */}
+      {job.howToApply && (
+        <>
+          <div className="section-header">How to Apply</div>
+          <ol style={{marginLeft: '30px', padding: '10px 0'}}>
+            {job.howToApply.map((item, index) => <li key={index} style={{marginBottom: '10px'}}>{item}</li>)}
+          </ol>
         </>
       )}
       
