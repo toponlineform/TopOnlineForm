@@ -1,5 +1,106 @@
 export const jobsData = [
-  // --- 1. ECGC PO (NEWEST) ---
+  
+  {
+    id: 5,
+    slug: "rrb-ntpc-recruitment-2025",
+    shortTitle: "RRB NTPC Recruitment 2025",
+    title: "RRB NTPC Recruitment 2025 Apply Online for 8868 Posts (Graduate & UG) | Notification CEN 06/2025 & 07/2025",
+    shortInfo: "Railway Recruitment Board (RRB) has released the official notifications (CEN 06/2025 & CEN 07/2025) for the recruitment of Non-Technical Popular Categories (NTPC). A total of 8868 vacancies are available for Graduate and Undergraduate posts like Station Master, TTE, Clerk, and Goods Guard. Check Zone-wise Vacancy, Eligibility, and Exam Date here.",
+    postDate: "04/10/2025",
+    category: "Latest Jobs",
+
+    salary: "Level 2 to Level 6 (As per 7th CPC)",
+
+    importantDates: [
+      { label: "Application Start (Graduate)", value: "21/10/2025" },
+      { label: "Last Date (Graduate)", value: "27/11/2025" },
+      { label: "Application Start (Undergraduate)", value: "28/10/2025" },
+      { label: "Last Date (Undergraduate)", value: "04/12/2025 (Extended)" },
+      { label: "Exam Date (CBT-1)", value: "To be notified" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹500 (₹400 Refundable)" },
+      { category: "SC / ST / Ex-SM / PwBD / Female", amount: "₹250 (₹250 Refundable)" },
+      { category: "Payment Mode", amount: "Online" }
+    ],
+
+    ageLimit: "Graduate: 18-33 Years | Undergraduate: 18-30 Years (As on 01/01/2026)",
+
+    ageRelaxation: [
+      "OBC (NCL): 3 Years",
+      "SC/ST: 5 Years",
+      "PwBD: 10 Years",
+      "Ex-Servicemen: As per rules"
+    ],
+
+    vacancyDetails: [
+      // Graduate Level Posts (CEN 06/2025)
+      { postName: "Chief Commercial cum Ticket Supervisor", totalPost: 161, eligibility: "Bachelor Degree" },
+      { postName: "Station Master", totalPost: 615, eligibility: "Bachelor Degree" },
+      { postName: "Goods Train Manager", totalPost: 3416, eligibility: "Bachelor Degree" },
+      { postName: "Junior Account Assistant cum Typist", totalPost: 921, eligibility: "Bachelor Degree + Typing" },
+      { postName: "Senior Clerk cum Typist", totalPost: 638, eligibility: "Bachelor Degree + Typing" },
+      // Undergraduate Level Posts (CEN 07/2025)
+      { postName: "Commercial cum Ticket Clerk", totalPost: 2424, eligibility: "12th Pass (50% Marks)" },
+      { postName: "Accounts Clerk cum Typist", totalPost: 384, eligibility: "12th Pass + Typing" },
+      { postName: "Junior Clerk cum Typist", totalPost: 163, eligibility: "12th Pass + Typing" },
+      { postName: "Trains Clerk", totalPost: 77, eligibility: "12th Pass (50% Marks)" }
+    ],
+    
+    // Special Header for Table
+    vacancyTableTitle: "Post Wise Vacancy Details (Graduate & UG)",
+    vacancyColumnName: "Post Name",
+
+    // Note: State wise data is too large for RRB (Zone wise), so we keep it simplified or empty if not needed.
+    // If you want zone wise, we can add a link to PDF. For now, keeping it clean.
+
+    salaryDetails: [
+      { post: "Station Master / Commercial Supervisor", level: "Level 6 (₹35,400 + Allowances)" },
+      { post: "Goods Train Manager / Sr. Clerk", level: "Level 5 (₹29,200 + Allowances)" },
+      { post: "Commercial cum Ticket Clerk", level: "Level 3 (₹21,700 + Allowances)" },
+      { post: "Junior Clerk / Trains Clerk", level: "Level 2 (₹19,900 + Allowances)" }
+    ],
+
+    selectionProcess: [
+      "CBT-1 (Common for all posts)",
+      "CBT-2 (Separate for each Pay Level)",
+      "Computer Based Aptitude Test (CBAT) - For Station Master/Traffic Asst",
+      "Typing Skill Test (TST) - For Clerk/Typist posts",
+      "Document Verification & Medical Exam"
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Computer Based Test (CBT-1)",
+        "Duration: 90 Minutes",
+        "Total Questions: 100",
+        "Negative Marking: 1/3rd Marks deducted for each wrong answer."
+      ],
+      table: [
+        { subject: "General Awareness", questions: 40, marks: 40 },
+        { subject: "Mathematics", questions: 30, marks: 30 },
+        { subject: "General Intelligence & Reasoning", questions: 30, marks: 30 },
+        // Total Auto Calculated: 100 Q, 100 Marks
+      ]
+    },
+
+    howToApply: [
+      "Visit the official RRB website (rrbapply.gov.in).",
+      "Create an account if you are a new user.",
+      "Select the notification (CEN 06/2025 for Graduate OR CEN 07/2025 for UG).",
+      "Fill in the application form and upload required documents.",
+      "Pay the application fee online.",
+      "Select your RRB Zone carefully (Zone cannot be changed later).",
+      "Submit the form and print the receipt."
+    ],
+
+    links: {
+      applyOnline: "https://www.rrbapply.gov.in/", 
+      notification: "https://indianrailways.gov.in/railwayboard/view_section.jsp?lang=0&id=0,7,1281", 
+      officialWebsite: "https://indianrailways.gov.in/" 
+    }
+  },
   {
     id: 4,
     slug: "wbssc-group-c-d-recruitment-2025",
