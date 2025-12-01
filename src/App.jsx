@@ -169,12 +169,37 @@ function JobDetails() {
         </>
       )}
 
-      {/* 3. Vacancy Details */}
+      {/* 3. Vacancy Details (With Auto Total) */}
       {job.vacancyDetails.length > 0 && (
         <>
           <div className="section-header">Vacancy Details</div>
-          <table><thead><tr style={{background: '#f2f2f2'}}><th>Post Name</th><th>Total</th><th>Eligibility</th></tr></thead>
-          <tbody>{job.vacancyDetails.map((item, index) => (<tr key={index}><td>{item.postName}</td><td>{item.totalPost}</td><td>{item.eligibility}</td></tr>))}</tbody></table>
+          <table>
+            <thead>
+              <tr style={{background: '#f2f2f2'}}>
+                <th>Post Name</th><th>Total</th><th>Eligibility</th>
+              </tr>
+            </thead>
+            <tbody>
+              {job.vacancyDetails.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.postName}</td>
+                  <td>{item.totalPost}</td>
+                  <td>{item.eligibility}</td>
+                </tr>
+              ))}
+              
+              {/* AUTO TOTAL ROW (Only shows if Total > 0) */}
+              {job.vacancyDetails.reduce((sum, item) => sum + (Number(item.totalPost) || 0), 0) > 0 && (
+                <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}>
+                  <td>TOTAL</td>
+                  <td style={{color:'red'}}>
+                    {job.vacancyDetails.reduce((sum, item) => sum + (Number(item.totalPost) || 0), 0)}
+                  </td>
+                  <td>-</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
         </>
       )}
 
