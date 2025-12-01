@@ -94,7 +94,7 @@ function Home() {
   );
 }
 
-// --- Job Details (Updated with New Sections) ---
+// --- Job Details (REORDERED SECTIONS) ---
 function JobDetails() {
   const { slug } = useParams();
   const job = jobsData.find((j) => j.slug === slug);
@@ -145,17 +145,18 @@ function JobDetails() {
       <p style={{marginBottom:'10px', textAlign:'justify'}}><strong>Post Date : </strong> {job.postDate}</p>
       <p style={{marginBottom:'20px', textAlign:'justify'}}><strong>Short Info : </strong> {job.shortInfo}</p>
       
+      {/* 1. Dates & Fees */}
       {job.importantDates.length > 0 && (
         <table><tbody><tr><th className="green-header">Dates</th><th className="green-header">Fees</th></tr>
         <tr><td><ul>{job.importantDates.map((d,i)=><li key={i}><strong>{d.label}:</strong> {d.value}</li>)}</ul></td>
         <td><ul>{job.applicationFee.map((f,i)=><li key={i}><strong>{f.category}:</strong> {f.amount}</li>)}</ul></td></tr></tbody></table>
       )}
       
+      {/* 2. Age Limit */}
       {job.ageLimit && (
         <>
           <div className="section-header">Age Limit</div>
           <p style={{textAlign: 'center', border: '1px solid #000', padding: '10px'}}>{job.ageLimit}</p>
-          {/* --- NEW: Age Relaxation --- */}
           {job.ageRelaxation && (
             <div style={{marginTop: '15px', padding: '0 10px'}}>
               <strong>Age Relaxation:</strong>
@@ -167,7 +168,42 @@ function JobDetails() {
         </>
       )}
 
-      {/* --- NEW: Selection Process --- */}
+      {/* 3. Vacancy Details (MOVED UP HERE) */}
+      {job.vacancyDetails.length > 0 && (
+        <>
+          <div className="section-header">Vacancy Details</div>
+          <table><thead><tr style={{background: '#f2f2f2'}}><th>Post Name</th><th>Total</th><th>Eligibility</th></tr></thead>
+          <tbody>{job.vacancyDetails.map((item, index) => (<tr key={index}><td>{item.postName}</td><td>{item.totalPost}</td><td>{item.eligibility}</td></tr>))}</tbody></table>
+        </>
+      )}
+
+      {/* 4. State Wise Vacancy Table (If available) */}
+      {job.stateWiseVacancy && (
+        <>
+          <div className="section-header">State Wise Vacancy Details</div>
+          <div style={{overflowX: 'auto'}}>
+            <table style={{minWidth: '100%'}}>
+              <thead>
+                <tr style={{background: '#f2f2f2'}}>
+                  <th>State/UT</th><th>Total Seats</th><th>UR</th><th>EWS</th><th>OBC</th><th>SC</th><th>ST</th>
+                </tr>
+              </thead>
+              <tbody>
+                {job.stateWiseVacancy.map((row, index) => (
+                  <tr key={index}>
+                    <td style={{fontWeight:'500'}}>{row.state}</td>
+                    <td style={{fontWeight:'bold', color:'blue'}}>{row.total}</td>
+                    <td>{row.ur}</td><td>{row.ews}</td><td>{row.obc}</td><td>{row.sc}</td><td>{row.st}</td>
+                  </tr>
+                ))}
+                <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}><td>TOTAL</td><td style={{color:'red'}}>2700</td><td colSpan="5" style={{textAlign:'center', fontSize:'12px'}}>Check Notification for PwBD details</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
+
+      {/* 5. Selection Process */}
       {job.selectionProcess && (
         <>
           <div className="section-header">Selection Process</div>
@@ -177,7 +213,7 @@ function JobDetails() {
         </>
       )}
 
-      {/* --- NEW: Exam Pattern --- */}
+      {/* 6. Exam Pattern */}
       {job.examPattern && (
         <>
           <div className="section-header">Exam Pattern</div>
@@ -215,16 +251,8 @@ function JobDetails() {
           </div>
         </>
       )}
-      
-      {job.vacancyDetails.length > 0 && (
-        <>
-          <div className="section-header">Vacancy Details</div>
-          <table><thead><tr style={{background: '#f2f2f2'}}><th>Post Name</th><th>Total</th><th>Eligibility</th></tr></thead>
-          <tbody>{job.vacancyDetails.map((item, index) => (<tr key={index}><td>{item.postName}</td><td>{item.totalPost}</td><td>{item.eligibility}</td></tr>))}</tbody></table>
-        </>
-      )}
 
-      {/* --- NEW: How to Apply --- */}
+      {/* 7. How to Apply */}
       {job.howToApply && (
         <>
           <div className="section-header">How to Apply</div>
@@ -272,7 +300,7 @@ function App() {
         <Route path="/results" element={<CategoryPage category="Result" title="All Results" />} />
         <Route path="/admit-card" element={<CategoryPage category="Admit Card" title="All Admit Cards" />} />
         <Route path="/answer-key" element={<CategoryPage category="Answer Key" title="All Answer Keys" />} />
-        <Route path="/syllabus" element={<CategoryPage category="Syllabus" title="Syllabus & Exam Pattern" />} />
+        <Route path="/syllabus" element={<CategoryPage category="Syllabus" title="Syllabus" />} />
         <Route path="/previous-papers" element={<CategoryPage category="Previous Paper" title="Previous Year Papers" />} />
         <Route path="/about" element={<About />} /><Route path="/contact" element={<Contact />} /><Route path="/privacy" element={<Privacy />} />
       </Routes>
