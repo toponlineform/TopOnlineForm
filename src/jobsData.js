@@ -1,83 +1,147 @@
 export const jobsData = [
   // --- 1. RRB NTPC (ID 5) - SPLIT TABLES & ZONE WISE DATA ---
   {
-    id: 5,
-    slug: "rrb-ntpc-recruitment-2025",
-    shortTitle: "RRB NTPC Recruitment 2025",
-    title: "RRB NTPC Recruitment 2025 Apply Online for 8868 Posts (Graduate & UG) | Notification CEN 05/2025 & 06/2025",
-    shortInfo: "Railway Recruitment Board (RRB) has released the notifications for 8868 NTPC vacancies. Check Zone-wise Vacancy for Graduate and Undergraduate posts separately below.",
-    postDate: "02/12/2025",
-    category: "Latest Jobs",
-    salary: "Level 2 to Level 6 (7th CPC)",
+    id: 5,
+    slug: "rrb-ntpc-recruitment-2025",
+    shortTitle: "RRB NTPC Recruitment 2025",
+    title: "RRB NTPC Recruitment 2025 Apply Online for 8868 Posts (Graduate & UG) | Notification CEN 05/2025 & 06/2025",
+    shortInfo: "Railway Recruitment Board (RRB) has released the official notifications (CEN 05/2025 & CEN 06/2025) for the recruitment of Non-Technical Popular Categories (NTPC). A total of 8868 vacancies are available for Graduate and Undergraduate posts like Station Master, TTE, Clerk, and Goods Guard. Check Zone-wise Vacancy, Eligibility, and Exam Date here.",
+    postDate: "02/12/2025",
+    category: "Latest Jobs",
 
-    importantDates: [
-      { label: "App. Start (Graduate)", value: "14/09/2025" },
-      { label: "Last Date (Graduate)", value: "13/10/2025" },
-      { label: "App. Start (UG)", value: "21/09/2025" },
-      { label: "Last Date (UG)", value: "20/10/2025" },
-      { label: "Exam Date", value: "To be notified" }
-    ],
+    salary: "Level 2 to Level 6 (As per 7th CPC)",
 
-    applicationFee: [
-      { category: "Gen / OBC / EWS", amount: "₹500 (₹400 Refundable)" },
-      { category: "SC / ST / Female", amount: "₹250 (₹250 Refundable)" }
-    ],
+    importantDates: [
+      { label: "Application Start (Graduate)", value: "14/09/2025" },
+      { label: "Last Date (Graduate)", value: "13/10/2025" },
+      { label: "Application Start (Undergraduate)", value: "21/09/2025" },
+      { label: "Last Date (Undergraduate)", value: "20/10/2025" },
+      { label: "Exam Date (CBT-1)", value: "To be notified" }
+    ],
 
-    ageLimit: "Graduate: 18-33 Yrs | UG: 18-30 Yrs",
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹500 (₹400 Refundable)" },
+      { category: "SC / ST / Ex-SM / PwBD / Female", amount: "₹250 (₹250 Refundable)" },
+      { category: "Payment Mode", amount: "Online" }
+    ],
 
-    vacancyDetails: [
-      { postName: "Station Master / Goods Guard", totalPost: 5810, eligibility: "Bachelor Degree" },
-      { postName: "Clerk / Typist / TTE", totalPost: 3058, eligibility: "12th Pass" }
-    ],
+    ageLimit: "Graduate: 18-33 Years | Undergraduate: 18-30 Years (As on 01/01/2026)",
 
-    // --- FIX: Split Zone Wise Tables (Graduate & UG Separately) ---
-    zoneWiseGraduate: [
-        { state: "RRB AHMEDABAD", ur: 43, sc: 12, st: 3, obc: 15, ews: 6, total: 79 },
-        { state: "RRB AJMER", ur: 121, sc: 64, st: 12, obc: 111, ews: 37, total: 345 },
-        { state: "RRB BANGALORE", ur: 115, sc: 32, st: 17, obc: 47, ews: 30, total: 241 },
-        { state: "RRB BHOPAL", ur: 151, sc: 60, st: 27, obc: 106, ews: 38, total: 382 },
-        { state: "RRB BHUBANESWAR", ur: 64, sc: 37, st: 21, obc: 56, ews: 53, total: 231 },
-        { state: "RRB BILASPUR", ur: 350, sc: 126, st: 64, obc: 236, ews: 88, total: 864 },
-        { state: "RRB CHANDIGARH", ur: 85, sc: 27, st: 16, obc: 51, ews: 20, total: 199 },
-        { state: "RRB CHENNAI", ur: 73, sc: 31, st: 22, obc: 43, ews: 18, total: 187 },
-        { state: "RRB GORAKHPUR", ur: 48, sc: 16, st: 10, obc: 27, ews: 10, total: 111 },
-        { state: "RRB GUWAHATI", ur: 20, sc: 10, st: 4, obc: 14, ews: 8, total: 56 },
-        { state: "RRB JAMMU-SRINAGAR", ur: 15, sc: 5, st: 3, obc: 8, ews: 1, total: 32 },
-        { state: "RRB KOLKATA", ur: 284, sc: 103, st: 46, obc: 186, ews: 66, total: 685 },
-        { state: "RRB MALDA", ur: 213, sc: 83, st: 46, obc: 133, ews: 47, total: 522 },
-        { state: "RRB MUMBAI", ur: 254, sc: 89, st: 43, obc: 153, ews: 57, total: 596 },
-        { state: "RRB MUZAFFARPUR", ur: 8, sc: 4, st: 2, obc: 5, ews: 2, total: 21 },
-        { state: "RRB PATNA", ur: 0, sc: 10, st: 12, obc: 0, ews: 1, total: 23 },
-        { state: "RRB PRAYAGRAJ", ur: 51, sc: 19, st: 18, obc: 16, ews: 6, total: 110 },
-        { state: "RRB RANCHI", ur: 255, sc: 118, st: 45, obc: 166, ews: 67, total: 651 },
-        { state: "RRB SECUNDERABAD", ur: 145, sc: 59, st: 32, obc: 119, ews: 41, total: 396 },
-        { state: "RRB SILIGURI", ur: 8, sc: 4, st: 1, obc: 6, ews: 2, total: 21 },
-        { state: "RRB THIRUVANANTHAPURAM", ur: 18, sc: 13, st: 13, obc: 10, ews: 4, total: 58 }
-    ],
-    zoneWiseUG: [
-        { state: "RRB AHMEDABAD", ur: 58, sc: 23, st: 13, obc: 43, ews: 16, total: 153 },
-        { state: "RRB AJMER", ur: 65, sc: 13, st: 5, obc: 25, ews: 8, total: 116 },
-        { state: "RRB BANGALORE", ur: 27, sc: 9, st: 4, obc: 7, ews: 7, total: 54 },
-        { state: "RRB BHOPAL", ur: 53, sc: 21, st: 8, obc: 30, ews: 11, total: 123 },
-        { state: "RRB BHUBANESWAR", ur: 10, sc: 2, st: 2, obc: 3, ews: 1, total: 18 },
-        { state: "RRB BILASPUR", ur: 26, sc: 11, st: 5, obc: 19, ews: 8, total: 69 },
-        { state: "RRB CHANDIGARH", ur: 10, sc: 3, st: 3, obc: 6, ews: 2, total: 24 },
-        { state: "RRB CHENNAI", ur: 33, sc: 11, st: 5, obc: 23, ews: 8, total: 80 },
-        { state: "RRB GORAKHPUR", ur: 68, sc: 25, st: 15, obc: 48, ews: 17, total: 173 },
-        { state: "RRB GUWAHATI", ur: 57, sc: 21, st: 8, obc: 36, ews: 13, total: 135 },
-        { state: "RRB JAMMU-SRINAGAR", ur: 58, sc: 21, st: 13, obc: 34, ews: 11, total: 137 },
-        { state: "RRB KOLKATA", ur: 215, sc: 76, st: 38, obc: 129, ews: 41, total: 499 },
-        { state: "RRB MALDA", ur: 79, sc: 29, st: 16, obc: 52, ews: 20, total: 196 },
-        { state: "RRB MUMBAI", ur: 190, sc: 72, st: 39, obc: 140, ews: 53, total: 494 },
-        { state: "RRB MUZAFFARPUR", ur: 16, sc: 5, st: 3, obc: 11, ews: 4, total: 39 },
-        { state: "RRB PATNA", ur: 9, sc: 3, st: 4, obc: 5, ews: 3, total: 24 },
-        { state: "RRB PRAYAGRAJ", ur: 128, sc: 53, st: 54, obc: 50, ews: 18, total: 303 },
-        { state: "RRB RANCHI", ur: 21, sc: 10, st: 3, obc: 16, ews: 6, total: 56 },
-        { state: "RRB SECUNDERABAD", ur: 115, sc: 40, st: 25, obc: 68, ews: 24, total: 272 },
-        { state: "RRB SILIGURI", ur: 3, sc: 1, st: 0, obc: 2, ews: 1, total: 7 },
-        { state: "RRB THIRUVANANTHAPURAM", ur: 39, sc: 12, st: 1, obc: 26, ews: 8, total: 86 }
-    ],
+    ageRelaxation: [
+      "OBC (NCL): 3 Years",
+      "SC/ST: 5 Years",
+      "PwBD: 10 Years",
+      "Ex-Servicemen: As per rules"
+    ],
 
+    vacancyDetails: [
+      { postName: "Chief Commercial cum Ticket Supervisor", totalPost: 1736, eligibility: "Bachelor Degree" },
+      { postName: "Station Master", totalPost: 994, eligibility: "Bachelor Degree" },
+      { postName: "Goods Train Manager", totalPost: 3144, eligibility: "Bachelor Degree" },
+      { postName: "Junior Account Assistant cum Typist", totalPost: 1507, eligibility: "Bachelor Degree + Typing" },
+      { postName: "Senior Clerk cum Typist", totalPost: 732, eligibility: "Bachelor Degree + Typing" },
+      { postName: "Commercial cum Ticket Clerk", totalPost: 2022, eligibility: "12th Pass (50% Marks)" },
+      { postName: "Accounts Clerk cum Typist", totalPost: 361, eligibility: "12th Pass + Typing" },
+      { postName: "Junior Clerk cum Typist", totalPost: 990, eligibility: "12th Pass + Typing" },
+      { postName: "Trains Clerk", totalPost: 72, eligibility: "12th Pass (50% Marks)" }
+    ],
+    
+    // --- ZONE WISE DATA (Separated & Accurate from Screenshots) ---
+    
+    // Table 1: Graduate Level (CEN 05/2025) [Cite: IMG_7649.jpg]
+    zoneWiseGraduate: [
+        { state: "RRB AHMEDABAD", ur: 43, sc: 12, st: 3, obc: 15, ews: 6, total: 79 },
+        { state: "RRB AJMER", ur: 121, sc: 64, st: 12, obc: 111, ews: 37, total: 345 },
+        { state: "RRB BANGALORE", ur: 115, sc: 32, st: 17, obc: 47, ews: 30, total: 241 },
+        { state: "RRB BHOPAL", ur: 151, sc: 60, st: 27, obc: 106, ews: 38, total: 382 },
+        { state: "RRB BHUBANESWAR", ur: 64, sc: 37, st: 21, obc: 56, ews: 53, total: 231 },
+        { state: "RRB BILASPUR", ur: 350, sc: 126, st: 64, obc: 236, ews: 88, total: 864 },
+        { state: "RRB CHANDIGARH", ur: 85, sc: 27, st: 16, obc: 51, ews: 20, total: 199 },
+        { state: "RRB CHENNAI", ur: 73, sc: 31, st: 22, obc: 43, ews: 18, total: 187 },
+        { state: "RRB GORAKHPUR", ur: 48, sc: 16, st: 10, obc: 27, ews: 10, total: 111 },
+        { state: "RRB GUWAHATI", ur: 20, sc: 10, st: 4, obc: 14, ews: 8, total: 56 },
+        { state: "RRB JAMMU-SRINAGAR", ur: 15, sc: 5, st: 3, obc: 8, ews: 1, total: 32 },
+        { state: "RRB KOLKATA", ur: 284, sc: 103, st: 46, obc: 186, ews: 66, total: 685 },
+        { state: "RRB MALDA", ur: 213, sc: 83, st: 46, obc: 133, ews: 47, total: 522 },
+        { state: "RRB MUMBAI", ur: 254, sc: 89, st: 43, obc: 153, ews: 57, total: 596 },
+        { state: "RRB MUZAFFARPUR", ur: 8, sc: 4, st: 2, obc: 5, ews: 2, total: 21 },
+        { state: "RRB PATNA", ur: 0, sc: 10, st: 12, obc: 0, ews: 1, total: 23 },
+        { state: "RRB PRAYAGRAJ", ur: 51, sc: 19, st: 18, obc: 16, ews: 6, total: 110 },
+        { state: "RRB RANCHI", ur: 255, sc: 118, st: 45, obc: 166, ews: 67, total: 651 },
+        { state: "RRB SECUNDERABAD", ur: 145, sc: 59, st: 32, obc: 119, ews: 41, total: 396 },
+        { state: "RRB SILIGURI", ur: 8, sc: 4, st: 1, obc: 6, ews: 2, total: 21 },
+        { state: "RRB THIRUVANANTHAPURAM", ur: 18, sc: 13, st: 13, obc: 10, ews: 4, total: 58 }
+    ],
+
+    // Table 2: Undergraduate Level (CEN 06/2025) [Cite: IMG_7650.jpg]
+    zoneWiseUG: [
+        { state: "RRB AHMEDABAD", ur: 58, sc: 23, st: 13, obc: 43, ews: 16, total: 153 },
+        { state: "RRB AJMER", ur: 65, sc: 13, st: 5, obc: 25, ews: 8, total: 116 },
+        { state: "RRB BANGALORE", ur: 27, sc: 9, st: 4, obc: 7, ews: 7, total: 54 },
+        { state: "RRB BHOPAL", ur: 53, sc: 21, st: 8, obc: 30, ews: 11, total: 123 },
+        { state: "RRB BHUBANESWAR", ur: 10, sc: 2, st: 2, obc: 3, ews: 1, total: 18 },
+        { state: "RRB BILASPUR", ur: 26, sc: 11, st: 5, obc: 19, ews: 8, total: 69 },
+        { state: "RRB CHANDIGARH", ur: 10, sc: 3, st: 3, obc: 6, ews: 2, total: 24 },
+        { state: "RRB CHENNAI", ur: 33, sc: 11, st: 5, obc: 23, ews: 8, total: 80 },
+        { state: "RRB GORAKHPUR", ur: 68, sc: 25, st: 15, obc: 48, ews: 17, total: 173 },
+        { state: "RRB GUWAHATI", ur: 57, sc: 21, st: 8, obc: 36, ews: 13, total: 135 },
+        { state: "RRB JAMMU-SRINAGAR", ur: 58, sc: 21, st: 13, obc: 34, ews: 11, total: 137 },
+        { state: "RRB KOLKATA", ur: 215, sc: 76, st: 38, obc: 129, ews: 41, total: 499 },
+        { state: "RRB MALDA", ur: 79, sc: 29, st: 16, obc: 52, ews: 20, total: 196 },
+        { state: "RRB MUMBAI", ur: 190, sc: 72, st: 39, obc: 140, ews: 53, total: 494 },
+        { state: "RRB MUZAFFARPUR", ur: 16, sc: 5, st: 3, obc: 11, ews: 4, total: 39 },
+        { state: "RRB PATNA", ur: 9, sc: 3, st: 4, obc: 5, ews: 3, total: 24 },
+        { state: "RRB PRAYAGRAJ", ur: 128, sc: 53, st: 54, obc: 50, ews: 18, total: 303 },
+        { state: "RRB RANCHI", ur: 21, sc: 10, st: 3, obc: 16, ews: 6, total: 56 },
+        { state: "RRB SECUNDERABAD", ur: 115, sc: 40, st: 25, obc: 68, ews: 24, total: 272 },
+        { state: "RRB SILIGURI", ur: 3, sc: 1, st: 0, obc: 2, ews: 1, total: 7 },
+        { state: "RRB THIRUVANANTHAPURAM", ur: 39, sc: 12, st: 1, obc: 26, ews: 8, total: 86 }
+    ],
+    
+    salaryDetails: [
+      { post: "Station Master / Commercial Supervisor", level: "Level 6 (₹35,400 + Allowances)" },
+      { post: "Goods Train Manager / Sr. Clerk", level: "Level 5 (₹29,200 + Allowances)" },
+      { post: "Commercial cum Ticket Clerk", level: "Level 3 (₹21,700 + Allowances)" },
+      { post: "Junior Clerk / Trains Clerk", level: "Level 2 (₹19,900 + Allowances)" }
+    ],
+
+    selectionProcess: [
+      "CBT-1 (Common for all posts)",
+      "CBT-2 (Separate for each Pay Level)",
+      "Computer Based Aptitude Test (CBAT) - For Station Master/Traffic Asst",
+      "Typing Skill Test (TST) - For Clerk/Typist posts",
+      "Document Verification & Medical Exam"
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Computer Based Test (CBT-1 & CBT-2)",
+        "Duration: 90 Minutes (For each Stage)",
+        "Total Questions: 100 (CBT-1) / 120 (CBT-2)",
+        "Negative Marking: 1/3rd Marks deducted for each wrong answer."
+      ],
+      cbt1: [
+        { subject: "General Awareness", questions: 40, marks: 40 },
+        { subject: "Mathematics", questions: 30, marks: 30 },
+        { subject: "General Intelligence & Reasoning", questions: 30, marks: 30 }
+      ],
+      cbt2: [
+        { subject: "General Awareness", questions: 50, marks: 50 },
+        { subject: "Mathematics", questions: 35, marks: 35 },
+        { subject: "General Intelligence & Reasoning", questions: 35, marks: 35 }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official RRB website (rrbapply.gov.in).",
+      "Create an account if you are a new user.",
+      "Select the notification (CEN 05/2025 for Graduate OR CEN 06/2025 for UG).",
+      "Fill in the application form and upload required documents.",
+      "Pay the application fee online.",
+      "Select your RRB Zone carefully (Zone cannot be changed later).",
+      "Submit the form and print the receipt."
+    ],
+    
     links: [
       { title: "Apply Online", url: "https://www.rrbapply.gov.in/" },
       { title: "Download Notification", url: "https://indianrailways.gov.in/" },
@@ -87,19 +151,80 @@ export const jobsData = [
 
   // --- 2. WBSSC (ID 4) ---
   {
-    id: 4,
-    slug: "wbssc-group-c-d-recruitment-2025",
-    shortTitle: "WBSSC Group C & D Recruitment 2025",
-    title: "WBSSC Group C & D Recruitment 2025 Apply Online for 8477 Posts",
-    shortInfo: "West Bengal School Service Commission has released the notification for Clerk & Group D posts.",
-    postDate: "02/12/2025",
-    category: "Latest Jobs",
-    salary: "As per State Govt Norms",
-    importantDates: [{ label: "Last Date", value: "03/12/2025" }],
-    applicationFee: [{ category: "Gen/OBC", amount: "₹400" }, { category: "SC/ST", amount: "₹150" }],
-    ageLimit: "18-40 Years",
-    vacancyDetails: [{ postName: "Clerk & Group D", totalPost: 8477, eligibility: "8th/10th Pass" }],
-    links: [{ title: "Apply Online", url: "https://www.westbengalssc.com" }]
+  id: 4,
+    slug: "wbssc-group-c-d-recruitment-2025",
+    shortTitle: "WBSSC Group C & D Recruitment 2025",
+    title: "WBSSC Group C & D Recruitment 2025 Apply Online for 8477 Posts | Clerk & Non-Teaching Staff",
+    shortInfo: "The West Bengal Central School Service Commission (WBSSC) has released the notification for the 1st State Level Selection Test (SLST) 2025 to recruit Non-Teaching Staff (Clerk & Group D). Eligible candidates can apply online for 8000+ vacancies in Govt. Aided/Sponsored Schools.",
+    postDate: "09/10/2025",
+    category: "Latest Jobs",
+
+    salary: "As per State Govt Norms (Pay Level 6 for Clerk / Level 1 for Group D)",
+
+    importantDates: [
+      { label: "Application Begin", value: "03/11/2025" },
+      { label: "Last Date for Apply", value: "03/12/2025 (Upto 5:00 PM)" },
+      { label: "Fee Payment Last Date", value: "03/12/2025" },
+      { label: "Written Exam Date", value: "January 2026 (Tentative)" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹400/-" },
+      { category: "SC / ST / PH", amount: "₹150/-" },
+      { category: "Payment Mode", amount: "Online (Internet Banking/Cards)" }
+    ],
+
+    ageLimit: "Min: 18 Years | Max: 40 Years (As on 01/01/2025)",
+
+    ageRelaxation: [
+      "SC/ST: 5 Years",
+      "OBC: 3 Years",
+      "Physically Handicapped (PH): 8 Years"
+    ],
+
+    vacancyDetails: [
+      { postName: "Clerk (Group C)", totalPost: 2989, eligibility: "Passed Madhyamik (10th) or Equivalent" },
+      { postName: "Group D Staff", totalPost: 5488, eligibility: "Passed Class VIII from recognized School" }
+    ],
+
+    selectionProcess: [
+      "Written Examination (OMR Based)",
+      "Academic Evaluation (For Clerk)",
+      "Typing/Computer Proficiency Test (For Clerk)",
+      "Personality Test / Interview"
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: OMR Based Written Examination",
+        "Marking: 1 Mark for each correct answer",
+        "Negative Marking: No Negative Marking",
+        "Language: English and Bengali"
+      ],
+      table: [
+        { subject: "General Knowledge", questions: 15, marks: 15 },
+        { subject: "Current Affairs", questions: 15, marks: 15 },
+        { subject: "General English", questions: 15, marks: 15 },
+        { subject: "Arithmetic", questions: 15, marks: 15 }
+      ]
+      // Note: Exact syllabus distribution will be uploaded later, this is tentative standard pattern.
+    },
+
+    howToApply: [
+      "Visit the official website westbengalssc.com.",
+      "Click on 'Application for 1st SLST (NTS) 2025'.",
+      "Register with Name, Father's Name, DOB (as per Madhyamik Certificate).",
+      "Fill the application form carefully (No rectification allowed later).",
+      "Upload Photo and Signature.",
+      "Pay the examination fee online.",
+      "Submit the form and print the confirmation page."
+    ],
+
+    links: {
+      applyOnline: "https://www.westbengalssc.com/otrgrpcd/register/", 
+      notification: "http://old.westbengalssc.com/sscorg/wbssc/download/notice/Notification_1stSLST_2025_NTS_09_October_2025.pdf", 
+      officialWebsite: "https://www.westbengalssc.com" 
+    }
   },
 
   // --- 3. ECGC PO (ID 3) - FIXED HEADER & TOTAL ---
