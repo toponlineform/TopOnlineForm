@@ -1,6 +1,86 @@
 export const jobsData = [
+  {
+    id: 8,
+    slug: "rites-apprentice-recruitment-2025",
+    shortTitle: "RITES Apprentice Recruitment 2025",
+    title: "RITES Apprentice Recruitment 2025 Apply Online for 252 Posts | No Exam, Direct Merit",
+    shortInfo: "RITES Limited (A Navratna CPSE under Ministry of Railways) has invited applications for the engagement of 252 Apprentices for the year 2025-26. Engineering & Non-Engineering Graduates, Diploma holders, and ITI Pass-outs can apply. Selection will be based on Merit (Marks obtained in qualifying exam). No Written Test/Interview.",
+    postDate: "13/11/2025",
+    category: "Latest Jobs",
 
- {
+    salary: "Stipend ₹10,000 - ₹14,000 per month",
+
+    importantDates: [
+      { label: "Application Begin", value: "17/11/2025" },
+      { label: "Last Date for Apply (NATS/NAPS)", value: "05/12/2025" },
+      { label: "Last Date for RITES Form", value: "05/12/2025" },
+      { label: "Merit List Release", value: "To be notified" }
+    ],
+
+    applicationFee: [
+      { category: "All Candidates", amount: "₹0 (Nil)" },
+      { category: "Payment Mode", amount: "N/A" }
+    ],
+
+    ageLimit: "Minimum 18 Years (As on 05/12/2025). No upper age limit specified (As per Apprenticeship Rules).",
+
+    vacancyDetails: [
+      { postName: "Graduate Apprentice (Engineering)", totalPost: 110, eligibility: "BE / B.Tech (Civil/Mech/Elect/etc)" },
+      { postName: "Graduate Apprentice (Non-Engg)", totalPost: 36, eligibility: "BA / BBA / B.Com / B.Sc / BCA" },
+      { postName: "Diploma Apprentice", totalPost: 49, eligibility: "Diploma in Engineering" },
+      { postName: "Trade Apprentice (ITI)", totalPost: 57, eligibility: "ITI Pass (Fitter/Turner/Welder/etc)" }
+    ],
+
+    // Using Smart Table for Category Wise Vacancy
+    vacancyTableTitle: "Category Wise Vacancy Details",
+    vacancyColumnName: "Apprenticeship Category",
+
+    stateWiseVacancy: [
+      { state: "Graduate (Engineering)", total: 110, ur: 52, ews: 8, obc: 27, sc: 14, st: 6 },
+      { state: "Graduate (Non-Engg)", total: 36, ur: 18, ews: 2, obc: 9, sc: 5, st: 2 },
+      { state: "Diploma Apprentice", total: 49, ur: 28, ews: 3, obc: 10, sc: 6, st: 2 },
+      { state: "Trade Apprentice (ITI)", total: 57, ur: 28, ews: 4, obc: 14, sc: 7, st: 3 }
+    ],
+
+    salaryDetails: [
+      { post: "Graduate Apprentice", level: "₹14,000/- per month" },
+      { post: "Diploma Apprentice", level: "₹12,000/- per month" },
+      { post: "Trade Apprentice (ITI)", level: "₹10,000/- per month" }
+    ],
+
+    selectionProcess: [
+      "Shortlisting based on Merit (Percentage of Marks in Essential Qualification)",
+      "Document Verification"
+    ],
+
+    // No Exam Pattern because there is NO EXAM
+    // Hum 'examPattern' ko skip kar sakte hain ya simple note daal sakte hain
+    examPattern: {
+      details: [
+        "No Written Examination.",
+        "No Interview.",
+        "Selection is purely based on Academic Merit."
+      ]
+    },
+
+    howToApply: [
+      "Step 1: Register on NATS (nats.education.gov.in) for Degree/Diploma OR NAPS (apprenticeshipindia.gov.in) for ITI.",
+      "Step 2: Login and Apply for 'RITES Limited' opportunity.",
+      "Step 3: Fill the 'RITES Application Form' (Google Form Link) available in notification.",
+      "Step 4: Upload scanned copies of documents (Qualification, DOB, ID Proof, Caste Cert.) in a single PDF.",
+      "Step 5: Submit the form before 05/12/2025."
+    ],
+
+    links: [
+      { title: "Apply Online (Degree/Diploma - NATS)", url: "https://nats.education.gov.in/" },
+      { title: "Apply Online (ITI - NAPS)", url: "https://www.apprenticeshipindia.gov.in/" },
+      { title: "Submit RITES Form (Mandatory)", url: "https://apprentice.rites.com:444/ApprenticeForm" },
+      { title: "Download Notification", url: "https://www.rites.com/Upload/Career/Advertisement_for_Engagement_of_Apprentices_in_RITES_for_FY_2025-26_pdf-2025-Nov-13-14-32-47.pdf" }, // Replace with actual link if dynamic
+      { title: "Official Website", url: "https://www.rites.com/Career" }
+    ]
+  },
+ 
+  {
     id: 7,
     slug: "sail-mt-technical-recruitment-2025",
     shortTitle: "SAIL Management Trainee (Technical) Recruitment 2025",
