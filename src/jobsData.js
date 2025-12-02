@@ -1,5 +1,93 @@
 export const jobsData = [
-        // --- 0. KVS & NVS Recruitment (NEWEST) ---
+
+ {
+    id: 7,
+    slug: "sail-mt-technical-recruitment-2025",
+    shortTitle: "SAIL Management Trainee (Technical) Recruitment 2025",
+    title: "SAIL MT Recruitment 2025 Apply Online for 124 Posts | Salary ₹17 Lakh CTC | Exam Date",
+    shortInfo: "Steel Authority of India Limited (SAIL), a Maharatna CPSE, has invited online applications for 124 posts of Management Trainee (Technical) in E1 grade. Engineering graduates in Civil, Mechanical, Electrical, etc., can apply online. Selection is based on CBT, GD, and Interview.",
+    postDate: "12/11/2025",
+    category: "Latest Jobs",
+
+    salary: "Basic Pay ₹60,000 - ₹1,80,000 (CTC ≈ ₹16-17 LPA)",
+
+    importantDates: [
+      { label: "Application Begin", value: "15/11/2025" },
+      { label: "Last Date for Apply", value: "05/12/2025" },
+      { label: "Online Exam Date", value: "January / February 2026 (Tentative)" }
+    ],
+
+    // Fee including Processing Fee (Page 5 of PDF)
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹1050/-" },
+      { category: "SC / ST / PwBD / ESM", amount: "₹300/-" },
+      { category: "Payment Mode", amount: "Online (Net Banking/Credit/Debit Card)" }
+    ],
+
+    ageLimit: "Max 28 Years (As on 05/12/2025). Relaxation: SC/ST+5, OBC+3, PwBD+10.",
+
+    vacancyDetails: [
+      { postName: "Management Trainee (Technical)", totalPost: 124, eligibility: "BE / B.Tech in Related Discipline with 65% Marks (55% for SC/ST/PwBD)" }
+    ],
+
+    // Using Smart Table for Discipline Wise Vacancy
+    vacancyTableTitle: "Discipline Wise Vacancy Details",
+    vacancyColumnName: "Engineering Discipline",
+
+    // Note: PDF only gives Total posts per discipline, not category wise for each.
+    stateWiseVacancy: [
+      { state: "Electrical", total: 44, ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+      { state: "Mechanical", total: 30, ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+      { state: "Metallurgy", total: 20, ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+      { state: "Civil", total: 14, ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+      { state: "Instrumentation", total: 7, ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+      { state: "Chemical", total: 5, ur: "-", ews: "-", obc: "-", sc: "-", st: "-" },
+      { state: "Computer", total: 4, ur: "-", ews: "-", obc: "-", sc: "-", st: "-" }
+    ],
+
+    salaryDetails: [
+      { post: "During Training (1 Year)", level: "Basic Pay ₹50,000/month" },
+      { post: "After Confirmation (E1 Grade)", level: "Scale ₹60,000 - 1,80,000 (CTC ₹17 LPA)" }
+    ],
+
+    selectionProcess: [
+      "Online Examination (CBT) - 200 Marks",
+      "Group Discussion (GD)",
+      "Interview"
+    ],
+
+    // Accurate Exam Pattern (Page 3 of PDF)
+    examPattern: {
+      details: [
+        "Mode: Online Computer Based Test",
+        "Total Duration: 120 Minutes (40 + 80)",
+        "Total Marks: 200",
+        "Negative Marking: Yes (as per norms)",
+        "Qualifying Marks: 50%ile (UR/EWS), 40%ile (Others)"
+      ],
+      table: [
+        { subject: "Domain Knowledge (Technical)", questions: 100, marks: 100 },
+        { subject: "Aptitude Test (Quant, English, Reasoning, GK)", questions: 100, marks: 100 }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official website sailcareers.com.",
+      "Click on 'Login' -> 'Fresh Candidate' to create One Time Registration (OTR).",
+      "Login with User ID and Password.",
+      "Fill the application form for 'Management Trainee (Technical)'.",
+      "Upload Photo, Signature, and required certificates.",
+      "Pay the application fee online.",
+      "Download the Provisional Registration Slip."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://sailcareers.com/" },
+      { title: "Download Notification", url: "https://sailcareers.com/" }, // Replace with direct PDF link if available
+      { title: "Official Website", url: "https://sail.co.in/" }
+    ]
+  },
+// --- 0. KVS & NVS Recruitment (NEWEST) ---
   {
     id: 6,
     slug: "kvs-nvs-recruitment-2025",
