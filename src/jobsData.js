@@ -1,4 +1,101 @@
 export const jobsData = [
+    // --- 0. KVS & NVS Recruitment (NEWEST) ---
+  {
+    id: 6,
+    slug: "kvs-nvs-recruitment-2025",
+    shortTitle: "KVS & NVS Recruitment 2025",
+    title: "KVS & NVS Recruitment 2025 Apply Online for 14,900+ Posts | Teaching & Non-Teaching",
+    shortInfo: "Kendriya Vidyalaya Sangathan (KVS) and Navodaya Vidyalaya Samiti (NVS) have released a combined recruitment notification for over 14,900 vacancies. Posts include Principal, PGT, TGT, PRT, Librarian, Clerk (JSA/SSA), and MTS. Eligible candidates can apply online through the CBSE portal.",
+    postDate: "02/12/2025",
+    category: "Latest Jobs",
+
+    salary: "Level 1 to Level 12 (Post Wise)",
+
+    importantDates: [
+      { label: "Application Begin", value: "14/11/2025" },
+      { label: "Last Date for Apply", value: "04/12/2025" },
+      { label: "Fee Payment Last Date", value: "04/12/2025" },
+      { label: "Correction Window", value: "06/12/2025 to 08/12/2025" },
+      { label: "Exam Date", value: "To be notified" }
+    ],
+
+    // Fee structure as per Page 33-34 of PDF (Exam Fee + Processing Fee)
+    applicationFee: [
+      { category: "Principal / VP / Asst. Comm.", amount: "₹2800 (₹2300+500)" },
+      { category: "PGT / TGT / PRT / Librarian", amount: "₹2000 (₹1500+500)" },
+      { category: "Clerk (JSA/SSA) / Steno / MTS", amount: "₹1700 (₹1200+500)" },
+      { category: "SC / ST / PwBD / Ex-SM", amount: "₹500 (Processing Fee Only)" }
+    ],
+
+    ageLimit: "PRT: Max 30 Yrs | TGT: Max 35 Yrs | PGT: Max 40 Yrs | Principal: Max 50 Yrs. (Age Relaxation: SC/ST+5, OBC+3, Women+10 for Teaching Posts)",
+
+    // Combined Vacancy Summary for Quick View
+    vacancyDetails: [
+      { postName: "Primary Teacher (PRT) - KVS", totalPost: 3365, eligibility: "12th + D.Ed/B.El.Ed + CTET Paper I" },
+      { postName: "Trained Graduate Teacher (TGT) - KVS & NVS", totalPost: 5772, eligibility: "Degree + B.Ed + CTET Paper II" },
+      { postName: "Post Graduate Teacher (PGT) - KVS & NVS", totalPost: 2978, eligibility: "Master's Degree + B.Ed" },
+      { postName: "Principal / Vice Principal", totalPost: 285, eligibility: "Master's + B.Ed + Experience" },
+      { postName: "Non-Teaching (JSA/SSA/Steno/MTS)", totalPost: 2000, eligibility: "10th / 12th / Degree + Typing" }
+    ],
+
+    // Using Smart Table for Category Wise Breakup (Data from PDF Tables)
+    vacancyTableTitle: "Post & Category Wise Vacancy Details",
+    vacancyColumnName: "Post Name",
+
+    stateWiseVacancy: [
+      { state: "PRT (KVS)", ur: 1369, ews: 335, obc: 906, sc: 505, st: 250, total: 3365 },
+      { state: "TGT (KVS)", ur: 1153, ews: 275, obc: 749, sc: 414, st: 203, total: 2794 },
+      { state: "PGT (KVS)", ur: 615, ews: 141, obc: 390, sc: 214, st: 105, total: 1465 },
+      { state: "TGT (NVS)", ur: 1230, ews: 292, obc: 798, sc: 441, st: 217, total: 2978 },
+      { state: "PGT (NVS)", ur: 634, ews: 146, obc: 403, sc: 222, st: 108, total: 1513 },
+      { state: "Jr. Secretariat Asst (KVS)", ur: 277, ews: 68, obc: 184, sc: 108, st: 77, total: 714 },
+      { state: "Jr. Secretariat Asst (NVS)", ur: 225, ews: 55, obc: 149, sc: 82, st: 41, total: 552 },
+      { state: "MTS / Lab Attendant", ur: 89, ews: 19, obc: 38, sc: 32, st: 11, total: 189 }
+    ],
+
+    selectionProcess: [
+      "Computer Based Test (CBT)",
+      "Demo Teaching & Interview (For Teaching Posts)",
+      "Skill Test / Typing Test (For Non-Teaching Posts)",
+      "Document Verification"
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Computer Based Test (CBT)",
+        "Duration: 180 Minutes (3 Hours)",
+        "Total Marks: 180",
+        "No Negative Marking (Generally)"
+      ],
+      table: [
+        { subject: "Proficiency in Languages (Eng/Hindi)", questions: 20, marks: 20 },
+        { subject: "General Awareness & Current Affairs", questions: 10, marks: 10 },
+        { subject: "Reasoning Ability", questions: 5, marks: 5 },
+        { subject: "Computer Literacy", questions: 5, marks: 5 },
+        { subject: "Perspectives on Education (Pedagogy)", questions: 60, marks: 60 },
+        { subject: "Subject Concerned", questions: 80, marks: 80 }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official website (cbse.gov.in / kvsangathan.nic.in).",
+      "Click on 'Recruitment for KVS/NVS 2025'.",
+      "Register using Email and Mobile Number.",
+      "Fill in personal details and educational qualifications.",
+      "Upload scanned Photo and Signature.",
+      "Pay the application fee online (Processing fee applies to all).",
+      "Submit the form and take a printout."
+    ],
+
+    links: [
+      { title: "Download Exam Date/Corrigendum Notice", url: "https://cdnbbsr.s3waas.gov.in/s32d2ca7eedf739ef4c3800713ec482e1a/uploads/2025/11/2025112112.pdf" },
+      { title: "Apply Online (NVS & KVS)", url: "https://examinationservices.nic.in/recsys2025/root/Home.aspx?enc=Ei4cajBkK1gZSfgr53ImFbEsl0hvvhEEwgxfU0IzC28jtU4yhpqb3pomlo4g+VC8" },
+      { title: "Download Notification", url: "https://www.cbse.gov.in/cbsenew/documents/Detailed_Notification_KVS_NVS_2025_13112025.pdf" },
+      { title: "Official Website (KVS)", url: "https://kvsangathan.nic.in/" },
+      { title: "Official Website (NVS)", url: "https://navodaya.gov.in/" }
+      { title: "Official Website (CBSE)", url: "https://www.cbse.gov.in/" }
+    ]
+  },
   // --- 1. RRB NTPC (ID 5) ---
   {
     id: 5,
