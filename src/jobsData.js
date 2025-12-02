@@ -1,5 +1,4 @@
 export const jobsData = [
-  {
         // --- 0. KVS & NVS Recruitment (NEWEST) ---
   {
     id: 6,
@@ -93,7 +92,7 @@ export const jobsData = [
       { title: "Apply Online (NVS & KVS)", url: "https://examinationservices.nic.in/recsys2025/root/Home.aspx?enc=Ei4cajBkK1gZSfgr53ImFbEsl0hvvhEEwgxfU0IzC28jtU4yhpqb3pomlo4g+VC8" },
       { title: "Download Notification", url: "https://www.cbse.gov.in/cbsenew/documents/Detailed_Notification_KVS_NVS_2025_13112025.pdf" },
       { title: "Official Website (KVS)", url: "https://kvsangathan.nic.in/" },
-      { title: "Official Website (NVS)", url: "https://navodaya.gov.in/" }
+      { title: "Official Website (NVS)", url: "https://navodaya.gov.in/" },
       { title: "Official Website (CBSE)", url: "https://www.cbse.gov.in/" }
     ]
   },
