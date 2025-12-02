@@ -6,7 +6,7 @@ export const jobsData = [
     shortTitle: "KVS & NVS Recruitment 2025",
     title: "KVS & NVS Recruitment 2025 Apply Online for 14,900+ Posts | Teaching & Non-Teaching",
     shortInfo: "Kendriya Vidyalaya Sangathan (KVS) and Navodaya Vidyalaya Samiti (NVS) have released a combined recruitment notification for over 14,900 vacancies. Posts include Principal, PGT, TGT, PRT, Librarian, Clerk (JSA/SSA), and MTS. Eligible candidates can apply online through the CBSE portal.",
-    postDate: "02/12/2025",
+    postDate: "21/11/2025",
     category: "Latest Jobs",
 
     salary: "Level 1 to Level 12 (Post Wise)",
@@ -103,7 +103,7 @@ export const jobsData = [
     shortTitle: "RRB NTPC Recruitment 2025",
     title: "RRB NTPC Recruitment 2025 Apply Online for 8868 Posts (Graduate & UG) | Notification CEN 05/2025 & 06/2025",
     shortInfo: "Railway Recruitment Board (RRB) has released the official notifications (CEN 05/2025 & CEN 06/2025) for the recruitment of Non-Technical Popular Categories (NTPC). A total of 8868 vacancies are available for Graduate and Undergraduate posts like Station Master, TTE, Clerk, and Goods Guard. Check Zone-wise Vacancy, Eligibility, and Exam Date here.",
-    postDate: "02/12/2025",
+    postDate: "28/10/2025",
     category: "Latest Jobs",
 
     salary: "Level 2 to Level 6 (As per 7th CPC)",
