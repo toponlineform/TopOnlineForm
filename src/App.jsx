@@ -31,9 +31,9 @@ function Navbar() {
   );
 }
 
-// --- Home Component (FIXED SORTING: Newest ID First) ---
+// --- Home Component ---
 function Home() {
-  // Helper to sort by ID descending (Badi ID upar)
+  // Helper to sort by ID descending (Newest First)
   const sortNewest = (a, b) => b.id - a.id;
 
   const latestJobs = jobsData.filter(j => j.category === "Latest Jobs").sort(sortNewest).slice(0, 20);
@@ -106,7 +106,7 @@ function JobDetails() {
     "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressCountry": "IN" } }
   };
 
-  // Helper to render Exam Pattern Table with Auto Total
+  // Helper to render Exam Pattern Table
   const RenderExamTable = ({ data, title }) => (
     <>
       {title && <div className="section-header">{title}</div>}
@@ -146,14 +146,14 @@ function JobDetails() {
       <p style={{marginBottom:'10px', textAlign:'justify'}}><strong>Post Date : </strong> {job.postDate}</p>
       <p style={{marginBottom:'20px', textAlign:'justify'}}><strong>Short Info : </strong> {job.shortInfo}</p>
       
-      {/* 1. Dates & Fees (Fixed Width 50%) */}
+      {/* Dates & Fees */}
       {job.importantDates.length > 0 && (
         <table><tbody><tr><th className="green-header" width="50%">Dates</th><th className="green-header" width="50%">Fees</th></tr>
         <tr><td><ul>{job.importantDates.map((d,i)=><li key={i}><strong>{d.label}:</strong> {d.value}</li>)}</ul></td>
         <td><ul>{job.applicationFee.map((f,i)=><li key={i}><strong>{f.category}:</strong> {f.amount}</li>)}</ul></td></tr></tbody></table>
       )}
       
-      {/* 2. Age Limit */}
+      {/* Age Limit */}
       {job.ageLimit && (
         <>
           <div className="section-header">Age Limit</div>
@@ -169,129 +169,70 @@ function JobDetails() {
         </>
       )}
 
-      {/* 3. Vacancy Details (With Auto Total) */}
+      {/* Vacancy Details */}
       {job.vacancyDetails.length > 0 && (
         <>
           <div className="section-header">Vacancy Details</div>
-          <table>
-            <thead>
-              <tr style={{background: '#f2f2f2'}}>
-                <th>Post Name</th><th>Total</th><th>Eligibility</th>
-              </tr>
-            </thead>
-            <tbody>
-              {job.vacancyDetails.map((item, index) => (
-                <tr key={index}>
-                  <td>{item.postName}</td>
-                  <td>{item.totalPost}</td>
-                  <td>{item.eligibility}</td>
-                </tr>
-              ))}
-              
-              {/* AUTO TOTAL ROW (Only shows if Total > 0) */}
-              {job.vacancyDetails.reduce((sum, item) => sum + (Number(item.totalPost) || 0), 0) > 0 && (
-                <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}>
-                  <td>TOTAL</td>
-                  <td style={{color:'red'}}>
-                    {job.vacancyDetails.reduce((sum, item) => sum + (Number(item.totalPost) || 0), 0)}
-                  </td>
-                  <td>-</td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+          <table><thead><tr style={{background: '#f2f2f2'}}><th>Post Name</th><th>Total</th><th>Eligibility</th></tr></thead>
+          <tbody>{job.vacancyDetails.map((item, index) => (<tr key={index}><td>{item.postName}</td><td>{item.totalPost}</td><td>{item.eligibility}</td></tr>))}</tbody></table>
         </>
       )}
 
-      {/* 4. Smart Vacancy TableS (State/Zone) */}
-      
-      {/* --- Helper Function for Vacancy Table --- */}
-      {/* Note: Is helper function ko JobDetails ke andar upar define kar sakte hain, ya seedha yahan logic likh dein. 
-          Simplicity ke liye main seedha yahan do baar logic likh raha hu. */}
-
-      {/* A. Standard State Wise (For Bank of Baroda etc.) */}
+      {/* State Wise Vacancy */}
       {job.stateWiseVacancy && (
         <>
           <div className="section-header">{job.vacancyTableTitle || "State Wise Vacancy Details"}</div>
           <div style={{overflowX: 'auto'}}>
             <table style={{minWidth: '100%'}}>
-              <thead>
-                <tr style={{background: '#f2f2f2'}}>
-                  <th>{job.vacancyColumnName || "State/UT"}</th><th>Total Seats</th><th>UR</th><th>EWS</th><th>OBC</th><th>SC</th><th>ST</th>
-                </tr>
-              </thead>
+              <thead><tr style={{background: '#f2f2f2'}}><th>{job.vacancyColumnName || "State/UT"}</th><th>Total Seats</th><th>UR</th><th>EWS</th><th>OBC</th><th>SC</th><th>ST</th></tr></thead>
               <tbody>
                 {job.stateWiseVacancy.map((row, index) => (
                   <tr key={index}><td style={{fontWeight:'500'}}>{row.state}</td><td style={{fontWeight:'bold', color:'blue'}}>{row.total}</td><td>{row.ur}</td><td>{row.ews}</td><td>{row.obc}</td><td>{row.sc}</td><td>{row.st}</td></tr>
                 ))}
-                <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}><td>TOTAL</td><td style={{color:'red'}}>{job.stateWiseVacancy.reduce((sum, item) => sum + (Number(item.total) || 0), 0)}</td><td colSpan="5" style={{textAlign:'center', fontSize:'12px'}}>Check Notification</td></tr>
+                <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}><td>TOTAL</td><td style={{color:'red'}}>{job.stateWiseVacancy.reduce((sum, item) => sum + (Number(item.total) || 0), 0)}</td><td colSpan="5" style={{textAlign:'center', fontSize:'12px'}}>Check Notification for PwBD details</td></tr>
               </tbody>
             </table>
           </div>
         </>
       )}
-
-      {/* B. RRB Graduate Zone Wise */}
+      
+      {/* RRB Zone Wise Graduate */}
       {job.zoneWiseGraduate && (
         <>
           <div className="section-header">RRB NTPC Graduate Level Vacancy (Zone Wise)</div>
           <div style={{overflowX: 'auto'}}>
             <table style={{minWidth: '100%'}}>
-              <thead>
-                <tr style={{background: '#f2f2f2'}}>
-                  <th>RRB Zone</th><th>Total</th><th>UR</th><th>SC</th><th>ST</th><th>OBC</th><th>EWS</th>
-                </tr>
-              </thead>
+              <thead><tr style={{background: '#f2f2f2'}}><th>RRB Zone</th><th>Total</th><th>UR</th><th>SC</th><th>ST</th><th>OBC</th><th>EWS</th></tr></thead>
               <tbody>
                 {job.zoneWiseGraduate.map((row, index) => (
-                  <tr key={index}>
-                    <td style={{fontWeight:'500'}}>{row.state}</td>
-                    <td style={{fontWeight:'bold', color:'blue'}}>{row.total}</td>
-                    <td>{row.ur}</td><td>{row.sc}</td><td>{row.st}</td><td>{row.obc}</td><td>{row.ews}</td>
-                  </tr>
+                  <tr key={index}><td style={{fontWeight:'500'}}>{row.state}</td><td style={{fontWeight:'bold', color:'blue'}}>{row.total}</td><td>{row.ur}</td><td>{row.sc}</td><td>{row.st}</td><td>{row.obc}</td><td>{row.ews}</td></tr>
                 ))}
-                <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}>
-                  <td>TOTAL</td>
-                  <td style={{color:'red'}}>{job.zoneWiseGraduate.reduce((sum, item) => sum + (Number(item.total) || 0), 0)}</td>
-                  <td colSpan="5"></td>
-                </tr>
+                <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}><td>TOTAL</td><td style={{color:'red'}}>{job.zoneWiseGraduate.reduce((sum, item) => sum + (Number(item.total) || 0), 0)}</td><td colSpan="5"></td></tr>
               </tbody>
             </table>
           </div>
         </>
       )}
 
-      {/* C. RRB Undergraduate Zone Wise */}
+      {/* RRB Zone Wise Undergraduate */}
       {job.zoneWiseUG && (
         <>
           <div className="section-header">RRB NTPC Undergraduate Level Vacancy (Zone Wise)</div>
           <div style={{overflowX: 'auto'}}>
             <table style={{minWidth: '100%'}}>
-              <thead>
-                <tr style={{background: '#f2f2f2'}}>
-                  <th>RRB Zone</th><th>Total</th><th>UR</th><th>SC</th><th>ST</th><th>OBC</th><th>EWS</th>
-                </tr>
-              </thead>
+              <thead><tr style={{background: '#f2f2f2'}}><th>RRB Zone</th><th>Total</th><th>UR</th><th>SC</th><th>ST</th><th>OBC</th><th>EWS</th></tr></thead>
               <tbody>
                 {job.zoneWiseUG.map((row, index) => (
-                  <tr key={index}>
-                    <td style={{fontWeight:'500'}}>{row.state}</td>
-                    <td style={{fontWeight:'bold', color:'blue'}}>{row.total}</td>
-                    <td>{row.ur}</td><td>{row.sc}</td><td>{row.st}</td><td>{row.obc}</td><td>{row.ews}</td>
-                  </tr>
+                  <tr key={index}><td style={{fontWeight:'500'}}>{row.state}</td><td style={{fontWeight:'bold', color:'blue'}}>{row.total}</td><td>{row.ur}</td><td>{row.sc}</td><td>{row.st}</td><td>{row.obc}</td><td>{row.ews}</td></tr>
                 ))}
-                <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}>
-                  <td>TOTAL</td>
-                  <td style={{color:'red'}}>{job.zoneWiseUG.reduce((sum, item) => sum + (Number(item.total) || 0), 0)}</td>
-                  <td colSpan="5"></td>
-                </tr>
+                <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}><td>TOTAL</td><td style={{color:'red'}}>{job.zoneWiseUG.reduce((sum, item) => sum + (Number(item.total) || 0), 0)}</td><td colSpan="5"></td></tr>
               </tbody>
             </table>
           </div>
         </>
       )}
 
-      {/* 5. Salary (Correct Position: After Vacancy, Before Selection) */}
+      {/* Salary */}
       {job.salary && (
         <>
           <div className="section-header">Pay Scale / Salary</div>
@@ -299,7 +240,7 @@ function JobDetails() {
         </>
       )}
 
-      {/* 6. Detailed Salary Table */}
+      {/* Salary Details Table */}
       {job.salaryDetails && (
         <>
           <div className="section-header">Post Wise Salary / Pay Level</div>
@@ -316,7 +257,7 @@ function JobDetails() {
         </>
       )}
 
-      {/* 7. Selection Process */}
+      {/* Selection Process */}
       {job.selectionProcess && (
         <>
           <div className="section-header">Selection Process</div>
@@ -324,37 +265,30 @@ function JobDetails() {
         </>
       )}
 
-      {/* 8. Exam Pattern (UPDATED for RRB & Others) */}
+      {/* Exam Pattern (UPDATED: Now supports CBT 1/2 and Dynamic Tables) */}
       {job.examPattern && (
         <>
           <div className="section-header">Exam Pattern</div>
           <div style={{padding: '10px'}}>
+            {job.examPattern.details && (<ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>{job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}</ul>)}
             
-            {/* Details List (Mode, Negative Marking etc.) */}
-            {job.examPattern.details && (
-              <ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>
-                {job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}
-              </ul>
-            )}
-            
-            {/* AIIMS Style (Single Table) */}
+            {/* Standard Table */}
             {job.examPattern.table && <RenderExamTable data={job.examPattern.table} />}
-
-            {/* RRB NTPC Style (CBT 1 & CBT 2) */}
+            
+            {/* RRB NTPC Specific */}
             {job.examPattern.cbt1 && <RenderExamTable data={job.examPattern.cbt1} title="1st Stage Computer Based Test (CBT-1)" />}
             {job.examPattern.cbt2 && <RenderExamTable data={job.examPattern.cbt2} title="2nd Stage Computer Based Test (CBT-2)" />}
 
-            {/* ECGC Style (Generalist/Specialist) */}
+            {/* ECGC Specific */}
             {job.examPattern.generalistObjective && <RenderExamTable data={job.examPattern.generalistObjective} title="1. Generalist - Objective Test" />}
             {job.examPattern.generalistDescriptive && <RenderExamTable data={job.examPattern.generalistDescriptive} title="2. Generalist - Descriptive Test" />}
             {job.examPattern.specialistObjective && <RenderExamTable data={job.examPattern.specialistObjective} title="3. Specialist - Objective Test" />}
             {job.examPattern.specialistDescriptive && <RenderExamTable data={job.examPattern.specialistDescriptive} title="4. Specialist - Descriptive Test" />}
-            
           </div>
         </>
       )}
 
-      {/* 9. How to Apply */}
+      {/* How to Apply */}
       {job.howToApply && (
         <>
           <div className="section-header">How to Apply</div>
@@ -362,17 +296,22 @@ function JobDetails() {
         </>
       )}
       
+      {/* --- DYNAMIC LINKS SECTION (UPDATED) --- */}
       <div className="section-header">Important Links</div>
       <table className="important-links">
         <tbody>
-          <tr><td><strong>Apply Online (Graduate)</strong></td><td align="center"><a href={job.links.applyOnline} className="click-here" target="_blank" rel="noreferrer">Click Here</a></td></tr>
-          <tr><td><strong>Apply Online (Under Graduate)</strong></td><td align="center"><a href={job.links.applyOnline} className="click-here" target="_blank" rel="noreferrer">Click Here</a></td></tr>
-          <tr><td><strong>Notification (Graduate)</strong></td><td align="center"><a href={job.links.notification} className="click-here" target="_blank" rel="noreferrer">Click Here</a></td></tr>
-          <tr><td><strong>Notification (Under Graduate)</strong></td><td align="center"><a href={job.links.notification} className="click-here" target="_blank" rel="noreferrer">Click Here</a></td></tr>
-          <tr><td><strong>Official Website</strong></td><td align="center"><a href={job.links.officialWebsite} className="click-here" target="_blank" rel="noreferrer">Click Here</a></td></tr>
+          {/* Ab yeh jobsData.js se links lega, hardcoded nahi hai */}
+          {job.links && job.links.map((link, index) => (
+            <tr key={index}>
+              <td><strong>{link.title}</strong></td>
+              <td align="center">
+                <a href={link.url} className="click-here" target="_blank" rel="noreferrer">Click Here</a>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
-      </div>
+    </div>
   );
 }
 
