@@ -82,9 +82,9 @@ export const jobsData = [
     ],
 
     links: [
-      { title: "Apply Online", url: "https://sailcareers.com/" },
-      { title: "Download Notification", url: "https://sailcareers.com/" }, // Replace with direct PDF link if available
-      { title: "Official Website", url: "https://sail.co.in/" }
+      { title: "Apply Online", url: "https://sailcareers.com/sail2025mt/" },
+      { title: "Download Notification", url: "https://sailcareers.com/sail2025mt/" }, // Replace with direct PDF link if available
+      { title: "Official Website", url: "https://sailcareers.com/#Notification" }
     ]
   },
 // --- 0. KVS & NVS Recruitment (NEWEST) ---
