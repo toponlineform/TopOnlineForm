@@ -33,7 +33,6 @@ function Navbar() {
 
 // --- Home Component ---
 function Home() {
-  // Helper to sort by ID descending (Newest First)
   const sortNewest = (a, b) => b.id - a.id;
 
   const latestJobs = jobsData.filter(j => j.category === "Latest Jobs").sort(sortNewest).slice(0, 20);
@@ -125,7 +124,6 @@ function JobDetails() {
                 <td>{row.marks}</td>
               </tr>
             ))}
-            {/* --- AUTOMATIC TOTAL CALCULATION --- */}
             <tr style={{fontWeight: 'bold', background: '#e9e9e9'}}>
               <td>Total</td>
               <td>{data.reduce((sum, item) => sum + Number(item.questions), 0)}</td>
@@ -265,12 +263,18 @@ function JobDetails() {
         </>
       )}
 
-      {/* Exam Pattern (UPDATED: Now supports CBT 1/2 and Dynamic Tables) */}
+      {/* Exam Pattern (UPDATED: Now supports CBT 1/2, Dynamic Tables & PET) */}
       {job.examPattern && (
         <>
-          <div className="section-header">Exam Pattern</div>
+          <div className="section-header">Exam Pattern & Physical Test</div>
           <div style={{padding: '10px'}}>
-            {job.examPattern.details && (<ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>{job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}</ul>)}
+            
+            {/* Details List */}
+            {job.examPattern.details && (
+              <ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>
+                {job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}
+              </ul>
+            )}
             
             {/* Standard Table */}
             {job.examPattern.table && <RenderExamTable data={job.examPattern.table} />}
@@ -284,6 +288,33 @@ function JobDetails() {
             {job.examPattern.generalistDescriptive && <RenderExamTable data={job.examPattern.generalistDescriptive} title="2. Generalist - Descriptive Test" />}
             {job.examPattern.specialistObjective && <RenderExamTable data={job.examPattern.specialistObjective} title="3. Specialist - Objective Test" />}
             {job.examPattern.specialistDescriptive && <RenderExamTable data={job.examPattern.specialistDescriptive} title="4. Specialist - Descriptive Test" />}
+
+            {/* --- NEW: Physical Efficiency Test (PET) Table --- */}
+            {job.examPattern.pet && (
+              <>
+                <div className="section-header" style={{marginTop: '20px', fontSize: '16px'}}>Physical Efficiency Test (PET)</div>
+                <div style={{overflowX: 'auto'}}>
+                  <table style={{minWidth: '100%'}}>
+                    <thead>
+                      <tr style={{background: '#f2f2f2'}}>
+                        <th>Activity</th>
+                        <th>Male Candidates</th>
+                        <th>Female Candidates</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {job.examPattern.pet.map((row, i) => (
+                        <tr key={i}>
+                          <td>{row.activity}</td>
+                          <td>{row.male}</td>
+                          <td>{row.female}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            )}
           </div>
         </>
       )}
