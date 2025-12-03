@@ -1,5 +1,96 @@
 export const jobsData = [
   {
+    id: 9,
+    slug: "ssc-gd-constable-recruitment-2025",
+    shortTitle: "SSC GD Constable Recruitment 2025",
+    title: "SSC GD Constable Recruitment 2025 Apply Online for 25,487 Posts | BSF, CISF, CRPF, SSB, ITBP, AR, SSF",
+    shortInfo: "Staff Selection Commission (SSC) has released the official notification for the recruitment of Constable (General Duty) in Central Armed Police Forces (CAPFs), SSF, and Rifleman (GD) in Assam Rifles. A total of 25,487 vacancies are available for 10th Pass candidates. Check Force-wise Vacancy, Physical Standards, and Exam Date here.",
+    postDate: "01/12/2025",
+    category: "Latest Jobs",
+
+    salary: "Pay Level-3 (₹21,700 - ₹69,100)",
+
+    importantDates: [
+      { label: "Application Begin", value: "01/12/2025" },
+      { label: "Last Date for Apply", value: "31/12/2025 (Upto 11:00 PM)" },
+      { label: "Fee Payment Last Date", value: "01/01/2026" },
+      { label: "Correction Window", value: "08/01/2026 to 10/01/2026" },
+      { label: "CBT Exam Date", value: "February - April 2026 (Tentative)" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹100/-" },
+      { category: "SC / ST / Ex-SM", amount: "₹0 (Nil)" },
+      { category: "All Category Female", amount: "₹0 (Nil)" },
+      { category: "Payment Mode", amount: "Online (BHIM UPI, Net Banking, Cards)" }
+    ],
+
+    ageLimit: "18-23 Years (As on 01/01/2026). Relaxation: SC/ST +5 Yrs, OBC +3 Yrs, Ex-SM +3 Yrs.",
+
+    vacancyDetails: [
+      { postName: "Constable (General Duty) - Male", totalPost: 23467, eligibility: "Class 10th (Matriculation) Exam Passed from any Recognized Board in India." },
+      { postName: "Constable (General Duty) - Female", totalPost: 2020, eligibility: "Class 10th (Matriculation) Exam Passed from any Recognized Board in India." }
+    ],
+
+    // Using Smart Table for Force Wise Vacancy
+    vacancyTableTitle: "Force Wise Vacancy Details",
+    vacancyColumnName: "Force Name",
+
+    stateWiseVacancy: [
+      { state: "BSF (Border Security Force)", total: 616, ur: 271, ews: 58, obc: 133, sc: 89, st: 65 },
+      { state: "CISF (Central Industrial Security Force)", total: 14595, ur: 6174, ews: 1471, obc: 3284, sc: 2123, st: 1543 },
+      { state: "CRPF (Central Reserve Police Force)", total: 5490, ur: 2589, ews: 606, obc: 1370, sc: 885, st: 40 },
+      { state: "SSB (Sashastra Seema Bal)", total: 1764, ur: 752, ews: 176, obc: 412, sc: 257, st: 167 },
+      { state: "ITBP (Indo Tibetan Border Police)", total: 1293, ur: 577, ews: 125, obc: 257, sc: 170, st: 164 },
+      { state: "AR (Assam Rifles)", total: 1706, ur: 729, ews: 167, obc: 303, sc: 175, st: 332 },
+      { state: "SSF (Secretariat Security Force)", total: 23, ur: 10, ews: 2, obc: 6, sc: 3, st: 2 }
+    ],
+
+    selectionProcess: [
+      "Computer Based Examination (CBE)",
+      "Physical Efficiency Test (PET)",
+      "Physical Standard Test (PST)",
+      "Medical Examination (DME/RME) & Document Verification"
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Computer Based Test (CBT)",
+        "Duration: 60 Minutes (1 Hour)",
+        "Total Questions: 80",
+        "Total Marks: 160 (2 Marks per question)",
+        "Negative Marking: 0.25 Marks for each wrong answer",
+        "--- PHYSICAL STANDARDS ---",
+        "Height: Male - 170 cm | Female - 157 cm (Relaxation for ST)",
+        "Chest (Male): 80-85 cm (Relaxation for ST)",
+        "Race (PET): Male - 5 km in 24 min | Female - 1.6 km in 8.5 min"
+      ],
+      table: [
+        { subject: "Part A: General Intelligence & Reasoning", questions: 20, marks: 40 },
+        { subject: "Part B: General Knowledge & Awareness", questions: 20, marks: 40 },
+        { subject: "Part C: Elementary Mathematics", questions: 20, marks: 40 },
+        { subject: "Part D: English / Hindi", questions: 20, marks: 40 }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official SSC website ssc.gov.in.",
+      "Register using One-Time Registration (OTR) if not already registered.",
+      "Log in and click on 'Apply' for 'Constable (GD) Examination 2026'.",
+      "Fill in the details, upload live photo and signature.",
+      "Select preference of Forces (BSF, CISF, etc.) carefully.",
+      "Pay the application fee online.",
+      "Submit the form and take a printout."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://ssc.gov.in" },
+      { title: "Download Notification", url: "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_CTGD_2026.pdf" },
+      { title: "Official Website", url: "https://ssc.gov.in/" }
+    ]
+  },
+  
+  {
     id: 8,
     slug: "rites-apprentice-recruitment-2025",
     shortTitle: "RITES Apprentice Recruitment 2025",
