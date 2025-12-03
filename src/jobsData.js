@@ -1,10 +1,11 @@
 export const jobsData = [
-  {
+  
+    {
     id: 12,
     slug: "cbse-recruitment-2025-group-a-b-c",
     shortTitle: "CBSE Recruitment 2025 (Group A, B, C)",
-    title: "CBSE Recruitment 2025 Apply Online for 124 Posts | Junior Assistant, Officer & Assistant Secretary",
-    shortInfo: "Central Board of Secondary Education (CBSE) has released the detailed notification for Direct Recruitment Quota Examination 2026 (DRQ 2026). A total of 124 vacancies are available for various Group A, B, and C posts like Assistant Secretary, Accounts Officer, Junior Assistant, and more. Eligible candidates can apply online through the official website.",
+    title: "CBSE Recruitment 2025 Apply Online for 138 Posts | Jr Assistant, Accountant & Officer",
+    shortInfo: "Central Board of Secondary Education (CBSE) has released the official notification for Direct Recruitment Quota Examination 2026 (DRQ 2026). A total of 138 vacancies are available for Group A, B, and C posts including Assistant Secretary, Accounts Officer, Junior Engineer, Junior Accountant, and Junior Assistant. Eligible candidates can apply online.",
     postDate: "02/12/2025",
     category: "Latest Jobs",
 
@@ -17,7 +18,6 @@ export const jobsData = [
       { label: "Exam Date", value: "To be notified" }
     ],
 
-    // Fee includes Application Fee + Processing Fee (Rs. 250)
     applicationFee: [
       { category: "Group A (Unreserved/OBC/EWS)", amount: "₹1750/-" },
       { category: "Group B & C (Unreserved/OBC/EWS)", amount: "₹1050/-" },
@@ -28,46 +28,46 @@ export const jobsData = [
     ageLimit: "Max 27-35 Years (Varies Post Wise). Relaxation: SC/ST+5, OBC+3, PwBD+10.",
 
     vacancyDetails: [
-      { postName: "Assistant Secretary (Group A)", totalPost: 18, eligibility: "Bachelor's Degree" },
+      { postName: "Assistant Secretary (Group A)", totalPost: 49, eligibility: "Bachelor's/Master's Degree + Experience (Varies by Dept)" },
       { postName: "Accounts Officer (Group A)", totalPost: 2, eligibility: "Degree in Commerce/Accounts/Finance/Economics OR CA/ICWA/MBA" },
-      { postName: "Junior Engineer (Group B)", totalPost: 15, eligibility: "BE / B.Tech in Civil Engineering" },
+      { postName: "Superintendent (Group B)", totalPost: 27, eligibility: "Bachelor's Degree + Computer Knowledge" },
       { postName: "Junior Translation Officer (Group B)", totalPost: 9, eligibility: "Master's in Hindi/English + Diploma in Translation" },
-      { postName: "Accountant (Group C)", totalPost: 6, eligibility: "Bachelor's Degree in Commerce/Accounts" },
       { postName: "Junior Accountant (Group C)", totalPost: 16, eligibility: "12th Pass with Commerce/Accounts + Typing" },
       { postName: "Junior Assistant (Group C)", totalPost: 35, eligibility: "12th Pass + Typing (35 wpm Eng / 30 wpm Hindi)" }
     ],
 
-    // Smart Table for Category Wise Vacancy
+    // Smart Table for Category Wise Breakup (Exact Data from PDF Page 1)
     vacancyTableTitle: "Post & Category Wise Vacancy Details",
     vacancyColumnName: "Post Name",
 
     stateWiseVacancy: [
-      { state: "Assistant Secretary (Admin)", total: 18, ur: 8, ews: 1, obc: 4, sc: 3, st: 2 },
-      { state: "Assistant Secretary (Academics)", total: 16, ur: 9, ews: 1, obc: 3, sc: 2, st: 1 },
+      { state: "Assistant Secretary (Admin)", total: 18, ur: 11, ews: 1, obc: 4, sc: 1, st: 1 },
+      { state: "Asst. Professor (Academics)", total: 16, ur: 8, ews: 1, obc: 4, sc: 2, st: 1 },
+      { state: "Asst. Professor (Training)", total: 8, ur: 5, ews: 0, obc: 2, sc: 1, st: 0 },
+      { state: "Asst. Professor (Skill Edu)", total: 7, ur: 5, ews: 0, obc: 1, sc: 1, st: 0 },
       { state: "Accounts Officer", total: 2, ur: 2, ews: 0, obc: 0, sc: 0, st: 0 },
-      { state: "Junior Engineer", total: 15, ur: 8, ews: 1, obc: 3, sc: 2, st: 1 },
+      { state: "Superintendent", total: 27, ur: 12, ews: 2, obc: 7, sc: 4, st: 2 },
       { state: "Junior Translation Officer", total: 9, ur: 5, ews: 0, obc: 2, sc: 1, st: 1 },
-      { state: "Accountant", total: 6, ur: 4, ews: 0, obc: 1, sc: 1, st: 0 },
       { state: "Junior Accountant", total: 16, ur: 7, ews: 1, obc: 4, sc: 3, st: 1 },
       { state: "Junior Assistant", total: 35, ur: 14, ews: 3, obc: 10, sc: 5, st: 3 }
     ],
 
     salaryDetails: [
       { post: "Assistant Secretary / Accounts Officer", level: "Level 10" },
-      { post: "Junior Engineer / Translation Officer", level: "Level 6" },
-      { post: "Accountant", level: "Level 4" },
-      { post: "Junior Accountant / Junior Assistant", level: "Level 2" }
+      { post: "Superintendent / Translation Officer", level: "Level 6" },
+      { post: "Junior Accountant", level: "Level 2" },
+      { post: "Junior Assistant", level: "Level 2" }
     ],
 
     selectionProcess: [
       "Tier-1: MCQ Based Written Examination (OMR)",
-      "Tier-2: Descriptive Test (For Group A & B posts)",
+      "Tier-2: Descriptive Test (For Group A & B posts) / Objective (For Jr Accountant)",
       "Skill Test: Typing / Dictation (For Jr Assistant, Accountant etc.)",
       "Interview (For Group A posts)",
       "Document Verification"
     ],
 
-    // Exam Pattern for Tier 1 (Common for most posts)
+    // Exam Pattern for Tier 1 (Common for most posts - Page 10/11/12 of PDF)
     examPattern: {
       details: [
         "Mode: Tier-1 (OMR Based MCQ)",
