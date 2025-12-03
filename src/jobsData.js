@@ -37,8 +37,8 @@ export const jobsData = [
     stateWiseVacancy: [
       { state: "Unreserved (UR)", total: 5, sc: "N/A", st: "N/A", obc: "N/A", ews: "N/A", ur: 5 },
       { state: "OBC", total: 1, sc: "N/A", st: "N/A", obc: 1, ews: "N/A", ur: "N/A" },
-      { state: "SC", total: 1, sc: 1, st: "N/A", obc: "N/A", ews: "N/A", ur: "N/A" },
-      { state: "ST", total: 0, sc: "N/A", st: 0, obc: "N/A", ews: "N/A", ur: "N/A" },
+      { state: "SC", total: 0, sc: "N/A", st: "N/A", obc: "N/A", ews: "N/A", ur: "N/A" },
+      { state: "ST", total: 1, sc: "N/A", st: 1, obc: "N/A", ews: "N/A", ur: "N/A" },
       { state: "EWS", total: 0, sc: "N/A", st: "N/A", obc: "N/A", ews: 0, ur: "N/A" }
     ],
 
