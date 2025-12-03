@@ -6,7 +6,7 @@ export const jobsData = [
     shortTitle: "ITBP Deputy Judge Attorney General Recruitment 2025",
     title: "ITBP Deputy Judge Attorney General Recruitment 2025 Apply Online for 07 Posts | Deputy Commandant (Law)",
     shortInfo: "Indo-Tibetan Border Police Force (ITBP) has released the notification for the recruitment of Deputy Judge Attorney General (Deputy Commandant) in Group 'A' Gazetted cadre. Eligible Law Graduates with experience can apply online. Selection will be based on Physical Standards, Written Test, and Interview.",
-    postDate: "03/12/2025",
+    postDate: "02/12/2025",
     category: "Latest Jobs",
 
     salary: "Level-11 (₹67,700 - ₹2,08,700) + Allowances",
