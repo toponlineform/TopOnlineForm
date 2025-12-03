@@ -1,5 +1,107 @@
 export const jobsData = [
   {
+    id: 12,
+    slug: "cbse-recruitment-2025-group-a-b-c",
+    shortTitle: "CBSE Recruitment 2025 (Group A, B, C)",
+    title: "CBSE Recruitment 2025 Apply Online for 124 Posts | Junior Assistant, Officer & Assistant Secretary",
+    shortInfo: "Central Board of Secondary Education (CBSE) has released the detailed notification for Direct Recruitment Quota Examination 2026 (DRQ 2026). A total of 124 vacancies are available for various Group A, B, and C posts like Assistant Secretary, Accounts Officer, Junior Assistant, and more. Eligible candidates can apply online through the official website.",
+    postDate: "02/12/2025",
+    category: "Latest Jobs",
+
+    salary: "Level 2 to Level 10 (As per 7th CPC)",
+
+    importantDates: [
+      { label: "Application Begin", value: "02/12/2025" },
+      { label: "Last Date for Apply", value: "22/12/2025 (Upto 11:59 PM)" },
+      { label: "Fee Payment Last Date", value: "22/12/2025" },
+      { label: "Exam Date", value: "To be notified" }
+    ],
+
+    // Fee includes Application Fee + Processing Fee (Rs. 250)
+    applicationFee: [
+      { category: "Group A (Unreserved/OBC/EWS)", amount: "₹1750/-" },
+      { category: "Group B & C (Unreserved/OBC/EWS)", amount: "₹1050/-" },
+      { category: "SC / ST / PwBD / Ex-SM / Women", amount: "₹250/- (Processing Fee Only)" },
+      { category: "Payment Mode", amount: "Online (Net Banking/Cards/UPI)" }
+    ],
+
+    ageLimit: "Max 27-35 Years (Varies Post Wise). Relaxation: SC/ST+5, OBC+3, PwBD+10.",
+
+    vacancyDetails: [
+      { postName: "Assistant Secretary (Group A)", totalPost: 18, eligibility: "Bachelor's Degree" },
+      { postName: "Accounts Officer (Group A)", totalPost: 2, eligibility: "Degree in Commerce/Accounts/Finance/Economics OR CA/ICWA/MBA" },
+      { postName: "Junior Engineer (Group B)", totalPost: 15, eligibility: "BE / B.Tech in Civil Engineering" },
+      { postName: "Junior Translation Officer (Group B)", totalPost: 9, eligibility: "Master's in Hindi/English + Diploma in Translation" },
+      { postName: "Accountant (Group C)", totalPost: 6, eligibility: "Bachelor's Degree in Commerce/Accounts" },
+      { postName: "Junior Accountant (Group C)", totalPost: 16, eligibility: "12th Pass with Commerce/Accounts + Typing" },
+      { postName: "Junior Assistant (Group C)", totalPost: 35, eligibility: "12th Pass + Typing (35 wpm Eng / 30 wpm Hindi)" }
+    ],
+
+    // Smart Table for Category Wise Vacancy
+    vacancyTableTitle: "Post & Category Wise Vacancy Details",
+    vacancyColumnName: "Post Name",
+
+    stateWiseVacancy: [
+      { state: "Assistant Secretary (Admin)", total: 18, ur: 8, ews: 1, obc: 4, sc: 3, st: 2 },
+      { state: "Assistant Secretary (Academics)", total: 16, ur: 9, ews: 1, obc: 3, sc: 2, st: 1 },
+      { state: "Accounts Officer", total: 2, ur: 2, ews: 0, obc: 0, sc: 0, st: 0 },
+      { state: "Junior Engineer", total: 15, ur: 8, ews: 1, obc: 3, sc: 2, st: 1 },
+      { state: "Junior Translation Officer", total: 9, ur: 5, ews: 0, obc: 2, sc: 1, st: 1 },
+      { state: "Accountant", total: 6, ur: 4, ews: 0, obc: 1, sc: 1, st: 0 },
+      { state: "Junior Accountant", total: 16, ur: 7, ews: 1, obc: 4, sc: 3, st: 1 },
+      { state: "Junior Assistant", total: 35, ur: 14, ews: 3, obc: 10, sc: 5, st: 3 }
+    ],
+
+    salaryDetails: [
+      { post: "Assistant Secretary / Accounts Officer", level: "Level 10" },
+      { post: "Junior Engineer / Translation Officer", level: "Level 6" },
+      { post: "Accountant", level: "Level 4" },
+      { post: "Junior Accountant / Junior Assistant", level: "Level 2" }
+    ],
+
+    selectionProcess: [
+      "Tier-1: MCQ Based Written Examination (OMR)",
+      "Tier-2: Descriptive Test (For Group A & B posts)",
+      "Skill Test: Typing / Dictation (For Jr Assistant, Accountant etc.)",
+      "Interview (For Group A posts)",
+      "Document Verification"
+    ],
+
+    // Exam Pattern for Tier 1 (Common for most posts)
+    examPattern: {
+      details: [
+        "Mode: Tier-1 (OMR Based MCQ)",
+        "Duration: 2 Hours",
+        "Total Questions: 100",
+        "Total Marks: 300 (3 Marks per question)",
+        "Negative Marking: 1 Mark deducted for each wrong answer."
+      ],
+      table: [
+        { subject: "Current Affairs & General Awareness", questions: 20, marks: 60 },
+        { subject: "Reasoning & Mathematical Ability", questions: 20, marks: 60 },
+        { subject: "General Hindi & English", questions: 20, marks: 60 },
+        { subject: "Basic Computer Knowledge", questions: 20, marks: 60 },
+        { subject: "School Education & Board Administration", questions: 20, marks: 60 }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official website cbse.gov.in.",
+      "Click on 'Main Website' -> 'Latest @ CBSE' -> 'Recruitment'.",
+      "Register online for 'Direct Recruitment Quota Examination 2026'.",
+      "Fill in the application form and upload documents (Photo, Signature).",
+      "Pay the application fee online.",
+      "Submit the form and print the confirmation page."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://examinationservices.nic.in/recsys2025/root/Home.aspx?enc=Ei4cajBkK1gZSfgr53ImFSuabJtfdyH7GsL2cij2dPKFqA5XsHH8yMmK+6SEPU/E" },
+      { title: "Download Notification", url: "https://www.cbse.gov.in/cbsenew/documents/Detailed_Advertisement_Direct_Recruitment_02122025.pdf" },
+      { title: "Official Website", url: "https://www.cbse.gov.in/" }
+    ]
+  },
+  
+  {
     id: 11,
     slug: "drdo-ceptam-11-recruitment-2025",
     shortTitle: "DRDO CEPTAM-11 Recruitment 2025",
