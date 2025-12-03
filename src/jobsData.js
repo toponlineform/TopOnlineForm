@@ -1,12 +1,14 @@
 export const jobsData = [
     
+  
+    // --- ITBP Deputy Judge Attorney General (ID 12) ---
   {
     id: 13,
     slug: "itbp-deputy-judge-attorney-general-recruitment-2025",
     shortTitle: "ITBP Deputy Judge Attorney General Recruitment 2025",
     title: "ITBP Deputy Judge Attorney General Recruitment 2025 Apply Online for 07 Posts | Deputy Commandant (Law)",
     shortInfo: "Indo-Tibetan Border Police Force (ITBP) has released the notification for the recruitment of Deputy Judge Attorney General (Deputy Commandant) in Group 'A' Gazetted cadre. Eligible Law Graduates with experience can apply online. Selection will be based on Physical Standards, Written Test, and Interview.",
-    postDate: "02/12/2025",
+    postDate: "03/12/2025",
     category: "Latest Jobs",
 
     salary: "Level-11 (₹67,700 - ₹2,08,700) + Allowances",
@@ -30,17 +32,14 @@ export const jobsData = [
       { postName: "Deputy Judge Attorney General (Dy Commandant)", totalPost: 7, eligibility: "Bachelor Degree in Law + 7 Yrs Exp. OR Master Degree in Law + 5 Yrs Exp. (Must be registered Advocate)" }
     ],
 
-    // Smart Table for Category Wise Vacancy
-    vacancyTableTitle: "Category Wise Vacancy Details",
-    vacancyColumnName: "Category",
+    // --- FIX: Table Structure Changed to Post Wise ---
+    vacancyTableTitle: "Vacancy Distribution (Category Wise)",
+    vacancyColumnName: "Post Name",
 
     stateWiseVacancy: [
-      { state: "Unreserved (UR)", total: 5, sc: "N/A", st: "N/A", obc: "N/A", ews: "N/A", ur: 5 },
-      { state: "OBC", total: 1, sc: "N/A", st: "N/A", obc: 1, ews: "N/A", ur: "N/A" },
-      { state: "SC", total: 0, sc: "N/A", st: "N/A", obc: "N/A", ews: "N/A", ur: "N/A" },
-      { state: "ST", total: 1, sc: "N/A", st: 1, obc: "N/A", ews: "N/A", ur: "N/A" },
-      { state: "EWS", total: 0, sc: "N/A", st: "N/A", obc: "N/A", ews: 0, ur: "N/A" }
+      { state: "Dy. Judge Attorney General", total: 7, ur: 5, sc: 1, st: 0, obc: 1, ews: 0 }
     ],
+    // Ab ye table Post Name dikhayega aur aage category ka breakup.
 
     salaryDetails: [
       { post: "Deputy Commandant (JAG)", level: "Pay Matrix Level-11 (7th CPC)" }
@@ -54,13 +53,13 @@ export const jobsData = [
       "Medical Examination (DME/RME)"
     ],
 
-    // Exam Pattern (Paper I & II)
+    // --- EXAM PATTERN + PET ADDED ---
     examPattern: {
       details: [
         "Paper-I: Objective Type (2 Hours, 100 Marks)",
         "Paper-II: Professional Subject (3 Hours, 100 Marks - MCQ + Subjective)",
         "Negative Marking: 1/4th marks deducted for wrong answers (MCQ).",
-        "Physical Standards: Height - 165cm (M) / 157cm (F)."
+        "PST: Height - 165cm (Male) / 157cm (Female)."
       ],
       cbt1: [
         { subject: "General Intelligence & Reasoning", questions: 25, marks: 25 },
@@ -70,17 +69,24 @@ export const jobsData = [
       cbt2: [
         { subject: "Professional Subject (Objective)", questions: 60, marks: 60 },
         { subject: "Professional Subject (Subjective)", questions: 20, marks: 40 }
+      ],
+      
+      // --- NEW: PET Table Data ---
+      pet: [
+        { activity: "Race 100 Meters", male: "Within 28 Seconds", female: "Within 30 Seconds" },
+        { activity: "Race 800 Meters", male: "Within 6 Minutes", female: "Within 7 Minutes" },
+        { activity: "Shot Put (7.26 Kg)", male: "4.5 Meters (3 Chances)", female: "Not Applicable" },
+        { activity: "Long Jump", male: "Not Mentioned", female: "Not Mentioned" } // Removed if not in PDF
       ]
     },
 
-    // PET Details included in How to Apply section or can be separate text if needed
     howToApply: [
       "Visit the official ITBP recruitment website recruitment.itbpolice.nic.in.",
       "Register and fill the online application form.",
       "Upload required documents (Law Degree, Experience Certificate, Photo, Signature).",
       "Pay the application fee online (if applicable).",
       "Submit the form and take a printout.",
-      "Note: Prepare for PET - Race (100m & 800m), Long Jump, and Shot Put."
+      "Note: Prepare for PET as per the physical standards mentioned."
     ],
 
     links: [
