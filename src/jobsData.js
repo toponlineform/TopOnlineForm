@@ -1,4 +1,94 @@
 export const jobsData = [
+    
+  {
+    id: 13,
+    slug: "itbp-deputy-judge-attorney-general-recruitment-2025",
+    shortTitle: "ITBP Deputy Judge Attorney General Recruitment 2025",
+    title: "ITBP Deputy Judge Attorney General Recruitment 2025 Apply Online for 07 Posts | Deputy Commandant (Law)",
+    shortInfo: "Indo-Tibetan Border Police Force (ITBP) has released the notification for the recruitment of Deputy Judge Attorney General (Deputy Commandant) in Group 'A' Gazetted cadre. Eligible Law Graduates with experience can apply online. Selection will be based on Physical Standards, Written Test, and Interview.",
+    postDate: "03/12/2025",
+    category: "Latest Jobs",
+
+    salary: "Level-11 (₹67,700 - ₹2,08,700) + Allowances",
+
+    importantDates: [
+      { label: "Application Begin", value: "02/12/2025" },
+      { label: "Last Date for Apply", value: "31/12/2025 (Upto 11:59 PM)" },
+      { label: "Fee Payment Last Date", value: "31/12/2025" },
+      { label: "Exam Date", value: "To be notified" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹400/-" },
+      { category: "SC / ST / Female / Ex-SM", amount: "₹0 (Nil)" },
+      { category: "Payment Mode", amount: "Online (Net Banking/Cards/UPI)" }
+    ],
+
+    ageLimit: "Max 40 Years (As on 31/12/2025). Relaxation: SC/ST+5, OBC+3, Govt Servants+5 Years.",
+
+    vacancyDetails: [
+      { postName: "Deputy Judge Attorney General (Dy Commandant)", totalPost: 7, eligibility: "Bachelor Degree in Law + 7 Yrs Exp. OR Master Degree in Law + 5 Yrs Exp. (Must be registered Advocate)" }
+    ],
+
+    // Smart Table for Category Wise Vacancy
+    vacancyTableTitle: "Category Wise Vacancy Details",
+    vacancyColumnName: "Category",
+
+    stateWiseVacancy: [
+      { state: "Unreserved (UR)", total: 5, sc: "N/A", st: "N/A", obc: "N/A", ews: "N/A", ur: 5 },
+      { state: "OBC", total: 1, sc: "N/A", st: "N/A", obc: 1, ews: "N/A", ur: "N/A" },
+      { state: "SC", total: 1, sc: 1, st: "N/A", obc: "N/A", ews: "N/A", ur: "N/A" },
+      { state: "ST", total: 0, sc: "N/A", st: 0, obc: "N/A", ews: "N/A", ur: "N/A" },
+      { state: "EWS", total: 0, sc: "N/A", st: "N/A", obc: "N/A", ews: 0, ur: "N/A" }
+    ],
+
+    salaryDetails: [
+      { post: "Deputy Commandant (JAG)", level: "Pay Matrix Level-11 (7th CPC)" }
+    ],
+
+    selectionProcess: [
+      "Physical Standard Test (PST) & Biometric",
+      "Physical Efficiency Test (PET) - Qualifying",
+      "Written Examination (Paper I & II)",
+      "Documentation & Interview (50 Marks)",
+      "Medical Examination (DME/RME)"
+    ],
+
+    // Exam Pattern (Paper I & II)
+    examPattern: {
+      details: [
+        "Paper-I: Objective Type (2 Hours, 100 Marks)",
+        "Paper-II: Professional Subject (3 Hours, 100 Marks - MCQ + Subjective)",
+        "Negative Marking: 1/4th marks deducted for wrong answers (MCQ).",
+        "Physical Standards: Height - 165cm (M) / 157cm (F)."
+      ],
+      cbt1: [
+        { subject: "General Intelligence & Reasoning", questions: 25, marks: 25 },
+        { subject: "General Awareness", questions: 25, marks: 25 },
+        { subject: "General English", questions: 50, marks: 50 }
+      ],
+      cbt2: [
+        { subject: "Professional Subject (Objective)", questions: 60, marks: 60 },
+        { subject: "Professional Subject (Subjective)", questions: 20, marks: 40 }
+      ]
+    },
+
+    // PET Details included in How to Apply section or can be separate text if needed
+    howToApply: [
+      "Visit the official ITBP recruitment website recruitment.itbpolice.nic.in.",
+      "Register and fill the online application form.",
+      "Upload required documents (Law Degree, Experience Certificate, Photo, Signature).",
+      "Pay the application fee online (if applicable).",
+      "Submit the form and take a printout.",
+      "Note: Prepare for PET - Race (100m & 800m), Long Jump, and Shot Put."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://recruitment.itbpolice.nic.in/rect/index.php" },
+      { title: "Download Notification", url: "https://recruitment.itbpolice.nic.in/rect/noticeboards/downloadpdf/344.pdf" }, // Replace with direct PDF link if available
+      { title: "Official Website", url: "https://itbpolice.nic.in/" }
+    ]
+  },
   
     {
     id: 12,
