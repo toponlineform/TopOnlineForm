@@ -1,5 +1,92 @@
 export const jobsData = [
   {
+    id: 11,
+    slug: "drdo-ceptam-11-recruitment-2025",
+    shortTitle: "DRDO CEPTAM-11 Recruitment 2025",
+    title: "DRDO CEPTAM-11 Recruitment 2025 Apply Online for 764 Posts | STA-B & Technician-A",
+    shortInfo: "Defence Research & Development Organisation (DRDO), Center for Personnel Talent Management (CEPTAM) has released a short notice for the recruitment of Senior Technical Assistant-B (STA-B) and Technician-A (Tech-A). A total of 764 vacancies have been announced. Online applications are tentatively scheduled to begin from 09th December 2025.",
+    postDate: "02/12/2025",
+    category: "Latest Jobs",
+
+    salary: "Level 2 to Level 6 (7th CPC)",
+
+    importantDates: [
+      { label: "Notification Released", value: "02/12/2025 (Short Notice)" },
+      { label: "Application Begin (Tentative)", value: "09/12/2025" },
+      { label: "Last Date for Apply", value: "To be notified" },
+      { label: "Exam Date", value: "To be notified" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹100/- (Expected)" },
+      { category: "SC / ST / PwBD / Women", amount: "₹0 (Nil)" },
+      { category: "Payment Mode", amount: "Online" }
+    ],
+
+    // Age Limit as per Image
+    ageLimit: "18-28 Years (As on 09/12/2025). Relaxation as per Govt Rules.",
+
+    vacancyDetails: [
+      { postName: "Senior Technical Assistant-B (STA-B)", totalPost: 561, eligibility: "B.Sc. Degree OR Diploma in Engineering (Auto/Civil/Elect/Mech/CS etc.)" },
+      { postName: "Technician-A (Tech-A)", totalPost: 203, eligibility: "10th Pass + ITI Certificate in relevant trade" }
+    ],
+
+    // Smart Table for Post Wise Vacancy
+    vacancyTableTitle: "Post Wise Vacancy & Pay Scale",
+    vacancyColumnName: "Post Name",
+
+    stateWiseVacancy: [
+      { state: "Senior Technical Assistant-B (STA-B)", total: 561, ur: "TBD", ews: "TBD", obc: "TBD", sc: "TBD", st: "TBD" },
+      { state: "Technician-A (Tech-A)", total: 203, ur: "TBD", ews: "TBD", obc: "TBD", sc: "TBD", st: "TBD" }
+    ],
+    // Note: Detailed category wise breakup will be updated after full notification.
+
+    salaryDetails: [
+      { post: "Senior Technical Assistant-B (STA-B)", level: "Pay Level-6 (₹35,400 - ₹1,12,400)" },
+      { post: "Technician-A (Tech-A)", level: "Pay Level-2 (₹19,900 - ₹63,200)" }
+    ],
+
+    selectionProcess: [
+      "Tier-I: Computer Based Test (CBT) - Screening/Provisional Selection",
+      "Tier-II: Trade Test (For Tech-A) / Selection Test (For STA-B)",
+      "Document Verification",
+      "Medical Examination"
+    ],
+
+    // Expected Exam Pattern (Based on CEPTAM-10 Standard)
+    examPattern: {
+      details: [
+        "Mode: Computer Based Test (CBT)",
+        "Exam Type: Objective Multiple Choice Questions (MCQ)",
+        "Language: Hindi and English",
+        "Negative Marking: No (Usually)"
+      ],
+      table: [
+        { subject: "STA-B: Quantitative Ability & General Intelligence", questions: 120, marks: 120 },
+        { subject: "Tech-A: Section A (Quant, Reas, Eng, GA)", questions: 40, marks: 40 },
+        { subject: "Tech-A: Section B (Specific Trade)", questions: 80, marks: 80 }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official website drdo.gov.in once the link activates.",
+      "Navigate to 'Careers' -> 'CEPTAM-11 Advertisement'.",
+      "Register with basic details and contact information.",
+      "Fill the application form for STA-B or Tech-A post.",
+      "Upload scanned Photo, Signature, and 10th/ITI/Diploma certificates.",
+      "Pay the application fee (if applicable).",
+      "Submit the form and print the acknowledgement."
+    ],
+
+    links: [
+      { title: "Apply Online (Link Active on 09/12/2025)", url: "https://www.drdo.gov.in/drdo/careers/ceptam-11" },
+      { title: "Download Notification (Soon)", url: "" },
+      { title: "Download Short Notice", url: "https://www.drdo.gov.in" }, // Replace with direct PDF link if hosted
+      { title: "Official Website", url: "https://www.drdo.gov.in" }
+    ]
+  },
+  
+  {
     id: 10,
     slug: "sbi-sco-wealth-management-recruitment-2025",
     shortTitle: "SBI SCO Recruitment 2025 (Wealth Management)",
