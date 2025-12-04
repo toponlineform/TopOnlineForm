@@ -418,9 +418,81 @@ export const jobsData = [
       { title: "Official Website", url: "https://www.drdo.gov.in" }
     ]
   },
-  
+  // --- 0. SBI SCO Wealth Management (NEWEST - SUPER SMART) ---
   {
     id: 10,
+    slug: "sbi-sco-wealth-management-recruitment-2025",
+    shortTitle: "SBI SCO Recruitment 2025 (Wealth Management)",
+    title: "SBI SCO Recruitment 2025 Apply Online for 996 Wealth Management Posts | CTC up to ₹45 Lakhs",
+    shortInfo: "State Bank of India (SBI) has released the notification for the recruitment of Specialist Cadre Officers (SCO). A total of 996 vacancies are available. Selection is based on Shortlisting and Interview.",
+    postDate: "04/12/2025",
+    category: "Latest Jobs",
+    salary: "₹6.20 Lakhs - ₹44.70 Lakhs CTC per annum",
+    
+    importantDates: [
+      { label: "Application Begin", value: "02/12/2025" },
+      { label: "Last Date", value: "23/12/2025" },
+      { label: "Interview Date", value: "To be notified" }
+    ],
+    applicationFee: [
+      { category: "General/OBC/EWS", amount: "₹750" },
+      { category: "SC/ST/PwBD", amount: "Nil" }
+    ],
+    ageLimit: "20-42 Years (Varies by Post)",
+    
+    vacancyDetails: [
+      { postName: "VP Wealth (SRM)", totalPost: 506, eligibility: "Graduation + 6 Yrs Exp." },
+      { postName: "AVP Wealth (RM)", totalPost: 206, eligibility: "Graduation + 3 Yrs Exp." },
+      { postName: "Customer Relationship Executive", totalPost: 284, eligibility: "Graduation + Experience Preferred" }
+    ],
+
+    stateWiseVacancy: [
+      { state: "Ahmedabad", total: 43, ur: "Var", obc: "Var", sc: "Var", st: "Var", ews: "Var" },
+      { state: "Bengaluru", total: 104, ur: "Var", obc: "Var", sc: "Var", st: "Var", ews: "Var" },
+      { state: "Mumbai Metro", total: 95, ur: "Var", obc: "Var", sc: "Var", st: "Var", ews: "Var" },
+      { state: "New Delhi", total: 99, ur: "Var", obc: "Var", sc: "Var", st: "Var", ews: "Var" },
+      // ... Add more circles as needed
+    ],
+    vacancyTableTitle: "Circle Wise Vacancy Details",
+    vacancyColumnName: "Circle Name",
+
+    selectionProcess: ["Stage 1: Shortlisting", "Stage 2: Personal Interview (100 Marks)", "Stage 3: CTC Negotiation"],
+    
+    examPattern: {
+      details: ["Mode: Interview Only (No Written Exam)", "Merit List: Based on Interview Score", "Contract Period: 5 Years"]
+    },
+
+    // --- SUPER SMART FEATURE: Adding New Sections Dynamically ---
+    extraSections: [
+      {
+        title: "Job Profile & Roles",
+        list: [
+          "VP Wealth: Acquiring and managing High Net Worth Clients.",
+          "AVP Wealth: Handling portfolio management and client relations.",
+          "Executive: Documentation support and customer service."
+        ]
+      },
+      {
+        title: "Contract & Leave Details",
+        text: "The contract is for a period of 5 years, renewable for another 4 years based on performance. \nCandidates are entitled to 30 days of leave per year."
+      }
+    ],
+
+    howToApply: ["Visit sbi.co.in/careers", "Register & Upload Docs", "Pay Fee", "Submit"],
+    
+    links: [
+      { title: "Apply Online", url: "https://recruitment.sbi.bank.in/crpd-sco-2025-26-17/apply" },
+      { title: "Download Notification", url: "https://sbi.bank.in/documents/77530/52947104/1_Advertisement+_Wealth+MGMT_02.12.2025.pdf/2788f63d-697c-ee09-2fb0-1c6502d171a7?t=1764654253632" },
+      { title: "Official Website", url: "https://sbi.bank.in/web/careers/current-openings" }
+    ],
+    
+    faqs: [
+      { question: "Is there any written exam for SBI SCO?", answer: "No, selection is based on Shortlisting and Interview only." },
+      { question: "Is this a permanent job?", answer: "No, this is a contractual position for 5 years, renewable further." }
+    ]
+  },
+  {
+    id: 15,
     slug: "sbi-sco-wealth-management-recruitment-2025",
     shortTitle: "SBI SCO Recruitment 2025 (Wealth Management)",
     title: "SBI SCO Recruitment 2025 Apply Online for 996 Wealth Management Posts | CTC up to ₹45 Lakhs | No Exam",
