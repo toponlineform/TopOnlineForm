@@ -75,7 +75,7 @@ export const jobsData = [
 
     links: [
       { title: "Apply Online", url: "https://hprca.hp.gov.in/homepage" },
-      { title: "Download Notification", url: "https://hprca.hp.gov.in/f04ee8e9-32d6-4fdc-8f70-022841732fcc" }, // Replace with direct PDF link if hosted
+      { title: "Download Notification", url: "https://hprca.hp.gov.in/advertisements" }, // Replace with direct PDF link if hosted
       { title: "Official Website", url: "https://hprca.hp.gov.in" }
     ],
     
@@ -176,7 +176,7 @@ export const jobsData = [
 
     links: [
       { title: "Apply Online", url: "https://hprca.hp.gov.in/login" },
-      { title: "Download Notification", url: "https://hprca.hp.gov.in/df32ecca-4515-4e52-8a35-3aafed4da706" }, // Replace with direct PDF link if hosted
+      { title: "Download Notification", url: "https://hprca.hp.gov.in/advertisements" }, // Replace with direct PDF link if hosted
       { title: "Official Website", url: "https://hprca.hp.gov.in" }
     ],
 
