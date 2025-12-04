@@ -1352,6 +1352,7 @@ export const jobsData = [
     ]
   },
 
+   
    // --- 1. RRC Central Railway Sports Quota (ID 1001) ---
   {
     id: 1001,
@@ -1525,8 +1526,7 @@ export const jobsData = [
     vacancyDetails: [
       { postName: "Sub-Inspector (Exe.) in Delhi Police (Male)", totalPost: 142, eligibility: "Bachelor Degree + LMV Driving License" },
       { postName: "Sub-Inspector (Exe.) in Delhi Police (Female)", totalPost: 70, eligibility: "Bachelor Degree" },
-      { postName: "Sub-Inspector (GD) in CAPFs (BSF, CISF, CRPF, ITBP, SSB)", totalPost: 2861, eligibility: "Bachelor Degree in Any Stream" },
-      { postName: "Total Vacancies", totalPost: 3073, eligibility: "-" }
+      { postName: "Sub-Inspector (GD) in CAPFs (BSF, CISF, CRPF, ITBP, SSB)", totalPost: 2861, eligibility: "Bachelor Degree in Any Stream" }
     ],
 
     // Extracted from PDF (Page 15 & 16) - Paper-I Pattern
@@ -1542,8 +1542,7 @@ export const jobsData = [
         { subject: "General Intelligence and Reasoning", questions: 50, marks: 50 },
         { subject: "General Knowledge and General Awareness", questions: 50, marks: 50 },
         { subject: "Quantitative Aptitude", questions: 50, marks: 50 },
-        { subject: "English Comprehension", questions: 50, marks: 50 },
-        { subject: "Total", questions: 200, marks: 200 }
+        { subject: "English Comprehension", questions: 50, marks: 50 }
       ]
     },
 
