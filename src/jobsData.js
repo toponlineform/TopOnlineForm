@@ -95,8 +95,7 @@ export const jobsData = [
             { subject: "General Awareness", questions: 40, marks: 40 },
             { subject: "Quantitative Aptitude", questions: 20, marks: 20 },
             { subject: "Numerical/Analytical/Logical Ability", questions: 20, marks: 20 },
-            { subject: "English Language", questions: 20, marks: 20 },
-            { subject: "Total", questions: 100, marks: "100 (1 Hour)" }
+            { subject: "English Language", questions: 20, marks: 20 }
           ]
         },
         {
