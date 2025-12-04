@@ -1,8 +1,140 @@
 export const jobsData = [
-    // --- 0. IB MTS (NEWEST) ---
+    // --- 13. IB MTS (ID 13) - With FAQs ---
   {
-    id: 14,
+    id: 13,
     slug: "ib-mts-recruitment-2025",
+    shortTitle: "IB MTS Recruitment 2025",
+    title: "IB MTS Recruitment 2025 Apply Online for 362 Posts | 10th Pass Govt Job",
+    shortInfo: "Intelligence Bureau (IB) under Ministry of Home Affairs (MHA) has released the notification for the recruitment of Multi-Tasking Staff (General) [MTS/Gen]. A total of 362 vacancies are available across 37 Subsidiary Intelligence Bureaux (SIBs). This is a General Central Service, Group 'C' (Non-Gazetted, Non-Ministerial) post. Selection will be based on Tier-I (Objective) and Tier-II (Descriptive) exams.",
+    postDate: "04/12/2025",
+    category: "Latest Jobs",
+
+    salary: "Level-1 (₹18,000 - ₹56,900) + 20% Special Security Allowance",
+
+    importantDates: [
+      { label: "Application Begin", value: "22/11/2025" },
+      { label: "Last Date for Apply", value: "14/12/2025 (Upto 11:59 PM)" },
+      { label: "Fee Payment Last Date", value: "14/12/2025 (Online) / 16/12/2025 (SBI Challan)" },
+      { label: "Tier-I Exam Date", value: "To be notified" }
+    ],
+
+    applicationFee: [
+      { category: "Male (UR / OBC / EWS)", amount: "₹650/- (Exam Fee ₹100 + Processing ₹550)" },
+      { category: "SC / ST / Female / PwBD / ESM", amount: "₹550/- (Processing Charges Only)" },
+      { category: "Payment Mode", amount: "Online (Debit/Credit Card/Net Banking/UPI) or SBI Challan" }
+    ],
+
+    ageLimit: "18-25 Years (As on 14/12/2025). Relaxation: SC/ST +5 Yrs, OBC +3 Yrs.",
+
+    vacancyDetails: [
+      { postName: "Multi-Tasking Staff (General)", totalPost: 362, eligibility: "Matriculation (10th Pass) from a recognized Board + Domicile Certificate of the respective State applied for." }
+    ],
+
+    vacancyTableTitle: "SIB Wise Vacancy Details",
+    vacancyColumnName: "SIB / Centre",
+
+    stateWiseVacancy: [
+      { state: "Agartala", total: 6, ur: 2, obc: 0, sc: 1, st: 2, ews: 1 },
+      { state: "Ahmedabad", total: 4, ur: 0, obc: 1, sc: 1, st: 1, ews: 1 },
+      { state: "Aizawl", total: 11, ur: 6, obc: 0, sc: 0, st: 4, ews: 1 },
+      { state: "Amritsar", total: 7, ur: 4, obc: 1, sc: 2, st: 0, ews: 0 },
+      { state: "Bengaluru", total: 4, ur: 1, obc: 1, sc: 2, st: 0, ews: 0 },
+      { state: "Bhopal", total: 11, ur: 2, obc: 3, sc: 2, st: 3, ews: 1 },
+      { state: "Bhubaneswar", total: 7, ur: 3, obc: 0, sc: 3, st: 0, ews: 1 },
+      { state: "Chandigarh", total: 7, ur: 2, obc: 5, sc: 0, st: 0, ews: 0 },
+      { state: "Chennai", total: 10, ur: 4, obc: 1, sc: 5, st: 0, ews: 0 },
+      { state: "Dehradun", total: 8, ur: 6, obc: 1, sc: 1, st: 0, ews: 0 },
+      { state: "Delhi / IB Hqrs", total: 108, ur: 44, obc: 30, sc: 4, st: 17, ews: 13 },
+      { state: "Gangtok", total: 8, ur: 4, obc: 1, sc: 0, st: 2, ews: 1 },
+      { state: "Guwahati", total: 10, ur: 3, obc: 4, sc: 0, st: 2, ews: 1 },
+      { state: "Hyderabad", total: 6, ur: 3, obc: 1, sc: 2, st: 0, ews: 0 },
+      { state: "Imphal", total: 0, ur: 0, obc: 0, sc: 0, st: 0, ews: 0 },
+      { state: "Itanagar", total: 25, ur: 12, obc: 0, sc: 0, st: 11, ews: 2 },
+      { state: "Jaipur", total: 0, ur: 0, obc: 0, sc: 0, st: 0, ews: 0 },
+      { state: "Jammu", total: 7, ur: 5, obc: 1, sc: 1, st: 0, ews: 0 },
+      { state: "Kalimpong", total: 3, ur: 1, obc: 0, sc: 2, st: 0, ews: 0 },
+      { state: "Kohima", total: 6, ur: 2, obc: 0, sc: 0, st: 3, ews: 1 },
+      { state: "Kolkata", total: 1, ur: 0, obc: 1, sc: 0, st: 0, ews: 0 },
+      { state: "Leh", total: 10, ur: 6, obc: 3, sc: 0, st: 0, ews: 1 },
+      { state: "Lucknow", total: 12, ur: 6, obc: 1, sc: 3, st: 0, ews: 2 },
+      { state: "Meerut", total: 2, ur: 0, obc: 0, sc: 1, st: 0, ews: 1 },
+      { state: "Mumbai", total: 22, ur: 10, obc: 4, sc: 4, st: 1, ews: 3 },
+      { state: "Nagpur", total: 2, ur: 0, obc: 1, sc: 0, st: 0, ews: 1 },
+      { state: "Panaji", total: 2, ur: 2, obc: 0, sc: 0, st: 0, ews: 0 },
+      { state: "Patna", total: 6, ur: 4, obc: 0, sc: 1, st: 0, ews: 1 },
+      { state: "Raipur", total: 4, ur: 2, obc: 0, sc: 1, st: 1, ews: 0 },
+      { state: "Ranchi", total: 2, ur: 0, obc: 1, sc: 1, st: 0, ews: 0 },
+      { state: "Shillong", total: 7, ur: 4, obc: 0, sc: 0, st: 2, ews: 1 },
+      { state: "Shimla", total: 5, ur: 1, obc: 2, sc: 2, st: 0, ews: 0 },
+      { state: "Siliguri", total: 6, ur: 3, obc: 1, sc: 2, st: 0, ews: 0 },
+      { state: "Srinagar", total: 14, ur: 6, obc: 4, sc: 1, st: 2, ews: 1 },
+      { state: "Trivandrum", total: 13, ur: 9, obc: 4, sc: 0, st: 0, ews: 0 },
+      { state: "Varanasi", total: 3, ur: 2, obc: 0, sc: 1, st: 0, ews: 0 },
+      { state: "Vijayawada", total: 3, ur: 1, obc: 0, sc: 2, st: 0, ews: 0 }
+    ],
+
+    selectionProcess: [
+      "Stage 1: Tier-I Written Examination (Online Objective Type)",
+      "Stage 2: Tier-II Descriptive Test (English Language)",
+      "Stage 3: Document Verification",
+      "Stage 4: Medical Examination",
+      "Note: Final Merit is based on Tier-I marks (provided Tier-II is qualified)."
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Online Computer Based Test (CBT)",
+        "Negative Marking: 1/4th mark for each wrong answer in Tier-I.",
+        "Tier-II is of Qualifying Nature (Minimum 20/50 marks required).",
+        "Resolution of Tie: Date of Birth (Older candidate placed higher)."
+      ],
+      stages: [
+        {
+          title: "Tier-I Exam Pattern (Objective Type)",
+          data: [
+            { subject: "General Awareness", questions: 40, marks: 40 },
+            { subject: "Quantitative Aptitude", questions: 20, marks: 20 },
+            { subject: "Numerical/Analytical/Logical Ability", questions: 20, marks: 20 },
+            { subject: "English Language", questions: 20, marks: 20 },
+            { subject: "Total", questions: 100, marks: "100 (1 Hour)" }
+          ]
+        },
+        {
+          title: "Tier-II Exam Pattern (Descriptive Type)",
+          data: [
+            { subject: "Descriptive Test on English Language and Comprehension (Essay, Precis, etc.)", questions: "Descriptive", marks: "50 (1 Hour)" }
+          ]
+        }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official website mha.gov.in or ncs.gov.in.",
+      "Register with valid Email and Mobile Number.",
+      "Login and select the SIB/Centre you want to apply for (You can apply for only one SIB).",
+      "Upload Photo (not older than 12 weeks) and Signature.",
+      "Pay the examination/processing fee online via SBI EPAY LITE.",
+      "Submit the form and print the confirmation page for future reference."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://cdn.digialm.com/EForms/configuredHtml/1258/96684/Index.html" }, // Usually redirects to TCS link
+      { title: "Download Notification", url: "https://g03.tcsion.com//per/g03/pub/726/EForms/image/ImageDocUpload/71161/2/8401422694.pdf" }, // Direct link when available
+      { title: "Official Website", url: "https://www.mha.gov.in/" }
+    ],
+
+    // --- NEW: FAQs for SEO ---
+    faqs: [
+      { question: "What is the salary of IB MTS 2025?", answer: "The salary is Level-1 (₹18,000 - ₹56,900) plus a special 20% security allowance, making the gross salary around ₹30,000 - ₹35,000 per month." },
+      { question: "What is the last date to apply for IB MTS Recruitment 2025?", answer: "The last date to apply online is 14th December 2025." },
+      { question: "Is there any negative marking in the IB MTS Exam?", answer: "Yes, there is a negative marking of 1/4 mark for each wrong answer in the Tier-I exam." },
+      { question: "Can I apply for more than one SIB in IB MTS?", answer: "No, a candidate can opt for only one SIB (Subsidiary Intelligence Bureau) and will be considered for vacancies of that SIB only." },
+      { question: "What is the age limit for IB MTS 2025?", answer: "The age limit is 18 to 25 years as on 14.12.2025. Age relaxation applies for SC/ST/OBC candidates." }
+    ]
+  },
+    {
+    id: 14,
+    slug: "ib-mts-recruitment-2025-20",
     shortTitle: "IB MTS Recruitment 2025",
     title: "IB MTS Recruitment 2025 Apply Online for 362 Posts | 10th Pass Govt Job",
     shortInfo: "Intelligence Bureau (IB) under Ministry of Home Affairs (MHA) has released the notification for the recruitment of Multi-Tasking Staff (General) [MTS/Gen]. A total of 362 vacancies are available across 37 Subsidiary Intelligence Bureaux (SIBs) all over India. Candidates with Matriculation (10th Pass) and Domicile Certificate can apply online.",
