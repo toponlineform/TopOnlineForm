@@ -1,6 +1,110 @@
 export const jobsData = [
-    // --- 13. IB MTS (ID 13) - With FAQs ---
+    // --- 15. HPRCA Hamirpur Recruitment (ID 15) ---
   {
+    id: 15,
+    slug: "hprca-hamirpur-recruitment-2025",
+    shortTitle: "HPRCA Hamirpur Recruitment 2025",
+    title: "HPRCA Hamirpur Recruitment 2025 Apply Online for 270 Posts | Special Educator & JOA (Library)",
+    shortInfo: "Himachal Pradesh Rajya Chayan Aayog (HPRCA), Hamirpur has released Advertisement No. 06/2025 for the recruitment of Special Educators, Junior Office Assistant (Library), and Steno Typist on a contract/regular basis. A total of 270 vacancies are available. Candidates with 12th/Diploma/Graduation and HP Domicile/Education can apply online.",
+    postDate: "28/11/2025",
+    category: "Latest Jobs",
+
+    salary: "Level-8 to Level-10 (As per HP Civil Services Pay Rules)",
+
+    importantDates: [
+      { label: "Notification Date", value: "28/11/2025" },
+      { label: "Application Begin", value: "04/12/2025 (10:00 AM)" },
+      { label: "Last Date for Apply", value: "08/01/2026 (Upto 11:59 PM)" },
+      { label: "Correction Window", value: "Will open for 7 days after closing date" },
+      { label: "Exam Date", value: "To be notified" }
+    ],
+
+    // Fee based on PDF Page 9 (Total Fee Column)
+    applicationFee: [
+      { category: "General / Unreserved", amount: "₹800/- (Exam ₹100 + Processing ₹700)" },
+      { category: "Reserved Categories (SC/ST/OBC/EWS of HP)", amount: "As per HPRCA Norms (Check Notification)" },
+      { category: "Payment Mode", amount: "Online (Debit/Credit Card/Net Banking)" }
+    ],
+
+    // Age Limit as on 01/01/2025 (PDF Page 1)
+    ageLimit: "18-45 Years. Relaxation: 5 Years for SC/ST/OBC/PwD of Himachal Pradesh.",
+
+    vacancyDetails: [
+      { postName: "Special Educator (Pre-Primary to Class-V)", totalPost: 108, eligibility: "12th (50%) + D.Ed (Special Edu) OR D.El.Ed + 6 Month Training + TET Pass" },
+      { postName: "Special Educator (Class VI-XII)", totalPost: 83, eligibility: "Graduation (50%) + B.Ed (Special Edu) OR B.Ed + 6 Month Training + TET Pass" },
+      { postName: "Junior Office Assistant (Library)", totalPost: 78, eligibility: "12th + Diploma/Degree in Library Science (Candidate must be from HP Schools/Bonafide Himachali)" },
+      { postName: "Steno Typist (Trainee)", totalPost: 1, eligibility: "12th Pass + Shorthand (60 wpm) + Typing (25 wpm)" }
+    ],
+
+    // Smart Table for Category Wise Vacancy (Calculated from PDF Page 4 breakdown)
+    vacancyTableTitle: "Post & Category Wise Vacancy Details",
+    vacancyColumnName: "Post Name",
+
+    stateWiseVacancy: [
+      { state: "Special Educator (Pre-Primary)", total: 108, ur: 42, ews: 14, obc: 21, sc: 26, st: 5 },
+      { state: "Special Educator (VI-XII)", total: 83, ur: 32, ews: 10, obc: 17, sc: 20, st: 4 },
+      { state: "JOA (Library)", total: 78, ur: 29, ews: 10, obc: 16, sc: 19, st: 4 },
+      { state: "Steno Typist", total: 1, ur: 1, ews: 0, obc: 0, sc: 0, st: 0 }
+    ],
+    // Note: Sub-categories like WFF/BPL are merged into main categories for the table above.
+
+    salaryDetails: [
+      { post: "Special Educator (Pre-Primary)", level: "Level-8 (₹29,700 Initial)" },
+      { post: "Special Educator (VI-XII)", level: "Level-10 (₹38,100 Initial)" },
+      { post: "JOA (Library) / Steno Typist", level: "As per Govt. Policy for Trainee" }
+    ],
+
+    selectionProcess: [
+      "Stage 1: Computer Based Test (CBT) / OMR Test (120 Marks)",
+      "Stage 2: Skill Test / Typing Test (Where applicable)",
+      "Stage 3: Document Verification"
+    ],
+
+    // Detailed Exam Pattern (PDF Page 7)
+    examPattern: {
+      details: [
+        "Mode: CBT or OMR Based",
+        "Total Questions: 120 MCQs",
+        "Total Marks: 120 (1 Mark each)",
+        "Duration: 90 Minutes",
+        "Qualifying Marks: 45% (Gen), 40% (Reserved)"
+      ],
+      // Custom Table using 'stages' feature of our Smart App.jsx
+      stages: [
+        {
+          title: "Written Screening Test Pattern",
+          data: [
+            { subject: "Subject Related (Education/Library Science etc.)", questions: 85, marks: 85 },
+            { subject: "GK (HP), Current Affairs, Science, Logic, English, Hindi", questions: 35, marks: 35 },
+            { subject: "Total", questions: 120, marks: 120 }
+          ]
+        }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official HPRCA website hprca.hp.gov.in.",
+      "Register on the 'One Time Registration (OTR)' portal.",
+      "Login and fill the Online Recruitment Application (ORA).",
+      "Upload scanned Photo, Signature, and Educational Documents.",
+      "Pay the application fee online.",
+      "Submit the form and keep the printout for future reference."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://hprca.hp.gov.in/login" },
+      { title: "Download Notification", url: "blob:https://hprca.hp.gov.in/df32ecca-4515-4e52-8a35-3aafed4da706" }, // Replace with direct PDF link if hosted
+      { title: "Official Website", url: "https://hprca.hp.gov.in" }
+    ],
+
+    faqs: [
+      { question: "What is the last date to apply for HPRCA Recruitment 2025?", answer: "The last date to apply online is 08 January 2026." },
+      { question: "Can candidates from other states apply?", answer: "Yes, but candidates from other states will be treated as General category and must have passed 10th & 12th from Himachal Pradesh (unless they are Bonafide Himachalis)." },
+      { question: "Is there any negative marking in HPRCA exam?", answer: "The notification does not explicitly specify negative marking, but standard HPRCA rules usually apply. Check the admit card instructions." },
+      { question: "What is the syllabus for Special Educator?", answer: "85 questions will be from the subject (Special Education/Pedagogy) and 35 questions from GK of HP, Current Affairs, and General Aptitude." }
+    ]
+  },
+    {
     id: 14,
     slug: "ib-mts-recruitment-2025",
     shortTitle: "IB MTS Recruitment 2025",
