@@ -361,7 +361,6 @@ export const jobsData = [
       "Medical Examination"
     ],
 
-    // Expected Exam Pattern (Based on CEPTAM-10 Standard)
     examPattern: {
       details: [
         "Mode: Computer Based Test (CBT)",
@@ -369,10 +368,16 @@ export const jobsData = [
         "Language: Hindi and English",
         "Negative Marking: No (Usually)"
       ],
-      table: [
-        { subject: "STA-B: Quantitative Ability & General Intelligence", questions: 120, marks: 120 },
-        { subject: "Tech-A: Section A (Quant, Reas, Eng, GA)", questions: 40, marks: 40 },
-        { subject: "Tech-A: Section B (Specific Trade)", questions: 80, marks: 80 }
+      // Tier 1 Table (Screening for STA-B)
+      tier1: [
+        { subject: "Quantitative Ability & General Intelligence", questions: 40, marks: 40 },
+        { subject: "General Awareness & English Language", questions: 40, marks: 40 },
+        { subject: "General Science", questions: 40, marks: 40 }
+      ],
+      // Tier 2 Table (Selection for STA-B / Trade Test for Tech-A)
+      tier2: [
+        { subject: "Test specific to the subject of post (STA-B)", questions: 100, marks: 100 },
+        { subject: "Trade Test (Technician-A)", questions: "Qualifying", marks: "-" }
       ]
     },
 
