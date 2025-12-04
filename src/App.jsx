@@ -94,6 +94,7 @@ function JobDetails() {
   const validThrough = lastDateItem ? convertDate(lastDateItem.value) : null;
   const datePosted = convertDate(job.postDate);
 
+  // 1. Basic Job Schema
   const jobSchema = {
     "@context": "https://schema.org/",
     "@type": "JobPosting",
@@ -105,40 +106,74 @@ function JobDetails() {
     "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressCountry": "IN" } }
   };
 
-  // Helper to render Exam Pattern Table
-  const RenderExamTable = ({ data, title }) => (
-    <>
-      {title && <div className="section-header">{title}</div>}
-      <div style={{overflowX: 'auto'}}>
-        <table style={{minWidth: '100%'}}>
-          <thead>
-            <tr style={{background: '#f2f2f2'}}>
-              <th>Subject</th><th>No. of Questions</th><th>Marks</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((row, i) => (
-              <tr key={i}>
-                <td>{row.subject}</td>
-                <td>{row.questions}</td>
-                <td>{row.marks}</td>
-              </tr>
-            ))}
-            <tr style={{fontWeight: 'bold', background: '#e9e9e9'}}>
-              <td>Total</td>
-              <td>{data.reduce((sum, item) => sum + Number(item.questions), 0)}</td>
-              <td>{data.reduce((sum, item) => sum + Number(item.marks), 0)}</td>
-            </tr>
-          </tbody>
-        </table>
+  // 2. FAQ Schema (Dynamically generated if FAQs exist)
+  let faqSchema = null;
+  if (job.faqs && job.faqs.length > 0) {
+    faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": job.faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+  }
+
+  // Smart Table Renderer
+  const RenderSmartTable = ({ data, title }) => {
+    if (!data || data.length === 0) return null;
+    const isPet = Object.keys(data[0]).includes('activity');
+    return (
+      <div style={{marginBottom: '20px'}}>
+         {title && <div className="section-header" style={{fontSize:'16px', marginTop:'15px'}}>{title}</div>}
+         <div style={{overflowX: 'auto'}}>
+           <table style={{minWidth: '100%'}}>
+             <thead>
+               <tr style={{background: '#f2f2f2'}}>
+                 {isPet ? (
+                   <><th>Activity</th><th>Male</th><th>Female</th></>
+                 ) : (
+                   <><th>Subject</th><th>Questions</th><th>Marks</th></>
+                 )}
+               </tr>
+             </thead>
+             <tbody>
+               {data.map((row, i) => (
+                 <tr key={i}>
+                   {isPet ? (
+                     <><td>{row.activity}</td><td>{row.male}</td><td>{row.female}</td></>
+                   ) : (
+                     <><td>{row.subject}</td><td>{row.questions}</td><td>{row.marks}</td></>
+                   )}
+                 </tr>
+               ))}
+               {!isPet && (
+                  <tr style={{fontWeight: 'bold', background: '#e9e9e9'}}>
+                    <td>Total</td>
+                    <td>{data.reduce((sum, item) => sum + (Number(item.questions) || 0), 0)}</td>
+                    <td>{data.reduce((sum, item) => sum + (Number(item.marks) || 0), 0)}</td>
+                  </tr>
+               )}
+             </tbody>
+           </table>
+         </div>
       </div>
-    </>
-  );
+    );
+  };
 
   return (
     <div className="job-container">
       <SEO title={job.title} description={job.shortInfo} keywords={job.title} url={`https://toponlineform.com/${job.slug}`} />
-      <Helmet><script type="application/ld+json">{JSON.stringify(jobSchema)}</script></Helmet>
+      
+      {/* Inject both Job Schema and FAQ Schema */}
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(jobSchema)}</script>
+        {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
+      </Helmet>
 
       <h1 className="job-title">{job.title}</h1>
       <p style={{marginBottom:'10px', textAlign:'justify'}}><strong>Post Date : </strong> {job.postDate}</p>
@@ -176,197 +211,107 @@ function JobDetails() {
         </>
       )}
 
-      {/* State/Category Wise Vacancy */}
-      {job.stateWiseVacancy && (
-        <>
-          <div className="section-header">{job.vacancyTableTitle || "State Wise Vacancy Details"}</div>
-          <div style={{overflowX: 'auto'}}>
-            <table style={{minWidth: '100%'}}>
-              <thead><tr style={{background: '#f2f2f2'}}><th>{job.vacancyColumnName || "State/UT"}</th><th>Total Seats</th><th>UR</th><th>EWS</th><th>OBC</th><th>SC</th><th>ST</th></tr></thead>
-              <tbody>
-                {job.stateWiseVacancy.map((row, index) => (
-                  <tr key={index}><td style={{fontWeight:'500'}}>{row.state}</td><td style={{fontWeight:'bold', color:'blue'}}>{row.total}</td><td>{row.ur}</td><td>{row.ews}</td><td>{row.obc}</td><td>{row.sc}</td><td>{row.st}</td></tr>
-                ))}
-                <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}><td>TOTAL</td><td style={{color:'red'}}>{job.stateWiseVacancy.reduce((sum, item) => sum + (Number(item.total) || 0), 0)}</td><td colSpan="5" style={{textAlign:'center', fontSize:'12px'}}>Check Notification for PwBD details</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </>
-      )}
-      
-      {/* Zone Wise Tables (RRB Specific) */}
-      {job.zoneWiseGraduate && (
-        <>
-          <div className="section-header">RRB NTPC Graduate Level Vacancy (Zone Wise)</div>
-          <div style={{overflowX: 'auto'}}>
-            <table style={{minWidth: '100%'}}>
-              <thead><tr style={{background: '#f2f2f2'}}><th>RRB Zone</th><th>Total</th><th>UR</th><th>SC</th><th>ST</th><th>OBC</th><th>EWS</th></tr></thead>
-              <tbody>
-                {job.zoneWiseGraduate.map((row, index) => (
-                  <tr key={index}><td style={{fontWeight:'500'}}>{row.state}</td><td style={{fontWeight:'bold', color:'blue'}}>{row.total}</td><td>{row.ur}</td><td>{row.sc}</td><td>{row.st}</td><td>{row.obc}</td><td>{row.ews}</td></tr>
-                ))}
-                <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}><td>TOTAL</td><td style={{color:'red'}}>{job.zoneWiseGraduate.reduce((sum, item) => sum + (Number(item.total) || 0), 0)}</td><td colSpan="5"></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </>
-      )}
-      {job.zoneWiseUG && (
-        <>
-          <div className="section-header">RRB NTPC Undergraduate Level Vacancy (Zone Wise)</div>
-          <div style={{overflowX: 'auto'}}>
-            <table style={{minWidth: '100%'}}>
-              <thead><tr style={{background: '#f2f2f2'}}><th>RRB Zone</th><th>Total</th><th>UR</th><th>SC</th><th>ST</th><th>OBC</th><th>EWS</th></tr></thead>
-              <tbody>
-                {job.zoneWiseUG.map((row, index) => (
-                  <tr key={index}><td style={{fontWeight:'500'}}>{row.state}</td><td style={{fontWeight:'bold', color:'blue'}}>{row.total}</td><td>{row.ur}</td><td>{row.sc}</td><td>{row.st}</td><td>{row.obc}</td><td>{row.ews}</td></tr>
-                ))}
-                <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}><td>TOTAL</td><td style={{color:'red'}}>{job.zoneWiseUG.reduce((sum, item) => sum + (Number(item.total) || 0), 0)}</td><td colSpan="5"></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </>
-      )}
-
-      {/* Salary */}
-      {job.salary && (
-        <>
-          <div className="section-header">Pay Scale / Salary</div>
-          <div style={{textAlign: 'center', border: '1px solid #000', padding: '15px', fontWeight: 'bold', fontSize: '16px', backgroundColor: '#f9f9f9', color: '#008000'}}>{job.salary}</div>
-        </>
-      )}
-
-      {/* Salary Details Table */}
-      {job.salaryDetails && (
-        <>
-          <div className="section-header">Post Wise Salary / Pay Level</div>
-          <div style={{overflowX: 'auto'}}>
-            <table style={{minWidth: '100%'}}>
-              <thead><tr style={{background: '#f2f2f2'}}><th>Post Name</th><th>Pay Level (7th CPC)</th></tr></thead>
-              <tbody>
-                {job.salaryDetails.map((row, index) => (
-                  <tr key={index}><td>{row.post}</td><td style={{fontWeight:'bold', color:'var(--sarkari-blue)'}}>{row.level}</td></tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </>
-      )}
-
-      {/* Selection Process */}
-      {job.selectionProcess && (
-        <>
-          <div className="section-header">Selection Process</div>
-          <ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.selectionProcess.map((item, index) => <li key={index} style={{marginBottom: '5px'}}><strong>Stage {index + 1}:</strong> {item}</li>)}</ol>
-        </>
-      )}
-
-      {/* --- MASTER SMART EXAM PATTERN SECTION --- */}
-      {job.examPattern && (
-        <>
-          {/* Dynamic Header: Show 'Physical Test' only if 'pet' data exists */}
-          <div className="section-header">
-            {job.examPattern.pet ? "Exam Pattern & Physical Test" : "Exam Pattern"}
-          </div>
-          
-          <div style={{padding: '10px'}}>
-            
-            {/* Details List (Mode, Duration, etc.) */}
-            {job.examPattern.details && (
-              <ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>
-                {job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}
-              </ul>
-            )}
-            
-            {/* 1. Single Standard Table */}
-            {job.examPattern.table && <RenderExamTable data={job.examPattern.table} />}
-
-            {/* 2. Tier 1 & Tier 2 Tables (For DRDO, SSC, etc.) */}
-            {job.examPattern.tier1 && <RenderExamTable data={job.examPattern.tier1} title="Tier-I Exam Pattern" />}
-            {job.examPattern.tier2 && <RenderExamTable data={job.examPattern.tier2} title="Tier-II Exam Pattern" />}
-            
-            {/* 3. CBT 1 & CBT 2 Tables (For RRB etc.) */}
-            {job.examPattern.cbt1 && <RenderExamTable data={job.examPattern.cbt1} title={job.examPattern.cbt1Title || "1st Stage Computer Based Test (CBT-1)"} />}
-            {job.examPattern.cbt2 && <RenderExamTable data={job.examPattern.cbt2} title={job.examPattern.cbt2Title || "2nd Stage Computer Based Test (CBT-2)"} />}
-
-            {/* 4. ECGC Specific Tables */}
-            {job.examPattern.generalistObjective && <RenderExamTable data={job.examPattern.generalistObjective} title="1. Generalist - Objective Test" />}
-            {job.examPattern.generalistDescriptive && <RenderExamTable data={job.examPattern.generalistDescriptive} title="2. Generalist - Descriptive Test" />}
-            {job.examPattern.specialistObjective && <RenderExamTable data={job.examPattern.specialistObjective} title="3. Specialist - Objective Test" />}
-            {job.examPattern.specialistDescriptive && <RenderExamTable data={job.examPattern.specialistDescriptive} title="4. Specialist - Descriptive Test" />}
-
-            {/* 5. Physical Efficiency Test (PET) Table */}
-            {job.examPattern.pet && (
+      {/* State/Zone/Circle Wise Vacancy */}
+      {(job.stateWiseVacancy || job.zoneWiseGraduate || job.zoneWiseUG) && (
+         <>
+            {job.stateWiseVacancy && (
               <>
-                <div className="section-header" style={{marginTop: '20px', fontSize: '16px'}}>Physical Efficiency Test (PET)</div>
+                <div className="section-header">{job.vacancyTableTitle || "State Wise Vacancy Details"}</div>
                 <div style={{overflowX: 'auto'}}>
                   <table style={{minWidth: '100%'}}>
-                    <thead>
-                      <tr style={{background: '#f2f2f2'}}>
-                        <th>Activity</th><th>Male Candidates</th><th>Female Candidates</th>
-                      </tr>
-                    </thead>
+                    <thead><tr style={{background: '#f2f2f2'}}><th>{job.vacancyColumnName || "State/UT"}</th><th>Total Seats</th><th>UR</th><th>EWS</th><th>OBC</th><th>SC</th><th>ST</th></tr></thead>
                     <tbody>
-                      {job.examPattern.pet.map((row, i) => (
-                        <tr key={i}>
-                          <td>{row.activity}</td><td>{row.male}</td><td>{row.female}</td>
-                        </tr>
+                      {job.stateWiseVacancy.map((row, index) => (
+                        <tr key={index}><td style={{fontWeight:'500'}}>{row.state}</td><td style={{fontWeight:'bold', color:'blue'}}>{row.total}</td><td>{row.ur}</td><td>{row.ews}</td><td>{row.obc}</td><td>{row.sc}</td><td>{row.st}</td></tr>
                       ))}
+                      <tr style={{background: '#e9e9e9', fontWeight: 'bold'}}><td>TOTAL</td><td style={{color:'red'}}>{job.stateWiseVacancy.reduce((sum, item) => sum + (Number(item.total) || 0), 0)}</td><td colSpan="5" style={{textAlign:'center', fontSize:'12px'}}>Check Notification</td></tr>
                     </tbody>
                   </table>
                 </div>
               </>
             )}
+         </>
+      )}
 
+      {/* RRB Zone Wise Tables */}
+      {job.zoneWiseGraduate && (
+        <>
+          <div className="section-header">RRB NTPC Graduate Level Vacancy (Zone Wise)</div>
+          <div style={{overflowX: 'auto'}}><table style={{minWidth: '100%'}}><thead><tr style={{background: '#f2f2f2'}}><th>RRB Zone</th><th>Total</th><th>UR</th><th>SC</th><th>ST</th><th>OBC</th><th>EWS</th></tr></thead><tbody>{job.zoneWiseGraduate.map((row, index) => (<tr key={index}><td style={{fontWeight:'500'}}>{row.state}</td><td style={{fontWeight:'bold', color:'blue'}}>{row.total}</td><td>{row.ur}</td><td>{row.sc}</td><td>{row.st}</td><td>{row.obc}</td><td>{row.ews}</td></tr>))}<tr style={{background: '#e9e9e9', fontWeight: 'bold'}}><td>TOTAL</td><td style={{color:'red'}}>{job.zoneWiseGraduate.reduce((sum, item) => sum + (Number(item.total) || 0), 0)}</td><td colSpan="5"></td></tr></tbody></table></div>
+        </>
+      )}
+      {job.zoneWiseUG && (
+        <>
+          <div className="section-header">RRB NTPC Undergraduate Level Vacancy (Zone Wise)</div>
+          <div style={{overflowX: 'auto'}}><table style={{minWidth: '100%'}}><thead><tr style={{background: '#f2f2f2'}}><th>RRB Zone</th><th>Total</th><th>UR</th><th>SC</th><th>ST</th><th>OBC</th><th>EWS</th></tr></thead><tbody>{job.zoneWiseUG.map((row, index) => (<tr key={index}><td style={{fontWeight:'500'}}>{row.state}</td><td style={{fontWeight:'bold', color:'blue'}}>{row.total}</td><td>{row.ur}</td><td>{row.sc}</td><td>{row.st}</td><td>{row.obc}</td><td>{row.ews}</td></tr>))}<tr style={{background: '#e9e9e9', fontWeight: 'bold'}}><td>TOTAL</td><td style={{color:'red'}}>{job.zoneWiseUG.reduce((sum, item) => sum + (Number(item.total) || 0), 0)}</td><td colSpan="5"></td></tr></tbody></table></div>
+        </>
+      )}
+
+      {/* Salary */}
+      {job.salary && (<><div className="section-header">Pay Scale / Salary</div><div style={{textAlign: 'center', border: '1px solid #000', padding: '15px', fontWeight: 'bold', fontSize: '16px', backgroundColor: '#f9f9f9', color: '#008000'}}>{job.salary}</div></>)}
+      {job.salaryDetails && (<><div className="section-header">Post Wise Salary / Pay Level</div><div style={{overflowX: 'auto'}}><table style={{minWidth: '100%'}}><thead><tr style={{background: '#f2f2f2'}}><th>Post Name</th><th>Pay Level (7th CPC)</th></tr></thead><tbody>{job.salaryDetails.map((row, index) => (<tr key={index}><td>{row.post}</td><td style={{fontWeight:'bold', color:'var(--sarkari-blue)'}}>{row.level}</td></tr>))}</tbody></table></div></>)}
+
+      {/* Selection Process */}
+      {job.selectionProcess && (<><div className="section-header">Selection Process</div><ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.selectionProcess.map((item, index) => <li key={index} style={{marginBottom: '5px'}}><strong>{item}</strong></li>)}</ol></>)}
+
+      {/* Smart Exam Pattern */}
+      {job.examPattern && (
+        <>
+          <div className="section-header">
+            {(job.examPattern.pet || (job.examPattern.stages && job.examPattern.stages.some(s => s.type === 'pet'))) ? "Exam Pattern & Physical Test" : "Exam Pattern"}
+          </div>
+          <div style={{padding: '10px'}}>
+            {job.examPattern.details && (<ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>{job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}</ul>)}
+            {job.examPattern.table && <RenderSmartTable data={job.examPattern.table} />}
+            {job.examPattern.tier1 && <RenderSmartTable data={job.examPattern.tier1} title="Tier-I Exam Pattern" />}
+            {job.examPattern.tier2 && <RenderSmartTable data={job.examPattern.tier2} title="Tier-II Exam Pattern" />}
+            {job.examPattern.cbt1 && <RenderSmartTable data={job.examPattern.cbt1} title={job.examPattern.cbt1Title || "1st Stage Computer Based Test (CBT-1)"} />}
+            {job.examPattern.cbt2 && <RenderSmartTable data={job.examPattern.cbt2} title={job.examPattern.cbt2Title || "2nd Stage Computer Based Test (CBT-2)"} />}
+            {job.examPattern.generalistObjective && <RenderSmartTable data={job.examPattern.generalistObjective} title="1. Generalist - Objective Test" />}
+            {job.examPattern.generalistDescriptive && <RenderSmartTable data={job.examPattern.generalistDescriptive} title="2. Generalist - Descriptive Test" />}
+            {job.examPattern.specialistObjective && <RenderSmartTable data={job.examPattern.specialistObjective} title="3. Specialist - Objective Test" />}
+            {job.examPattern.specialistDescriptive && <RenderSmartTable data={job.examPattern.specialistDescriptive} title="4. Specialist - Descriptive Test" />}
+            {job.examPattern.pet && <RenderSmartTable data={job.examPattern.pet} title="Physical Efficiency Test (PET)" />}
+            {job.examPattern.stages && job.examPattern.stages.map((stage, index) => (<RenderSmartTable key={index} data={stage.data} title={stage.title} />))}
           </div>
         </>
       )}
 
       {/* How to Apply */}
-      {job.howToApply && (
-        <>
-          <div className="section-header">How to Apply</div>
-          <ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.howToApply.map((item, index) => <li key={index} style={{marginBottom: '10px'}}>{item}</li>)}</ol>
-        </>
-      )}
+      {job.howToApply && (<><div className="section-header">How to Apply</div><ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.howToApply.map((item, index) => <li key={index} style={{marginBottom: '10px'}}>{item}</li>)}</ol></>)}
       
       {/* Important Links */}
       <div className="section-header">Important Links</div>
-      <table className="important-links">
-        <tbody>
+      <table className="important-links"><tbody>
           {job.links && job.links.map((link, index) => (
-            <tr key={index}>
-              <td><strong>{link.title}</strong></td>
-              <td align="center">
-                <a href={link.url} className="click-here" target="_blank" rel="noreferrer">Click Here</a>
-              </td>
-            </tr>
+            <tr key={index}><td><strong>{link.title}</strong></td><td align="center"><a href={link.url} className="click-here" target="_blank" rel="noreferrer">Click Here</a></td></tr>
           ))}
-        </tbody>
-      </table>
+      </tbody></table>
+
+      {/* --- NEW: FAQ SECTION (SEO BOOSTER) --- */}
+      {job.faqs && job.faqs.length > 0 && (
+        <>
+          <div className="section-header">Frequently Asked Questions (FAQs)</div>
+          <div style={{padding: '15px', border: '1px solid #ddd', marginTop: '10px'}}>
+            {job.faqs.map((faq, index) => (
+              <div key={index} style={{marginBottom: '15px'}}>
+                <div style={{fontWeight: 'bold', color: '#d32f2f', marginBottom: '5px'}}>Q.{index + 1}: {faq.question}</div>
+                <div style={{color: '#333'}}>Ans: {faq.answer}</div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
     </div>
   );
 }
 
 function Footer() {
-  return (
-    <div style={{background: '#000', color: 'white', padding: '25px', textAlign: 'center', marginTop: '20px', borderTop: '3px solid #ab1e1e'}}>
-      <div style={{marginBottom: '15px'}}>
-        <Link to="/about" style={{color: 'white', margin: '0 10px', textDecoration:'none'}}>About Us</Link> | <Link to="/contact" style={{color: 'white', margin: '0 10px', textDecoration:'none'}}>Contact Us</Link> | <Link to="/privacy" style={{color: 'white', margin: '0 10px', textDecoration:'none'}}>Privacy Policy</Link>
-      </div>
-      <p style={{fontWeight: 'bold', marginBottom: '10px'}}>Copyright © 2025 TopOnlineForm.com. All Rights Reserved.</p>
-      <div style={{fontSize: '12px', color: '#bbb', maxWidth: '800px', margin: '0 auto', lineHeight: '1.5'}}>
-        <p><strong>Disclaimer:</strong> This is NOT an official government website. We provide information gathered from official notifications and newspapers. While we make every effort to provide accurate information, errors may occur. Please verify details from the official website before applying.</p>
-      </div>
-    </div>
-  );
+  return (<div style={{background: '#000', color: 'white', padding: '25px', textAlign: 'center', marginTop: '20px', borderTop: '3px solid #ab1e1e'}}><div style={{marginBottom: '15px'}}><Link to="/about" style={{color: 'white', margin: '0 10px', textDecoration:'none'}}>About Us</Link> | <Link to="/contact" style={{color: 'white', margin: '0 10px', textDecoration:'none'}}>Contact Us</Link> | <Link to="/privacy" style={{color: 'white', margin: '0 10px', textDecoration:'none'}}>Privacy Policy</Link></div><p style={{fontWeight: 'bold', marginBottom: '10px'}}>Copyright © 2025 TopOnlineForm.com. All Rights Reserved.</p><div style={{fontSize: '12px', color: '#bbb', maxWidth: '800px', margin: '0 auto', lineHeight: '1.5'}}><p><strong>Disclaimer:</strong> This is NOT an official government website. We provide information gathered from official notifications and newspapers. While we make every effort to provide accurate information, errors may occur. Please verify details from the official website before applying.</p></div></div>);
 }
 
 function App() {
-  return (
-    <>
-      <Navbar /><Routes><Route path="/" element={<Home />} /><Route path="/:slug" element={<JobDetails />} /><Route path="/active-jobs" element={<ActiveJobs />} /><Route path="/latest-jobs" element={<CategoryPage category="Latest Jobs" title="All Latest Jobs" />} /><Route path="/results" element={<CategoryPage category="Result" title="All Results" />} /><Route path="/admit-card" element={<CategoryPage category="Admit Card" title="All Admit Cards" />} /><Route path="/answer-key" element={<CategoryPage category="Answer Key" title="All Answer Keys" />} /><Route path="/syllabus" element={<CategoryPage category="Syllabus" title="Syllabus" />} /><Route path="/previous-papers" element={<CategoryPage category="Previous Paper" title="Previous Papers" />} /><Route path="/about" element={<About />} /><Route path="/contact" element={<Contact />} /><Route path="/privacy" element={<Privacy />} /></Routes><Footer />
-    </>
-  );
+  return (<><Navbar /><Routes><Route path="/" element={<Home />} /><Route path="/:slug" element={<JobDetails />} /><Route path="/active-jobs" element={<ActiveJobs />} /><Route path="/latest-jobs" element={<CategoryPage category="Latest Jobs" title="All Latest Jobs" />} /><Route path="/results" element={<CategoryPage category="Result" title="All Results" />} /><Route path="/admit-card" element={<CategoryPage category="Admit Card" title="All Admit Cards" />} /><Route path="/answer-key" element={<CategoryPage category="Answer Key" title="All Answer Keys" />} /><Route path="/syllabus" element={<CategoryPage category="Syllabus" title="Syllabus" />} /><Route path="/previous-papers" element={<CategoryPage category="Previous Paper" title="Previous Papers" />} /><Route path="/about" element={<About />} /><Route path="/contact" element={<Contact />} /><Route path="/privacy" element={<Privacy />} /></Routes><Footer /></>);
 }
 export default App;
