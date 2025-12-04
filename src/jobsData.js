@@ -82,18 +82,11 @@ export const jobsData = [
     ],
 
     examPattern: {
-      details: [
-        "Tier-I: Online Objective Type (100 Questions, 1 Hour)",
-        "Negative Marking: 1/4th mark for each wrong answer in Tier-I.",
-        "Tier-II: Descriptive Test on English Language (50 Marks, 1 Hour, Qualifying Nature - 20 Marks)."
-      ],
-      table: [
-        { subject: "General Awareness", questions: 40, marks: 40 },
-        { subject: "Quantitative Aptitude", questions: 20, marks: 20 },
-        { subject: "Numerical/Analytical/Logical Ability", questions: 20, marks: 20 },
-        { subject: "English Language", questions: 20, marks: 20 },
-        { subject: "Total", questions: 100, marks: 100 }
-      ]
+      details: ["Tier-I: Online Objective (100 Q, 1 Hour)", "Negative Marking: 1/4th", "Tier-II: Descriptive (50 Marks, 1 Hour)"],
+      cbt1Title: "Tier-I Exam Pattern (Objective)",
+      cbt1: [{ subject: "General Awareness", questions: 40, marks: 40 }, { subject: "Quantitative Aptitude", questions: 20, marks: 20 }, { subject: "Numerical/Logical Ability", questions: 20, marks: 20 }, { subject: "English Language", questions: 20, marks: 20 }, { subject: "Total", questions: 100, marks: 100 }],
+      cbt2Title: "Tier-II Exam Pattern (Descriptive)",
+      cbt2: [{ subject: "English Language & Comprehension", questions: "Descriptive", marks: 50 }]
     },
 
     howToApply: [
