@@ -118,87 +118,33 @@ function JobDetails() {
     };
   }
 
-  // --- 1. SMART TABLE RENDERER (PET / Exam) ---
-  const RenderSmartTable = ({ data, title }) => {
-    if (!data || data.length === 0) return null;
-    const isPet = Object.keys(data[0]).includes('activity');
-    
-    const totalQuestions = data.reduce((sum, item) => {
-      const val = parseFloat(item.questions);
-      return !isNaN(val) ? sum + val : sum;
-    }, 0);
-
-    const totalMarks = data.reduce((sum, item) => {
-      const val = parseFloat(item.marks);
-      return !isNaN(val) ? sum + val : sum;
-    }, 0);
-
-    // Only show Total row for Written Exams (not PET)
-    const showTotalRow = !isPet && (totalQuestions > 0 || totalMarks > 0);
-
-    return (
-      <div style={{marginBottom: '20px'}}>
-         {title && <div className="section-header" style={{fontSize:'16px', marginTop:'15px', marginBottom:'0'}}>{title}</div>}
-         <div style={{overflowX: 'auto'}}>
-           <table style={{minWidth: '100%'}}>
-             <thead>
-               <tr style={{background: '#f2f2f2'}}>
-                 {isPet ? (
-                   <><th>Activity</th><th>Male</th><th>Female</th></>
-                 ) : (
-                   <><th>Subject</th><th>Questions</th><th>Marks</th></>
-                 )}
-               </tr>
-             </thead>
-             <tbody>
-               {data.map((row, i) => (
-                 <tr key={i}>
-                   {isPet ? (
-                     <><td>{row.activity}</td><td>{row.male}</td><td>{row.female}</td></>
-                   ) : (
-                     <><td>{row.subject}</td><td>{row.questions}</td><td>{row.marks}</td></>
-                   )}
-                 </tr>
-               ))}
-               {showTotalRow && (
-                  <tr style={{fontWeight: 'bold', background: '#e9e9e9'}}>
-                    <td>Total</td>
-                    <td>{totalQuestions}</td>
-                    <td>{totalMarks}</td>
-                  </tr>
-               )}
-             </tbody>
-           </table>
-         </div>
-      </div>
-    );
-  };
-
-  // --- 2. GENERIC TABLE RENDERER (Vacancy / Salary) ---
+  // --- SUPER SMART TABLE RENDERER (With "Check Notification" Fix) ---
   const RenderTable = ({ data, title, autoTotal = true }) => {
     if (!data || data.length === 0) return null;
     const headers = Object.keys(data[0]);
     
-    // Check if 'Total' column exists in the data
+    // Check for 'Total' column
     const totalKey = headers.find(h => h.toLowerCase().includes('total'));
+    
+    // Check if this is likely a Vacancy Table (has UR/SC/ST columns)
+    const isVacancyTable = headers.some(h => ['ur', 'sc', 'st', 'obc'].includes(h.toLowerCase()));
 
     let showTotal = false;
     let colTotals = {};
+    let totalSum = 0;
 
     if (autoTotal) {
         headers.forEach(header => {
-            // LOGIC UPDATE: 
-            // If a 'Total' column exists, ONLY sum that column. Ignore UR, OBC, SC etc.
-            // If NO 'Total' column (e.g. Salary table), sum all numeric columns.
-            if (totalKey && header !== totalKey) return; 
-
             const sum = data.reduce((acc, row) => {
                 const val = parseFloat(row[header]);
                 return !isNaN(val) ? acc + val : acc;
             }, 0);
+            
+            // Store sum
             if (sum > 0) {
                 colTotals[header] = sum;
                 showTotal = true;
+                if (header === totalKey) totalSum = sum;
             }
         });
     }
@@ -219,17 +165,31 @@ function JobDetails() {
                    {headers.map((h, j) => <td key={j}>{row[h]}</td>)}
                  </tr>
                ))}
-               {/* Footer Row Logic */}
+               
+               {/* --- SMART FOOTER LOGIC --- */}
                {showTotal && (
                   <tr style={{fontWeight: 'bold', background: '#e9e9e9'}}>
-                      {headers.map((h, i) => {
-                          // First column always shows "Total" label
+                      {/* If Vacancy Table with Explicit Total Column: Show Total | Value | Check Notification */}
+                      {isVacancyTable && totalKey ? (
+                        <>
+                          <td>Total</td>
+                          {/* We assume Total is the 2nd column mostly, but let's be safe and find it */}
+                          {headers.slice(1).map((h, i) => {
+                             if (h === totalKey) return <td key={i} style={{color:'red'}}>{colTotals[h]}</td>;
+                             return null; // Don't render other numeric sums
+                          })}
+                          {/* Span remaining columns for the message */}
+                          <td colSpan={headers.length - 2} style={{textAlign:'center', fontSize:'12px', color:'#555'}}>
+                            Check Notification for detailed breakup
+                          </td>
+                        </>
+                      ) : (
+                        // Default Logic (Show all sums, e.g. Exam Pattern / Salary)
+                        headers.map((h, i) => {
                           if (i === 0) return <td key={i} style={{color:'black'}}>Total</td>;
-                          
-                          // Show calculated total ONLY if it exists in colTotals
-                          // Otherwise show empty cell (cleaner look)
-                          return <td key={i} style={{color:'red'}}>{colTotals[h] || ""}</td>;
-                      })}
+                          return <td key={i} style={{color:'red'}}>{colTotals[h] || "-"}</td>;
+                        })
+                      )}
                   </tr>
                )}
              </tbody>
@@ -288,17 +248,19 @@ function JobDetails() {
           <div style={{padding: '10px'}}>
             {job.examPattern.details && (<ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>{job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}</ul>)}
             
-            {job.examPattern.table && <RenderSmartTable data={job.examPattern.table} />}
-            {job.examPattern.tier1 && <RenderSmartTable data={job.examPattern.tier1} title="Tier-I Exam Pattern" />}
-            {job.examPattern.tier2 && <RenderSmartTable data={job.examPattern.tier2} title="Tier-II Exam Pattern" />}
-            {job.examPattern.cbt1 && <RenderSmartTable data={job.examPattern.cbt1} title={job.examPattern.cbt1Title || "CBT-1 Pattern"} />}
-            {job.examPattern.cbt2 && <RenderSmartTable data={job.examPattern.cbt2} title={job.examPattern.cbt2Title || "CBT-2 Pattern"} />}
-            {job.examPattern.generalistObjective && <RenderSmartTable data={job.examPattern.generalistObjective} title="1. Generalist - Objective Test" />}
-            {job.examPattern.generalistDescriptive && <RenderSmartTable data={job.examPattern.generalistDescriptive} title="2. Generalist - Descriptive Test" />}
-            {job.examPattern.specialistObjective && <RenderSmartTable data={job.examPattern.specialistObjective} title="3. Specialist - Objective Test" />}
-            {job.examPattern.specialistDescriptive && <RenderSmartTable data={job.examPattern.specialistDescriptive} title="4. Specialist - Descriptive Test" />}
-            {job.examPattern.pet && <RenderSmartTable data={job.examPattern.pet} title="Physical Efficiency Test (PET)" />}
-            {job.examPattern.stages && job.examPattern.stages.map((stage, index) => (<RenderSmartTable key={index} data={stage.data} title={stage.title} />))}
+            {job.examPattern.table && <RenderTable data={job.examPattern.table} autoTotal={false} />}
+            {job.examPattern.tier1 && <RenderTable data={job.examPattern.tier1} title="Tier-I Exam Pattern" />}
+            {job.examPattern.tier2 && <RenderTable data={job.examPattern.tier2} title="Tier-II Exam Pattern" />}
+            {job.examPattern.cbt1 && <RenderTable data={job.examPattern.cbt1} title={job.examPattern.cbt1Title || "CBT-1 Pattern"} />}
+            {job.examPattern.cbt2 && <RenderTable data={job.examPattern.cbt2} title={job.examPattern.cbt2Title || "CBT-2 Pattern"} />}
+            {job.examPattern.generalistObjective && <RenderTable data={job.examPattern.generalistObjective} title="1. Generalist - Objective Test" />}
+            {job.examPattern.generalistDescriptive && <RenderTable data={job.examPattern.generalistDescriptive} title="2. Generalist - Descriptive Test" />}
+            {job.examPattern.specialistObjective && <RenderTable data={job.examPattern.specialistObjective} title="3. Specialist - Objective Test" />}
+            {job.examPattern.specialistDescriptive && <RenderTable data={job.examPattern.specialistDescriptive} title="4. Specialist - Descriptive Test" />}
+            {job.examPattern.pet && <RenderTable data={job.examPattern.pet} title="Physical Efficiency Test (PET)" autoTotal={false} />}
+
+            {/* Future Proof Stages */}
+            {job.examPattern.stages && job.examPattern.stages.map((stage, index) => (<RenderTable key={index} data={stage.data} title={stage.title} autoTotal={stage.autoTotal !== false} />))}
           </div>
         </>
       )}
