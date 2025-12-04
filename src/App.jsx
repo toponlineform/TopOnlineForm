@@ -34,6 +34,7 @@ function Navbar() {
 // --- Home Component ---
 function Home() {
   const sortNewest = (a, b) => b.id - a.id;
+
   const latestJobs = jobsData.filter(j => j.category === "Latest Jobs").sort(sortNewest).slice(0, 20);
   const admitCards = jobsData.filter(j => j.category === "Admit Card").sort(sortNewest).slice(0, 20);
   const results = jobsData.filter(j => j.category === "Result").sort(sortNewest).slice(0, 20);
@@ -58,9 +59,16 @@ function Home() {
   return (
     <div className="main-grid">
       <SEO title="Sarkari Result 2025" description="Latest Govt Jobs" keywords="Sarkari Result" url="https://toponlineform.com/" />
+      
       <div className="action-cell"><a href="https://whatsapp.com" target="_blank" className="social-btn whatsapp full-width">Join WhatsApp Group</a></div>
       <div className="action-cell"><a href="https://telegram.org" target="_blank" className="social-btn telegram full-width">Join Telegram Channel</a></div>
-      <div className="action-cell"><form className="grid-search-form" onSubmit={(e) => e.preventDefault()}><input type="text" placeholder="Search jobs..." /><button type="submit">Search</button></form></div>
+      <div className="action-cell">
+         <form className="grid-search-form" onSubmit={(e) => e.preventDefault()}>
+            <input type="text" placeholder="Search jobs..." />
+            <button type="submit">Search</button>
+          </form>
+      </div>
+
       <JobBox title="Latest Jobs" jobs={latestJobs} linkTo="/latest-jobs" />
       <JobBox title="Admit Card" jobs={admitCards} linkTo="/admit-card" />
       <JobBox title="Result" jobs={results} linkTo="/results" />
@@ -110,21 +118,80 @@ function JobDetails() {
     };
   }
 
-  // --- UNIVERSAL TABLE RENDERER (Handles both simple and complex tables) ---
+  // --- 1. SMART TABLE RENDERER (PET / Exam) ---
+  const RenderSmartTable = ({ data, title }) => {
+    if (!data || data.length === 0) return null;
+    const isPet = Object.keys(data[0]).includes('activity');
+    
+    const totalQuestions = data.reduce((sum, item) => {
+      const val = parseFloat(item.questions);
+      return !isNaN(val) ? sum + val : sum;
+    }, 0);
+
+    const totalMarks = data.reduce((sum, item) => {
+      const val = parseFloat(item.marks);
+      return !isNaN(val) ? sum + val : sum;
+    }, 0);
+
+    // Only show Total row for Written Exams (not PET)
+    const showTotalRow = !isPet && (totalQuestions > 0 || totalMarks > 0);
+
+    return (
+      <div style={{marginBottom: '20px'}}>
+         {title && <div className="section-header" style={{fontSize:'16px', marginTop:'15px', marginBottom:'0'}}>{title}</div>}
+         <div style={{overflowX: 'auto'}}>
+           <table style={{minWidth: '100%'}}>
+             <thead>
+               <tr style={{background: '#f2f2f2'}}>
+                 {isPet ? (
+                   <><th>Activity</th><th>Male</th><th>Female</th></>
+                 ) : (
+                   <><th>Subject</th><th>Questions</th><th>Marks</th></>
+                 )}
+               </tr>
+             </thead>
+             <tbody>
+               {data.map((row, i) => (
+                 <tr key={i}>
+                   {isPet ? (
+                     <><td>{row.activity}</td><td>{row.male}</td><td>{row.female}</td></>
+                   ) : (
+                     <><td>{row.subject}</td><td>{row.questions}</td><td>{row.marks}</td></>
+                   )}
+                 </tr>
+               ))}
+               {showTotalRow && (
+                  <tr style={{fontWeight: 'bold', background: '#e9e9e9'}}>
+                    <td>Total</td>
+                    <td>{totalQuestions}</td>
+                    <td>{totalMarks}</td>
+                  </tr>
+               )}
+             </tbody>
+           </table>
+         </div>
+      </div>
+    );
+  };
+
+  // --- 2. GENERIC TABLE RENDERER (Vacancy / Salary) ---
   const RenderTable = ({ data, title, autoTotal = true }) => {
     if (!data || data.length === 0) return null;
-    
-    // Dynamically get headers from the first object keys
-    // We filter out 'total' if it's meant to be calculated, but usually we just show what's there.
     const headers = Object.keys(data[0]);
     
-    // Check if this is a numeric table eligible for Auto-Total
+    // Check if 'Total' column exists in the data
+    const totalKey = headers.find(h => h.toLowerCase().includes('total'));
+
     let showTotal = false;
     let colTotals = {};
-    
+
     if (autoTotal) {
-        // Try to sum up columns that look like numbers
         headers.forEach(header => {
+            // LOGIC UPDATE: 
+            // If a 'Total' column exists, ONLY sum that column. Ignore UR, OBC, SC etc.
+            // If NO 'Total' column (e.g. Salary table), sum all numeric columns.
+            if (totalKey && header !== totalKey) return; 
+
             const sum = data.reduce((acc, row) => {
                 const val = parseFloat(row[header]);
                 return !isNaN(val) ? acc + val : acc;
@@ -138,7 +205,7 @@ function JobDetails() {
 
     return (
       <div style={{marginBottom: '20px'}}>
-         {title && <div className="section-header" style={{fontSize:'16px', marginTop:'15px'}}>{title}</div>}
+         {title && <div className="section-header" style={{fontSize:'16px', marginTop:'15px', marginBottom:'0'}}>{title}</div>}
          <div style={{overflowX: 'auto'}}>
            <table style={{minWidth: '100%'}}>
              <thead>
@@ -152,13 +219,17 @@ function JobDetails() {
                    {headers.map((h, j) => <td key={j}>{row[h]}</td>)}
                  </tr>
                ))}
+               {/* Footer Row Logic */}
                {showTotal && (
                   <tr style={{fontWeight: 'bold', background: '#e9e9e9'}}>
-                      {headers.map((h, i) => (
-                          <td key={i} style={i===0?{color:'black'}:{color:'red'}}>
-                              {i === 0 ? "Total" : (colTotals[h] || "-")}
-                          </td>
-                      ))}
+                      {headers.map((h, i) => {
+                          // First column always shows "Total" label
+                          if (i === 0) return <td key={i} style={{color:'black'}}>Total</td>;
+                          
+                          // Show calculated total ONLY if it exists in colTotals
+                          // Otherwise show empty cell (cleaner look)
+                          return <td key={i} style={{color:'red'}}>{colTotals[h] || ""}</td>;
+                      })}
                   </tr>
                )}
              </tbody>
@@ -180,7 +251,6 @@ function JobDetails() {
       <p style={{marginBottom:'10px', textAlign:'justify'}}><strong>Post Date : </strong> {job.postDate}</p>
       <p style={{marginBottom:'20px', textAlign:'justify'}}><strong>Short Info : </strong> {job.shortInfo}</p>
       
-      {/* STANDARD SECTIONS (Always there) */}
       {job.importantDates.length > 0 && (
         <table><tbody><tr><th className="green-header" width="50%">Dates</th><th className="green-header" width="50%">Fees</th></tr>
         <tr><td><ul>{job.importantDates.map((d,i)=><li key={i}><strong>{d.label}:</strong> {d.value}</li>)}</ul></td>
@@ -192,10 +262,10 @@ function JobDetails() {
         {job.ageRelaxation && (<div style={{marginTop: '15px', padding: '0 10px'}}><strong>Age Relaxation:</strong><ul style={{listStyleType: 'disc', marginLeft: '30px', marginTop: '5px'}}>{job.ageRelaxation.map((item, index) => <li key={index} style={{marginBottom: '5px'}}>{item}</li>)}</ul></div>)}</>
       )}
 
-      {/* SMART TABLES (Vacancy, Salary, etc.) */}
-      {job.vacancyDetails && <RenderTable data={job.vacancyDetails} title="Vacancy Details" />}
+      {/* Vacancy Details */}
+      {job.vacancyDetails.length > 0 && <RenderTable data={job.vacancyDetails} title="Vacancy Details" />}
       
-      {/* Unified Vacancy Table (State/Zone/Circle) */}
+      {/* Unified Vacancy Tables */}
       {(job.stateWiseVacancy || job.zoneWiseGraduate || job.zoneWiseUG) && (
          <>
             {job.stateWiseVacancy && <RenderTable data={job.stateWiseVacancy} title={job.vacancyTableTitle || "State Wise Vacancy Details"} />}
@@ -207,10 +277,9 @@ function JobDetails() {
       {job.salary && (<><div className="section-header">Pay Scale / Salary</div><div style={{textAlign: 'center', border: '1px solid #000', padding: '15px', fontWeight: 'bold', fontSize: '16px', backgroundColor: '#f9f9f9', color: '#008000'}}>{job.salary}</div></>)}
       {job.salaryDetails && <RenderTable data={job.salaryDetails} title="Post Wise Salary / Pay Level" autoTotal={false} />}
 
-      {/* Selection Process */}
       {job.selectionProcess && (<><div className="section-header">Selection Process</div><ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.selectionProcess.map((item, index) => <li key={index} style={{marginBottom: '5px'}}><strong>{item.includes(":") ? item : `Step ${index+1}: ${item}`}</strong></li>)}</ol></>)}
 
-      {/* SMART EXAM PATTERN & EXTRA SECTIONS */}
+      {/* Exam Pattern Section */}
       {job.examPattern && (
         <>
           <div className="section-header">
@@ -219,37 +288,35 @@ function JobDetails() {
           <div style={{padding: '10px'}}>
             {job.examPattern.details && (<ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>{job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}</ul>)}
             
-            {/* Backward Compatibility */}
-            {job.examPattern.table && <RenderTable data={job.examPattern.table} autoTotal={false} />}
-            {job.examPattern.cbt1 && <RenderTable data={job.examPattern.cbt1} title={job.examPattern.cbt1Title || "CBT-1 Pattern"} />}
-            {job.examPattern.cbt2 && <RenderTable data={job.examPattern.cbt2} title={job.examPattern.cbt2Title || "CBT-2 Pattern"} />}
-            {job.examPattern.pet && <RenderTable data={job.examPattern.pet} title="Physical Efficiency Test (PET)" autoTotal={false} />}
-
-            {/* Future Proof Stages */}
-            {job.examPattern.stages && job.examPattern.stages.map((stage, index) => (<RenderTable key={index} data={stage.data} title={stage.title} autoTotal={stage.autoTotal !== false} />))}
+            {job.examPattern.table && <RenderSmartTable data={job.examPattern.table} />}
+            {job.examPattern.tier1 && <RenderSmartTable data={job.examPattern.tier1} title="Tier-I Exam Pattern" />}
+            {job.examPattern.tier2 && <RenderSmartTable data={job.examPattern.tier2} title="Tier-II Exam Pattern" />}
+            {job.examPattern.cbt1 && <RenderSmartTable data={job.examPattern.cbt1} title={job.examPattern.cbt1Title || "CBT-1 Pattern"} />}
+            {job.examPattern.cbt2 && <RenderSmartTable data={job.examPattern.cbt2} title={job.examPattern.cbt2Title || "CBT-2 Pattern"} />}
+            {job.examPattern.generalistObjective && <RenderSmartTable data={job.examPattern.generalistObjective} title="1. Generalist - Objective Test" />}
+            {job.examPattern.generalistDescriptive && <RenderSmartTable data={job.examPattern.generalistDescriptive} title="2. Generalist - Descriptive Test" />}
+            {job.examPattern.specialistObjective && <RenderSmartTable data={job.examPattern.specialistObjective} title="3. Specialist - Objective Test" />}
+            {job.examPattern.specialistDescriptive && <RenderSmartTable data={job.examPattern.specialistDescriptive} title="4. Specialist - Descriptive Test" />}
+            {job.examPattern.pet && <RenderSmartTable data={job.examPattern.pet} title="Physical Efficiency Test (PET)" />}
+            {job.examPattern.stages && job.examPattern.stages.map((stage, index) => (<RenderSmartTable key={index} data={stage.data} title={stage.title} />))}
           </div>
         </>
       )}
 
-      {/* --- THE UNIVERSAL EXTRA SECTION RENDERER --- */}
-      {/* This allows adding ANY new section (e.g. Syllabus, Bond, Contract) without changing App.jsx */}
+      {/* Extra Sections */}
       {job.extraSections && job.extraSections.map((section, index) => (
         <div key={index}>
-          <div className="section-header">{section.title}</div>
-          <div style={{padding: '10px'}}>
-            {/* Text Content */}
-            {section.text && <p style={{textAlign: 'justify', whiteSpace: 'pre-line'}}>{section.text}</p>}
-            
-            {/* List Content */}
-            {section.list && (
-              <ul style={{listStyleType: 'disc', marginLeft: '30px'}}>
-                {section.list.map((li, i) => <li key={i} style={{marginBottom: '5px'}}>{li}</li>)}
-              </ul>
-            )}
-
-            {/* Table Content */}
-            {section.tableData && <RenderTable data={section.tableData} autoTotal={false} />}
-          </div>
+          {section.tableData ? (
+             <RenderTable data={section.tableData} title={section.title} autoTotal={false} />
+          ) : (
+             <>
+               <div className="section-header">{section.title}</div>
+               <div style={{padding: '10px'}}>
+                 {section.text && <p style={{textAlign: 'justify', whiteSpace: 'pre-line'}}>{section.text}</p>}
+                 {section.list && (<ul style={{listStyleType: 'disc', marginLeft: '30px'}}>{section.list.map((li, i) => <li key={i} style={{marginBottom: '5px'}}>{li}</li>)}</ul>)}
+               </div>
+             </>
+          )}
         </div>
       ))}
 
@@ -280,9 +347,7 @@ function JobDetails() {
 }
 
 function Footer() {
-  return (<div style={{background: '#000', color: 'white', padding: '25px', textAlign: 'center', marginTop: '20px', borderTop: '3px solid #ab1e1e'}}><div style={{marginBottom: '15px'}}><Link to="/about" style={{color: 'white', margin: '0 10px', textDecoration:'none'}}>About Us</Link> | <Link to="/contact" style={{color: 'white', margin: '0 10px', textDecoration:'none'}}>Contact Us</Link> | <Link to="/privacy" style={{color: 'white', margin: '0 10px', textDecoration:'none'}}>Privacy Policy</Link></div><p style={{fontWeight: 'bold', marginBottom: '10px'}}>Copyright © 2025 TopOnlineForm.com. All Rights Reserved.</p><div style={{fontSize: '12px', color: '#bbb', maxWidth: '800px', margin: '0 auto', lineHeight: '1.5'}}>
-        <p><strong>Disclaimer:</strong> This is NOT an official government website. We provide information gathered from official notifications and newspapers. While we make every effort to provide accurate information, errors may occur. Please verify details from the official website before applying.</p>
-      </div></div>);
+  return (<div style={{background: '#000', color: 'white', padding: '25px', textAlign: 'center', marginTop: '20px', borderTop: '3px solid #ab1e1e'}}><div style={{marginBottom: '15px'}}><Link to="/about" style={{color: 'white', margin: '0 10px', textDecoration:'none'}}>About Us</Link> | <Link to="/contact" style={{color: 'white', margin: '0 10px', textDecoration:'none'}}>Contact Us</Link> | <Link to="/privacy" style={{color: 'white', margin: '0 10px', textDecoration:'none'}}>Privacy Policy</Link></div><p style={{fontWeight: 'bold', marginBottom: '10px'}}>Copyright © 2025 TopOnlineForm.com. All Rights Reserved.</p><div style={{fontSize: '12px', color: '#bbb', maxWidth: '800px', margin: '0 auto', lineHeight: '1.5'}}><p><strong>Disclaimer:</strong> This is NOT an official government website. We provide information gathered from official notifications and newspapers. While we make every effort to provide accurate information, errors may occur. Please verify details from the official website before applying.</p></div></div>);
 }
 
 function App() {
