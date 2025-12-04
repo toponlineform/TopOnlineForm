@@ -35,12 +35,20 @@ function Navbar() {
 function Home() {
   const sortNewest = (a, b) => b.id - a.id;
 
-  const latestJobs = jobsData.filter(j => j.category === "Latest Jobs").sort(sortNewest).slice(0, 20);
-  const admitCards = jobsData.filter(j => j.category === "Admit Card").sort(sortNewest).slice(0, 20);
-  const results = jobsData.filter(j => j.category === "Result").sort(sortNewest).slice(0, 20);
-  const answerKeys = jobsData.filter(j => j.category === "Answer Key").sort(sortNewest).slice(0, 7);
-  const syllabus = jobsData.filter(j => j.category === "Syllabus").sort(sortNewest).slice(0, 7);
-  const previousPapers = jobsData.filter(j => j.category === "Previous Paper").sort(sortNewest).slice(0, 7);
+  // Helper to check category (Handles both String and Array)
+  const hasCategory = (job, cat) => {
+    if (Array.isArray(job.category)) {
+      return job.category.includes(cat);
+    }
+    return job.category === cat;
+  };
+
+  const latestJobs = jobsData.filter(j => hasCategory(j, "Latest Jobs")).sort(sortNewest).slice(0, 20);
+  const admitCards = jobsData.filter(j => hasCategory(j, "Admit Card")).sort(sortNewest).slice(0, 20);
+  const results = jobsData.filter(j => hasCategory(j, "Result")).sort(sortNewest).slice(0, 20);
+  const answerKeys = jobsData.filter(j => hasCategory(j, "Answer Key")).sort(sortNewest).slice(0, 7);
+  const syllabus = jobsData.filter(j => hasCategory(j, "Syllabus")).sort(sortNewest).slice(0, 7);
+  const previousPapers = jobsData.filter(j => hasCategory(j, "Previous Paper")).sort(sortNewest).slice(0, 7);
 
   const JobBox = ({ title, jobs, linkTo }) => (
     <div className="box-column">
@@ -265,10 +273,37 @@ function JobDetails() {
       <p style={{marginBottom:'10px', textAlign:'justify'}}><strong>Post Date : </strong> {job.postDate}</p>
       <p style={{marginBottom:'20px', textAlign:'justify'}}><strong>Short Info : </strong> {job.shortInfo}</p>
       
+      {/* Dates & Fees (Updated: Shows 'Check Notification' instead of No Fee) */}
       {job.importantDates.length > 0 && (
-        <table><tbody><tr><th className="green-header" width="50%">Dates</th><th className="green-header" width="50%">Fees</th></tr>
-        <tr><td><ul>{job.importantDates.map((d,i)=><li key={i}><strong>{d.label}:</strong> {d.value}</li>)}</ul></td>
-        <td><ul>{job.applicationFee.map((f,i)=><li key={i}><strong>{f.category}:</strong> {f.amount}</li>)}</ul></td></tr></tbody></table>
+        <table>
+          <tbody>
+            <tr>
+              <th className="green-header" width="50%">Dates</th>
+              <th className="green-header" width="50%">Fees</th>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  {job.importantDates.map((d, i) => (
+                    <li key={i}><strong>{d.label}:</strong> {d.value}</li>
+                  ))}
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  {/* --- FIX: Check if fees exist, else show 'Check Notification' --- */}
+                  {job.applicationFee && job.applicationFee.length > 0 ? (
+                    job.applicationFee.map((f, i) => (
+                      <li key={i}><strong>{f.category}:</strong> {f.amount}</li>
+                    ))
+                  ) : (
+                    <li>Check Notification</li> 
+                  )}
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       )}
       
       {job.ageLimit && (
