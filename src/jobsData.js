@@ -421,9 +421,6 @@ export const jobsData = [
   // --- 0. SBI SCO Wealth Management (NEWEST - SUPER SMART) ---
   {
     id: 10,
-    // --- 0. SBI SCO Wealth Management (ID 14) - FULLY FIXED ---
-  {
-    id: 14,
     slug: "sbi-sco-wealth-management-recruitment-2025",
     shortTitle: "SBI SCO Recruitment 2025 (Wealth Management)",
     title: "SBI SCO Recruitment 2025 Apply Online for 996 Wealth Management Posts | CTC up to ₹45 Lakhs",
