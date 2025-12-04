@@ -5,8 +5,8 @@ export const jobsData = [
     slug: "ib-mts-recruitment-2025",
     shortTitle: "IB MTS Recruitment 2025",
     title: "IB MTS Recruitment 2025 Apply Online for 362 Posts | 10th Pass Govt Job",
-    shortInfo: "Intelligence Bureau (IB) under Ministry of Home Affairs (MHA) has released the notification for the recruitment of Multi-Tasking Staff (General) [MTS/Gen]. A total of 362 vacancies are available across various Subsidiary Intelligence Bureaux (SIBs). Candidates with Matriculation (10th Pass) and Domicile Certificate can apply online.",
-    postDate: "21/11/2025",
+    shortInfo: "Intelligence Bureau (IB) under Ministry of Home Affairs (MHA) has released the notification for the recruitment of Multi-Tasking Staff (General) [MTS/Gen]. A total of 362 vacancies are available across 37 Subsidiary Intelligence Bureaux (SIBs) all over India. Candidates with Matriculation (10th Pass) and Domicile Certificate can apply online.",
+    postDate: "04/12/2025",
     category: "Latest Jobs",
 
     salary: "Level-1 (₹18,000 - ₹56,900) + 20% Special Security Allowance",
@@ -18,7 +18,6 @@ export const jobsData = [
       { label: "Exam Date", value: "To be notified" }
     ],
 
-    // Fee Structure (Exam Fee Rs 100 + Processing Charges Rs 550) - As per PDF Page 9
     applicationFee: [
       { category: "Male (UR / OBC / EWS)", amount: "₹650/- (100+550)" },
       { category: "SC / ST / Female / PwBD / ESM", amount: "₹550/- (Processing Charges Only)" },
@@ -31,29 +30,48 @@ export const jobsData = [
       { postName: "Multi-Tasking Staff (General)", totalPost: 362, eligibility: "10th Pass (Matriculation) + Domicile Certificate of respective State" }
     ],
 
-    // Smart Table for SIB Wise Vacancy (Data from PDF Page 1)
     vacancyTableTitle: "SIB Wise Vacancy Details",
     vacancyColumnName: "SIB / Centre",
 
+    // Full Data for 37 SIBs (As per Notification Table)
     stateWiseVacancy: [
-      { state: "Delhi / IB Hqrs", total: 108, ur: 44, obc: 30, sc: 17, st: 4, ews: 13 },
-      { state: "Mumbai", total: 22, ur: 10, obc: 4, sc: 4, st: 1, ews: 3 },
-      { state: "Itanagar", total: 25, ur: 12, obc: 0, sc: 11, st: 0, ews: 2 },
-      { state: "Srinagar", total: 14, ur: 6, obc: 4, sc: 2, st: 1, ews: 1 },
-      { state: "Trivandrum", total: 13, ur: 9, obc: 4, sc: 0, st: 0, ews: 0 },
-      { state: "Lucknow", total: 12, ur: 6, obc: 1, sc: 3, st: 0, ews: 2 },
-      { state: "Aizawl", total: 11, ur: 6, obc: 0, sc: 0, st: 4, ews: 1 },
-      { state: "Bhopal", total: 11, ur: 2, obc: 3, sc: 3, st: 2, ews: 1 },
-      { state: "Chennai", total: 10, ur: 4, obc: 1, sc: 0, st: 5, ews: 0 },
-      { state: "Guwahati", total: 10, ur: 3, obc: 4, sc: 0, st: 2, ews: 1 },
-      { state: "Leh", total: 10, ur: 6, obc: 3, sc: 0, st: 1, ews: 0 },
-      { state: "Kolkata", total: 1, ur: 0, obc: 1, sc: 0, st: 0, ews: 0 },
-      { state: "Hyderabad", total: 6, ur: 3, obc: 1, sc: 1, st: 1, ews: 0 },
-      { state: "Bengaluru", total: 4, ur: 1, obc: 1, sc: 0, st: 2, ews: 0 },
-      { state: "Amritsar", total: 7, ur: 4, obc: 1, sc: 0, st: 2, ews: 0 },
-      { state: "Jaipur", total: 0, ur: 0, obc: 0, sc: 0, st: 0, ews: 0 },
-      { state: "Patna", total: 6, ur: 4, obc: 0, sc: 0, st: 1, ews: 1 },
-      { state: "Other SIBs (Check Notification)", total: "Various", ur: "-", obc: "-", sc: "-", st: "-", ews: "-" }
+      { state: "Agartala", ur: 2, obc: 0, sc: 1, st: 2, ews: 1, total: 6 },
+      { state: "Ahmedabad", ur: 0, obc: 1, sc: 1, st: 1, ews: 1, total: 4 },
+      { state: "Aizawl", ur: 6, obc: 0, sc: 0, st: 4, ews: 1, total: 11 },
+      { state: "Amritsar", ur: 4, obc: 1, sc: 2, st: 0, ews: 0, total: 7 },
+      { state: "Bengaluru", ur: 1, obc: 1, sc: 2, st: 0, ews: 0, total: 4 },
+      { state: "Bhopal", ur: 2, obc: 3, sc: 2, st: 3, ews: 1, total: 11 },
+      { state: "Bhubaneswar", ur: 3, obc: 0, sc: 3, st: 0, ews: 1, total: 7 },
+      { state: "Chandigarh", ur: 2, obc: 5, sc: 0, st: 0, ews: 0, total: 7 },
+      { state: "Chennai", ur: 4, obc: 1, sc: 5, st: 0, ews: 0, total: 10 },
+      { state: "Dehradun", ur: 6, obc: 1, sc: 1, st: 0, ews: 0, total: 8 },
+      { state: "Delhi / IB Hqrs", ur: 44, obc: 30, sc: 4, st: 17, ews: 13, total: 108 },
+      { state: "Gangtok", ur: 4, obc: 1, sc: 0, st: 2, ews: 1, total: 8 },
+      { state: "Guwahati", ur: 3, obc: 4, sc: 0, st: 2, ews: 1, total: 10 },
+      { state: "Hyderabad", ur: 3, obc: 1, sc: 2, st: 0, ews: 0, total: 6 },
+      { state: "Imphal", ur: 0, obc: 0, sc: 0, st: 0, ews: 0, total: 0 },
+      { state: "Itanagar", ur: 12, obc: 0, sc: 0, st: 11, ews: 2, total: 25 },
+      { state: "Jaipur", ur: 0, obc: 0, sc: 0, st: 0, ews: 0, total: 0 },
+      { state: "Jammu", ur: 5, obc: 1, sc: 1, st: 0, ews: 0, total: 7 },
+      { state: "Kalimpong", ur: 1, obc: 0, sc: 2, st: 0, ews: 0, total: 3 },
+      { state: "Kohima", ur: 2, obc: 0, sc: 0, st: 3, ews: 1, total: 6 },
+      { state: "Kolkata", ur: 0, obc: 1, sc: 0, st: 0, ews: 0, total: 1 },
+      { state: "Leh", ur: 6, obc: 3, sc: 0, st: 0, ews: 1, total: 10 },
+      { state: "Lucknow", ur: 6, obc: 1, sc: 3, st: 0, ews: 2, total: 12 },
+      { state: "Meerut", ur: 0, obc: 0, sc: 1, st: 0, ews: 1, total: 2 },
+      { state: "Mumbai", ur: 10, obc: 4, sc: 4, st: 1, ews: 3, total: 22 },
+      { state: "Nagpur", ur: 0, obc: 1, sc: 0, st: 0, ews: 1, total: 2 },
+      { state: "Panaji", ur: 2, obc: 0, sc: 0, st: 0, ews: 0, total: 2 },
+      { state: "Patna", ur: 4, obc: 0, sc: 1, st: 0, ews: 1, total: 6 },
+      { state: "Raipur", ur: 2, obc: 0, sc: 1, st: 1, ews: 0, total: 4 },
+      { state: "Ranchi", ur: 0, obc: 1, sc: 1, st: 0, ews: 0, total: 2 },
+      { state: "Shillong", ur: 4, obc: 0, sc: 0, st: 2, ews: 1, total: 7 },
+      { state: "Shimla", ur: 1, obc: 2, sc: 2, st: 0, ews: 0, total: 5 },
+      { state: "Siliguri", ur: 3, obc: 1, sc: 2, st: 0, ews: 0, total: 6 },
+      { state: "Srinagar", ur: 6, obc: 4, sc: 1, st: 2, ews: 1, total: 14 },
+      { state: "Trivandrum", ur: 9, obc: 4, sc: 0, st: 0, ews: 0, total: 13 },
+      { state: "Varanasi", ur: 2, obc: 0, sc: 1, st: 0, ews: 0, total: 3 },
+      { state: "Vijayawada", ur: 1, obc: 0, sc: 2, st: 0, ews: 0, total: 3 }
     ],
 
     selectionProcess: [
@@ -69,7 +87,6 @@ export const jobsData = [
         "Negative Marking: 1/4th mark for each wrong answer in Tier-I.",
         "Tier-II: Descriptive Test on English Language (50 Marks, 1 Hour, Qualifying Nature - 20 Marks)."
       ],
-      // Specific Pattern for Tier-I (PDF Page 3)
       table: [
         { subject: "General Awareness", questions: 40, marks: 40 },
         { subject: "Quantitative Aptitude", questions: 20, marks: 20 },
