@@ -58,8 +58,7 @@ export const jobsData = [
           title: "Written Screening Test Pattern",
           data: [
             { subject: "Subject Field (Digital Forensics/CS/IT)", questions: 140, marks: 70 },
-            { subject: "GK (HP), Current Affairs, Science, Logic, English, Hindi", questions: 60, marks: 30 },
-            { subject: "Total", questions: 200, marks: 100 }
+            { subject: "GK (HP), Current Affairs, Science, Logic, English, Hindi", questions: 60, marks: 30 }
           ]
         }
       ]
@@ -76,7 +75,7 @@ export const jobsData = [
 
     links: [
       { title: "Apply Online", url: "https://hprca.hp.gov.in/homepage" },
-      { title: "Download Notification", url: "blob:https://hprca.hp.gov.in/f04ee8e9-32d6-4fdc-8f70-022841732fcc" }, // Replace with direct PDF link if hosted
+      { title: "Download Notification", url: "https://hprca.hp.gov.in/f04ee8e9-32d6-4fdc-8f70-022841732fcc" }, // Replace with direct PDF link if hosted
       { title: "Official Website", url: "https://hprca.hp.gov.in" }
     ],
     
@@ -177,7 +176,7 @@ export const jobsData = [
 
     links: [
       { title: "Apply Online", url: "https://hprca.hp.gov.in/login" },
-      { title: "Download Notification", url: "blob:https://hprca.hp.gov.in/df32ecca-4515-4e52-8a35-3aafed4da706" }, // Replace with direct PDF link if hosted
+      { title: "Download Notification", url: "https://hprca.hp.gov.in/df32ecca-4515-4e52-8a35-3aafed4da706" }, // Replace with direct PDF link if hosted
       { title: "Official Website", url: "https://hprca.hp.gov.in" }
     ],
 
