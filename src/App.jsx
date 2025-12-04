@@ -43,12 +43,15 @@ function Home() {
     return job.category === cat;
   };
 
-  const latestJobs = jobsData.filter(j => hasCategory(j, "Latest Jobs")).sort(sortNewest).slice(0, 20);
-  const admitCards = jobsData.filter(j => hasCategory(j, "Admit Card")).sort(sortNewest).slice(0, 20);
-  const results = jobsData.filter(j => hasCategory(j, "Result")).sort(sortNewest).slice(0, 20);
-  const answerKeys = jobsData.filter(j => hasCategory(j, "Answer Key")).sort(sortNewest).slice(0, 7);
-  const syllabus = jobsData.filter(j => hasCategory(j, "Syllabus")).sort(sortNewest).slice(0, 7);
-  const previousPapers = jobsData.filter(j => hasCategory(j, "Previous Paper")).sort(sortNewest).slice(0, 7);
+  // Configuration for Home Page Boxes
+  const homeSections = [
+    { title: "Latest Jobs", category: "Latest Jobs", limit: 20, link: "/latest-jobs" },
+    { title: "Admit Card", category: "Admit Card", limit: 20, link: "/admit-card" },
+    { title: "Result", category: "Result", limit: 20, link: "/results" },
+    { title: "Answer Key", category: "Answer Key", limit: 10, link: "/answer-key" },
+    { title: "Syllabus", category: "Syllabus", limit: 10, link: "/syllabus" },
+    { title: "Previous Paper", category: "Previous Paper", limit: 10, link: "/previous-papers" }
+  ];
 
   const JobBox = ({ title, jobs, linkTo }) => (
     <div className="box-column">
@@ -77,12 +80,10 @@ function Home() {
           </form>
       </div>
 
-      <JobBox title="Latest Jobs" jobs={latestJobs} linkTo="/latest-jobs" />
-      <JobBox title="Admit Card" jobs={admitCards} linkTo="/admit-card" />
-      <JobBox title="Result" jobs={results} linkTo="/results" />
-      <JobBox title="Answer Key" jobs={answerKeys} linkTo="/answer-key" />
-      <JobBox title="Syllabus" jobs={syllabus} linkTo="/syllabus" />
-      <JobBox title="Previous Paper" jobs={previousPapers} linkTo="/previous-papers" />
+      {homeSections.map((section, index) => {
+        const jobs = jobsData.filter(j => hasCategory(j, section.category)).sort(sortNewest).slice(0, section.limit);
+        return <JobBox key={index} title={section.title} jobs={jobs} linkTo={section.link} />;
+      })}
     </div>
   );
 }
@@ -126,18 +127,14 @@ function JobDetails() {
     };
   }
 
-  // --- HELPER: FORMAT HEADERS CORRECTLY ---
-  // Converts 'obc' -> 'OBC', 'state' -> 'State', 'postName' -> 'Post Name'
   const formatHeader = (key) => {
     const upperKeys = ["ur", "obc", "sc", "st", "ews", "pwbd", "esm", "gen", "ph"];
     if (upperKeys.includes(key.toLowerCase())) {
       return key.toUpperCase();
     }
-    // CamelCase to Title Case (e.g., postName -> Post Name)
     return key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).trim();
   };
 
-  // --- SMART TABLE RENDERER (PET / Exam) ---
   const RenderSmartTable = ({ data, title }) => {
     if (!data || data.length === 0) return null;
     const isPet = Object.keys(data[0]).includes('activity');
@@ -192,7 +189,6 @@ function JobDetails() {
     );
   };
 
-  // --- GENERIC TABLE RENDERER (Vacancy / Salary) ---
   const RenderTable = ({ data, title, autoTotal = true }) => {
     if (!data || data.length === 0) return null;
     const headers = Object.keys(data[0]);
@@ -223,7 +219,6 @@ function JobDetails() {
            <table style={{minWidth: '100%'}}>
              <thead>
                <tr style={{background: '#f2f2f2'}}>
-                 {/* Using formatHeader to fix Capitalization issues */}
                  {headers.map((h, i) => <th key={i}>{formatHeader(h)}</th>)}
                </tr>
              </thead>
@@ -273,7 +268,7 @@ function JobDetails() {
       <p style={{marginBottom:'10px', textAlign:'justify'}}><strong>Post Date : </strong> {job.postDate}</p>
       <p style={{marginBottom:'20px', textAlign:'justify'}}><strong>Short Info : </strong> {job.shortInfo}</p>
       
-      {/* Dates & Fees (Updated: Shows 'Check Notification' instead of No Fee) */}
+      {/* --- UPDATED DATES & FEES SECTION --- */}
       {job.importantDates.length > 0 && (
         <table>
           <tbody>
@@ -291,13 +286,13 @@ function JobDetails() {
               </td>
               <td>
                 <ul>
-                  {/* --- FIX: Check if fees exist, else show 'Check Notification' --- */}
+                  {/* Safe Check for Fees: If empty, show Check Notification */}
                   {job.applicationFee && job.applicationFee.length > 0 ? (
                     job.applicationFee.map((f, i) => (
                       <li key={i}><strong>{f.category}:</strong> {f.amount}</li>
                     ))
                   ) : (
-                    <li>Check Notification</li> 
+                    <li>Check Notification</li>
                   )}
                 </ul>
               </td>
