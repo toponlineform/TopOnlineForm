@@ -1,4 +1,90 @@
 export const jobsData = [
+   // --- 16. HPRCA Scientific Assistant (ID 16) ---
+  {
+    id: 16,
+    slug: "hprca-scientific-assistant-recruitment-2025",
+    shortTitle: "HPRCA Scientific Assistant Recruitment 2025",
+    title: "HPRCA Scientific Assistant Recruitment 2025 Apply Online for Digital Forensics Post | Advt No. 05/2025",
+    shortInfo: "Himachal Pradesh Rajya Chayan Aayog (HPRCA), Hamirpur has released Advertisement No. 05/2025 for the recruitment of Scientific Assistant (Digital Forensics) on a contract/job trainee basis. Eligible candidates with Master's/Bachelor's in Forensic Science or IT can apply online.",
+    postDate: "27/11/2025",
+    category: "Latest Jobs",
+
+    salary: "As per HP Govt. Norms (Job Trainee)",
+
+    importantDates: [
+      { label: "Application Begin", value: "03/12/2025 (10:00 AM)" },
+      { label: "Last Date for Apply", value: "07/01/2026 (Upto 11:59 PM)" },
+      { label: "Fee Payment Last Date", value: "07/01/2026" },
+      { label: "Exam Date", value: "To be notified" }
+    ],
+
+    // Fee based on PDF Page 6
+    applicationFee: [
+      { category: "All Categories (Exam + Processing)", amount: "₹800/-" },
+      { category: "Correction Fee", amount: "₹100/-" },
+      { category: "Payment Mode", amount: "Online (Credit/Debit Card/Net Banking)" }
+    ],
+
+    ageLimit: "18-45 Years (As on 01/01/2025). Relaxation applicable for HP reserved categories.",
+
+    vacancyDetails: [
+      { postName: "Scientific Assistant (Digital Forensics)", totalPost: 1, eligibility: "Master's in Forensic Science/Digital Forensics/MCA OR B.E./B.Tech (CS/IT/Electronics) + 2 Years Experience" }
+    ],
+
+    vacancyTableTitle: "Post Wise Vacancy Details",
+    vacancyColumnName: "Post Name",
+
+    stateWiseVacancy: [
+      { state: "Scientific Assistant", total: 1, ur: 1, ews: 0, obc: 0, sc: 0, st: 0 }
+    ],
+
+    selectionProcess: [
+      "Stage 1: Computer Based Test (CBT) - 100 Marks (2 Hours)",
+      "Stage 2: Document Verification"
+    ],
+
+    // Exam Pattern (PDF Page 4 - 200 MCQs converted to 100 Marks weightage logic or standard pattern)
+    // Note: PDF says "200 Multiple Choice Question carrying 1/2 mark per question" = 100 Marks.
+    examPattern: {
+      details: [
+        "Mode: Computer Based Test (CBT)",
+        "Total Questions: 200 MCQs",
+        "Total Marks: 100 (0.5 Mark per question)",
+        "Duration: 2 Hours",
+        "Negative Marking: As per HPRCA rules"
+      ],
+      stages: [
+        {
+          title: "Written Screening Test Pattern",
+          data: [
+            { subject: "Subject Field (Digital Forensics/CS/IT)", questions: 140, marks: 70 },
+            { subject: "GK (HP), Current Affairs, Science, Logic, English, Hindi", questions: 60, marks: 30 },
+            { subject: "Total", questions: 200, marks: 100 }
+          ]
+        }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official HPRCA website hprca.hp.gov.in.",
+      "Register on the 'One Time Registration (OTR)' portal.",
+      "Login and select Advertisement No. 05/2025.",
+      "Fill the application form and upload required documents.",
+      "Pay the application fee of ₹800/- online.",
+      "Submit the form and take a printout."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://hprca.hp.gov.in/homepage" },
+      { title: "Download Notification", url: "blob:https://hprca.hp.gov.in/f04ee8e9-32d6-4fdc-8f70-022841732fcc" }, // Replace with direct PDF link if hosted
+      { title: "Official Website", url: "https://hprca.hp.gov.in" }
+    ],
+    
+    faqs: [
+      { question: "What is the qualification for Scientific Assistant?", answer: "M.Sc (Forensic/IT/MCA) OR B.Tech/B.E (CS/IT) with 2 years experience." },
+      { question: "What is the exam pattern?", answer: "The exam will have 200 questions (140 Technical + 60 General) carrying 0.5 marks each." }
+    ]
+  }, 
     // --- 15. HPRCA Hamirpur Recruitment (ID 15) ---
   {
     id: 15,
