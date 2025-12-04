@@ -1,7 +1,7 @@
 export const jobsData = [
     // --- 13. IB MTS (ID 13) - With FAQs ---
   {
-    id: 13,
+    id: 14,
     slug: "ib-mts-recruitment-2025",
     shortTitle: "IB MTS Recruitment 2025",
     title: "IB MTS Recruitment 2025 Apply Online for 362 Posts | 10th Pass Govt Job",
@@ -130,110 +130,6 @@ export const jobsData = [
       { question: "Is there any negative marking in the IB MTS Exam?", answer: "Yes, there is a negative marking of 1/4 mark for each wrong answer in the Tier-I exam." },
       { question: "Can I apply for more than one SIB in IB MTS?", answer: "No, a candidate can opt for only one SIB (Subsidiary Intelligence Bureau) and will be considered for vacancies of that SIB only." },
       { question: "What is the age limit for IB MTS 2025?", answer: "The age limit is 18 to 25 years as on 14.12.2025. Age relaxation applies for SC/ST/OBC candidates." }
-    ]
-  },
-    {
-    id: 14,
-    slug: "ib-mts-recruitment-2025-20",
-    shortTitle: "IB MTS Recruitment 2025",
-    title: "IB MTS Recruitment 2025 Apply Online for 362 Posts | 10th Pass Govt Job",
-    shortInfo: "Intelligence Bureau (IB) under Ministry of Home Affairs (MHA) has released the notification for the recruitment of Multi-Tasking Staff (General) [MTS/Gen]. A total of 362 vacancies are available across 37 Subsidiary Intelligence Bureaux (SIBs) all over India. Candidates with Matriculation (10th Pass) and Domicile Certificate can apply online.",
-    postDate: "04/12/2025",
-    category: "Latest Jobs",
-
-    salary: "Level-1 (₹18,000 - ₹56,900) + 20% Special Security Allowance",
-
-    importantDates: [
-      { label: "Application Begin", value: "22/11/2025" },
-      { label: "Last Date for Apply", value: "14/12/2025 (Upto 11:59 PM)" },
-      { label: "Fee Payment Last Date", value: "14/12/2025 (Online) / 16/12/2025 (SBI Challan)" },
-      { label: "Exam Date", value: "To be notified" }
-    ],
-
-    applicationFee: [
-      { category: "Male (UR / OBC / EWS)", amount: "₹650/- (100+550)" },
-      { category: "SC / ST / Female / PwBD / ESM", amount: "₹550/- (Processing Charges Only)" },
-      { category: "Payment Mode", amount: "Online / SBI Challan" }
-    ],
-
-    ageLimit: "18-25 Years (As on 14/12/2025). Relaxation: SC/ST +5 Yrs, OBC +3 Yrs.",
-
-    vacancyDetails: [
-      { postName: "Multi-Tasking Staff (General)", totalPost: 362, eligibility: "10th Pass (Matriculation) + Domicile Certificate of respective State" }
-    ],
-
-    vacancyTableTitle: "SIB Wise Vacancy Details",
-    vacancyColumnName: "SIB / Centre",
-
-    // Full Data for 37 SIBs (As per Notification Table)
-    stateWiseVacancy: [
-      { state: "Agartala", ur: 2, obc: 0, sc: 1, st: 2, ews: 1, total: 6 },
-      { state: "Ahmedabad", ur: 0, obc: 1, sc: 1, st: 1, ews: 1, total: 4 },
-      { state: "Aizawl", ur: 6, obc: 0, sc: 0, st: 4, ews: 1, total: 11 },
-      { state: "Amritsar", ur: 4, obc: 1, sc: 2, st: 0, ews: 0, total: 7 },
-      { state: "Bengaluru", ur: 1, obc: 1, sc: 2, st: 0, ews: 0, total: 4 },
-      { state: "Bhopal", ur: 2, obc: 3, sc: 2, st: 3, ews: 1, total: 11 },
-      { state: "Bhubaneswar", ur: 3, obc: 0, sc: 3, st: 0, ews: 1, total: 7 },
-      { state: "Chandigarh", ur: 2, obc: 5, sc: 0, st: 0, ews: 0, total: 7 },
-      { state: "Chennai", ur: 4, obc: 1, sc: 5, st: 0, ews: 0, total: 10 },
-      { state: "Dehradun", ur: 6, obc: 1, sc: 1, st: 0, ews: 0, total: 8 },
-      { state: "Delhi / IB Hqrs", ur: 44, obc: 30, sc: 4, st: 17, ews: 13, total: 108 },
-      { state: "Gangtok", ur: 4, obc: 1, sc: 0, st: 2, ews: 1, total: 8 },
-      { state: "Guwahati", ur: 3, obc: 4, sc: 0, st: 2, ews: 1, total: 10 },
-      { state: "Hyderabad", ur: 3, obc: 1, sc: 2, st: 0, ews: 0, total: 6 },
-      { state: "Imphal", ur: 0, obc: 0, sc: 0, st: 0, ews: 0, total: 0 },
-      { state: "Itanagar", ur: 12, obc: 0, sc: 0, st: 11, ews: 2, total: 25 },
-      { state: "Jaipur", ur: 0, obc: 0, sc: 0, st: 0, ews: 0, total: 0 },
-      { state: "Jammu", ur: 5, obc: 1, sc: 1, st: 0, ews: 0, total: 7 },
-      { state: "Kalimpong", ur: 1, obc: 0, sc: 2, st: 0, ews: 0, total: 3 },
-      { state: "Kohima", ur: 2, obc: 0, sc: 0, st: 3, ews: 1, total: 6 },
-      { state: "Kolkata", ur: 0, obc: 1, sc: 0, st: 0, ews: 0, total: 1 },
-      { state: "Leh", ur: 6, obc: 3, sc: 0, st: 0, ews: 1, total: 10 },
-      { state: "Lucknow", ur: 6, obc: 1, sc: 3, st: 0, ews: 2, total: 12 },
-      { state: "Meerut", ur: 0, obc: 0, sc: 1, st: 0, ews: 1, total: 2 },
-      { state: "Mumbai", ur: 10, obc: 4, sc: 4, st: 1, ews: 3, total: 22 },
-      { state: "Nagpur", ur: 0, obc: 1, sc: 0, st: 0, ews: 1, total: 2 },
-      { state: "Panaji", ur: 2, obc: 0, sc: 0, st: 0, ews: 0, total: 2 },
-      { state: "Patna", ur: 4, obc: 0, sc: 1, st: 0, ews: 1, total: 6 },
-      { state: "Raipur", ur: 2, obc: 0, sc: 1, st: 1, ews: 0, total: 4 },
-      { state: "Ranchi", ur: 0, obc: 1, sc: 1, st: 0, ews: 0, total: 2 },
-      { state: "Shillong", ur: 4, obc: 0, sc: 0, st: 2, ews: 1, total: 7 },
-      { state: "Shimla", ur: 1, obc: 2, sc: 2, st: 0, ews: 0, total: 5 },
-      { state: "Siliguri", ur: 3, obc: 1, sc: 2, st: 0, ews: 0, total: 6 },
-      { state: "Srinagar", ur: 6, obc: 4, sc: 1, st: 2, ews: 1, total: 14 },
-      { state: "Trivandrum", ur: 9, obc: 4, sc: 0, st: 0, ews: 0, total: 13 },
-      { state: "Varanasi", ur: 2, obc: 0, sc: 1, st: 0, ews: 0, total: 3 },
-      { state: "Vijayawada", ur: 1, obc: 0, sc: 2, st: 0, ews: 0, total: 3 }
-    ],
-
-    selectionProcess: [
-      "Tier-I: Online Exam (Objective MCQ) - 100 Marks",
-      "Tier-II: Descriptive Test (English) - 50 Marks",
-      "Document Verification",
-      "Medical Examination"
-    ],
-
-    examPattern: {
-      details: ["Tier-I: Online Objective (100 Q, 1 Hour)", "Negative Marking: 1/4th", "Tier-II: Descriptive (50 Marks, 1 Hour)"],
-      cbt1Title: "Tier-I Exam Pattern (Objective)",
-      cbt1: [{ subject: "General Awareness", questions: 40, marks: 40 }, { subject: "Quantitative Aptitude", questions: 20, marks: 20 }, { subject: "Numerical/Logical Ability", questions: 20, marks: 20 }, { subject: "English Language", questions: 20, marks: 20 }, { subject: "Total", questions: 100, marks: 100 }],
-      cbt2Title: "Tier-II Exam Pattern (Descriptive)",
-      cbt2: [{ subject: "English Language & Comprehension", questions: "Descriptive", marks: 50 }]
-    },
-
-    howToApply: [
-      "Visit the official website mha.gov.in or ncs.gov.in.",
-      "Register with valid Email and Mobile Number.",
-      "Login and select the SIB/Centre you want to apply for (You can apply for only one SIB).",
-      "Upload Photo and Signature as per instructions.",
-      "Pay the examination/processing fee online.",
-      "Submit the form and print the confirmation page."
-    ],
-
-    links: [
-      { title: "Apply Online", url: "https://cdn.digialm.com/EForms/configuredHtml/1258/96684/Index.html" }, // Usually redirects to TCS link
-      { title: "Download Notification", url: "https://g03.tcsion.com//per/g03/pub/726/EForms/image/ImageDocUpload/71161/2/8401422694.pdf" }, // Direct link when available
-      { title: "Official Website", url: "https://www.mha.gov.in/" }
     ]
   },
   
