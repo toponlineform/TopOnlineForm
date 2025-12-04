@@ -425,7 +425,7 @@ export const jobsData = [
     shortTitle: "SBI SCO Recruitment 2025 (Wealth Management)",
     title: "SBI SCO Recruitment 2025 Apply Online for 996 Wealth Management Posts | CTC up to ₹45 Lakhs",
     shortInfo: "State Bank of India (SBI) has released the official notification (CRPD/SCO/2025-26/17) for the recruitment of Specialist Cadre Officers (SCO) on a contract basis. A total of 996 vacancies are available for VP Wealth, AVP Wealth, and Customer Relationship Executive across 17 Circles. Selection will be based on Shortlisting and Interview only (No Written Exam).",
-    postDate: "04/12/2025",
+    postDate: "02/12/2025",
     category: "Latest Jobs",
 
     salary: "₹6.20 Lakhs - ₹44.70 Lakhs CTC per annum (Contractual)",
@@ -530,88 +530,6 @@ export const jobsData = [
       { question: "Is there any written exam for SBI SCO?", answer: "No, selection is based on Shortlisting and Interview only." },
       { question: "Is this a permanent job?", answer: "No, this is a contractual position for 5 years, renewable further." },
       { question: "Can I apply for multiple circles?", answer: "You can give 3 preferences for circles, but you will be posted in one circle." }
-    ]
-  },
-  {
-    id: 15,
-    slug: "sbi-sco-wealth-management-recruitment-2025-20",
-    shortTitle: "SBI SCO Recruitment 2025 (Wealth Management)",
-    title: "SBI SCO Recruitment 2025 Apply Online for 996 Wealth Management Posts | CTC up to ₹45 Lakhs | No Exam",
-    shortInfo: "State Bank of India (SBI) has released the notification (CRPD/SCO/2025-26/17) for the recruitment of Specialist Cadre Officers (SCO) on a contract basis. A total of 996 vacancies are available for VP Wealth, AVP Wealth, and Customer Relationship Executive. Selection will be based on Shortlisting and Interview.",
-    postDate: "02/12/2025",
-    category: "Latest Jobs",
-
-    salary: "₹6.20 Lakhs - ₹44.70 Lakhs CTC per annum (Contractual)",
-
-    importantDates: [
-      { label: "Application Begin", value: "02/12/2025" },
-      { label: "Last Date for Apply", value: "23/12/2025" },
-      { label: "Fee Payment Last Date", value: "23/12/2025" },
-      { label: "Interview Date", value: "To be notified" }
-    ],
-
-    applicationFee: [
-      { category: "General / OBC / EWS", amount: "₹750/-" },
-      { category: "SC / ST / PwBD", amount: "₹0 (Nil)" },
-      { category: "Payment Mode", amount: "Online (Debit/Credit Card/Net Banking)" }
-    ],
-
-    // Age Limit as on 01/05/2025 (Page 2 of PDF)
-    ageLimit: "VP Wealth: 26-42 Yrs | AVP Wealth: 23-35 Yrs | Executive: 20-35 Yrs (Age Relaxation: SC/ST+5, OBC+3, PwBD+10)",
-
-    vacancyDetails: [
-      { postName: "VP Wealth (Senior Relationship Manager)", totalPost: 506, eligibility: "Graduation + 6 Years Exp. in Wealth Management" },
-      { postName: "AVP Wealth (Relationship Manager)", totalPost: 206, eligibility: "Graduation + 3 Years Exp. in Wealth Management" },
-      { postName: "Customer Relationship Executive (CRE)", totalPost: 284, eligibility: "Graduation + Valid 2-Wheeler Driving License" }
-    ],
-
-    // Smart Table for Category Wise Breakup (Data from Page 2 of PDF)
-    vacancyTableTitle: "Post & Category Wise Vacancy Details",
-    vacancyColumnName: "Post Name",
-
-    stateWiseVacancy: [
-      { state: "VP Wealth (SRM)", ur: 188, ews: 46, obc: 119, sc: 77, st: 34, total: 506 },
-      { state: "AVP Wealth (RM)", ur: 82, ews: 20, obc: 52, sc: 33, st: 15, total: 206 },
-      { state: "Customer Relationship Executive", ur: 115, ews: 28, obc: 73, sc: 47, st: 21, total: 284 }
-    ],
-    // Note: Backlog vacancies are included in the total count as per notification logic.
-
-    salaryDetails: [
-      { post: "VP Wealth (SRM)", level: "CTC Range: ₹30.00L - ₹44.70L per annum" },
-      { post: "AVP Wealth (RM)", level: "CTC Range: ₹20.00L - ₹30.20L per annum" },
-      { post: "Customer Relationship Executive", level: "CTC Range: ₹4.00L - ₹6.20L per annum" }
-    ],
-
-    selectionProcess: [
-      "Shortlisting (Based on Qualification & Experience)",
-      "Personal Interview (100 Marks)",
-      "CTC Negotiation"
-    ],
-
-    // No Written Exam Pattern
-    examPattern: {
-      details: [
-        "Mode: Shortlisting & Interview",
-        "No Written Examination.",
-        "Merit List will be prepared based on Interview scores only.",
-        "Contract Period: 5 Years (Renewable for another 4 years)."
-      ]
-    },
-
-    howToApply: [
-      "Visit the official SBI Careers website (sbi.co.in/web/careers).",
-      "Click on 'Join SBI' -> 'Current Openings'.",
-      "Select Advertisement No: CRPD/SCO/2025-26/17.",
-      "Register and fill in the application form.",
-      "Upload Resume, ID Proof, Age Proof, Educational & Experience Certificates.",
-      "Pay the application fee (if applicable).",
-      "Submit the form and print the system generated application."
-    ],
-
-    links: [
-      { title: "Apply Online", url: "https://recruitment.sbi.bank.in/crpd-sco-2025-26-17/apply" },
-      { title: "Download Notification", url: "https://sbi.bank.in/documents/77530/52947104/1_Advertisement+_Wealth+MGMT_02.12.2025.pdf/2788f63d-697c-ee09-2fb0-1c6502d171a7?t=1764654253632" },
-      { title: "Official Website", url: "https://sbi.bank.in/web/careers/current-openings" }
     ]
   },
   
