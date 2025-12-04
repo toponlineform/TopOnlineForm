@@ -176,7 +176,7 @@ function JobDetails() {
         </>
       )}
 
-      {/* State Wise Vacancy */}
+      {/* State/Category Wise Vacancy */}
       {job.stateWiseVacancy && (
         <>
           <div className="section-header">{job.vacancyTableTitle || "State Wise Vacancy Details"}</div>
@@ -194,7 +194,7 @@ function JobDetails() {
         </>
       )}
       
-      {/* RRB Zone Wise Graduate */}
+      {/* Zone Wise Tables (RRB Specific) */}
       {job.zoneWiseGraduate && (
         <>
           <div className="section-header">RRB NTPC Graduate Level Vacancy (Zone Wise)</div>
@@ -211,8 +211,6 @@ function JobDetails() {
           </div>
         </>
       )}
-
-      {/* RRB Zone Wise Undergraduate */}
       {job.zoneWiseUG && (
         <>
           <div className="section-header">RRB NTPC Undergraduate Level Vacancy (Zone Wise)</div>
@@ -263,33 +261,41 @@ function JobDetails() {
         </>
       )}
 
-      {/* Exam Pattern (UPDATED: Now supports CBT 1/2, Dynamic Tables & PET) */}
+      {/* --- MASTER SMART EXAM PATTERN SECTION --- */}
       {job.examPattern && (
         <>
-          <div className="section-header">Exam Pattern & Physical Test</div>
+          {/* Dynamic Header: Show 'Physical Test' only if 'pet' data exists */}
+          <div className="section-header">
+            {job.examPattern.pet ? "Exam Pattern & Physical Test" : "Exam Pattern"}
+          </div>
+          
           <div style={{padding: '10px'}}>
             
-            {/* Details List */}
+            {/* Details List (Mode, Duration, etc.) */}
             {job.examPattern.details && (
               <ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>
                 {job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}
               </ul>
             )}
             
-            {/* Standard Table */}
+            {/* 1. Single Standard Table */}
             {job.examPattern.table && <RenderExamTable data={job.examPattern.table} />}
-            
-            {/* RRB NTPC Specific */}
-            {job.examPattern.cbt1 && <RenderExamTable data={job.examPattern.cbt1} title="1st Stage Computer Based Test (CBT-1)" />}
-            {job.examPattern.cbt2 && <RenderExamTable data={job.examPattern.cbt2} title="2nd Stage Computer Based Test (CBT-2)" />}
 
-            {/* ECGC Specific */}
+            {/* 2. Tier 1 & Tier 2 Tables (For DRDO, SSC, etc.) */}
+            {job.examPattern.tier1 && <RenderExamTable data={job.examPattern.tier1} title="Tier-I Exam Pattern" />}
+            {job.examPattern.tier2 && <RenderExamTable data={job.examPattern.tier2} title="Tier-II Exam Pattern" />}
+            
+            {/* 3. CBT 1 & CBT 2 Tables (For RRB etc.) */}
+            {job.examPattern.cbt1 && <RenderExamTable data={job.examPattern.cbt1} title={job.examPattern.cbt1Title || "1st Stage Computer Based Test (CBT-1)"} />}
+            {job.examPattern.cbt2 && <RenderExamTable data={job.examPattern.cbt2} title={job.examPattern.cbt2Title || "2nd Stage Computer Based Test (CBT-2)"} />}
+
+            {/* 4. ECGC Specific Tables */}
             {job.examPattern.generalistObjective && <RenderExamTable data={job.examPattern.generalistObjective} title="1. Generalist - Objective Test" />}
             {job.examPattern.generalistDescriptive && <RenderExamTable data={job.examPattern.generalistDescriptive} title="2. Generalist - Descriptive Test" />}
             {job.examPattern.specialistObjective && <RenderExamTable data={job.examPattern.specialistObjective} title="3. Specialist - Objective Test" />}
             {job.examPattern.specialistDescriptive && <RenderExamTable data={job.examPattern.specialistDescriptive} title="4. Specialist - Descriptive Test" />}
 
-            {/* --- NEW: Physical Efficiency Test (PET) Table --- */}
+            {/* 5. Physical Efficiency Test (PET) Table */}
             {job.examPattern.pet && (
               <>
                 <div className="section-header" style={{marginTop: '20px', fontSize: '16px'}}>Physical Efficiency Test (PET)</div>
@@ -297,17 +303,13 @@ function JobDetails() {
                   <table style={{minWidth: '100%'}}>
                     <thead>
                       <tr style={{background: '#f2f2f2'}}>
-                        <th>Activity</th>
-                        <th>Male Candidates</th>
-                        <th>Female Candidates</th>
+                        <th>Activity</th><th>Male Candidates</th><th>Female Candidates</th>
                       </tr>
                     </thead>
                     <tbody>
                       {job.examPattern.pet.map((row, i) => (
                         <tr key={i}>
-                          <td>{row.activity}</td>
-                          <td>{row.male}</td>
-                          <td>{row.female}</td>
+                          <td>{row.activity}</td><td>{row.male}</td><td>{row.female}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -315,6 +317,7 @@ function JobDetails() {
                 </div>
               </>
             )}
+
           </div>
         </>
       )}
@@ -327,11 +330,10 @@ function JobDetails() {
         </>
       )}
       
-      {/* --- DYNAMIC LINKS SECTION (UPDATED) --- */}
+      {/* Important Links */}
       <div className="section-header">Important Links</div>
       <table className="important-links">
         <tbody>
-          {/* Ab yeh jobsData.js se links lega, hardcoded nahi hai */}
           {job.links && job.links.map((link, index) => (
             <tr key={index}>
               <td><strong>{link.title}</strong></td>
