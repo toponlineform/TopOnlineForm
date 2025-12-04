@@ -12,7 +12,6 @@ export const jobsData = [
     salary: "Level-8 to Level-10 (As per HP Civil Services Pay Rules)",
 
     importantDates: [
-      { label: "Notification Date", value: "28/11/2025" },
       { label: "Application Begin", value: "04/12/2025 (10:00 AM)" },
       { label: "Last Date for Apply", value: "08/01/2026 (Upto 11:59 PM)" },
       { label: "Correction Window", value: "Will open for 7 days after closing date" },
@@ -75,8 +74,7 @@ export const jobsData = [
           title: "Written Screening Test Pattern",
           data: [
             { subject: "Subject Related (Education/Library Science etc.)", questions: 85, marks: 85 },
-            { subject: "GK (HP), Current Affairs, Science, Logic, English, Hindi", questions: 35, marks: 35 },
-            { subject: "Total", questions: 120, marks: 120 }
+            { subject: "GK (HP), Current Affairs, Science, Logic, English, Hindi", questions: 35, marks: 35 }
           ]
         }
       ]
