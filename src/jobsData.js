@@ -2,100 +2,6 @@ export const jobsData = [
     
   // --- ITBP Deputy Judge Attorney General (ID 12) ---
   {
-    id: 14,
-    slug: "itbp-deputy-judge-attorney-general-recruitment-2025-20",
-    shortTitle: "ITBP Deputy Judge Attorney General Recruitment 2025",
-    title: "ITBP Deputy Judge Attorney General Recruitment 2025 Apply Online for 07 Posts | Deputy Commandant (Law)",
-    shortInfo: "Indo-Tibetan Border Police Force (ITBP) has released the notification for the recruitment of Deputy Judge Attorney General (Deputy Commandant) in Group 'A' Gazetted cadre. Eligible Law Graduates with experience can apply online. Selection will be based on Physical Standards, Written Test, and Interview.",
-    postDate: "03/12/2025",
-    category: "Latest Jobs",
-
-    salary: "Level-11 (₹67,700 - ₹2,08,700) + Allowances",
-
-    importantDates: [
-      { label: "Application Begin", value: "02/12/2025" },
-      { label: "Last Date for Apply", value: "31/12/2025 (Upto 11:59 PM)" },
-      { label: "Fee Payment Last Date", value: "31/12/2025" },
-      { label: "Exam Date", value: "To be notified" }
-    ],
-
-    applicationFee: [
-      { category: "General / OBC / EWS", amount: "₹400/-" },
-      { category: "SC / ST / Female / Ex-SM", amount: "₹0 (Nil)" },
-      { category: "Payment Mode", amount: "Online (Net Banking/Cards/UPI)" }
-    ],
-
-    ageLimit: "Max 40 Years (As on 31/12/2025). Relaxation: SC/ST+5, OBC+3, Govt Servants+5 Years.",
-
-    vacancyDetails: [
-      { postName: "Deputy Judge Attorney General (Dy Commandant)", totalPost: 7, eligibility: "Bachelor Degree in Law + 7 Yrs Exp. OR Master Degree in Law + 5 Yrs Exp. (Must be registered Advocate)" }
-    ],
-
-    // --- FIX: Table Structure Changed to Post Wise ---
-    vacancyTableTitle: "Vacancy Distribution (Category Wise)",
-    vacancyColumnName: "Post Name",
-
-    stateWiseVacancy: [
-      { state: "Dy. Judge Attorney General", total: 7, ur: 5, sc: 1, st: 0, obc: 1, ews: 0 }
-    ],
-    // Ab ye table Post Name dikhayega aur aage category ka breakup.
-
-    salaryDetails: [
-      { post: "Deputy Commandant (JAG)", level: "Pay Matrix Level-11 (7th CPC)" }
-    ],
-
-    selectionProcess: [
-      "Physical Standard Test (PST) & Biometric",
-      "Physical Efficiency Test (PET) - Qualifying",
-      "Written Examination (Paper I & II)",
-      "Documentation & Interview (50 Marks)",
-      "Medical Examination (DME/RME)"
-    ],
-
-    // --- EXAM PATTERN + PET ADDED ---
-    examPattern: {
-      details: [
-        "Paper-I: Objective Type (2 Hours, 100 Marks)",
-        "Paper-II: Professional Subject (3 Hours, 100 Marks - MCQ + Subjective)",
-        "Negative Marking: 1/4th marks deducted for wrong answers (MCQ).",
-        "PST: Height - 165cm (Male) / 157cm (Female)."
-      ],
-      cbt1: [
-        { subject: "General Intelligence & Reasoning", questions: 25, marks: 25 },
-        { subject: "General Awareness", questions: 25, marks: 25 },
-        { subject: "General English", questions: 50, marks: 50 }
-      ],
-      cbt2: [
-        { subject: "Professional Subject (Objective)", questions: 60, marks: 60 },
-        { subject: "Professional Subject (Subjective)", questions: 20, marks: 40 }
-      ],
-      
-      // --- NEW: PET Table Data ---
-      pet: [
-        { activity: "Race 100 Meters", male: "Within 28 Seconds", female: "Within 30 Seconds" },
-        { activity: "Race 800 Meters", male: "Within 6 Minutes", female: "Within 7 Minutes" },
-        { activity: "Shot Put (7.26 Kg)", male: "4.5 Meters (3 Chances)", female: "Not Applicable" },
-        { activity: "Long Jump", male: "Not Mentioned", female: "Not Mentioned" } // Removed if not in PDF
-      ]
-    },
-
-    howToApply: [
-      "Visit the official ITBP recruitment website recruitment.itbpolice.nic.in.",
-      "Register and fill the online application form.",
-      "Upload required documents (Law Degree, Experience Certificate, Photo, Signature).",
-      "Pay the application fee online (if applicable).",
-      "Submit the form and take a printout.",
-      "Note: Prepare for PET as per the physical standards mentioned."
-    ],
-
-    links: [
-      { title: "Apply Online", url: "https://recruitment.itbpolice.nic.in/" },
-      { title: "Download Notification", url: "https://recruitment.itbpolice.nic.in/" },
-      { title: "Official Website", url: "https://itbpolice.nic.in/" }
-    ]
-  },
-    // --- ITBP Deputy Judge Attorney General (ID 12) ---
-  {
     id: 13,
     slug: "itbp-deputy-judge-attorney-general-recruitment-2025",
     shortTitle: "ITBP Deputy Judge Attorney General Recruitment 2025",
@@ -130,7 +36,7 @@ export const jobsData = [
     vacancyColumnName: "Post Name",
 
     stateWiseVacancy: [
-      { state: "Dy. Judge Attorney General", total: 7, ur: 5, sc: 1, st: 0, obc: 1, ews: 0 }
+      { state: "Dy. Judge Attorney General", total: 7, ur: 5, sc: 0, st: 1, obc: 1, ews: 0 }
     ],
     // Ab ye table Post Name dikhayega aur aage category ka breakup.
 
@@ -168,8 +74,7 @@ export const jobsData = [
       pet: [
         { activity: "Race 100 Meters", male: "Within 28 Seconds", female: "Within 30 Seconds" },
         { activity: "Race 800 Meters", male: "Within 6 Minutes", female: "Within 7 Minutes" },
-        { activity: "Shot Put (7.26 Kg)", male: "4.5 Meters (3 Chances)", female: "Not Applicable" },
-        { activity: "Long Jump", male: "Not Mentioned", female: "Not Mentioned" } // Removed if not in PDF
+        { activity: "Shot Put (7.26 Kg)", male: "4.5 Meters (3 Chances)", female: "Not Applicable" }
       ]
     },
 
@@ -183,8 +88,8 @@ export const jobsData = [
     ],
 
     links: [
-      { title: "Apply Online", url: "https://recruitment.itbpolice.nic.in/rect/index.php" },
-      { title: "Download Notification", url: "https://recruitment.itbpolice.nic.in/rect/noticeboards/downloadpdf/344.pdf" }, // Replace with direct PDF link if available
+      { title: "Apply Online", url: "https://recruitment.itbpolice.nic.in/" },
+      { title: "Download Notification", url: "https://recruitment.itbpolice.nic.in/" },
       { title: "Official Website", url: "https://itbpolice.nic.in/" }
     ]
   },
