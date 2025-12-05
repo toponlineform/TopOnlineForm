@@ -4,6 +4,133 @@ export const jobsData = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+  // --- 19. WBSEDCL Recruitment 2025 (Updated & Corrected) ---
+  {
+    id: 20,
+    slug: "wbsedcl-recruitment-2025-am-je",
+    shortTitle: "WBSEDCL Recruitment 2025",
+    title: "WBSEDCL Recruitment 2025 Apply Online for 447 Posts | Assistant Manager & Junior Engineer",
+    shortInfo: "West Bengal State Electricity Distribution Company Limited (WBSEDCL) has released Notification No. MPP/2025/04 for the recruitment of Assistant Manager (HR&A / F&A) and Junior Engineer (Electrical) Grade-II. A total of 447 vacancies are available. Eligible candidates can apply online from 27th November 2025.",
+    postDate: "24/11/2025",
+    category: "Latest Jobs",
+    
+    salary: "Level-6 to Level-8 (Pay Matrix ROPA 2020)",
+
+    importantDates: [
+      { label: "Notification Date", value: "24/11/2025" },
+      { label: "Application Begin", value: "27/11/2025 (11:00 AM)" },
+      { label: "Last Date for Apply", value: "29/12/2025 (Upto 11:55 PM)" },
+      { label: "Fee Payment Last Date", value: "29/12/2025" },
+      { label: "CBT Exam Date", value: "To be notified" }
+    ],
+
+    [cite_start]// Fee Details [cite: 378, 383]
+    applicationFee: [
+      { category: "Asst. Manager (UR/OBC/EWS)", amount: "₹400/- + GST" },
+      { category: "Junior Engineer (UR/OBC/EWS)", amount: "₹300/- + GST" },
+      { category: "SC / ST / PwBD / Exempted Category", amount: "₹0 (Nil)" },
+      { category: "Payment Mode", amount: "Online (Debit/Credit Card/Net Banking/UPI)" }
+    ],
+
+    [cite_start]// Age Limit [cite: 96]
+    ageLimit: "18-32 Years (As on 01/01/2025). Relaxation: SC/ST (WB) +5 Yrs, OBC-A/B (WB) +3 Yrs, PwBD +10 Yrs.",
+
+    [cite_start]// Vacancy Details [cite: 68, 75, 76]
+    vacancyDetails: [
+      { postName: "Assistant Manager (HR&A)", totalPost: 20, eligibility: "MBA / PG Degree / Diploma (2 Years) in Personnel Mgmt/HR." },
+      { postName: "Assistant Manager (F&A)", totalPost: 26, eligibility: "CA / ICWA Final Passed OR MBA / PG Diploma (2 Years) in Finance." },
+      { postName: "Junior Engineer (Electrical) Gr-II", totalPost: 401, eligibility: "3 Years Diploma in Electrical Engineering from recognized Institute." }
+    ],
+
+    [cite_start]// Smart Table for Category Wise Vacancy (Calculated Sum of Sub-categories) [cite: 68, 75, 78]
+    vacancyTableTitle: "Post & Category Wise Vacancy Details",
+    vacancyColumnName: "Post Name",
+    
+    stateWiseVacancy: [
+      { 
+        state: "Assistant Manager (HR&A)", 
+        total: 20, 
+        ur: 8, // UR(3)+UR-EC(3)+UR-PwBD(2)
+        sc: 5, // SC(2)+SC-EC(3)
+        st: 1, 
+        "obc-a": 2, // OBC-A(1)+EC(1)
+        "obc-b": 2, 
+        ews: 2 
+      },
+      { 
+        state: "Assistant Manager (F&A)", 
+        total: 26, 
+        ur: 11, // UR(4)+EC(5)+PwBD(2)
+        sc: 5, // SC(4)+EC(1)
+        st: 2, 
+        "obc-a": 3, // OBC-A(2)+EC(1)
+        "obc-b": 2, // OBC-B(1)+EC(1)
+        ews: 3 
+      },
+      { 
+        state: "Junior Engineer (Electrical)", 
+        total: 401, 
+        ur: 178, // UR(100)+EC(52)+ExSM(12)+PwBD(14)
+        sc: 88, // SC(52)+EC(28)+ExSM(4)+PwBD(4)
+        st: 25, // ST(16)+EC(9)
+        "obc-a": 41, // OBC-A(28)+EC(13)
+        "obc-b": 28, // OBC-B(20)+EC(8)
+        ews: 41 // EWS(25)+EC(12)+ExSM(4)
+      }
+    ],
+
+    salaryDetails: [
+      { post: "Assistant Manager (HR&A / F&A)", level: "Level-8 (₹56,100 - ₹1,60,500)" },
+      { post: "Junior Engineer (Electrical)", level: "Level-6 (₹36,800 - ₹1,06,700)" }
+    ],
+
+    selectionProcess: [
+      "Stage 1: Computer Based Test (CBT) - 85 Marks",
+      "Stage 2: Personal Interview - 15 Marks (1:3 Ratio)",
+      "Stage 3: Pre-Employment Medical Examination"
+    ],
+
+    [cite_start]// Exam Pattern [cite: 269, 272, 280]
+    examPattern: {
+      details: [
+        "Mode: Computer Based Test (CBT)",
+        "Total Questions: 85 (MCQs)",
+        "Total Marks: 85",
+        "Duration: 90 Minutes",
+        "Negative Marking: 0.33 Marks deducted for each wrong answer."
+      ],
+      table: [
+        { subject: "Domain Knowledge", questions: 50, marks: 50 },
+        { subject: "General English", questions: 5, marks: 5 },
+        { subject: "Quantitative Aptitude", questions: 10, marks: 10 },
+        { subject: "Computer Proficiency (MS-Office)", questions: 10, marks: 10 },
+        { subject: "Test of Vernacular (Bengali/Nepali)", questions: 10, marks: 10 }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official website www.wbsedcl.in.",
+      "Go to 'Career' tab and Click on 'Apply Online' for Notification MPP/2025/04.",
+      "Register with valid Email ID and Mobile Number.",
+      "Login and fill the application form.",
+      "Upload Scanned Photo, Signature and required documents.",
+      "Pay the application fee online via BillDesk.",
+      "Submit and Print the application form."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://www.wbsedcl.in/irj/go/km/docs/internet/new_website/careers.html" },
+      { title: "Download Notification PDF", url: "https://www.wbsedcl.in/irj/go/km/docs/internet/new_website/pdf/Careers/Website%20Notification%20w.r.t%20Notification%20No.%20MPP-2025-04%20Dt.%2024.11.2025_27_11.pdf" },
+      { title: "Official Website", url: "https://www.wbsedcl.in/" }
+    ],
+    
+    faqs: [
+      { question: "What is the full form of WBSEDCL?", answer: "West Bengal State Electricity Distribution Company Limited." },
+      { question: "What is the total vacancy in WBSEDCL 2025?", answer: "Total 447 vacancies (20 AM-HR, 26 AM-F&A, 401 JE-Electrical)." },
+      { question: "Is there negative marking in the exam?", answer: "Yes, 0.33 marks will be deducted for every wrong answer." },
+      { question: "What is the age limit?", answer: "18 to 32 years as on 01.01.2025. Age relaxation applies for reserved categories of West Bengal." }
+    ]
+  },
   // --- 19. WBSEDCL Recruitment 2025 (New) ---
   {
     id: 19,
