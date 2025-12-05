@@ -1361,6 +1361,197 @@ export const jobsData = [
   //                ADMIT CARDS (ID 1001 - 2000)
   // ==================================================
 
+  // --- 1016. SSC CHTE Paper-II (Latest) ---
+  {
+    id: 1016,
+    slug: "ssc-chte-paper-ii-exam-city-2025",
+    shortTitle: "SSC CHTE Paper-II Exam City 2025",
+    title: "SSC JHT / CHT Paper-II Exam City Intimation 2025 Out | Check Status",
+    shortInfo: "Staff Selection Commission (SSC) has released the Exam City Intimation Slip for Junior Hindi Translator, Senior Hindi Translator & Hindi Pradhyapak Examination, 2025 (Paper-II). The descriptive exam is scheduled for 14th December 2025.",
+    postDate: "05/12/2025",
+    category: "Admit Card",
+    salary: "Level-6 to Level-8",
+
+    importantDates: [
+      { label: "Paper-II Exam Date", value: "14/12/2025" },
+      { label: "City Slip Released", value: "04/12/2025" },
+      { label: "Admit Card", value: "Available Soon" }
+    ],
+
+    applicationFee: [],
+
+    vacancyDetails: [
+      { postName: "Junior/Senior Hindi Translator", totalPost: 552, eligibility: "Master's Degree in Hindi/English + Diploma/Certificate" }
+    ],
+
+    examPattern: {
+      details: ["Mode: Descriptive (Pen & Paper)", "Total Marks: 200", "Time: 2 Hours"],
+      table: [
+        { subject: "Translation & Essay", questions: "Descriptive", marks: 200 }
+      ]
+    },
+
+    howToApply: [
+      "Visit ssc.gov.in.",
+      "Login with Registration Number and Password.",
+      "Check 'Exam City Status' in the dashboard.",
+      "Admit Card will be available 3-4 days before the exam."
+    ],
+
+    links: [
+      { title: "Check Exam City / Status", url: "https://ssc.gov.in/login" },
+      { title: "Official Website", url: "https://ssc.gov.in/" }
+    ]
+  },
+
+  // --- 1015. Bihar Jeevika ---
+  {
+    id: 1015,
+    slug: "bihar-jeevika-admit-card-2025",
+    shortTitle: "Bihar Jeevika Admit Card 2025",
+    title: "Bihar Jeevika Admit Card 2025 Out | Download Hall Ticket for 2747 Posts",
+    shortInfo: "Bihar Rural Livelihoods Promotion Society (BRLPS) has released the Admit Card for various posts like Community Coordinator, Area Coordinator, and Office Assistant. Exam is scheduled from 19 Nov to 15 Dec 2025.",
+    postDate: "05/12/2025",
+    category: "Admit Card",
+    salary: "₹15,000 - ₹45,000 (Approx)",
+
+    importantDates: [
+      { label: "Exam Date", value: "19 Nov to 15 Dec 2025" },
+      { label: "Admit Card Released", value: "13/11/2025" }
+    ],
+
+    applicationFee: [],
+
+    vacancyDetails: [
+      { postName: "Community Coordinator", totalPost: 1177, eligibility: "10th/12th Pass" },
+      { postName: "Area Coordinator", totalPost: "Various", eligibility: "Graduate" },
+      { postName: "Total Vacancies", totalPost: 2747, eligibility: "-" }
+    ],
+
+    howToApply: [
+      "Visit brlps.in.",
+      "Click on 'Career' -> 'Download Admit Card'.",
+      "Enter Application No. and DOB.",
+      "Print the Hall Ticket."
+    ],
+
+    links: [
+      { title: "Download Admit Card", url: "https://brlps.in/Career" },
+      { title: "Official Website", url: "https://brlps.in/" }
+    ]
+  },
+
+  // --- 1014. UP LT Grade Teacher ---
+  {
+    id: 1014,
+    slug: "up-lt-grade-assistant-teacher-admit-card-2025",
+    shortTitle: "UP LT Grade Admit Card 2025",
+    title: "UPPSC LT Grade Assistant Teacher Admit Card 2025 Out | Exam Date & Shift",
+    shortInfo: "Uttar Pradesh Public Service Commission (UPPSC) has released the Admit Card for LT Grade Assistant Teacher Recruitment 2025. Exams for Math, Hindi, Science etc. are scheduled in Dec 2025 & Jan 2026.",
+    postDate: "05/12/2025",
+    category: "Admit Card",
+    salary: "Pay Scale ₹44,900-₹1,42,400 (Level 7)",
+
+    importantDates: [
+      { label: "Exam Dates", value: "06, 07, 21 Dec 2025 & Jan 2026" },
+      { label: "Admit Card Status", value: "Released" }
+    ],
+
+    applicationFee: [],
+
+    vacancyDetails: [
+      { postName: "Assistant Teacher (Male)", totalPost: 4860, eligibility: "Graduate + B.Ed" },
+      { postName: "Assistant Teacher (Female)", totalPost: 2525, eligibility: "Graduate + B.Ed" },
+      { postName: "Total Vacancies", totalPost: 7466, eligibility: "-" }
+    ],
+
+    howToApply: [
+      "Visit uppsc.up.nic.in.",
+      "Click on 'Download Admit Card' in Activity Dashboard.",
+      "Enter OTR Number / Reg No and DOB.",
+      "Download the Hall Ticket."
+    ],
+
+    links: [
+      { title: "Download Admit Card", url: "https://uppsc.up.nic.in/" },
+      { title: "Check Exam Schedule", url: "https://uppsc.up.nic.in/" },
+      { title: "Official Website", url: "https://uppsc.up.nic.in/" }
+    ]
+  },
+
+  // --- 1013. Delhi Police Constable Slot Selection ---
+  {
+    id: 1013,
+    slug: "ssc-delhi-police-constable-slot-selection-2025",
+    shortTitle: "Delhi Police Constable Slot Selection",
+    title: "SSC Delhi Police Constable Self Slot Selection 2025 Open | Book Exam Date",
+    shortInfo: "SSC has activated the link for Self Slot Selection for Delhi Police Constable (Executive) Male & Female Examination 2025. Candidates must book their exam date and city to generate the admit card.",
+    postDate: "05/12/2025",
+    category: "Admit Card",
+    salary: "Level-3 (₹21,700 - ₹69,100)",
+
+    importantDates: [
+      { label: "Slot Booking Dates", value: "05 Dec to 30 Dec 2025" },
+      { label: "Exam Date", value: "18 Dec 2025 to 06 Jan 2026" }
+    ],
+
+    applicationFee: [],
+
+    vacancyDetails: [
+      { postName: "Constable (Exe.) Male", totalPost: 4453, eligibility: "12th Pass + DL" },
+      { postName: "Constable (Exe.) Female", totalPost: 2491, eligibility: "12th Pass" },
+      { postName: "Total Vacancies", totalPost: 7547, eligibility: "-" }
+    ],
+
+    howToApply: [
+      "Login to ssc.gov.in.",
+      "Go to 'Self Slot Selection' tab.",
+      "Select 'Delhi Police Constable Exam'.",
+      "Choose preferred Date and City.",
+      "Confirm to generate Admit Card (later)."
+    ],
+
+    links: [
+      { title: "Slot Selection Link", url: "https://ssc.gov.in/login" },
+      { title: "Official Website", url: "https://ssc.gov.in/" }
+    ]
+  },
+
+  // --- 1012. RRB Group D (Oldest in Batch) ---
+  {
+    id: 1012,
+    slug: "railway-rrb-group-d-admit-card-2025",
+    shortTitle: "RRB Group D Admit Card 2025",
+    title: "RRB Group D Admit Card 2025 Out | CBT-1 Hall Ticket Download Link",
+    shortInfo: "Railway Recruitment Board (RRB) has released the Admit Card and City Intimation for Group D (Level-1) Recruitment 2025 (CEN RRC 01/2019). Exam starts from 27 November 2025.",
+    postDate: "05/12/2025",
+    category: "Admit Card",
+    salary: "Level-1 (₹18,000 Basic)",
+
+    importantDates: [
+      { label: "Exam Date", value: "27 Nov 2025 to 16 Jan 2026" },
+      { label: "Admit Card", value: "4 Days before Exam" }
+    ],
+
+    applicationFee: [],
+
+    vacancyDetails: [
+      { postName: "Group D (Track Maintainer etc.)", totalPost: 32438, eligibility: "10th Pass / ITI" }
+    ],
+
+    howToApply: [
+      "Visit regional RRB website (e.g., rrbcdg.gov.in).",
+      "Click on 'E-Call Letter for CBT'.",
+      "Enter Registration Number and DOB.",
+      "Download the Hall Ticket."
+    ],
+
+    links: [
+      { title: "Download Admit Card (All Regions)", url: "https://rrbcdg.gov.in/" },
+      { title: "Check Exam City", url: "https://rrbcdg.gov.in/" },
+      { title: "Official Website", url: "https://indianrailways.gov.in/" }
+    ]
+  },
   // --- 1011. Delhi Police Driver ---
   {
     id: 1011,
