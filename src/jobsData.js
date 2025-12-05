@@ -4,6 +4,138 @@ export const jobsData = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+  // --- 19. WBSEDCL Recruitment 2025 (New) ---
+  {
+    id: 19,
+    slug: "wbsedcl-recruitment-2025",
+    shortTitle: "WBSEDCL Recruitment 2025",
+    title: "WBSEDCL Recruitment 2025 Apply Online for 73 Posts | Assistant Manager & Junior Engineer",
+    shortInfo: "West Bengal State Electricity Distribution Company Limited (WBSEDCL) has released Notification No. MPP/2025/04 for the recruitment of Assistant Manager (HR&A / F&A) and Junior Engineer (Electrical) Grade-II. Eligible candidates with B.E./B.Tech/MBA/CA/CMA degrees can apply online.",
+    postDate: "26/11/2025",
+    category: "Latest Jobs",
+    
+    salary: "Level-5 to Level-8 (Pay Matrix as per ROPA 2020)",
+
+    importantDates: [
+      { label: "Notification Date", value: "24/11/2025" },
+      { label: "Application Begin", value: "27/11/2025 (11:00 AM)" },
+      { label: "Last Date for Apply", value: "29/12/2025 (11:55 PM)" },
+      { label: "Fee Payment Last Date", value: "29/12/2025" },
+      { label: "Exam Date", value: "To be notified" }
+    ],
+
+    applicationFee: [
+      { category: "Asst. Manager (General/OBC/EWS)", amount: "₹400/-" },
+      { category: "Junior Engineer (General/OBC/EWS)", amount: "₹300/-" },
+      { category: "SC / ST (West Bengal Only) / PwBD", amount: "₹0 (Nil)" },
+      { category: "Payment Mode", amount: "Online (Debit/Credit Card/Net Banking/UPI)" }
+    ],
+
+    // Age Limit as on 01/01/2025
+    ageLimit: "18-32 Years. Relaxation: SC/ST +5 Yrs, OBC-A/B +3 Yrs, PwBD +10 Yrs (For West Bengal Domicile only).",
+
+    vacancyDetails: [
+      { postName: "Assistant Manager (HR&A)", totalPost: 10, eligibility: "MBA/PG Diploma in HR/Personnel Mgmt (2 Years)" },
+      { postName: "Assistant Manager (F&A)", totalPost: 15, eligibility: "CA / CMA (Final Passed) OR MBA (Finance) / M.Com" },
+      { postName: "Junior Engineer (Electrical) Gr-II", totalPost: 48, eligibility: "Diploma in Electrical Engineering" }
+    ],
+
+    // Smart Table for Category Wise Vacancy (Page 2 of PDF)
+    vacancyTableTitle: "Post & Category Wise Vacancy Details",
+    vacancyColumnName: "Post Name",
+    
+    stateWiseVacancy: [
+      { 
+        "Post Name": "Assistant Manager (HR&A)", 
+        "Total": 10, 
+        "UR": 4, "SC": 2, "ST": 1, "OBC-A": 1, "OBC-B": 1, "PwBD": 1 
+      },
+      { 
+        "Post Name": "Assistant Manager (F&A)", 
+        "Total": 15, 
+        "UR": 7, "SC": 3, "ST": 1, "OBC-A": 2, "OBC-B": 1, "PwBD": 1 
+      },
+      { 
+        "Post Name": "Junior Engineer (Electrical)", 
+        "Total": 48, 
+        "UR": 22, "SC": 11, "ST": 3, "OBC-A": 5, "OBC-B": 4, "PwBD": 2, "Ex-SM": 1 
+      }
+    ],
+
+    salaryDetails: [
+      { post: "Assistant Manager (HR&A / F&A)", level: "Level-8 (₹15,600 - ₹39,100 + GP ₹5,400 Pre-revised)" },
+      { post: "Junior Engineer (Electrical)", level: "Level-5 (₹6,300 - ₹20,200 + GP ₹4,400 Pre-revised)" }
+    ],
+
+    selectionProcess: [
+      "Stage 1: Computer Based Test (CBT)",
+      "Stage 2: Personal Interview (Viva Voce)",
+      "Stage 3: Document Verification",
+      "Stage 4: Medical Examination"
+    ],
+
+    // Exam Pattern (Page 8 & 9 of PDF)
+    examPattern: {
+      details: [
+        "Mode: Computer Based Test (CBT)",
+        "Total Questions: 100 (MCQs)",
+        "Total Marks: 100",
+        "Duration: 90 Minutes",
+        "Negative Marking: No Negative Marking (Mentioned as 'No penalty' usually in WBSEDCL, check admit card)"
+      ],
+      stages: [
+        {
+          title: "Exam Pattern: Assistant Manager (HR&A)",
+          data: [
+            { subject: "General Knowledge / Current Affairs", questions: 15, marks: 15 },
+            { subject: "Reasoning / General Awareness", questions: 15, marks: 15 },
+            { subject: "General English", questions: 10, marks: 10 },
+            { subject: "Domain Knowledge (HR/Management)", questions: 60, marks: 60 }
+          ]
+        },
+        {
+          title: "Exam Pattern: Assistant Manager (F&A)",
+          data: [
+            { subject: "General Knowledge / Current Affairs", questions: 15, marks: 15 },
+            { subject: "Reasoning / General Awareness", questions: 15, marks: 15 },
+            { subject: "General English", questions: 10, marks: 10 },
+            { subject: "Domain Knowledge (Finance/Accounts)", questions: 60, marks: 60 }
+          ]
+        },
+        {
+          title: "Exam Pattern: Junior Engineer (Electrical)",
+          data: [
+            { subject: "General Knowledge / Current Affairs", questions: 15, marks: 15 },
+            { subject: "Reasoning / General Awareness", questions: 15, marks: 15 },
+            { subject: "General English", questions: 10, marks: 10 },
+            { subject: "Domain Knowledge (Electrical Engg)", questions: 60, marks: 60 }
+          ]
+        }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official website www.wbsedcl.in.",
+      "Go to 'Careers' -> 'Recruitment of AM & JE 2025'.",
+      "Register with valid Email ID and Mobile Number.",
+      "Login and fill the application form.",
+      "Upload Scanned Photo, Signature and required documents.",
+      "Pay the application fee online.",
+      "Submit and Print the application form."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://cdn3.digialm.com/EForms/configuredHtml/32902/95673/login.html" },
+      { title: "Download Notification", url: "https://www.wbsedcl.in/irj/go/km/docs/internet/new_website/pdf/Careers/Website%20Notification%20w.r.t%20Notification%20No.%20MPP-2025-04%20Dt.%2024.11.2025_27_11.pdf" },
+      { title: "Official Website", url: "https://www.wbsedcl.in/" }
+    ],
+    
+    faqs: [
+      { question: "What is the full form of WBSEDCL?", answer: "West Bengal State Electricity Distribution Company Limited." },
+      { question: "Can final year students apply?", answer: "No, candidates must possess the final degree/certificate on or before the closing date of application." },
+      { question: "Is there any bond period?", answer: "Yes, candidates have to execute a bond to serve the company for a minimum period of 4 years (₹1,50,000 for AM, ₹1,00,000 for JE)." }
+    ]
+  },
   // --- 18. BTSC Various Posts (ID 18) - FULLY COMPLETED ---
   {
     id: 18,
