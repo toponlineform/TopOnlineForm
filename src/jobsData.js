@@ -6,7 +6,7 @@ export const jobsData = [
 
   // --- 19. WBSEDCL Recruitment 2025 ---
   {
-    id: 19,
+    id: 20,
     slug: "wbsedcl-recruitment-2025-am-je",
     shortTitle: "WBSEDCL Recruitment 2025",
     title: "WBSEDCL Recruitment 2025 Apply Online for 447 Posts | Assistant Manager & Junior Engineer",
