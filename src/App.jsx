@@ -43,15 +43,12 @@ function Home() {
     return job.category === cat;
   };
 
-  // Configuration for Home Page Boxes
-  const homeSections = [
-    { title: "Latest Jobs", category: "Latest Jobs", limit: 20, link: "/latest-jobs" },
-    { title: "Admit Card", category: "Admit Card", limit: 20, link: "/admit-card" },
-    { title: "Result", category: "Result", limit: 20, link: "/results" },
-    { title: "Answer Key", category: "Answer Key", limit: 10, link: "/answer-key" },
-    { title: "Syllabus", category: "Syllabus", limit: 10, link: "/syllabus" },
-    { title: "Previous Paper", category: "Previous Paper", limit: 10, link: "/previous-papers" }
-  ];
+  const latestJobs = jobsData.filter(j => hasCategory(j, "Latest Jobs")).sort(sortNewest).slice(0, 20);
+  const admitCards = jobsData.filter(j => hasCategory(j, "Admit Card")).sort(sortNewest).slice(0, 20);
+  const results = jobsData.filter(j => hasCategory(j, "Result")).sort(sortNewest).slice(0, 20);
+  const answerKeys = jobsData.filter(j => hasCategory(j, "Answer Key")).sort(sortNewest).slice(0, 7);
+  const syllabus = jobsData.filter(j => hasCategory(j, "Syllabus")).sort(sortNewest).slice(0, 7);
+  const previousPapers = jobsData.filter(j => hasCategory(j, "Previous Paper")).sort(sortNewest).slice(0, 7);
 
   const JobBox = ({ title, jobs, linkTo }) => (
     <div className="box-column">
@@ -80,10 +77,12 @@ function Home() {
           </form>
       </div>
 
-      {homeSections.map((section, index) => {
-        const jobs = jobsData.filter(j => hasCategory(j, section.category)).sort(sortNewest).slice(0, section.limit);
-        return <JobBox key={index} title={section.title} jobs={jobs} linkTo={section.link} />;
-      })}
+      <JobBox title="Latest Jobs" jobs={latestJobs} linkTo="/latest-jobs" />
+      <JobBox title="Admit Card" jobs={admitCards} linkTo="/admit-card" />
+      <JobBox title="Result" jobs={results} linkTo="/results" />
+      <JobBox title="Answer Key" jobs={answerKeys} linkTo="/answer-key" />
+      <JobBox title="Syllabus" jobs={syllabus} linkTo="/syllabus" />
+      <JobBox title="Previous Paper" jobs={previousPapers} linkTo="/previous-papers" />
     </div>
   );
 }
@@ -127,6 +126,7 @@ function JobDetails() {
     };
   }
 
+  // --- HELPER: FORMAT HEADERS CORRECTLY ---
   const formatHeader = (key) => {
     const upperKeys = ["ur", "obc", "sc", "st", "ews", "pwbd", "esm", "gen", "ph"];
     if (upperKeys.includes(key.toLowerCase())) {
@@ -135,6 +135,7 @@ function JobDetails() {
     return key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).trim();
   };
 
+  // --- SMART TABLE RENDERER (PET / Exam) ---
   const RenderSmartTable = ({ data, title }) => {
     if (!data || data.length === 0) return null;
     const isPet = Object.keys(data[0]).includes('activity');
@@ -189,6 +190,7 @@ function JobDetails() {
     );
   };
 
+  // --- GENERIC TABLE RENDERER (Vacancy / Salary) ---
   const RenderTable = ({ data, title, autoTotal = true }) => {
     if (!data || data.length === 0) return null;
     const headers = Object.keys(data[0]);
@@ -286,7 +288,7 @@ function JobDetails() {
               </td>
               <td>
                 <ul>
-                  {/* Safe Check for Fees: If empty, show Check Notification */}
+                  {/* --- FIX: Check if fees exist, else show 'Check Notification' --- */}
                   {job.applicationFee && job.applicationFee.length > 0 ? (
                     job.applicationFee.map((f, i) => (
                       <li key={i}><strong>{f.category}:</strong> {f.amount}</li>
@@ -321,6 +323,7 @@ function JobDetails() {
 
       {job.selectionProcess && (<><div className="section-header">Selection Process</div><ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.selectionProcess.map((item, index) => <li key={index} style={{marginBottom: '5px'}}><strong>{item.includes(":") ? item : `Step ${index+1}: ${item}`}</strong></li>)}</ol></>)}
 
+      {/* Exam Pattern Section */}
       {job.examPattern && (
         <>
           <div className="section-header">
@@ -344,6 +347,7 @@ function JobDetails() {
         </>
       )}
 
+      {/* Extra Sections */}
       {job.extraSections && job.extraSections.map((section, index) => (
         <div key={index}>
           {section.tableData ? (
