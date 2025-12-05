@@ -267,7 +267,9 @@ function JobDetails() {
       </Helmet>
 
       <h1 className="job-title">{job.title}</h1>
-      <p style={{marginBottom:'10px', textAlign:'justify'}}><strong>Post Date : </strong> {job.postDate}</p>
+      
+      {/* --- REMOVED POST DATE FROM HERE --- */}
+      
       <p style={{marginBottom:'20px', textAlign:'justify'}}><strong>Short Info : </strong> {job.shortInfo}</p>
       
       {/* --- UPDATED DATES & FEES SECTION --- */}
