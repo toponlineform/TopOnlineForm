@@ -42,7 +42,7 @@ export const jobsData = [
     // Using lowercase keys to ensure App.jsx formats them correctly (e.g. 'sc(DSC)' becomes 'Sc (DSC)')
     stateWiseVacancy: [
       { 
-        category: "Regular Vacancy", 
+        category: "Medical Officer (Group-A)", 
         total: 450, 
         ur: 238, 
         "sc(OSC)": 45, 
