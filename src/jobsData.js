@@ -37,13 +37,22 @@ export const jobsData = [
       { postName: "Medical Officer (Group-A)", totalPost: 450, eligibility: "MBBS Degree from recognized University + Registered with Medical Council (NMC/State) + Hindi/Sanskrit upto Matric." }
     ],
 
-    vacancyTableTitle: "Category Wise Vacancy Details",
+    vacancyTableTitle: "Category Wise Vacancy Details (Official Breakup)",
+    
+    // Using lowercase keys to ensure App.jsx formats them correctly (e.g. 'sc(DSC)' becomes 'Sc (DSC)')
     stateWiseVacancy: [
-      { "Category": "General / Unreserved (UR)", "No. Of Posts": 238 },
-      { "Category": "Scheduled Caste (SC)", "No. Of Posts": "95 (DSC-50, OSC-45)" },
-      { "Category": "Backward Class - A (BC-A)", "No. Of Posts": 45 },
-      { "Category": "Backward Class - B (BC-B)", "No. Of Posts": 27 },
-      { "Category": "Economically Weaker Section (EWS)", "No. Of Posts": 45 }
+      { 
+        category: "Regular Vacancy", 
+        total: 450, 
+        ur: 238, 
+        "sc(OSC)": 45, 
+        "sc(DSC)": 45, 
+        "bc-A": 50, 
+        "bc-B": 27, 
+        ews: 45,
+        "esm(Total)": 22,
+        "pwbd(Total)": 18 
+      }
     ],
 
     selectionProcess: [
