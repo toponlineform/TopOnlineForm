@@ -4,6 +4,118 @@ export const jobsData = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+  // --- 18. BTSC Various Posts (Work Inspector, Dental Hygienist, Hostel Manager) ---
+  {
+    id: 18,
+    slug: "btsc-various-posts-recruitment-2025",
+    shortTitle: "BTSC Recruitment 2025 (1907 Posts)",
+    title: "BTSC Recruitment 2025 Apply Online for 1907 Posts | Work Inspector, Dental Hygienist & Hostel Manager",
+    shortInfo: "Bihar Technical Service Commission (BTSC) has released official notifications for the recruitment of Work Inspector, Dental Hygienist, and Hostel Manager under Advertisement Nos. 25/2025, 26/2025, and 27/2025. A total of 1907 vacancies are available. Eligible candidates can apply online.",
+    postDate: "05/12/2025",
+    category: "Latest Jobs",
+    
+    // Combined Salary info
+    salary: "Level-2 to Level-4 (Post Wise)",
+
+    importantDates: [
+      { label: "Application Begin", value: "05/12/2025" },
+      { label: "Last Date for Apply", value: "05/01/2026" },
+      { label: "Fee Payment Last Date", value: "05/01/2026" },
+      { label: "Exam Date", value: "To be notified" }
+    ],
+
+    applicationFee: [
+      { category: "All Candidates", amount: "₹100/-" },
+      { category: "Payment Mode", amount: "Online (Debit/Credit Card/Net Banking)" }
+    ],
+
+    // Combined Age Limit
+    ageLimit: "18-37 Years (Work Inspector/Dental). 21-37 Years (Hostel Manager). Relaxation: BC/EBC/Female +3 Yrs, SC/ST +5 Yrs.",
+
+    // Summary of Posts
+    vacancyDetails: [
+      { postName: "Work Inspector (Advt 25/2025)", totalPost: 1114, eligibility: "10th Pass + ITI in Draftsman Civil / Surveyor / Plumber" },
+      { postName: "Dental Hygienist (Advt 26/2025)", totalPost: 702, eligibility: "10+2 (Bio) + Diploma in Dental Hygienist + Registration" },
+      { postName: "Hostel Manager (Advt 27/2025)", totalPost: 91, eligibility: "B.Sc (Hospitality/Hotel Admin) OR Graduate + PG Diploma in Hotel Mgmt" }
+    ],
+
+    // --- SMART CUSTOM TABLE FOR BIHAR CATEGORIES (EBC, BC, WBC) ---
+    extraSections: [
+      {
+        title: "Post & Category Wise Vacancy Details",
+        tableData: [
+          { 
+            "Post Name (Advt No.)": "Work Inspector (25/2025)", 
+            "Total": 1114, 
+            "UR": 444, "EWS": 111, "SC": 179, "ST": 13, "EBC": 200, "BC": 133, "BC(W)": 34 
+          },
+          { 
+            "Post Name (Advt No.)": "Dental Hygienist (26/2025)", 
+            "Total": 702, 
+            "UR": 281, "EWS": 70, "SC": 112, "ST": 7, "EBC": 127, "BC": 84, "BC(W)": 21 
+          },
+          { 
+            "Post Name (Advt No.)": "Hostel Manager (27/2025)", 
+            "Total": 91, 
+            "UR": 37, "EWS": 9, "SC": 14, "ST": 1, "EBC": 16, "BC": 11, "BC(W)": 3 
+          }
+        ]
+      },
+      {
+        title: "Selection Process",
+        list: [
+          "Work Inspector: Written Exam (CBT) & Document Verification.",
+          "Dental Hygienist: Written Exam (CBT) & Experience Weightage.",
+          "Hostel Manager: Written Exam (CBT) & Document Verification."
+        ]
+      }
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Computer Based Test (CBT)",
+        "Type: Objective Multiple Choice Questions",
+        "Exam Duration: 2 Hours (Expected)",
+        "Language: Hindi & English"
+      ],
+      stages: [
+        {
+          title: "Exam Pattern (Work Inspector)",
+          data: [
+            { subject: "Trade Related (Civil/Surveyor/Plumber)", questions: 80, marks: 80 },
+            { subject: "General Studies", questions: 20, marks: 20 }
+          ]
+        },
+        {
+          title: "Exam Pattern (Dental Hygienist)",
+          data: [
+            { subject: "Dental Hygiene Course Subjects", questions: 75, marks: 75 },
+            { subject: "Work Experience (5 Marks/Year)", questions: "-", marks: "25 (Max)" }
+          ]
+        }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official website btsc.bihar.gov.in.",
+      "Click on 'Apply Online' under 'Advt No 25-27/2025'.",
+      "Select the post you want to apply for.",
+      "Register and complete the application form.",
+      "Upload scanned Photo, Signature, and required Certificates.",
+      "Pay the application fee online.",
+      "Submit and take a printout of the application."
+    ],
+
+    links: [
+      { title: "Apply Online (Work Inspector)", url: "https://btsc.bihar.gov.in/" },
+      { title: "Apply Online (Dental Hygienist)", url: "https://btsc.bihar.gov.in/" },
+      { title: "Apply Online (Hostel Manager)", url: "https://btsc.bihar.gov.in/" },
+      { title: "Download Notification (Work Inspector)", url: "https://btsc.bihar.gov.in/" }, // Replace with direct PDF link if available
+      { title: "Download Notification (Dental Hygienist)", url: "https://btsc.bihar.gov.in/" },
+      { title: "Download Notification (Hostel Manager)", url: "https://btsc.bihar.gov.in/" },
+      { title: "Official Website", url: "https://btsc.bihar.gov.in/" }
+    ]
+  },
   // --- 17. Haryana Health Department Medical Officer ---
   {
     id: 17,
