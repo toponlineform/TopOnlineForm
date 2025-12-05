@@ -1361,6 +1361,241 @@ export const jobsData = [
   //                ADMIT CARDS (ID 1001 - 2000)
   // ==================================================
 
+  // --- 1011. Delhi Police Driver ---
+  {
+    id: 1011,
+    slug: "ssc-delhi-police-driver-admit-card-2025",
+    shortTitle: "Delhi Police Driver Admit Card 2025",
+    title: "Delhi Police Constable (Driver) Admit Card 2025 | Trade Test & Exam Date",
+    shortInfo: "SSC has announced the Exam Date and Status for Constable (Driver) Male in Delhi Police Examination 2025.",
+    postDate: "05/12/2025",
+    category: "Admit Card",
+    salary: "Level-3 (₹21,700 - ₹69,100)",
+
+    importantDates: [
+      { label: "CBT Exam Date", value: "16 & 17 Dec 2025" },
+      { label: "Admit Card", value: "Available Soon" }
+    ],
+
+    applicationFee: [],
+
+    vacancyDetails: [
+      { postName: "Constable (Driver) - Male", totalPost: 737, eligibility: "12th Pass + Heavy Motor Vehicle (HMV) License" }
+    ],
+
+    examPattern: {
+      details: ["Mode: CBT (100 Marks)", "Time: 90 Minutes", "Trade Test: Qualifying"],
+      table: [
+        { subject: "General Awareness", questions: 20, marks: 20 },
+        { subject: "General Intelligence", questions: 20, marks: 20 },
+        { subject: "Numerical Ability", questions: 10, marks: 10 },
+        { subject: "Road Sense, Vehicle Maintenance, Traffic Rules", questions: 50, marks: 50 }
+      ]
+    },
+
+    extraSections: [
+      {
+        title: "Physical Endurance Test (PET)",
+        list: ["Race: 1600m in 7 Minutes", "Long Jump: 12.5 Feet", "High Jump: 3.5 Feet"]
+      }
+    ],
+
+    howToApply: ["Check SSC Website for Regional Links", "Enter details", "Download PDF"],
+
+    links: [
+      { title: "Check Status (NR Region)", url: "https://sscnr.nic.in/" },
+      { title: "Official Website", url: "https://ssc.gov.in/" }
+    ]
+  },
+  // --- 1010. Delhi Police HC (Ministerial) ---
+  {
+    id: 1010,
+    slug: "ssc-delhi-police-hc-ministerial-admit-card-2025",
+    shortTitle: "Delhi Police HC (Ministerial) Admit Card",
+    title: "Delhi Police Head Constable (Ministerial) Admit Card 2025 | Exam City & Date",
+    shortInfo: "SSC has released the Admit Card and Status for Delhi Police Head Constable (Ministerial) Examination 2025.",
+    postDate: "05/12/2025",
+    category: "Admit Card",
+    salary: "Level-4 (₹25,500 - ₹81,100)",
+
+    importantDates: [
+      { label: "CBT Exam Date", value: "07 Jan to 12 Jan 2026" },
+      { label: "Admit Card", value: "4 Days before Exam" }
+    ],
+
+    applicationFee: [],
+
+    vacancyDetails: [
+      { postName: "Head Constable (Ministerial) Male", totalPost: 341, eligibility: "12th Pass + Typing Speed" },
+      { postName: "Head Constable (Ministerial) Female", totalPost: 168, eligibility: "12th Pass + Typing Speed" }
+    ],
+
+    examPattern: {
+      details: ["Mode: CBT (100 Marks)", "Time: 90 Minutes", "Typing Test: 30 wpm (Eng) / 25 wpm (Hindi)"],
+      table: [
+        { subject: "English Language", questions: 25, marks: 25 },
+        { subject: "Quant", questions: 20, marks: 20 },
+        { subject: "General Intelligence", questions: 25, marks: 25 },
+        { subject: "General Awareness", questions: 20, marks: 20 },
+        { subject: "Computer Basics", questions: 10, marks: 10 }
+      ]
+    },
+
+    howToApply: ["Go to SSC Regional Website", "Login with Roll No", "Download Ticket"],
+
+    links: [
+      { title: "Check Application Status (All Regions)", url: "https://ssc.gov.in/" },
+      { title: "Download Admit Card", url: "https://ssc.gov.in/" },
+      { title: "Official Website", url: "https://delhipolice.gov.in/" }
+    ]
+  },
+  // --- 1009. Delhi Police HC (AWO/TPO) ---
+  {
+    id: 1009,
+    slug: "ssc-delhi-police-hc-awo-tpo-admit-card-2025",
+    shortTitle: "Delhi Police HC (AWO/TPO) Admit Card",
+    title: "Delhi Police Head Constable (AWO/TPO) Admit Card 2025 | Exam Date & Status",
+    shortInfo: "SSC has released the Exam Date and Application Status for Delhi Police Head Constable (Assistant Wireless Operator / Tele-Printer Operator) Exam 2025.",
+    postDate: "05/12/2025",
+    category: "Admit Card",
+    salary: "Level-4 (₹25,500 - ₹81,100)",
+
+    importantDates: [
+      { label: "CBT Exam Date", value: "15 Jan to 22 Jan 2026" },
+      { label: "Admit Card Status", value: "Available Region Wise" }
+    ],
+
+    applicationFee: [],
+
+    vacancyDetails: [
+      { postName: "Head Constable (AWO/TPO) Male", totalPost: 370, eligibility: "12th (Science/Maths) + Mechanic/Operator Trade" },
+      { postName: "Head Constable (AWO/TPO) Female", totalPost: 182, eligibility: "12th (Science/Maths)" }
+    ],
+
+    examPattern: {
+      details: ["Mode: CBT (100 Marks) + Trade Test (Qualifying)", "Time: 90 Minutes", "No Negative Marking"],
+      table: [
+        { subject: "General Awareness", questions: 20, marks: 20 },
+        { subject: "General Science", questions: 25, marks: 25 },
+        { subject: "Mathematics", questions: 25, marks: 25 },
+        { subject: "Reasoning", questions: 20, marks: 20 },
+        { subject: "Computer Fundamentals", questions: 10, marks: 10 }
+      ]
+    },
+    
+    howToApply: ["Check status on SSC Regional website", "Download Admit Card 4 days before exam"],
+
+    links: [
+      { title: "Check Status / Admit Card (NR)", url: "https://sscnr.nic.in/" },
+      { title: "Check Status / Admit Card (CR)", url: "http://www.ssc-cr.org/" },
+      { title: "Official Website", url: "https://ssc.gov.in/" }
+    ]
+  },
+  // --- 1008. UP Police SI Exam Date ---
+  {
+    id: 1008,
+    slug: "up-police-si-exam-date-admit-card-2025",
+    shortTitle: "UP Police SI Exam Date & Admit Card",
+    title: "UP Police SI Exam Date 2025 Announced | Sub Inspector Admit Card & City Details",
+    shortInfo: "Uttar Pradesh Police Recruitment & Promotion Board (UPPRPB) has announced the written exam dates for Sub Inspector (SI) Recruitment 2025. The exam will be held on 14th & 15th March 2026. Admit Cards will be available soon.",
+    postDate: "05/12/2025",
+    category: "Admit Card",
+    salary: "₹9,300 - ₹34,800 (Grade Pay ₹4200)",
+
+    importantDates: [
+      { label: "Written Exam Date", value: "14 & 15 March 2026" },
+      { label: "Admit Card Available", value: "10 Days before Exam" }
+    ],
+
+    applicationFee: [],
+
+    vacancyDetails: [
+      { postName: "Sub Inspector (Civil Police)", totalPost: 4242, eligibility: "Graduation" },
+      { postName: "Platoon Commander", totalPost: 135, eligibility: "Graduation" },
+      { postName: "Fire Service Officer", totalPost: 23, eligibility: "Science Graduate" },
+      { postName: "Total Vacancies", totalPost: 4543, eligibility: "-" }
+    ],
+
+    examPattern: {
+      details: ["Mode: Online CBT", "Total Marks: 400", "Time: 2 Hours", "No Negative Marking"],
+      table: [
+        { subject: "General Hindi", questions: 40, marks: 100 },
+        { subject: "GK / Law / Constitution", questions: 40, marks: 100 },
+        { subject: "Numerical & Mental Ability", questions: 40, marks: 100 },
+        { subject: "Mental Aptitude / IQ / Reasoning", questions: 40, marks: 100 }
+      ]
+    },
+
+    extraSections: [
+      {
+        title: "Physical Efficiency Test (PET)",
+        list: [
+          "Male: 4.8 km Run in 28 Minutes.",
+          "Female: 2.4 km Run in 16 Minutes."
+        ]
+      }
+    ],
+
+    howToApply: ["Visit uppbpb.gov.in", "Click on Admit Card Link", "Enter Reg No & DOB", "Download"],
+    
+    links: [
+      { title: "Download Exam Date Notice", url: "https://uppbpb.gov.in/" },
+      { title: "Download Admit Card (Link Soon)", url: "https://uppbpb.gov.in/" },
+      { title: "Official Website", url: "https://uppbpb.gov.in/" }
+    ]
+  },
+  // --- 1007. SSC CHSL Tier-I 2025 ---
+  {
+    id: 1007,
+    slug: "ssc-chsl-tier-i-admit-card-2025",
+    shortTitle: "SSC CHSL Tier-I Admit Card 2025",
+    title: "SSC CHSL Tier-I Admit Card 2025 Out | 10+2 LDC, DEO & JSA Hall Ticket",
+    shortInfo: "Staff Selection Commission (SSC) has released the Admit Card and Application Status for Combined Higher Secondary Level (CHSL) 10+2 Examination 2025. Candidates can download their Tier-I Hall Ticket region-wise.",
+    postDate: "05/12/2025",
+    category: "Admit Card",
+    salary: "Level-2 to Level-5 (₹19,900 - ₹92,300)",
+    
+    importantDates: [
+      { label: "Tier-I Exam Date", value: "12 Nov 2025 to 30 Nov 2025" },
+      { label: "Status/Admit Card", value: "Available Now" },
+      { label: "Tier-II Exam Date", value: "March 2026 (Tentative)" }
+    ],
+    
+    applicationFee: [],
+
+    vacancyDetails: [
+      { postName: "Lower Division Clerk (LDC) / JSA", totalPost: "Various", eligibility: "12th Pass" },
+      { postName: "Data Entry Operator (DEO)", totalPost: "Various", eligibility: "12th Pass (Science/Maths)" },
+      { postName: "Total Vacancies", totalPost: 3131, eligibility: "-" }
+    ],
+
+    examPattern: {
+      details: ["Tier-I: Online Objective Test", "Time: 60 Minutes", "Negative Marking: 0.50 Marks"],
+      cbt1Title: "Tier-I Exam Pattern",
+      cbt1: [
+        { subject: "English Language", questions: 25, marks: 50 },
+        { subject: "General Intelligence", questions: 25, marks: 50 },
+        { subject: "Quantitative Aptitude", questions: 25, marks: 50 },
+        { subject: "General Awareness", questions: 25, marks: 50 }
+      ]
+    },
+
+    howToApply: [
+      "Visit the SSC Regional Website.",
+      "Click on 'Know Your Status' or 'Download Admit Card'.",
+      "Enter Registration ID & Date of Birth.",
+      "Download the PDF and print it."
+    ],
+
+    links: [
+      { title: "Download Admit Card (NR - Delhi)", url: "https://sscnr.nic.in/" },
+      { title: "Download Admit Card (CR - UP/Bihar)", url: "http://www.ssc-cr.org/" },
+      { title: "Download Admit Card (WR - Mumbai)", url: "http://www.sscwr.net/" },
+      { title: "Download Admit Card (ER - Kolkata)", url: "http://www.sscer.org/" },
+      { title: "Download Admit Card (SR - Chennai)", url: "http://www.sscsr.gov.in/" },
+      { title: "Official Website", url: "https://ssc.gov.in/" }
+    ]
+  },
   // --- 6. SSC CPO SI Paper-I (ID 1006) ---
   {
     id: 1006,
@@ -1406,8 +1641,7 @@ export const jobsData = [
         { subject: "General Intelligence and Reasoning", questions: 50, marks: 50 },
         { subject: "General Knowledge and General Awareness", questions: 50, marks: 50 },
         { subject: "Quantitative Aptitude", questions: 50, marks: 50 },
-        { subject: "English Comprehension", questions: 50, marks: 50 },
-        { subject: "Total", questions: 200, marks: 200 }
+        { subject: "English Comprehension", questions: 50, marks: 50 }
       ]
     },
 
