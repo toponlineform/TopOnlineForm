@@ -38,14 +38,12 @@ export const jobsData = [
     ],
 
     vacancyTableTitle: "Category Wise Vacancy Details",
-    vacancyColumnName: "Category",
-    
     stateWiseVacancy: [
-      { state: "General / Unreserved (UR)", total: 238, ur: 238, ews: 0, obc: 0, sc: 0, st: 0 },
-      { state: "Scheduled Caste (SC)", total: 95, ur: 0, ews: 0, obc: 0, sc: "95 (DSC-50, OSC-45)", st: 0 },
-      { state: "Backward Class - A (BC-A)", total: 45, ur: 0, ews: 0, obc: 45, sc: 0, st: 0 },
-      { state: "Backward Class - B (BC-B)", total: 27, ur: 0, ews: 0, obc: 27, sc: 0, st: 0 },
-      { state: "EWS", total: 45, ur: 0, ews: 45, obc: 0, sc: 0, st: 0 }
+      { "Category": "General / Unreserved (UR)", "No. Of Posts": 238 },
+      { "Category": "Scheduled Caste (SC)", "No. Of Posts": "95 (DSC-50, OSC-45)" },
+      { "Category": "Backward Class - A (BC-A)", "No. Of Posts": 45 },
+      { "Category": "Backward Class - B (BC-B)", "No. Of Posts": 27 },
+      { "Category": "Economically Weaker Section (EWS)", "No. Of Posts": 45 }
     ],
 
     selectionProcess: [
