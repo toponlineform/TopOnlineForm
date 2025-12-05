@@ -37,7 +37,7 @@ export const jobsData = [
       { postName: "Medical Officer (Group-A)", totalPost: 450, eligibility: "MBBS Degree from recognized University + Registered with Medical Council (NMC/State) + Hindi/Sanskrit upto Matric." }
     ],
 
-    vacancyTableTitle: "Category Wise Vacancy Details (Official Breakup)",
+    vacancyTableTitle: "Category Wise Vacancy Details",
     
     // Using lowercase keys to ensure App.jsx formats them correctly (e.g. 'sc(DSC)' becomes 'Sc (DSC)')
     stateWiseVacancy: [
