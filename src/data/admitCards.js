@@ -1,4 +1,4 @@
-export const admitCardData = [
+export const admitCardsData = [
   // Yahan ID 1001 wali admit cards aayengi (Jaise SSC CPO)
    // --- 6. SSC CPO SI Paper-I (ID 1006) - FULLY DETAILED ---
   {
