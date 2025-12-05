@@ -56,7 +56,7 @@ export const jobsData = [
     selectionProcess: [
       "Computer Based Test (CBT) - 85 Marks",
       "Personal Interview - 15 Marks",
-      "Document Verification"
+      "Document Verification",
       "Pre-Employment Medical Examination"
     ],
 
