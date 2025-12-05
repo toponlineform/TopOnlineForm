@@ -4,6 +4,79 @@ export const jobsData = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+  // --- 17. Haryana Health Department Medical Officer ---
+  {
+    id: 17,
+    slug: "haryana-health-department-medical-officer-recruitment-2025",
+    shortTitle: "Haryana Medical Officer Recruitment 2025",
+    title: "Haryana Health Department Medical Officer Recruitment 2025 Apply Online for 450 Posts | HCMS Group-A",
+    shortInfo: "Director General Health Services, Haryana has released the official notification for the recruitment of 450 Medical Officers (Group-A HCMS-I). Eligible MBBS candidates can apply online from 08 December 2025.",
+    postDate: "05/12/2025",
+    category: "Latest Jobs",
+    salary: "FPL-10 (₹56,100 - ₹1,77,500)",
+    
+    importantDates: [
+      { label: "Notification Date", value: "05/12/2025" },
+      { label: "Application Begin", value: "08/12/2025 (09:00 AM)" },
+      { label: "Last Date for Apply", value: "07/01/2026 (Upto 11:59 PM)" },
+      { label: "Exam Date", value: "To be notified" }
+    ],
+    
+    applicationFee: [
+      { category: "Male (General / DESM of Haryana)", amount: "₹1000/-" },
+      { category: "Male (General - Other States)", amount: "₹1000/-" },
+      { category: "Female (General - Haryana)", amount: "₹250/-" },
+      { category: "SC / BC-A / BC-B / EWS / ESM (Haryana)", amount: "₹250/-" },
+      { category: "PwBD (Haryana)", amount: "₹0 (Nil)" },
+      { category: "Payment Mode", amount: "Online (Net Banking/Debit/Credit Card)" }
+    ],
+
+    ageLimit: "22-35 Years (As on 07/01/2026). Age Relaxation: SC/BC +5 Years, PwBD +10 Years.",
+
+    vacancyDetails: [
+      { postName: "Medical Officer (Group-A)", totalPost: 450, eligibility: "MBBS Degree from recognized University + Registered with Medical Council (NMC/State) + Hindi/Sanskrit upto Matric." }
+    ],
+
+    vacancyTableTitle: "Category Wise Vacancy Details",
+    vacancyColumnName: "Category",
+    
+    stateWiseVacancy: [
+      { state: "General / Unreserved (UR)", total: 238, ur: 238, ews: 0, obc: 0, sc: 0, st: 0 },
+      { state: "Scheduled Caste (SC)", total: 95, ur: 0, ews: 0, obc: 0, sc: "95 (DSC-50, OSC-45)", st: 0 },
+      { state: "Backward Class - A (BC-A)", total: 45, ur: 0, ews: 0, obc: 45, sc: 0, st: 0 },
+      { state: "Backward Class - B (BC-B)", total: 27, ur: 0, ews: 0, obc: 27, sc: 0, st: 0 },
+      { state: "EWS", total: 45, ur: 0, ews: 45, obc: 0, sc: 0, st: 0 },
+      { state: "Total Posts", total: 450, ur: 238, ews: 45, obc: 72, sc: 95, st: 0 }
+    ],
+
+    selectionProcess: [
+      "Stage 1: Written Examination (100 Marks)",
+      "Stage 2: Post Graduate Degree/Diploma Weightage (Max 14 Marks)",
+      "Stage 3: Experience Weightage (Max 10 Marks - 2 Marks/Year)",
+      "Stage 4: Document Verification"
+    ],
+
+    howToApply: [
+      "Visit the official website haryanahealth.gov.in or uhsr.ac.in.",
+      "Click on the link for 'Recruitment of Medical Officers (HCMS-I)'.",
+      "Register using your basic details.",
+      "Fill the online application form and upload MBBS/PG Degree, Photo, and Signature.",
+      "Pay the application fee online.",
+      "Submit the form and take a printout."
+    ],
+
+    links: [
+      { title: "Apply Online (Active on 08/12/2025)", url: "http://haryanahealth.gov.in/" },
+      { title: "Download Notification PDF", url: "https://cdnbbsr.s3waas.gov.in/s31177967c7957072da3dc1db4ceb30e7a/uploads/2025/12/20251205838210414.pdf" }, 
+      { title: "Official Website", url: "http://haryanahealth.gov.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the last date to apply for Haryana Medical Officer?", answer: "The last date to apply is 07 January 2026." },
+      { question: "How many vacancies are there in Haryana Health Department?", answer: "There are a total of 450 vacancies for Medical Officers." },
+      { question: "What is the age limit?", answer: "Candidate must be between 22 to 35 years as on 07/01/2026." }
+    ]
+  },
   // --- 16. HPRCA Scientific Assistant (ID 16) ---
   {
     id: 16,
