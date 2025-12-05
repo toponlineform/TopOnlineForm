@@ -126,7 +126,6 @@ function JobDetails() {
     };
   }
 
-  // --- HELPER: FORMAT HEADERS CORRECTLY ---
   const formatHeader = (key) => {
     const upperKeys = ["ur", "obc", "sc", "st", "ews", "pwbd", "esm", "gen", "ph"];
     if (upperKeys.includes(key.toLowerCase())) {
@@ -135,7 +134,6 @@ function JobDetails() {
     return key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).trim();
   };
 
-  // --- SMART TABLE RENDERER (PET / Exam) ---
   const RenderSmartTable = ({ data, title }) => {
     if (!data || data.length === 0) return null;
     const isPet = Object.keys(data[0]).includes('activity');
@@ -190,7 +188,6 @@ function JobDetails() {
     );
   };
 
-  // --- GENERIC TABLE RENDERER (Vacancy / Salary) ---
   const RenderTable = ({ data, title, autoTotal = true }) => {
     if (!data || data.length === 0) return null;
     const headers = Object.keys(data[0]);
@@ -267,12 +264,15 @@ function JobDetails() {
       </Helmet>
 
       <h1 className="job-title">{job.title}</h1>
-      
-      {/* --- REMOVED POST DATE FROM HERE --- */}
-      
+
+      {/* --- SMART POST DATE (Conditional) --- */}
+      {job.postDate && (
+        <p style={{marginBottom:'10px', textAlign:'justify'}}><strong>Post Date : </strong> {job.postDate}</p>
+      )}
+
       <p style={{marginBottom:'20px', textAlign:'justify'}}><strong>Short Info : </strong> {job.shortInfo}</p>
       
-      {/* --- UPDATED DATES & FEES SECTION --- */}
+      {/* Dates & Fees Section */}
       {job.importantDates.length > 0 && (
         <table>
           <tbody>
@@ -290,7 +290,6 @@ function JobDetails() {
               </td>
               <td>
                 <ul>
-                  {/* --- FIX: Check if fees exist, else show 'Check Notification' --- */}
                   {job.applicationFee && job.applicationFee.length > 0 ? (
                     job.applicationFee.map((f, i) => (
                       <li key={i}><strong>{f.category}:</strong> {f.amount}</li>
@@ -325,7 +324,6 @@ function JobDetails() {
 
       {job.selectionProcess && (<><div className="section-header">Selection Process</div><ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.selectionProcess.map((item, index) => <li key={index} style={{marginBottom: '5px'}}><strong>{item.includes(":") ? item : `Step ${index+1}: ${item}`}</strong></li>)}</ol></>)}
 
-      {/* Exam Pattern Section */}
       {job.examPattern && (
         <>
           <div className="section-header">
@@ -349,7 +347,6 @@ function JobDetails() {
         </>
       )}
 
-      {/* Extra Sections */}
       {job.extraSections && job.extraSections.map((section, index) => (
         <div key={index}>
           {section.tableData ? (
