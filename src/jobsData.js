@@ -16,4 +16,4 @@ export const jobsData = [
   ...answerKeysData,
   ...syllabusData,
   ...previousPapersData
-];
+]
