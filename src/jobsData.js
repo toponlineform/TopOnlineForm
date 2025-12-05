@@ -45,8 +45,7 @@ export const jobsData = [
       { state: "Scheduled Caste (SC)", total: 95, ur: 0, ews: 0, obc: 0, sc: "95 (DSC-50, OSC-45)", st: 0 },
       { state: "Backward Class - A (BC-A)", total: 45, ur: 0, ews: 0, obc: 45, sc: 0, st: 0 },
       { state: "Backward Class - B (BC-B)", total: 27, ur: 0, ews: 0, obc: 27, sc: 0, st: 0 },
-      { state: "EWS", total: 45, ur: 0, ews: 45, obc: 0, sc: 0, st: 0 },
-      { state: "Total Posts", total: 450, ur: 238, ews: 45, obc: 72, sc: 95, st: 0 }
+      { state: "EWS", total: 45, ur: 0, ews: 45, obc: 0, sc: 0, st: 0 }
     ],
 
     selectionProcess: [
