@@ -4,7 +4,101 @@ export const jobsData = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+  // --- 25. BPSC AEDO Recruitment 2025 ---
+  {
+    id: 25,
+    slug: "bpsc-aedo-recruitment-2025",
+    shortTitle: "BPSC AEDO Recruitment 2025",
+    title: "BPSC AEDO Recruitment 2025 Apply Online for 935 Posts | Assistant Education Development Officer",
+    shortInfo: "Bihar Public Service Commission (BPSC) has released Advertisement No. 87/2025 for the recruitment of 935 Assistant Education Development Officer (AEDO) posts in the Education Department, Govt of Bihar. Candidates with a Graduation degree can apply online. Selection is based on a Written Exam (No Interview).",
+    postDate: "23/08/2025",
+    category: "Latest Jobs",
 
+    salary: "Pay Level-5 (Basic Pay ₹29,200/-) + Allowances",
+
+    importantDates: [
+      { label: "Notification Issued", value: "22/08/2025" },
+      { label: "Application Begin", value: "27/08/2025" },
+      { label: "Last Date for Apply", value: "26/09/2025" },
+      { label: "Exam Date", value: "To be notified" }
+    ],
+
+    // Fee Source: Para 7 of PDF
+    applicationFee: [
+      { category: "All Candidates (Gen/BC/EBC/SC/ST/Female)", amount: "₹100/-" },
+      { category: "Biometric Fee (If Aadhaar not provided)", amount: "₹200/- Extra" },
+      { category: "Payment Mode", amount: "Online (Debit/Credit Card/Net Banking)" }
+    ],
+
+    ageLimit: "Min 21 Years | Max 37 Years (Male), 40 Years (Female/BC/EBC), 42 Years (SC/ST) as on 01/08/2025.",
+
+    vacancyDetails: [
+      { postName: "Assistant Education Development Officer (AEDO)", totalPost: 935, eligibility: "Bachelor's Degree (Graduation) from a recognized University." }
+    ],
+
+    // Detailed Breakup (Source: PDF Page 1 Table)
+    vacancyTableTitle: "Category Wise Vacancy Details",
+    vacancyColumnName: "Category Name",
+
+    stateWiseVacancy: [
+      { "Category Name": "Unreserved (UR)", "Total Posts": 374, "Female Posts": 131 },
+      { "Category Name": "EWS", "Total Posts": 93, "Female Posts": 33 },
+      { "Category Name": "Scheduled Caste (SC)", "Total Posts": 150, "Female Posts": 53 },
+      { "Category Name": "Scheduled Tribe (ST)", "Total Posts": 10, "Female Posts": 4 },
+      { "Category Name": "Extremely Backward Class (EBC)", "Total Posts": 168, "Female Posts": 59 },
+      { "Category Name": "Backward Class (BC)", "Total Posts": 112, "Female Posts": 39 },
+      { "Category Name": "BC Ladies (BCL)", "Total Posts": 28, "Female Posts": 0 },
+      { "Category Name": "Total", "Total Posts": 935, "Female Posts": 319 }
+    ],
+
+    selectionProcess: [
+      "Written Examination (Objective Type) - 3 Papers",
+      "Document Verification",
+      "Note: There is NO Interview for this post."
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Objective Type (MCQ)",
+        "Negative Marking: 1/3rd (0.33) marks deducted for wrong answers.",
+        "Qualifying Marks: UR-40%, BC-36.5%, EBC-34%, SC/ST/Female-32%."
+      ],
+      stages: [
+        {
+          title: "Written Exam Pattern",
+          data: [
+            { subject: "Paper-1: General Language (Qualifying)", questions: "100 (Eng-30, Hindi-70)", marks: "100 (2 Hrs)" },
+            { subject: "Paper-2: General Studies", questions: 100, marks: "100 (2 Hrs)" },
+            { subject: "Paper-3: General Aptitude", questions: 100, marks: "100 (2 Hrs)" }
+          ]
+        }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official website onlinebpsc.bihar.gov.in.",
+      "Complete 'One Time Registration' (OTR) if not already done.",
+      "Login using Username and Password.",
+      "Click on 'Apply Online' for Assistant Education Development Officer (Advt 87/2025).",
+      "Fill the application form and upload scanned Photo and Signature.",
+      "Pay the application fee of ₹100/- online.",
+      "Submit the form and download the hard copy for future reference."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://onlinebpsc.bihar.gov.in/" },
+      { title: "Download Re-Open and Exam Date Notification PDF", url: "https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/4-12-25-1-Corrigendum-872025-AEDO-Online-Application-Date-reopened-Equipercentile_BPSC-20251204-tuvpn5.pdf"},
+      { title: "Download Notification PDF", url: "https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/22-8-25-4-Advertisement-872025-Assistant-Education-Development-OfficerAEDO-Education-Dept_BPSC-20250823-u3j8zm.pdf" }, // Replace with direct PDF link if hosted
+      { title: "Official Website", url: "https://www.bpsc.bihar.gov.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the qualification for BPSC AEDO?", answer: "Candidates must hold a Graduation Degree from a recognized university." },
+      { question: "Is there an interview for BPSC AEDO Recruitment?", answer: "No, the selection is based purely on the Written Examination." },
+      { question: "What is the application fee?", answer: "The application fee is ₹100/- for all categories." },
+      { question: "Is there negative marking in the exam?", answer: "Yes, 1/3rd (0.33) marks will be deducted for every wrong answer." }
+    ]
+  },
   // --- 24. JMI Delhi Non-Teaching Recruitment 2025 ---
   {
     id: 24,
