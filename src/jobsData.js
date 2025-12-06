@@ -20,7 +20,7 @@ export const jobsData = [
       { label: "Notification Issued", value: "22/08/2025" },
       { label: "Application Begin", value: "27/08/2025" },
       { label: "Last Date for Apply", value: "26/09/2025" },
-      { label: "Exam Date", value: "To be notified" }
+      { label: "Exam Date", value: "10.01.2026 to 13.01.2026 and 15.01.2026 to 16.01.2026" }
     ],
 
     // Fee Source: Para 7 of PDF
