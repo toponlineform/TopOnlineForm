@@ -67,7 +67,7 @@ function Home() {
   return (
     <div className="main-grid">
       <SEO title="Sarkari Result 2025" description="Latest Govt Jobs" keywords="Sarkari Result" url="https://toponlineform.com/" />
-      
+       
       <div className="action-cell"><a href="https://whatsapp.com/channel/0029Vb7TcG06LwHoTXhZKn2D" target="_blank" className="social-btn whatsapp full-width">Join WhatsApp Group</a></div>
       <div className="action-cell"><a href="https://telegram.org" target="_blank" className="social-btn telegram full-width">Join Telegram Channel</a></div>
       <div className="action-cell">
@@ -137,7 +137,7 @@ function JobDetails() {
   const RenderSmartTable = ({ data, title }) => {
     if (!data || data.length === 0) return null;
     const isPet = Object.keys(data[0]).includes('activity');
-    
+     
     const totalQuestions = data.reduce((sum, item) => {
       const val = parseFloat(item.questions);
       return !isNaN(val) ? sum + val : sum;
@@ -188,6 +188,7 @@ function JobDetails() {
     );
   };
 
+  // --- UPDATED RenderTable Component with Fix ---
   const RenderTable = ({ data, title, autoTotal = true }) => {
     if (!data || data.length === 0) return null;
     const headers = Object.keys(data[0]);
@@ -233,10 +234,20 @@ function JobDetails() {
                         <>
                           <td>Total</td>
                           {headers.slice(1).map((h, i) => {
-                             if (h === totalKey) return <td key={i} style={{color:'red'}}>{colTotals[h]}</td>;
+                             // --- Logic Fixed Here ---
+                             const totalIndex = headers.indexOf(totalKey);
+                             const currentIndex = headers.indexOf(h);
+
+                             if (h === totalKey) {
+                                 return <td key={i} style={{color:'red'}}>{colTotals[h]}</td>;
+                             } else if (currentIndex < totalIndex) {
+                                 // Add empty cell if the column is before Total (e.g. Group, Pay Level)
+                                 return <td key={i}></td>;
+                             }
+                             // Return null for columns AFTER Total (covered by colSpan below)
                              return null;
                           })}
-                          <td colSpan={headers.length - 2} style={{textAlign:'center', fontSize:'12px', color:'#555'}}>
+                          <td colSpan={headers.length - 1 - headers.indexOf(totalKey)} style={{textAlign:'center', fontSize:'12px', color:'#555'}}>
                             Check Notification for detailed breakup
                           </td>
                         </>
@@ -271,7 +282,7 @@ function JobDetails() {
       )}
 
       <p style={{marginBottom:'20px', textAlign:'justify'}}><strong>Short Info : </strong> {job.shortInfo}</p>
-      
+       
       {/* Dates & Fees Section */}
       {job.importantDates.length > 0 && (
         <table>
@@ -303,20 +314,20 @@ function JobDetails() {
           </tbody>
         </table>
       )}
-      
+       
       {job.ageLimit && (
         <><div className="section-header">Age Limit</div><p style={{textAlign: 'center', border: '1px solid #000', padding: '10px'}}>{job.ageLimit}</p>
         {job.ageRelaxation && (<div style={{marginTop: '15px', padding: '0 10px'}}><strong>Age Relaxation:</strong><ul style={{listStyleType: 'disc', marginLeft: '30px', marginTop: '5px'}}>{job.ageRelaxation.map((item, index) => <li key={index} style={{marginBottom: '5px'}}>{item}</li>)}</ul></div>)}</>
       )}
 
       {job.vacancyDetails.length > 0 && <RenderTable data={job.vacancyDetails} title="Vacancy Details" />}
-      
+       
       {(job.stateWiseVacancy || job.zoneWiseGraduate || job.zoneWiseUG) && (
-         <>
+          <>
             {job.stateWiseVacancy && <RenderTable data={job.stateWiseVacancy} title={job.vacancyTableTitle || "State Wise Vacancy Details"} />}
             {job.zoneWiseGraduate && <RenderTable data={job.zoneWiseGraduate} title="Graduate Level Vacancy (Zone Wise)" />}
             {job.zoneWiseUG && <RenderTable data={job.zoneWiseUG} title="Undergraduate Level Vacancy (Zone Wise)" />}
-         </>
+          </>
       )}
 
       {job.salary && (<><div className="section-header">Pay Scale / Salary</div><div style={{textAlign: 'center', border: '1px solid #000', padding: '15px', fontWeight: 'bold', fontSize: '16px', backgroundColor: '#f9f9f9', color: '#008000'}}>{job.salary}</div></>)}
@@ -331,7 +342,7 @@ function JobDetails() {
           </div>
           <div style={{padding: '10px'}}>
             {job.examPattern.details && (<ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>{job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}</ul>)}
-            
+             
             {job.examPattern.table && <RenderSmartTable data={job.examPattern.table} />}
             {job.examPattern.tier1 && <RenderSmartTable data={job.examPattern.tier1} title="Tier-I Exam Pattern" />}
             {job.examPattern.tier2 && <RenderSmartTable data={job.examPattern.tier2} title="Tier-II Exam Pattern" />}
@@ -364,7 +375,7 @@ function JobDetails() {
       ))}
 
       {job.howToApply && (<><div className="section-header">How to Apply</div><ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.howToApply.map((item, index) => <li key={index} style={{marginBottom: '10px'}}>{item}</li>)}</ol></>)}
-      
+       
       <div className="section-header">Important Links</div>
       <table className="important-links"><tbody>
           {job.links && job.links.map((link, index) => (
