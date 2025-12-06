@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link, useParams, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, X, Share2 } from 'lucide-react'; // <--- Import Icons
+import { Search, X } from 'lucide-react'; 
 import { jobsData } from './jobsData';
 import About from './About';
 import Contact from './Contact';
@@ -10,11 +10,12 @@ import SEO from './SEO';
 import CategoryPage from './CategoryPage';
 import ActiveJobs from './ActiveJobs';
 import SearchResults from './SearchResults';
+import NotFound from './NotFound'; // <--- ✅ ADDED: Import NotFound
 
 // --- Navbar ---
 function Navbar() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [isSearchOpen, setIsSearchOpen] = useState(false); // Toggle State
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
@@ -22,7 +23,7 @@ function Navbar() {
     if (searchTerm.trim()) {
       navigate(`/search?q=${encodeURIComponent(searchTerm)}`);
       setSearchTerm("");
-      setIsSearchOpen(false); // Close bar after search
+      setIsSearchOpen(false);
     }
   };
 
@@ -47,7 +48,7 @@ function Navbar() {
                 <Link to="/syllabus">Syllabus</Link>
               </div>
               
-              {/* Search Icon Button (Absolute Right for Desktop, Relative for Mobile) */}
+              {/* Search Icon Button */}
               <button 
                 onClick={() => setIsSearchOpen(true)} 
                 style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: 'white', marginLeft: '15px', display: 'flex', alignItems: 'center' }}
@@ -144,7 +145,6 @@ function Home() {
       <div className="action-cell"><a href="https://whatsapp.com/channel/0029Vb7TcG06LwHoTXhZKn2D" target="_blank" className="social-btn whatsapp full-width">Join WhatsApp Group</a></div>
       <div className="action-cell"><a href="https://telegram.org" target="_blank" className="social-btn telegram full-width">Join Telegram Channel</a></div>
       
-      {/* Grid Search Form (Still useful on mobile/desktop main body) */}
       <div className="action-cell">
          <form className="grid-search-form" onSubmit={(e) => {
             e.preventDefault();
@@ -157,7 +157,7 @@ function Home() {
               onChange={(e) => setGridSearch(e.target.value)}
             />
             <button type="submit">Search</button>
-          </form>
+         </form>
       </div>
 
       <JobBox title="Latest Jobs" jobs={latestJobs} linkTo="/latest-jobs" />
@@ -173,10 +173,10 @@ function Home() {
 // --- Job Details ---
 function JobDetails() {
   const { slug } = useParams();
-  const navigate = useNavigate(); // Added for Navigation
+  const navigate = useNavigate();
   const job = jobsData.find((j) => j.slug === slug);
   
-  // 1. Handle "Job Not Found" nicely
+  // Handle "Job Not Found" -> Redirect to Custom 404 (Optional, currently shows inline error)
   if (!job) return (
     <div style={{textAlign:'center', padding: '50px'}}>
       <h2>Job Not Found</h2>
@@ -194,8 +194,7 @@ function JobDetails() {
   const validThrough = lastDateItem ? convertDate(lastDateItem.value) : null;
   const datePosted = convertDate(job.postDate);
 
-  // --- NEW: Dynamic Header Logic for "How to Apply" ---
-  let stepsHeader = "How to Apply"; // Default fallback
+  let stepsHeader = "How to Apply";
   const cat = job.category.toLowerCase();
   
   if (cat.includes("admit card")) {
@@ -232,26 +231,15 @@ function JobDetails() {
 
   const formatHeader = (key) => {
     const upperKeys = ["ur", "obc", "sc", "st", "ews", "pwbd", "esm", "gen", "ph"];
-    if (upperKeys.includes(key.toLowerCase())) {
-      return key.toUpperCase();
-    }
+    if (upperKeys.includes(key.toLowerCase())) return key.toUpperCase();
     return key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).trim();
   };
 
   const RenderSmartTable = ({ data, title }) => {
     if (!data || data.length === 0) return null;
     const isPet = Object.keys(data[0]).includes('activity');
-     
-    const totalQuestions = data.reduce((sum, item) => {
-      const val = parseFloat(item.questions);
-      return !isNaN(val) ? sum + val : sum;
-    }, 0);
-
-    const totalMarks = data.reduce((sum, item) => {
-      const val = parseFloat(item.marks);
-      return !isNaN(val) ? sum + val : sum;
-    }, 0);
-
+    const totalQuestions = data.reduce((sum, item) => { const val = parseFloat(item.questions); return !isNaN(val) ? sum + val : sum; }, 0);
+    const totalMarks = data.reduce((sum, item) => { const val = parseFloat(item.marks); return !isNaN(val) ? sum + val : sum; }, 0);
     const showTotalRow = !isPet && (totalQuestions > 0 || totalMarks > 0);
 
     return (
@@ -259,32 +247,10 @@ function JobDetails() {
          {title && <div className="section-header" style={{fontSize:'16px', marginTop:'15px', marginBottom:'0'}}>{title}</div>}
          <div style={{overflowX: 'auto'}}>
            <table style={{minWidth: '100%'}}>
-             <thead>
-               <tr style={{background: '#f2f2f2'}}>
-                 {isPet ? (
-                   <><th>Activity</th><th>Male</th><th>Female</th></>
-                 ) : (
-                   <><th>Subject</th><th>Questions</th><th>Marks</th></>
-                 )}
-               </tr>
-             </thead>
+             <thead><tr style={{background: '#f2f2f2'}}>{isPet ? (<><th>Activity</th><th>Male</th><th>Female</th></>) : (<><th>Subject</th><th>Questions</th><th>Marks</th></>)}</tr></thead>
              <tbody>
-               {data.map((row, i) => (
-                 <tr key={i}>
-                   {isPet ? (
-                     <><td>{row.activity}</td><td>{row.male}</td><td>{row.female}</td></>
-                   ) : (
-                     <><td>{row.subject}</td><td>{row.questions}</td><td>{row.marks}</td></>
-                   )}
-                 </tr>
-               ))}
-               {showTotalRow && (
-                  <tr style={{fontWeight: 'bold', background: '#e9e9e9'}}>
-                    <td>Total</td>
-                    <td>{totalQuestions}</td>
-                    <td>{totalMarks}</td>
-                  </tr>
-               )}
+               {data.map((row, i) => (<tr key={i}>{isPet ? (<><td>{row.activity}</td><td>{row.male}</td><td>{row.female}</td></>) : (<><td>{row.subject}</td><td>{row.questions}</td><td>{row.marks}</td></>)}</tr>))}
+               {showTotalRow && (<tr style={{fontWeight: 'bold', background: '#e9e9e9'}}><td>Total</td><td>{totalQuestions}</td><td>{totalMarks}</td></tr>)}
              </tbody>
            </table>
          </div>
@@ -297,21 +263,14 @@ function JobDetails() {
     const headers = Object.keys(data[0]);
     const totalKey = headers.find(h => h.toLowerCase().includes('total'));
     const isVacancyTable = headers.some(h => ['ur', 'sc', 'st', 'obc'].includes(h.toLowerCase()));
-
     let showTotal = false;
     let colTotals = {};
 
     if (autoTotal) {
         headers.forEach(header => {
             if (totalKey && header !== totalKey) return;
-            const sum = data.reduce((acc, row) => {
-                const val = parseFloat(row[header]);
-                return !isNaN(val) ? acc + val : acc;
-            }, 0);
-            if (sum > 0) {
-                colTotals[header] = sum;
-                showTotal = true;
-            }
+            const sum = data.reduce((acc, row) => { const val = parseFloat(row[header]); return !isNaN(val) ? acc + val : acc; }, 0);
+            if (sum > 0) { colTotals[header] = sum; showTotal = true; }
         });
     }
 
@@ -320,41 +279,15 @@ function JobDetails() {
          {title && <div className="section-header" style={{fontSize:'16px', marginTop:'15px', marginBottom:'0'}}>{title}</div>}
          <div style={{overflowX: 'auto'}}>
            <table style={{minWidth: '100%'}}>
-             <thead>
-               <tr style={{background: '#f2f2f2'}}>
-                 {headers.map((h, i) => <th key={i}>{formatHeader(h)}</th>)}
-               </tr>
-             </thead>
+             <thead><tr style={{background: '#f2f2f2'}}>{headers.map((h, i) => <th key={i}>{formatHeader(h)}</th>)}</tr></thead>
              <tbody>
-               {data.map((row, i) => (
-                 <tr key={i}>
-                   {headers.map((h, j) => <td key={j}>{row[h]}</td>)}
-                 </tr>
-               ))}
+               {data.map((row, i) => (<tr key={i}>{headers.map((h, j) => <td key={j}>{row[h]}</td>)}</tr>))}
                {showTotal && (
                   <tr style={{fontWeight: 'bold', background: '#e9e9e9'}}>
                       {isVacancyTable && totalKey ? (
-                        <>
-                          <td>Total</td>
-                          {headers.slice(1).map((h, i) => {
-                             const totalIndex = headers.indexOf(totalKey);
-                             const currentIndex = headers.indexOf(h);
-                             if (h === totalKey) {
-                                 return <td key={i} style={{color:'red'}}>{colTotals[h]}</td>;
-                             } else if (currentIndex < totalIndex) {
-                                 return <td key={i}></td>;
-                             }
-                             return null;
-                          })}
-                          <td colSpan={headers.length - 1 - headers.indexOf(totalKey)} style={{textAlign:'center', fontSize:'12px', color:'#555'}}>
-                            Check Notification for detailed breakup
-                          </td>
-                        </>
+                        <><td>Total</td>{headers.slice(1).map((h, i) => { if (h === totalKey) return <td key={i} style={{color:'red'}}>{colTotals[h]}</td>; return <td key={i}></td>; })}<td colSpan={headers.length - 1 - headers.indexOf(totalKey)} style={{textAlign:'center', fontSize:'12px', color:'#555'}}>Check Notification for detailed breakup</td></>
                       ) : (
-                        headers.map((h, i) => {
-                          if (i === 0) return <td key={i} style={{color:'black'}}>Total</td>;
-                          return <td key={i} style={{color:'red'}}>{colTotals[h] || "-"}</td>;
-                        })
+                        headers.map((h, i) => { if (i === 0) return <td key={i} style={{color:'black'}}>Total</td>; return <td key={i} style={{color:'red'}}>{colTotals[h] || "-"}</td>; })
                       )}
                   </tr>
                )}
@@ -368,47 +301,31 @@ function JobDetails() {
   return (
     <div className="job-container">
       <SEO title={job.title} description={job.shortInfo} keywords={job.title} url={`https://toponlineform.com/${job.slug}`} />
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(jobSchema)}</script>
-        {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
-      </Helmet>
+      <Helmet><script type="application/ld+json">{JSON.stringify(jobSchema)}</script>{faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}</Helmet>
 
       <h1 className="job-title">{job.title}</h1>
       {job.postDate && (<p style={{marginBottom:'10px', textAlign:'justify'}}><strong>Post Date : </strong> {job.postDate}</p>)}
       <p style={{marginBottom:'20px', textAlign:'justify'}}><strong>Short Info : </strong> {job.shortInfo}</p>
-       
+      
       {job.importantDates.length > 0 && (
-        <table>
-          <tbody>
-            <tr>
-              <th className="green-header" width="50%">Dates</th>
-              <th className="green-header" width="50%">Fees</th>
-            </tr>
-            <tr>
-              <td><ul>{job.importantDates.map((d, i) => <li key={i}><strong>{d.label}:</strong> {d.value}</li>)}</ul></td>
-              <td><ul>{job.applicationFee && job.applicationFee.length > 0 ? job.applicationFee.map((f, i) => <li key={i}><strong>{f.category}:</strong> {f.amount}</li>) : <li>Check Notification</li>}</ul></td>
-            </tr>
-          </tbody>
-        </table>
+        <table><tbody><tr><th className="green-header" width="50%">Dates</th><th className="green-header" width="50%">Fees</th></tr><tr><td><ul>{job.importantDates.map((d,i)=><li key={i}><strong>{d.label}:</strong> {d.value}</li>)}</ul></td><td><ul>{job.applicationFee && job.applicationFee.length > 0 ? (job.applicationFee.map((f,i)=><li key={i}><strong>{f.category}:</strong> {f.amount}</li>)) : (<li>Check Notification</li>)}</ul></td></tr></tbody></table>
       )}
-       
-      {job.ageLimit && (
-        <><div className="section-header">Age Limit</div><p style={{textAlign: 'center', border: '1px solid #000', padding: '10px'}}>{job.ageLimit}</p>
-        {job.ageRelaxation && (<div style={{marginTop: '15px', padding: '0 10px'}}><strong>Age Relaxation:</strong><ul style={{listStyleType: 'disc', marginLeft: '30px', marginTop: '5px'}}>{job.ageRelaxation.map((item, index) => <li key={index} style={{marginBottom: '5px'}}>{item}</li>)}</ul></div>)}</>
-      )}
+      
+      {job.ageLimit && (<><div className="section-header">Age Limit</div><p style={{textAlign: 'center', border: '1px solid #000', padding: '10px'}}>{job.ageLimit}</p>{job.ageRelaxation && (<div style={{marginTop: '15px', padding: '0 10px'}}><strong>Age Relaxation:</strong><ul style={{listStyleType: 'disc', marginLeft: '30px', marginTop: '5px'}}>{job.ageRelaxation.map((item, index) => <li key={index} style={{marginBottom: '5px'}}>{item}</li>)}</ul></div>)}</>)}
 
       {job.vacancyDetails.length > 0 && <RenderTable data={job.vacancyDetails} title="Vacancy Details" />}
-       
+      
       {(job.stateWiseVacancy || job.zoneWiseGraduate || job.zoneWiseUG) && (
-          <>
+         <>
             {job.stateWiseVacancy && <RenderTable data={job.stateWiseVacancy} title={job.vacancyTableTitle || "State Wise Vacancy Details"} />}
             {job.zoneWiseGraduate && <RenderTable data={job.zoneWiseGraduate} title="Graduate Level Vacancy (Zone Wise)" />}
             {job.zoneWiseUG && <RenderTable data={job.zoneWiseUG} title="Undergraduate Level Vacancy (Zone Wise)" />}
-          </>
+         </>
       )}
 
       {job.salary && (<><div className="section-header">Pay Scale / Salary</div><div style={{textAlign: 'center', border: '1px solid #000', padding: '15px', fontWeight: 'bold', fontSize: '16px', backgroundColor: '#f9f9f9', color: '#008000'}}>{job.salary}</div></>)}
       {job.salaryDetails && <RenderTable data={job.salaryDetails} title="Post Wise Salary / Pay Level" autoTotal={false} />}
+
       {job.selectionProcess && (<><div className="section-header">Selection Process</div><ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.selectionProcess.map((item, index) => <li key={index} style={{marginBottom: '5px'}}><strong>{item.includes(":") ? item : `Step ${index+1}: ${item}`}</strong></li>)}</ol></>)}
 
       {job.examPattern && (
@@ -433,20 +350,14 @@ function JobDetails() {
 
       {job.extraSections && job.extraSections.map((section, index) => (
         <div key={index}>
-          {section.tableData ? <RenderTable data={section.tableData} title={section.title} autoTotal={false} /> : (<><div className="section-header">{section.title}</div><div style={{padding: '10px'}}>{section.text && <p style={{textAlign: 'justify', whiteSpace: 'pre-line'}}>{section.text}</p>}{section.list && (<ul style={{listStyleType: 'disc', marginLeft: '30px'}}>{section.list.map((li, i) => <li key={i} style={{marginBottom: '5px'}}>{li}</li>)}</ul>)}</div></>)}
+          {section.tableData ? (<RenderTable data={section.tableData} title={section.title} autoTotal={false} />) : (
+             <><div className="section-header">{section.title}</div><div style={{padding: '10px'}}>{section.text && <p style={{textAlign: 'justify', whiteSpace: 'pre-line'}}>{section.text}</p>}{section.list && (<ul style={{listStyleType: 'disc', marginLeft: '30px'}}>{section.list.map((li, i) => <li key={i} style={{marginBottom: '5px'}}>{li}</li>)}</ul>)}</div></>
+          )}
         </div>
       ))}
 
-      {/* --- UPDATED: Smart Header for "How to Apply" --- */}
-      {job.howToApply && (
-        <>
-          <div className="section-header">{stepsHeader}</div>
-          <ol style={{marginLeft: '30px', padding: '10px 0'}}>
-            {job.howToApply.map((item, index) => <li key={index} style={{marginBottom: '10px'}}>{item}</li>)}
-          </ol>
-        </>
-      )}
-       
+      {job.howToApply && (<><div className="section-header">{stepsHeader}</div><ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.howToApply.map((item, index) => <li key={index} style={{marginBottom: '10px'}}>{item}</li>)}</ol></>)}
+      
       <div className="section-header">Important Links</div>
       <table className="important-links"><tbody>{job.links && job.links.map((link, index) => (<tr key={index}><td><strong>{link.title}</strong></td><td align="center"><a href={link.url} className="click-here" target="_blank" rel="noreferrer">Click Here</a></td></tr>))}</tbody></table>
       {job.faqs && job.faqs.length > 0 && (<><div className="section-header">Frequently Asked Questions (FAQs)</div><div style={{padding: '15px', border: '1px solid #ddd', marginTop: '10px'}}>{job.faqs.map((faq, index) => (<div key={index} style={{marginBottom: '15px'}}><div style={{fontWeight: 'bold', color: '#d32f2f', marginBottom: '5px'}}>Q.{index + 1}: {faq.question}</div><div style={{color: '#333'}}>Ans: {faq.answer}</div></div>))}</div></>)}
@@ -476,6 +387,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
+        
+        {/* ✅ ADDED: Catch-all Route for 404 */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>
