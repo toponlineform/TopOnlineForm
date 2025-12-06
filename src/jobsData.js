@@ -4,6 +4,7 @@ export const jobsData = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+
   // --- 25. BPSC AEDO Recruitment 2025 ---
   {
     id: 25,
@@ -37,17 +38,17 @@ export const jobsData = [
     ],
 
     // Detailed Breakup (Source: PDF Page 1 Table)
-    vacancyTableTitle: "Category Wise Vacancy Details",
+     vacancyTableTitle: "Category Wise Vacancy Details",
     vacancyColumnName: "Category Name",
 
     stateWiseVacancy: [
-      { "Category Name": "Unreserved (UR)", "Total Posts": 374, "Female Posts": 131 },
-      { "Category Name": "EWS", "Total Posts": 93, "Female Posts": 33 },
-      { "Category Name": "Scheduled Caste (SC)", "Total Posts": 150, "Female Posts": 53 },
-      { "Category Name": "Scheduled Tribe (ST)", "Total Posts": 10, "Female Posts": 4 },
-      { "Category Name": "Extremely Backward Class (EBC)", "Total Posts": 168, "Female Posts": 59 },
-      { "Category Name": "Backward Class (BC)", "Total Posts": 112, "Female Posts": 39 },
-      { "Category Name": "BC Ladies (BCL)", "Total Posts": 28, "Female Posts": 0 }
+      { "Category Name": "Unreserved (UR)", "Total Posts": 374, "Male Posts": 243, "Female Posts": 131 },
+      { "Category Name": "EWS", "Total Posts": 93, "Male Posts": 60, "Female Posts": 33 },
+      { "Category Name": "Scheduled Caste (SC)", "Total Posts": 150, "Male Posts": 97, "Female Posts": 53 },
+      { "Category Name": "Scheduled Tribe (ST)", "Total Posts": 10, "Male Posts": 6, "Female Posts": 4 },
+      { "Category Name": "Extremely Backward Class (EBC)", "Total Posts": 168, "Male Posts": 109, "Female Posts": 59 },
+      { "Category Name": "Backward Class (BC)", "Total Posts": 112, "Male Posts": 73, "Female Posts": 39 },
+      { "Category Name": "BC Ladies (BCL)", "Total Posts": 28, "Male Posts": 28, "Female Posts": 0 }
     ],
 
     selectionProcess: [
