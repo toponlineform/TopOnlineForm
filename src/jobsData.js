@@ -2631,6 +2631,394 @@ export const jobsData = [
   // ==================================================
   //              RESULTS (ID 3001 - 4000)
   // ==================================================
+  // --- 3010. AIIMS Group A REGA Final Result (ID 3010) ---
+  {
+    id: 3010,
+    slug: "aiims-group-a-rega-final-result-2025",
+    shortTitle: "AIIMS Group A REGA Final Result",
+    title: "AIIMS Group A Non-Faculty (REGA) Final Result 2025 Declared | Download Merit List",
+    shortInfo: "All India Institute of Medical Sciences (AIIMS), New Delhi has declared the Final Result for the Recruitment Examination of Group-A (Non-Faculty) posts. Candidates can check their roll numbers in the selected list PDF.",
+    postDate: "06/12/2025",
+    category: "Result",
+    
+    importantDates: [
+      { label: "Result Declared", value: "05/12/2025" },
+      { label: "Exam Date", value: "November 2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Group A Non-Faculty (Various Posts)", totalPost: "Various", eligibility: "As per Notification" }
+    ],
+
+    howToApply: [
+      "Visit aiimsexams.ac.in.",
+      "Go to 'Results' -> 'Recruitment'.",
+      "Click on 'Final Result for Group-A (Non-Faculty)'.",
+      "Download the PDF and check your Roll Number."
+    ],
+
+    links: [
+      { title: "Download Final Result PDF", url: "https://www.aiimsexams.ac.in/" },
+      { title: "Official Website", url: "https://www.aiimsexams.ac.in/" }
+    ]
+  },
+
+  // --- 3009. Punjab Special Teacher Result (ID 3009) ---
+  {
+    id: 3009,
+    slug: "punjab-prt-tgt-special-teacher-result-2025",
+    shortTitle: "Punjab Special Teacher Result 2025",
+    title: "Punjab PRT & TGT Special Teacher Result 2025 Out | Merit List & Cut Off",
+    shortInfo: "Punjab Education Recruitment Board has released the Result and Merit List for PRT and TGT Special Educator Recruitment 2025. Candidates can check their marks and selection status.",
+    postDate: "06/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Declared", value: "03/12/2025" },
+      { label: "Exam Date", value: "15-16 Nov 2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "PRT Special Educator", totalPost: 332, eligibility: "12th + D.Ed (Special)" },
+      { postName: "TGT Special Educator", totalPost: 393, eligibility: "Graduation + B.Ed (Special)" },
+      { postName: "Total Vacancies", totalPost: 725, eligibility: "-" }
+    ],
+
+    howToApply: [
+      "Visit educationrecruitmentboard.com.",
+      "Login with Registration No & Password.",
+      "Click on 'Result' dashboard.",
+      "Download Scorecard and Merit List."
+    ],
+
+    links: [
+      { title: "Check Result / Score Card", url: "https://educationrecruitmentboard.com/" },
+      { title: "Official Website", url: "https://educationrecruitmentboard.com/" }
+    ]
+  },
+
+  // --- 3008. BCC Bank Result (ID 3008) ---
+  {
+    id: 3008,
+    slug: "bcc-bank-junior-assistant-result-2025",
+    shortTitle: "BCC Bank Result 2025",
+    title: "BCC Bank Junior Assistant & Attender Result 2025 Out | Check Selection List",
+    shortInfo: "Bangalore City Cooperative Bank Limited (BCC Bank) has announced the Result for Junior Assistant and Attender posts. Candidates selected for the interview/document verification can download the list.",
+    postDate: "06/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Declared", value: "04/12/2025" },
+      { label: "Exam Date", value: "19/10/2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Junior Assistant", totalPost: 62, eligibility: "Graduate" },
+      { postName: "Attender", totalPost: 12, eligibility: "10th Pass" }
+    ],
+
+    howToApply: [
+      "Visit bccbl.co.in.",
+      "Click on 'Recruitment 2025 - Results'.",
+      "Download the PDF of selected candidates.",
+      "Check your Roll Number for Interview schedule."
+    ],
+
+    links: [
+      { title: "Download Result PDF", url: "https://bccbl.co.in/" },
+      { title: "Official Website", url: "https://bccbl.co.in/" }
+    ]
+  },
+
+  // --- 3007. DSSSB PHNO Result (ID 3007) ---
+  {
+    id: 3007,
+    slug: "dsssb-public-health-nursing-officer-result-2025",
+    shortTitle: "DSSSB PHNO Result 2025",
+    title: "DSSSB Public Health Nursing Officer Result 2025 Out | Post Code 30/24 Cut Off",
+    shortInfo: "Delhi Subordinate Services Selection Board (DSSSB) has declared the Marks and Result for Public Health Nursing Officer (Post Code 30/24). Candidates can check their marks in the OARS module.",
+    postDate: "06/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Declared", value: "03/12/2025" },
+      { label: "Exam Date", value: "26-27 July 2025" },
+      { label: "e-Dossier Upload", value: "08 Dec to 22 Dec 2025" }
+    ],
+
+    applicationFee: [],
+    
+    vacancyDetails: [
+      { postName: "Public Health Nursing Officer (30/24)", totalPost: 46, eligibility: "B.Sc Nursing + Registration" }
+    ],
+
+    extraSections: [
+      {
+        title: "Cut-Off Marks (Out of 200)",
+        tableData: [
+          { "Category": "UR", "Cut Off": "119.36" },
+          { "Category": "EWS", "Cut Off": "109.08" },
+          { "Category": "OBC (Delhi)", "Cut Off": "97.30" },
+          { "Category": "SC", "Cut Off": "101.88" },
+          { "Category": "ST", "Cut Off": "88.17" }
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Visit dsssbonline.nic.in.",
+      "Login to your account (OARS).",
+      "Click on 'View Result'.",
+      "Check your Marks and Shortlist Status."
+    ],
+
+    links: [
+      { title: "Check Result (OARS Login)", url: "https://dsssbonline.nic.in/" },
+      { title: "Download Result Notice PDF", url: "https://dsssb.delhi.gov.in/" },
+      { title: "Official Website", url: "https://dsssb.delhi.gov.in/" }
+    ]
+  },
+
+  // --- 3006. RSMSSB Agriculture Supervisor (ID 3006) ---
+  {
+    id: 3006,
+    slug: "rsmssb-agriculture-supervisor-final-result-2025",
+    shortTitle: "RSMSSB Agriculture Supervisor Final Result",
+    title: "RSMSSB Agriculture Supervisor Final Result 2025 Declared | Final Recommendation List",
+    shortInfo: "Rajasthan Staff Selection Board (RSSB) has released the Final Recommendation List and Cut-Off Marks for Agriculture Supervisor Recruitment 2025. Selected candidates are recommended for appointment.",
+    postDate: "06/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Final Result Declared", value: "03/12/2025" },
+      { label: "Exam Date", value: "04 Feb 2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Agriculture Supervisor", totalPost: 430, eligibility: "B.Sc Agriculture / 12th Ag" }
+    ],
+
+    extraSections: [
+      {
+        title: "Final Cut-Off Marks (Non-TSP)",
+        tableData: [
+          { "Category": "General (Male)", "Cut Off": "234.04" },
+          { "Category": "General (Fem)", "Cut Off": "229.91" },
+          { "Category": "EWS (Gen)", "Cut Off": "212.00" },
+          { "Category": "SC (Gen)", "Cut Off": "205.47" },
+          { "Category": "ST (Gen)", "Cut Off": "206.64" },
+          { "Category": "OBC (Gen)", "Cut Off": "229.58" },
+          { "Category": "MBC (Gen)", "Cut Off": "221.84" }
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Visit rssb.rajasthan.gov.in.",
+      "Go to 'Results' section.",
+      "Click on 'Agriculture Supervisor 2025: Final Recommendation'.",
+      "Download the PDF and check your Roll Number."
+    ],
+
+    links: [
+      { title: "Download Final Result PDF", url: "https://rssb.rajasthan.gov.in/" },
+      { title: "Official Website", url: "https://rssb.rajasthan.gov.in/" }
+    ]
+  },
+  // --- 3005. IPPB GDS Executive (ID 3005) ---
+  {
+    id: 3005,
+    slug: "ippb-gds-executive-result-2025",
+    shortTitle: "IPPB GDS Executive Result 2025",
+    title: "IPPB GDS Executive Result 2025 Out | Download State-Wise Merit List PDF",
+    shortInfo: "India Post Payments Bank (IPPB) has declared the Result and Merit List for the recruitment of Gramin Dak Sevak (GDS) Executive. The result is based on graduation merit. Shortlisted candidates will be called for Document Verification.",
+    postDate: "05/12/2025",
+    category: "Result",
+    
+    importantDates: [
+      { label: "Result Declared", value: "02/12/2025" },
+      { label: "DV Dates", value: "Check Merit List" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "GDS Executive", totalPost: 348, eligibility: "Graduation + GDS Experience" }
+    ],
+
+    howToApply: [
+      "Visit ippbonline.com -> Careers.",
+      "Click on 'Recruitment of GDS Executive'.",
+      "Download the State-Wise Merit List PDF.",
+      "Search for your Name/Roll Number.",
+      "If selected, check email for DV details."
+    ],
+
+    links: [
+      { title: "Download Result (Merit List PDF)", url: "https://www.ippbonline.com/web/ippb/current-openings" },
+      { title: "Official Website", url: "https://www.ippbonline.com/" }
+    ]
+  },
+
+  // --- 3004. ONGC Apprentice (ID 3004) ---
+  {
+    id: 3004,
+    slug: "ongc-apprentice-result-2025",
+    shortTitle: "ONGC Apprentice Result 2025",
+    title: "ONGC Apprentice Result 2025 Declared | Download Merit List & Cut Off",
+    shortInfo: "Oil and Natural Gas Corporation (ONGC) has released the Merit List for Apprentice Recruitment 2025. Candidates selected for Document Verification can check their names in the result PDF.",
+    postDate: "05/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Declared", value: "03/12/2025" },
+      { label: "DV Dates", value: "Check Email/SMS" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Apprentice", totalPost: 2623, eligibility: "10th/12th/ITI/Degree/Diploma" }
+    ],
+
+    howToApply: [
+      "Visit ongcindia.com.",
+      "Go to 'Career' -> 'Apprentice Recruitment'.",
+      "Download the Result PDF for your Work Centre.",
+      "Search your Registration Number.",
+      "Follow instructions for Document Verification."
+    ],
+
+    links: [
+      { title: "Download Result (Merit List)", url: "https://ongcindia.com/" },
+      { title: "Official Website", url: "https://ongcindia.com/" }
+    ]
+  },
+
+  // --- 3003. RSSB Rajasthan Patwari (ID 3003) ---
+  {
+    id: 3003,
+    slug: "rssb-rajasthan-patwari-result-2025",
+    shortTitle: "Rajasthan Patwari Result 2025",
+    title: "RSSB Rajasthan Patwari Result 2025 Out | Cut Off & Merit List PDF",
+    shortInfo: "Rajasthan Staff Selection Board (RSSB) has declared the Result for Patwari Direct Recruitment 2025. Candidates can download the list of selected candidates for Document Verification.",
+    postDate: "05/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Declared", value: "02/12/2025" },
+      { label: "Exam Date", value: "17/08/2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Patwari", totalPost: "4543+", eligibility: "Graduate + Computer Diploma" }
+    ],
+    
+    // Cut Off Table (From Search Result)
+    extraSections: [
+      {
+        title: "Category Wise Cut-Off Marks (Non-TSP)",
+        tableData: [
+          { "Category": "General (GEN)", "Cut Off": "220.35" },
+          { "Category": "General (Fem)", "Cut Off": "210.78" },
+          { "Category": "EWS (Gen)", "Cut Off": "210.05" },
+          { "Category": "SC (Gen)", "Cut Off": "191.45" },
+          { "Category": "ST (Gen)", "Cut Off": "187.30" },
+          { "Category": "OBC (Gen)", "Cut Off": "219.22" },
+          { "Category": "MBC (Gen)", "Cut Off": "206.10" }
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Visit rssb.rajasthan.gov.in.",
+      "Click on 'Results'.",
+      "Download 'Patwari 2025: List of Selected Candidates'.",
+      "Search your Roll Number in the PDF."
+    ],
+
+    links: [
+      { title: "Download Result & Cut Off PDF", url: "https://rssb.rajasthan.gov.in/" },
+      { title: "Official Website", url: "https://rssb.rajasthan.gov.in/" }
+    ]
+  },
+
+  // --- 3002. KTET Result (ID 3002) ---
+  {
+    id: 3002,
+    slug: "ktet-result-2025-may-june",
+    shortTitle: "KTET Result May/June 2025",
+    title: "KTET Result 2025 Declared (May & June Session) | Check Score Card",
+    shortInfo: "Kerala Pareeksha Bhavan has released the results for Kerala Teacher Eligibility Test (KTET) May & June 2025 sessions. Candidates can check their marks by entering Registration Number and DOB.",
+    postDate: "05/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Date", value: "03/12/2025" },
+      { label: "Exam Date", value: "18 & 19 Sep 2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "KTET (Category I, II, III, IV)", totalPost: "N/A", eligibility: "Teacher Eligibility Test" }
+    ],
+
+    howToApply: [
+      "Visit ktet.kerala.gov.in.",
+      "Click on 'KTET RESULT JUNE 2025'.",
+      "Select Category, Enter Register No & DOB.",
+      "Click 'Check Results'.",
+      "Download and print Score Card."
+    ],
+
+    links: [
+      { title: "Check Result (Direct Link)", url: "https://ktet.kerala.gov.in/results_june_2025/" },
+      { title: "Official Website", url: "https://ktet.kerala.gov.in/" }
+    ]
+  },
+
+  // --- 3001. Rajasthan Librarian Grade 3 (ID 3001) ---
+  {
+    id: 3001,
+    slug: "rajasthan-librarian-grade-3-result-2025",
+    shortTitle: "Rajasthan Librarian Grade 3 Result",
+    title: "Rajasthan Librarian Grade 3 Result 2025 Out | Merit List & Cut Off Marks",
+    shortInfo: "Rajasthan Staff Selection Board (RSSB) has declared the result for Librarian Grade-III Direct Recruitment 2025. Candidates selected for Document Verification can download the PDF.",
+    postDate: "05/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Date", value: "02/12/2025" },
+      { label: "Exam Date", value: "27/07/2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Librarian Grade-III", totalPost: 600, eligibility: "Certificate in Library Science" }
+    ],
+
+    extraSections: [
+      {
+        title: "Cut-Off Marks (Non-TSP)",
+        tableData: [
+          { "Category": "General", "Cut Off": "281.57" },
+          { "Category": "EWS", "Cut Off": "263.66" },
+          { "Category": "SC", "Cut Off": "249.72" },
+          { "Category": "ST", "Cut Off": "233.67" },
+          { "Category": "OBC", "Cut Off": "270.77" },
+          { "Category": "MBC", "Cut Off": "259.10" }
+        ]
+      }
+    ],
+
+    links: [
+      { title: "Download Result PDF", url: "https://rssb.rajasthan.gov.in/" },
+      { title: "Official Website", url: "https://rssb.rajasthan.gov.in/" }
+    ]
+  },
   // ==================================================
   //              SYLLABUS (ID 4001 - 5000)
   // ==================================================
