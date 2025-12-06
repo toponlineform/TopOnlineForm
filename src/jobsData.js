@@ -8,7 +8,7 @@ export const jobsData = [
   {
     id: 26, // Aap apni series ke hisaab se ID change kar lein
     slug: "csir-ngri-mts-recruitment-2025",
-    shortTitle: "CSIR NGRI MTS Recruitment 2025",
+    shortTitle: "CSIR NGRI MTS Recruitment 2025 Apply Online for 12 Posts",
     title: "CSIR NGRI MTS Recruitment 2025 Apply Online for 12 Posts | Multi-Tasking Staff",
     shortInfo: "CSIR-National Geophysical Research Institute (NGRI), Hyderabad has released Advertisement No. 06/2025 for the recruitment of 12 Multi-Tasking Staff (MTS) posts. Candidates with Matriculation (10th Pass) qualification can apply online. The selection will be based on a Trade Test followed by a Competitive Written Examination.",
     postDate: "06/12/2025",
