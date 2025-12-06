@@ -4,6 +4,133 @@ export const jobsData = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+  // --- 20. DDA Recruitment 2025 (ID 20) - SUPER DETAILED ---
+  {
+    id: 20,
+    slug: "dda-recruitment-2025",
+    shortTitle: "DDA Recruitment 2025",
+    title: "DDA Recruitment 2025 Apply Online for 1732 Posts | MTS, JSA, JE, Patwari & ASO",
+    shortInfo: "Delhi Development Authority (DDA) has released the official notification (Advt. No. 09/2025) for the recruitment of 1732 vacancies in Group A, B, and C cadres. Posts include Junior Engineer (JE), Junior Secretariat Assistant (JSA), Patwari, Mali, Stenographer, and Multi-Tasking Staff (MTS). Eligible candidates can apply online.",
+    postDate: "06/12/2025",
+    category: "Latest Jobs",
+
+    salary: "Level-1 to Level-10 (As per 7th CPC) + DA + HRA",
+
+    importantDates: [
+      { label: "Notification Date", value: "26/09/2025" },
+      { label: "Application Begin", value: "06/10/2025 (10:00 AM)" },
+      { label: "Last Date for Apply", value: "05/11/2025 (06:00 PM)" },
+      { label: "Fee Payment Last Date", value: "07/11/2025 (Extended)" },
+      { label: "Exam Date", value: "16 Dec 2025 to 03 Jan 2026" }
+    ],
+
+    // Fee structure based on latest updates
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹1000/- (For Group C) / ₹2500/- (For Group A/B)" },
+      { category: "SC / ST / PwBD / Female", amount: "₹0/- (Nil) or Nominal Processing Fee (Check Notification)" },
+      { category: "Payment Mode", amount: "Online (Net Banking/Debit/Credit Card/UPI)" }
+    ],
+
+    // Detailed Age Limit
+    ageLimit: "MTS/Mali: 18-25 Yrs | JSA/JE/Steno: 18-27 Yrs | Patwari: 21-27 Yrs | Officers: Upto 40 Yrs (As on 05/11/2025).",
+
+    vacancyDetails: [
+      { postName: "Multi-Tasking Staff (MTS)", totalPost: 745, eligibility: "10th Class Pass from recognized Board." },
+      { postName: "Junior Secretariat Assistant (JSA)", totalPost: 199, eligibility: "12th Pass + Typing (35 wpm Eng / 30 wpm Hindi)." },
+      { postName: "Junior Engineer (Civil/Elect/Mech)", totalPost: 171, eligibility: "Diploma in Civil / Electrical / Mechanical Engineering." },
+      { postName: "Patwari", totalPost: 79, eligibility: "Graduate in any stream + Computer Knowledge." },
+      { postName: "Stenographer Grade 'D'", totalPost: 44, eligibility: "12th Pass + Stenography Skill." },
+      { postName: "Mali", totalPost: 282, eligibility: "10th Pass + Training in Gardening." },
+      { postName: "Sectional Officer (Horticulture)", totalPost: 75, eligibility: "Degree in Agriculture / Horticulture / Forestry." }
+    ],
+
+    // Super Detailed Category Wise Breakup (Smart Table)
+    vacancyTableTitle: "Post & Category Wise Vacancy Details",
+    vacancyColumnName: "Post Name",
+    
+    stateWiseVacancy: [
+      { "Post Name": "Multi Tasking Staff (MTS)", "Total": 745, "UR": 298, "EWS": 84, "OBC": 209, "SC": 91, "ST": 63 },
+      { "Post Name": "Junior Secretariat Asst (JSA)", "Total": 199, "UR": 86, "EWS": 20, "OBC": 53, "SC": 26, "ST": 14 },
+      { "Post Name": "Mali", "Total": 282, "UR": 118, "EWS": 30, "OBC": 77, "SC": 35, "ST": 22 },
+      { "Post Name": "Junior Engineer (Civil)", "Total": 104, "UR": 45, "EWS": 7, "OBC": 38, "SC": 11, "ST": 3 },
+      { "Post Name": "Junior Engineer (E/M)", "Total": 67, "UR": 32, "EWS": 6, "OBC": 17, "SC": 8, "ST": 4 },
+      { "Post Name": "Patwari", "Total": 79, "UR": 33, "EWS": 8, "OBC": 22, "SC": 12, "ST": 4 },
+      { "Post Name": "Stenographer Grade D", "Total": 44, "UR": 24, "EWS": 2, "OBC": 5, "SC": 5, "ST": 8 },
+      { "Post Name": "Sectional Officer (Hort.)", "Total": 75, "UR": 51, "EWS": 7, "OBC": 6, "SC": 8, "ST": 3 }
+    ],
+
+    salaryDetails: [
+      { post: "AAO / SO / JE / Patwari", level: "Level-5 to Level-8 (₹29,200 - ₹1,51,100)" },
+      { post: "JSA / Steno / MTS / Mali", level: "Level-1 to Level-4 (₹18,000 - ₹81,100)" }
+    ],
+
+    selectionProcess: [
+      "Stage 1: Computer Based Examination (CBT) - For All Posts",
+      "Stage 2: Skill Test / Typing Test / Stenography (For JSA, Steno, ASO)",
+      "Stage 3: Stage-II Exam (For ASO, JSA, Patwari)",
+      "Stage 4: Document Verification & Medical Exam"
+    ],
+
+    // Detailed Exam Pattern for Major Posts
+    examPattern: {
+      details: ["Mode: Online CBT", "Duration: 1 Hour (Stage 1)", "Negative Marking: 0.33 Marks (MTS/JSA) / 0.25 (JE)"],
+      stages: [
+        {
+          title: "Exam Pattern: MTS / Mali (Single Stage)",
+          data: [
+            { subject: "General Intelligence & Reasoning", questions: 25, marks: 25 },
+            { subject: "General Awareness", questions: 25, marks: 25 },
+            { subject: "Quantitative Aptitude", questions: 25, marks: 25 },
+            { subject: "English Language", questions: 25, marks: 25 },
+            { subject: "Total", questions: 100, marks: 100 }
+          ]
+        },
+        {
+          title: "Exam Pattern: Junior Engineer (Single Stage)",
+          data: [
+            { subject: "General Awareness", questions: 10, marks: 10 },
+            { subject: "General Intelligence & Reasoning", questions: 10, marks: 10 },
+            { subject: "Quantitative Aptitude", questions: 10, marks: 10 },
+            { subject: "English Language", questions: 10, marks: 10 },
+            { subject: "Respective Discipline (Civil/Elect/Mech)", questions: 80, marks: 80 },
+            { subject: "Total", questions: 120, marks: 120 }
+          ]
+        },
+        {
+          title: "Exam Pattern: JSA / Patwari (Stage-I)",
+          data: [
+            { subject: "General Intelligence & Reasoning", questions: 25, marks: 50 },
+            { subject: "General Awareness", questions: 25, marks: 50 },
+            { subject: "Quantitative Aptitude", questions: 25, marks: 50 },
+            { subject: "English Comprehension", questions: 25, marks: 50 },
+            { subject: "Total", questions: 100, marks: 200 }
+          ]
+        }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official website dda.gov.in.",
+      "Click on 'Jobs' -> 'Direct Recruitment 2025'.",
+      "Register using Name, Email, and Mobile Number.",
+      "Login and fill the application form for your desired post.",
+      "Upload Scanned Photo, Signature, and Thumb Impression.",
+      "Pay the application fee online.",
+      "Submit the form and take a printout."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://cdn.digialm.com/EForms/configuredHtml/1258/95962/Index.html" },
+      { title: "Download Notification PDF", url: "https://dda.gov.in/sites/default/files/latest_jobs/advertisement_no_09_2025_dr_2025.pdf" },
+      { title: "Official Website", url: "https://dda.gov.in/" }
+    ],
+    
+    faqs: [
+      { question: "What is the full form of DDA?", answer: "Delhi Development Authority." },
+      { question: "Is DDA a government job?", answer: "Yes, DDA is a statutory body under the Ministry of Housing and Urban Affairs, Govt. of India." },
+      { question: "Can I apply for multiple posts?", answer: "Yes, you can apply for multiple posts if you meet the eligibility criteria, but you need to pay separate fees." }
+    ]
+  },
   // --- 19. WBSEDCL Recruitment 2025 ---
   {
     id: 19,
