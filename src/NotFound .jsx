@@ -10,7 +10,7 @@ const NotFound = () => {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      height: '80vh', // Thoda chhota height taki footer dikhe
+      height: '80vh',
       textAlign: 'center',
       padding: '20px'
     },
@@ -25,7 +25,7 @@ const NotFound = () => {
     h1: {
       fontSize: '80px',
       margin: '0',
-      color: '#ab1e1e' // Your Theme Red
+      color: '#ab1e1e'
     },
     h2: {
       color: '#333',
@@ -36,7 +36,7 @@ const NotFound = () => {
       marginBottom: '20px'
     },
     button: {
-      backgroundColor: '#004080', // Your Theme Blue
+      backgroundColor: '#004080',
       color: 'white',
       textDecoration: 'none',
       padding: '12px 25px',
