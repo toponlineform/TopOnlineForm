@@ -8,7 +8,7 @@ export const jobsData = [
   {
     id: 25,
     slug: "bpsc-aedo-recruitment-2025",
-    shortTitle: "BPSC AEDO Recruitment 2025",
+    shortTitle: "BPSC AEDO Recruitment 2025 Apply Online for 935 Posts",
     title: "BPSC AEDO Recruitment 2025 Apply Online for 935 Posts | Assistant Education Development Officer",
     shortInfo: "Bihar Public Service Commission (BPSC) has released Advertisement No. 87/2025 for the recruitment of 935 Assistant Education Development Officer (AEDO) posts in the Education Department, Govt of Bihar. Candidates with a Graduation degree can apply online. Selection is based on a Written Exam (No Interview).",
     postDate: "23/08/2025",
