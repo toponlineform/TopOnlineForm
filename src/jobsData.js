@@ -67,8 +67,7 @@ export const jobsData = [
       { "Category Name": "Library Attendant", "Pay Level": "Level-1", "Total Posts": 6 },
       { "Category Name": "Security Assistant", "Pay Level": "Level-2", "Total Posts": 9 },
       { "Category Name": "Program Officer", "Pay Level": "Level-10", "Total Posts": 1 },
-      { "Category Name": "Cook", "Pay Level": "Level-2", "Total Posts": 1 },
-      { "Category Name": "Total", "Pay Level": "-", "Total Posts": 70 }
+      { "Category Name": "Cook", "Pay Level": "Level-2", "Total Posts": 1 }
     ],
 
     selectionProcess: [
