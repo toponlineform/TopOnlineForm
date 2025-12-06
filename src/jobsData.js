@@ -3,6 +3,107 @@ export const jobsData = [
   // ==================================================
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
+  
+  // --- 23. NISE Gurugram Executive Assistant Recruitment 2025 ---
+  {
+    id: 23,
+    slug: "nise-gurugram-executive-assistant-recruitment-2025",
+    shortTitle: "NISE Gurugram Recruitment 2025",
+    title: "NISE Gurugram Executive Assistant Recruitment 2025 Apply Online for 05 Posts | Level-7 Salary",
+    shortInfo: "National Institute of Solar Energy (NISE), Gurugram has released the notification for the recruitment of Executive Assistant-I (Scientific Support Staff). Candidates with a Diploma in Engineering or B.Sc/B.E/B.Tech degree can apply. The post carries a Pay Level-7 salary (As per 7th CPC).",
+    postDate: "06/12/2025",
+    category: "Latest Jobs",
+
+    salary: "Pay Level-7 (As per 7th CPC)",
+
+    importantDates: [
+      { label: "Notification Date", value: "December 2025" },
+      { label: "Application Start", value: "Started" },
+      { label: "Last Date for Apply", value: "30 Days from publication in Employment News" },
+      { label: "Exam Date", value: "To be notified separately" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹1000/-" },
+      { category: "SC / ST / PwBD / Female", amount: "₹0/- (Nil)" },
+      { category: "Payment Mode", amount: "Online" }
+    ],
+
+    ageLimit: "Maximum 35 Years (Relaxation: SC/ST/OBC/PwD/Ex-SM as per Central Govt Rules).",
+
+    vacancyDetails: [
+      { postName: "Executive Assistant - I", totalPost: 5, eligibility: "Diploma in Engineering OR Bachelor's Degree in Science or Engineering + Basic Computer Knowledge." }
+    ],
+
+    // Detailed Breakup (Source: PDF Page 1)
+    vacancyTableTitle: "Category Wise Vacancy Breakup",
+    vacancyColumnName: "Category Name",
+
+    stateWiseVacancy: [
+      { "Category Name": "Urserved (UR)", "Total Posts": 1 },
+      { "Category Name": "OBC (NCL)", "Total Posts": 3 },
+      { "Category Name": "EWS", "Total Posts": 1 },
+      { "Category Name": "Total", "Total Posts": 5 }
+    ],
+    // Note: 1 Post is horizontally reserved for PwBD (Deaf & Hard of Hearing)
+
+    selectionProcess: [
+      "Written Examination (100% Weightage)",
+      "Document Verification",
+      "Note: No Interview will be conducted."
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Written Examination (MCQ)",
+        "Total Duration: 3 Hours (180 Minutes)",
+        "Total Questions: 200 | Total Marks: 200",
+        "Negative Marking: 0.25 marks for each wrong answer."
+      ],
+      stages: [
+        {
+          title: "Part-I: General Section (50 Questions / 50 Marks)",
+          data: [
+            { subject: "General Awareness (Science, Schemes of MNRE)", questions: 10, marks: 10 },
+            { subject: "Reasoning", questions: 10, marks: 10 },
+            { subject: "Quantitative Aptitude", questions: 10, marks: 10 },
+            { subject: "English Language Proficiency", questions: 10, marks: 10 },
+            { subject: "Basics of Computers (MS Office, Internet)", questions: 10, marks: 10 }
+          ]
+        },
+        {
+          title: "Part-II: Technical Section (150 Questions / 150 Marks)",
+          data: [
+            { subject: "Renewable Energy Basics (Wind, Biomass, Hydrogen)", questions: "MCQ", marks: 50 },
+            { subject: "Solar PV (Technologies, Grid/Off Grid, Power Electronics)", questions: "MCQ", marks: 50 },
+            { subject: "Solar Thermal (Heat, Work, Collectors, Storage)", questions: "MCQ", marks: 50 }
+          ]
+        }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official NISE website: https://nise.res.in/.",
+      "Navigate to the 'Career' portal.",
+      "Register and fill the Online Application Form.",
+      "Upload a recent passport-size photograph (without cap/sunglasses) and signature.",
+      "Pay the application fee of ₹1000/- online (if applicable).",
+      "Submit the application and take a printout for future reference."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://nise.onlineapplication.org.in/#/" },
+      { title: "Download Notification PDF", url: "https://appdoc.blob.core.windows.net/files/Nise_Advertisement.pdf" }, // Use direct PDF link if available
+      { title: "Official Website", url: "https://nise.res.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the qualification for NISE Executive Assistant?", answer: "Diploma in Engineering OR B.Sc / B.E. / B.Tech degree." },
+      { question: "Is there any age relaxation?", answer: "The upper age limit is 35 years. Relaxations apply for SC/ST/OBC/PwBD candidates." },
+      { question: "What is the selection process?", answer: "Selection is based purely on a Written Examination consisting of General and Technical sections." },
+      { question: "Is there an application fee for women?", answer: "No, Female candidates are exempted from paying the application fee." }
+    ]
+  },
   // --- 22. HPRCA Patwari Recruitment 2025 ---
   {
     id: 22,
