@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link, useParams, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, X } from 'lucide-react'; // <--- Import Icons
+import { Search, X, Share2 } from 'lucide-react'; // <--- Import Icons
 import { jobsData } from './jobsData';
 import About from './About';
 import Contact from './Contact';
@@ -173,8 +173,17 @@ function Home() {
 // --- Job Details ---
 function JobDetails() {
   const { slug } = useParams();
+  const navigate = useNavigate(); // Added for Navigation
   const job = jobsData.find((j) => j.slug === slug);
-  if (!job) return <h2 style={{textAlign:'center', marginTop:'20px'}}>Job Not Found</h2>;
+  
+  // 1. Handle "Job Not Found" nicely
+  if (!job) return (
+    <div style={{textAlign:'center', padding: '50px'}}>
+      <h2>Job Not Found</h2>
+      <p>The job you are looking for might have been removed or the link is incorrect.</p>
+      <button onClick={() => navigate('/')} style={{marginTop: '10px', padding: '10px 20px', background: '#ab1e1e', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer'}}>Go Home</button>
+    </div>
+  );
 
   const convertDate = (dateStr) => {
     if(!dateStr) return new Date().toISOString().split('T')[0];
@@ -184,6 +193,18 @@ function JobDetails() {
   const lastDateItem = job.importantDates.find(d => d.label.toLowerCase().includes('last'));
   const validThrough = lastDateItem ? convertDate(lastDateItem.value) : null;
   const datePosted = convertDate(job.postDate);
+
+  // --- NEW: Dynamic Header Logic for "How to Apply" ---
+  let stepsHeader = "How to Apply"; // Default fallback
+  const cat = job.category.toLowerCase();
+  
+  if (cat.includes("admit card")) {
+    stepsHeader = "How to Download Admit Card";
+  } else if (cat.includes("result")) {
+    stepsHeader = "How to Check Result";
+  } else if (cat.includes("answer key") || cat.includes("syllabus") || cat.includes("paper")) {
+    stepsHeader = "How to Download";
+  }
 
   const jobSchema = {
     "@context": "https://schema.org/",
@@ -416,7 +437,16 @@ function JobDetails() {
         </div>
       ))}
 
-      {job.howToApply && (<><div className="section-header">How to Apply</div><ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.howToApply.map((item, index) => <li key={index} style={{marginBottom: '10px'}}>{item}</li>)}</ol></>)}
+      {/* --- UPDATED: Smart Header for "How to Apply" --- */}
+      {job.howToApply && (
+        <>
+          <div className="section-header">{stepsHeader}</div>
+          <ol style={{marginLeft: '30px', padding: '10px 0'}}>
+            {job.howToApply.map((item, index) => <li key={index} style={{marginBottom: '10px'}}>{item}</li>)}
+          </ol>
+        </>
+      )}
+       
       <div className="section-header">Important Links</div>
       <table className="important-links"><tbody>{job.links && job.links.map((link, index) => (<tr key={index}><td><strong>{link.title}</strong></td><td align="center"><a href={link.url} className="click-here" target="_blank" rel="noreferrer">Click Here</a></td></tr>))}</tbody></table>
       {job.faqs && job.faqs.length > 0 && (<><div className="section-header">Frequently Asked Questions (FAQs)</div><div style={{padding: '15px', border: '1px solid #ddd', marginTop: '10px'}}>{job.faqs.map((faq, index) => (<div key={index} style={{marginBottom: '15px'}}><div style={{fontWeight: 'bold', color: '#d32f2f', marginBottom: '5px'}}>Q.{index + 1}: {faq.question}</div><div style={{color: '#333'}}>Ans: {faq.answer}</div></div>))}</div></>)}
