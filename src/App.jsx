@@ -8,15 +8,22 @@ import Privacy from './Privacy';
 import SEO from './SEO';
 import CategoryPage from './CategoryPage';
 import ActiveJobs from './ActiveJobs';
+import SearchResults from './SearchResults'; // <--- NEW IMPORT
 
 // --- Navbar ---
 function Navbar() {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
+
   const handleSearch = (e) => {
     e.preventDefault();
-    if(searchTerm.trim()) alert("Search functionality coming soon for: " + searchTerm); 
+    if (searchTerm.trim()) {
+      // Navigate to Search Page with Query
+      navigate(`/search?q=${encodeURIComponent(searchTerm)}`);
+      setSearchTerm(""); // Clear input after search
+    }
   };
+
   return (
     <>
       <div className="sticky-top">
@@ -24,6 +31,20 @@ function Navbar() {
         <div className="navbar">
           <Link to="/">Home</Link><Link to="/active-jobs">Active Jobs</Link><Link to="/latest-jobs">Latest Jobs</Link>
           <Link to="/results">Results</Link><Link to="/admit-card">Admit Card</Link><Link to="/answer-key">Answer Key</Link><Link to="/syllabus">Syllabus</Link>
+        </div>
+        
+        {/* --- ADDED SEARCH BAR IN NAVBAR (Mobile Friendly) --- */}
+        <div style={{background: '#f1f1f1', padding: '10px', display: 'flex', justifyContent: 'center', borderBottom: '1px solid #ccc'}}>
+           <form onSubmit={handleSearch} style={{display:'flex', width: '100%', maxWidth: '600px'}}>
+             <input 
+               type="text" 
+               placeholder="Search jobs (e.g. SSC, Railway)..." 
+               value={searchTerm}
+               onChange={(e) => setSearchTerm(e.target.value)}
+               style={{flex: 1, padding: '8px', borderRadius: '4px 0 0 4px', border: '1px solid #ccc', outline: 'none'}}
+             />
+             <button type="submit" style={{padding: '8px 15px', background: '#333', color: '#fff', border: 'none', borderRadius: '0 4px 4px 0', cursor: 'pointer'}}>Search</button>
+           </form>
         </div>
       </div> 
       <div className="clean-note"><p>✨ Welcome to TopOnlineForm.com — No Ads, Just Information. ✨</p></div>
@@ -33,6 +54,10 @@ function Navbar() {
 
 // --- Home Component ---
 function Home() {
+  // Added hooks for Grid Search
+  const navigate = useNavigate();
+  const [gridSearch, setGridSearch] = useState("");
+
   const sortNewest = (a, b) => b.id - a.id;
 
   // Helper to check category (Handles both String and Array)
@@ -70,9 +95,19 @@ function Home() {
        
       <div className="action-cell"><a href="https://whatsapp.com/channel/0029Vb7TcG06LwHoTXhZKn2D" target="_blank" className="social-btn whatsapp full-width">Join WhatsApp Group</a></div>
       <div className="action-cell"><a href="https://telegram.org" target="_blank" className="social-btn telegram full-width">Join Telegram Channel</a></div>
+      
+      {/* --- UPDATED GRID SEARCH FORM --- */}
       <div className="action-cell">
-         <form className="grid-search-form" onSubmit={(e) => e.preventDefault()}>
-            <input type="text" placeholder="Search jobs..." />
+         <form className="grid-search-form" onSubmit={(e) => {
+            e.preventDefault();
+            if(gridSearch.trim()) navigate(`/search?q=${encodeURIComponent(gridSearch)}`);
+         }}>
+            <input 
+              type="text" 
+              placeholder="Search jobs..." 
+              value={gridSearch}
+              onChange={(e) => setGridSearch(e.target.value)}
+            />
             <button type="submit">Search</button>
           </form>
       </div>
@@ -405,6 +440,26 @@ function Footer() {
 }
 
 function App() {
-  return (<><Navbar /><Routes><Route path="/" element={<Home />} /><Route path="/:slug" element={<JobDetails />} /><Route path="/active-jobs" element={<ActiveJobs />} /><Route path="/latest-jobs" element={<CategoryPage category="Latest Jobs" title="All Latest Jobs" />} /><Route path="/results" element={<CategoryPage category="Result" title="All Results" />} /><Route path="/admit-card" element={<CategoryPage category="Admit Card" title="All Admit Cards" />} /><Route path="/answer-key" element={<CategoryPage category="Answer Key" title="All Answer Keys" />} /><Route path="/syllabus" element={<CategoryPage category="Syllabus" title="Syllabus" />} /><Route path="/previous-papers" element={<CategoryPage category="Previous Paper" title="Previous Papers" />} /><Route path="/about" element={<About />} /><Route path="/contact" element={<Contact />} /><Route path="/privacy" element={<Privacy />} /></Routes><Footer /></>);
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<SearchResults />} /> {/* <--- ADDED ROUTE */}
+        <Route path="/:slug" element={<JobDetails />} />
+        <Route path="/active-jobs" element={<ActiveJobs />} />
+        <Route path="/latest-jobs" element={<CategoryPage category="Latest Jobs" title="All Latest Jobs" />} />
+        <Route path="/results" element={<CategoryPage category="Result" title="All Results" />} />
+        <Route path="/admit-card" element={<CategoryPage category="Admit Card" title="All Admit Cards" />} />
+        <Route path="/answer-key" element={<CategoryPage category="Answer Key" title="All Answer Keys" />} />
+        <Route path="/syllabus" element={<CategoryPage category="Syllabus" title="Syllabus" />} />
+        <Route path="/previous-papers" element={<CategoryPage category="Previous Paper" title="Previous Papers" />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy" element={<Privacy />} />
+      </Routes>
+      <Footer />
+    </>
+  );
 }
 export default App;
