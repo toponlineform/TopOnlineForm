@@ -47,8 +47,7 @@ export const jobsData = [
       { "Category Name": "Scheduled Tribe (ST)", "Total Posts": 10, "Female Posts": 4 },
       { "Category Name": "Extremely Backward Class (EBC)", "Total Posts": 168, "Female Posts": 59 },
       { "Category Name": "Backward Class (BC)", "Total Posts": 112, "Female Posts": 39 },
-      { "Category Name": "BC Ladies (BCL)", "Total Posts": 28, "Female Posts": 0 },
-      { "Category Name": "Total", "Total Posts": 935, "Female Posts": 319 }
+      { "Category Name": "BC Ladies (BCL)", "Total Posts": 28, "Female Posts": 0 }
     ],
 
     selectionProcess: [
