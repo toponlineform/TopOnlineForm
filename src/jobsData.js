@@ -42,10 +42,10 @@ export const jobsData = [
     vacancyTableTitle: "Post & Category Wise Vacancy Details",
     vacancyColumnName: "Post Name",
 
-    stateWiseVacancy: [
-      { state: "Senior Assistant (Electronics)", total: 5, ur: 5, sc: 0, st: 0, obc: 0, ews: 0 },
-      { state: "Junior Assistant (HR)", total: 2, ur: 1, sc: 0, st: 1, obc: 0, ews: 0 },
-      { state: "Junior Assistant (Fire Services)", total: 7, ur: 0, sc: 0, st: 6, obc: 1, ews: 0 }
+    postWiseVacancy: [
+      { post: "Senior Assistant (Electronics)", total: 5, ur: 5, sc: 0, st: 0, obc: 0, ews: 0 },
+      { post: "Junior Assistant (HR)", total: 2, ur: 1, sc: 0, st: 1, obc: 0, ews: 0 },
+      { post: "Junior Assistant (Fire Services)", total: 7, ur: 0, sc: 0, st: 6, obc: 1, ews: 0 }
     ],
 
     salaryDetails: [
