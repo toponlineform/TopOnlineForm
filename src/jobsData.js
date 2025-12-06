@@ -3,7 +3,104 @@ export const jobsData = [
   // ==================================================
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
+  // --- 22. HPRCA Patwari Recruitment 2025 ---
+  {
+    id: 22,
+    slug: "hprca-patwari-recruitment-2025",
+    shortTitle: "HPRCA Patwari Recruitment 2025",
+    title: "HPRCA Patwari Recruitment 2025 Apply Online for 530 Posts | 12th Pass Govt Job",
+    shortInfo: "Himachal Pradesh Rajya Chayan Aayog (HPRCA), Hamirpur has released Advertisement No. 08/2025 for the recruitment of 530 Patwari (Job-Trainee) posts in the Department of Land Records. Candidates who have passed 10+2 and are Bonafide Himachalis (or 10th/12th from HP) are eligible to apply. The selection will be based on a Computer Based Test (CBT).",
+    postDate: "06/12/2025",
+    category: "Latest Jobs",
 
+    salary: "₹12,500/- PM (Consolidated during Training)",
+
+    importantDates: [
+      { label: "Notification Date", value: "06/12/2025" },
+      { label: "Application Begin", value: "12/12/2025 (10:00 AM)" },
+      { label: "Last Date for Apply", value: "16/01/2026 (11:59 PM)" },
+      { label: "Correction Window", value: "7 Days after closing date" },
+      { label: "Exam Date", value: "To be notified" }
+    ],
+
+    applicationFee: [
+      { category: "All Categories (Gen/SC/ST/OBC/EWS)", amount: "₹800/- (₹100 Exam + ₹700 Processing)" },
+      { category: "Correction Fee", amount: "₹100/-" },
+      { category: "Payment Mode", amount: "Online (Credit/Debit Card/Net Banking)" }
+    ],
+
+    ageLimit: "18-45 Years (As on 01/01/2025). Relaxation: 5 Years for SC/ST/OBC/PwD/WFF of Himachal Pradesh.",
+
+    vacancyDetails: [
+      { postName: "Patwari (Job-Trainee)", totalPost: 530, eligibility: "10+2 Passed from a recognized Board. (Candidates must be Bonafide Himachali OR passed 10th & 12th from HP schools)." }
+    ],
+
+    // Detailed Breakup as per PDF Page 4
+    vacancyTableTitle: "Category Wise Vacancy Details",
+    vacancyColumnName: "Category Name",
+
+    stateWiseVacancy: [
+      { category: "General (UR)", total: 210, ur: 210, sc: 0, st: 0, obc: 0, ews: 0 },
+      { category: "EWS", total: 64, ur: 0, sc: 0, st: 0, obc: 0, ews: 64 },
+      { category: "OBC (UR)", total: 81, ur: 0, sc: 0, st: 0, obc: 81, ews: 0 },
+      { category: "SC (UR)", total: 100, ur: 0, sc: 100, st: 0, obc: 0, ews: 0 },
+      { category: "ST (UR)", total: 19, ur: 0, sc: 0, st: 19, obc: 0, ews: 0 },
+      { category: "OBC (BPL)", total: 19, ur: 0, sc: 0, st: 0, obc: 19, ews: 0 },
+      { category: "SC (BPL)", total: 19, ur: 0, sc: 19, st: 0, obc: 0, ews: 0 },
+      { category: "ST (BPL)", total: 6, ur: 0, sc: 0, st: 6, obc: 0, ews: 0 },
+      { category: "General (WFF)", total: 6, ur: 6, sc: 0, st: 0, obc: 0, ews: 0 },
+      { category: "OBC (WFF)", total: 3, ur: 0, sc: 0, st: 0, obc: 3, ews: 0 },
+      { category: "SC (WFF)", total: 3, ur: 0, sc: 3, st: 0, obc: 0, ews: 0 }
+    ],
+
+    selectionProcess: [
+      "Stage 1: Computer Based Test (CBT) - 120 Marks",
+      "Stage 2: Document Verification",
+      "Note: Merit will be based on Z-Score Normalization if multiple shifts are held."
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Computer Based Test (CBT)",
+        "Total Questions: 120 MCQs",
+        "Total Marks: 120 (1 Mark per question)",
+        "Duration: 90 Minutes (1.5 Hours)",
+        "Qualifying Marks: 45% (Gen), 40% (Reserved)"
+      ],
+      stages: [
+        {
+          title: "Written Screening Test Syllabus",
+          data: [
+            { subject: "General Knowledge (National/International/HP)", questions: 85, marks: 85 },
+            { subject: "Everyday Science, Logic, Social Science, English & Hindi (Matric Level)", questions: 35, marks: 35 }
+          ]
+        }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official HPRCA website (hprca.hp.gov.in).",
+      "Step 1: Sign Up to create a username and password.",
+      "Step 2: Complete 'One Time Registration (OTR)' by filling personal and educational details.",
+      "Step 3: Upload Scanned Photograph and Signature (Max 1MB, JPG/PNG).",
+      "Step 4: Click on 'Apply' for the Patwari Post and select Exam District.",
+      "Step 5: Pay the application fee of ₹800/- online.",
+      "Step 6: Submit the form and keep a printout."
+    ],
+
+    links: [
+      { title: "Apply Online (Starts 12/12/2025)", url: "https://hprca.hp.gov.in/" },
+      { title: "Download Notification PDF", url: "https://hprca.hp.gov.in/homepage" }, // Replace with direct link if you host the PDF
+      { title: "Official Website", url: "https://hprca.hp.gov.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the last date to apply for HP Patwari?", answer: "16th January 2026." },
+      { question: "What is the age limit for HPRCA Patwari?", answer: "18 to 45 years as on 01-01-2025." },
+      { question: "Can other state candidates apply?", answer: "Yes, but they will be treated as General Category and must have passed 10th & 12th from HP schools (unless they are Bonafide Himachali)." },
+      { question: "What is the salary of a Patwari in HP?", answer: "During training, a consolidated amount of ₹12,500/- per month is paid." }
+    ]
+  },
   // --- 21. AAI NER Recruitment 2025 ---
   {
     id: 21,
