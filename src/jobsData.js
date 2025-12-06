@@ -2454,6 +2454,7 @@ export const jobsData = [
     shortTitle: "SSC JE Admit Card 2025 (All Regions)",
     title: "SSC JE Admit Card 2025 Out | Tier-1 Status & Hall Ticket for Civil, Mech, Electrical",
     shortInfo: "Staff Selection Commission (SSC) has released the Application Status and Admit Cards for Junior Engineer (JE) Tier-1 Examination 2025. Candidates can check their exam date, shift, and city for all regions (NR, CR, WR, ER, SR, KKR, MPR, NER, NWR).",
+     postDate: "01/12/2025",
     category: "Admit Card",
 
     importantDates: [
