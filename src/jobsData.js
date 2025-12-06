@@ -4,6 +4,132 @@ export const jobsData = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+  // --- 21. AAI NER Recruitment 2025 ---
+  {
+    id: 21,
+    slug: "aai-ner-recruitment-2025-non-executives",
+    shortTitle: "AAI NER Recruitment 2025",
+    title: "AAI NER Recruitment 2025 Apply Online for 14 Posts | Sr. Assistant & Jr. Assistant (Fire/HR)",
+    shortInfo: "Airports Authority of India (AAI), Regional Headquarters, North Eastern Region has released Notification Advt. No. 01/2025/DR/NER for the recruitment of Non-Executives. Vacancies are available for Senior Assistant (Electronics), Junior Assistant (HR), and Junior Assistant (Fire Services). Only candidates who are DOMICILE of Assam, Arunachal Pradesh, Manipur, Meghalaya, Mizoram, Nagaland, and Tripura are eligible to apply.",
+    postDate: "06/12/2025",
+    category: "Latest Jobs",
+
+    salary: "Rs. 31,000 - Rs. 1,10,000 (IDA Pattern)",
+
+    importantDates: [
+      { label: "Notification Release", value: "12/12/2025" },
+      { label: "Application Begin", value: "12/12/2025" },
+      { label: "Last Date for Apply", value: "11/01/2026" },
+      { label: "Fee Payment Last Date", value: "11/01/2026" },
+      { label: "Exam Date", value: "To be announced" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹1000/-" },
+      { category: "SC / ST / PwBD / Women", amount: "₹0/- (Nil)" },
+      { category: "Ex-Servicemen / Apprentices", amount: "₹0/- (Nil)" },
+      { category: "Payment Mode", amount: "Online (Net Banking / Debit / Credit Card / UPI)" }
+    ],
+
+    ageLimit: "18-30 Years (As on 06/12/2025). Relaxation: OBC +3 Yrs, SC/ST +5 Yrs, PwBD +10 Yrs.",
+
+    vacancyDetails: [
+      { postName: "Senior Assistant (Electronics)", totalPost: 5, eligibility: "Diploma in Electronics / Telecommunication / Radio Engineering + 2 Years Experience." },
+      { postName: "Junior Assistant (HR)", totalPost: 2, eligibility: "Graduate Degree from a recognized University." },
+      { postName: "Junior Assistant (Fire Services)", totalPost: 7, eligibility: "10th + 3 Yr Diploma (Mech/Auto/Fire) OR 12th Pass. Must hold Valid Heavy/Medium/Light Vehicle Driving License." }
+    ],
+
+    vacancyTableTitle: "Post & Category Wise Vacancy Details",
+    vacancyColumnName: "Post Name",
+
+    stateWiseVacancy: [
+      { state: "Senior Assistant (Electronics)", total: 5, ur: 5, sc: 0, st: 0, obc: 0, ews: 0 },
+      { state: "Junior Assistant (HR)", total: 2, ur: 1, sc: 0, st: 1, obc: 0, ews: 0 },
+      { state: "Junior Assistant (Fire Services)", total: 7, ur: 0, sc: 0, st: 6, obc: 1, ews: 0 }
+    ],
+
+    salaryDetails: [
+      { post: "Senior Assistant (Electronics)", level: "NE-6 (₹36,000 - ₹1,10,000)" },
+      { post: "Junior Assistant (HR / Fire Services)", level: "NE-4 (₹31,000 - ₹92,000)" }
+    ],
+
+    selectionProcess: [
+      "Computer Based Test (CBT)",
+      "Document Verification",
+      "Computer Literacy Test (For Jr. Asst HR)",
+      "Physical Measurement & PET (For Fire Services)",
+      "Driving Test (For Fire Services)",
+      "Medical Examination"
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Computer Based Test (CBT)",
+        "Duration: 2 Hours",
+        "Negative Marking: No Negative Marking"
+      ],
+      table: [
+        { subject: "Subject Knowledge (Educational Qual.)", questions: "50% / 70%", marks: "Technical" },
+        { subject: "General Knowledge, Intelligence, Aptitude, English", questions: "50% / 30%", marks: "Non-Tech" }
+      ],
+      cbt1Title: "Note on Syllabus Weightage",
+      cbt1: [
+        { subject: "Sr. Assistant (Electronics)", questions: "70% Technical + 30% General", marks: "-" },
+        { subject: "Jr. Assistant (HR / Fire Services)", questions: "50% Technical + 50% General", marks: "-" }
+      ]
+    },
+
+    extraSections: [
+      {
+        title: "Physical Standards (For Fire Services Only)",
+        tableData: [
+          { parameter: "Height", male: "Min 167 cm", female: "Min 157 cm" },
+          { parameter: "Chest", male: "81 cm (Min 5 cm expansion)", female: "N/A" },
+          { parameter: "Weight", male: "Min 55 kg", female: "Min 45 kg" },
+          { parameter: "Vision", male: "6/6 without glasses", female: "6/6 without glasses" }
+        ]
+      },
+      {
+        title: "Physical Endurance Test (PET) - Fire Services",
+        text: "Candidates must score minimum 60 marks out of 100 in PET. The test includes:",
+        list: [
+          "100m Running",
+          "Rope Climbing",
+          "Pole Climbing",
+          "Ladder Climbing",
+          "Casualty Carrying (Lifting sandbag)"
+        ]
+      },
+      {
+        title: "Domicile Requirement",
+        text: "Only candidates who are Domicile of the following states can apply: Assam, Arunachal Pradesh, Manipur, Meghalaya, Mizoram, Nagaland, and Tripura."
+      }
+    ],
+
+    howToApply: [
+      "Visit the AAI official website www.aai.aero under the 'Careers' tab.",
+      "Click on the recruitment advertisement for NER 01/2025.",
+      "Register with a valid Email ID and Mobile Number.",
+      "Fill the online application form and upload scanned Photo (20-50KB) and Signature (10-20KB).",
+      "Upload Domicile Certificate, Caste Certificate (if applicable), and Educational Documents.",
+      "Pay the application fee online (if applicable).",
+      "Submit the form and take a printout for future reference."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://www.aai.aero/en/careers/recruitment" },
+      { title: "Download Notification", url: "https://www.aai.aero/sites/default/files/examdashboard_advertisement/DR%20Notification%20for%20Non%20Executives%20in%20North%20Eastern%20Region%20_English.pdf" },
+      { title: "Official Website", url: "https://www.aai.aero/" }
+    ],
+
+    faqs: [
+      { question: "Who can apply for AAI NER Recruitment?", answer: "Only Domicile candidates of Assam, Arunachal Pradesh, Manipur, Meghalaya, Mizoram, Nagaland, and Tripura." },
+      { question: "Is there any negative marking in the exam?", answer: "No, there is no negative marking in the AAI CBT exam." },
+      { question: "What is the age limit?", answer: "18 to 30 Years as on 06/12/2025. Relaxations apply for reserved categories." },
+      { question: "Is a Driving License required for Fire Services?", answer: "Yes, a valid Heavy, Medium, or Light Motor Vehicle license is mandatory." },
+      { question: "What is the salary for Sr. Assistant?", answer: "The pay scale is Rs. 36,000 - 1,10,000 (Level NE-6)." }
+    ]
+  },
   // --- 20. DDA Recruitment 2025 (ID 20) - ALL 26 POSTS FIXED ---
   {
     id: 20,
