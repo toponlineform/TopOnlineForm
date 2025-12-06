@@ -2624,7 +2624,7 @@ export const jobsData = [
       { title: "Download Notification", url: "https://rrccr.com/" },
       { title: "Official Website", url: "https://rrccr.com/" }
     ]
-  }
+  },
   // ==================================================
   //              ANSWER KEY (ID 2001 - 3000)
   // ==================================================
