@@ -36,21 +36,23 @@ export const jobsData = [
     ],
 
     // Detailed Breakup as per PDF Page 4
-    vacancyTableTitle: "Category Wise Vacancy Details",
-    vacancyColumnName: "Category Name",
+    // Purana 'stateWiseVacancy' hata kar ye wala paste karein:
+    
+    vacancyTableTitle: "Category Wise Vacancy Breakup", // Title bhi thoda change kiya
+    vacancyColumnName: "Category", // Ye line hta bhi sakte hain ab, fark nahi padega
 
     stateWiseVacancy: [
-      { category: "General (UR)", total: 210, ur: 210, sc: 0, st: 0, obc: 0, ews: 0 },
-      { category: "EWS", total: 64, ur: 0, sc: 0, st: 0, obc: 0, ews: 64 },
-      { category: "OBC (UR)", total: 81, ur: 0, sc: 0, st: 0, obc: 81, ews: 0 },
-      { category: "SC (UR)", total: 100, ur: 0, sc: 100, st: 0, obc: 0, ews: 0 },
-      { category: "ST (UR)", total: 19, ur: 0, sc: 0, st: 19, obc: 0, ews: 0 },
-      { category: "OBC (BPL)", total: 19, ur: 0, sc: 0, st: 0, obc: 19, ews: 0 },
-      { category: "SC (BPL)", total: 19, ur: 0, sc: 19, st: 0, obc: 0, ews: 0 },
-      { category: "ST (BPL)", total: 6, ur: 0, sc: 0, st: 6, obc: 0, ews: 0 },
-      { category: "General (WFF)", total: 6, ur: 6, sc: 0, st: 0, obc: 0, ews: 0 },
-      { category: "OBC (WFF)", total: 3, ur: 0, sc: 0, st: 0, obc: 3, ews: 0 },
-      { category: "SC (WFF)", total: 3, ur: 0, sc: 3, st: 0, obc: 0, ews: 0 }
+      { "Category Name": "General (UR)", "Total Posts": 210 },
+      { "Category Name": "EWS", "Total Posts": 64 },
+      { "Category Name": "OBC (UR)", "Total Posts": 81 },
+      { "Category Name": "SC (UR)", "Total Posts": 100 },
+      { "Category Name": "ST (UR)", "Total Posts": 19 },
+      { "Category Name": "OBC (BPL)", "Total Posts": 19 },
+      { "Category Name": "SC (BPL)", "Total Posts": 19 },
+      { "Category Name": "ST (BPL)", "Total Posts": 6 },
+      { "Category Name": "General (WFF)", "Total Posts": 6 },
+      { "Category Name": "OBC (WFF)", "Total Posts": 3 },
+      { "Category Name": "SC (WFF)", "Total Posts": 3 }
     ],
 
     selectionProcess: [
