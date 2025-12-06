@@ -2814,7 +2814,7 @@ export const jobsData = [
       { title: "Download Result PDF", url: "https://rssb.rajasthan.gov.in/" },
       { title: "Official Website", url: "https://rssb.rajasthan.gov.in/" }
     ]
-  }
+  },
   // ==================================================
   //              SYLLABUS (ID 4001 - 5000)
   // ==================================================
