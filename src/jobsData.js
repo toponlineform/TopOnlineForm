@@ -4,7 +4,103 @@ export const jobsData = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+  // --- CSIR NGRI MTS Recruitment 2025 ---
+  {
+    id: 26, // Aap apni series ke hisaab se ID change kar lein
+    slug: "csir-ngri-mts-recruitment-2025",
+    shortTitle: "CSIR NGRI MTS Recruitment 2025",
+    title: "CSIR NGRI MTS Recruitment 2025 Apply Online for 12 Posts | Multi-Tasking Staff",
+    shortInfo: "CSIR-National Geophysical Research Institute (NGRI), Hyderabad has released Advertisement No. 06/2025 for the recruitment of 12 Multi-Tasking Staff (MTS) posts. Candidates with Matriculation (10th Pass) qualification can apply online. The selection will be based on a Trade Test followed by a Competitive Written Examination.",
+    postDate: "06/12/2025",
+    category: "Latest Jobs",
 
+    salary: "Pay Level-1 (Total Emoluments approx ₹35,973/-)",
+
+    importantDates: [
+      { label: "Notification Issued", value: "06/12/2025" },
+      { label: "Application Begin", value: "06/12/2025 (10:00 AM)" },
+      { label: "Last Date for Apply", value: "05/01/2026 (06:00 PM)" },
+      { label: "Exam Date", value: "To be notified" }
+    ],
+
+    // Fee Source: Para 2(g) & (h) of PDF
+    applicationFee: [
+      { category: "Gen / OBC / EWS", amount: "₹500/-" },
+      { category: "SC / ST / PwBD / Women / Ex-Servicemen", amount: "₹0/- (Exempted)" },
+      { category: "Payment Mode", amount: "Online (SBI Collect)" }
+    ],
+
+    ageLimit: "Max 25 Years as on 05/01/2026. Age Relaxation: SC/ST +5 Years, OBC +3 Years, PwBD +10 Years.",
+
+    vacancyDetails: [
+      { postName: "Multi-Tasking Staff (MTS)", totalPost: 12, eligibility: "10th Class (Matriculation) or equivalent pass from a recognized Board." }
+    ],
+
+    // Detailed Breakup (Source: PDF Page 1 Table)
+    vacancyTableTitle: "Category Wise Vacancy Details",
+    vacancyColumnName: "Category Name",
+
+    // Note: Is vacancy me female reservation alag se nahi hai, isliye sirf Total Posts dikhaye gaye hain.
+    stateWiseVacancy: [
+      { "Category Name": "Unreserved (UR)", "Total Posts": 6 },
+      { "Category Name": "OBC (NCL)", "Total Posts": 4 },
+      { "Category Name": "EWS", "Total Posts": 1 },
+      { "Category Name": "Scheduled Caste (SC)", "Total Posts": 1 },
+      { "Category Name": "Scheduled Tribe (ST)", "Total Posts": 0 }
+    ],
+
+    selectionProcess: [
+      "Stage 1: Trade Test (Qualifying in Nature)",
+      "Stage 2: Competitive Written Examination (Final Merit based on this)",
+      "Document Verification"
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: OMR Based Objective Type (MCQ)",
+        "Total Questions: 150 | Time: 2 Hours",
+        "Medium: English, Hindi & Telugu (except English Language section).",
+        "Negative Marking: 1 mark deducted for every wrong answer.",
+        "Correct Answer: 3 marks awarded for every correct answer."
+      ],
+      stages: [
+        {
+          title: "Written Exam Syllabus & Pattern (Standard: Class 10)",
+          data: [
+            { subject: "General Intelligence", questions: 25, marks: 75 },
+            { subject: "Quantitative Aptitude", questions: 25, marks: 75 },
+            { subject: "General Awareness", questions: 50, marks: 150 },
+            { subject: "English Language", questions: 50, marks: 150 }
+          ]
+        }
+      ]
+    },
+
+    howToApply: [
+      "Visit the official website ngri.res.in.",
+      "Click on the 'Careers' or 'Openings' section and find Advt No. 06/2025.",
+      "Register with a valid Email ID and Mobile Number.",
+      "Login and fill the online application form.",
+      "Upload scanned Photo (Passport size), Signature, and 10th Marksheet.",
+      "Pay the application fee of ₹500/- via SBI Collect (if applicable).",
+      "Submit the form and take a printout of the final application.",
+      "Note: Do not send the hard copy by post immediately."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://rectt.ngri.res.in/Ngri_MTS_6_2025/index.jsp" }, // Direct link agar available ho to replace karein
+      { title: "Download Notification PDF", url: "https://rectt.ngri.res.in/Ngri_MTS_6_2025/files/NGRI_MTS_%20Advt_updated.pdf" }, // PDF link update karein
+      { title: "Official Website", url: "https://www.ngri.res.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the last date to apply for NGRI MTS Recruitment?", answer: "The last date is 05 January 2026." },
+      { question: "What is the qualification for NGRI MTS?", answer: "Candidates must have passed Matriculation (10th Class)." },
+      { question: "Is there any application fee for Women candidates?", answer: "No, women candidates are exempted from paying the fee." },
+      { question: "What is the salary of NGRI MTS?", answer: "Pay Level-1 with total emoluments around ₹35,973/- per month." },
+      { question: "Is there negative marking in the exam?", answer: "Yes, 1 mark will be deducted for each wrong answer." }
+    ]
+  },
   // --- 25. BPSC AEDO Recruitment 2025 ---
   {
     id: 25,
