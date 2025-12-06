@@ -4,147 +4,18 @@ export const jobsData = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
-  // --- 20. DDA Recruitment 2025 (ID 20) - FULLY CORRECTED (1732 Posts) ---
-  {
-    id: 21,
-    slug: "dda-recruitment-2025-20",
-    shortTitle: "DDA Recruitment 2025",
-    title: "DDA Recruitment 2025 Apply Online for 1732 Posts | MTS, JSA, JE, ASO & Patwari",
-    shortInfo: "Delhi Development Authority (DDA) has released the official notification (Advt. No. 09/2025) for the recruitment of 1732 vacancies in Group A, B, and C cadres. Posts include Assistant Section Officer (ASO), Junior Engineer (JE), Junior Secretariat Assistant (JSA), Patwari, Mali, Stenographer, and Multi-Tasking Staff (MTS). Eligible candidates can apply online.",
-    postDate: "06/12/2025",
-    category: "Latest Jobs",
-
-    salary: "Level-1 to Level-11 (As per 7th CPC)",
-
-    importantDates: [
-      { label: "Notification Date", value: "26/09/2025" },
-      { label: "Application Begin", value: "06/10/2025 (10:00 AM)" },
-      { label: "Last Date for Apply", value: "05/11/2025 (06:00 PM)" },
-      { label: "Fee Payment Last Date", value: "07/11/2025" },
-      { label: "Exam Date", value: "16 Dec 2025 to 03 Jan 2026" }
-    ],
-
-    applicationFee: [
-      { category: "Group A Officers", amount: "₹2500/-" },
-      { category: "Group B Posts (JE/ASO)", amount: "₹2500/-" },
-      { category: "Group C Posts (MTS/JSA)", amount: "₹1000/-" },
-      { category: "SC / ST / PwBD / Female", amount: "₹0 (Nil)" },
-      { category: "Payment Mode", amount: "Online" }
-    ],
-
-    ageLimit: "MTS/Mali: 18-25 Yrs | JSA/Steno/JE: 18-27 Yrs | ASO/Patwari: 21-30 Yrs | Group A: Upto 40 Yrs.",
-
-    vacancyDetails: [
-      { postName: "Assistant Section Officer (ASO) - Grp B", totalPost: 125, eligibility: "Bachelor Degree + Computer Proficiency" },
-      { postName: "Junior Engineer (Civil/Elect/Mech) - Grp B", totalPost: 171, eligibility: "Diploma in Engineering" },
-      { postName: "Junior Secretariat Assistant (JSA) - Grp C", totalPost: 199, eligibility: "12th Pass + Typing (35 wpm Eng / 30 wpm Hindi)" },
-      { postName: "Multi-Tasking Staff (MTS) - Grp C", totalPost: 745, eligibility: "10th Class Pass" },
-      { postName: "Mali (Gardener) - Grp C", totalPost: 282, eligibility: "10th Pass + Gardening Training" },
-      { postName: "Patwari - Grp C", totalPost: 79, eligibility: "Graduate + Computer Knowledge" },
-      { postName: "Stenographer Grade 'D' - Grp C", totalPost: 44, eligibility: "12th Pass + Steno" },
-      { postName: "Various Group A Posts (Dy Director etc)", totalPost: 53, eligibility: "PG/Degree in Architecture/Law/Finance" }
-    ],
-
-    // Complete Vacancy Breakup (Total 1732)
-    vacancyTableTitle: "Post & Category Wise Vacancy Details",
-    vacancyColumnName: "Post Name",
-    
-    stateWiseVacancy: [
-      { "Post Name": "Multi Tasking Staff (MTS)", "Total": 745, "UR": 298, "EWS": 84, "OBC": 209, "SC": 91, "ST": 63 },
-      { "Post Name": "Junior Secretariat Asst (JSA)", "Total": 199, "UR": 86, "EWS": 20, "OBC": 53, "SC": 26, "ST": 14 },
-      { "Post Name": "Mali", "Total": 282, "UR": 118, "EWS": 30, "OBC": 77, "SC": 35, "ST": 22 },
-      { "Post Name": "Junior Engineer (Civil)", "Total": 104, "UR": 45, "EWS": 7, "OBC": 38, "SC": 11, "ST": 3 },
-      { "Post Name": "Junior Engineer (E/M)", "Total": 67, "UR": 32, "EWS": 6, "OBC": 17, "SC": 8, "ST": 4 },
-      { "Post Name": "Assistant Section Officer (ASO)", "Total": 125, "UR": 52, "EWS": 12, "OBC": 33, "SC": 19, "ST": 9 },
-      { "Post Name": "Patwari", "Total": 79, "UR": 33, "EWS": 8, "OBC": 22, "SC": 12, "ST": 4 },
-      { "Post Name": "Stenographer Grade D", "Total": 44, "UR": 24, "EWS": 2, "OBC": 5, "SC": 5, "ST": 8 },
-      { "Post Name": "Sectional Officer (Hort.)", "Total": 75, "UR": 51, "EWS": 7, "OBC": 6, "SC": 8, "ST": 3 },
-      { "Post Name": "Other Group B Posts (Legal/Arch/Surveyor)", "Total": 6, "UR": 3, "EWS": 0, "OBC": 2, "SC": 1, "ST": 0 },
-      { "Post Name": "Group A Posts (Director/Accts/Law)", "Total": 53, "UR": 23, "EWS": 5, "OBC": 14, "SC": 7, "ST": 4 }
-    ],
-
-    salaryDetails: [
-      { post: "Group A (Dy. Director / Officers)", level: "Level-10 / Level-11" },
-      { post: "Group B (ASO / JE / SO)", level: "Level-6 / Level-7 (₹35,400 - ₹1,42,400)" },
-      { post: "Group C (JSA / Steno / Patwari)", level: "Level-2 / Level-4 / Level-5" },
-      { post: "Group C (MTS / Mali)", level: "Level-1 (₹18,000 - ₹56,900)" }
-    ],
-
-    selectionProcess: [
-      "Stage 1: Computer Based Examination (CBT) - For All Posts",
-      "Stage 2: Skill Test / Typing / Stenography (Post Specific)",
-      "Stage 3: Stage-II Mains Exam (For ASO / JSA / Patwari)",
-      "Stage 4: Document Verification"
-    ],
-
-    examPattern: {
-      details: ["Mode: Online CBT", "Duration: 1 Hour (Stage 1)", "Negative Marking: 0.33 Marks (MTS/JSA) / 0.25 (JE)"],
-      stages: [
-        {
-          title: "Exam Pattern: MTS / Mali (Single Stage)",
-          data: [
-            { subject: "General Intelligence & Reasoning", questions: 25, marks: 25 },
-            { subject: "General Awareness", questions: 25, marks: 25 },
-            { subject: "Quantitative Aptitude", questions: 25, marks: 25 },
-            { subject: "English Language", questions: 25, marks: 25 },
-            { subject: "Total", questions: 100, marks: 100 }
-          ]
-        },
-        {
-          title: "Exam Pattern: ASO / JSA (Stage-I)",
-          data: [
-            { subject: "General Intelligence & Reasoning", questions: 25, marks: 50 },
-            { subject: "General Awareness", questions: 25, marks: 50 },
-            { subject: "Quantitative Aptitude", questions: 25, marks: 50 },
-            { subject: "English Comprehension", questions: 25, marks: 50 },
-            { subject: "Total", questions: 100, marks: 200 }
-          ]
-        },
-        {
-          title: "Exam Pattern: Junior Engineer (Single Stage)",
-          data: [
-            { subject: "Reasoning & GK", questions: 20, marks: 20 },
-            { subject: "Quant & English", questions: 20, marks: 20 },
-            { subject: "Respective Engineering Discipline", questions: 80, marks: 80 },
-            { subject: "Total", questions: 120, marks: 120 }
-          ]
-        }
-      ]
-    },
-
-    howToApply: [
-      "Visit the official website dda.gov.in.",
-      "Click on 'Jobs' -> 'Direct Recruitment 2025' -> 'Apply Online'.",
-      "Register using Name, Email, and Mobile Number.",
-      "Login and fill the application form for your desired post (Separate application for each post).",
-      "Upload Scanned Photo and Signature.",
-      "Pay the application fee online.",
-      "Submit the form and take a printout."
-    ],
-
-    links: [
-      { title: "Apply Online", url: "https://cdn.digialm.com/EForms/configuredHtml/1258/95962/Index.html" },
-      { title: "Download Notification PDF", url: "https://dda.gov.in/sites/default/files/latest_jobs/advertisement_no_09_2025_dr_2025.pdf" },
-      { title: "Official Website", url: "https://dda.gov.in/" }
-    ],
-    
-    faqs: [
-      { question: "What is the full form of DDA?", answer: "Delhi Development Authority." },
-      { question: "Can I apply for both MTS and JSA?", answer: "Yes, you can apply for multiple posts, but you have to fill separate forms and pay separate fees for each." },
-      { question: "Is there any interview?", answer: "No, there is no interview for Group B (Non-Gazetted) and Group C posts. Selection is based on CBT and Skill Test." }
-    ]
-  },
-  // --- 20. DDA Recruitment 2025 (ID 20) - FULLY CORRECTED (1732 Posts) ---
+  
+  // --- 20. DDA Recruitment 2025 (ID 20) - ALL 26 POSTS INCLUDED ---
   {
     id: 20,
     slug: "dda-recruitment-2025",
-    shortTitle: "DDA Recruitment 2025",
-    title: "DDA Recruitment 2025 Apply Online for 1732 Posts | MTS, JSA, JE, ASO & Patwari",
-    shortInfo: "Delhi Development Authority (DDA) has released the official notification (Advt. No. 09/2025) for the recruitment of 1732 vacancies in Group A, B, and C cadres. Posts include Assistant Section Officer (ASO), Junior Engineer (JE), Junior Secretariat Assistant (JSA), Patwari, Mali, Stenographer, and Multi-Tasking Staff (MTS). Eligible candidates can apply online.",
+    shortTitle: "DDA Recruitment 2025 Apply Online for 1732 Posts",
+    title: "DDA Recruitment 2025 Apply Online for 1732 Posts | All 26 Categories (MTS, JE, ASO, Patwari)",
+    shortInfo: "Delhi Development Authority (DDA) has released the official notification (Advt. No. 09/2025) for the recruitment of 1732 vacancies across 26 different posts in Group A, B, and C cadres. Major posts include Junior Engineer (JE), Assistant Section Officer (ASO), Patwari, JSA, and MTS. Eligible candidates can apply online.",
     postDate: "06/12/2025",
     category: "Latest Jobs",
 
-    salary: "Level-1 to Level-11 (As per 7th CPC)",
+    salary: "Level-1 to Level-11 (Post Wise Pay Matrix)",
 
     importantDates: [
       { label: "Notification Date", value: "26/09/2025" },
@@ -156,52 +27,67 @@ export const jobsData = [
 
     applicationFee: [
       { category: "Group A Officers", amount: "₹2500/-" },
-      { category: "Group B Posts (JE/ASO)", amount: "₹2500/-" },
-      { category: "Group C Posts (MTS/JSA)", amount: "₹1000/-" },
+      { category: "Group B Posts", amount: "₹2500/-" },
+      { category: "Group C Posts", amount: "₹1000/-" },
       { category: "SC / ST / PwBD / Female", amount: "₹0 (Nil)" },
       { category: "Payment Mode", amount: "Online" }
     ],
 
     ageLimit: "MTS/Mali: 18-25 Yrs | JSA/Steno/JE: 18-27 Yrs | ASO/Patwari: 21-30 Yrs | Group A: Upto 40 Yrs.",
 
+    // Major Posts Eligibility Summary
     vacancyDetails: [
-      { postName: "Assistant Section Officer (ASO) - Grp B", totalPost: 125, eligibility: "Bachelor Degree + Computer Proficiency" },
-      { postName: "Junior Engineer (Civil/Elect/Mech) - Grp B", totalPost: 171, eligibility: "Diploma in Engineering" },
-      { postName: "Junior Secretariat Assistant (JSA) - Grp C", totalPost: 199, eligibility: "12th Pass + Typing (35 wpm Eng / 30 wpm Hindi)" },
-      { postName: "Multi-Tasking Staff (MTS) - Grp C", totalPost: 745, eligibility: "10th Class Pass" },
-      { postName: "Mali (Gardener) - Grp C", totalPost: 282, eligibility: "10th Pass + Gardening Training" },
-      { postName: "Patwari - Grp C", totalPost: 79, eligibility: "Graduate + Computer Knowledge" },
-      { postName: "Stenographer Grade 'D' - Grp C", totalPost: 44, eligibility: "12th Pass + Steno" },
-      { postName: "Various Group A Posts (Dy Director etc)", totalPost: 53, eligibility: "PG/Degree in Architecture/Law/Finance" }
+      { postName: "Assistant Section Officer (ASO)", totalPost: 125, eligibility: "Bachelor Degree + Computer Proficiency" },
+      { postName: "Junior Engineer (Civil/Elect/Mech)", totalPost: 171, eligibility: "Diploma in Engineering" },
+      { postName: "Junior Secretariat Assistant (JSA)", totalPost: 199, eligibility: "12th Pass + Typing" },
+      { postName: "Multi-Tasking Staff (MTS)", totalPost: 745, eligibility: "10th Class Pass" },
+      { postName: "Patwari", totalPost: 79, eligibility: "Graduate" },
+      { postName: "Mali", totalPost: 282, eligibility: "10th Pass + Gardening Training" },
+      { postName: "Stenographer Grade 'D'", totalPost: 44, eligibility: "12th Pass + Steno" },
+      { postName: "For Other 19 Posts", totalPost: "See Table Below", eligibility: "Check Notification" }
     ],
 
-    // Complete Vacancy Breakup (Total 1732)
-    vacancyTableTitle: "Post & Category Wise Vacancy Details",
+    // --- FULL 26 POSTS VACANCY TABLE (As per your Doc) ---
+    vacancyTableTitle: "Complete Vacancy Details (Post Code 01-26)",
     vacancyColumnName: "Post Name",
     
     stateWiseVacancy: [
-      { "Post Name": "Multi Tasking Staff (MTS)", "Total": 745, "UR": 298, "EWS": 84, "OBC": 209, "SC": 91, "ST": 63 },
-      { "Post Name": "Junior Secretariat Asst (JSA)", "Total": 199, "UR": 86, "EWS": 20, "OBC": 53, "SC": 26, "ST": 14 },
-      { "Post Name": "Mali", "Total": 282, "UR": 118, "EWS": 30, "OBC": 77, "SC": 35, "ST": 22 },
-      { "Post Name": "Junior Engineer (Civil)", "Total": 104, "UR": 45, "EWS": 7, "OBC": 38, "SC": 11, "ST": 3 },
-      { "Post Name": "Junior Engineer (E/M)", "Total": 67, "UR": 32, "EWS": 6, "OBC": 17, "SC": 8, "ST": 4 },
-      { "Post Name": "Assistant Section Officer (ASO)", "Total": 125, "UR": 52, "EWS": 12, "OBC": 33, "SC": 19, "ST": 9 },
-      { "Post Name": "Patwari", "Total": 79, "UR": 33, "EWS": 8, "OBC": 22, "SC": 12, "ST": 4 },
-      { "Post Name": "Stenographer Grade D", "Total": 44, "UR": 24, "EWS": 2, "OBC": 5, "SC": 5, "ST": 8 },
-      { "Post Name": "Sectional Officer (Hort.)", "Total": 75, "UR": 51, "EWS": 7, "OBC": 6, "SC": 8, "ST": 3 },
-      { "Post Name": "Other Group B Posts (Legal/Arch/Surveyor)", "Total": 6, "UR": 3, "EWS": 0, "OBC": 2, "SC": 1, "ST": 0 },
-      { "Post Name": "Group A Posts (Director/Accts/Law)", "Total": 53, "UR": 23, "EWS": 5, "OBC": 14, "SC": 7, "ST": 4 }
+      { "Post Name": "01. Deputy Director (Architect)", "Group": "A", "Pay Level": "Level 11", "Total": 4, "UR": 1, "EWS": 1, "SC": 1, "ST": 0, "OBC": 1 },
+      { "Post Name": "02. Deputy Director (Public Relation)", "Group": "A", "Pay Level": "Level 11", "Total": 1, "UR": 1, "EWS": 0, "SC": 0, "ST": 0, "OBC": 0 },
+      { "Post Name": "03. Deputy Director (Planning)", "Group": "A", "Pay Level": "Level 11", "Total": 4, "UR": 2, "EWS": 0, "SC": 0, "ST": 0, "OBC": 2 },
+      { "Post Name": "04. Assistant Director (Planning)", "Group": "A", "Pay Level": "Level 10", "Total": 19, "UR": 10, "EWS": 2, "SC": 3, "ST": 1, "OBC": 3 },
+      { "Post Name": "05. Assistant Director (Architect)", "Group": "A", "Pay Level": "Level 10", "Total": 8, "UR": 6, "EWS": 1, "SC": 1, "ST": 0, "OBC": 0 },
+      { "Post Name": "06. Assistant Director (Landscape)", "Group": "A", "Pay Level": "Level 10", "Total": 1, "UR": 0, "EWS": 0, "SC": 0, "ST": 0, "OBC": 1 },
+      { "Post Name": "07. Assistant Director (System)", "Group": "A", "Pay Level": "Level 10", "Total": 3, "UR": 2, "EWS": 0, "SC": 0, "ST": 0, "OBC": 1 },
+      { "Post Name": "08. Assistant Executive Engineer (Civil)", "Group": "A", "Pay Level": "Level 10", "Total": 10, "UR": 7, "EWS": 0, "SC": 0, "ST": 1, "OBC": 2 },
+      { "Post Name": "09. Assistant Executive Engineer (Elect)", "Group": "A", "Pay Level": "Level 10", "Total": 3, "UR": 1, "EWS": 0, "SC": 1, "ST": 0, "OBC": 1 },
+      { "Post Name": "10. Assistant Director (Ministerial)", "Group": "B", "Pay Level": "Level 8", "Total": 15, "UR": 9, "EWS": 1, "SC": 2, "ST": 1, "OBC": 2 },
+      { "Post Name": "11. Legal Assistant", "Group": "B", "Pay Level": "Level 7", "Total": 7, "UR": 5, "EWS": 0, "SC": 0, "ST": 0, "OBC": 2 },
+      { "Post Name": "12. Planning Assistant", "Group": "B", "Pay Level": "Level 7", "Total": 23, "UR": 17, "EWS": 1, "SC": 1, "ST": 3, "OBC": 1 },
+      { "Post Name": "13. Architectural Assistant", "Group": "B", "Pay Level": "Level 7", "Total": 9, "UR": 4, "EWS": 1, "SC": 1, "ST": 1, "OBC": 2 },
+      { "Post Name": "14. Programmer", "Group": "B", "Pay Level": "Level 6", "Total": 6, "UR": 2, "EWS": 1, "SC": 0, "ST": 1, "OBC": 2 },
+      { "Post Name": "15. Junior Engineer (Civil)", "Group": "B", "Pay Level": "Level 6", "Total": 104, "UR": 45, "EWS": 7, "SC": 11, "ST": 3, "OBC": 38 },
+      { "Post Name": "16. Junior Engineer (Elect/Mech)", "Group": "B", "Pay Level": "Level 6", "Total": 67, "UR": 32, "EWS": 6, "SC": 8, "ST": 4, "OBC": 17 },
+      { "Post Name": "17. Sectional Officer (Horticulture)", "Group": "B", "Pay Level": "Level 6", "Total": 75, "UR": 51, "EWS": 7, "SC": 8, "ST": 3, "OBC": 6 },
+      { "Post Name": "18. Naib Tehsildar", "Group": "B", "Pay Level": "Level 6", "Total": 6, "UR": 5, "EWS": 0, "SC": 0, "ST": 0, "OBC": 1 },
+      { "Post Name": "19. Junior Translator (Official Lang)", "Group": "B", "Pay Level": "Level 6", "Total": 6, "UR": 4, "EWS": 0, "SC": 1, "ST": 0, "OBC": 1 },
+      { "Post Name": "20. Assistant Security Officer", "Group": "B", "Pay Level": "Level 5", "Total": 6, "UR": 5, "EWS": 0, "SC": 0, "ST": 0, "OBC": 1 },
+      { "Post Name": "21. Surveyor", "Group": "C", "Pay Level": "Level 5", "Total": 6, "UR": 1, "EWS": 1, "SC": 0, "ST": 1, "OBC": 3 },
+      { "Post Name": "22. Stenographer Grade 'D'", "Group": "C", "Pay Level": "Level 4", "Total": 44, "UR": 24, "EWS": 2, "SC": 5, "ST": 8, "OBC": 5 },
+      { "Post Name": "23. Patwari", "Group": "C", "Pay Level": "Level 3", "Total": 79, "UR": 33, "EWS": 8, "SC": 12, "ST": 4, "OBC": 22 },
+      { "Post Name": "24. Junior Secretariat Assistant (JSA)", "Group": "C", "Pay Level": "Level 2", "Total": 199, "UR": 86, "EWS": 20, "SC": 26, "ST": 14, "OBC": 53 },
+      { "Post Name": "25. Mali", "Group": "C", "Pay Level": "Level 1", "Total": 282, "UR": 118, "EWS": 30, "SC": 35, "ST": 22, "OBC": 77 },
+      { "Post Name": "26. Multi Tasking Staff (MTS)", "Group": "C", "Pay Level": "Level 1", "Total": 745, "UR": 298, "EWS": 84, "SC": 91, "ST": 63, "OBC": 209 }
     ],
 
     salaryDetails: [
-      { post: "Group A (Dy. Director / Officers)", level: "Level-10 / Level-11" },
-      { post: "Group B (ASO / JE / SO)", level: "Level-6 / Level-7 (₹35,400 - ₹1,42,400)" },
-      { post: "Group C (JSA / Steno / Patwari)", level: "Level-2 / Level-4 / Level-5" },
-      { post: "Group C (MTS / Mali)", level: "Level-1 (₹18,000 - ₹56,900)" }
+      { post: "Group A (Post 01-09)", level: "Level-10 / Level-11" },
+      { post: "Group B (Post 10-20)", level: "Level-6 / Level-7 / Level-8" },
+      { post: "Group C (Post 21-26)", level: "Level-1 to Level-5" }
     ],
 
     selectionProcess: [
-      "Stage 1: Computer Based Examination (CBT) - For All Posts",
+      "Stage 1: Computer Based Examination (CBT)",
       "Stage 2: Skill Test / Typing / Stenography (Post Specific)",
       "Stage 3: Stage-II Mains Exam (For ASO / JSA / Patwari)",
       "Stage 4: Document Verification"
