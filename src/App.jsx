@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link, useParams, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { Search, X } from 'lucide-react'; // <--- Import Icons
 import { jobsData } from './jobsData';
 import About from './About';
 import Contact from './Contact';
@@ -8,19 +9,20 @@ import Privacy from './Privacy';
 import SEO from './SEO';
 import CategoryPage from './CategoryPage';
 import ActiveJobs from './ActiveJobs';
-import SearchResults from './SearchResults'; // <--- NEW IMPORT
+import SearchResults from './SearchResults';
 
 // --- Navbar ---
 function Navbar() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [isSearchOpen, setIsSearchOpen] = useState(false); // Toggle State
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchTerm.trim()) {
-      // Navigate to Search Page with Query
       navigate(`/search?q=${encodeURIComponent(searchTerm)}`);
-      setSearchTerm(""); // Clear input after search
+      setSearchTerm("");
+      setIsSearchOpen(false); // Close bar after search
     }
   };
 
@@ -28,23 +30,74 @@ function Navbar() {
     <>
       <div className="sticky-top">
         <div className="header"><h1>TOP ONLINE FORM</h1><p>www.TopOnlineForm.com</p></div>
-        <div className="navbar">
-          <Link to="/">Home</Link><Link to="/active-jobs">Active Jobs</Link><Link to="/latest-jobs">Latest Jobs</Link>
-          <Link to="/results">Results</Link><Link to="/admit-card">Admit Card</Link><Link to="/answer-key">Answer Key</Link><Link to="/syllabus">Syllabus</Link>
-        </div>
         
-        {/* --- ADDED SEARCH BAR IN NAVBAR (Mobile Friendly) --- */}
-        <div style={{background: '#f1f1f1', padding: '10px', display: 'flex', justifyContent: 'center', borderBottom: '1px solid #ccc'}}>
-           <form onSubmit={handleSearch} style={{display:'flex', width: '100%', maxWidth: '600px'}}>
-             <input 
-               type="text" 
-               placeholder="Search jobs (e.g. SSC, Railway)..." 
-               value={searchTerm}
-               onChange={(e) => setSearchTerm(e.target.value)}
-               style={{flex: 1, padding: '8px', borderRadius: '4px 0 0 4px', border: '1px solid #ccc', outline: 'none'}}
-             />
-             <button type="submit" style={{padding: '8px 15px', background: '#333', color: '#fff', border: 'none', borderRadius: '0 4px 4px 0', cursor: 'pointer'}}>Search</button>
-           </form>
+        {/* --- NAVBAR WITH TOGGLE LOGIC --- */}
+        <div className="navbar" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '45px', padding: '0 10px' }}>
+          
+          {!isSearchOpen ? (
+            // --- VIEW 1: LINKS + SEARCH ICON ---
+            <div style={{ display: 'flex', alignItems: 'center', width: '100%', justifyContent: 'center', position: 'relative' }}>
+              <div className="nav-links" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+                <Link to="/">Home</Link>
+                <Link to="/active-jobs">Active Jobs</Link>
+                <Link to="/latest-jobs">Latest Jobs</Link>
+                <Link to="/results">Results</Link>
+                <Link to="/admit-card">Admit Card</Link>
+                <Link to="/answer-key">Answer Key</Link>
+                <Link to="/syllabus">Syllabus</Link>
+              </div>
+              
+              {/* Search Icon Button (Absolute Right for Desktop, Relative for Mobile) */}
+              <button 
+                onClick={() => setIsSearchOpen(true)} 
+                style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: 'white', marginLeft: '15px', display: 'flex', alignItems: 'center' }}
+                title="Search Jobs"
+              >
+                <Search size={20} />
+              </button>
+            </div>
+          ) : (
+            // --- VIEW 2: SEARCH INPUT + CLOSE ICON ---
+            <form onSubmit={handleSearch} style={{ display: 'flex', width: '100%', maxWidth: '600px', alignItems: 'center' }}>
+              <input 
+                autoFocus
+                type="text" 
+                placeholder="Search jobs (e.g. SSC, Railway)..." 
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                style={{
+                  flex: 1, 
+                  padding: '8px', 
+                  borderRadius: '4px', 
+                  border: 'none', 
+                  outline: 'none',
+                  fontSize: '14px'
+                }}
+              />
+              <button 
+                type="submit" 
+                style={{ 
+                  padding: '8px 15px', 
+                  background: '#ffcc00', 
+                  color: 'black', 
+                  border: 'none', 
+                  borderRadius: '4px', 
+                  marginLeft: '5px', 
+                  cursor: 'pointer',
+                  fontWeight: 'bold'
+                }}
+              >
+                Go
+              </button>
+              <button 
+                type="button" 
+                onClick={() => setIsSearchOpen(false)} 
+                style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: 'white', marginLeft: '10px' }}
+              >
+                <X size={24} />
+              </button>
+            </form>
+          )}
         </div>
       </div> 
       <div className="clean-note"><p>✨ Welcome to TopOnlineForm.com — No Ads, Just Information. ✨</p></div>
@@ -54,17 +107,12 @@ function Navbar() {
 
 // --- Home Component ---
 function Home() {
-  // Added hooks for Grid Search
   const navigate = useNavigate();
   const [gridSearch, setGridSearch] = useState("");
-
   const sortNewest = (a, b) => b.id - a.id;
 
-  // Helper to check category (Handles both String and Array)
   const hasCategory = (job, cat) => {
-    if (Array.isArray(job.category)) {
-      return job.category.includes(cat);
-    }
+    if (Array.isArray(job.category)) return job.category.includes(cat);
     return job.category === cat;
   };
 
@@ -96,7 +144,7 @@ function Home() {
       <div className="action-cell"><a href="https://whatsapp.com/channel/0029Vb7TcG06LwHoTXhZKn2D" target="_blank" className="social-btn whatsapp full-width">Join WhatsApp Group</a></div>
       <div className="action-cell"><a href="https://telegram.org" target="_blank" className="social-btn telegram full-width">Join Telegram Channel</a></div>
       
-      {/* --- UPDATED GRID SEARCH FORM --- */}
+      {/* Grid Search Form (Still useful on mobile/desktop main body) */}
       <div className="action-cell">
          <form className="grid-search-form" onSubmit={(e) => {
             e.preventDefault();
@@ -223,7 +271,6 @@ function JobDetails() {
     );
   };
 
-  // --- UPDATED RenderTable Component with Fix ---
   const RenderTable = ({ data, title, autoTotal = true }) => {
     if (!data || data.length === 0) return null;
     const headers = Object.keys(data[0]);
@@ -269,17 +316,13 @@ function JobDetails() {
                         <>
                           <td>Total</td>
                           {headers.slice(1).map((h, i) => {
-                             // --- Logic Fixed Here ---
                              const totalIndex = headers.indexOf(totalKey);
                              const currentIndex = headers.indexOf(h);
-
                              if (h === totalKey) {
                                  return <td key={i} style={{color:'red'}}>{colTotals[h]}</td>;
                              } else if (currentIndex < totalIndex) {
-                                 // Add empty cell if the column is before Total (e.g. Group, Pay Level)
                                  return <td key={i}></td>;
                              }
-                             // Return null for columns AFTER Total (covered by colSpan below)
                              return null;
                           })}
                           <td colSpan={headers.length - 1 - headers.indexOf(totalKey)} style={{textAlign:'center', fontSize:'12px', color:'#555'}}>
@@ -310,15 +353,9 @@ function JobDetails() {
       </Helmet>
 
       <h1 className="job-title">{job.title}</h1>
-
-      {/* --- SMART POST DATE (Conditional) --- */}
-      {job.postDate && (
-        <p style={{marginBottom:'10px', textAlign:'justify'}}><strong>Post Date : </strong> {job.postDate}</p>
-      )}
-
+      {job.postDate && (<p style={{marginBottom:'10px', textAlign:'justify'}}><strong>Post Date : </strong> {job.postDate}</p>)}
       <p style={{marginBottom:'20px', textAlign:'justify'}}><strong>Short Info : </strong> {job.shortInfo}</p>
        
-      {/* Dates & Fees Section */}
       {job.importantDates.length > 0 && (
         <table>
           <tbody>
@@ -327,24 +364,8 @@ function JobDetails() {
               <th className="green-header" width="50%">Fees</th>
             </tr>
             <tr>
-              <td>
-                <ul>
-                  {job.importantDates.map((d, i) => (
-                    <li key={i}><strong>{d.label}:</strong> {d.value}</li>
-                  ))}
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  {job.applicationFee && job.applicationFee.length > 0 ? (
-                    job.applicationFee.map((f, i) => (
-                      <li key={i}><strong>{f.category}:</strong> {f.amount}</li>
-                    ))
-                  ) : (
-                    <li>Check Notification</li>
-                  )}
-                </ul>
-              </td>
+              <td><ul>{job.importantDates.map((d, i) => <li key={i}><strong>{d.label}:</strong> {d.value}</li>)}</ul></td>
+              <td><ul>{job.applicationFee && job.applicationFee.length > 0 ? job.applicationFee.map((f, i) => <li key={i}><strong>{f.category}:</strong> {f.amount}</li>) : <li>Check Notification</li>}</ul></td>
             </tr>
           </tbody>
         </table>
@@ -367,17 +388,13 @@ function JobDetails() {
 
       {job.salary && (<><div className="section-header">Pay Scale / Salary</div><div style={{textAlign: 'center', border: '1px solid #000', padding: '15px', fontWeight: 'bold', fontSize: '16px', backgroundColor: '#f9f9f9', color: '#008000'}}>{job.salary}</div></>)}
       {job.salaryDetails && <RenderTable data={job.salaryDetails} title="Post Wise Salary / Pay Level" autoTotal={false} />}
-
       {job.selectionProcess && (<><div className="section-header">Selection Process</div><ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.selectionProcess.map((item, index) => <li key={index} style={{marginBottom: '5px'}}><strong>{item.includes(":") ? item : `Step ${index+1}: ${item}`}</strong></li>)}</ol></>)}
 
       {job.examPattern && (
         <>
-          <div className="section-header">
-            {(job.examPattern.pet || (job.examPattern.stages && job.examPattern.stages.some(s => s.type === 'pet'))) ? "Exam Pattern & Physical Test" : "Exam Pattern"}
-          </div>
+          <div className="section-header">{(job.examPattern.pet || (job.examPattern.stages && job.examPattern.stages.some(s => s.type === 'pet'))) ? "Exam Pattern & Physical Test" : "Exam Pattern"}</div>
           <div style={{padding: '10px'}}>
             {job.examPattern.details && (<ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>{job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}</ul>)}
-             
             {job.examPattern.table && <RenderSmartTable data={job.examPattern.table} />}
             {job.examPattern.tier1 && <RenderSmartTable data={job.examPattern.tier1} title="Tier-I Exam Pattern" />}
             {job.examPattern.tier2 && <RenderSmartTable data={job.examPattern.tier2} title="Tier-II Exam Pattern" />}
@@ -395,42 +412,14 @@ function JobDetails() {
 
       {job.extraSections && job.extraSections.map((section, index) => (
         <div key={index}>
-          {section.tableData ? (
-             <RenderTable data={section.tableData} title={section.title} autoTotal={false} />
-          ) : (
-             <>
-               <div className="section-header">{section.title}</div>
-               <div style={{padding: '10px'}}>
-                 {section.text && <p style={{textAlign: 'justify', whiteSpace: 'pre-line'}}>{section.text}</p>}
-                 {section.list && (<ul style={{listStyleType: 'disc', marginLeft: '30px'}}>{section.list.map((li, i) => <li key={i} style={{marginBottom: '5px'}}>{li}</li>)}</ul>)}
-               </div>
-             </>
-          )}
+          {section.tableData ? <RenderTable data={section.tableData} title={section.title} autoTotal={false} /> : (<><div className="section-header">{section.title}</div><div style={{padding: '10px'}}>{section.text && <p style={{textAlign: 'justify', whiteSpace: 'pre-line'}}>{section.text}</p>}{section.list && (<ul style={{listStyleType: 'disc', marginLeft: '30px'}}>{section.list.map((li, i) => <li key={i} style={{marginBottom: '5px'}}>{li}</li>)}</ul>)}</div></>)}
         </div>
       ))}
 
       {job.howToApply && (<><div className="section-header">How to Apply</div><ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.howToApply.map((item, index) => <li key={index} style={{marginBottom: '10px'}}>{item}</li>)}</ol></>)}
-       
       <div className="section-header">Important Links</div>
-      <table className="important-links"><tbody>
-          {job.links && job.links.map((link, index) => (
-            <tr key={index}><td><strong>{link.title}</strong></td><td align="center"><a href={link.url} className="click-here" target="_blank" rel="noreferrer">Click Here</a></td></tr>
-          ))}
-      </tbody></table>
-
-      {job.faqs && job.faqs.length > 0 && (
-        <>
-          <div className="section-header">Frequently Asked Questions (FAQs)</div>
-          <div style={{padding: '15px', border: '1px solid #ddd', marginTop: '10px'}}>
-            {job.faqs.map((faq, index) => (
-              <div key={index} style={{marginBottom: '15px'}}>
-                <div style={{fontWeight: 'bold', color: '#d32f2f', marginBottom: '5px'}}>Q.{index + 1}: {faq.question}</div>
-                <div style={{color: '#333'}}>Ans: {faq.answer}</div>
-              </div>
-            ))}
-          </div>
-        </>
-      )}
+      <table className="important-links"><tbody>{job.links && job.links.map((link, index) => (<tr key={index}><td><strong>{link.title}</strong></td><td align="center"><a href={link.url} className="click-here" target="_blank" rel="noreferrer">Click Here</a></td></tr>))}</tbody></table>
+      {job.faqs && job.faqs.length > 0 && (<><div className="section-header">Frequently Asked Questions (FAQs)</div><div style={{padding: '15px', border: '1px solid #ddd', marginTop: '10px'}}>{job.faqs.map((faq, index) => (<div key={index} style={{marginBottom: '15px'}}><div style={{fontWeight: 'bold', color: '#d32f2f', marginBottom: '5px'}}>Q.{index + 1}: {faq.question}</div><div style={{color: '#333'}}>Ans: {faq.answer}</div></div>))}</div></>)}
     </div>
   );
 }
@@ -445,7 +434,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/search" element={<SearchResults />} /> {/* <--- ADDED ROUTE */}
+        <Route path="/search" element={<SearchResults />} />
         <Route path="/:slug" element={<JobDetails />} />
         <Route path="/active-jobs" element={<ActiveJobs />} />
         <Route path="/latest-jobs" element={<CategoryPage category="Latest Jobs" title="All Latest Jobs" />} />
