@@ -3,7 +3,121 @@ export const jobsData = [
   // ==================================================
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
-  
+
+
+  // --- 24. JMI Delhi Non-Teaching Recruitment 2025 ---
+  {
+    id: 24,
+    slug: "jmi-delhi-non-teaching-recruitment-2025",
+    shortTitle: "JMI Non-Teaching Recruitment 2025",
+    title: "JMI Delhi Non-Teaching Recruitment 2025 Apply Offline for 70 Posts | JE, Assistant, Steno & Library Attendant",
+    shortInfo: "Jamia Millia Islamia (JMI), New Delhi has invited offline applications for 70 Non-Teaching posts under Advt. No. 02/2025-26 (NT). Vacancies include Private Secretary, Personal Assistant, Junior Engineer (Civil/Elect/Mech), Library Attendant, Security Assistant, and Cook. Candidates must send the application form to the Registrar's Office by 26th December 2025.",
+    postDate: "02/12/2025",
+    category: "Latest Jobs",
+
+    salary: "Level-1 to Level-13 (Post Wise 7th CPC)",
+
+    importantDates: [
+      { label: "Notification Date", value: "02/12/2025" },
+      { label: "Application Start", value: "02/12/2025" },
+      { label: "Last Date for Receipt of Application", value: "26/12/2025 (upto 05:00 PM)" },
+      { label: "Exam/Skill Test Date", value: "To be notified" }
+    ],
+
+    applicationFee: [
+      { category: "Group A (Pay Level 10 & Above) - UR/OBC", amount: "₹1000/-" },
+      { category: "Group A (Pay Level 10 & Above) - SC/ST", amount: "₹500/-" },
+      { category: "Group B & C (Pay Level 7 & Below) - UR/OBC", amount: "₹700/-" },
+      { category: "Group B & C (Pay Level 7 & Below) - SC/ST", amount: "₹350/-" },
+      { category: "PwBD (Divyangjan)", amount: "₹0/- (Nil)" },
+      { category: "Payment Mode", amount: "Online Banking / UPI (ID: jmirps@indianbk)" }
+    ],
+
+    ageLimit: "Max 40 Years for most Direct Recruitment posts. (Relaxation: SC/ST/OBC/PwD as per GoI Rules).",
+
+    // Consolidated Vacancy Details
+    vacancyDetails: [
+      { postName: "Personal Assistant (English/Hindi)", totalPost: 15, eligibility: "Bachelor's Degree + Stenography (100 wpm) + Typing" },
+      { postName: "Stenographer (English/Hindi)", totalPost: 10, eligibility: "Bachelor's Degree + Stenography (80 wpm) + Typing" },
+      { postName: "Junior Engineer (Civil/Elect/Mech)", totalPost: 15, eligibility: "B.E/B.Tech OR Diploma + 3 Yrs Experience" },
+      { postName: "Library Attendant", totalPost: 6, eligibility: "12th Pass + Certificate in Library Science + 1 Yr Exp" },
+      { postName: "Security Assistant", totalPost: 9, eligibility: "12th Pass (Intermediate) + Ex-Army/Para-Military Pref" },
+      { postName: "Semi-Professional Assistant", totalPost: 4, eligibility: "Master's in Lib Sc. OR Bachelor's in Lib Sc. + 2 Yrs Exp" },
+      { postName: "Assistant Engineer (Civil/Elect)", totalPost: 2, eligibility: "Bachelor's Degree in Engg + 3 Yrs Exp" },
+      { postName: "Cook", totalPost: 1, eligibility: "10th + ITI/Diploma in Bakery/Cookery + 3 Yrs Exp" },
+      { postName: "Other Senior Posts (Group A)", totalPost: 8, eligibility: "Check Notification" }
+    ],
+
+    // Detailed Table with Pay Levels
+    vacancyTableTitle: "Post Wise Vacancy & Salary Details",
+    vacancyColumnName: "Post Name",
+
+    stateWiseVacancy: [
+      { "Category Name": "Private Secretary", "Pay Level": "Level-7", "Total Posts": 1 },
+      { "Category Name": "Personal Assistant", "Pay Level": "Level-6", "Total Posts": 15 },
+      { "Category Name": "Stenographer", "Pay Level": "Level-4", "Total Posts": 10 },
+      { "Category Name": "Land Record Superintendent", "Pay Level": "Level-6", "Total Posts": 1 },
+      { "Category Name": "Land Record Keeper", "Pay Level": "Level-4", "Total Posts": 1 },
+      { "Category Name": "Internal Audit Officer", "Pay Level": "Level-10/12", "Total Posts": 2 },
+      { "Category Name": "Supt. Engineer (Civil)", "Pay Level": "Level-13", "Total Posts": 1 },
+      { "Category Name": "Executive Engineer (Civil)", "Pay Level": "Level-11", "Total Posts": 1 },
+      { "Category Name": "Assistant Engineer", "Pay Level": "Level-7", "Total Posts": 2 },
+      { "Category Name": "Junior Engineer", "Pay Level": "Level-6", "Total Posts": 15 },
+      { "Category Name": "Semi-Professional Asst", "Pay Level": "Level-5", "Total Posts": 4 },
+      { "Category Name": "Library Attendant", "Pay Level": "Level-1", "Total Posts": 6 },
+      { "Category Name": "Security Assistant", "Pay Level": "Level-2", "Total Posts": 9 },
+      { "Category Name": "Program Officer", "Pay Level": "Level-10", "Total Posts": 1 },
+      { "Category Name": "Cook", "Pay Level": "Level-2", "Total Posts": 1 },
+      { "Category Name": "Total", "Pay Level": "-", "Total Posts": 70 }
+    ],
+
+    selectionProcess: [
+      "Written Test / Skill Test / Trade Test (as applicable)",
+      "Interview (For Group A Posts)",
+      "Document Verification",
+      "Medical Examination"
+    ],
+
+    // Custom Section for Offline Application Address
+    extraSections: [
+      {
+        title: "Postal Address for Application",
+        text: "The application form along with self-attested copies of certificates must reach the following address by post/courier/hand before 26.12.2025:",
+        list: [
+          "Recruitment & Promotion Section, 2nd Floor,",
+          "Registrar's Office, Jamia Millia Islamia,",
+          "Maulana Mohamed Ali Jauhar Marg,",
+          "Jamia Nagar, New Delhi - 110025."
+        ]
+      },
+      {
+        title: "Important Note for Old Candidates",
+        text: "Candidates who had applied for posts in Advt. No. 01/2023-24 (marked with * in notification) must apply afresh. However, they are EXEMPTED from the application fee if they enclose proof of their previous application."
+      }
+    ],
+
+    howToApply: [
+      "Download the Application Form from jmi.ac.in.",
+      "Pay the application fee via Online Mode/UPI (Receipt to be enclosed).",
+      "Fill the application form carefully.",
+      "Attach self-attested copies of Educational Qualification, Experience, Caste, and Fee Receipt.",
+      "Send the application envelope superscribed with 'Application for the post of [Post Name]' to the Registrar's Office, JMI.",
+      "Ensure it reaches before 26th December 2025 (05:00 PM)."
+    ],
+
+    links: [
+      { title: "Download Application Form", url: "https://www.jmi.ac.in/upload/menuupload/jobform_non_teaching.pdf" },
+      { title: "Download Notification PDF", url: "https://https://www.jmi.ac.in/upload/advertisement/jobs_advt2_2025december2.pdf" },
+      { title: "Official Website", url: "https://www.jmi.ac.in/" }
+    ],
+
+    faqs: [
+      { question: "Is the JMI Recruitment 2025 Online or Offline?", answer: "The application mode is Offline. You have to send the hard copy." },
+      { question: "What is the last date to apply?", answer: "The last date to reach the application is 26th December 2025." },
+      { question: "What is the application fee for Group B & C posts?", answer: "₹700 for UR/OBC and ₹350 for SC/ST. PwBD candidates are exempted." },
+      { question: "Do I need to pay fee if I applied in 2023?", answer: "No, if you applied for the same post in Advt 01/2023-24, you are exempted from fee but must apply again." }
+    ]
+  },
   // --- 23. NISE Gurugram Executive Assistant Recruitment 2025 ---
   {
     id: 23,
