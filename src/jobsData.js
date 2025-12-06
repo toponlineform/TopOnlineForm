@@ -6,7 +6,7 @@ export const jobsData = [
 
   // --- 20. DDA Recruitment 2025 (ID 20) - ALL 26 POSTS FIXED ---
   {
-    id: 21,
+    id: 20,
     slug: "dda-recruitment-2025",
     shortTitle: "DDA Recruitment 2025 Apply Online for 1732 Posts",
     title: "DDA Recruitment 2025 Apply Online for 1732 Posts | All 26 Categories (MTS, JE, ASO, Patwari)",
@@ -153,8 +153,8 @@ export const jobsData = [
     ],
 
     links: [
-      { title: "Apply Online", url: "https://cdn.digialm.com/EForms/configuredHtml/1258/95962/Index.html" },
-      { title: "Download Notification PDF", url: "https://dda.gov.in/sites/default/files/latest_jobs/advertisement_no_09_2025_dr_2025.pdf" },
+      { title: "Apply Online", url: "https://https://cdn.digialm.com/EForms/configuredHtml/1258/95962/Index.html" },
+      { title: "Download Notification PDF", url: "https://www.dda.gov.in/sites/default/files/latest_jobs/advertisement_no_09_2025_dr_2025.pdf" },
       { title: "Official Website", url: "https://dda.gov.in/" }
     ],
     
@@ -165,151 +165,6 @@ export const jobsData = [
     ]
   },
   
-  // --- 20. DDA Recruitment 2025 (ID 20) - ALL 26 POSTS INCLUDED ---
-  {
-    id: 20,
-    slug: "dda-recruitment-2025-20",
-    shortTitle: "DDA Recruitment 2025 Apply Online for 1732 Posts",
-    title: "DDA Recruitment 2025 Apply Online for 1732 Posts | All 26 Categories (MTS, JE, ASO, Patwari)",
-    shortInfo: "Delhi Development Authority (DDA) has released the official notification (Advt. No. 09/2025) for the recruitment of 1732 vacancies across 26 different posts in Group A, B, and C cadres. Major posts include Junior Engineer (JE), Assistant Section Officer (ASO), Patwari, JSA, and MTS. Eligible candidates can apply online.",
-    postDate: "06/12/2025",
-    category: "Latest Jobs",
-
-    salary: "Level-1 to Level-11 (Post Wise Pay Matrix)",
-
-    importantDates: [
-      { label: "Notification Date", value: "26/09/2025" },
-      { label: "Application Begin", value: "06/10/2025 (10:00 AM)" },
-      { label: "Last Date for Apply", value: "05/11/2025 (06:00 PM)" },
-      { label: "Fee Payment Last Date", value: "07/11/2025" },
-      { label: "Exam Date", value: "16 Dec 2025 to 03 Jan 2026" }
-    ],
-
-    applicationFee: [
-      { category: "Group A Officers", amount: "₹2500/-" },
-      { category: "Group B Posts", amount: "₹2500/-" },
-      { category: "Group C Posts", amount: "₹1000/-" },
-      { category: "SC / ST / PwBD / Female", amount: "₹0 (Nil)" },
-      { category: "Payment Mode", amount: "Online" }
-    ],
-
-    ageLimit: "MTS/Mali: 18-25 Yrs | JSA/Steno/JE: 18-27 Yrs | ASO/Patwari: 21-30 Yrs | Group A: Upto 40 Yrs.",
-
-    // Major Posts Eligibility Summary
-    vacancyDetails: [
-      { postName: "Assistant Section Officer (ASO)", totalPost: 125, eligibility: "Bachelor Degree + Computer Proficiency" },
-      { postName: "Junior Engineer (Civil/Elect/Mech)", totalPost: 171, eligibility: "Diploma in Engineering" },
-      { postName: "Junior Secretariat Assistant (JSA)", totalPost: 199, eligibility: "12th Pass + Typing" },
-      { postName: "Multi-Tasking Staff (MTS)", totalPost: 745, eligibility: "10th Class Pass" },
-      { postName: "Patwari", totalPost: 79, eligibility: "Graduate" },
-      { postName: "Mali", totalPost: 282, eligibility: "10th Pass + Gardening Training" },
-      { postName: "Stenographer Grade 'D'", totalPost: 44, eligibility: "12th Pass + Steno" },
-      { postName: "For Other 19 Posts", totalPost: "See Table Below", eligibility: "Check Notification" }
-    ],
-
-    // FULL DETAILED BREAKUP (Corrected Key Order for Alignment)
-    vacancyTableTitle: "Complete Vacancy Details (Post Code 01-26)",
-    vacancyColumnName: "Post Code & Name",
-    
-    stateWiseVacancy: [
-      { "Post Code & Name": "01. Dy. Director (Arch)", "Group": "A", "Pay Level": "L-11", "Total": 4, "UR": 1, "EWS": 1, "SC": 1, "ST": 0, "OBC": 1 },
-      { "Post Code & Name": "02. Dy. Director (PR)", "Group": "A", "Pay Level": "L-11", "Total": 1, "UR": 1, "EWS": 0, "SC": 0, "ST": 0, "OBC": 0 },
-      { "Post Code & Name": "03. Dy. Director (Plan)", "Group": "A", "Pay Level": "L-11", "Total": 4, "UR": 2, "EWS": 0, "SC": 0, "ST": 0, "OBC": 2 },
-      { "Post Code & Name": "04. Asst. Dir (Planning)", "Group": "A", "Pay Level": "L-10", "Total": 19, "UR": 10, "EWS": 2, "SC": 3, "ST": 1, "OBC": 3 },
-      { "Post Code & Name": "05. Asst. Dir (Arch)", "Group": "A", "Pay Level": "L-10", "Total": 8, "UR": 6, "EWS": 1, "SC": 1, "ST": 0, "OBC": 0 },
-      { "Post Code & Name": "06. Asst. Dir (Landscape)", "Group": "A", "Pay Level": "L-10", "Total": 1, "UR": 0, "EWS": 0, "SC": 0, "ST": 0, "OBC": 1 },
-      { "Post Code & Name": "07. Asst. Dir (System)", "Group": "A", "Pay Level": "L-10", "Total": 3, "UR": 2, "EWS": 0, "SC": 0, "ST": 0, "OBC": 1 },
-      { "Post Code & Name": "08. AEE (Civil)", "Group": "A", "Pay Level": "L-10", "Total": 10, "UR": 7, "EWS": 0, "SC": 0, "ST": 1, "OBC": 2 },
-      { "Post Code & Name": "09. AEE (Electrical)", "Group": "A", "Pay Level": "L-10", "Total": 3, "UR": 1, "EWS": 0, "SC": 1, "ST": 0, "OBC": 1 },
-      { "Post Code & Name": "10. Asst. Dir (Min.)", "Group": "B", "Pay Level": "L-8", "Total": 15, "UR": 9, "EWS": 1, "SC": 2, "ST": 1, "OBC": 2 },
-      { "Post Code & Name": "11. Legal Assistant", "Group": "B", "Pay Level": "L-7", "Total": 7, "UR": 5, "EWS": 0, "SC": 0, "ST": 0, "OBC": 2 },
-      { "Post Code & Name": "12. Planning Assistant", "Group": "B", "Pay Level": "L-7", "Total": 23, "UR": 17, "EWS": 1, "SC": 1, "ST": 3, "OBC": 1 },
-      { "Post Code & Name": "13. Architectural Asst", "Group": "B", "Pay Level": "L-7", "Total": 9, "UR": 4, "EWS": 1, "SC": 1, "ST": 1, "OBC": 2 },
-      { "Post Code & Name": "14. Programmer", "Group": "B", "Pay Level": "L-6", "Total": 6, "UR": 2, "EWS": 1, "SC": 0, "ST": 1, "OBC": 2 },
-      { "Post Code & Name": "15. JE (Civil)", "Group": "B", "Pay Level": "L-6", "Total": 104, "UR": 45, "EWS": 7, "SC": 11, "ST": 3, "OBC": 38 },
-      { "Post Code & Name": "16. JE (Elect/Mech)", "Group": "B", "Pay Level": "L-6", "Total": 67, "UR": 32, "EWS": 6, "SC": 8, "ST": 4, "OBC": 17 },
-      { "Post Code & Name": "17. SO (Horticulture)", "Group": "B", "Pay Level": "L-6", "Total": 75, "UR": 51, "EWS": 7, "SC": 8, "ST": 3, "OBC": 6 },
-      { "Post Code & Name": "18. Naib Tehsildar", "Group": "B", "Pay Level": "L-6", "Total": 6, "UR": 5, "EWS": 0, "SC": 0, "ST": 0, "OBC": 1 },
-      { "Post Code & Name": "19. Jr. Translator (OL)", "Group": "B", "Pay Level": "L-6", "Total": 6, "UR": 4, "EWS": 0, "SC": 1, "ST": 0, "OBC": 1 },
-      { "Post Code & Name": "20. Asst. Security Officer", "Group": "B", "Pay Level": "L-5", "Total": 6, "UR": 5, "EWS": 0, "SC": 0, "ST": 0, "OBC": 1 },
-      { "Post Code & Name": "21. Surveyor", "Group": "C", "Pay Level": "L-5", "Total": 6, "UR": 1, "EWS": 1, "SC": 0, "ST": 1, "OBC": 3 },
-      { "Post Code & Name": "22. Stenographer Gr D", "Group": "C", "Pay Level": "L-4", "Total": 44, "UR": 24, "EWS": 2, "SC": 5, "ST": 8, "OBC": 5 },
-      { "Post Code & Name": "23. Patwari", "Group": "C", "Pay Level": "L-3", "Total": 79, "UR": 33, "EWS": 8, "SC": 12, "ST": 4, "OBC": 22 },
-      { "Post Code & Name": "24. JSA", "Group": "C", "Pay Level": "L-2", "Total": 199, "UR": 86, "EWS": 20, "SC": 26, "ST": 14, "OBC": 53 },
-      { "Post Code & Name": "25. Mali", "Group": "C", "Pay Level": "L-1", "Total": 282, "UR": 118, "EWS": 30, "SC": 35, "ST": 22, "OBC": 77 },
-      { "Post Code & Name": "26. MTS", "Group": "C", "Pay Level": "L-1", "Total": 745, "UR": 298, "EWS": 84, "SC": 91, "ST": 63, "OBC": 209 }
-    ],
-
-    salaryDetails: [
-      { post: "Group A (Post 01-09)", level: "Level-10 / Level-11" },
-      { post: "Group B (Post 10-20)", level: "Level-6 / Level-7 / Level-8" },
-      { post: "Group C (Post 21-26)", level: "Level-1 to Level-5" }
-    ],
-
-    selectionProcess: [
-      "Stage 1: Computer Based Examination (CBT)",
-      "Stage 2: Skill Test / Typing / Stenography (Post Specific)",
-      "Stage 3: Stage-II Mains Exam (For ASO / JSA / Patwari)",
-      "Stage 4: Document Verification"
-    ],
-
-    examPattern: {
-      details: ["Mode: Online CBT", "Duration: 1 Hour (Stage 1)", "Negative Marking: 0.33 Marks (MTS/JSA) / 0.25 (JE)"],
-      stages: [
-        {
-          title: "Exam Pattern: MTS / Mali (Single Stage)",
-          data: [
-            { subject: "General Intelligence & Reasoning", questions: 25, marks: 25 },
-            { subject: "General Awareness", questions: 25, marks: 25 },
-            { subject: "Quantitative Aptitude", questions: 25, marks: 25 },
-            { subject: "English Language", questions: 25, marks: 25 },
-            { subject: "Total", questions: 100, marks: 100 }
-          ]
-        },
-        {
-          title: "Exam Pattern: ASO / JSA (Stage-I)",
-          data: [
-            { subject: "General Intelligence & Reasoning", questions: 25, marks: 50 },
-            { subject: "General Awareness", questions: 25, marks: 50 },
-            { subject: "Quantitative Aptitude", questions: 25, marks: 50 },
-            { subject: "English Comprehension", questions: 25, marks: 50 },
-            { subject: "Total", questions: 100, marks: 200 }
-          ]
-        },
-        {
-          title: "Exam Pattern: Junior Engineer (Single Stage)",
-          data: [
-            { subject: "Reasoning & GK", questions: 20, marks: 20 },
-            { subject: "Quant & English", questions: 20, marks: 20 },
-            { subject: "Respective Engineering Discipline", questions: 80, marks: 80 },
-            { subject: "Total", questions: 120, marks: 120 }
-          ]
-        }
-      ]
-    },
-
-    howToApply: [
-      "Visit the official website dda.gov.in.",
-      "Click on 'Jobs' -> 'Direct Recruitment 2025' -> 'Apply Online'.",
-      "Register using Name, Email, and Mobile Number.",
-      "Login and fill the application form for your desired post (Separate application for each post).",
-      "Upload Scanned Photo and Signature.",
-      "Pay the application fee online.",
-      "Submit the form and take a printout."
-    ],
-
-    links: [
-      { title: "Apply Online", url: "https://cdn.digialm.com/EForms/configuredHtml/1258/95962/Index.html" },
-      { title: "Download Notification PDF", url: "https://dda.gov.in/sites/default/files/latest_jobs/advertisement_no_09_2025_dr_2025.pdf" },
-      { title: "Official Website", url: "https://dda.gov.in/" }
-    ],
-    
-    faqs: [
-      { question: "What is the full form of DDA?", answer: "Delhi Development Authority." },
-      { question: "Can I apply for both MTS and JSA?", answer: "Yes, you can apply for multiple posts, but you have to fill separate forms and pay separate fees for each." },
-      { question: "Is there any interview?", answer: "No, there is no interview for Group B (Non-Gazetted) and Group C posts. Selection is based on CBT and Skill Test." }
-    ]
-  },
   // --- 19. WBSEDCL Recruitment 2025 ---
   {
     id: 19,
