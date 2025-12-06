@@ -24,6 +24,17 @@ let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 `;
 
+// --- NEW: Helper function to safely format date ---
+// Ye function check karega ki date hai ya nahi.
+const getSafeDate = (dateStr) => {
+  if (!dateStr) {
+    // Agar date nahi hai to aaj ki date return karo (YYYY-MM-DD format mein)
+    return new Date().toISOString().split('T')[0];
+  }
+  // Agar date hai (e.g. 06/12/2025) to usko convert karo (2025-12-06)
+  return dateStr.split('/').reverse().join('-');
+};
+
 // 4. Static Pages ko add karo
 staticPages.forEach(page => {
   sitemap += `
@@ -39,7 +50,7 @@ jobsData.forEach(job => {
   sitemap += `
   <url>
     <loc>${DOMAIN}/${job.slug}</loc>
-    <lastmod>${job.postDate.split('/').reverse().join('-')}</lastmod>
+    <lastmod>${getSafeDate(job.postDate)}</lastmod> 
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>`;
