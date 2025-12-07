@@ -1,0 +1,23 @@
+export const newAnswerKeys = [
+  // --- 2010. DSSSB Answer Key ---
+  {
+    id: 2050,
+    slug: "try-dsssb-various-posts-answer-key-2025",
+    shortTitle: "try DSSSB Answer Key 2025",
+    title: "DSSSB Answer Key 2025 Released for Various Post Codes",
+    shortInfo: "Delhi Subordinate Services Selection Board (DSSSB) has released the Draft Answer Keys.",
+    postDate: "07/12/2025",
+    category: "Answer Key",
+    importantDates: [
+      { label: "Answer Key Released", value: "06/12/2025" }
+    ],
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Various Posts", totalPost: "Various", eligibility: "As per Post Code" }
+    ],
+    howToApply: ["Check official website"],
+    links: [
+      { title: "Download Key", url: "https://dsssb.delhi.gov.in/" }
+    ]
+  }
+];
