@@ -212,7 +212,7 @@ th, td {
 .floating-container {
   position: fixed;
   bottom: 20px;
-  right: 20px; /* Screen ke right side me */
+  left: 20px; /* Screen ke right side me */
   display: flex;
   flex-direction: column; /* Upar-Niche */
   gap: 15px;
@@ -251,7 +251,7 @@ th, td {
 /* Mobile Adjustment: Mobile par thoda chhota kar sakte hain */
 @media (max-width: 768px) {
   .floating-container {
-    right: 15px;
+    left: 15px;
     bottom: 15px;
     gap: 10px;
   }
