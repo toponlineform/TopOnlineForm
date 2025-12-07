@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link, useParams, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, X, Share2 } from 'lucide-react'; 
+import { Search, X } from 'lucide-react'; 
 import { jobsData } from './jobsData';
 import About from './About';
 import Contact from './Contact';
@@ -10,21 +10,46 @@ import SEO from './SEO';
 import CategoryPage from './CategoryPage';
 import ActiveJobs from './ActiveJobs';
 import SearchResults from './SearchResults';
-// import NotFound from './NotFound'; // Agar future me use karna ho to uncomment karein
+// import NotFound from './NotFound'; 
 
 // --- Navbar ---
 function Navbar() {
   const [searchTerm, setSearchTerm] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false); 
+  const [suggestions, setSuggestions] = useState([]); // ✅ Suggestions State
   const navigate = useNavigate();
+
+  // Handle Input Change for Instant Search
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+
+    if (value.length > 1) { 
+      const filtered = jobsData.filter(job => 
+        job.title.toLowerCase().includes(value.toLowerCase()) ||
+        (job.shortTitle && job.shortTitle.toLowerCase().includes(value.toLowerCase()))
+      ).slice(0, 10); 
+      setSuggestions(filtered);
+    } else {
+      setSuggestions([]);
+    }
+  };
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchTerm.trim()) {
       navigate(`/search?q=${encodeURIComponent(searchTerm)}`);
       setSearchTerm("");
+      setSuggestions([]);
       setIsSearchOpen(false); 
     }
+  };
+
+  const handleSuggestionClick = (slug) => {
+    navigate(`/${slug}`);
+    setSearchTerm("");
+    setSuggestions([]);
+    setIsSearchOpen(false);
   };
 
   return (
@@ -32,7 +57,7 @@ function Navbar() {
       <div className="sticky-top">
         <div className="header"><h1>TOP ONLINE FORM</h1><p>www.TopOnlineForm.com</p></div>
         
-        {/* --- NAVBAR WITH TOGGLE LOGIC --- */}
+        {/* --- NAVBAR --- */}
         <div className="navbar" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '45px', padding: '0 10px' }}>
           
           {!isSearchOpen ? (
@@ -58,46 +83,64 @@ function Navbar() {
               </button>
             </div>
           ) : (
-            // --- VIEW 2: SEARCH INPUT + CLOSE ICON ---
-            <form onSubmit={handleSearch} style={{ display: 'flex', width: '100%', maxWidth: '600px', alignItems: 'center' }}>
-              <input 
-                autoFocus
-                type="text" 
-                placeholder="Search jobs (e.g. SSC, Railway)..." 
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                style={{
-                  flex: 1, 
-                  padding: '8px', 
-                  borderRadius: '4px', 
-                  border: 'none', 
-                  outline: 'none',
-                  fontSize: '14px'
-                }}
-              />
-              <button 
-                type="submit" 
-                style={{ 
-                  padding: '8px 15px', 
-                  background: '#ffcc00', 
-                  color: 'black', 
-                  border: 'none', 
-                  borderRadius: '4px', 
-                  marginLeft: '5px', 
-                  cursor: 'pointer',
-                  fontWeight: 'bold'
-                }}
-              >
-                Go
-              </button>
-              <button 
-                type="button" 
-                onClick={() => setIsSearchOpen(false)} 
-                style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: 'white', marginLeft: '10px' }}
-              >
-                <X size={24} />
-              </button>
-            </form>
+            // --- VIEW 2: SEARCH INPUT + SUGGESTIONS ---
+            <div style={{ width: '100%', maxWidth: '600px', position: 'relative' }}>
+              <form onSubmit={handleSearch} className="grid-search-form" style={{display:'flex'}}>
+                <input 
+                  autoFocus
+                  type="text" 
+                  placeholder="Search jobs (e.g. SSC, Railway)..." 
+                  value={searchTerm}
+                  onChange={handleInputChange} // ✅ Live Search Handler
+                  style={{
+                    flex: 1, 
+                    padding: '8px', 
+                    borderRadius: '4px 0 0 4px', 
+                    border: 'none', 
+                    outline: 'none',
+                    fontSize: '14px'
+                  }}
+                />
+                <button 
+                  type="submit" 
+                  style={{ 
+                    padding: '8px 15px', 
+                    background: '#ffcc00', 
+                    color: 'black', 
+                    border: 'none', 
+                    borderRadius: '0 4px 4px 0', 
+                    marginLeft: '0px', 
+                    cursor: 'pointer',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  Go
+                </button>
+                <button 
+                  type="button" 
+                  onClick={() => { setIsSearchOpen(false); setSuggestions([]); setSearchTerm(""); }} 
+                  style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: 'white', marginLeft: '10px' }}
+                >
+                  <X size={24} />
+                </button>
+              </form>
+
+              {/* ✅ Suggestion List Dropdown */}
+              {suggestions.length > 0 && (
+                <ul className="search-suggestions" style={{
+                  position: 'absolute', top: '100%', left: 0, width: '100%', background: 'white', 
+                  border: '1px solid #ccc', listStyle: 'none', padding: 0, margin: 0, zIndex: 1001,
+                  maxHeight: '300px', overflowY: 'auto', borderRadius: '0 0 5px 5px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+                }}>
+                  {suggestions.map((job) => (
+                    <li key={job.id} onClick={() => handleSuggestionClick(job.slug)} 
+                        style={{padding: '10px', borderBottom: '1px solid #eee', cursor: 'pointer', color: '#333', textAlign:'left'}}>
+                      {job.shortTitle || job.title}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           )}
         </div>
       </div> 
@@ -123,7 +166,7 @@ function Home() {
   const results = jobsData.filter(j => hasCategory(j, "Result")).sort(sortNewest).slice(0, 20);
   const answerKeys = jobsData.filter(j => hasCategory(j, "Answer Key")).sort(sortNewest).slice(0, 7);
   
-  // ✅ NEW: Admission Category Logic Added
+  // ✅ Admission Category Logic Added
   const admissions = jobsData.filter(j => hasCategory(j, "Admission")).sort(sortNewest).slice(0, 7);
   
   const syllabus = jobsData.filter(j => hasCategory(j, "Syllabus")).sort(sortNewest).slice(0, 7);
@@ -170,7 +213,7 @@ function Home() {
       <JobBox title="Result" jobs={results} linkTo="/results" />
       <JobBox title="Answer Key" jobs={answerKeys} linkTo="/answer-key" />
       
-      {/* ✅ CHANGED: Syllabus box replaced with Admission */}
+      {/* ✅ Syllabus Removed, Admission Added */}
       <JobBox title="Admission" jobs={admissions} linkTo="/admission" />
       
       <JobBox title="Previous Paper" jobs={previousPapers} linkTo="/previous-papers" />
@@ -201,7 +244,6 @@ function JobDetails() {
   const validThrough = lastDateItem ? convertDate(lastDateItem.value) : null;
   const datePosted = convertDate(job.postDate);
 
-  // --- Dynamic Header Logic ---
   let stepsHeader = "How to Apply";
   const cat = job.category.toLowerCase();
   
@@ -211,7 +253,7 @@ function JobDetails() {
     stepsHeader = "How to Check Result";
   } else if (cat.includes("answer key") || cat.includes("syllabus") || cat.includes("paper")) {
     stepsHeader = "How to Download";
-  } else if (cat.includes("admission")) { // ✅ Added Admission Logic
+  } else if (cat.includes("admission")) {
     stepsHeader = "How to Apply for Admission";
   }
 
@@ -481,27 +523,17 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
-        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
-      {/* --- FLOATING SOCIAL BUTTONS --- */}
+      
+      {/* ✅ FLOATING SOCIAL BUTTON (WhatsApp Only - Left Side) */}
       <div className="floating-container">
-        
-        {/* Telegram Button */}
-        <a href="https://telegram.org" target="_blank" rel="noreferrer" className="float-btn float-tg" title="Join Telegram">
-          {/* Telegram Icon SVG */}
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-          </svg>
-        </a>
-
-        {/* WhatsApp Button */}
-        <a href="https://whatsapp.com/channel/0029Vb7TcG06LwHoTXhZKn2D" target="_blank" rel="noreferrer" className="float-btn float-wa" title="Join WhatsApp">
-          {/* WhatsApp Icon SVG */}
+        <a href="https://whatsapp.com/channel/0029Vb7TcG06LwHoTXhZKn2D" target="_blank" rel="noreferrer" className="float-btn float-wa" title="Join WhatsApp Group">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
           </svg>
         </a>
       </div>
+
       <Footer />
     </>
   );
