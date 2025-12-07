@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link, useParams, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, X } from 'lucide-react'; 
+import { Search, X, ChevronDown } from 'lucide-react'; 
 import { jobsData } from './jobsData';
 import About from './About';
 import Contact from './Contact';
@@ -10,13 +10,15 @@ import SEO from './SEO';
 import CategoryPage from './CategoryPage';
 import ActiveJobs from './ActiveJobs';
 import SearchResults from './SearchResults';
+import StatePage from './StatePage'; // ✅ Added StatePage Import
 // import NotFound from './NotFound'; 
 
 // --- Navbar ---
 function Navbar() {
   const [searchTerm, setSearchTerm] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false); 
-  const [suggestions, setSuggestions] = useState([]); // ✅ Suggestions State
+  const [suggestions, setSuggestions] = useState([]); 
+  const [isMoreOpen, setIsMoreOpen] = useState(false); // ✅ State for More Dropdown
   const navigate = useNavigate();
 
   // Handle Input Change for Instant Search
@@ -58,19 +60,59 @@ function Navbar() {
         <div className="header"><h1>TOP ONLINE FORM</h1><p>www.TopOnlineForm.com</p></div>
         
         {/* --- NAVBAR --- */}
-        <div className="navbar" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '45px', padding: '0 10px' }}>
+        <div className="navbar" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '45px', padding: '0 10px', position: 'relative' }}>
           
           {!isSearchOpen ? (
             // --- VIEW 1: LINKS + SEARCH ICON ---
             <div style={{ display: 'flex', alignItems: 'center', width: '100%', justifyContent: 'center', position: 'relative' }}>
-              <div className="nav-links" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <div className="nav-links" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
                 <Link to="/">Home</Link>
                 <Link to="/active-jobs">Active Jobs</Link>
                 <Link to="/latest-jobs">Latest Jobs</Link>
                 <Link to="/results">Results</Link>
                 <Link to="/admit-card">Admit Card</Link>
                 <Link to="/answer-key">Answer Key</Link>
-                <Link to="/syllabus">Syllabus</Link>
+                
+                {/* ✅ MORE DROPDOWN MENU */}
+                <div 
+                  className="dropdown" 
+                  onMouseEnter={() => setIsMoreOpen(true)} 
+                  onMouseLeave={() => setIsMoreOpen(false)}
+                  style={{position: 'relative', display: 'inline-block'}}
+                >
+                  <button 
+                    onClick={() => setIsMoreOpen(!isMoreOpen)}
+                    style={{
+                      background: 'transparent', 
+                      color: 'white', 
+                      border: 'none', 
+                      fontWeight: 'bold', 
+                      fontSize: '15px', 
+                      cursor: 'pointer', 
+                      padding: '12px 16px',
+                      display: 'flex',
+                      alignItems: 'center'
+                    }}
+                  >
+                    More <ChevronDown size={16} style={{marginLeft: '5px'}}/>
+                  </button>
+
+                  {isMoreOpen && (
+                    <div className="dropdown-content" style={{
+                      position: 'absolute',
+                      backgroundColor: '#333',
+                      minWidth: '160px',
+                      boxShadow: '0px 8px 16px 0px rgba(0,0,0,0.2)',
+                      zIndex: 1,
+                      textAlign: 'left'
+                    }}>
+                      <Link to="/syllabus" style={{display: 'block', padding: '12px 16px'}}>Syllabus</Link>
+                      <Link to="/admission" style={{display: 'block', padding: '12px 16px'}}>Admission</Link>
+                      <Link to="/previous-papers" style={{display: 'block', padding: '12px 16px'}}>Previous Papers</Link>
+                      <Link to="/states" style={{display: 'block', padding: '12px 16px'}}>State Wise Jobs</Link>
+                    </div>
+                  )}
+                </div>
               </div>
               
               {/* Search Icon Button */}
@@ -91,7 +133,7 @@ function Navbar() {
                   type="text" 
                   placeholder="Search jobs (e.g. SSC, Railway)..." 
                   value={searchTerm}
-                  onChange={handleInputChange} // ✅ Live Search Handler
+                  onChange={handleInputChange} 
                   style={{
                     flex: 1, 
                     padding: '8px', 
@@ -125,7 +167,7 @@ function Navbar() {
                 </button>
               </form>
 
-              {/* ✅ Suggestion List Dropdown */}
+              {/* Suggestion List Dropdown */}
               {suggestions.length > 0 && (
                 <ul className="search-suggestions" style={{
                   position: 'absolute', top: '100%', left: 0, width: '100%', background: 'white', 
@@ -165,10 +207,7 @@ function Home() {
   const admitCards = jobsData.filter(j => hasCategory(j, "Admit Card")).sort(sortNewest).slice(0, 20);
   const results = jobsData.filter(j => hasCategory(j, "Result")).sort(sortNewest).slice(0, 20);
   const answerKeys = jobsData.filter(j => hasCategory(j, "Answer Key")).sort(sortNewest).slice(0, 7);
-  
-  // ✅ Admission Category Logic Added
   const admissions = jobsData.filter(j => hasCategory(j, "Admission")).sort(sortNewest).slice(0, 7);
-  
   const syllabus = jobsData.filter(j => hasCategory(j, "Syllabus")).sort(sortNewest).slice(0, 7);
   const previousPapers = jobsData.filter(j => hasCategory(j, "Previous Paper")).sort(sortNewest).slice(0, 7);
 
@@ -212,11 +251,9 @@ function Home() {
       <JobBox title="Admit Card" jobs={admitCards} linkTo="/admit-card" />
       <JobBox title="Result" jobs={results} linkTo="/results" />
       <JobBox title="Answer Key" jobs={answerKeys} linkTo="/answer-key" />
-      
-      {/* ✅ Syllabus Removed, Admission Added */}
       <JobBox title="Admission" jobs={admissions} linkTo="/admission" />
-      
       <JobBox title="Previous Paper" jobs={previousPapers} linkTo="/previous-papers" />
+      <JobBox title="Syllabus" jobs={syllabus} linkTo="/syllabus" /> {/* Added Syllabus Box back if needed, or remove if you want */}
     </div>
   );
 }
@@ -520,9 +557,13 @@ function App() {
         {/* ✅ NEW: Route for Admission Category */}
         <Route path="/admission" element={<CategoryPage category="Admission" title="Admission Forms" />} />
         
+        {/* ✅ NEW: Route for State Jobs */}
+        <Route path="/states" element={<StatePage />} />
+        
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
       
       {/* ✅ FLOATING SOCIAL BUTTON (WhatsApp Only - Left Side) */}
