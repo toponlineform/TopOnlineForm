@@ -1,208 +1,166 @@
-:root {
-  --sarkari-red: #ab1e1e;
-  --sarkari-green: #008000; /* Ye Green Note ke liye use hoga */
-  --sarkari-blue: #1e73be; /* Ye Naya Professional Blue (Tables ke liye) */
-  --border-color: #000000;
-}
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { jobsData } from './jobsData'; // Master Data File
+import SEO from './SEO';
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-}
+const ActiveJobs = () => {
+  const [activeList, setActiveList] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
-a { text-decoration: none; }
+  useEffect(() => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Compare from midnight today
 
-/* --- STICKY WRAPPER --- */
-.sticky-top {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
+    // 1. Helper: Parse Date nicely (Sorting ke liye)
+    // Ye function sirf date nikalta hai taaki hum sort kar sakein,
+    // lekin display hum poora text hi karenge.
+    const parseDate = (dateStr) => {
+      if (!dateStr) return null;
+      
+      const lowerDate = dateStr.toLowerCase();
+      // Agar date me "To be notified" ya aisa kuch hai, to use Active maanein
+      if (lowerDate.includes("notify") || lowerDate.includes("soon") || lowerDate.includes("tbd")) {
+        return new Date("2099-12-31"); 
+      }
+      
+      try {
+        // Sirf pehla part (DD/MM/YYYY) uthao, baaki text (jaise 'upto 5pm') ignore karo sorting ke liye
+        const cleanDate = dateStr.split(' ')[0].replace(/-/g, '/');
+        const parts = cleanDate.split('/');
+        if (parts.length === 3) {
+          return new Date(parts[2], parts[1] - 1, parts[0]);
+        }
+      } catch (e) {
+        return null;
+      }
+      return null;
+    };
 
-/* --- HEADER --- */
-.header {
-  background-color: var(--sarkari-red);
-  color: white;
-  padding: 15px 10px;
-  text-align: center;
-}
-.header h1 { margin: 0; font-size: 28px; font-weight: 900; letter-spacing: 1px; }
-.header p { margin: 5px 0 0; font-size: 14px; color: #ffe6e6; }
+    // 2. Helper: Get Full Last Date String
+    const getLastDateString = (job) => {
+       // Ye pura text return karega (e.g., "12/12/2025 (Upto 5:00 PM)")
+       return job.importantDates?.find(d => 
+         d.label.toLowerCase().includes("last") || 
+         d.label.toLowerCase().includes("closing")
+       )?.value || "Check Notice";
+    };
 
-/* --- NAVBAR --- */
-.navbar {
-  background-color: #000;
-  text-align: center;
-  border-top: 2px solid white;
-}
-.navbar a {
-  display: inline-block;
-  color: white;
-  padding: 12px 15px;
-  font-weight: bold;
-  font-size: 14px;
-}
-.navbar a:hover { background-color: #444; color: #ffcc00; }
+    // 3. Filter Logic
+    const filtered = jobsData.filter(job => {
+      const isRelevant = job.category === "Latest Jobs" || job.category === "Admission";
+      if (!isRelevant) return false;
 
-/* --- CLEAN NOTE (Ye Green hi rahega) --- */
-.clean-note {
-  background-color: #e6fffa;
-  border-bottom: 1px solid #b2f5ea;
-  padding: 8px;
-  text-align: center;
-  color: #006600; /* Dark Green Text */
-  font-weight: bold;
-  font-size: 13px;
-}
+      const lastDateStr = getLastDateString(job);
+      const expDate = parseDate(lastDateStr);
 
-/* --- GRID SYSTEM --- */
-.main-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  padding: 15px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+      if (expDate) {
+        return expDate >= today;
+      }
+      return true; // Agar date parse nahi hui (text hai), to show karo
+    });
 
-/* --- ACTION CELLS (Buttons & Search inside Grid) --- */
-.action-cell {
-  margin-bottom: 5px; 
-}
+    // 4. Sort Logic: Closing Soonest First
+    const sorted = filtered.sort((a, b) => {
+       const dateA = parseDate(getLastDateString(a)) || new Date("2099-12-31");
+       const dateB = parseDate(getLastDateString(b)) || new Date("2099-12-31");
+       return dateA - dateB; 
+    });
 
-/* Social Buttons */
-.social-btn {
-  padding: 12px;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  font-size: 14px;
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-}
+    setActiveList(sorted);
+  }, []);
 
-.full-width {
-  width: 100%; 
-  box-sizing: border-box;
-}
+  const displayList = activeList.filter(job => 
+    job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    job.shortTitle?.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-.whatsapp { background-color: #25D366; }
-.whatsapp:hover { background-color: #128C7E; }
+  return (
+    <div className="main-container" style={{padding: '20px', maxWidth: '1200px', margin: '0 auto'}}>
+      <SEO 
+        title="Active Govt Jobs 2025 | Live Application Forms" 
+        description="Check list of all currently active government jobs, online application forms, and admissions ending soon." 
+        keywords="Active Jobs, Ongoing Recruitment, Sarkari Naukri Active Forms" 
+        url="https://toponlineform.com/active-jobs"
+      />
 
-.telegram { background-color: #0088cc; }
-.telegram:hover { background-color: #005580; }
+      <div className="section-header" style={{ backgroundColor: '#004080', color: 'white', padding: '10px', fontSize: '20px', marginBottom: '15px', borderRadius: '5px', textAlign: 'center' }}>
+        Active Govt Jobs & Admissions (Live)
+      </div>
 
-/* Grid Search Form */
-.grid-search-form {
-  display: flex;
-  width: 100%;
-}
+      <div style={{marginBottom: '20px'}}>
+        <input 
+          type="text" 
+          placeholder="Search within active jobs..." 
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          style={{
+            width: '100%',
+            padding: '10px',
+            fontSize: '16px',
+            border: '1px solid #ccc',
+            borderRadius: '4px'
+          }}
+        />
+      </div>
 
-.grid-search-form input {
-  flex: 1; 
-  padding: 11px;
-  border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px;
-  font-size: 14px;
-}
+      <div style={{overflowX: 'auto'}}>
+        <table className="vacancy-table" style={{width: '100%', borderCollapse: 'collapse', border: '1px solid #ddd'}}>
+          <thead>
+            <tr style={{background: '#f2f2f2'}}>
+              {/* ✅ COLUMN 1: Last Date (Width Thoda Kam Rakha Hai) */}
+              <th style={{padding: '12px', border: '1px solid #ddd', width: '140px', textAlign: 'center', background:'#eee', color:'#333'}}>
+                Last Date
+              </th>
+              
+              {/* ✅ COLUMN 2: Post Details */}
+              <th style={{padding: '12px', border: '1px solid #ddd', textAlign: 'left', background:'#eee', color:'#333'}}>
+                Post Name / Details
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {displayList.length > 0 ? (
+              displayList.map((job) => {
+                // Yahan hum pura text utha rahe hain
+                const lastDate = job.importantDates?.find(d => d.label.toLowerCase().includes("last"))?.value || "Check Notice";
+                const isAdmission = job.category === "Admission";
+                
+                return (
+                  <tr key={job.id} style={{background: 'white'}}>
+                    
+                    {/* Date Column: Red Color & Bold */}
+                    <td style={{
+                        padding: '12px', 
+                        border: '1px solid #ddd', 
+                        textAlign: 'center', 
+                        color: '#d32f2f', 
+                        fontWeight: 'bold',
+                        fontSize: '14px' 
+                        /* Note: 'whiteSpace: nowrap' hata diya hai taaki text wrap ho sake */
+                      }}>
+                      {lastDate}
+                    </td>
+                    
+                    {/* Post Name Column */}
+                    <td style={{padding: '12px', border: '1px solid #ddd'}}>
+                      <Link to={`/${job.slug}`} style={{textDecoration: 'none', color: '#0056b3', fontWeight: '500', fontSize: '15px', display:'block'}}>
+                        {job.shortTitle || job.title}
+                        {isAdmission && <span style={{marginLeft:'8px', fontSize:'11px', background:'#ff9800', color:'white', padding:'2px 6px', borderRadius:'4px'}}>Admission</span>}
+                      </Link>
+                    </td>
+                  </tr>
+                );
+              })
+            ) : (
+              <tr>
+                <td colSpan="2" style={{padding: '20px', textAlign: 'center'}}>No active forms found.</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
 
-.grid-search-form button {
-  padding: 11px 20px;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  font-weight: bold;
-}
-.grid-search-form button:hover { background-color: #000; }
-
-
-/* --- BOXES --- */
-.box-column {
-  border: 2px solid var(--border-color);
-  background: white;
-}
-
-.box-header {
-  background-color: var(--sarkari-red);
-  color: white;
-  padding: 10px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.box-list { list-style: none; padding: 0; margin: 0; }
-.box-list li {
-  padding: 10px;
-  border-bottom: 1px solid #eee;
-  font-size: 14px;
-  line-height: 1.4;
-}
-.box-list li a { color: #0000EE; }
-.box-list li a:hover { color: red; text-decoration: underline; }
-
-/* --- JOB DETAILS PAGE --- */
-.job-container {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 15px;
-  border: 1px solid #ccc;
-  background: white;
-}
-.job-title {
-  color: var(--sarkari-red);
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-table { 
-  width: 100%; 
-  border-collapse: collapse; 
-  margin-bottom: 20px; 
-  border: 2px solid var(--border-color); 
-}
-
-th, td { 
-  border: 1px solid var(--border-color); 
-  padding: 12px; 
-  vertical-align: top; 
-}
-
-/* --- CHANGES HERE: Ab ye BLUE ho gaya hai --- */
-.green-header, .section-header { 
-  background-color: var(--sarkari-blue); /* Changed from Green to Blue */
-  color: white; 
-  text-align: center; 
-  font-size: 18px; 
-  font-weight: bold; 
-}
-
-.section-header { 
-  padding: 10px; 
-  margin-top: 20px; 
-  border: 2px solid var(--border-color); 
-}
-
-.important-links a, .click-here { 
-  color: blue !important; 
-  font-weight: bold; 
-  text-decoration: underline; 
-}
-
-/* --- MOBILE RESPONSIVE --- */
-@media (max-width: 768px) {
-  .main-grid { grid-template-columns: 1fr; gap: 10px; padding: 10px; }
-  
-  .action-cell {
-    margin-bottom: 0px; 
-  }
-  
-  .navbar a { padding: 10px 8px; font-size: 12px; }
-}
+export default ActiveJobs;
