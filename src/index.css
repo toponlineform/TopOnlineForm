@@ -206,3 +206,61 @@ th, td {
   
   .navbar a { padding: 10px 8px; font-size: 12px; }
 }
+/* =========================================
+   7. FLOATING SOCIAL BUTTONS (New)
+   ========================================= */
+.floating-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* Screen ke right side me */
+  display: flex;
+  flex-direction: column; /* Upar-Niche */
+  gap: 15px;
+  z-index: 9999; /* Sabse upar dikhega */
+}
+
+.float-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%; /* Gol button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.float-btn:hover {
+  transform: translateY(-5px); /* Hover karne par thoda upar uthega */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.float-btn svg {
+  width: 30px;
+  height: 30px;
+  fill: white; /* Icon ka color */
+}
+
+/* Colors */
+.float-wa { background-color: #25D366; } /* WhatsApp Green */
+.float-tg { background-color: #0088cc; } /* Telegram Blue */
+
+/* Mobile Adjustment: Mobile par thoda chhota kar sakte hain */
+@media (max-width: 768px) {
+  .floating-container {
+    right: 15px;
+    bottom: 15px;
+    gap: 10px;
+  }
+  .float-btn {
+    width: 45px;
+    height: 45px;
+  }
+  .float-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+}
