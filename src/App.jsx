@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link, useParams, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, X, Share2 } from 'lucide-react'; // <--- Import Icons
+import { Search, X, Share2 } from 'lucide-react'; 
 import { jobsData } from './jobsData';
 import About from './About';
 import Contact from './Contact';
@@ -10,11 +10,12 @@ import SEO from './SEO';
 import CategoryPage from './CategoryPage';
 import ActiveJobs from './ActiveJobs';
 import SearchResults from './SearchResults';
+// import NotFound from './NotFound'; // Agar future me use karna ho to uncomment karein
 
 // --- Navbar ---
 function Navbar() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [isSearchOpen, setIsSearchOpen] = useState(false); // Toggle State
+  const [isSearchOpen, setIsSearchOpen] = useState(false); 
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
@@ -22,7 +23,7 @@ function Navbar() {
     if (searchTerm.trim()) {
       navigate(`/search?q=${encodeURIComponent(searchTerm)}`);
       setSearchTerm("");
-      setIsSearchOpen(false); // Close bar after search
+      setIsSearchOpen(false); 
     }
   };
 
@@ -47,7 +48,7 @@ function Navbar() {
                 <Link to="/syllabus">Syllabus</Link>
               </div>
               
-              {/* Search Icon Button (Absolute Right for Desktop, Relative for Mobile) */}
+              {/* Search Icon Button */}
               <button 
                 onClick={() => setIsSearchOpen(true)} 
                 style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: 'white', marginLeft: '15px', display: 'flex', alignItems: 'center' }}
@@ -116,10 +117,15 @@ function Home() {
     return job.category === cat;
   };
 
+  // --- Filtering Data ---
   const latestJobs = jobsData.filter(j => hasCategory(j, "Latest Jobs")).sort(sortNewest).slice(0, 20);
   const admitCards = jobsData.filter(j => hasCategory(j, "Admit Card")).sort(sortNewest).slice(0, 20);
   const results = jobsData.filter(j => hasCategory(j, "Result")).sort(sortNewest).slice(0, 20);
   const answerKeys = jobsData.filter(j => hasCategory(j, "Answer Key")).sort(sortNewest).slice(0, 7);
+  
+  // ✅ NEW: Admission Category Logic Added
+  const admissions = jobsData.filter(j => hasCategory(j, "Admission")).sort(sortNewest).slice(0, 7);
+  
   const syllabus = jobsData.filter(j => hasCategory(j, "Syllabus")).sort(sortNewest).slice(0, 7);
   const previousPapers = jobsData.filter(j => hasCategory(j, "Previous Paper")).sort(sortNewest).slice(0, 7);
 
@@ -144,7 +150,6 @@ function Home() {
       <div className="action-cell"><a href="https://whatsapp.com/channel/0029Vb7TcG06LwHoTXhZKn2D" target="_blank" className="social-btn whatsapp full-width">Join WhatsApp Group</a></div>
       <div className="action-cell"><a href="https://telegram.org" target="_blank" className="social-btn telegram full-width">Join Telegram Channel</a></div>
       
-      {/* Grid Search Form (Still useful on mobile/desktop main body) */}
       <div className="action-cell">
          <form className="grid-search-form" onSubmit={(e) => {
             e.preventDefault();
@@ -164,7 +169,10 @@ function Home() {
       <JobBox title="Admit Card" jobs={admitCards} linkTo="/admit-card" />
       <JobBox title="Result" jobs={results} linkTo="/results" />
       <JobBox title="Answer Key" jobs={answerKeys} linkTo="/answer-key" />
-      <JobBox title="Syllabus" jobs={syllabus} linkTo="/syllabus" />
+      
+      {/* ✅ CHANGED: Syllabus box replaced with Admission */}
+      <JobBox title="Admission" jobs={admissions} linkTo="/admission" />
+      
       <JobBox title="Previous Paper" jobs={previousPapers} linkTo="/previous-papers" />
     </div>
   );
@@ -173,10 +181,9 @@ function Home() {
 // --- Job Details ---
 function JobDetails() {
   const { slug } = useParams();
-  const navigate = useNavigate(); // Added for Navigation
+  const navigate = useNavigate();
   const job = jobsData.find((j) => j.slug === slug);
   
-  // 1. Handle "Job Not Found" nicely
   if (!job) return (
     <div style={{textAlign:'center', padding: '50px'}}>
       <h2>Job Not Found</h2>
@@ -194,8 +201,8 @@ function JobDetails() {
   const validThrough = lastDateItem ? convertDate(lastDateItem.value) : null;
   const datePosted = convertDate(job.postDate);
 
-  // --- NEW: Dynamic Header Logic for "How to Apply" ---
-  let stepsHeader = "How to Apply"; // Default fallback
+  // --- Dynamic Header Logic ---
+  let stepsHeader = "How to Apply";
   const cat = job.category.toLowerCase();
   
   if (cat.includes("admit card")) {
@@ -204,6 +211,8 @@ function JobDetails() {
     stepsHeader = "How to Check Result";
   } else if (cat.includes("answer key") || cat.includes("syllabus") || cat.includes("paper")) {
     stepsHeader = "How to Download";
+  } else if (cat.includes("admission")) { // ✅ Added Admission Logic
+    stepsHeader = "How to Apply for Admission";
   }
 
   const jobSchema = {
@@ -437,16 +446,8 @@ function JobDetails() {
         </div>
       ))}
 
-      {/* --- UPDATED: Smart Header for "How to Apply" --- */}
-      {job.howToApply && (
-        <>
-          <div className="section-header">{stepsHeader}</div>
-          <ol style={{marginLeft: '30px', padding: '10px 0'}}>
-            {job.howToApply.map((item, index) => <li key={index} style={{marginBottom: '10px'}}>{item}</li>)}
-          </ol>
-        </>
-      )}
-       
+      {job.howToApply && (<><div className="section-header">{stepsHeader}</div><ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.howToApply.map((item, index) => <li key={index} style={{marginBottom: '10px'}}>{item}</li>)}</ol></>)}
+      
       <div className="section-header">Important Links</div>
       <table className="important-links"><tbody>{job.links && job.links.map((link, index) => (<tr key={index}><td><strong>{link.title}</strong></td><td align="center"><a href={link.url} className="click-here" target="_blank" rel="noreferrer">Click Here</a></td></tr>))}</tbody></table>
       {job.faqs && job.faqs.length > 0 && (<><div className="section-header">Frequently Asked Questions (FAQs)</div><div style={{padding: '15px', border: '1px solid #ddd', marginTop: '10px'}}>{job.faqs.map((faq, index) => (<div key={index} style={{marginBottom: '15px'}}><div style={{fontWeight: 'bold', color: '#d32f2f', marginBottom: '5px'}}>Q.{index + 1}: {faq.question}</div><div style={{color: '#333'}}>Ans: {faq.answer}</div></div>))}</div></>)}
@@ -473,9 +474,14 @@ function App() {
         <Route path="/answer-key" element={<CategoryPage category="Answer Key" title="All Answer Keys" />} />
         <Route path="/syllabus" element={<CategoryPage category="Syllabus" title="Syllabus" />} />
         <Route path="/previous-papers" element={<CategoryPage category="Previous Paper" title="Previous Papers" />} />
+        
+        {/* ✅ NEW: Route for Admission Category */}
+        <Route path="/admission" element={<CategoryPage category="Admission" title="Admission Forms" />} />
+        
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
       <Footer />
     </>
