@@ -1,4 +1,5 @@
 import { newAnswerKeys } from './myAkey';
+import { latestJobs } from './myLjobs';
 const oldData = [
 
   // ==================================================
@@ -1597,5 +1598,6 @@ const oldData = [
 
 export const jobsData = [
   ...newAnswerKeys, // Naya Data
+  ...latestJobs,
   ...oldData        // Purana Data
 ];
