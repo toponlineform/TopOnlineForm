@@ -3256,7 +3256,305 @@ export const jobsData = [
   // ==================================================
   //              RESULTS (ID 3001 - 4000)
   // ==================================================
-  
+  // --- 3024. DRDO ITR Apprentice Result (ID 3024) ---
+  {
+    id: 3024,
+    slug: "drdo-itr-apprentice-result-2025",
+    shortTitle: "DRDO ITR Apprentice Result 2025",
+    title: "DRDO ITR Graduate & Technician Apprentice Result 2025 Out | Selection List",
+    shortInfo: "Integrated Test Range (ITR), DRDO Chandipur has released the Provisionally Selected List of Candidates for Graduate and Technician (Diploma) Apprenticeship 2025-26. Candidates can download the result PDF.",
+    postDate: "07/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Declared", value: "07/12/2025" },
+      { label: "Document Verification", value: "Check PDF" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Graduate Apprentice", totalPost: "Various", eligibility: "B.E./B.Tech/B.Lib.Sc" },
+      { postName: "Technician (Diploma) Apprentice", totalPost: "Various", eligibility: "Diploma in Engg" }
+    ],
+
+    howToApply: [
+      "Visit drdo.gov.in.",
+      "Go to 'What's New' or 'Careers'.",
+      "Click on 'Provisionally Selected Candidates for Apprenticeship at ITR Chandipur'.",
+      "Download the PDF and search your Name/ID."
+    ],
+
+    links: [
+      { title: "Download Result PDF", url: "https://www.drdo.gov.in/drdo/careers/itr-chandipur" },
+      { title: "Official Website", url: "https://www.drdo.gov.in/" }
+    ]
+  },
+
+  // --- 3023. Punjab & Haryana High Court Peon Result (ID 3023) ---
+  {
+    id: 3023,
+    slug: "punjab-haryana-high-court-peon-result-2025",
+    shortTitle: "PHHC Peon Result 2025",
+    title: "Punjab and Haryana High Court Peon Result 2025 Declared | Merit List",
+    shortInfo: "High Court of Punjab and Haryana (Chandigarh) has declared the Merit List and Result for the post of Peon. Candidates who appeared for the interview/physical test can check their selection status.",
+    postDate: "07/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Declared", value: "07/12/2025" },
+      { label: "Exam/Interview Date", value: "Nov-Dec 2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Peon", totalPost: "Various", eligibility: "8th Pass" }
+    ],
+
+    howToApply: [
+      "Visit highcourtchd.gov.in.",
+      "Click on 'Results' -> 'Recruitment'.",
+      "Select 'Result for the post of Peon'.",
+      "Download the Merit List PDF."
+    ],
+
+    links: [
+      { title: "Download Merit List PDF", url: "https://highcourtchd.gov.in/" },
+      { title: "Official Website", url: "https://highcourtchd.gov.in/" }
+    ]
+  },
+
+  // --- 3022. PFRDA Grade A Final Result (ID 3022) ---
+  {
+    id: 3022,
+    slug: "pfrda-grade-a-final-result-2025",
+    shortTitle: "PFRDA Grade A Final Result",
+    title: "PFRDA Assistant Manager (Grade A) Final Result 2025 Out | Selection List",
+    shortInfo: "Pension Fund Regulatory and Development Authority (PFRDA) has released the Final Result for the recruitment of Assistant Manager (Grade A) 2025. The list is based on the performance in Phase-II and Interview.",
+    postDate: "07/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Final Result Declared", value: "07/12/2025" },
+      { label: "Interview Date", value: "Nov 2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Assistant Manager (Grade A)", totalPost: "Various", eligibility: "Master's Degree/Law/Engineering" }
+    ],
+
+    howToApply: [
+      "Visit pfrda.org.in.",
+      "Go to 'Careers' section.",
+      "Click on 'Final Result for Recruitment of Officer Grade A 2025'.",
+      "Download the PDF containing Roll Numbers of selected candidates."
+    ],
+
+    links: [
+      { title: "Download Final Result PDF", url: "https://www.pfrda.org.in/" },
+      { title: "Official Website", url: "https://www.pfrda.org.in/" }
+    ]
+  },
+
+  // --- 3021. DMER Group C Result (ID 3021) ---
+  {
+    id: 3021,
+    slug: "dmer-group-c-result-2025",
+    shortTitle: "DMER Group C Result 2025",
+    title: "DMER Group C Result 2025 Declared | Download Merit List & Cut Off",
+    shortInfo: "Directorate of Medical Education and Research (DMER) has declared the Result and Merit List for various Group C posts (Staff Nurse, Lab Technician, Clerk, etc.). Candidates can download the result PDF from the official website.",
+    postDate: "07/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Declared", value: "07/12/2025" },
+      { label: "Exam Date", value: "2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Group C Posts (Nurse, Tech, Clerk)", totalPost: "Various", eligibility: "10th/12th/Diploma/Degree" }
+    ],
+
+    howToApply: [
+      "Visit the official DMER website (med-edu.in or dmer.org).",
+      "Go to 'Competitions' / 'Results' section.",
+      "Click on 'Group C Recruitment Result 2025'.",
+      "Download the PDF and search your Roll Number."
+    ],
+
+    links: [
+      { title: "Download Result PDF", url: "https://www.med-edu.in/" },
+      { title: "Official Website", url: "https://www.med-edu.in/" }
+    ]
+  },
+  // --- 3020. UPSSSC PET Result 2025 (ID 3020) ---
+  {
+    id: 3020,
+    slug: "upsssc-pet-result-2025",
+    shortTitle: "UPSSSC PET Result 2025",
+    title: "UPSSSC PET Result 2025 Declared | Download Score Card & Percentile",
+    shortInfo: "Uttar Pradesh Subordinate Services Selection Commission (UPSSSC) has declared the Result and Score Card for the Preliminary Eligibility Test (PET) 2025. Candidates can download their certificate which is valid for upcoming Group C recruitments.",
+    postDate: "07/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Declared", value: "06/12/2025" },
+      { label: "Exam Date", value: "28 & 29 Oct 2025" },
+      { label: "Score Card Validity", value: "1 Year" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "UPSSSC PET 2025", totalPost: "N/A", eligibility: "10th Pass (Eligibility Test for Group C Posts)" }
+    ],
+
+    howToApply: [
+      "Visit upsssc.gov.in.",
+      "Click on 'Click here to View Preliminary Eligibility Test (PET) 2025 Result/Score Card'.",
+      "Enter Registration Number, DOB, Gender and Verification Code.",
+      "Click 'See Result' and Print your Score Card."
+    ],
+
+    links: [
+      { title: "Download Score Card", url: "http://upsssc.gov.in/" },
+      { title: "Official Website", url: "http://upsssc.gov.in/" }
+    ]
+  },
+
+  // --- 3019. Indian Coast Guard AC Result (ID 3019) ---
+  {
+    id: 3019,
+    slug: "indian-coast-guard-ac-result-2026-batch",
+    shortTitle: "Indian Coast Guard AC Final Result",
+    title: "Indian Coast Guard AC 01/2026 Batch Final Result Declared | Selection List",
+    shortInfo: "Indian Coast Guard (ICG) has released the Final Selection List for Assistant Commandant (AC) - General Duty, Technical (Engineering/Electrical) & Law for the 01/2026 Batch. Selected candidates are called for training.",
+    postDate: "07/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Final Result Declared", value: "06/12/2025" },
+      { label: "Exam Batch", value: "01/2026" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Assistant Commandant (GD/Tech/Law)", totalPost: "70+", eligibility: "Degree/B.Tech/Law" }
+    ],
+
+    howToApply: [
+      "Visit joinindiancoastguard.cdac.in.",
+      "Check 'News & Announcements' section.",
+      "Click on 'Select List for Assistant Commandant - 01/2026 Batch'.",
+      "Download PDF and Search your Roll Number."
+    ],
+
+    links: [
+      { title: "Download Final Result PDF", url: "https://joinindiancoastguard.cdac.in/" },
+      { title: "Official Website", url: "https://joinindiancoastguard.cdac.in/" }
+    ]
+  },
+
+  // --- 3018. DST Bihar Karyalay Parichari Result (ID 3018) ---
+  {
+    id: 3018,
+    slug: "dst-bihar-office-attendant-result-2025",
+    shortTitle: "DST Bihar Office Attendant Result",
+    title: "DST Bihar Karyalay Parichari (Office Attendant) Prelims Result 2025 Out",
+    shortInfo: "Department of Science & Technology (DST), Bihar has declared the Prelims Result for the recruitment of Karyalay Parichari (Office Attendant). Candidates selected in prelims will be eligible for the next stage.",
+    postDate: "07/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Declared", value: "05/12/2025" },
+      { label: "Exam Date", value: "September 2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Karyalay Parichari (Office Attendant)", totalPost: "238", eligibility: "10th Pass" }
+    ],
+
+    howToApply: [
+      "Visit state.bihar.gov.in/dst.",
+      "Go to 'Notice Board'.",
+      "Click on 'Result of Karyalay Parichari Recruitment 2025'.",
+      "Download the PDF Merit List."
+    ],
+
+    links: [
+      { title: "Download Result PDF", url: "https://state.bihar.gov.in/dst/CitizenHome.html" },
+      { title: "Official Website", url: "https://state.bihar.gov.in/dst/CitizenHome.html" }
+    ]
+  },
+
+  // --- 3017. OSSC Hindi Teacher (LTR) Result (ID 3017) ---
+  {
+    id: 3017,
+    slug: "ossc-ltr-teacher-prelims-result-2025",
+    shortTitle: "OSSC LTR Hindi Teacher Result",
+    title: "OSSC Hindi Teacher (LTR) Prelims Result 2025 Out | Check Selection List",
+    shortInfo: "Odisha Staff Selection Commission (OSSC) has released the Preliminary Examination Result for Leave Training Reserve (LTR) Hindi Teachers. Candidates can check the list of shortlisted candidates for the Main Written Examination.",
+    postDate: "07/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Declared", value: "05/12/2025" },
+      { label: "Prelims Exam Date", value: "October 2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "LTR Teacher (Hindi)", totalPost: "Various", eligibility: "Graduation + B.Ed (Hindi)" }
+    ],
+
+    howToApply: [
+      "Visit ossc.gov.in.",
+      "Go to 'What's New' section.",
+      "Click on 'List of Candidates Shortlisted for Mains - LTR Hindi Teacher'.",
+      "Download PDF and search Roll Number."
+    ],
+
+    links: [
+      { title: "Download Result PDF", url: "https://www.ossc.gov.in/" },
+      { title: "Official Website", url: "https://www.ossc.gov.in/" }
+    ]
+  },
+
+  // --- 3016. ISRO ICRB Scientist/Engineer Result (ID 3016) ---
+  {
+    id: 3016,
+    slug: "isro-scientist-engineer-interview-result-2025",
+    shortTitle: "ISRO Scientist/Engineer Result",
+    title: "ISRO ICRB Scientist/Engineer 'SC' Interview Result 2025 Declared",
+    shortInfo: "Indian Space Research Organisation (ISRO) - ICRB has released the Interview Result and Final Selection List for the post of Scientist/Engineer 'SC' (Electronics, Mechanical, Computer Science). Candidates can view the merit list discipline-wise.",
+    postDate: "07/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Declared", value: "05/12/2025" },
+      { label: "Interview Date", value: "Oct-Nov 2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Scientist/Engineer 'SC'", totalPost: "303", eligibility: "BE/B.Tech with 65%" }
+    ],
+
+    howToApply: [
+      "Visit isro.gov.in/Careers.",
+      "Navigate to 'Results' section.",
+      "Select your Discipline (Electronics/Mechanical/CS).",
+      "Download the 'List of Selected Candidates' PDF."
+    ],
+
+    links: [
+      { title: "Download Result (Electronics)", url: "https://www.isro.gov.in/" },
+      { title: "Download Result (Mechanical)", url: "https://www.isro.gov.in/" },
+      { title: "Download Result (Computer Science)", url: "https://www.isro.gov.in/" },
+      { title: "Official Website", url: "https://www.isro.gov.in/" }
+    ]
+  },
   // --- 3015. SSC CGL Tier 1 Result (ID 3015) ---
   {
     id: 3015,
@@ -3275,7 +3573,7 @@ export const jobsData = [
 
     applicationFee: [],
     vacancyDetails: [
-      { postName: "Combined Graduate Level (CGL)", totalPost: "17,727+", eligibility: "Graduation" }
+      { postName: "Combined Graduate Level (CGL)", totalPost: "14,582", eligibility: "Graduation" }
     ],
 
     extraSections: [
