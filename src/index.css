@@ -264,3 +264,59 @@ th, td {
     height: 24px;
   }
 }
+/* =========================================
+   8. INSTANT SEARCH SUGGESTIONS (New)
+   ========================================= */
+.search-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  align-items: center;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%; /* Search bar ke thik niche */
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1001;
+  max-height: 300px; /* Jyada results ho to scroll aaye */
+  overflow-y: auto;
+}
+
+.search-suggestions li {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.search-suggestions li:hover {
+  background-color: #f0f8ff; /* Light Blue Hover */
+  color: #004080; 
+  font-weight: 500;
+}
+
+/* Scrollbar ko sundar banane ke liye */
+.search-suggestions::-webkit-scrollbar {
+  width: 6px;
+}
+.search-suggestions::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+.search-suggestions::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
