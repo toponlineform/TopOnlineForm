@@ -9,7 +9,7 @@ export const previousPapers = [
     title: "Rajasthan Librarian Grade 3 Result 2025 Out | Merit List & Cut Off Marks",
     shortInfo: "Rajasthan Staff Selection Board (RSSB) has declared the result for Librarian Grade-III Direct Recruitment 2025. Candidates selected for Document Verification can download the PDF.",
     postDate: "05/12/2025",
-    category: "syllabus",
+    category: "Previous Paper",
 
     importantDates: [
       { label: "Result Date", value: "02/12/2025" },
