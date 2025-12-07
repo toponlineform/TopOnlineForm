@@ -1,4 +1,5 @@
-export const jobsData = [
+import { newAnswerKeys } from './finalKeys';
+const oldData = [
 
   // ==================================================
   //                  LATEST JOBS (ID 1 - 1000)
@@ -4499,4 +4500,9 @@ export const jobsData = [
  // #region PREVIOUS PAPERS (5001-6000)
   
   // #endregion
+];
+
+export const jobsData = [
+  ...newAnswerKeys, // Naya Data
+  ...oldData        // Purana Data
 ];
