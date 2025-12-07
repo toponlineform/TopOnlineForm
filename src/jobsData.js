@@ -3256,6 +3256,224 @@ export const jobsData = [
   // ==================================================
   //              RESULTS (ID 3001 - 4000)
   // ==================================================
+  
+  // --- 3015. SSC CGL Tier 1 Result (ID 3015) ---
+  {
+    id: 3015,
+    slug: "ssc-cgl-tier-1-result-2025",
+    shortTitle: "SSC CGL Tier 1 Result 2025",
+    title: "SSC CGL Tier 1 Result 2025 Declared | Download Merit List & Cut Off PDF",
+    shortInfo: "Staff Selection Commission (SSC) has declared the Result for Combined Graduate Level (CGL) Tier-1 Examination 2025. Candidates can check their roll numbers in the selected list and view category-wise cut-off marks.",
+    postDate: "07/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Declared", value: "06/12/2025" },
+      { label: "Exam Date", value: "09 to 26 Sep 2025" },
+      { label: "Tier-2 Exam Date", value: "January 2026 (Tentative)" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Combined Graduate Level (CGL)", totalPost: "17,727+", eligibility: "Graduation" }
+    ],
+
+    extraSections: [
+      {
+        title: "Tier-1 Cut-Off Marks (List-1: AAO)",
+        tableData: [
+          { "Category": "SC", "Cut Off": "137.54" },
+          { "Category": "ST", "Cut Off": "131.03" },
+          { "Category": "OBC", "Cut Off": "152.92" },
+          { "Category": "EWS", "Cut Off": "154.80" },
+          { "Category": "UR", "Cut Off": "169.67" }
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Visit ssc.gov.in.",
+      "Go to 'Result' -> 'CGL'.",
+      "Click on 'CGL Tier-1 2025 List 1/2/3'.",
+      "Download PDF and Search Roll Number."
+    ],
+
+    links: [
+      { title: "Download Result (List 1 - AAO)", url: "https://ssc.gov.in/" },
+      { title: "Download Result (List 2 - JSO)", url: "https://ssc.gov.in/" },
+      { title: "Download Result (List 3 - All Posts)", url: "https://ssc.gov.in/" },
+      { title: "Official Website", url: "https://ssc.gov.in/" }
+    ]
+  },
+
+  // --- 3014. HSSC CET Result (ID 3014) ---
+  {
+    id: 3014,
+    slug: "hssc-cet-group-c-result-2025",
+    shortTitle: "HSSC CET Result 2025",
+    title: "HSSC CET Group C Result 2025 Out | Download Score Card",
+    shortInfo: "Haryana Staff Selection Commission (HSSC) has declared the Common Eligibility Test (CET) 2025 Result for Group C posts. Candidates can login to download their Score Card.",
+    postDate: "07/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Declared", value: "05/12/2025" },
+      { label: "Exam Date", value: "26 & 27 July 2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Group C Posts", totalPost: "Various", eligibility: "CET Qualified" }
+    ],
+
+    extraSections: [
+      {
+        title: "Qualifying Marks",
+        list: [
+          "General Category: 50% Marks",
+          "Reserved Category: 40% Marks"
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Visit hssc.gov.in.",
+      "Click on 'CET Group-C Score Card'.",
+      "Enter Registration ID and DOB.",
+      "Download and Print Score Card."
+    ],
+
+    links: [
+      { title: "Download Score Card", url: "https://hssc.gov.in/" },
+      { title: "Official Website", url: "https://hssc.gov.in/" }
+    ]
+  },
+
+  // --- 3013. RSMSSB Agriculture Supervisor (ID 3013) ---
+  {
+    id: 3013,
+    slug: "rsmssb-agriculture-supervisor-final-result-2025",
+    shortTitle: "RSMSSB Agriculture Supervisor Final Result",
+    title: "RSMSSB Agriculture Supervisor Final Result 2025 Declared | Final Recommendation List",
+    shortInfo: "Rajasthan Staff Selection Board (RSSB) has released the Final Recommendation List and Cut-Off Marks for Agriculture Supervisor Recruitment 2025. Selected candidates are recommended for appointment.",
+    postDate: "06/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Final Result Declared", value: "03/12/2025" },
+      { label: "Exam Date", value: "04 Feb 2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Agriculture Supervisor", totalPost: 430, eligibility: "B.Sc Agriculture" }
+    ],
+
+    extraSections: [
+      {
+        title: "Final Cut-Off (Non-TSP)",
+        tableData: [
+          { "Category": "GEN (Male)", "Cut Off": "234.04" },
+          { "Category": "GEN (Fem)", "Cut Off": "229.91" },
+          { "Category": "OBC (Male)", "Cut Off": "229.58" },
+          { "Category": "SC (Male)", "Cut Off": "205.47" },
+          { "Category": "ST (Male)", "Cut Off": "206.64" }
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Visit rssb.rajasthan.gov.in.",
+      "Go to 'Results' section.",
+      "Download 'Agriculture Supervisor 2025 Final Result'.",
+      "Search Roll Number in PDF."
+    ],
+
+    links: [
+      { title: "Download Final Result PDF", url: "https://rssb.rajasthan.gov.in/" },
+      { title: "Official Website", url: "https://rssb.rajasthan.gov.in/" }
+    ]
+  },
+
+  // --- 3012. DSSSB PHNO Result (ID 3012) ---
+  {
+    id: 3012,
+    slug: "dsssb-public-health-nursing-officer-result-2025",
+    shortTitle: "DSSSB PHNO Result 2025",
+    title: "DSSSB Public Health Nursing Officer Result 2025 Out | Post Code 30/24 Cut Off",
+    shortInfo: "Delhi Subordinate Services Selection Board (DSSSB) has declared the Marks and Result for Public Health Nursing Officer (PHNO) Post Code 30/24. Candidates can check marks in OARS.",
+    postDate: "06/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Declared", value: "03/12/2025" },
+      { label: "Exam Date", value: "26-27 July 2025" },
+      { label: "e-Dossier Dates", value: "08-22 Dec 2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Public Health Nursing Officer", totalPost: 46, eligibility: "Nursing Degree" }
+    ],
+
+    extraSections: [
+      {
+        title: "Cut-Off Marks",
+        tableData: [
+          { "Category": "UR", "Cut Off": "119.36" },
+          { "Category": "OBC", "Cut Off": "97.30" },
+          { "Category": "SC", "Cut Off": "101.88" },
+          { "Category": "ST", "Cut Off": "88.17" },
+          { "Category": "EWS", "Cut Off": "109.08" }
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Visit dsssbonline.nic.in.",
+      "Login to OARS.",
+      "View Result/Marks.",
+      "Shortlisted candidates must upload e-Dossier."
+    ],
+
+    links: [
+      { title: "Check Result (OARS Login)", url: "https://dsssbonline.nic.in/" },
+      { title: "Official Website", url: "https://dsssb.delhi.gov.in/" }
+    ]
+  },
+
+  // --- 3011. BCC Bank Result (ID 3011) ---
+  {
+    id: 3011,
+    slug: "bcc-bank-junior-assistant-result-2025",
+    shortTitle: "BCC Bank Result 2025",
+    title: "BCC Bank Junior Assistant & Attender Result 2025 Declared | Check List",
+    shortInfo: "Bangalore City Cooperative Bank (BCC Bank) has released the Result/Selection List for Junior Assistant and Attender recruitment. Selected candidates are called for Interview.",
+    category: "Result",
+
+    importantDates: [
+      { label: "Result Date", value: "04/12/2025" },
+      { label: "Exam Date", value: "19/10/2025" }
+    ],
+
+    applicationFee: [],
+    vacancyDetails: [
+      { postName: "Junior Assistant", totalPost: 62, eligibility: "Graduate" },
+      { postName: "Attender", totalPost: 12, eligibility: "10th Pass" }
+    ],
+
+    howToApply: [
+      "Visit bccbl.co.in.",
+      "Click on 'Recruitment 2025 Result'.",
+      "Download PDF.",
+      "Check Roll Number."
+    ],
+
+    links: [
+      { title: "Download Result PDF", url: "https://bccbl.co.in/" },
+      { title: "Official Website", url: "https://bccbl.co.in/" }
+    ]
+  },
   // --- 3010. AIIMS Group A REGA Final Result (ID 3010) ---
   {
     id: 3010,
