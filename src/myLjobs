@@ -2,7 +2,119 @@ export const latestJobs = [
   // ==================================================
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
+  // --- 28. HPRCA Assistant Staff Nurse Recruitment 2025 ---
+{
+  id: 28,
+  slug: "hprca-assistant-staff-nurse-recruitment-2025",
+  shortTitle: "HPRCA Assistant Staff Nurse Recruitment 2025 Apply Online for 312 Posts",
+  title: "HPRCA Assistant Staff Nurse Recruitment 2025 Apply Online for 312 Posts | Eligibility, Syllabus & Full Notification",
+  shortInfo: "Himachal Pradesh Rajya Chayan Aayog (HPRCA), Hamirpur has released Advertisement No. 07/2025 for the recruitment of Assistant Staff Nurses purely on an engagement basis. A total of 312 vacancies are available under the Department of Medical Education & Research, HP. Eligible female candidates who are Bonafide Himachalis can apply online from 12th December 2025 to 16th January 2026.",
+  postDate: "06/12/2025",
+  category: "Latest Jobs",
+
+  salary: "₹25,000/- Per Month (Fixed Honorarium)",
+
+  importantDates: [
+    { label: "Notification Date", value: "06/12/2025" },
+    { label: "Application Begin", value: "12/12/2025 (10:00 AM)" },
+    { label: "Last Date for Apply", value: "16/01/2026 (11:59 PM)" },
+    { label: "Fee Payment Last Date", value: "16/01/2026" },
+    { label: "Correction Window", value: "Opens 3 days after closing date (for 7 days)" },
+    { label: "Exam Date", value: "To be notified" }
+  ],
+
+  applicationFee: [
+    { category: "All Categories (Exam Fee ₹100 + Processing Fee ₹700)", amount: "₹800/-" },
+    { category: "Correction Fee", amount: "₹100/-" },
+    { category: "Payment Mode", amount: "Online (Credit Card/Debit Card/Net Banking)" }
+  ],
+
+  ageLimit: "21-32 Years (As on 01/01/2025). Relaxation: SC/ST/OBC/PwD (of HP) +5 Years as per HP Govt norms.",
+
+  vacancyDetails: [
+    { 
+      postName: "Assistant Staff Nurse", 
+      totalPost: 312, 
+      eligibility: "B.Sc. Nursing or GNM (A Grade Nurse) with 50% Marks. Must be registered with HPNRC. Only Female candidates who are Bonafide Himachali can apply." 
+    }
+  ],
+
+  vacancyTableTitle: "Category Wise Vacancy Breakup (Post Code: 25026)",
+  vacancyColumnName: "Category",
   
+  stateWiseVacancy: [
+    { state: "General (Unreserved)", total: 112, ur: 112, sc: 0, st: 0, obc: 0, ews: 0 },
+    { state: "EWS (Economically Weaker Section)", total: 40, ur: 0, sc: 0, st: 0, obc: 0, ews: 40 },
+    { state: "Scheduled Caste (SC)", total: 76, ur: 62, sc: 12, st: 2, obc: 0, ews: 0 }, // SC(UR): 62, SC(IRDP): 12, SC(WFF): 02
+    { state: "Scheduled Tribe (ST)", total: 16, ur: 12, sc: 4, st: 0, obc: 0, ews: 0 }, // ST(UR): 12, ST(IRDP): 04
+    { state: "OBC", total: 64, ur: 50, sc: 12, st: 2, obc: 0, ews: 0 }, // OBC(UR): 50, OBC(IRDP): 12, OBC(WFF): 02
+    { state: "General (Ward of Freedom Fighter)", total: 4, ur: 4, sc: 0, st: 0, obc: 0, ews: 0 }
+  ],
+  // Note: The specific breakup provided in notification: SC(UR)-62, SC(IRDP)-12, SC(WFF)-02; ST(UR)-12, ST(IRDP)-04; OBC(UR)-50, OBC(IRDP)-12, OBC(WFF)-02.
+
+  salaryDetails: [
+    { post: "Assistant Staff Nurse", level: "Fixed Monthly Honorarium ₹25,000/-" }
+  ],
+
+  selectionProcess: [
+    "Computer Based Test (CBT) / Written Screening Test (120 Marks)",
+    "Document Verification",
+    "Medical Examination"
+  ],
+
+  examPattern: {
+    details: [
+      "Mode: Computer Based Test (CBT)",
+      "Total Questions: 120",
+      "Total Marks: 120 (1 Mark each)",
+      "Duration: 90 Minutes (1.5 Hours)",
+      "Negative Marking: No negative marking specified in PDF (Check Admit Card instructions)"
+    ],
+    table: [
+      { subject: "Part-I: Nursing Subject Knowledge (B.Sc/GNM Level)", questions: 85, marks: 85 },
+      { subject: "Part-II: GK (HP/Current), Science, Reasoning, English, Hindi", questions: 35, marks: 35 }
+    ]
+  },
+
+  extraSections: [
+    {
+      title: "Detailed Syllabus",
+      text: "The objective type screening test will consist of 120 multiple-choice questions:\n\n1. **Subject Knowledge (85 Questions):** Field-specific questions up to the level of prescribed essential qualification (B.Sc Nursing/GNM).\n\n2. **General Aptitude (35 Questions):**\n   - General Knowledge including GK of Himachal Pradesh & Current Affairs.\n   - Everyday Science, Logical Reasoning, Social Science.\n   - General English & General Hindi of Matric Standard."
+    },
+    {
+      title: "Important Eligibility Conditions",
+      list: [
+        "**Gender:** Only Female candidates are eligible.",
+        "**Domicile:** Candidate must be a Bonafide Himachali.",
+        "**Registration:** Must be registered with Himachal Pradesh Nursing Registration Council (HPNRC).",
+        "**Education:** B.Sc. Nursing with 50% marks OR GNM (A Grade Nursing Diploma) with 50% marks from a recognized University/Institution."
+      ]
+    }
+  ],
+
+  howToApply: [
+    "Visit the official HPRCA website: https://hprca.hp.gov.in.",
+    "Register on the One Time Registration (OTR) portal.",
+    "Login using your credentials and fill the Online Recruitment Application (ORA).",
+    "Upload scanned Photograph and Signature (Max 1MB each, JPG/JPEG/PNG).",
+    "Pay the application fee of ₹800/- online.",
+    "Submit the final application and take a printout."
+  ],
+
+  links: [
+    { title: "Apply Online (Active on 12/12)", url: "https://hprca.hp.gov.in" },
+    { title: "Download Notification", url: "https://hprca.hp.gov.in/homepage" }, // Replace with direct PDF link if available
+    { title: "Official Website", url: "https://hprca.hp.gov.in" }
+  ],
+
+  faqs: [
+    { question: "What is the age limit for HPRCA Staff Nurse?", answer: "21 to 32 Years as on 01-01-2025." },
+    { question: "Can male candidates apply?", answer: "No, only female candidates are eligible for this recruitment." },
+    { question: "Is this a permanent government job?", answer: "No, the post is purely on an engagement basis for 5 years with a fixed honorarium." },
+    { question: "What is the application fee?", answer: "₹800/- for all categories (Exam Fee ₹100 + Processing Fee ₹700)." },
+    { question: "Is HPNRC registration mandatory?", answer: "Yes, candidates must be registered with the Himachal Pradesh Nursing Registration Council." }
+  ]
+},
   // --- 27. HARTRON IT Professionals Recruitment 2025 ---
   {
     id: 27,
