@@ -1,4 +1,4 @@
-export const answerKeysData = [
+export const newanswerKeys = [
   // --- 2010. DSSSB Answer Key (Various Posts) ---
   {
   // ==================================================
