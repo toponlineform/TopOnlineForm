@@ -1,4 +1,5 @@
-export const jobsData = [
+import { newAnswerKeys } from './data/answerKeys';
+const oldData = [
   
   // ==================================================
   //                  LATEST JOBS (ID 1 - 1000)
@@ -418,7 +419,7 @@ export const jobsData = [
 
     links: [
       { title: "Download Application Form", url: "https://www.jmi.ac.in/upload/menuupload/jobform_non_teaching.pdf" },
-      { title: "Download Notification PDF", url: "https://https://www.jmi.ac.in/upload/advertisement/jobs_advt2_2025december2.pdf" },
+      { title: "Download Notification PDF", url: "https://www.jmi.ac.in/upload/advertisement/jobs_advt2_2025december2.pdf" },
       { title: "Official Website", url: "https://www.jmi.ac.in/" }
     ],
 
@@ -904,7 +905,7 @@ export const jobsData = [
     ],
 
     links: [
-      { title: "Apply Online", url: "https://https://cdn.digialm.com/EForms/configuredHtml/1258/95962/Index.html" },
+      { title: "Apply Online", url: "https://cdn.digialm.com/EForms/configuredHtml/1258/95962/Index.html" },
       { title: "Download Notification PDF", url: "https://www.dda.gov.in/sites/default/files/latest_jobs/advertisement_no_09_2025_dr_2025.pdf" },
       { title: "Official Website", url: "https://dda.gov.in/" }
     ],
@@ -3614,9 +3615,9 @@ export const jobsData = [
   //              RESULTS (ID 3001 - 4000)
   // ==================================================
   // #region RESULTS (3001-4000)
-  // --- 3024. DRDO ITR Apprentice Result (ID 3024) ---
+  // --- 3023. DRDO ITR Apprentice Result (ID 3023) ---
   {
-    id: 3024,
+    id: 3023,
     slug: "drdo-itr-apprentice-result-2025",
     shortTitle: "DRDO ITR Apprentice Result 2025",
     title: "DRDO ITR Graduate & Technician Apprentice Result 2025 Out | Selection List",
@@ -3648,9 +3649,9 @@ export const jobsData = [
     ]
   },
 
-  // --- 3023. Punjab & Haryana High Court Peon Result (ID 3023) ---
+  // --- 3022. Punjab & Haryana High Court Peon Result (ID 3022) ---
   {
-    id: 3023,
+    id: 3022,
     slug: "punjab-haryana-high-court-peon-result-2025",
     shortTitle: "PHHC Peon Result 2025",
     title: "Punjab and Haryana High Court Peon Result 2025 Declared | Merit List",
@@ -3681,9 +3682,9 @@ export const jobsData = [
     ]
   },
 
-  // --- 3022. PFRDA Grade A Final Result (ID 3022) ---
+  // --- 3021. PFRDA Grade A Final Result (ID 3021) ---
   {
-    id: 3022,
+    id: 3021,
     slug: "pfrda-grade-a-final-result-2025",
     shortTitle: "PFRDA Grade A Final Result",
     title: "PFRDA Assistant Manager (Grade A) Final Result 2025 Out | Selection List",
@@ -3714,9 +3715,9 @@ export const jobsData = [
     ]
   },
 
-  // --- 3021. DMER Group C Result (ID 3021) ---
+  // --- 3020. DMER Group C Result (ID 3020) ---
   {
-    id: 3021,
+    id: 3020,
     slug: "dmer-group-c-result-2025",
     shortTitle: "DMER Group C Result 2025",
     title: "DMER Group C Result 2025 Declared | Download Merit List & Cut Off",
@@ -3746,9 +3747,9 @@ export const jobsData = [
       { title: "Official Website", url: "https://www.med-edu.in/" }
     ]
   },
-  // --- 3020. UPSSSC PET Result 2025 (ID 3020) ---
+  // --- 3019. UPSSSC PET Result 2025 (ID 3019) ---
   {
-    id: 3020,
+    id: 3019,
     slug: "upsssc-pet-result-2025",
     shortTitle: "UPSSSC PET Result 2025",
     title: "UPSSSC PET Result 2025 Declared | Download Score Card & Percentile",
@@ -3780,9 +3781,9 @@ export const jobsData = [
     ]
   },
 
-  // --- 3019. Indian Coast Guard AC Result (ID 3019) ---
+  // --- 3018. Indian Coast Guard AC Result (ID 3018) ---
   {
-    id: 3019,
+    id: 3018,
     slug: "indian-coast-guard-ac-result-2026-batch",
     shortTitle: "Indian Coast Guard AC Final Result",
     title: "Indian Coast Guard AC 01/2026 Batch Final Result Declared | Selection List",
@@ -3813,9 +3814,9 @@ export const jobsData = [
     ]
   },
 
-  // --- 3018. DST Bihar Karyalay Parichari Result (ID 3018) ---
+  // --- 3017. DST Bihar Karyalay Parichari Result (ID 3017) ---
   {
-    id: 3018,
+    id: 3017,
     slug: "dst-bihar-office-attendant-result-2025",
     shortTitle: "DST Bihar Office Attendant Result",
     title: "DST Bihar Karyalay Parichari (Office Attendant) Prelims Result 2025 Out",
@@ -3846,9 +3847,9 @@ export const jobsData = [
     ]
   },
 
-  // --- 3017. OSSC Hindi Teacher (LTR) Result (ID 3017) ---
+  // --- 3016. OSSC Hindi Teacher (LTR) Result (ID 3016) ---
   {
-    id: 3017,
+    id: 3016,
     slug: "ossc-ltr-teacher-prelims-result-2025",
     shortTitle: "OSSC LTR Hindi Teacher Result",
     title: "OSSC Hindi Teacher (LTR) Prelims Result 2025 Out | Check Selection List",
@@ -3879,9 +3880,9 @@ export const jobsData = [
     ]
   },
 
-  // --- 3016. ISRO ICRB Scientist/Engineer Result (ID 3016) ---
+  // --- 3015. ISRO ICRB Scientist/Engineer Result (ID 3015) ---
   {
-    id: 3016,
+    id: 3015,
     slug: "isro-scientist-engineer-interview-result-2025",
     shortTitle: "ISRO Scientist/Engineer Result",
     title: "ISRO ICRB Scientist/Engineer 'SC' Interview Result 2025 Declared",
@@ -3913,9 +3914,9 @@ export const jobsData = [
       { title: "Official Website", url: "https://www.isro.gov.in/" }
     ]
   },
-  // --- 3015. SSC CGL Tier 1 Result (ID 3015) ---
+  // --- 3014. SSC CGL Tier 1 Result (ID 3014) ---
   {
-    id: 3015,
+    id: 3014,
     slug: "ssc-cgl-tier-1-result-2025",
     shortTitle: "SSC CGL Tier 1 Result 2025",
     title: "SSC CGL Tier 1 Result 2025 Declared | Download Merit List & Cut Off PDF",
@@ -3962,9 +3963,9 @@ export const jobsData = [
     ]
   },
 
-  // --- 3014. HSSC CET Result (ID 3014) ---
+  // --- 3013. HSSC CET Result (ID 3013) ---
   {
-    id: 3014,
+    id: 3013,
     slug: "hssc-cet-group-c-result-2025",
     shortTitle: "HSSC CET Result 2025",
     title: "HSSC CET Group C Result 2025 Out | Download Score Card",
@@ -4005,9 +4006,9 @@ export const jobsData = [
     ]
   },
 
-  // --- 3013. RSMSSB Agriculture Supervisor (ID 3013) ---
+  // --- 3012. RSMSSB Agriculture Supervisor (ID 3012) ---
   {
-    id: 3013,
+    id: 3012,
     slug: "rsmssb-agriculture-supervisor-final-result-2025",
     shortTitle: "RSMSSB Agriculture Supervisor Final Result",
     title: "RSMSSB Agriculture Supervisor Final Result 2025 Declared | Final Recommendation List",
@@ -4051,9 +4052,9 @@ export const jobsData = [
     ]
   },
 
-  // --- 3012. DSSSB PHNO Result (ID 3012) ---
+  // --- 3011. DSSSB PHNO Result (ID 3011) ---
   {
-    id: 3012,
+    id: 3011,
     slug: "dsssb-public-health-nursing-officer-result-2025",
     shortTitle: "DSSSB PHNO Result 2025",
     title: "DSSSB Public Health Nursing Officer Result 2025 Out | Post Code 30/24 Cut Off",
@@ -4098,38 +4099,6 @@ export const jobsData = [
     ]
   },
 
-  // --- 3011. BCC Bank Result (ID 3011) ---
-  {
-    id: 3011,
-    slug: "bcc-bank-junior-assistant-result-2025",
-    shortTitle: "BCC Bank Result 2025",
-    title: "BCC Bank Junior Assistant & Attender Result 2025 Declared | Check List",
-    shortInfo: "Bangalore City Cooperative Bank (BCC Bank) has released the Result/Selection List for Junior Assistant and Attender recruitment. Selected candidates are called for Interview.",
-    category: "Result",
-
-    importantDates: [
-      { label: "Result Date", value: "04/12/2025" },
-      { label: "Exam Date", value: "19/10/2025" }
-    ],
-
-    applicationFee: [],
-    vacancyDetails: [
-      { postName: "Junior Assistant", totalPost: 62, eligibility: "Graduate" },
-      { postName: "Attender", totalPost: 12, eligibility: "10th Pass" }
-    ],
-
-    howToApply: [
-      "Visit bccbl.co.in.",
-      "Click on 'Recruitment 2025 Result'.",
-      "Download PDF.",
-      "Check Roll Number."
-    ],
-
-    links: [
-      { title: "Download Result PDF", url: "https://bccbl.co.in/" },
-      { title: "Official Website", url: "https://bccbl.co.in/" }
-    ]
-  },
   // --- 3010. AIIMS Group A REGA Final Result (ID 3010) ---
   {
     id: 3010,
@@ -4531,4 +4500,8 @@ export const jobsData = [
  // #region PREVIOUS PAPERS (5001-6000)
   
   // #endregion
+];
+export const jobsData = [
+  ...oldData,       // आपका पुराना डेटा (Safe है)
+  ...newAnswerKeys  // आपकी नई Dummy Post (Add हो गई)
 ];
