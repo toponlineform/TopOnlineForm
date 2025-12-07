@@ -1,6 +1,4 @@
-export const newanswerKeys = [
-  // --- 2010. DSSSB Answer Key (Various Posts) ---
-  {
+export const newAnswerKeys = [
   // ==================================================
   //              ANSWER KEY (ID 2001 - 3000)
   // ==================================================
@@ -37,5 +35,5 @@ export const newanswerKeys = [
       { title: "Download Answer Key", url: "https://dsssb.delhi.gov.in/" },
       { title: "Official Website", url: "https://dsssb.delhi.gov.in/" }
     ]
-  },
+  }
 ];
