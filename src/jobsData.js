@@ -4170,3 +4170,7 @@ export const jobsData = [
   //              PREVIOUS PAPERS (ID 5001 - 5999)
   // ==================================================
 ];
+export const jobsData = [
+  ...otherJobs,
+  ...answerKeysData
+];
