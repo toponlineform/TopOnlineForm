@@ -1,5 +1,4 @@
-import { answerKeysData } from './data/answerKeys';
-const otherJobs = [
+export const jobsData = [
   
   // ==================================================
   //                  LATEST JOBS (ID 1 - 1000)
@@ -4169,8 +4168,4 @@ const otherJobs = [
   // ==================================================
   //              PREVIOUS PAPERS (ID 5001 - 5999)
   // ==================================================
-];
-export const jobsData = [
-  ...otherJobs,      // Purana Data
-  ...answerKeysData  // Naya Imported Answer Key Data
 ];
