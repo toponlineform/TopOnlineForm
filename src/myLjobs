@@ -43,12 +43,17 @@ export const latestJobs = [
   vacancyColumnName: "Category",
   
   stateWiseVacancy: [
-    { state: "General (Unreserved)", total: 112, ur: 112, sc: 0, st: 0, obc: 0, ews: 0 },
-    { state: "EWS (Economically Weaker Section)", total: 40, ur: 0, sc: 0, st: 0, obc: 0, ews: 40 },
-    { state: "Scheduled Caste (SC)", total: 76, ur: 62, sc: 12, st: 2, obc: 0, ews: 0 }, // SC(UR): 62, SC(IRDP): 12, SC(WFF): 02
-    { state: "Scheduled Tribe (ST)", total: 16, ur: 12, sc: 4, st: 0, obc: 0, ews: 0 }, // ST(UR): 12, ST(IRDP): 04
-    { state: "OBC", total: 64, ur: 50, sc: 12, st: 2, obc: 0, ews: 0 }, // OBC(UR): 50, OBC(IRDP): 12, OBC(WFF): 02
-    { state: "General (Ward of Freedom Fighter)", total: 4, ur: 4, sc: 0, st: 0, obc: 0, ews: 0 }
+    { "Category Name": "General (Unreserved)", "Total Posts": 112 },
+    { "Category Name": "General (Ward of Freedom Fighter)", "Total Posts": 4 },
+    { "Category Name": "EWS (Economically Weaker Section)", "Total Posts": 40 },
+    { "Category Name": "OBC (Unreserved)", "Total Posts": 50 },
+    { "Category Name": "OBC (BPL/IRDP)", "Total Posts": 12 },
+    { "Category Name": "OBC (Ward of Freedom Fighter)", "Total Posts": 2 },
+    { "Category Name": "SC (Unreserved)", "Total Posts": 62 },
+    { "Category Name": "SC (BPL/IRDP)", "Total Posts": 12 },
+    { "Category Name": "SC (Ward of Freedom Fighter)", "Total Posts": 2 },
+    { "Category Name": "ST (Unreserved)", "Total Posts": 12 },
+    { "Category Name": "ST (BPL/IRDP)", "Total Posts": 4 }
   ],
   // Note: The specific breakup provided in notification: SC(UR)-62, SC(IRDP)-12, SC(WFF)-02; ST(UR)-12, ST(IRDP)-04; OBC(UR)-50, OBC(IRDP)-12, OBC(WFF)-02.
 
