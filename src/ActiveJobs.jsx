@@ -9,21 +9,25 @@ const ActiveJobs = () => {
 
   useEffect(() => {
     const today = new Date();
-    today.setHours(0, 0, 0, 0); // Aaj ki raat 12 baje se compare karein
+    today.setHours(0, 0, 0, 0); // Compare from midnight today
 
-    // 1. Function to parse "DD/MM/YYYY" to Date Object
+    // 1. Helper: Parse Date nicely (Sorting ke liye)
+    // Ye function sirf date nikalta hai taaki hum sort kar sakein,
+    // lekin display hum poora text hi karenge.
     const parseDate = (dateStr) => {
       if (!dateStr) return null;
-      // Agar date me "To be notified" ya text hai, to use Active maanein
-      if (dateStr.toLowerCase().includes("notified") || dateStr.toLowerCase().includes("soon")) {
-        return new Date("2099-12-31"); // Future date (Always Active)
+      
+      const lowerDate = dateStr.toLowerCase();
+      // Agar date me "To be notified" ya aisa kuch hai, to use Active maanein
+      if (lowerDate.includes("notify") || lowerDate.includes("soon") || lowerDate.includes("tbd")) {
+        return new Date("2099-12-31"); 
       }
       
       try {
-        // Date format "10/12/2025" ya "10-12-2025" ko handle karein
-        const parts = dateStr.replace(/-/g, '/').split('/'); 
+        // Sirf pehla part (DD/MM/YYYY) uthao, baaki text (jaise 'upto 5pm') ignore karo sorting ke liye
+        const cleanDate = dateStr.split(' ')[0].replace(/-/g, '/');
+        const parts = cleanDate.split('/');
         if (parts.length === 3) {
-          // new Date(Year, Month - 1, Day)
           return new Date(parts[2], parts[1] - 1, parts[0]);
         }
       } catch (e) {
@@ -32,41 +36,39 @@ const ActiveJobs = () => {
       return null;
     };
 
-    // 2. Filter Jobs
+    // 2. Helper: Get Full Last Date String
+    const getLastDateString = (job) => {
+       // Ye pura text return karega (e.g., "12/12/2025 (Upto 5:00 PM)")
+       return job.importantDates?.find(d => 
+         d.label.toLowerCase().includes("last") || 
+         d.label.toLowerCase().includes("closing")
+       )?.value || "Check Notice";
+    };
+
+    // 3. Filter Logic
     const filtered = jobsData.filter(job => {
-      // Sirf 'Latest Jobs' aur 'Admission' ko dikhayein
-      const isRelevantCategory = 
-        job.category === "Latest Jobs" || 
-        job.category === "Admission";
+      const isRelevant = job.category === "Latest Jobs" || job.category === "Admission";
+      if (!isRelevant) return false;
 
-      if (!isRelevantCategory) return false;
+      const lastDateStr = getLastDateString(job);
+      const expDate = parseDate(lastDateStr);
 
-      // Last Date check karein
-      const lastDateObj = job.importantDates?.find(d => 
-        d.label.toLowerCase().includes("last date") || 
-        d.label.toLowerCase().includes("closing")
-      );
-
-      if (!lastDateObj) return true; // Agar Last Date nahi mili, to safe side Active maanein
-
-      const expDate = parseDate(lastDateObj.value);
-      
-      // Agar date valid hai aur aaj ya future ki hai, to rakhein
-      if (expDate && expDate >= today) {
-        return true;
+      if (expDate) {
+        return expDate >= today;
       }
-      
-      return false; // Expired jobs ko hata dein
+      return true; // Agar date parse nahi hui (text hai), to show karo
     });
 
-    // 3. Sort by ID (Newest First) or Last Date (Jo pehle khatam ho raha hai)
-    // Abhi hum Newest First rakh rahe hain
-    const sorted = filtered.sort((a, b) => b.id - a.id);
+    // 4. Sort Logic: Closing Soonest First
+    const sorted = filtered.sort((a, b) => {
+       const dateA = parseDate(getLastDateString(a)) || new Date("2099-12-31");
+       const dateB = parseDate(getLastDateString(b)) || new Date("2099-12-31");
+       return dateA - dateB; 
+    });
 
     setActiveList(sorted);
   }, []);
 
-  // Search Logic
   const displayList = activeList.filter(job => 
     job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     job.shortTitle?.toLowerCase().includes(searchTerm.toLowerCase())
@@ -81,11 +83,10 @@ const ActiveJobs = () => {
         url="https://toponlineform.com/active-jobs"
       />
 
-      <h1 style={{color: '#ab1e1e', borderBottom: '3px solid #004080', paddingBottom: '10px', marginBottom: '20px'}}>
-        Active Jobs (Currently Open)
-      </h1>
+      <div className="section-header" style={{ backgroundColor: '#004080', color: 'white', padding: '10px', fontSize: '20px', marginBottom: '15px', borderRadius: '5px', textAlign: 'center' }}>
+        Active Govt Jobs & Admissions (Live)
+      </div>
 
-      {/* Search Bar for Active Jobs */}
       <div style={{marginBottom: '20px'}}>
         <input 
           type="text" 
@@ -94,40 +95,57 @@ const ActiveJobs = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           style={{
             width: '100%',
-            padding: '12px',
+            padding: '10px',
             fontSize: '16px',
-            border: '2px solid #ddd',
-            borderRadius: '5px'
+            border: '1px solid #ccc',
+            borderRadius: '4px'
           }}
         />
       </div>
 
-      {/* Desktop Table View */}
-      <div className="desktop-view">
-        <table className="vacancy-table" style={{width: '100%', borderCollapse: 'collapse', boxShadow: '0 2px 8px rgba(0,0,0,0.1)'}}>
+      <div style={{overflowX: 'auto'}}>
+        <table className="vacancy-table" style={{width: '100%', borderCollapse: 'collapse', border: '1px solid #ddd'}}>
           <thead>
-            <tr style={{background: '#004080', color: 'white', textAlign: 'left'}}>
-              <th style={{padding: '12px'}}>Post Name</th>
-              <th style={{padding: '12px'}}>Last Date</th>
-              <th style={{padding: '12px'}}>Action</th>
+            <tr style={{background: '#f2f2f2'}}>
+              {/* ✅ COLUMN 1: Last Date (Width Thoda Kam Rakha Hai) */}
+              <th style={{padding: '12px', border: '1px solid #ddd', width: '140px', textAlign: 'center', background:'#eee', color:'#333'}}>
+                Last Date
+              </th>
+              
+              {/* ✅ COLUMN 2: Post Details */}
+              <th style={{padding: '12px', border: '1px solid #ddd', textAlign: 'left', background:'#eee', color:'#333'}}>
+                Post Name / Details
+              </th>
             </tr>
           </thead>
           <tbody>
             {displayList.length > 0 ? (
               displayList.map((job) => {
+                // Yahan hum pura text utha rahe hain
                 const lastDate = job.importantDates?.find(d => d.label.toLowerCase().includes("last"))?.value || "Check Notice";
+                const isAdmission = job.category === "Admission";
+                
                 return (
-                  <tr key={job.id} style={{borderBottom: '1px solid #eee', background: 'white'}}>
-                    <td style={{padding: '12px', fontWeight: '500'}}>
-                      <Link to={`/${job.slug}`} style={{textDecoration: 'none', color: '#333'}}>
-                        {job.shortTitle || job.title}
-                        {job.category === "Admission" && <span style={{fontSize:'10px', background:'orange', color:'white', padding:'2px 5px', borderRadius:'3px', marginLeft:'5px'}}>Admission</span>}
-                      </Link>
+                  <tr key={job.id} style={{background: 'white'}}>
+                    
+                    {/* Date Column: Red Color & Bold */}
+                    <td style={{
+                        padding: '12px', 
+                        border: '1px solid #ddd', 
+                        textAlign: 'center', 
+                        color: '#d32f2f', 
+                        fontWeight: 'bold',
+                        fontSize: '14px' 
+                        /* Note: 'whiteSpace: nowrap' hata diya hai taaki text wrap ho sake */
+                      }}>
+                      {lastDate}
                     </td>
-                    <td style={{padding: '12px', color: '#d32f2f', fontWeight: 'bold'}}>{lastDate}</td>
-                    <td style={{padding: '12px'}}>
-                      <Link to={`/${job.slug}`} style={{textDecoration: 'none', background: '#28a745', color: 'white', padding: '5px 10px', borderRadius: '4px', fontSize: '14px'}}>
-                        View Details
+                    
+                    {/* Post Name Column */}
+                    <td style={{padding: '12px', border: '1px solid #ddd'}}>
+                      <Link to={`/${job.slug}`} style={{textDecoration: 'none', color: '#0056b3', fontWeight: '500', fontSize: '15px', display:'block'}}>
+                        {job.shortTitle || job.title}
+                        {isAdmission && <span style={{marginLeft:'8px', fontSize:'11px', background:'#ff9800', color:'white', padding:'2px 6px', borderRadius:'4px'}}>Admission</span>}
                       </Link>
                     </td>
                   </tr>
@@ -135,40 +153,12 @@ const ActiveJobs = () => {
               })
             ) : (
               <tr>
-                <td colSpan="3" style={{padding: '20px', textAlign: 'center'}}>No active jobs found matching your search.</td>
+                <td colSpan="2" style={{padding: '20px', textAlign: 'center'}}>No active forms found.</td>
               </tr>
             )}
           </tbody>
         </table>
       </div>
-
-      {/* Mobile Card View (Hidden on Desktop via CSS ideally, or Rendered conditionally) */}
-      <div className="mobile-view-only" style={{display: 'none'}}> {/* CSS Media Query se handle karein ise */}
-         {/* ... Mobile view logic ... */}
-      </div>
-      
-      {/* Fallback Mobile View using simple divs if media queries are tricky */}
-      <div className="mobile-list">
-        {displayList.map((job) => {
-           const lastDate = job.importantDates?.find(d => d.label.toLowerCase().includes("last"))?.value || "Check Notice";
-           return (
-             <div key={job.id} style={{background: 'white', padding: '15px', marginBottom: '10px', borderRadius: '8px', boxShadow: '0 2px 5px rgba(0,0,0,0.1)', borderLeft: '5px solid #004080'}}>
-               <Link to={`/${job.slug}`} style={{textDecoration: 'none', color: 'inherit'}}>
-                 <h3 style={{fontSize: '16px', margin: '0 0 8px 0', color: '#004080'}}>{job.shortTitle || job.title}</h3>
-               </Link>
-               <div style={{fontSize: '14px', marginBottom: '5px'}}>
-                 <strong>Last Date:</strong> <span style={{color: '#d32f2f'}}>{lastDate}</span>
-               </div>
-               <div style={{textAlign: 'right'}}>
-                  <Link to={`/${job.slug}`} style={{textDecoration: 'none', color: '#007bff', fontWeight: 'bold', fontSize: '14px'}}>
-                    View Details →
-                  </Link>
-               </div>
-             </div>
-           )
-        })}
-      </div>
-
     </div>
   );
 };
