@@ -11,7 +11,7 @@ import CategoryPage from './CategoryPage';
 import ActiveJobs from './ActiveJobs';
 import SearchResults from './SearchResults';
 import StatePage from './StatePage'; 
-import WhatsAppPopup from './WhatsAppPopup'; // Ensure this is imported if you are using it
+import WhatsAppPopup from './WhatsAppPopup'; 
 
 // --- Navbar ---
 function Navbar() {
@@ -232,7 +232,9 @@ function Home() {
       <SEO title="Sarkari Result 2025" description="Latest Govt Jobs" keywords="Sarkari Result" url="https://toponlineform.com/" />
        
       <div className="action-cell"><a href="https://whatsapp.com/channel/0029Vb7TcG06LwHoTXhZKn2D" target="_blank" className="social-btn whatsapp full-width">Join WhatsApp Group</a></div>
-      <div className="action-cell"><a href="https://https://t.me/toponlineform" target="_blank" className="social-btn telegram full-width">Join Telegram Channel</a></div>
+      
+      {/* ✅ UPDATED TELEGRAM LINK (Corrected URL) */}
+      <div className="action-cell"><a href="https://t.me/toponlineform" target="_blank" className="social-btn telegram full-width">Join Telegram Channel</a></div>
       
       <div className="action-cell">
          <form className="grid-search-form" onSubmit={(e) => {
@@ -255,7 +257,6 @@ function Home() {
       <JobBox title="Answer Key" jobs={answerKeys} linkTo="/answer-key" />
       <JobBox title="Admission" jobs={admissions} linkTo="/admission" />
       <JobBox title="Previous Paper" jobs={previousPapers} linkTo="/previous-papers" />
-      {/* Syllabus moved to More menu, removed from home grid if desired, or keep as extra */}
     </div>
   );
 }
