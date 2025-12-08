@@ -17,8 +17,8 @@ export const latestJobs = [
 
     importantDates: [
       { label: "Notification Date", value: "05/12/2025" },
-      { label: "Walk-In Interview Date", value: "16/12/2025" },
-      { label: "Registration Time", value: "09:00 hrs to 11:30 hrs" }
+      { label: "Walk-In Interview Date/Last Date", value: "16/12/2025" },
+      { label: "Registration Time", value: "09:00 hrs to 11:30 hrs" },
     ],
 
     applicationFee: [
