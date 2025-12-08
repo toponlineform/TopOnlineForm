@@ -1989,7 +1989,7 @@ export const latestJobs = [
     vacancyTableTitle: "Post Wise Vacancy & Pay Scale",
     vacancyColumnName: "Post Name",
 
-    stateWiseVacancy: [
+    postAndCategoryWise: [
       { state: "Senior Technical Assistant-B (STA-B)", total: 561, ur: "TBD", ews: "TBD", obc: "TBD", sc: "TBD", st: "TBD" },
       { state: "Technician-A (Tech-A)", total: 203, ur: "TBD", ews: "TBD", obc: "TBD", sc: "TBD", st: "TBD" }
     ],
@@ -2196,7 +2196,7 @@ export const latestJobs = [
     vacancyTableTitle: "Force Wise Vacancy Details",
     vacancyColumnName: "Force Name",
 
-    stateWiseVacancy: [
+    stateWiseVacancye: [
       { Force: "BSF (Border Security Force)", total: 616, ur: 271, ews: 58, obc: 133, sc: 89, st: 65 },
       { Force: "CISF (Central Industrial Security Force)", total: 14595, ur: 6174, ews: 1471, obc: 3284, sc: 2123, st: 1543 },
       { Force: "CRPF (Central Reserve Police Force)", total: 5490, ur: 2589, ews: 606, obc: 1370, sc: 885, st: 40 },
