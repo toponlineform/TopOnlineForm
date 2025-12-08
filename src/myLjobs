@@ -1794,7 +1794,7 @@ export const latestJobs = [
     vacancyColumnName: "Post Name",
 
     stateWiseVacancy: [
-      { post name: "Dy. Judge Attorney General", total: 7, ur: 5, sc: 0, st: 1, obc: 1, ews: 0 }
+      { state: "Dy. Judge Attorney General", total: 7, ur: 5, sc: 0, st: 1, obc: 1, ews: 0 }
     ],
     // Ab ye table Post Name dikhayega aur aage category ka breakup.
 
@@ -1893,15 +1893,15 @@ export const latestJobs = [
     vacancyColumnName: "Post Name",
 
     stateWiseVacancy: [
-      { postName: "Assistant Secretary (Admin)", total: 18, ur: 11, ews: 1, obc: 4, sc: 1, st: 1 },
-      { postName: "Asst. Professor (Academics)", total: 16, ur: 8, ews: 1, obc: 4, sc: 2, st: 1 },
-      { postName: "Asst. Professor (Training)", total: 8, ur: 5, ews: 0, obc: 2, sc: 1, st: 0 },
-      { postName: "Asst. Professor (Skill Edu)", total: 7, ur: 5, ews: 0, obc: 1, sc: 1, st: 0 },
-      { postName: "Accounts Officer", total: 2, ur: 2, ews: 0, obc: 0, sc: 0, st: 0 },
-      { postName: "Superintendent", total: 27, ur: 12, ews: 2, obc: 7, sc: 4, st: 2 },
-      { postName: "Junior Translation Officer", total: 9, ur: 5, ews: 0, obc: 2, sc: 1, st: 1 },
-      { postName: "Junior Accountant", total: 16, ur: 7, ews: 1, obc: 4, sc: 3, st: 1 },
-      { postName: "Junior Assistant", total: 35, ur: 14, ews: 3, obc: 10, sc: 5, st: 3 }
+      { state: "Assistant Secretary (Admin)", total: 18, ur: 11, ews: 1, obc: 4, sc: 1, st: 1 },
+      { state: "Asst. Professor (Academics)", total: 16, ur: 8, ews: 1, obc: 4, sc: 2, st: 1 },
+      { state: "Asst. Professor (Training)", total: 8, ur: 5, ews: 0, obc: 2, sc: 1, st: 0 },
+      { state: "Asst. Professor (Skill Edu)", total: 7, ur: 5, ews: 0, obc: 1, sc: 1, st: 0 },
+      { state: "Accounts Officer", total: 2, ur: 2, ews: 0, obc: 0, sc: 0, st: 0 },
+      { state: "Superintendent", total: 27, ur: 12, ews: 2, obc: 7, sc: 4, st: 2 },
+      { state: "Junior Translation Officer", total: 9, ur: 5, ews: 0, obc: 2, sc: 1, st: 1 },
+      { state: "Junior Accountant", total: 16, ur: 7, ews: 1, obc: 4, sc: 3, st: 1 },
+      { state: "Junior Assistant", total: 35, ur: 14, ews: 3, obc: 10, sc: 5, st: 3 }
     ],
 
     salaryDetails: [
@@ -1989,9 +1989,9 @@ export const latestJobs = [
     vacancyTableTitle: "Post Wise Vacancy & Pay Scale",
     vacancyColumnName: "Post Name",
 
-    postAndCategoryWise: [
-      { postName: "Senior Technical Assistant-B (STA-B)", total: 561, ur: "TBD", ews: "TBD", obc: "TBD", sc: "TBD", st: "TBD" },
-      { postName: "Technician-A (Tech-A)", total: 203, ur: "TBD", ews: "TBD", obc: "TBD", sc: "TBD", st: "TBD" }
+    stateWiseVacancy: [
+      { state: "Senior Technical Assistant-B (STA-B)", total: 561, ur: "TBD", ews: "TBD", obc: "TBD", sc: "TBD", st: "TBD" },
+      { state: "Technician-A (Tech-A)", total: 203, ur: "TBD", ews: "TBD", obc: "TBD", sc: "TBD", st: "TBD" }
     ],
     // Note: Detailed category wise breakup will be updated after full notification.
 
@@ -2084,9 +2084,9 @@ export const latestJobs = [
     vacancyColumnName: "Post Name",
     
     stateWiseVacancy: [
-      { postName: "VP Wealth (SRM)", total: 506, ur: 188, ews: 46, obc: 119, sc: 77, st: 34 },
-      { postName: "AVP Wealth (RM)", total: 206, ur: 82, ews: 20, obc: 52, sc: 33, st: 15 },
-      { postName: "Customer Relationship Executive", total: 284, ur: 115, ews: 28, obc: 73, sc: 47, st: 21 }
+      { state: "VP Wealth (SRM)", total: 506, ur: 188, ews: 46, obc: 119, sc: 77, st: 34 },
+      { state: "AVP Wealth (RM)", total: 206, ur: 82, ews: 20, obc: 52, sc: 33, st: 15 },
+      { state: "Customer Relationship Executive", total: 284, ur: 115, ews: 28, obc: 73, sc: 47, st: 21 }
     ],
 
     salaryDetails: [
@@ -2196,7 +2196,7 @@ export const latestJobs = [
     vacancyTableTitle: "Force Wise Vacancy Details",
     vacancyColumnName: "Force Name",
 
-    stateWiseVacancye: [
+    stateWiseVacancy: [
       { Force: "BSF (Border Security Force)", total: 616, ur: 271, ews: 58, obc: 133, sc: 89, st: 65 },
       { Force: "CISF (Central Industrial Security Force)", total: 14595, ur: 6174, ews: 1471, obc: 3284, sc: 2123, st: 1543 },
       { Force: "CRPF (Central Reserve Police Force)", total: 5490, ur: 2589, ews: 606, obc: 1370, sc: 885, st: 40 },
