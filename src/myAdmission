@@ -1,0 +1,44 @@
+export const admissionData = [
+  // --- 6001. Sample Admission Post ---
+  {
+    id: 6001,
+    slug: "ignou-bed-entrance-exam-2025",
+    shortTitle: "IGNOU B.Ed Admission 2025",
+    title: "IGNOU B.Ed Entrance Exam 2025 Apply Online for January Session",
+    shortInfo: "Indira Gandhi National Open University (IGNOU) has invited online applications for the B.Ed Entrance Test for the January 2025 Session. Candidates can apply online.",
+    postDate: "08/12/2025",
+    category: "Admission", // ✅ Category 'Admission' hona zaroori hai
+
+    salary: "N/A", 
+
+    importantDates: [
+      { label: "Application Start", value: "12/12/2025" },
+      { label: "Last Date", value: "03/01/2026" },
+      { label: "Exam Date", value: "January 2026" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC", amount: "₹1000/-" },
+      { category: "SC / ST", amount: "₹1000/-" }
+    ],
+
+    ageLimit: "No Age Limit",
+
+    vacancyDetails: [
+      { postName: "Bachelor of Education (B.Ed)", totalPost: "Seats Vary", eligibility: "Bachelor's Degree (50%) + Trained Teacher" }
+    ],
+    
+    vacancyTableTitle: "Course Details",
+    vacancyColumnName: "Course Name",
+
+    selectionProcess: [
+      "Entrance Examination",
+      "Merit List / Counselling"
+    ],
+
+    links: [
+      { title: "Apply Online", url: "http://www.ignou.ac.in/" },
+      { title: "Official Website", url: "http://www.ignou.ac.in/" }
+    ]
+  }
+];
