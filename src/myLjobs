@@ -2,7 +2,7 @@ export const latestJobs = [
   // ==================================================
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
- export const latestJobs = [
+ 
   {
     id: 29,
     slug: "ecil-recruitment-2025-walk-in-interview",
