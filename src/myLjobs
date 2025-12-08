@@ -3,6 +3,7 @@ export const latestJobs = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
  
+  // --- 29. ECIL Recruitment 2025 (Updated) ---
   {
     id: 29,
     slug: "ecil-recruitment-2025-walk-in-interview",
@@ -25,19 +26,19 @@ export const latestJobs = [
       { category: "Note", amount: "There is no application fee mentioned in the notification." }
     ],
 
-    [cite_start]ageLimit: "As on Date of Selection [cite: 695]",
+    ageLimit: "As on Date of Selection",
     ageRelaxation: [
-        [cite_start]"UR Limit: 33 Years for Project Engineer (PE-C) [cite: 643]",
-        "UR Limit: 30 Years for Technical Officer (TO-C) & Asst. [cite_start]Project Engineer (APE-C) [cite: 643]",
-        [cite_start]"OBC Relaxation: 3 Years [cite: 650]",
-        [cite_start]"SC/ST Relaxation: 5 Years [cite: 650]",
-        [cite_start]"PwBD Relaxation: 10 Years extra [cite: 651]"
+        "UR Limit: 33 Years for Project Engineer (PE-C)",
+        "UR Limit: 30 Years for Technical Officer (TO-C) & Asst. Project Engineer (APE-C)",
+        "OBC Relaxation: 3 Years",
+        "SC/ST Relaxation: 5 Years",
+        "PwBD Relaxation: 10 Years extra"
     ],
 
     vacancyDetails: [
-      [cite_start]{ postName: "Project Engineer on Contract (PE-C)", totalPost: "Various", eligibility: "B.E./B.Tech (60%) + 3 Years Post Qualification Experience [cite: 643]" },
-      [cite_start]{ postName: "Technical Officer on Contract (TO-C)", totalPost: "Various", eligibility: "B.E./B.Tech (60%) + 1 Year Post Qualification Experience [cite: 643]" },
-      [cite_start]{ postName: "Assistant Project Engineer on Contract (APE-C)", totalPost: "Various", eligibility: "Diploma (60%) + 1 Year Post Qualification Experience [cite: 643]" }
+      { postName: "Project Engineer on Contract (PE-C)", totalPost: "Various", eligibility: "B.E./B.Tech (60%) + 3 Years Post Qualification Experience" },
+      { postName: "Technical Officer on Contract (TO-C)", totalPost: "Various", eligibility: "B.E./B.Tech (60%) + 1 Year Post Qualification Experience" },
+      { postName: "Assistant Project Engineer on Contract (APE-C)", totalPost: "Various", eligibility: "Diploma (60%) + 1 Year Post Qualification Experience" }
     ],
 
     vacancyTableTitle: "Zone-Wise & Post-Wise Vacancy Details",
@@ -71,46 +72,46 @@ export const latestJobs = [
     ],
 
     salaryDetails: [
-      { post: "Project Engineer (PE-C)", level: "Year 1: ₹40,000 | Year 2: ₹45,000 | Year 3: ₹50,000 | [cite_start]Year 4: ₹55,000 [cite: 643]" },
-      { post: "Technical Officer (TO-C)", level: "Year 1: ₹25,000 | Year 2: ₹28,000 | [cite_start]Year 3 & 4: ₹31,000 [cite: 643]" },
-      { post: "Asst. [cite_start]Project Engineer (APE-C)", level: "₹25,506/month (Revised every 6 months) [cite: 643]" }
+      { post: "Project Engineer (PE-C)", level: "Year 1: ₹40,000 | Year 2: ₹45,000 | Year 3: ₹50,000 | Year 4: ₹55,000" },
+      { post: "Technical Officer (TO-C)", level: "Year 1: ₹25,000 | Year 2: ₹28,000 | Year 3 & 4: ₹31,000" },
+      { post: "Asst. Project Engineer (APE-C)", level: "₹25,506/month (Revised every 6 months)" }
     ],
 
     selectionProcess: [
-      [cite_start]"Registration and Document Verification at the Venue [cite: 688]",
-      [cite_start]"Personal Interview [cite: 689]",
-      [cite_start]"Final Merit calculated as: Qualification (20%) + Experience (30%) + Interview (50%) [cite: 691]"
+      "Registration and Document Verification at the Venue",
+      "Personal Interview",
+      "Final Merit calculated as: Qualification (20%) + Experience (30%) + Interview (50%)"
     ],
 
     extraSections: [
       {
         title: "Walk-In Interview Venues (Date: 16/12/2025)",
         list: [
-          [cite_start]"North Zone (New Delhi): ECIL Zonal Office, # D-15, DDA Local Shopping Complex, A-Block, Ring Road, Naraina, New Delhi-110028[cite: 680, 685].",
-          [cite_start]"East Zone (Kolkata): ECIL Zonal Office, Apeejay House, 4th floor, 15-Park Street, Kolkata 700016[cite: 678, 683].",
-          [cite_start]"West Zone (Mumbai): ECIL Zonal Office, # 1207, Veer Savarkar Marg, Dadar (Prabhadevi), Mumbai - 400 028[cite: 679, 684].",
-          [cite_start]"South Zone (Chennai): ECIL Zonal Office, Economist House, Post-Box No. 3148, S-15, Industrial Estate, Guindy, Chennai-600032[cite: 681, 686]."
+          "North Zone (New Delhi): ECIL Zonal Office, # D-15, DDA Local Shopping Complex, A-Block, Ring Road, Naraina, New Delhi-110028.",
+          "East Zone (Kolkata): ECIL Zonal Office, Apeejay House, 4th floor, 15-Park Street, Kolkata 700016.",
+          "West Zone (Mumbai): ECIL Zonal Office, # 1207, Veer Savarkar Marg, Dadar (Prabhadevi), Mumbai - 400 028.",
+          "South Zone (Chennai): ECIL Zonal Office, Economist House, Post-Box No. 3148, S-15, Industrial Estate, Guindy, Chennai-600032."
         ]
       },
       {
         title: "Documents Required (Original + Self Attested Copies)",
         list: [
-          [cite_start]"Duly filled Application Form & Resume[cite: 654].",
-          [cite_start]"10th Class certificate (DOB Proof)[cite: 655].",
-          [cite_start]"Qualification Documents (Certificates & Mark sheets)[cite: 657].",
-          [cite_start]"CGPA to percentage conversion certificate (if applicable)[cite: 658].",
-          [cite_start]"Experience certificates (Appointment Order & Recent Pay Slips if currently employed)[cite: 659, 660].",
-          [cite_start]"Category Certificate (EWS/OBC/SC/ST/PwD) if applicable[cite: 662, 666].",
-          "Govt. [cite_start]Issued Identity Proof (Aadhar/Passport)[cite: 665]."
+          "Duly filled Application Form & Resume.",
+          "10th Class certificate (DOB Proof).",
+          "Qualification Documents (Certificates & Mark sheets).",
+          "CGPA to percentage conversion certificate (if applicable).",
+          "Experience certificates (Appointment Order & Recent Pay Slips if currently employed).",
+          "Category Certificate (EWS/OBC/SC/ST/PwD) if applicable.",
+          "Govt. Issued Identity Proof (Aadhar/Passport)."
         ]
       }
     ],
 
     howToApply: [
-      [cite_start]"Download the Application Form from the official website www.ecil.co.in[cite: 654].",
+      "Download the Application Form from the official website www.ecil.co.in.",
       "Fill the application form and attach a resume.",
       "Gather all original certificates and one set of self-attested photocopies.",
-      [cite_start]"Report to the respective Zonal Office venue on 16/12/2025 between 09:00 hrs to 11:30 hrs[cite: 702].",
+      "Report to the respective Zonal Office venue on 16/12/2025 between 09:00 hrs to 11:30 hrs.",
       "Complete the registration and document verification process to appear for the interview."
     ],
 
@@ -121,11 +122,11 @@ export const latestJobs = [
     ],
 
     faqs: [
-      [cite_start]{ question: "What is the interview date for ECIL Recruitment 2025?", answer: "The Walk-In Interview is scheduled for 16th December 2025 for all zones[cite: 678, 679, 680, 681]." },
-      [cite_start]{ question: "What is the age limit for Project Engineer in ECIL?", answer: "The upper age limit for Project Engineer (PE-C) is 33 years for UR candidates[cite: 643]." },
+      { question: "What is the interview date for ECIL Recruitment 2025?", answer: "The Walk-In Interview is scheduled for 16th December 2025 for all zones." },
+      { question: "What is the age limit for Project Engineer in ECIL?", answer: "The upper age limit for Project Engineer (PE-C) is 33 years for UR candidates." },
       { question: "Is there any application fee?", answer: "No, there is no application fee mentioned in the notification." },
-      [cite_start]{ question: "What is the contract duration?", answer: "The initial contract is for one year, extendable up to 4 years based on project requirements and performance[cite: 624]." },
-      { question: "Can I apply for multiple posts?", answer: "No, a candidate should apply for one category of post only. [cite_start]Applying to multiple posts is not allowed[cite: 697]." }
+      { question: "What is the contract duration?", answer: "The initial contract is for one year, extendable up to 4 years based on project requirements and performance." },
+      { question: "Can I apply for multiple posts?", answer: "No, a candidate should apply for one category of post only. Applying to multiple posts is not allowed." }
     ]
   },
 // --- 28. HPRCA Assistant Staff Nurse Recruitment 2025 ---
