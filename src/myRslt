@@ -21,7 +21,7 @@ export const results = [
     applicationFee: [],
 
     vacancyDetails: [
-      { postName: "Senior Assistant cum Inspector (Group B)", totalPost: 62, eligibility: "Graduation + Punjabi & English Typing Qualified" }
+      { postName: "Senior Assistant cum Inspector (Group B)", totalPost: 346, eligibility: "Graduation + Punjabi & English Typing Qualified" }
     ],
 
     extraSections: [
