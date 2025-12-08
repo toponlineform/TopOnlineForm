@@ -2,7 +2,64 @@ export const results = [
   // ==================================================
   //              RESULTS (ID 3001 - 4000)
   // ==================================================
-  
+  // --- 3024. PSSSB Senior Assistant cum Inspector Typing Test Result 2025 ---
+  {
+    id: 3024,
+    slug: "psssb-senior-assistant-cum-inspector-typing-test-result-2025",
+    shortTitle: "PSSSB Senior Assistant Result 2025",
+    title: "PSSSB Senior Assistant cum Inspector Typing Test Result 2025 OUT (Direct PDF) - Download Merit List @sssb.punjab.gov.in",
+    shortInfo: "Punjab Subordinate Service Selection Board (PSSSB) has officially released the Typing Test Result for the post of Senior Assistant cum Inspector (Group B) under Advt No. 04/2024. Candidates who appeared for the Typing Skill Test held from 30th November to 2nd December 2025 can now check their qualifying status and download the Merit List PDF directly from the link below.",
+    postDate: "08/12/2025",
+    category: "Result",
+
+    importantDates: [
+      { label: "Typing Test Date", value: "30 Nov to 02 Dec 2025" },
+      { label: "Typing Test Result Released", value: "08/12/2025" },
+      { label: "Counseling Date", value: "To be notified soon" }
+    ],
+
+    applicationFee: [],
+
+    vacancyDetails: [
+      { postName: "Senior Assistant cum Inspector (Group B)", totalPost: 62, eligibility: "Graduation + Punjabi & English Typing Qualified" }
+    ],
+
+    extraSections: [
+      {
+        title: "How to Check PSSSB Senior Assistant Result 2025?",
+        list: [
+          "Visit the official website of PSSSB: sssb.punjab.gov.in.",
+          "Go to the 'Results' tab on the homepage.",
+          "Click on the link 'Result of Typing Test for the post of Senior Assistant cum Inspector (Advt No. 04/2024)'.",
+          "A PDF file will open displaying the list of qualified candidates.",
+          "Search for your Roll Number or Name in the PDF using Ctrl+F.",
+          "Download and save the PDF for future reference."
+        ]
+      },
+      {
+        title: "Selection Process Next Stage",
+        text: "Candidates who have qualified the Typing Test will now be called for **Document Verification (Counseling)**. The schedule for counseling will be released separately on the official website."
+      }
+    ],
+
+    howToApply: [
+      "Click on the 'Download Typing Test Result' link below.",
+      "Check your Roll Number in the Merit List.",
+      "If shortlisted, keep your original documents ready for the Counseling round."
+    ],
+
+    links: [
+      { title: "Download Typing Test Result (PDF)", url: "https://sssb.punjab.gov.in/wp-content/uploads/2025/12/Notice-for-Type-Test-FINAL.pdf" },
+      { title: "Official Website", url: "https://sssb.punjab.gov.in/" }
+    ],
+
+    faqs: [
+      { question: "Is the PSSSB Senior Assistant Typing Result 2025 declared?", answer: "Yes, the result for the typing test held in Nov-Dec 2025 has been released." },
+      { question: "How many vacancies are there for Senior Assistant cum Inspector?", answer: "There are a total of 62 vacancies under Advt No. 04/2024." },
+      { question: "What is the official website to check the result?", answer: "The official website is sssb.punjab.gov.in." },
+      { question: "What is the next step after qualifying the typing test?", answer: "Qualified candidates will be called for Document Verification." }
+    ]
+  },
   // --- 3023. DRDO ITR Apprentice Result (ID 3023) ---
   {
     id: 3023,
