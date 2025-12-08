@@ -29,20 +29,7 @@ export const admitCards = [
 
     // ✅ NEW: Region Wise Admit Card Links Table
     extraSections: [
-      {
-        title: "SSC CPO Admit Card 2025 & Application Status (Region Wise Links)",
-        tableData: [
-          { "Region Name": "Northern Region (NR)", "States Covered": "Delhi, Rajasthan, Uttarakhand", "Link": "Available Soon", "Official Website": "sscnr.nic.in" },
-          { "Region Name": "Central Region (CR)", "States Covered": "Uttar Pradesh, Bihar", "Link": "Available Soon", "Official Website": "ssc-cr.org" },
-          { "Region Name": "Eastern Region (ER)", "States Covered": "West Bengal, Odisha, Jharkhand, Sikkim, A&N Islands", "Link": "Available Soon", "Official Website": "sscer.org" },
-          { "Region Name": "Western Region (WR)", "States Covered": "Maharashtra, Gujarat, Goa, Daman & Diu", "Link": "Available Soon", "Official Website": "sscwr.net" },
-          { "Region Name": "Southern Region (SR)", "States Covered": "Andhra Pradesh, Telangana, Tamil Nadu, Puducherry", "Link": "Available Soon", "Official Website": "sscsr.gov.in" },
-          { "Region Name": "North Western (NWR)", "States Covered": "Haryana, Punjab, J&K, Himachal Pradesh, Chandigarh", "Link": "Available Soon", "Official Website": "sscnwr.org" },
-          { "Region Name": "Karnataka Kerala (KKR)", "States Covered": "Karnataka, Kerala, Lakshadweep", "Link": "Available Soon", "Official Website": "ssckkr.kar.nic.in" },
-          { "Region Name": "North Eastern (NER)", "States Covered": "Assam, Arunachal, Meghalaya, Manipur, Tripura, Mizoram, Nagaland", "Link": "Available Soon", "Official Website": "sscner.org.in" },
-          { "Region Name": "Madhya Pradesh (MPR)", "States Covered": "Madhya Pradesh, Chhattisgarh", "Link": "Available Soon", "Official Website": "sscmpr.org" }
-        ]
-      },
+     
       {
         title: "Documents Required at Exam Centre",
         text: "Candidates must carry the following documents to the examination center, otherwise entry will not be allowed[cite: 384]:\n\n1. **Printout of Admission Certificate** (Admit Card).\n2. **Two recent passport size color photographs**.\n3. **Original valid Photo-ID proof** having the Date of Birth as printed on the Admit Card (e.g., Aadhaar Card, Voter ID, Driving License, PAN Card, Passport, etc.).\n\n**Note:** If the Photo ID does not have the Date of Birth printed on it, the candidate must carry an additional original document (e.g., 10th Marksheet/Certificate) as proof of DOB[cite: 402]."
