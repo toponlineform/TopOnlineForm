@@ -3,7 +3,95 @@ export const admitCards = [
   //                ADMIT CARDS (ID 1001 - 2000)
   // ==================================================
   
-  // --- 1016. SSC CHTE Paper-II (Latest) ---
+  // --- SSC CPO Admit Card 2025 ---
+  {
+    id: 1017, // Unique ID for Admit Card Post
+    slug: "ssc-cpo-admit-card-2025-hall-ticket-download",
+    shortTitle: "SSC CPO Admit Card 2025 (Paper 1)",
+    title: "SSC CPO Admit Card 2025: Tier 1 Application Status & Hall Ticket Download Link (All Regions)",
+    shortInfo: "Staff Selection Commission (SSC) is going to conduct the Sub-Inspector in Delhi Police and CAPFs Examination, 2025 in the months of November-December 2025. The Application Status and Admit Cards for Paper-I will be released region-wise (NR, CR, ER, WR, SR, KKR, MPR, NER, NWR) about 10 days before the exam. Candidates can download their Hall Ticket using the direct links provided below.",
+    category: "Admit Card", // Changed Category to Admit Card
+
+    salary: "₹35,400 - ₹1,12,400 (Level-6)",
+
+    importantDates: [
+      { label: "Notification Released", value: "26/09/2025" },
+      { label: "Exam Date (Paper-I)", value: "November - December, 2025" }, // 
+      { label: "Application Status Release", value: "10 Days before Exam (Tentative)" }, // [cite: 376]
+      { label: "Admit Card Download", value: "3-4 Days before Exam Date" } // [cite: 381]
+    ],
+
+    applicationFee: [
+      { category: "Note", amount: "No Fee is required for downloading the Admit Card." }
+    ],
+
+    ageLimit: "20-25 Years (As on 01.08.2025)",
+
+    // ✅ NEW: Region Wise Admit Card Links Table
+    extraSections: [
+      {
+        title: "SSC CPO Admit Card 2025 & Application Status (Region Wise Links)",
+        tableData: [
+          { "Region Name": "Northern Region (NR)", "States Covered": "Delhi, Rajasthan, Uttarakhand", "Link": "Available Soon", "Official Website": "sscnr.nic.in" },
+          { "Region Name": "Central Region (CR)", "States Covered": "Uttar Pradesh, Bihar", "Link": "Available Soon", "Official Website": "ssc-cr.org" },
+          { "Region Name": "Eastern Region (ER)", "States Covered": "West Bengal, Odisha, Jharkhand, Sikkim, A&N Islands", "Link": "Available Soon", "Official Website": "sscer.org" },
+          { "Region Name": "Western Region (WR)", "States Covered": "Maharashtra, Gujarat, Goa, Daman & Diu", "Link": "Available Soon", "Official Website": "sscwr.net" },
+          { "Region Name": "Southern Region (SR)", "States Covered": "Andhra Pradesh, Telangana, Tamil Nadu, Puducherry", "Link": "Available Soon", "Official Website": "sscsr.gov.in" },
+          { "Region Name": "North Western (NWR)", "States Covered": "Haryana, Punjab, J&K, Himachal Pradesh, Chandigarh", "Link": "Available Soon", "Official Website": "sscnwr.org" },
+          { "Region Name": "Karnataka Kerala (KKR)", "States Covered": "Karnataka, Kerala, Lakshadweep", "Link": "Available Soon", "Official Website": "ssckkr.kar.nic.in" },
+          { "Region Name": "North Eastern (NER)", "States Covered": "Assam, Arunachal, Meghalaya, Manipur, Tripura, Mizoram, Nagaland", "Link": "Available Soon", "Official Website": "sscner.org.in" },
+          { "Region Name": "Madhya Pradesh (MPR)", "States Covered": "Madhya Pradesh, Chhattisgarh", "Link": "Available Soon", "Official Website": "sscmpr.org" }
+        ]
+      },
+      {
+        title: "Documents Required at Exam Centre",
+        text: "Candidates must carry the following documents to the examination center, otherwise entry will not be allowed[cite: 384]:\n\n1. **Printout of Admission Certificate** (Admit Card).\n2. **Two recent passport size color photographs**.\n3. **Original valid Photo-ID proof** having the Date of Birth as printed on the Admit Card (e.g., Aadhaar Card, Voter ID, Driving License, PAN Card, Passport, etc.).\n\n**Note:** If the Photo ID does not have the Date of Birth printed on it, the candidate must carry an additional original document (e.g., 10th Marksheet/Certificate) as proof of DOB[cite: 402]."
+      }
+    ],
+
+    // ✅ Exam Pattern Table (Paper-I)
+    examPattern: {
+      details: [
+        "Mode of Exam: Computer Based Test (CBT)",
+        "Question Type: Objective Multiple Choice",
+        "Negative Marking: 0.25 marks for each wrong answer [cite: 248]",
+        "Language: Hindi & English (except for English Comprehension part) [cite: 247]"
+      ],
+      table: [
+        { subject: "General Intelligence and Reasoning", questions: "50", marks: "50" },
+        { subject: "General Knowledge and General Awareness", questions: "50", marks: "50" },
+        { subject: "Quantitative Aptitude", questions: "50", marks: "50" },
+        { subject: "English Comprehension", questions: "50", marks: "50" },
+        { subject: "Total", questions: "200", marks: "200" } // Duration: 2 Hours [cite: 243]
+      ]
+    },
+
+    howToApply: [
+      "Step 1: Click on the specific Region Link (NR, CR, ER, etc.) in the table above.",
+      "Step 2: You will be redirected to the official regional website.",
+      "Step 3: Look for the link 'Status/Download Admit Card for Sub-Inspector in Delhi Police and CAPFs Exam, 2025'.",
+      "Step 4: Enter your Registration ID and Date of Birth (or Name and Date of Birth).",
+      "Step 5: Click on 'Search' to view your Application Status/City Intimation.",
+      "Step 6: The actual Admit Card will be available for download 3-4 days before your exam date.",
+      "Step 7: Download and take a printout of the Hall Ticket."
+    ],
+
+    links: [
+      { title: "Download Admit Card (Direct Link)", url: "https://ssc.gov.in/login" },
+      { title: "Check Application Status (All Regions)", url: "https://ssc.gov.in/" },
+      { title: "Download Notification PDF", url: "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_capf_2025.pdf" }, // You can replace this with your Telegram Link
+      { title: "Official Website", url: "https://ssc.gov.in/" }
+    ],
+
+    faqs: [
+      { question: "When will SSC CPO 2025 Admit Card be released?", answer: "The application status is usually released 10-15 days before the exam, and the final Admit Card is available to download 4 days before the exam date." },
+      { question: "What is the SSC CPO 2025 Exam Date?", answer: "The Paper-I examination is scheduled to be held in November-December 2025." },
+      { question: "Is there negative marking in SSC CPO Paper 1?", answer: "Yes, there is a negative marking of 0.25 marks for each wrong answer in Paper-I & Paper-II[cite: 248]." },
+      { question: "What to do if I forgot my Registration Number?", answer: "You can regenerate your Registration ID by clicking on the 'Forgot Registration ID' link on the SSC regional website and entering your Name, Father's Name, and Date of Birth." },
+      { question: "Is Aadhaar Card mandatory for the exam?", answer: "While Aadhaar is preferred, you can carry any original valid Photo ID proof like Voter ID, Driving License, PAN Card, or Passport [cite: 384-393]." }
+    ]
+  },
+// --- 1016. SSC CHTE Paper-II (Latest) ---
   {
     id: 1016,
     slug: "ssc-chte-paper-ii-exam-city-2025",
