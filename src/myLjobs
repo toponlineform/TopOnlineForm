@@ -1198,9 +1198,9 @@ export const latestJobs = [
     vacancyColumnName: "Post Name",
     
     stateWiseVacancy: [
-      { "Post Name": "Assistant Manager (HR&A)", total: 20, ur: 8, sc: 5, st: 1, "obc-a": 2, "obc-b": 2, ews: 2 },
-      { "Post Name": "Assistant Manager (F&A)", total: 26, ur: 11, sc: 5, st: 2, "obc-a": 3, "obc-b": 2, ews: 3 },
-      { "Post Name": "Junior Engineer (Electrical)", total: 401, ur: 178, sc: 88, st: 25, "obc-a": 41, "obc-b": 28, ews: 41 }
+      { state: "Assistant Manager (HR&A)", total: 20, ur: 8, sc: 5, st: 1, "obc-a": 2, "obc-b": 2, ews: 2 },
+      { state: "Assistant Manager (F&A)", total: 26, ur: 11, sc: 5, st: 2, "obc-a": 3, "obc-b": 2, ews: 3 },
+      { state: "Junior Engineer (Electrical)", total: 401, ur: 178, sc: 88, st: 25, "obc-a": 41, "obc-b": 28, ews: 41 }
     ],
 
     salaryDetails: [
@@ -1794,7 +1794,7 @@ export const latestJobs = [
     vacancyColumnName: "Post Name",
 
     stateWiseVacancy: [
-      { Post Name: "Dy. Judge Attorney General", total: 7, ur: 5, sc: 0, st: 1, obc: 1, ews: 0 }
+      { state: "Dy. Judge Attorney General", total: 7, ur: 5, sc: 0, st: 1, obc: 1, ews: 0 }
     ],
     // Ab ye table Post Name dikhayega aur aage category ka breakup.
 
