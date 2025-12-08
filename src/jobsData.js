@@ -4,7 +4,7 @@ import { admitCards } from './myAcards';
 import { results } from './myRslt';
 import { syllabusData } from './mySyl';
 import { previousPapers } from './myPreviouspapers';
-import { admissionData } from './admissionData';
+import { admissionData } from './myAdmission';
 
 
   
