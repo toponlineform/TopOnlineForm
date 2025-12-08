@@ -36,9 +36,9 @@ export const latestJobs = [
     ],
 
     vacancyDetails: [
-      { postName: "Project Engineer on Contract (PE-C)", totalPost: "Various", eligibility: "B.E./B.Tech (60%) + 3 Years Post Qualification Experience" },
-      { postName: "Technical Officer on Contract (TO-C)", totalPost: "Various", eligibility: "B.E./B.Tech (60%) + 1 Year Post Qualification Experience" },
-      { postName: "Assistant Project Engineer on Contract (APE-C)", totalPost: "Various", eligibility: "Diploma (60%) + 1 Year Post Qualification Experience" }
+      { postName: "Project Engineer on Contract (PE-C)", totalPost: "15", eligibility: "B.E./B.Tech (60%) + 3 Years Post Qualification Experience" },
+      { postName: "Technical Officer on Contract (TO-C)", totalPost: "6", eligibility: "B.E./B.Tech (60%) + 1 Year Post Qualification Experience" },
+      { postName: "Assistant Project Engineer on Contract (APE-C)", totalPost: "3", eligibility: "Diploma (60%) + 1 Year Post Qualification Experience" }
     ],
 
     vacancyTableTitle: "Zone-Wise & Post-Wise Vacancy Details",
