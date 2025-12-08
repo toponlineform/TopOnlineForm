@@ -49,7 +49,6 @@ export const admitCards = [
         { subject: "General Knowledge and General Awareness", questions: "50", marks: "50" },
         { subject: "Quantitative Aptitude", questions: "50", marks: "50" },
         { subject: "English Comprehension", questions: "50", marks: "50" },
-        { subject: "Total", questions: "200", marks: "200" } // Duration: 2 Hours [cite: 243]
       ]
     },
 
