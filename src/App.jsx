@@ -233,7 +233,7 @@ function Home() {
        
       <div className="action-cell"><a href="https://whatsapp.com/channel/0029Vb7TcG06LwHoTXhZKn2D" target="_blank" className="social-btn whatsapp full-width">Join WhatsApp Group</a></div>
       
-      {/* ✅ UPDATED TELEGRAM LINK (Corrected URL) */}
+      {/* ✅ UPDATED TELEGRAM LINK (Fixed the double https://) */}
       <div className="action-cell"><a href="https://t.me/toponlineform" target="_blank" className="social-btn telegram full-width">Join Telegram Channel</a></div>
       
       <div className="action-cell">
@@ -488,7 +488,8 @@ function JobDetails() {
         {job.ageRelaxation && (<div style={{marginTop: '15px', padding: '0 10px'}}><strong>Age Relaxation:</strong><ul style={{listStyleType: 'disc', marginLeft: '30px', marginTop: '5px'}}>{job.ageRelaxation.map((item, index) => <li key={index} style={{marginBottom: '5px'}}>{item}</li>)}</ul></div>)}</>
       )}
 
-      {job.vacancyDetails.length > 0 && <RenderTable data={job.vacancyDetails} title="Vacancy Details" />}
+      {/* ✅ CRASH PROOF CHECK ADDED HERE */}
+      {job.vacancyDetails && job.vacancyDetails.length > 0 && <RenderTable data={job.vacancyDetails} title="Vacancy Details" />}
        
       {(job.stateWiseVacancy || job.zoneWiseGraduate || job.zoneWiseUG) && (
           <>
