@@ -1,5 +1,5 @@
 export const admissionData = [
-  export const admissionData = [
+ 
   // --- 6001. NVS Class 6th Admission 2026-27 ---
   {
     id: 6001,
@@ -97,5 +97,4 @@ export const admissionData = [
       { question: "Can a student appear for JNVST for a second time?", answer: "No, a candidate is eligible to appear for the selection test only once[cite: 2106]." }
     ]
   }
-];
 ];
