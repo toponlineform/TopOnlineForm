@@ -13,15 +13,15 @@ export const admissionData = [
 
     importantDates: [
       { label: "Application Start", value: "Started" },
-      { label: "Last Date for Apply", value: "13/08/2025 [cite: 1958]" },
+      { label: "Last Date for Apply", value: "13/08/2025" },
       { label: "Exam Date (Phase-I)", value: "13/12/2025 (Most States) " },
       { label: "Exam Date (Phase-II)", value: "11/04/2026 (Winter Bound) " },
       { label: "Admit Card", value: "To be notified" },
-      { label: "Result Declaration", value: "March/May 2026 [cite: 2038]" }
+      { label: "Result Declaration", value: "March/May 2026" }
     ],
 
     applicationFee: [
-      { category: "All Candidates", amount: "₹0/- (Free of Cost) [cite: 2000]" }
+      { category: "All Candidates", amount: "₹0/- (Free of Cost)" }
     ],
 
     ageLimit: "Candidate must be born between 01-05-2014 and 31-07-2016 (Both dates inclusive).",
@@ -30,7 +30,7 @@ export const admissionData = [
       { 
         examName: "Admission to Class VI (JNVST 2026)", 
         totalSchool: "654+ Schools", 
-        eligibility: "Candidate must be a Bonafide Resident of the District where JNV is located. Currently studying in Class-V in the same district in a Govt/Govt Aided/Recognized School[cite: 2075, 2094]." 
+        eligibility: "Candidate must be a Bonafide Resident of the District where JNV is located. Currently studying in Class-V in the same district in a Govt/Govt Aided/Recognized School." 
       }
     ],
 
@@ -41,10 +41,10 @@ export const admissionData = [
     examPattern: {
       details: [
         "Mode: OMR Based Pen & Paper Test",
-        "Exam Duration: 2 Hours (11:30 AM to 01:30 PM) [cite: 2206]",
+        "Exam Duration: 2 Hours (11:30 AM to 01:30 PM)",
         "Total Questions: 80",
         "Total Marks: 100",
-        "Negative Marking: No Negative Marking [cite: 2233]"
+        "Negative Marking: No Negative Marking"
       ],
       table: [
         { subject: "Mental Ability Test", questions: "40", marks: "50" },
@@ -57,20 +57,20 @@ export const admissionData = [
       {
         title: "Documents Required for Registration (JPG Format 10-100KB)",
         list: [
-          "Candidate's Photograph[cite: 2003].",
-          "Candidate's Signature[cite: 2005].",
-          "Parent's Signature[cite: 2004].",
-          "Aadhaar Details / Residence Certificate issued by Govt Authority[cite: 2006].",
-          "Certificate signed by Headmaster verifying study details[cite: 2178]."
+          "Candidate's Photograph.",
+          "Candidate's Signature.",
+          "Parent's Signature.",
+          "Aadhaar Details / Residence Certificate issued by Govt Authority.",
+          "Certificate signed by Headmaster verifying study details."
         ]
       },
       {
         title: "Who is Eligible to Apply?",
         list: [
-          "**Residence:** Candidate must be studying Class-V in the same district where admission is sought[cite: 2074].",
-          "**No Repetition:** Candidates who have appeared in JNVST earlier are NOT eligible to apply again[cite: 2106].",
-          "**Promotion:** Candidate must have passed Class-III and IV and studying in Class-V during the academic session 2025-26[cite: 2101, 2094].",
-          "**Rural Quota:** At least 75% seats are reserved for candidates from rural areas[cite: 2124]."
+          "**Residence:** Candidate must be studying Class-V in the same district where admission is sought.",
+          "**No Repetition:** Candidates who have appeared in JNVST earlier are NOT eligible to apply again.",
+          "**Promotion:** Candidate must have passed Class-III and IV and studying in Class-V during the academic session 2025-26.",
+          "**Rural Quota:** At least 75% seats are reserved for candidates from rural areas."
         ]
       }
     ],
@@ -91,10 +91,10 @@ export const admissionData = [
     ],
 
     faqs: [
-      { question: "What is the exam date for JNVST 2026 Class 6?", answer: "Phase-I: 13th December 2025 (Most States), Phase-II: 11th April 2026 (Winter Bound Areas)[cite: 1997, 1998]." },
-      { question: "What is the last date to apply?", answer: "The last date to submit online application is 29th July 2025[cite: 1958]." },
-      { question: "Is there any application fee?", answer: "No, registration is free of cost[cite: 2000]." },
-      { question: "Can a student appear for JNVST for a second time?", answer: "No, a candidate is eligible to appear for the selection test only once[cite: 2106]." }
+      { question: "What is the exam date for JNVST 2026 Class 6?", answer: "Phase-I: 13th December 2025 (Most States), Phase-II: 11th April 2026 (Winter Bound Areas)." },
+      { question: "What is the last date to apply?", answer: "The last date to submit online application is 29th July 2025." },
+      { question: "Is there any application fee?", answer: "No, registration is free of cost." },
+      { question: "Can a student appear for JNVST for a second time?", answer: "No, a candidate is eligible to appear for the selection test only once." }
     ]
   }
 ];
