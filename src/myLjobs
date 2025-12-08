@@ -1794,7 +1794,7 @@ export const latestJobs = [
     vacancyColumnName: "Post Name",
 
     stateWiseVacancy: [
-      { state: "Dy. Judge Attorney General", total: 7, ur: 5, sc: 0, st: 1, obc: 1, ews: 0 }
+      { Post Name: "Dy. Judge Attorney General", total: 7, ur: 5, sc: 0, st: 1, obc: 1, ews: 0 }
     ],
     // Ab ye table Post Name dikhayega aur aage category ka breakup.
 
