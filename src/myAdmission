@@ -1,44 +1,101 @@
 export const admissionData = [
-  // --- 6001. Sample Admission Post ---
+  export const admissionData = [
+  // --- 6001. NVS Class 6th Admission 2026-27 ---
   {
     id: 6001,
-    slug: "ignou-bed-entrance-exam-2025",
-    shortTitle: "IGNOU B.Ed Admission 2025",
-    title: "IGNOU B.Ed Entrance Exam 2025 Apply Online for January Session",
-    shortInfo: "Indira Gandhi National Open University (IGNOU) has invited online applications for the B.Ed Entrance Test for the January 2025 Session. Candidates can apply online.",
-    postDate: "08/12/2025",
-    category: "Admission", // ✅ Category 'Admission' hona zaroori hai
+    slug: "nvs-class-6th-admission-form-2026-2027",
+    shortTitle: "NVS Class 6th Admission 2026 Apply Online",
+    title: "Navodaya Vidyalaya NVS Class 6th Admission Form 2026-27 Apply Online | JNVST Notification & Exam Date",
+    shortInfo: "Navodaya Vidyalaya Samiti (NVS) has released the prospectus for the Jawahar Navodaya Vidyalaya Selection Test (JNVST) 2026 for admission to Class VI for the session 2026-27. Eligible students born between 01-05-2014 and 31-07-2016 can apply online. The last date to apply is 29th July 2025.",
+    category: "Admission",
 
-    salary: "N/A", 
+    salary: "N/A",
 
     importantDates: [
-      { label: "Application Start", value: "12/12/2025" },
-      { label: "Last Date", value: "03/01/2026" },
-      { label: "Exam Date", value: "January 2026" }
+      { label: "Application Start", value: "Started" },
+      { label: "Last Date for Apply", value: "13/08/2025 [cite: 1958]" },
+      { label: "Exam Date (Phase-I)", value: "13/12/2025 (Most States) " },
+      { label: "Exam Date (Phase-II)", value: "11/04/2026 (Winter Bound) " },
+      { label: "Admit Card", value: "To be notified" },
+      { label: "Result Declaration", value: "March/May 2026 [cite: 2038]" }
     ],
 
     applicationFee: [
-      { category: "General / OBC", amount: "₹1000/-" },
-      { category: "SC / ST", amount: "₹1000/-" }
+      { category: "All Candidates", amount: "₹0/- (Free of Cost) [cite: 2000]" }
     ],
 
-    ageLimit: "No Age Limit",
+    ageLimit: "Candidate must be born between 01-05-2014 and 31-07-2016 (Both dates inclusive).",
 
     vacancyDetails: [
-      { postName: "Bachelor of Education (B.Ed)", totalPost: "Seats Vary", eligibility: "Bachelor's Degree (50%) + Trained Teacher" }
+      { 
+        examName: "Admission to Class VI (JNVST 2026)", 
+        totalSchool: "654+ Schools", 
+        eligibility: "Candidate must be a Bonafide Resident of the District where JNV is located. Currently studying in Class-V in the same district in a Govt/Govt Aided/Recognized School[cite: 2075, 2094]." 
+      }
     ],
-    
-    vacancyTableTitle: "Course Details",
+
+    vacancyTableTitle: "JNVST Class 6 Admission Details",
     vacancyColumnName: "Course Name",
 
-    selectionProcess: [
-      "Entrance Examination",
-      "Merit List / Counselling"
+    // ✅ Exam Pattern (As per Prospectus Page 17)
+    examPattern: {
+      details: [
+        "Mode: OMR Based Pen & Paper Test",
+        "Exam Duration: 2 Hours (11:30 AM to 01:30 PM) [cite: 2206]",
+        "Total Questions: 80",
+        "Total Marks: 100",
+        "Negative Marking: No Negative Marking [cite: 2233]"
+      ],
+      table: [
+        { subject: "Mental Ability Test", questions: "40", marks: "50" },
+        { subject: "Arithmetic Test", questions: "20", marks: "25" },
+        { subject: "Language Test", questions: "20", marks: "25" }
+      ]
+    },
+
+    extraSections: [
+      {
+        title: "Documents Required for Registration (JPG Format 10-100KB)",
+        list: [
+          "Candidate's Photograph[cite: 2003].",
+          "Candidate's Signature[cite: 2005].",
+          "Parent's Signature[cite: 2004].",
+          "Aadhaar Details / Residence Certificate issued by Govt Authority[cite: 2006].",
+          "Certificate signed by Headmaster verifying study details[cite: 2178]."
+        ]
+      },
+      {
+        title: "Who is Eligible to Apply?",
+        list: [
+          "**Residence:** Candidate must be studying Class-V in the same district where admission is sought[cite: 2074].",
+          "**No Repetition:** Candidates who have appeared in JNVST earlier are NOT eligible to apply again[cite: 2106].",
+          "**Promotion:** Candidate must have passed Class-III and IV and studying in Class-V during the academic session 2025-26[cite: 2101, 2094].",
+          "**Rural Quota:** At least 75% seats are reserved for candidates from rural areas[cite: 2124]."
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Visit the official website navodaya.gov.in.",
+      "Click on the link for 'Online Registration for JNV Selection Test Class VI (2026-27)'.",
+      "Register using basic details (State, District, Name, DOB, Mobile No).",
+      "Fill the online application form carefully.",
+      "Upload the scanned copy of the certificate verified by the Headmaster, Photo, and Signatures.",
+      "Submit the form and take a printout of the confirmation page."
     ],
 
     links: [
-      { title: "Apply Online", url: "http://www.ignou.ac.in/" },
-      { title: "Official Website", url: "http://www.ignou.ac.in/" }
+      { title: "Apply Online (Registration)", url: "https://cbseitms.rcil.gov.in/nvs" },
+      { title: "Download Prospectus (PDF)", url: "https://cbseitms.rcil.gov.in/nvs/assets/pdf/Final_Prospectus_2026.pdf" }, // Replace with specific PDF link if hosted
+      { title: "Official Website", url: "https://navodaya.gov.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the exam date for JNVST 2026 Class 6?", answer: "Phase-I: 13th December 2025 (Most States), Phase-II: 11th April 2026 (Winter Bound Areas)[cite: 1997, 1998]." },
+      { question: "What is the last date to apply?", answer: "The last date to submit online application is 29th July 2025[cite: 1958]." },
+      { question: "Is there any application fee?", answer: "No, registration is free of cost[cite: 2000]." },
+      { question: "Can a student appear for JNVST for a second time?", answer: "No, a candidate is eligible to appear for the selection test only once[cite: 2106]." }
     ]
   }
+];
 ];
