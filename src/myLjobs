@@ -1966,8 +1966,8 @@ export const latestJobs = [
 
     importantDates: [
       { label: "Notification Released", value: "02/12/2025 (Short Notice)" },
-      { label: "Application Begin (Tentative)", value: "09/12/2025" },
-      { label: "Last Date for Apply", value: "To be notified" },
+      { label: "Application Begin", value: "09/12/2025" },
+      { label: "Last Date for Apply", value: "31/12/2025" },
       { label: "Exam Date", value: "To be notified" }
     ],
 
@@ -2040,7 +2040,7 @@ export const latestJobs = [
     links: [
       { title: "Apply Online (Link Active on 09/12/2025)", url: "https://www.drdo.gov.in/drdo/careers/ceptam-11" },
       { title: "Download Notification (Soon)", url: "" },
-      { title: "Download Short Notice", url: "https://www.drdo.gov.in" }, // Replace with direct PDF link if hosted
+      { title: "Download Short Notice", url: "https://www.drdo.gov.in/drdo/sites/default/files/vacancy/shortadvtC11_04122025.pdf" }, // Replace with direct PDF link if hosted
       { title: "Official Website", url: "https://www.drdo.gov.in" }
     ]
   },
@@ -2197,13 +2197,13 @@ export const latestJobs = [
     vacancyColumnName: "Force Name",
 
     stateWiseVacancy: [
-      { state: "BSF (Border Security Force)", total: 616, ur: 271, ews: 58, obc: 133, sc: 89, st: 65 },
-      { state: "CISF (Central Industrial Security Force)", total: 14595, ur: 6174, ews: 1471, obc: 3284, sc: 2123, st: 1543 },
-      { state: "CRPF (Central Reserve Police Force)", total: 5490, ur: 2589, ews: 606, obc: 1370, sc: 885, st: 40 },
-      { state: "SSB (Sashastra Seema Bal)", total: 1764, ur: 752, ews: 176, obc: 412, sc: 257, st: 167 },
-      { state: "ITBP (Indo Tibetan Border Police)", total: 1293, ur: 577, ews: 125, obc: 257, sc: 170, st: 164 },
-      { state: "AR (Assam Rifles)", total: 1706, ur: 729, ews: 167, obc: 303, sc: 175, st: 332 },
-      { state: "SSF (Secretariat Security Force)", total: 23, ur: 10, ews: 2, obc: 6, sc: 3, st: 2 }
+      { Force: "BSF (Border Security Force)", total: 616, ur: 271, ews: 58, obc: 133, sc: 89, st: 65 },
+      { Force: "CISF (Central Industrial Security Force)", total: 14595, ur: 6174, ews: 1471, obc: 3284, sc: 2123, st: 1543 },
+      { Force: "CRPF (Central Reserve Police Force)", total: 5490, ur: 2589, ews: 606, obc: 1370, sc: 885, st: 40 },
+      { Force: "SSB (Sashastra Seema Bal)", total: 1764, ur: 752, ews: 176, obc: 412, sc: 257, st: 167 },
+      { Force: "ITBP (Indo Tibetan Border Police)", total: 1293, ur: 577, ews: 125, obc: 257, sc: 170, st: 164 },
+      { Force: "AR (Assam Rifles)", total: 1706, ur: 729, ews: 167, obc: 303, sc: 175, st: 332 },
+      { Force: "SSF (Secretariat Security Force)", total: 23, ur: 10, ews: 2, obc: 6, sc: 3, st: 2 }
     ],
 
     selectionProcess: [
