@@ -3,14 +3,9 @@
   "name": "Top Online Form - Sarkari Result & Jobs",
   "icons": [
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/2921/2921222.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "https://cdn-icons-png.flaticon.com/512/2921/2921222.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "logo.svg", 
+      "type": "image/svg+xml",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
