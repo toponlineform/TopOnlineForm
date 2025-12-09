@@ -2,7 +2,135 @@ export const latestJobs = [
   // ==================================================
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
- 
+
+
+  // --- 30. Bombay High Court Recruitment 2025 (Clerk, Peon, Steno, Driver) ---
+  {
+    id: 30,
+    slug: "bombay-high-court-recruitment-2025",
+    shortTitle: "Bombay High Court Recruitment 2025",
+    title: "Bombay High Court Recruitment 2025 Apply Online for 2330 Posts | Clerk, Peon, Steno & Driver",
+    shortInfo: "High Court of Judicature at Bombay has released five separate notifications for the recruitment of Stenographer (Higher Grade), Stenographer (Lower Grade), Clerk, Peon/Hamal, and Driver on the establishment of the High Court (Mumbai, Nagpur & Aurangabad Benches). A total of 2330 vacancies are available. Eligible candidates can apply online from 15th December 2025.",
+    postDate: "09/12/2025",
+    category: "Latest Jobs",
+
+    salary: "₹16,600 - ₹1,77,500 (Post Wise Pay Matrix)",
+
+    importantDates: [
+      { label: "Notification Date", value: "08/12/2025" },
+      { label: "Application Begin", value: "15/12/2025 (11:00 AM)" },
+      { label: "Last Date for Apply", value: "05/01/2026 (05:00 PM)" },
+      { label: "Fee Payment Last Date", value: "05/01/2026" },
+      { label: "Exam Date", value: "To be notified" }
+    ],
+
+    applicationFee: [
+      { category: "All Candidates", amount: "₹1000/-" },
+      { category: "Note", amount: "Fee is non-refundable." },
+      { category: "Payment Mode", amount: "Online (SBI Collect)" }
+    ],
+
+    ageLimit: "As on date of publication (08/12/2025):",
+    ageRelaxation: [
+      "General: 18-38 Years (Clerk/Peon) | 21-38 Years (Steno/Driver)",
+      "SC/ST/OBC/SBC: Up to 43 Years",
+      "Government Employees: No Age Limit"
+    ],
+
+    vacancyDetails: [
+      { postName: "Clerk", totalPost: "1332", eligibility: "Any Degree (Graduation) + English Typing (40 wpm) + Computer Certificate" },
+      { postName: "Peon / Hamal", totalPost: "887", eligibility: "7th Class Pass + Good Physique" },
+      { postName: "Stenographer (Lower Grade)", totalPost: "56", eligibility: "Degree + English Shorthand (80 wpm) + English Typing (40 wpm)" },
+      { postName: "Stenographer (Higher Grade)", totalPost: "19", eligibility: "Degree + English Shorthand (100 wpm) + English Typing (40 wpm)" },
+      { postName: "Driver (Vahan Chalak)", totalPost: "36", eligibility: "10th Pass + Valid LMV Driving License + 3 Years Experience" }
+    ],
+
+    // ✅ Detailed Bench-Wise Vacancy Table
+    vacancyTableTitle: "Bench Wise Vacancy Details (Total Vacant Posts)",
+    vacancyColumnName: "Post Name",
+
+    stateWiseVacancy: [
+      { "Post Name": "Clerk", "Mumbai Main": "830", "Nagpur Bench": "166", "Aurangabad Bench": "336", "Total": "1332" },
+      { "Post Name": "Peon / Hamal", "Mumbai Main": "570", "Nagpur Bench": "115", "Aurangabad Bench": "202", "Total": "887" },
+      { "Post Name": "Steno (Lower Grade)", "Mumbai Main": "44", "Nagpur Bench": "4", "Aurangabad Bench": "8", "Total": "56" },
+      { "Post Name": "Steno (Higher Grade)", "Mumbai Main": "9", "Nagpur Bench": "2", "Aurangabad Bench": "8", "Total": "19" },
+      { "Post Name": "Driver", "Mumbai Main": "26", "Nagpur Bench": "4", "Aurangabad Bench": "6", "Total": "36" }
+    ],
+
+    salaryDetails: [
+      { post: "Stenographer (Higher Grade)", level: "S-20 (₹56,100 - ₹1,77,500)" },
+      { post: "Stenographer (Lower Grade)", level: "S-18 (₹49,100 - ₹1,55,800)" },
+      { post: "Clerk", level: "S-10 (₹29,200 - ₹92,300)" },
+      { post: "Driver", level: "S-10 (₹29,200 - ₹92,300)" },
+      { post: "Peon / Hamal", level: "S-3 (₹16,600 - ₹52,400)" }
+    ],
+
+    selectionProcess: [
+      "Screening / Written Test (For Clerk, Peon, Driver)",
+      "Shorthand & Typing Test (For Steno & Clerk)",
+      "Cleaning/Activity Test (For Peon)",
+      "Driving Test (For Driver)",
+      "Interview (For All Posts)"
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Offline/Online Written Test",
+        "Language: Marathi & English (Clerk), Marathi (Peon)",
+        "Clerk Exam: 90 Marks (Marathi, English, GK, Computer, Reasoning)",
+        "Peon Exam: 30 Marks (30 Questions - 30 Minutes)",
+        "Driver Exam: 20 Marks (Written) + Driving Test"
+      ],
+      table: [
+        { subject: "Screening Test (Clerk)", questions: "90", marks: "90" },
+        { subject: "Screening Test (Peon)", questions: "30", marks: "30" },
+        { subject: "English Typing Test (Clerk)", questions: "20", marks: "20" },
+        { subject: "Interview", questions: "-", marks: "40 (Clerk) / 10 (Peon)" }
+      ]
+    },
+
+    extraSections: [
+      {
+        title: "Documents Required",
+        list: [
+          "Scan of Passport Size Photo (40KB max).",
+          "Scan of Signature (40KB max).",
+          "Educational Certificates (7th/10th/12th/Degree).",
+          "Typing/Shorthand Certificates (if applicable).",
+          "Driving License (for Driver).",
+          "Character Certificate (Form A format provided in notification)."
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Step 1: Visit the official website https://bombayhighcourt.nic.in.",
+      "Step 2: Click on 'Recruitment' and select the desired post (Clerk/Peon/Steno/Driver).",
+      "Step 3: Click on 'Apply Online' link (Active from 15th Dec).",
+      "Step 4: Fill the registration form and pay the fee of ₹1000/- via SBI Collect.",
+      "Step 5: Enter the SBI Collect Reference Number in the form.",
+      "Step 6: Upload Photo and Signature.",
+      "Step 7: Submit the form and take a printout."
+    ],
+
+    links: [
+      { title: "Apply Online (Active on 15/12)", url: "https://bombayhighcourt.nic.in/recruitment.php" },
+      { title: "Download Notification (Driver)", url: "https://bombayhighcourt.nic.in/writereaddata/recruitment/PDF/recruitbom20251208233334.pdf" },
+      { title: "Download Notification (Peon)", url: "https://bombayhighcourt.nic.in/writereaddata/recruitment/PDF/recruitbom20251208233333.pdf" },
+      { title: "Download Notification (Clerk)", url: "https://bombayhighcourt.nic.in/writereaddata/recruitment/PDF/recruitbom20251208233335.pdf" },
+      { title: "Download Notification (Steno High Grade)", url: "https://bombayhighcourt.nic.in/writereaddata/recruitment/PDF/recruitbom20251208233337.pdf,
+      Download Notification (Steno Lower Grade)", url: "https://bombayhighcourt.nic.in/writereaddata/recruitment/PDF/recruitbom20251208233336.pdf" },
+      { title: "Official Website", url: "https://bombayhighcourt.nic.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the last date to apply for Bombay High Court Recruitment 2025?", answer: "The last date is 05 January 2026." },
+      { question: "How many vacancies are there in Bombay High Court?", answer: "Total 2330 vacancies (1332 Clerk, 887 Peon, 75 Steno, 36 Driver)." },
+      { question: "What is the fee for Bombay High Court Clerk form?", answer: "The application fee is ₹1000/- for all candidates." },
+      { question: "Is typing mandatory for Clerk post?", answer: "Yes, English Typing @ 40 w.p.m. is required." },
+      { question: "What is the age limit?", answer: "18 to 38 Years for General category candidates." }
+    ]
+  },
   // --- 29. ECIL Recruitment 2025 (Updated) ---
   {
     id: 29,
