@@ -118,7 +118,7 @@ export const latestJobs = [
       { title: "Download Notification (Driver)", url: "https://bombayhighcourt.nic.in/writereaddata/recruitment/PDF/recruitbom20251208233334.pdf" },
       { title: "Download Notification (Peon)", url: "https://bombayhighcourt.nic.in/writereaddata/recruitment/PDF/recruitbom20251208233333.pdf" },
       { title: "Download Notification (Clerk)", url: "https://bombayhighcourt.nic.in/writereaddata/recruitment/PDF/recruitbom20251208233335.pdf" },
-      { title: "Download Notification (Steno High Grade)", url: "https://bombayhighcourt.nic.in/writereaddata/recruitment/PDF/recruitbom20251208233337.pdf,
+      { title: "Download Notification (Steno High Grade)", url: "https://bombayhighcourt.nic.in/writereaddata/recruitment/PDF/recruitbom20251208233337.pdf" },
       { title: "Download Notification (Steno Lower Grade)", url: "https://bombayhighcourt.nic.in/writereaddata/recruitment/PDF/recruitbom20251208233336.pdf" },
       { title: "Official Website", url: "https://bombayhighcourt.nic.in/" }
     ],
