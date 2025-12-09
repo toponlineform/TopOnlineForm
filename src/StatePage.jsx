@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { jobsData } from './jobsData'; // Master Data
+import { jobsData } from './jobsData';
 import SEO from './SEO';
 
 const StatePage = () => {
   const [selectedState, setSelectedState] = useState("All");
   const [filteredJobs, setFilteredJobs] = useState([]);
 
-  // States List (Aap aur bhi add kar sakte hain)
   const states = [
     { name: "All", keywords: [] },
     { name: "Bihar", keywords: ["Bihar", "BPSC", "BSSC", "Patna", "Patwari"] },
@@ -21,14 +20,11 @@ const StatePage = () => {
 
   useEffect(() => {
     if (selectedState === "All") {
-      // Show latest 50 jobs if 'All' is selected
       setFilteredJobs(jobsData.slice(0, 50));
     } else {
-      // Find keywords for the selected state
       const stateObj = states.find(s => s.name === selectedState);
       const keywords = stateObj ? stateObj.keywords : [];
 
-      // Filter jobs based on Title or Short Info matching keywords
       const filtered = jobsData.filter(job => {
         const textToSearch = (job.title + " " + job.shortInfo + " " + job.shortTitle).toLowerCase();
         return keywords.some(key => textToSearch.includes(key.toLowerCase()));
@@ -38,7 +34,7 @@ const StatePage = () => {
   }, [selectedState]);
 
   return (
-    <div className="main-container" style={{padding: '20px', maxWidth: '1200px', margin: '0 auto'}}>
+    <div className="job-container">
       <SEO 
         title="State Wise Govt Jobs 2025 | UP, Bihar, Rajasthan, Delhi" 
         description="Find government jobs state-wise. Check recruitment in UP, Bihar, Haryana, Rajasthan, Delhi and Central Govt." 
@@ -50,7 +46,6 @@ const StatePage = () => {
         Browse Jobs by State
       </div>
 
-      {/* State Buttons */}
       <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px', marginBottom: '30px'}}>
         {states.map((state) => (
           <button
@@ -73,7 +68,6 @@ const StatePage = () => {
         ))}
       </div>
 
-      {/* Results Grid */}
       <div className="box-column">
         <div className="box-header" style={{backgroundColor: '#004080'}}>
           {selectedState === "All" ? "Latest Updates (All States)" : `${selectedState} Govt Jobs`}
