@@ -3,6 +3,99 @@ export const admitCards = [
   //                ADMIT CARDS (ID 1001 - 2000)
   // ==================================================
 
+  // --- 1019. Patna High Court Mazdoor Admit Card 2025 ---
+  {
+    id: 1019,
+    slug: "patna-high-court-mazdoor-admit-card-2025-cycling-test",
+    shortTitle: "Patna High Court Mazdoor Admit Card 2025 (Cycling Test)",
+    title: "Patna High Court Mazdoor Cycling Test Admit Card 2025 Out (Direct Link) - Download Hall Ticket @patnahighcourt.gov.in",
+    shortInfo: "High Court of Judicature at Patna has officially released the Admit Card for the Cycling Test of Regular Mazdoor (Group-C) Recruitment 2025. Candidates who qualified the Written Examination can now download their Hall Ticket for the Cycling Test scheduled from 10th to 12th December 2025. Get the direct download link and instructions below.",
+    postDate: "08/12/2025",
+    category: "Admit Card",
+
+    salary: "Level-1 (₹14,800 - ₹40,300)",
+
+    importantDates: [
+      { label: "Notification No.", value: "PHC/01/2025" },
+      { label: "Written Exam Date", value: "22/06/2025" },
+      { label: "Written Result Released", value: "20/11/2025" },
+      { label: "Cycling Test Admit Card", value: "08/12/2025" },
+      { label: "Cycling Test Date", value: "10/12/2025 to 12/12/2025" },
+      { label: "Interview Date", value: "To be notified later" }
+    ],
+
+    applicationFee: [
+      { category: "Note", amount: "No Fee is required for downloading the Admit Card." }
+    ],
+
+    ageLimit: "18-37 Years (As on 01/01/2025). Relaxation as per rules.",
+
+    vacancyDetails: [
+      { 
+        postName: "Regular Mazdoor (Group C)", 
+        totalPost: "171", 
+        eligibility: "Minimum 8th Pass & Maximum 12th Pass + Knowledge of Cycling" 
+      }
+    ],
+
+    vacancyTableTitle: "Category Wise Vacancy Details",
+    vacancyColumnName: "Category Name",
+
+    stateWiseVacancy: [
+      { "Category Name": "Unreserved (UR)", "Total": "76", "Women": "26" },
+      { "Category Name": "EWS", "Total": "17", "Women": "06" },
+      { "Category Name": "BC", "Total": "21", "Women": "07" },
+      { "Category Name": "EBC", "Total": "30", "Women": "11" },
+      { "Category Name": "SC", "Total": "25", "Women": "09" },
+      { "Category Name": "ST", "Total": "02", "Women": "00" }
+    ],
+
+    selectionProcess: [
+      "Stage 1: Written Test (Completed)",
+      "Stage 2: Cycling Test (Qualifying Nature)",
+      "Stage 3: Interview (20 Marks)",
+      "Stage 4: Document Verification & Medical"
+    ],
+
+    extraSections: [
+      {
+        title: "Documents to Carry for Cycling Test",
+        list: [
+          "Printout of Cycling Test Admit Card.",
+          "Original Photo Identity Proof (Aadhaar Card/Voter ID/PAN Card/Driving License).",
+          "Two recent passport size photographs.",
+          "Self-declaration form (if attached with admit card)."
+        ]
+      },
+      {
+        title: "Cycling Test Details",
+        text: "The Cycling Test is of **Qualifying Nature** only. However, it is mandatory to pass this test to be eligible for the Interview stage. Male candidates are usually required to cycle a certain distance within a specific time limit to demonstrate proficiency."
+      }
+    ],
+
+    howToApply: [
+      "Step 1: Visit the official website patnahighcourt.gov.in.",
+      "Step 2: Scroll to the 'Recruitments' section.",
+      "Step 3: Click on the link 'Download Admit Card for Cycling Test - Regular Mazdoor Recruitment 2025'.",
+      "Step 4: Enter your Registration Number and Date of Birth (or Password).",
+      "Step 5: Click on Submit and download your Hall Ticket.",
+      "Step 6: Print the Admit Card and check the exam center details."
+    ],
+
+    links: [
+      { title: "Download Cycling Test Admit Card", url: "https://phc-recruitment.com/test-admit-login.aspx" },
+      { title: "Download Exam Notice", url: "https://patnahighcourt.gov.in/" },
+      { title: "Download Written Exam Result", url: "https://patnahighcourt.gov.in/" },
+      { title: "Official Website", url: "https://patnahighcourt.gov.in/" }
+    ],
+
+    faqs: [
+      { question: "When is the Patna High Court Mazdoor Cycling Test 2025?", answer: "The Cycling Test is scheduled to be held from 10th to 12th December 2025." },
+      { question: "How to download the Admit Card?", answer: "You can download it from the official website patnahighcourt.gov.in using your Registration Number and DOB." },
+      { question: "Is the Cycling Test mandatory?", answer: "Yes, the Cycling Test is mandatory and qualifying in nature." },
+      { question: "What is the next stage after the Cycling Test?", answer: "Candidates who qualify the Cycling Test will be called for an Interview." }
+    ]
+  },
   // --- 1018. UPSC CSE Interview Call Letter 2025 ---
   {
     id: 1018,
