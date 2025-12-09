@@ -37,35 +37,8 @@ export const admitCards = [
       { postName: "Health & Malaria Inspector Gr-II", totalPost: "Various", eligibility: "B.Sc + Diploma in Health/Sanitary Inspector" },
       { postName: "Lab Assistant Gr-II", totalPost: "Various", eligibility: "12th (Science) + DMLT" },
       { postName: "Radiographer / X-Ray Tech", totalPost: "Various", eligibility: "10+2 + Diploma in Radiography" },
-      { postName: "Other Paramedical Posts", totalPost: "Various", eligibility: "As per Notification" }
-    ],
-
-    // ✅ Zone Wise Link Table (SEO Friendly)
-    vacancyTableTitle: "RRB Zone Wise Application Status Link",
-    vacancyColumnName: "RRB Zone",
-
-    stateWiseVacancy: [
-      { "RRB Zone": "RRB Ahmedabad", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Ajmer", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Allahabad (Prayagraj)", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Bangalore", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Bhopal", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Bhubaneswar", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Bilaspur", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Chandigarh", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Chennai", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Gorakhpur", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Guwahati", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Jammu Srinagar", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Kolkata", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Malda", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Mumbai", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Muzaffarpur", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Patna", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Ranchi", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Secunderabad", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Siliguri", "Link": "Available Now", "Status": "Check Here" },
-      { "RRB Zone": "RRB Thiruvananthapuram", "Link": "Available Now", "Status": "Check Here" }
+      { postName: "Other Paramedical Posts", totalPost: "Various", eligibility: "As per Notification" },
+       { postName: "Total Posts", totalPost: "434", eligibility: "-" }
     ],
 
     selectionProcess: [
