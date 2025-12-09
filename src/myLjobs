@@ -81,12 +81,6 @@ export const latestJobs = [
         "Peon Exam: 30 Marks (30 Questions - 30 Minutes)",
         "Driver Exam: 20 Marks (Written) + Driving Test"
       ],
-      table: [
-        { subject: "Screening Test (Clerk)", questions: "90", marks: "90" },
-        { subject: "Screening Test (Peon)", questions: "30", marks: "30" },
-        { subject: "English Typing Test (Clerk)", questions: "20", marks: "20" },
-        { subject: "Interview", questions: "-", marks: "40 (Clerk) / 10 (Peon)" }
-      ]
     },
 
     extraSections: [
