@@ -2,7 +2,83 @@ export const admitCards = [
   // ==================================================
   //                ADMIT CARDS (ID 1001 - 2000)
   // ==================================================
-  
+
+  // --- 1018. UPSC CSE Interview Call Letter 2025 ---
+  {
+    id: 1018,
+    slug: "upsc-cse-interview-call-letter-2025-download",
+    shortTitle: "UPSC CSE Interview Call Letter 2025",
+    title: "UPSC Civil Services (IAS) Interview Call Letter 2025 Released (e-Summon) - Download Personality Test Schedule",
+    shortInfo: "Union Public Service Commission (UPSC) has officially released the e-Summon Letters (Admit Cards) for the Civil Services (Main) Examination, 2025 Personality Test (Interview). Candidates who have qualified the Mains Exam can now download their Interview Schedule and Call Letter from the official website upsc.gov.in.",
+    postDate: "02/12/2025",
+    category: "Admit Card",
+
+    salary: "Level-10 to Level-14 (IAS/IPS/IFS Scales)",
+
+    importantDates: [
+      { label: "Mains Result Declared", value: "December 2025" },
+      { label: "DAF-II Submission", value: "December 2025" },
+      { label: "Interview Schedule Released", value: "02/12/2025" },
+      { label: "e-Summon Letter Available", value: "Active" },
+      { label: "Interview Begin Date", value: "08/12/2025 to 19/12/2025" }
+    ],
+
+    applicationFee: [
+      { category: "Note", amount: "No Fee is required to download the e-Summon Letter." }
+    ],
+
+    ageLimit: "21-32 Years (As per 2025 Notification)",
+
+    vacancyDetails: [
+      { 
+        postName: "Civil Services Exam 2025 (IAS & IFS)", 
+        totalPost: "1129 (979+150)", 
+        eligibility: "Qualified UPSC CSE Mains 2025 Examination." 
+      }
+    ],
+
+    extraSections: [
+      {
+        title: "Documents Required for UPSC Interview (Original + Photocopies)",
+        list: [
+          "Matriculation (10th) Certificate (Date of Birth Proof).",
+          "Degree Certificate (Graduation).",
+          "Caste Certificate (SC/ST/OBC/EWS) issued by competent authority.",
+          "Disability Certificate (PwBD) if applicable.",
+          "Two recent passport size photographs.",
+          "Photo Identity Proof (Aadhaar/PAN/Voter ID).",
+          "DAF-I and DAF-II Summary Sheets (Printout).",
+          "Questionnaire & Attestation Form (Available on UPSC website)."
+        ]
+      },
+      {
+        title: "Interview Guidelines",
+        text: "Candidates must report to the UPSC Office, Dholpur House, Shahjahan Road, New Delhi on the date and time mentioned in their e-Summon Letter. No request for change of date/time will be entertained. Electronic gadgets are strictly prohibited inside the campus."
+      }
+    ],
+
+    howToApply: [
+      "Step 1: Visit the official website upsc.gov.in.",
+      "Step 2: Scroll down to the 'What's New' section.",
+      "Step 3: Click on 'e-Summon Letter: Civil Services (Main) Examination, 2025'.",
+      "Step 4: Enter your Roll Number and Date of Birth (or Captcha code).",
+      "Step 5: Your Interview Call Letter will appear on the screen.",
+      "Step 6: Download and print the e-Summon Letter."
+    ],
+
+    links: [
+      { title: "Download e-Summon Letter", url: "https://upsconline.nic.in/e-summon/" },
+      { title: "Download Interview Schedule (PDF)", url: "https://upsc.gov.in/sites/default/files/Intv-CSM-2025-Engl-021225R.pdf" },
+      { title: "Official Website", url: "https://upsc.gov.in/" }
+    ],
+
+    faqs: [
+      { question: "How to download UPSC Interview Call Letter?", answer: "Visit upsc.gov.in -> e-Summon Letters -> Enter Roll No & DOB." },
+      { question: "Where is the UPSC Interview held?", answer: "The interview is held at UPSC Bhawan, Dholpur House, Shahjahan Road, New Delhi." },
+      { question: "Is reimbursement provided for travel?", answer: "Yes, outstation candidates are reimbursed 2nd Class Train fare (Mail/Express) as per rules." },
+      { question: "What documents are needed for the interview?", answer: "Original Degree, 10th Certificate, Caste Certificate, Photos, and ID Proof." }
+    ]
+  },
   // --- SSC CPO Admit Card 2025 ---
   {
     id: 1017, // Unique ID for Admit Card Post
