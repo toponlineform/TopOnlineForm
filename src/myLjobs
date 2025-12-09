@@ -54,7 +54,7 @@ export const latestJobs = [
       { "Post Name": "Peon / Hamal", "Mumbai Main": "570", "Nagpur Bench": "115", "Aurangabad Bench": "202", "Total": "887" },
       { "Post Name": "Steno (Lower Grade)", "Mumbai Main": "44", "Nagpur Bench": "4", "Aurangabad Bench": "8", "Total": "56" },
       { "Post Name": "Steno (Higher Grade)", "Mumbai Main": "9", "Nagpur Bench": "2", "Aurangabad Bench": "8", "Total": "19" },
-      { "Post Name": "Driver", "Mumbai Main": "26", "Nagpur Bench": "4", "Aurangabad Bench": "6", "Total": "36" }
+      { "Post Name": "Driver", "Mumbai Main": "26", "Nagpur Bench": "5", "Aurangabad Bench": "6", "Total": "36" }
     ],
 
     salaryDetails: [
