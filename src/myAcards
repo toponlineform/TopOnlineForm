@@ -32,13 +32,13 @@ export const admitCards = [
     ageLimit: "18-40 Years (Varies by Post). Relaxation as per RRB rules.",
 
     vacancyDetails: [
-      { postName: "Nursing Superintendent", totalPost: "Various", eligibility: "B.Sc Nursing / GNM" },
-      { postName: "Pharmacist (Entry Grade)", totalPost: "Various", eligibility: "10+2 + D.Pharm / B.Pharm" },
-      { postName: "Health & Malaria Inspector Gr-II", totalPost: "Various", eligibility: "B.Sc + Diploma in Health/Sanitary Inspector" },
-      { postName: "Lab Assistant Gr-II", totalPost: "Various", eligibility: "12th (Science) + DMLT" },
-      { postName: "Radiographer / X-Ray Tech", totalPost: "Various", eligibility: "10+2 + Diploma in Radiography" },
-      { postName: "Other Paramedical Posts", totalPost: "Various", eligibility: "As per Notification" },
-       { postName: "Total Posts", totalPost: "434", eligibility: "-" }
+      { postName: "Nursing Superintendent", totalPost: "272", eligibility: "B.Sc Nursing / GNM (Pay Level 7)" },
+      { postName: "Pharmacist (Entry Grade)", totalPost: "105", eligibility: "10+2 + D.Pharm / B.Pharm (Pay Level 5)" },
+      { postName: "Health & Malaria Inspector Gr-III", totalPost: "33", eligibility: "B.Sc (Chemistry) + Diploma in Health/Sanitary Inspector (Pay Level 6)" },
+      { postName: "Laboratory Assistant Gr-II", totalPost: "12", eligibility: "12th (Science) + DMLT (Pay Level 3)" },
+      { postName: "Radiographer X-Ray Tech", totalPost: "04", eligibility: "10+2 + Diploma in Radiography (Pay Level 5)" },
+      { postName: "Dialysis Technician", totalPost: "04", eligibility: "B.Sc + Diploma in Haemodialysis (Pay Level 6)" },
+      { postName: "ECG Technician", totalPost: "04", eligibility: "10+2/Graduation + Diploma in ECG Tech (Pay Level 4)" }
     ],
 
     selectionProcess: [
