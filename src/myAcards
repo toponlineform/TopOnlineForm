@@ -41,6 +41,32 @@ export const admitCards = [
       { postName: "ECG Technician", totalPost: "04", eligibility: "10+2/Graduation + Diploma in ECG Tech (Pay Level 4)" }
     ],
 
+    vacancyTableTitle: "RRB Zone Wise Vacancy Details",
+    vacancyColumnName: "RRB Name",
+
+    stateWiseVacancy: [
+      { "RRB Name": "RRB Ahmedabad", "Total Posts": "11" },
+      { "RRB Name": "RRB Ajmer", "Total Posts": "10" },
+      { "RRB Name": "RRB Bangalore", "Total Posts": "09" },
+      { "RRB Name": "RRB Bhopal", "Total Posts": "09" },
+      { "RRB Name": "RRB Bhubaneswar", "Total Posts": "08" },
+      { "RRB Name": "RRB Bilaspur", "Total Posts": "25" },
+      { "RRB Name": "RRB Chandigarh", "Total Posts": "04" },
+      { "RRB Name": "RRB Chennai", "Total Posts": "67" },
+      { "RRB Name": "RRB Gorakhpur", "Total Posts": "11" },
+      { "RRB Name": "RRB Guwahati", "Total Posts": "12" },
+      { "RRB Name": "RRB Jammu-Srinagar", "Total Posts": "15" },
+      { "RRB Name": "RRB Kolkata", "Total Posts": "68" },
+      { "RRB Name": "RRB Malda", "Total Posts": "05" },
+      { "RRB Name": "RRB Mumbai", "Total Posts": "80" },
+      { "RRB Name": "RRB Muzaffarpur", "Total Posts": "12" },
+      { "RRB Name": "RRB Patna", "Total Posts": "25" },
+      { "RRB Name": "RRB Prayagraj (Allahabad)", "Total Posts": "27" },
+      { "RRB Name": "RRB Ranchi", "Total Posts": "11" },
+      { "RRB Name": "RRB Secunderabad", "Total Posts": "10" },
+      { "RRB Name": "RRB Siliguri", "Total Posts": "15" }
+    ],
+
     selectionProcess: [
       "Computer Based Test (CBT) - 100 Marks",
       "Document Verification (DV)",
