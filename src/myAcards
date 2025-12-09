@@ -3,7 +3,117 @@ export const admitCards = [
   //                ADMIT CARDS (ID 1001 - 2000)
   // ==================================================
 
-  // --- 1019. Patna High Court Mazdoor Admit Card 2025 ---
+  // --- 1020. RRB Paramedical Staff Application Status 2025 (ID 33) ---
+  {
+    id: 1020,
+    slug: "rrb-paramedical-application-status-2025-check-online",
+    shortTitle: "RRB Paramedical Application Status 2025",
+    title: "RRB Paramedical Staff Application Status 2025 Out (CEN 03/2025) - Check Form Status & Exam Date",
+    shortInfo: "Railway Recruitment Board (RRB) has officially released the Application Status for the recruitment of Paramedical Categories (CEN 03/2025). Candidates who applied for posts like Nursing Superintendent, Pharmacist, Lab Technician, and Health Inspector can now check whether their application form is Accepted or Rejected. Check the direct link below.",
+    postDate: "09/12/2025",
+    category: "Admit Card",
+
+    salary: "Level-3 to Level-7 (Post Wise)",
+
+    importantDates: [
+      { label: "Notification No.", value: "CEN 03/2025" },
+      { label: "Application Start", value: "09/08/2025" },
+      { label: "Last Date for Apply", value: "18/09/2025" },
+      { label: "Application Status Released", value: "09/12/2025" },
+      { label: "Exam Date", value: "To be notified soon" },
+      { label: "Admit Card", value: "4 Days before Exam" }
+    ],
+
+    applicationFee: [
+      { category: "Status Check Fee", amount: "₹0/- (Free)" },
+      { category: "Note", amount: "Login with Registration Number & DOB to check status." }
+    ],
+
+    ageLimit: "18-40 Years (Varies by Post). Relaxation as per RRB rules.",
+
+    vacancyDetails: [
+      { postName: "Nursing Superintendent", totalPost: "Various", eligibility: "B.Sc Nursing / GNM" },
+      { postName: "Pharmacist (Entry Grade)", totalPost: "Various", eligibility: "10+2 + D.Pharm / B.Pharm" },
+      { postName: "Health & Malaria Inspector Gr-II", totalPost: "Various", eligibility: "B.Sc + Diploma in Health/Sanitary Inspector" },
+      { postName: "Lab Assistant Gr-II", totalPost: "Various", eligibility: "12th (Science) + DMLT" },
+      { postName: "Radiographer / X-Ray Tech", totalPost: "Various", eligibility: "10+2 + Diploma in Radiography" },
+      { postName: "Other Paramedical Posts", totalPost: "Various", eligibility: "As per Notification" }
+    ],
+
+    // ✅ Zone Wise Link Table (SEO Friendly)
+    vacancyTableTitle: "RRB Zone Wise Application Status Link",
+    vacancyColumnName: "RRB Zone",
+
+    stateWiseVacancy: [
+      { "RRB Zone": "RRB Ahmedabad", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Ajmer", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Allahabad (Prayagraj)", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Bangalore", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Bhopal", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Bhubaneswar", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Bilaspur", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Chandigarh", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Chennai", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Gorakhpur", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Guwahati", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Jammu Srinagar", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Kolkata", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Malda", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Mumbai", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Muzaffarpur", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Patna", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Ranchi", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Secunderabad", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Siliguri", "Link": "Available Now", "Status": "Check Here" },
+      { "RRB Zone": "RRB Thiruvananthapuram", "Link": "Available Now", "Status": "Check Here" }
+    ],
+
+    selectionProcess: [
+      "Computer Based Test (CBT) - 100 Marks",
+      "Document Verification (DV)",
+      "Medical Examination"
+    ],
+
+    // ✅ Exam Pattern as per PDF Page 6
+    examPattern: {
+      details: [
+        "Mode: Computer Based Test (CBT)",
+        "Total Questions: 100",
+        "Total Marks: 100",
+        "Duration: 90 Minutes (120 Mins for PwBD)",
+        "Negative Marking: 1/3rd marks deducted for wrong answers"
+      ],
+      table: [
+        { subject: "Professional Ability (Nursing/Tech)", questions: 70, marks: 70 },
+        { subject: "General Awareness", questions: 10, marks: 10 },
+        { subject: "General Arithmetic, Intelligence & Reasoning", questions: 10, marks: 10 },
+        { subject: "General Science", questions: 10, marks: 10 }
+      ]
+    },
+
+    howToApply: [
+      "Step 1: Click on the 'Check Application Status' link below.",
+      "Step 2: You will be redirected to the official RRB Login page.",
+      "Step 3: Enter your Registration Number and Date of Birth.",
+      "Step 4: Enter the Captcha Code and click 'Login'.",
+      "Step 5: Your application status (Provisionally Accepted / Rejected) will be displayed.",
+      "Step 6: If accepted, wait for the Admit Card. If rejected, check the reason provided."
+    ],
+
+    links: [
+      { title: "Check Application Status (Login)", url: "https://www.rrbapply.gov.in/#/auth/home" },
+      { title: "Download Application Status Notice", url: "https://www.rrbcdg.gov.in/" },
+      { title: "Official Website", url: "https://indianrailways.gov.in/" }
+    ],
+
+    faqs: [
+      { question: "When was RRB Paramedical Status 2025 released?", answer: "The application status was released on 09 December 2025." },
+      { question: "How can I check my RRB Paramedical Form Status?", answer: "By logging into the official portal rrbapply.gov.in using your Registration Number and DOB." },
+      { question: "What if my application is rejected?", answer: "RRB provides a valid reason for rejection (e.g., invalid photo/signature). The decision is usually final unless a correction window is announced." },
+      { question: "When will the Exam Date be announced?", answer: "The exam dates are expected to be announced shortly after the status check process is completed." }
+    ]
+  },
+// --- 1019. Patna High Court Mazdoor Admit Card 2025 ---
   {
     id: 1019,
     slug: "patna-high-court-mazdoor-admit-card-2025-cycling-test",
