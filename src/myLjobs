@@ -8,7 +8,7 @@ export const latestJobs = [
   {
     id: 30,
     slug: "bombay-high-court-recruitment-2025",
-    shortTitle: "Bombay High Court Recruitment 2025",
+    shortTitle: "Bombay High Court Recruitment 2025 Clerk, Peon, Steno & Driver",
     title: "Bombay High Court Recruitment 2025 Apply Online for 2330 Posts | Clerk, Peon, Steno & Driver",
     shortInfo: "High Court of Judicature at Bombay has released five separate notifications for the recruitment of Stenographer (Higher Grade), Stenographer (Lower Grade), Clerk, Peon/Hamal, and Driver on the establishment of the High Court (Mumbai, Nagpur & Aurangabad Benches). A total of 2330 vacancies are available. Eligible candidates can apply online from 15th December 2025.",
     postDate: "09/12/2025",
