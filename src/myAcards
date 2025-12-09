@@ -43,11 +43,11 @@ export const admitCards = [
 
     // ✅ Exact Category Breakup from PDF Table
     stateWiseVacancy: [
-      { "Post Name": "MTS", "UR": "194", "OBC": "122", "EWS": "46", "SC": "70", "ST": "32", "Total": "464" },
-      { "Post Name": "Executive (S&T)", "UR": "28", "OBC": "23", "EWS": "08", "SC": "09", "ST": "07", "Total": "75" },
-      { "Post Name": "Executive (Electrical)", "UR": "28", "OBC": "14", "EWS": "06", "SC": "11", "ST": "05", "Total": "64" },
-      { "Post Name": "Executive (Civil)", "UR": "16", "OBC": "09", "EWS": "03", "SC": "05", "ST": "03", "Total": "36" },
-      { "Post Name": "Junior Manager (Finance)", "UR": "01", "OBC": "02", "EWS": "00", "SC": "00", "ST": "00", "Total": "03" }
+      { "Post Name": "MTS", "Total": "464", "UR": "194", "OBC": "122", "EWS": "46", "SC": "70", "ST": "32" },
+      { "Post Name": "Executive (S&T)", "Total": "75", "UR": "28", "OBC": "23", "EWS": "08", "SC": "09", "ST": "07" },
+      { "Post Name": "Executive (Electrical)", "Total": "64", "UR": "28", "OBC": "14", "EWS": "06", "SC": "11", "ST": "05" },
+      { "Post Name": "Executive (Civil)", "Total": "36", "UR": "16", "OBC": "09", "EWS": "03", "SC": "05", "ST": "03" },
+      { "Post Name": "Junior Manager (Finance)", "Total": "03", "UR": "01", "OBC": "02", "EWS": "00", "SC": "00", "ST": "00" }
     ],
 
     salaryDetails: [
