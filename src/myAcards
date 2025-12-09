@@ -41,10 +41,7 @@ export const admitCards = [
     vacancyTableTitle: "Post & Category Wise Vacancy Details (Total: 642 Posts)",
     vacancyColumnName: "Post Name",
 
-    // ✅ Corrected Table Structure (Total Column at End)
-    vacancyTableTitle: "Post & Category Wise Vacancy Details (Total: 642 Posts)",
-    vacancyColumnName: "Post Name",
-
+    // ✅ Exact Category Breakup from PDF Table
     stateWiseVacancy: [
       { "Post Name": "MTS", "UR": "194", "OBC": "122", "EWS": "46", "SC": "70", "ST": "32", "Total": "464" },
       { "Post Name": "Executive (S&T)", "UR": "28", "OBC": "23", "EWS": "08", "SC": "09", "ST": "07", "Total": "75" },
