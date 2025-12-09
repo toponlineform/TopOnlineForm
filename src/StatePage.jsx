@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { jobsData } from './jobsData';
+import { jobsData } from './jobsData'; // Master Data
 import SEO from './SEO';
 
 const StatePage = () => {
@@ -34,7 +34,8 @@ const StatePage = () => {
   }, [selectedState]);
 
   return (
-    <div className="job-container">
+    // ✅ REMOVED "job-container" & ADDED INLINE STYLE FOR WIDTH ONLY
+    <div style={{ padding: '20px', maxWidth: '1000px', margin: '0 auto' }}>
       <SEO 
         title="State Wise Govt Jobs 2025 | UP, Bihar, Rajasthan, Delhi" 
         description="Find government jobs state-wise. Check recruitment in UP, Bihar, Haryana, Rajasthan, Delhi and Central Govt." 
@@ -46,6 +47,7 @@ const StatePage = () => {
         Browse Jobs by State
       </div>
 
+      {/* State Buttons */}
       <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px', marginBottom: '30px'}}>
         {states.map((state) => (
           <button
@@ -68,28 +70,31 @@ const StatePage = () => {
         ))}
       </div>
 
-      <div className="box-column">
-        <div className="box-header" style={{backgroundColor: '#004080'}}>
-          {selectedState === "All" ? "Latest Updates (All States)" : `${selectedState} Govt Jobs`}
-        </div>
-        <ul className="box-list">
-          {filteredJobs.length > 0 ? (
-            filteredJobs.map(job => (
-              <li key={job.id} style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
-                <Link to={`/${job.slug}`} style={{textDecoration:'none', color:'#0056b3', fontWeight:'500'}}>
-                  {job.shortTitle || job.title}
-                </Link>
-                <span style={{fontSize:'12px', color:'#666', minWidth:'80px', textAlign:'right'}}>
-                   {job.category === "Latest Jobs" ? "Job" : job.category}
-                </span>
+      {/* Results Grid - Centered & Width Controlled */}
+      <div style={{maxWidth: '800px', margin: '0 auto'}}>
+        <div className="box-column">
+          <div className="box-header" style={{backgroundColor: '#004080'}}>
+            {selectedState === "All" ? "Latest Updates (All States)" : `${selectedState} Govt Jobs`}
+          </div>
+          <ul className="box-list">
+            {filteredJobs.length > 0 ? (
+              filteredJobs.map(job => (
+                <li key={job.id} style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
+                  <Link to={`/${job.slug}`} style={{textDecoration:'none', color:'#0056b3', fontWeight:'500'}}>
+                    {job.shortTitle || job.title}
+                  </Link>
+                  <span style={{fontSize:'12px', color:'#666', minWidth:'80px', textAlign:'right'}}>
+                     {job.category === "Latest Jobs" ? "Job" : job.category}
+                  </span>
+                </li>
+              ))
+            ) : (
+              <li style={{padding:'20px', textAlign:'center', color:'#ab1e1e'}}>
+                No active jobs found for {selectedState} right now.
               </li>
-            ))
-          ) : (
-            <li style={{padding:'20px', textAlign:'center', color:'#ab1e1e'}}>
-              No active jobs found for {selectedState} right now.
-            </li>
-          )}
-        </ul>
+            )}
+          </ul>
+        </div>
       </div>
     </div>
   );
