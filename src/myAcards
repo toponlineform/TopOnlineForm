@@ -42,12 +42,12 @@ export const admitCards = [
     vacancyColumnName: "Category Name",
 
     stateWiseVacancy: [
-      { "Category Name": "Unreserved (UR)", "Total": "76", "Women": "26" },
-      { "Category Name": "EWS", "Total": "17", "Women": "06" },
-      { "Category Name": "BC", "Total": "21", "Women": "07" },
-      { "Category Name": "EBC", "Total": "30", "Women": "11" },
-      { "Category Name": "SC", "Total": "25", "Women": "09" },
-      { "Category Name": "ST", "Total": "02", "Women": "00" }
+      { "Category Name": "Unreserved (UR)", "Total": "74"},
+      { "Category Name": "EWS", "Total": "17"},
+      { "Category Name": "BC", "Total": "20"},
+      { "Category Name": "EBC", "Total": "31"},
+      { "Category Name": "SC", "Total": "27"},
+      { "Category Name": "ST", "Total": "02"}
     ],
 
     selectionProcess: [
