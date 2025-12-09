@@ -70,8 +70,8 @@ const ActiveJobs = () => {
   );
 
   return (
-    // ✅ ADDED CLASS "job-container" TO FIX WIDTH
-    <div className="job-container">
+    // ✅ REMOVED "job-container" & ADDED INLINE STYLE FOR WIDTH ONLY
+    <div style={{ padding: '20px', maxWidth: '1000px', margin: '0 auto' }}>
       <SEO 
         title="Active Govt Jobs 2025 | Live Application Forms" 
         description="Check list of all currently active government jobs, online application forms, and admissions ending soon." 
@@ -83,7 +83,7 @@ const ActiveJobs = () => {
         Active Govt Jobs & Admissions (Live)
       </div>
 
-      <div style={{marginBottom: '20px'}}>
+      <div style={{marginBottom: '20px', maxWidth: '800px', margin: '0 auto 20px auto'}}>
         <input 
           type="text" 
           placeholder="Search within active jobs..." 
@@ -99,12 +99,11 @@ const ActiveJobs = () => {
         />
       </div>
 
-      <div style={{overflowX: 'auto'}}>
-        {/* ✅ Keeps your exact table style with black borders */}
+      {/* ✅ Table Container (Centered with max-width) */}
+      <div style={{maxWidth: '800px', margin: '0 auto', overflowX: 'auto'}}>
         <table className="vacancy-table" style={{width: '100%', borderCollapse: 'collapse', border: '2px solid black'}}>
           <thead>
             <tr style={{background: '#f2f2f2'}}>
-              {/* ✅ Header Border changed to Black */}
               <th style={{padding: '12px', border: '1px solid black', width: '140px', textAlign: 'center', background:'#eee', color:'#333'}}>
                 Last Date
               </th>
@@ -122,8 +121,6 @@ const ActiveJobs = () => {
                 
                 return (
                   <tr key={job.id} style={{background: 'white'}}>
-                    
-                    {/* ✅ Cell Border changed to Black */}
                     <td style={{
                         padding: '12px', 
                         border: '1px solid black', 
@@ -135,7 +132,6 @@ const ActiveJobs = () => {
                       {lastDate}
                     </td>
                     
-                    {/* ✅ Cell Border changed to Black */}
                     <td style={{padding: '12px', border: '1px solid black'}}>
                       <Link to={`/${job.slug}`} style={{textDecoration: 'none', color: '#0056b3', fontWeight: '500', fontSize: '15px', display:'block'}}>
                         {job.shortTitle || job.title}
