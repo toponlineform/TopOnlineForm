@@ -3,7 +3,428 @@ export const latestJobs = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+  // --- 34. RITES Limited Senior Technical Assistant Recruitment 2025 ---
+  {
+    id: 34,
+    slug: "rites-limited-senior-technical-assistant-recruitment-2025",
+    shortTitle: "RITES Limited Recruitment 2025",
+    title: "RITES Limited Senior Technical Assistant Recruitment 2025 Apply Online for 150 Posts | Diploma Engineer Vacancy",
+    shortInfo: "RITES Limited, a Navratna Central Public Sector Enterprise under the Ministry of Railways, has released the official notification for the engagement of Senior Technical Assistant (Mechanical) on a contract basis. A total of 150 vacancies are available across North, East, West, and South regions. Eligible candidates with a Diploma in Engineering can apply online from 09th December 2025.",
+    postDate: "10/12/2025",
+    category: "Latest Jobs",
 
+    salary: "₹29,735/- (Approx. Monthly Gross CTC)",
+
+    importantDates: [
+      { label: "Notification Date", value: "09/12/2025" },
+      { label: "Application Start", value: "09/12/2025" },
+      { label: "Last Date for Apply", value: "30/12/2025" },
+      { label: "Fee Payment Last Date", value: "30/12/2025" },
+      { label: "Written Exam Date", value: "11/01/2026 (15:00 - 17:30)" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC (NCL)", amount: "₹300/- + Taxes" },
+      { category: "EWS / SC / ST / PwBD", amount: "₹100/- + Taxes" },
+      { category: "Payment Mode", amount: "Online" }
+    ],
+
+    ageLimit: "Maximum 40 Years (As on 30/12/2025). Age relaxation as per Govt rules (OBC: 3 Years, SC/ST: 5 Years, PwBD: 10 Years).",
+
+    vacancyDetails: [
+      { 
+        postName: "Senior Technical Assistant (Mechanical)", 
+        totalPost: "150", 
+        eligibility: "Full time Diploma in Mechanical / Production / Automobile Engineering OR Degree (B.E/B.Tech) in same discipline + 2 Years Post Qualification Experience." 
+      }
+    ],
+
+    vacancyTableTitle: "Region Wise Vacancy Details (Total: 150 Posts)",
+    vacancyColumnName: "Region Name",
+
+    // ✅ Detailed Region-Wise Breakup from PDF
+    stateWiseVacancy: [
+      { "Region Name": "North (M/121/25)", "UR": "21", "EWS": "04", "OBC": "13", "SC": "08", "ST": "04", "Total": "50" },
+      { "Region Name": "East (M/122/25)", "UR": "31", "EWS": "07", "OBC": "20", "SC": "11", "ST": "06", "Total": "75" },
+      { "Region Name": "West (M/123/25)", "UR": "05", "EWS": "00", "OBC": "03", "SC": "01", "ST": "01", "Total": "10" },
+      { "Region Name": "South (M/124/25)", "UR": "07", "EWS": "01", "OBC": "04", "SC": "02", "ST": "01", "Total": "15" },
+      { "Region Name": "Grand Total", "UR": "64", "EWS": "12", "OBC": "40", "SC": "22", "ST": "12", "Total": "150" }
+    ],
+
+    selectionProcess: [
+      "Written Test (100% Weightage) - No Interview",
+      "Document Scrutiny",
+      "Medical Examination"
+    ],
+
+    // ✅ Exam Pattern Section as per Notification
+    examPattern: {
+      details: [
+        "Mode: Written Test (Objective Type)",
+        "Total Questions: 125",
+        "Duration: 2.5 Hours",
+        "Negative Marking: NO Negative Marking",
+        "Qualifying Marks: 50% for UR/EWS, 45% for Reserved Categories."
+      ]
+    },
+
+    extraSections: [
+      {
+        title: "Region Coverage (For Posting)",
+        list: [
+          "**North:** Delhi, Haryana, HP, J&K, Ladakh, Punjab, Rajasthan, UP, Uttarakhand, Chandigarh.",
+          "**East:** Assam, NE States, Bihar, Odisha, Jharkhand, West Bengal, Andaman.",
+          "**West:** Gujarat, MP, Maharashtra, Chhattisgarh, Goa, Dadra & Nagar Haveli.",
+          "**South:** AP, Telangana, Karnataka, Kerala, Tamil Nadu, Puducherry."
+        ]
+      },
+      {
+        title: "Important Note on Experience",
+        text: "Candidates must have **minimum 2 years** of post-qualification experience in the relevant field. Apprenticeship training is counted as experience."
+      }
+    ],
+
+    howToApply: [
+      "Step 1: Visit the official website www.rites.com.",
+      "Step 2: Go to 'Career' -> 'Online Registration'.",
+      "Step 3: Register and generate a Registration No.",
+      "Step 4: Fill the application form and upload documents (Education, Experience, Caste, Photo, ID).",
+      "Step 5: Pay the application fee online.",
+      "Step 6: Submit the form and keep the printout. (No need to send hard copy)."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://recruit.rites.com/frmRegistration.aspx" },
+      { title: "Download Notification", url: "https://www.rites.com/Upload/Career/M_121-125_25_adv_pdf-2025-Dec-09-17-24-0.pdf" },
+      { title: "Official Website", url: "https://www.rites.com/" }
+    ],
+
+    faqs: [
+      { question: "What is the exam date for RITES Recruitment 2025?", answer: "The written exam is scheduled for 11th January 2026." },
+      { question: "Is B.Tech eligible for Senior Technical Assistant?", answer: "Yes, candidates with higher qualifications (Degree/PG) in the same discipline are eligible." },
+      { question: "Is there any interview for this post?", answer: "No, selection is based 100% on the Written Test score." },
+      { question: "What is the application fee?", answer: "₹300 for General/OBC and ₹100 for SC/ST/EWS/PwBD." }
+    ]
+  },
+  // --- 33. Gurugram University Non-Teaching Recruitment 2025 ---
+  {
+    id: 33,
+    slug: "gurugram-university-non-teaching-recruitment-2025",
+    shortTitle: "Gurugram University Recruitment 2025",
+    title: "Gurugram University Non-Teaching Recruitment 2025 Apply Online for 27 Posts | Clerk, Peon, Steno & More",
+    shortInfo: "Gurugram University, Gurugram has released the official notification (Advt. No. NT-02-06/2025) for the recruitment of various Non-Teaching posts including Clerk-cum-DEO, Peon, Steno-Typist, Carpenter, and Daftri on a regular basis. Interested and eligible candidates can apply online from 10th December 2025.",
+    postDate: "05/12/2025",
+    category: "Latest Jobs",
+
+    salary: "Level-DL to Level-4 (Post Wise Pay Scale)",
+
+    importantDates: [
+      { label: "Notification Date", value: "05/12/2025" },
+      { label: "Application Start", value: "10/12/2025 (09:00 AM)" },
+      { label: "Last Date for Apply", value: "30/12/2025 (Midnight)" },
+      { label: "Fee Payment Last Date", value: "30/12/2025" },
+      { label: "Exam Date", value: "To be notified later" }
+    ],
+
+    applicationFee: [
+      { category: "General (Male/Female)", amount: "₹500/-" },
+      { category: "Female (Haryana Domicile)", amount: "₹250/-" },
+      { category: "Reserved Male (SC/BC/EWS/ESM) of Haryana", amount: "₹125/-" },
+      { category: "Reserved Female (SC/BC/EWS/ESM) of Haryana", amount: "₹63/-" },
+      { category: "PwBD (Haryana)", amount: "₹0/- (Nil)" },
+      { category: "Payment Mode", amount: "Online" }
+    ],
+
+    ageLimit: "18-42 Years (As on 30/12/2025). Age relaxation as per Haryana Govt rules.",
+
+    vacancyDetails: [
+      { postName: "Clerk-cum-DEO", totalPost: "18", eligibility: "Graduate + Typing + Computer Knowledge (Check Notification)" },
+      { postName: "Peon", totalPost: "05", eligibility: "10th Pass (Matriculation)" },
+      { postName: "Steno-Typist (English)", totalPost: "02", eligibility: "Graduate + English Stenography (80 wpm)" },
+      { postName: "Carpenter (Gr-I)", totalPost: "01", eligibility: "ITI Certificate in Carpenter Trade" },
+      { postName: "Daftri", totalPost: "01", eligibility: "10th Pass / 12th Pass" }
+    ],
+
+    // ✅ Note Enabled for this table
+    stateTableNote: true, 
+    vacancyTableTitle: "Post & Category Wise Vacancy Details",
+    vacancyColumnName: "Post Name",
+
+    stateWiseVacancy: [
+      { "Post Name": "Clerk-cum-DEO", "Total": "18", "UR": "05", "SC/DSC": "02", "BCA": "02", "BCB": "02", "EWS": "02", "ESM": "03", "PwBD": "01", "OSC": "02" },
+      { "Post Name": "Peon", "Total": "05", "UR": "0", "SC/DSC": "01", "BCA": "01", "BCB": "01", "EWS": "01", "ESP": "01" },
+      { "Post Name": "Steno-Typist (Eng)", "Total": "02", "UR": "0", "SC/DSC": "01", "EWS": "01", "BCA": "-", "BCB": "-" },
+      { "Post Name": "Carpenter-Gr-I", "Total": "01", "UR": "01", "SC": "-", "BCA": "-", "BCB": "-", "EWS": "-" },
+      { "Post Name": "Daftri", "Total": "01", "UR": "0", "BCA": "01", "SC": "-", "BCB": "-", "EWS": "-" }
+    ],
+
+    salaryDetails: [
+      { post: "Carpenter-Gr-I", level: "FPL-4" },
+      { post: "Clerk-cum-DEO", level: "FPL-2" },
+      { post: "Steno-Typist", level: "FPL-2" },
+      { post: "Daftri", level: "FPL-2" },
+      { post: "Peon", level: "FPL-DL" }
+    ],
+
+    selectionProcess: [
+      "Written Test / Skill Test (Qualifying Nature - 50% Marks)",
+      "Document Verification",
+      "Medical Examination"
+    ],
+
+    extraSections: [
+      {
+        title: "Important Instructions",
+        list: [
+          "**Written Test:** It is mandatory to qualify the written/skill test. Minimum qualifying marks are 50% (47.5% for Reserved Categories).",
+          "**Hard Copy:** No need to send the hard copy of the application form.",
+          "**Reservation:** Benefit of reservation is available only for Haryana Domicile candidates."
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Visit the official website www.gurugramuniversity.ac.in.",
+      "Click on the 'Recruitment' tab.",
+      "Select Advertisement No. NT-02-06/2025.",
+      "Register and fill the online application form.",
+      "Upload necessary documents (Photo, Signature, Qualifications).",
+      "Pay the application fee online.",
+      "Submit the form and take a printout."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://gurugramuniversity.ac.in/allNotifications/recruitmentNotice/index.php" },
+      { title: "Download Notification PDF", url: "https://gurugramuniversity.ac.in/Notice/Advt.%20no.-%20NT-02-06%20of%202025.pdf" },
+      { title: "Official Website", url: "https://gurugramuniversity.ac.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the last date to apply for Gurugram University Non-Teaching posts?", answer: "The last date is 30 December 2025." },
+      { question: "How many vacancies are there for Clerk-cum-DEO?", answer: "There are 18 vacancies for the Clerk-cum-DEO post." },
+      { question: "Is there any application fee?", answer: "Yes, ₹500 for General candidates and ₹125 for Reserved Male candidates of Haryana." },
+      { question: "What is the selection process?", answer: "Selection will be based on a Written/Skill Test and Document Verification." }
+    ]
+  },
+  // --- Gurugram University Assistant Professor Recruitment 2025 ---
+  {
+    id: 32, // Replace with the next sequential ID
+    slug: "gurugram-university-assistant-professor-recruitment-2025",
+    shortTitle: "Gurugram University Recruitment 2025",
+    title: "Gurugram University Assistant Professor Recruitment 2025 Apply Online for 38 Posts | Regular Vacancy",
+    shortInfo: "Gurugram University, Gurugram (A State Govt. University) has released the official notification (Advt. No. T-1-12/2025) for the recruitment of Assistant Professors on a regular basis in various subjects/disciplines. Interested and eligible candidates can apply online from 10th December 2025 to 30th December 2025.",
+    postDate: "05/12/2025",
+    category: "Latest Jobs",
+
+    salary: "Academic Pay Level-10 (As per 7th CPC)",
+
+    importantDates: [
+      { label: "Notification Date", value: "05/12/2025" },
+      { label: "Application Start", value: "10/12/2025 (09:00 AM)" },
+      { label: "Last Date for Apply", value: "30/12/2025 (Midnight)" },
+      { label: "Fee Payment Last Date", value: "30/12/2025" },
+      { label: "Exam Date", value: "To be notified later" }
+    ],
+
+    applicationFee: [
+      { category: "General (Male) & Others (Outside Haryana)", amount: "₹2000/-" },
+      { category: "General (Female) of Haryana", amount: "₹1000/-" },
+      { category: "Reserved Male (DSC/OSC/BCA/BCB/ESM/EWS) of Haryana", amount: "₹500/-" },
+      { category: "Reserved Female (DSC/OSC/BCA/BCB/ESM/EWS) of Haryana", amount: "₹250/-" },
+      { category: "PwBD (Haryana)", amount: "₹0/- (Nil)" },
+      { category: "Payment Mode", amount: "Online" }
+    ],
+
+    ageLimit: "18-55 Years (As on 30/12/2025). No age relaxation is admissible.",
+
+    vacancyDetails: [
+      { 
+        postName: "Assistant Professor", 
+        totalPost: "38", 
+        eligibility: "Master's Degree with 55% marks + NET/SLET/SET OR Ph.D. (As per UGC Regulations). Hindi/Sanskrit as a subject at Matric level." 
+      }
+    ],
+
+    // ✅ Note Enabled for this table
+    stateTableNote: true, 
+    vacancyTableTitle: "Subject Wise Vacancy Details",
+    vacancyColumnName: "Subject / Discipline",
+
+    stateWiseVacancy: [
+      { "Subject / Discipline": "Computer Science & Engg.", "Total": "08", "UR": "01", "DSC": "02", "OSC": "02", "BCA": "01", "EWS": "01", "PwBD": "01" },
+      { "Subject / Discipline": "Management", "Total": "06", "UR": "01", "BCB": "01", "EWS": "01", "OSC": "01", "DSC(ESM)": "01", "PwBD": "01" },
+      { "Subject / Discipline": "Law", "Total": "06", "UR": "02", "BCA": "01", "BCB": "02", "PwBD": "01", "SC": "-", "ST": "-" },
+      { "Subject / Discipline": "ECE", "Total": "04", "UR": "02", "OSC": "01", "Gen(ESM)": "01", "SC": "-", "ST": "-", "EWS": "-" },
+      { "Subject / Discipline": "Physiotherapy", "Total": "04", "UR": "02", "BCA": "01", "EWS": "01", "SC": "-", "ST": "-", "BCB": "-" },
+      { "Subject / Discipline": "Pharmaceutical Sciences", "Total": "03", "UR": "01", "DSC": "01", "BCB": "01", "SC": "-", "ST": "-", "EWS": "-" },
+      { "Subject / Discipline": "Economics", "Total": "02", "UR": "01", "BCA": "01", "SC": "-", "ST": "-", "EWS": "-", "BCB": "-" },
+      { "Subject / Discipline": "Physics", "Total": "01", "UR": "0", "PwBD": "01", "SC": "-", "ST": "-", "EWS": "-", "BCB": "-" },
+      { "Subject / Discipline": "Hindi", "Total": "01", "UR": "01", "SC": "-", "ST": "-", "EWS": "-", "BCA": "-", "BCB": "-" },
+      { "Subject / Discipline": "Mathematics", "Total": "01", "UR": "0", "DSC": "01", "SC": "-", "ST": "-", "EWS": "-", "BCB": "-" },
+      { "Subject / Discipline": "English", "Total": "01", "UR": "01", "SC": "-", "ST": "-", "EWS": "-", "BCA": "-", "BCB": "-" },
+      { "Subject / Discipline": "Psychology", "Total": "01", "UR": "0", "EWS": "01", "SC": "-", "ST": "-", "BCA": "-", "BCB": "-" }
+    ],
+
+    selectionProcess: [
+      "Written Test (Qualifying Nature - Min 50% Marks)",
+      "Scrutiny of Applications (Eligibility Check)",
+      "Interview",
+      "Document Verification"
+    ],
+
+    examPattern: {
+      details: [
+        "The Written Test is mandatory to qualify.",
+        "Minimum Qualifying Marks: 50% (47.5% for DSC/OSC/BC/PwBD category).",
+        "Syllabus and Structure will be uploaded on the University website shortly."
+      ]
+    },
+
+    extraSections: [
+      {
+        title: "Important Note for Previous Applicants",
+        text: "Applicants who applied against **Advt. No. T-38-48/2024** and did not claim a refund must apply fresh. However, they are **exempted from paying the fee** again if they upload the previous fee receipt."
+      },
+      {
+        title: "Subject Specializations",
+        list: [
+          "**Pharmaceutical Sciences:** Pharmacognosy / Pharmaceutics",
+          "**Management:** Business Analytics, Financial Management, Supply Chain",
+          "**Law:** Business Law, Cyber Law, Constitutional & International Law",
+          "**CSE:** AI/IOT/Cyber Security/IT/Data Science",
+          "**Physics:** Electronics/Material Science",
+          "**Physiotherapy:** Cardio Pulmonary/ Neurology",
+          "**ECE:** VLSI Design & Tech.",
+          "**English:** Communication Skills",
+          "**Mathematics:** Pure/Applied Math"
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Visit the official website: www.gurugramuniversity.ac.in.",
+      "Click on the 'Recruitment' section and select Advt. No. T-1-12/2025.",
+      "Register yourself and fill out the online application form.",
+      "Upload required documents (Educational, Experience, Category, etc.).",
+      "Pay the application fee online.",
+      "Submit the form. (No need to send Hard Copy)."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://gurugramuniversity.ac.in/allNotifications/recruitmentNotice/index.php" },
+      { title: "Download Notification PDF", url: "https://gurugramuniversity.ac.in/Notice/Advt%20No.%2001-12%20of%202025%20(Revised%20dt.%2008.12.25).pdf" },
+      { title: "Official Website", url: "https://gurugramuniversity.ac.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the last date to apply for Gurugram University Recruitment?", answer: "The last date is 30 December 2025." },
+      { question: "Is there any age relaxation?", answer: "No, there is no age relaxation admissible. The age limit is 18-55 years." },
+      { question: "Do I need to send the hard copy of the application?", answer: "No, print out of the application (Hard copy) need not be submitted." },
+      { question: "What is the application fee for General Male?", answer: "The fee is ₹2000/-." }
+    ]
+  },
+  // --- 31. RCF Kapurthala Apprentice Recruitment 2025 ---
+  {
+    id: 31,
+    slug: "rcf-kapurthala-apprentice-recruitment-2025",
+    shortTitle: "RCF Kapurthala Apprentice Recruitment 2025",
+    title: "RCF Kapurthala Apprentice Recruitment 2025 Apply Online for 550 Posts | Rail Coach Factory Act Apprentice",
+    shortInfo: "Rail Coach Factory (RCF), Kapurthala has released the official notification (Notice No. A-1/2025) for the engagement of 550 Act Apprentices for the year 2025-26. Eligible ITI pass candidates can apply online from 09th December 2025. Selection will be based on Merit (No Exam).",
+    postDate: "09/12/2025",
+    category: "Latest Jobs",
+
+    salary: "As per Apprenticeship Rules (Stipend)",
+
+    importantDates: [
+      { label: "Notification Date", value: "09/12/2025" },
+      { label: "Application Begin", value: "09/12/2025" },
+      { label: "Last Date for Apply", value: "07/01/2026 (11:59 PM)" },
+      { label: "Fee Payment Last Date", value: "09/01/2026 (11:59 PM)" },
+      { label: "Merit List Date", value: "To be notified later" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹100/-" },
+      { category: "SC / ST / PwBD / Women", amount: "₹0/- (Nil)" },
+      { category: "Payment Mode", amount: "Online (Debit/Credit Card/Net Banking)" }
+    ],
+
+    ageLimit: "15-24 Years (As on 07/01/2026)",
+    ageRelaxation: [
+      "SC/ST: 5 Years",
+      "OBC (NCL): 3 Years",
+      "PwBD: 10 Years"
+    ],
+
+    vacancyDetails: [
+      { 
+        postName: "Act Apprentice (Various Trades)", 
+        totalPost: "550", 
+        eligibility: "10th Pass (min 50% marks) + ITI Certificate in relevant trade (NCVT)." 
+      }
+    ],
+
+    // ✅ Note Enabled for this table
+    stateTableNote: true, 
+
+    vacancyTableTitle: "Trade Wise Vacancy Details (Total: 550 Posts)",
+    vacancyColumnName: "Trade Name",
+
+    // ✅ Fixed Table: PwBD & ExSM are AFTER Total (As requested)
+    stateWiseVacancy: [
+      { "Trade Name": "Fitter", "UR": "75", "SC": "23", "ST": "11", "OBC": "41", "Total": "150", "PwBD": "06", "ExSM": "05" },
+      { "Trade Name": "Welder (G&E)", "UR": "90", "SC": "27", "ST": "14", "OBC": "49", "Total": "180", "PwBD": "07", "ExSM": "05" },
+      { "Trade Name": "Machinist", "UR": "10", "SC": "03", "ST": "02", "OBC": "05", "Total": "20", "PwBD": "01", "ExSM": "01" },
+      { "Trade Name": "Painter (G)", "UR": "15", "SC": "05", "ST": "02", "OBC": "08", "Total": "30", "PwBD": "01", "ExSM": "01" },
+      { "Trade Name": "Carpenter", "UR": "15", "SC": "05", "ST": "02", "OBC": "08", "Total": "30", "PwBD": "01", "ExSM": "01" },
+      { "Trade Name": "Electrician", "UR": "45", "SC": "14", "ST": "07", "OBC": "24", "Total": "90", "PwBD": "03", "ExSM": "03" },
+      { "Trade Name": "AC & Ref. Mechanic", "UR": "15", "SC": "05", "ST": "02", "OBC": "08", "Total": "30", "PwBD": "01", "ExSM": "01" },
+      { "Trade Name": "Electronic Mechanic", "UR": "10", "SC": "03", "ST": "02", "OBC": "05", "Total": "20", "PwBD": "01", "ExSM": "01" }
+    ],
+
+    selectionProcess: [
+      "Merit List based on Marks in Matriculation (50%) + ITI (50%)",
+      "Document Verification (DV)",
+      "Medical Examination"
+    ],
+
+    extraSections: [
+      {
+        title: "Documents Required for Online Application",
+        list: [
+          "Scanned Photograph (20-70 KB, JPG).",
+          "Scanned Signature (20-30 KB, JPG).",
+          "10th Class Marksheet & Certificate.",
+          "ITI Certificate (NCVT) & Marksheet.",
+          "Caste Certificate (SC/ST/OBC) if applicable.",
+          "PwBD Certificate (if applicable)."
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Step 1: Visit the official website rcf.indianrailways.gov.in.",
+      "Step 2: Click on 'Act Apprentice 2025-26 Online Application' link.",
+      "Step 3: Register by creating a User ID and Password.",
+      "Step 4: Login and fill the application form carefully.",
+      "Step 5: Pay the application fee of ₹100 online (if applicable).",
+      "Step 6: Upload scanned photo, signature, and documents.",
+      "Step 7: Submit the form and take a printout for future reference."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://pardarsy.railnet.gov.in/apprentice-2025/" },
+      { title: "Download Notification", url: "https://rcf.indianrailways.gov.in/uploads/files/act-app/act-app-notification-2025.pdf" },
+      { title: "Official Website", url: "https://rcf.indianrailways.gov.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the last date to apply for RCF Kapurthala Apprentice?", answer: "The last date is 07 January 2026." },
+      { question: "Is there any exam for RCF Apprentice Selection?", answer: "No, selection is based on a Merit List prepared from 10th and ITI marks." },
+      { question: "What is the age limit?", answer: "15 to 24 years as on 07.01.2026." },
+      { question: "Can SCVT pass candidates apply?", answer: "No, only NCVT certificate holders are generally eligible (Check notification for exceptions)." }
+    ]
+  },
   // --- 30. Bombay High Court Recruitment 2025 (Clerk, Peon, Steno, Driver) ---
   {
     id: 30,
