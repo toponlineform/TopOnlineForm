@@ -47,8 +47,7 @@ export const latestJobs = [
       { "Region Name": "North (M/121/25)", "UR": "21", "EWS": "04", "OBC": "13", "SC": "08", "ST": "04", "Total": "50" },
       { "Region Name": "East (M/122/25)", "UR": "31", "EWS": "07", "OBC": "20", "SC": "11", "ST": "06", "Total": "75" },
       { "Region Name": "West (M/123/25)", "UR": "05", "EWS": "00", "OBC": "03", "SC": "01", "ST": "01", "Total": "10" },
-      { "Region Name": "South (M/124/25)", "UR": "07", "EWS": "01", "OBC": "04", "SC": "02", "ST": "01", "Total": "15" },
-      { "Region Name": "Grand Total", "UR": "64", "EWS": "12", "OBC": "40", "SC": "22", "ST": "12", "Total": "150" }
+      { "Region Name": "South (M/124/25)", "UR": "07", "EWS": "01", "OBC": "04", "SC": "02", "ST": "01", "Total": "15" }
     ],
 
     selectionProcess: [
