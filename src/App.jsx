@@ -249,6 +249,10 @@ function JobDetails() {
 
     if (autoTotal) {
         headers.forEach(header => {
+            // ✅ FIX: Don't calculate totals for Text Columns like Eligibility or Name
+            const h = header.toLowerCase();
+            if (h.includes("eligibility") || h.includes("name") || h.includes("qualification")) return;
+
             const sum = data.reduce((acc, row) => acc + (parseFloat(row[header]) || 0), 0);
             if (sum > 0) { colTotals[header] = sum; showTotal = true; }
         });
