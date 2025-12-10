@@ -359,17 +359,4 @@ th, td {
   background-color: #ccc;
   border-radius: 4px;
 }
-/* Mobile Grid Look (Like Desktop) */
-@media (max-width: 768px) {
-  .main-grid {
-    display: grid;
-    /* Mobile par 2 columns dikhao (pehle 1 tha) */
-    grid-template-columns: repeat(2, 1fr) !important; 
-    gap: 8px; /* Thoda gap kam karo */
-  }
 
-  /* Font size thoda chhota karo taaki 2 column fit ho jayein */
-  .box-list li a {
-    font-size: 13px; 
-  }
-}
