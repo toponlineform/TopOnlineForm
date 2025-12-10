@@ -110,7 +110,7 @@ export const latestJobs = [
   {
     id: 33,
     slug: "gurugram-university-non-teaching-recruitment-2025",
-    shortTitle: "Gurugram University Recruitment 2025",
+    shortTitle: "Gurugram University Non Teaching Recruitment 2025",
     title: "Gurugram University Non-Teaching Recruitment 2025 Apply Online for 27 Posts | Clerk, Peon, Steno & More",
     shortInfo: "Gurugram University, Gurugram has released the official notification (Advt. No. NT-02-06/2025) for the recruitment of various Non-Teaching posts including Clerk-cum-DEO, Peon, Steno-Typist, Carpenter, and Daftri on a regular basis. Interested and eligible candidates can apply online from 10th December 2025.",
     postDate: "05/12/2025",
@@ -210,7 +210,7 @@ export const latestJobs = [
   {
     id: 32, // Replace with the next sequential ID
     slug: "gurugram-university-assistant-professor-recruitment-2025",
-    shortTitle: "Gurugram University Recruitment 2025",
+    shortTitle: "Gurugram University Assistant Professor Recruitment 2025",
     title: "Gurugram University Assistant Professor Recruitment 2025 Apply Online for 38 Posts | Regular Vacancy",
     shortInfo: "Gurugram University, Gurugram (A State Govt. University) has released the official notification (Advt. No. T-1-12/2025) for the recruitment of Assistant Professors on a regular basis in various subjects/disciplines. Interested and eligible candidates can apply online from 10th December 2025 to 30th December 2025.",
     postDate: "05/12/2025",
