@@ -228,8 +228,8 @@ export const latestJobs = [
     applicationFee: [
       { category: "General (Male) & Others (Outside Haryana)", amount: "₹2000/-" },
       { category: "General (Female) of Haryana", amount: "₹1000/-" },
-      { category: "Reserved Male (DSC/OSC/BCA/BCB/ESM/EWS) of Haryana", amount: "₹500/-" },
-      { category: "Reserved Female (DSC/OSC/BCA/BCB/ESM/EWS) of Haryana", amount: "₹250/-" },
+      { category: "Reserved Male (DSC/OSC/BCA/ BCB/ESM/EWS) of Haryana", amount: "₹500/-" },
+      { category: "Reserved Female (DSC/OSC/BCA/ BCB/ESM/EWS) of Haryana", amount: "₹250/-" },
       { category: "PwBD (Haryana)", amount: "₹0/- (Nil)" },
       { category: "Payment Mode", amount: "Online" }
     ],
