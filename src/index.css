@@ -359,11 +359,3 @@ th, td {
   background-color: #ccc;
   border-radius: 4px;
 }
-/* --- GLOBAL TABLE FIX FOR MOBILE --- */
-/* Ye code lambe shabdon ko tod kar agli line me layega */
-td, th {
-  word-break: break-word !important;
-  overflow-wrap: anywhere !important;
-  white-space: normal !important;
-  max-width: 100%; /* Safety net */
-}
