@@ -3,7 +3,125 @@ export const latestJobs = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
-   // --- 38. CSIR NCL Pune Recruitment 2025 ---
+   
+    // --- 39. DSSSB MTS Recruitment 2025 (Job ID 39) ---
+  {
+    id: 39,
+    slug: "dsssb-mts-recruitment-2025-online-form",
+    shortTitle: "DSSSB MTS Recruitment 2025",
+    title: "DSSSB MTS Recruitment 2025 Apply Online for 714 Posts | Multi Tasking Staff (Post Code 803/25)",
+    shortInfo: "Delhi Subordinate Services Selection Board (DSSSB) has released the official notification (Advt. No. 07/2025) for the combined examination of Multi-Tasking Staff (MTS). A total of 714 vacancies are available across various departments of the Government of NCT of Delhi. Eligible candidates can apply online from 17th December 2025.",
+    postDate: "11/12/2025",
+    category: "Latest Jobs",
+    state: "Delhi",
+    tags: ["DSSSB MTS Vacancy 2025", "Delhi Govt Jobs", "10th Pass Jobs", "DSSSB Recruitment 2025", "MTS Online Form"],
+
+    salary: "₹18,000 - ₹56,900 (Pay Level-1, Group C)",
+
+    importantDates: [
+      { label: "Notification Date", value: "11/12/2025" },
+      { label: "Application Begin", value: "17/12/2025 (12:00 Noon)" },
+      { label: "Last Date for Apply", value: "15/01/2026 (11:59 PM)" },
+      { label: "Fee Payment Last Date", value: "15/01/2026" },
+      { label: "Exam Date", value: "To be notified later" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹100/-" },
+      { category: "Women / SC / ST / PwBD / Ex-SM", amount: "₹0/- (Nil)" },
+      { category: "Payment Mode", amount: "Online (SBI e-pay only)" }
+    ],
+
+    ageLimit: "18-27 Years (As on 15/01/2026). Age Relaxation as per rules.",
+
+    vacancyDetails: [
+      { 
+        postName: "Multi-Tasking Staff (MTS)", 
+        totalPost: "714", 
+        eligibility: "Matriculation (10th Class) or equivalent pass from a recognized Board/University." 
+      }
+    ],
+
+    vacancyTableTitle: "Department Wise Vacancy Details (Post Code 803/25)",
+    vacancyColumnName: "Department Name",
+
+    // ✅ Detailed Department-Wise Breakup from PDF
+    stateWiseVacancy: [
+      { "Department Name": "Development Department", "UR": 100, "OBC": 77, "SC": 3, "ST": 21, "EWS": 30, "Total": 231 },
+      { "Department Name": "Dept of Food, Supplies & Consumer Affairs", "UR": 57, "OBC": 37, "SC": 21, "ST": 11, "EWS": 14, "Total": 140 },
+      { "Department Name": "General Administrative Dept", "UR": 40, "OBC": 27, "SC": 15, "ST": 8, "EWS": 9, "Total": 99 },
+      { "Department Name": "Labour Department", "UR": 33, "OBC": 28, "SC": 16, "ST": 6, "EWS": 10, "Total": 93 },
+      { "Department Name": "NCC Department", "UR": 31, "OBC": 19, "SC": 8, "ST": 3, "EWS": 7, "Total": 68 },
+      { "Department Name": "Excise, Entertainment & Luxury Tax", "UR": 14, "OBC": 8, "SC": 4, "ST": 2, "EWS": 3, "Total": 31 },
+      { "Department Name": "Registrar Cooperative Societies", "UR": 10, "OBC": 7, "SC": 3, "ST": 1, "EWS": 2, "Total": 23 },
+      { "Department Name": "Dept of Urban Development", "UR": 4, "OBC": 3, "SC": 0, "ST": 1, "EWS": 1, "Total": 9 },
+      { "Department Name": "Office of the Lokayukta", "UR": 2, "OBC": 3, "SC": 0, "ST": 0, "EWS": 1, "Total": 6 },
+      { "Department Name": "Drugs Control Department", "UR": 4, "OBC": 2, "SC": 0, "ST": 0, "EWS": 0, "Total": 6 },
+      { "Department Name": "Public Grievances Commission", "UR": 4, "OBC": 1, "SC": 0, "ST": 0, "EWS": 0, "Total": 5 },
+      { "Department Name": "Sahitya Kala Parishad", "UR": 3, "OBC": 0, "SC": 0, "ST": 0, "EWS": 0, "Total": 3 },
+      { "Department Name": "Grand Total", "UR": 302, "OBC": 212, "SC": 70, "ST": 53, "EWS": 77, "Total": 714 }
+    ],
+
+    selectionProcess: [
+      "One Tier Examination (General) - 200 Marks",
+      "Document Verification",
+      "Medical Examination"
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Computer Based Test (CBT)",
+        "Total Questions: 200 (MCQs)",
+        "Total Marks: 200 (1 Mark per Question)",
+        "Duration: 2 Hours",
+        "Negative Marking: 0.25 Marks deducted for each wrong answer",
+        "Language: Bilingual (Hindi & English) except language papers"
+      ],
+      table: [
+        { subject: "General Awareness", questions: "40", marks: "40" },
+        { subject: "General Intelligence & Reasoning Ability", questions: "40", marks: "40" },
+        { subject: "Arithmetical & Numerical Ability", questions: "40", marks: "40" },
+        { subject: "Test of Hindi Language & Comprehension", questions: "40", marks: "40" },
+        { subject: "Test of English Language & Comprehension", questions: "40", marks: "40" }
+      ]
+    },
+
+    extraSections: [
+      {
+        title: "Important Instructions",
+        list: [
+          "The vacancies are tentative and based on inputs from indenting departments.",
+          "Candidates must apply online only. Applications received by post/hand will be rejected.",
+          "Candidates will be required to submit preferences for Departments at the time of e-dossier.",
+          "There is no provision for re-evaluation/re-checking of Answer Sheets."
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Step 1: Visit the official website https://dsssbonline.nic.in.",
+      "Step 2: Register on the portal (if not already registered). Registration is a one-time exercise.",
+      "Step 3: Login using your User ID and Password.",
+      "Step 4: Go to 'Apply Online' and select the post for MTS (Post Code 803/25).",
+      "Step 5: Fill the application form carefully and upload required documents.",
+      "Step 6: Pay the application fee of ₹100 online (if applicable).",
+      "Step 7: Submit the form and take a printout for future reference."
+    ],
+
+    links: [
+      { title: "Apply Online (Active on 17/12)", url: "https://dsssbonline.nic.in/" },
+      { title: "Download Notification", url: "https://dsssb.delhi.gov.in/sites/default/files/DSSSB/circulars-orders/final_advt_no_07_2025_mts_1.pdf" }, // Placeholder link based on PDF name
+      { title: "Official Website", url: "https://dsssb.delhi.gov.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the last date to apply for DSSSB MTS 2025?", answer: "The last date to apply online is 15th January 2026." },
+      { question: "What is the qualification for DSSSB MTS?", answer: "Candidates must have passed Matriculation (10th Class) or equivalent." },
+      { question: "Is there any negative marking in the exam?", answer: "Yes, 0.25 marks will be deducted for each wrong answer." },
+      { question: "What is the age limit?", answer: "The age limit is 18 to 27 years. Relaxations apply for reserved categories." }
+    ]
+  },
+ // --- 38. CSIR NCL Pune Recruitment 2025 ---
   {
     id: 38,
     slug: "csir-ncl-pune-recruitment-2025-technical-staff",
