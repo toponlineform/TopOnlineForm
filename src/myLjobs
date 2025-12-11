@@ -111,12 +111,12 @@ export const latestJobs = [
       },
       {
         title: "Technical Assistant Subject Details",
-        list: [
-          "Chemistry (2 Posts)",
-          "Microbiology / Biotechnology (1 Post)",
-          "Instrumentation / Physics (1 Post)",
-          "Computer Engg / IT (1 Post)",
-          "Electrical Engineering (1 Post)"
+        tableData: [
+          { "Subject": "Chemistry", "Posts": 2 },
+          { "Subject": "Microbiology / Biotechnology", "Posts": 1 },
+          { "Subject": "Instrumentation / Physics", "Posts": 1 },
+          { "Subject": "Computer Engg / IT", "Posts": 1 },
+          { "Subject": "Electrical Engineering", "Posts": 1 }
         ]
       }
     ],
