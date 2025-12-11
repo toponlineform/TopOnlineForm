@@ -1,5 +1,117 @@
 export const admissionData = [
- 
+
+
+  // --- 6002. Bihar DElEd Admission 2026 ---
+  {
+    id: 6002,
+    slug: "bihar-deled-admission-2026-online-form",
+    shortTitle: "Bihar DElEd Admission 2026",
+    title: "Bihar DElEd Admission 2026 Apply Online for Joint Entrance Exam (JEE) | Session 2026-28",
+    shortInfo: "Bihar School Examination Board (BSEB), Patna has released the official notification for the Diploma in Elementary Education (D.El.Ed) Joint Entrance Examination 2026. This entrance test is for admission into the 2-year D.El.Ed course for the session 2026-28 in various government and private colleges of Bihar. Eligible candidates can apply online from 11th December 2025.",
+    postDate: "11/12/2025",
+    category: "Admission",
+    state: "Bihar",
+    tags: ["Bihar DElEd 2026", "BSEB DElEd Admission", "Bihar Teaching Course", "D.El.Ed Entrance Exam", "Bihar Job"],
+
+    salary: "N/A (Admission Form)",
+
+    importantDates: [
+      { label: "Notification Released", value: "10/12/2025" },
+      { label: "Application Begin", value: "11/12/2025" },
+      { label: "Last Date for Apply", value: "24/12/2025" },
+      { label: "Fee Payment Last Date", value: "24/12/2025" },
+      { label: "Admit Card Available", value: "10/01/2026" },
+      { label: "Entrance Exam Date", value: "19/01/2026 to 18/02/2026" },
+      { label: "Answer Key Objection", value: "26/02/2026 to 01/03/2026" },
+      { label: "Result Declared", value: "March 2026" }
+    ],
+
+    applicationFee: [
+      { category: "General / EWS / BC / EBC", amount: "₹960/-" },
+      { category: "SC / ST / Divyang (PH)", amount: "₹760/-" },
+      { category: "Payment Mode", amount: "Online (Debit Card / Credit Card / Net Banking)" }
+    ],
+
+    ageLimit: "Minimum Age: 17 Years (as on 01/01/2026). No Upper Age Limit.",
+
+    vacancyTableTitle: "Course Details",
+    vacancyColumnName: "Course Name",
+
+    // Note: Since this is admission, we list Course instead of 'State Wise Vacancy'
+    stateWiseVacancy: [
+      { "Course Name": "Diploma in Elementary Education (D.El.Ed)", "Duration": "2 Years", "Session": "2026-2028", "Mode": "Regular/Face-to-Face" }
+    ],
+
+    selectionProcess: [
+      "Joint Entrance Examination (Computer Based Test - CBT)",
+      "Merit List based on Entrance Score",
+      "Counseling & College Allotment",
+      "Document Verification"
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Online (CBT)",
+        "Total Questions: 120",
+        "Total Marks: 120 (1 Mark per Question)",
+        "Duration: 2 Hours 30 Minutes",
+        "Negative Marking: NO Negative Marking"
+      ],
+      table: [
+        { subject: "General Hindi / Urdu", questions: "25", marks: "25" },
+        { subject: "Mathematics", questions: "25", marks: "25" },
+        { subject: "Science", questions: "20", marks: "20" },
+        { subject: "Social Studies", questions: "20", marks: "20" },
+        { subject: "General English", questions: "20", marks: "20" },
+        { subject: "Logical & Analytical Reasoning", questions: "10", marks: "10" }
+      ]
+    },
+
+    extraSections: [
+      {
+        title: "Minimum Qualifying Marks",
+        list: [
+          "Unreserved Category: 35%",
+          "Reserved Category (SC/ST/BC/EBC/Divyang): 30%"
+        ]
+      },
+      {
+        title: "Documents Required for Online Application",
+        list: [
+          "Valid Email ID and Mobile Number.",
+          "Scanned Passport Size Photo & Signature.",
+          "10th (Matric) Marksheet & Certificate (For DOB).",
+          "12th (Inter) Marksheet (If available).",
+          "Caste Certificate (if applicable).",
+          "Domicile Certificate (Residential Proof)."
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Step 1: Visit the official website secondary.biharboardonline.com or the direct link below.",
+      "Step 2: Click on 'D.El.Ed Joint Entrance Test 2026' link.",
+      "Step 3: Register using your Mobile Number and basic details.",
+      "Step 4: Login with the credentials received on your mobile.",
+      "Step 5: Fill the application form and upload the required documents (Photo, Sign, Marksheet).",
+      "Step 6: Pay the examination fee online.",
+      "Step 7: Submit the form and print the confirmation page for future reference."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://form.bsebdeled.com/login" }, 
+      { title: "Download Notification", url: "https://formapi.bsebdeled.com/files/others/deled-form-2026-vigyapti.pdf" }, 
+      { title: "Official Website", url: "https://secondary.biharboardonline.com/" }
+    ],
+
+    faqs: [
+      { question: "What is the last date to apply for Bihar DElEd 2026?", answer: "The last date to apply online is 24 December 2025." },
+      { question: "When will the Bihar DElEd 2026 Exam be held?", answer: "The exam is scheduled from 19 January 2026 to 18 February 2026." },
+      { question: "Is there any negative marking in the entrance exam?", answer: "No, there is no negative marking." },
+      { question: "Can appearing candidates apply?", answer: "Yes, candidates appearing for the 12th board exams in 2026 can also apply." },
+      { question: "What is the application fee?", answer: "₹960 for General/EWS/BC/EBC and ₹760 for SC/ST/Divyang." }
+    ]
+  },
   // --- 6001. NVS Class 6th Admission 2026-27 ---
   {
     id: 6001,
