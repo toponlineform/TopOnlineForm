@@ -3,6 +3,133 @@ export const latestJobs = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+
+   // --- 35. Nainital Bank PO, SO & CSA Recruitment 2025 ---
+{
+    "id": 35,
+    "slug": "nainital-bank-po-so-csa-bharti",
+    "shortTitle": "नैनीताल बैंक PO, SO, CSA भर्ती 2025",
+    "title": "Nainital Bank PO, SO & CSA Recruitment 2025-26 Apply Online for 165 Posts | Graduation Vacancy",
+    "shortInfo": "नैनीताल बैंक लिमिटेड (Nainital Bank) ने कस्टमर सर्विस एसोसिएट (CSA), प्रोबेशनरी ऑफिसर (PO) और स्पेशलिस्ट ऑफिसर (SO) के कुल 165 पदों पर भर्ती के लिए ऑनलाइन आवेदन आमंत्रित किए हैं। आवेदन की अंतिम तिथि 01 जनवरी 2026 है। ग्रेजुएट उम्मीदवार 12 दिसंबर 2025 से ऑनलाइन आवेदन कर सकते हैं।",
+    "postDate": "12/12/2025",
+    "category": "Latest Jobs",
+    "state": "Uttarakhand", // ✅ Added based on Head Office location (PDF Page 1)
+    "tags": ["Nainital Bank Recruitment 2025", "PO SO CSA Vacancy", "Bank Jobs 2026", "Uttarakhand Bank Jobs", "Nainital Bank PO Online Form"], // ✅ Added for SEO
+
+    "salary": "₹48,480 - ₹93,960/- (Monthly Pay Scale for Officers)",
+
+    "importantDates": [
+        { "label": "Application Start Date", "value": "12/12/2025" },
+        { "label": "Last Date for Apply", "value": "01/01/2026" },
+        { "label": "Fee Payment Last Date", "value": "02/01/2026" },
+        { "label": "Written Exam Date", "value": "18/01/2026 (Tentative)" }
+    ],
+
+    "applicationFee": [
+        { "category": "Customer Service Associate (CSA)", "amount": "₹1000/- (Including GST)" },
+        { "category": "Scale I & II Officers", "amount": "₹1500/- (Including GST)" },
+        { "category": "Payment Mode", "amount": "Online (Debit/Credit Card, Net Banking, etc.)" }
+    ],
+
+    "ageLimit": "21-32 Years for CSA & Scale-I Officers; 25-45 Years for Scale-II Managers (As on 30/11/2025).",
+
+    "vacancyDetails": [
+        {
+            "postName": "Customer Service Associate (CSA)",
+            "totalPost": "71",
+            "eligibility": "Graduation/ Post Graduation with minimum 50% marks. Proficiency in Computer Skills.",
+            "experience": "NIL"
+        },
+        {
+            "postName": "Probationary Officer (Scale-I) & Specialist Officers (Scale-I)",
+            "totalPost": "84",
+            "eligibility": "Varies by post (Graduation, MBA Finance, CA, B.Tech/M.Tech IT, LLB, etc. with min 50%-60% marks)."
+        },
+        {
+            "postName": "Manager/Specialist Officers (Scale-II)",
+            "totalPost": "27",
+            "eligibility": "Varies by post (Engineering/Tech Degree IT, MBA Finance, CA, LLB, etc.).",
+            "experience": "Minimum 2-5 Years (Varies by Post)."
+        }
+    ],
+
+    "vacancyTableTitle": "Post Wise Vacancy & Age Details (Total: 165 Posts)",
+    "vacancyColumnName": "Post Name",
+
+    "stateWiseVacancy": [
+        { "Post Name": "Customer Service Associate (CSA)", "Total Posts": "71", "Min Age": "21", "Max Age": "32" },
+        { "Post Name": "Probationary Officer (Scale-I)", "Total Posts": "40", "Min Age": "21", "Max Age": "32" },
+        { "Post Name": "Risk Officer (Scale-I)", "Total Posts": "03", "Min Age": "21", "Max Age": "32" },
+        { "Post Name": "IT Officer (Scale-I)", "Total Posts": "15", "Min Age": "21", "Max Age": "32" },
+        { "Post Name": "Chartered Accountant (Scale-I)", "Total Posts": "03", "Min Age": "21", "Max Age": "32" },
+        { "Post Name": "Law Officer (Scale-I)", "Total Posts": "02", "Min Age": "21", "Max Age": "32" },
+        { "Post Name": "Credit Officer (Scale-I)", "Total Posts": "10", "Min Age": "21", "Max Age": "32" },
+        { "Post Name": "Agricultural Field Officer (Scale-I)", "Total Posts": "10", "Min Age": "21", "Max Age": "32" },
+        { "Post Name": "HR Officer (Scale-I)", "Total Posts": "04", "Min Age": "21", "Max Age": "32" },
+        { "Post Name": "Manager-IT (Scale-II)", "Total Posts": "15", "Min Age": "25", "Max Age": "35" },
+        { "Post Name": "Manager-Risk (Scale-II)", "Total Posts": "02", "Min Age": "25", "Max Age": "35" },
+        { "Post Name": "Manager-CA (Scale-II)", "Total Posts": "05", "Min Age": "25", "Max Age": "40" },
+        { "Post Name": "Manager-Law (Scale-II)", "Total Posts": "02", "Min Age": "25", "Max Age": "40" },
+        { "Post Name": "Manager-Security Officer (Scale-II)", "Total Posts": "03", "Min Age": "25", "Max Age": "45" }
+    ],
+
+    "selectionProcess": [
+        "Online Written Test (Common for all posts)",
+        "Personal Interview",
+        "Document Verification & Medical Examination"
+    ],
+
+    "examPattern": {
+        "details": [
+            "Mode: Online Test (Objective Type)",
+            "Total Questions: 200",
+            "Total Marks: 200",
+            "Duration: 145 Minutes",
+            "Negative Marking: 0.25 marks for each wrong answer"
+        ]
+    },
+
+    "extraSections": [
+        {
+            "title": "Examination Centers",
+            "list": [
+                "**Uttarakhand:** Haldwani, Dehradun, Roorkee",
+                "**Uttar Pradesh:** Bareilly, Meerut, Moradabad, Lucknow",
+                "**Rajasthan:** Jaipur",
+                "**Other:** Delhi/NCR, Ambala (Haryana)"
+            ]
+        },
+        {
+            "title": "Indemnity Bond Details",
+            "list": [
+                "Customer Service Associate (CSA): ₹1.5 Lakhs (Bond Period: 2 years)",
+                "Officers (Scale I & II): ₹3.00 Lakhs (Bond Period: 2 years)"
+            ]
+        }
+    ],
+
+    "howToApply": [
+        "Step 1: Visit the official website www.nainitalbank.bank.in and click 'APPLY ONLINE'.",
+        "Step 2: Click 'Click here for New Registration' and get the Provisional Registration Number.",
+        "Step 3: Fill the application form carefully (No change possible after final submission).",
+        "Step 4: Upload Photograph, Signature, Left Thumb Impression, and Hand Written Declaration as per specifications.",
+        "Step 5: Pay the application fee online through the integrated payment gateway.",
+        "Step 6: Click 'COMPLETE REGISTRATION' and take a printout of the final application form and e-Receipt."
+    ],
+
+    "links": [
+        { "title": "Apply Online", "url": "http://nainitalbank.bank.in/english/recruitment.aspx" },
+        { "title": "Download Notification", "url": "https://www.nainitalbank.bank.in/pdf/Notification%202025.pdf" },
+        { "title": "Official Website", "url": "https://www.nainitalbank.bank.in/" }
+    ],
+
+    "faqs": [
+        { "question": "What is the last date to apply for Nainital Bank Recruitment 2025?", "answer": "The last date for online registration is 01 January 2026." },
+        { "question": "What is the age limit for Nainital Bank PO?", "answer": "The minimum age is 21 years and the maximum age is 32 years for PO and CSA posts." },
+        { "question": "Is there any interview for this recruitment?", "answer": "Yes, candidates who qualify the Online Written Test will be called for a Personal Interview." },
+        { "question": "What is the application fee for CSA and Officer posts?", "answer": "The fee is ₹1000 for CSA and ₹1500 for Scale I & II Officers." }
+    ]
+}
   // --- 34. RITES Limited Senior Technical Assistant Recruitment 2025 ---
   {
     id: 34,
