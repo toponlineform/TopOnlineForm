@@ -42,8 +42,9 @@ export const latestJobs = [
         },
         {
             postName: "Probationary Officer (Scale-I) & Specialist Officers (Scale-I)",
-            totalPost: "84",
-            eligibility: "Varies by post (Graduation, MBA Finance, CA, B.Tech/M.Tech IT, LLB, etc. with min 50%-60% marks)."
+            totalPost: "87",
+            eligibility: "Varies by post (Graduation, MBA Finance, CA, B.Tech/M.Tech IT, LLB, etc. with min 50%-60% marks).",
+            experience: "NIL"
         },
         {
             postName: "Manager/Specialist Officers (Scale-II)",
@@ -52,6 +53,10 @@ export const latestJobs = [
             experience: "Minimum 2-5 Years (Varies by Post)."
         }
     ],
+
+    skipTotalFor: ["Min Age", "Max Age"], 
+
+    stateTableNote: true,
 
     vacancyTableTitle: "Post Wise Vacancy & Age Details (Total: 165 Posts)",
     vacancyColumnName: "Post Name",
