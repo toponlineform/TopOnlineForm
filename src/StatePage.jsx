@@ -1,12 +1,68 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// OLD: import { jobsData } from './jobsData'; // Master Data (Hata diya gaya hai)
-import SEO from './SEO';
+import SEO from './SEO'; // SEO Component का उपयोग हो रहा है
+
+// 💥 FINAL PERMANENT LIST OF ALL STATES AND UTS (38 Entries)
+const PERMANENT_STATES = [
+    "All", 
+    "Central Govt", 
+    
+    // 28 States
+    "Andhra Pradesh",
+    "Arunachal Pradesh",
+    "Assam",
+    "Bihar",
+    "Chhattisgarh",
+    "Goa",
+    "Gujarat",
+    "Haryana",
+    "Himachal Pradesh",
+    "Jharkhand",
+    "Karnataka",
+    "Kerala",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Manipur",
+    "Meghalaya",
+    "Mizoram",
+    "Nagaland",
+    "Odisha",
+    "Punjab",
+    "Rajasthan",
+    "Sikkim",
+    "Tamil Nadu",
+    "Telangana",
+    "Tripura",
+    "Uttar Pradesh",
+    "Uttarakhand",
+    "West Bengal",
+    
+    // 8 Union Territories
+    "Andaman and Nicobar Islands",
+    "Chandigarh",
+    "Dadra and Nagar Haveli and Daman & Diu",
+    "Delhi", 
+    "Jammu and Kashmir",
+    "Ladakh",
+    "Lakshadweep",
+    "Puducherry",
+
+    "Other States" // Catch-all for non-identified jobs
+].sort((a, b) => {
+    // Custom sort logic to keep key categories fixed at the top/bottom
+    if (a === "All") return -1;
+    if (b === "All") return 1;
+    if (a === "Central Govt") return -1; 
+    if (b === "Central Govt") return 1;
+    if (a === "Other States") return 1;
+    if (b === "Other States") return -1;
+    return a.localeCompare(b); // Alphabetical sort for the rest
+});
+
 
 // Component to render individual job listings inside a box/table
 const JobListingTable = ({ jobs, title, getLastDateString }) => (
   <div style={{maxWidth: '800px', margin: '20px auto', overflowX: 'auto'}}>
-    {/* Box Header for the State/Group */}
     <div className="section-header" style={{ 
       backgroundColor: '#ab1e1e', // Red header for group clarity
       color: 'white', 
@@ -66,14 +122,14 @@ const JobListingTable = ({ jobs, title, getLastDateString }) => (
   </div>
 );
 
+
 const StatePage = () => {
   const [selectedState, setSelectedState] = useState("All");
-  const [groupedJobs, setGroupedJobs] = useState({}); // Grouped data for All view
-  const [singleStateJobs, setSingleStateJobs] = useState([]); // Flat list for single state view
-  const [availableStates, setAvailableStates] = useState([]);
-  const [loading, setLoading] = useState(true); // Loading State जोड़ा गया
-  
-  // --- Helper 1: Get Last Date String safely (नो चेंज) ---
+  const [groupedJobs, setGroupedJobs] = useState({}); 
+  const [singleStateJobs, setSingleStateJobs] = useState([]); 
+  const [loading, setLoading] = useState(true); 
+
+  // --- Helper 1: Get Last Date String safely (No Change) ---
   const getLastDateString = (job) => {
     return job.importantDates?.find(d => 
       d.label.toLowerCase().includes("last") || 
@@ -81,31 +137,49 @@ const StatePage = () => {
     )?.value || "Check Notice";
   };
 
-  // --- Helper 2: Smart State Detector (नो चेंज) ---
+  // --- Helper 2: Smart State Detector (UPDATED with full list keywords) ---
   const getJobState = (job) => {
     if (job.state) return job.state; 
 
     const text = (job.title + " " + job.shortInfo).toLowerCase();
     
+    // State/UT specific checks (Use full name or major commission abbreviation)
+    if (text.includes("andhra pradesh")) return "Andhra Pradesh";
     if (text.includes("bihar") || text.includes("bpsc") || text.includes("btsc")) return "Bihar";
-    if (text.includes("up") || text.includes("uttar pradesh") || text.includes("uppsc")) return "Uttar Pradesh";
-    if (text.includes("rajasthan") || text.includes("rsmssb") || text.includes("rpsc")) return "Rajasthan";
-    if (text.includes("delhi") || text.includes("dsssb") || text.includes("dda")) return "Delhi";
+    if (text.includes("gujarat") || text.includes("gssc")) return "Gujarat";
     if (text.includes("haryana") || text.includes("hssc") || text.includes("hpsc")) return "Haryana";
-    if (text.includes("mp") || text.includes("madhya pradesh")) return "MP / Chhattisgarh";
-    if (text.includes("ssc") || text.includes("railway") || text.includes("upsc") || text.includes("ibps") || text.includes("drdo") || text.includes("aiims")) return "Central Govt";
+    if (text.includes("hp") || text.includes("himachal")) return "Himachal Pradesh";
+    if (text.includes("jharkhand")) return "Jharkhand";
+    if (text.includes("karnataka") || text.includes("bangalore")) return "Karnataka";
+    if (text.includes("kerala")) return "Kerala";
+    if (text.includes("mp") || text.includes("madhya pradesh")) return "Madhya Pradesh";
+    if (text.includes("maharashtra") || text.includes("mumbai")) return "Maharashtra";
+    if (text.includes("odisha") || text.includes("ossc")) return "Odisha";
+    if (text.includes("punjab") || text.includes("psssb")) return "Punjab";
+    if (text.includes("rajasthan") || text.includes("rsmssb") || text.includes("rpsc")) return "Rajasthan";
+    if (text.includes("tamil nadu") || text.includes("mrb")) return "Tamil Nadu";
+    if (text.includes("telangana") || text.includes("tspsc")) return "Telangana";
+    if (text.includes("up") || text.includes("uttar pradesh") || text.includes("uppsc")) return "Uttar Pradesh";
+    if (text.includes("west bengal") || text.includes("wbsedcl")) return "West Bengal";
+    
+    // UT checks
+    if (text.includes("delhi") || text.includes("dsssb") || text.includes("dda")) return "Delhi";
+    if (text.includes("chandigarh")) return "Chandigarh";
+    if (text.includes("jammu") || text.includes("kashmir")) return "Jammu and Kashmir";
+    if (text.includes("puducherry")) return "Puducherry";
+    
+    // Central Govt Check (Common keywords)
+    if (text.includes("ssc") || text.includes("railway") || text.includes("upsc") || text.includes("ibps") || text.includes("drdo") || text.includes("aiims") || text.includes("mha") || text.includes("rites")) return "Central Govt";
     
     return "Other States"; 
   };
 
-  // --- Helper 3: Filter Recruitment Jobs Only (नो चेंज) ---
+  // --- Helper 3 & 4 (No Change) ---
   const isRecruitmentJob = (job) => {
     const cat = job.category.toLowerCase();
-    // Only Latest Jobs (Recruitment) and Admissions
     return cat === "latest jobs" || cat === "admission";
   };
-
-  // --- Helper 4: Grouping Function ---
+  
   const groupByState = (jobs) => {
     const groups = {};
     jobs.forEach(job => {
@@ -116,7 +190,6 @@ const StatePage = () => {
       groups[stateName].push(job);
     });
     
-    // Sort jobs within each state by ID (newest first)
     for (const state in groups) {
       groups[state].sort((a, b) => b.id - a.id);
     }
@@ -132,23 +205,17 @@ const StatePage = () => {
       import('./myAdmission').then(mod => mod.admissionData),
     ]).then(([latestJobsData, admissionData]) => {
       
-      const jobsData = [...latestJobsData, ...admissionData]; // डेटा को मिलाएं
+      const jobsData = [...latestJobsData, ...admissionData]; 
       const recruitmentJobs = jobsData.filter(isRecruitmentJob);
 
-      // 1. Group Data for the "All" view
       const grouped = groupByState(recruitmentJobs);
       setGroupedJobs(grouped);
       
-      // 2. Generate list of available states
-      const statesInGroups = Object.keys(grouped).filter(s => s !== "Other States").sort();
-      setAvailableStates(["All", ...statesInGroups, "Other States"]);
-
-      // 3. Filter for the selected state (runs once on initial load)
+      // Filter for the selected state 
       if (selectedState !== "All") {
         const jobs = grouped[selectedState] || [];
         setSingleStateJobs(jobs);
       } else {
-        // When All is selected, we use the grouped data, no need for flat list
         setSingleStateJobs([]);
       }
       
@@ -189,9 +256,9 @@ const StatePage = () => {
         {selectedState === "All" ? "All State Govt Jobs 2025" : `${selectedState} Recruitment`}
       </div>
 
-      {/* ✅ Automatic State Buttons */}
+      {/* ✅ Automatic State Buttons (Using the Permanent List) */}
       <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px', marginBottom: '30px'}}>
-        {availableStates.map((state) => (
+        {PERMANENT_STATES.map((state) => ( // Permanent list का उपयोग
           <button
             key={state}
             onClick={() => setSelectedState(state)}
@@ -214,31 +281,28 @@ const StatePage = () => {
       </div>
 
       {/* ======================================================= */}
-      {/* 💥 NEW RENDERING LOGIC: Multiple Tables for "All" */}
+      {/* 💥 RENDERING LOGIC: Multiple Tables for "All" */}
       {/* ======================================================= */}
       
       {selectedState === "All" ? (
-        Object.keys(groupedJobs).sort().map(stateName => (
+        // "All" selected: Loop through the permanent state list to ensure order
+        PERMANENT_STATES.filter(s => s !== "All").map(stateName => (
           <JobListingTable 
             key={stateName}
             title={`${stateName} Jobs`}
-            jobs={groupedJobs[stateName]}
+            // Use groupedJobs (which might be empty if no jobs for this state)
+            jobs={groupedJobs[stateName] || []} 
             getLastDateString={getLastDateString}
           />
         ))
       ) : (
-        /* OLD RENDERING LOGIC: Single Table for specific state */
+        /* Single State selected */
         <JobListingTable 
             title={`${selectedState} Jobs`}
             jobs={singleStateJobs}
             getLastDateString={getLastDateString}
         />
       )}
-      
-      {/* ======================================================= */}
-      
-      
-      {/* NOTE: The original closing message below is now handled inside JobListingTable component */}
       
     </div>
   );
