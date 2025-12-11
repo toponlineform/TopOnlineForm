@@ -1,66 +1,85 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { jobsData } from './jobsData'; // Master Data File
+// OLD: import { jobsData } from './jobsData'; // अब इसे हटा दिया गया है
 import SEO from './SEO';
 
 const ActiveJobs = () => {
   const [activeList, setActiveList] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [loading, setLoading] = useState(true); // Loading State जोड़ा गया
+
+  // 1. Helper: Parse Date nicely
+  const parseDate = (dateStr) => {
+    if (!dateStr) return null;
+    const lowerDate = dateStr.toLowerCase();
+    if (lowerDate.includes("notify") || lowerDate.includes("soon") || lowerDate.includes("tbd")) {
+      return new Date("2099-12-31");
+    }
+    
+    try {
+      const cleanDate = dateStr.split(' ')[0].replace(/-/g, '/');
+      const parts = cleanDate.split('/');
+      if (parts.length === 3) {
+        return new Date(parts[2], parts[1] - 1, parts[0]);
+      }
+    } catch (e) {
+      return null;
+    }
+    return null;
+  };
+
+  // 2. Helper: Get Last Date String safely
+  const getLastDateString = (job) => {
+    return job.importantDates?.find(d => 
+      d.label.toLowerCase().includes("last") || 
+      d.label.toLowerCase().includes("closing")
+    )?.value || "Check Notice";
+  };
 
   useEffect(() => {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0); // Compare from midnight today
+    setLoading(true);
 
-    // 1. Helper: Parse Date nicely
-    const parseDate = (dateStr) => {
-      if (!dateStr) return null;
-      const lowerDate = dateStr.toLowerCase();
-      if (lowerDate.includes("notify") || lowerDate.includes("soon") || lowerDate.includes("tbd")) {
-        return new Date("2099-12-31");
-      }
+    // Dynamic Import: Latest Jobs और Admission data को एक साथ लोड करें
+    Promise.all([
+      import('./myLjobs').then(mod => mod.latestJobs),
+      import('./myAdmission').then(mod => mod.admissionData),
+    ]).then(([latestJobsData, admissionData]) => {
       
-      try {
-        const cleanDate = dateStr.split(' ')[0].replace(/-/g, '/');
-        const parts = cleanDate.split('/');
-        if (parts.length === 3) {
-          return new Date(parts[2], parts[1] - 1, parts[0]);
+      // दोनों डेटा को एक साथ मिला लें
+      const jobsData = [...latestJobsData, ...admissionData];
+      
+      const today = new Date();
+      today.setHours(0, 0, 0, 0); 
+
+      // 3. Filter Logic (सक्रिय फॉर्म के लिए)
+      const filtered = jobsData.filter(job => {
+        const isRelevant = job.category === "Latest Jobs" || job.category === "Admission";
+        if (!isRelevant) return false;
+
+        const lastDateStr = getLastDateString(job);
+        const expDate = parseDate(lastDateStr);
+
+        if (expDate) {
+          return expDate >= today;
         }
-      } catch (e) {
-        return null;
-      }
-      return null;
-    };
+        return true; 
+      });
 
-    // 2. Helper: Get Last Date String safely
-    const getLastDateString = (job) => {
-       return job.importantDates?.find(d => 
-         d.label.toLowerCase().includes("last") || 
-         d.label.toLowerCase().includes("closing")
-       )?.value || "Check Notice";
-    };
+      // 4. Sort Logic: Closing Soonest First
+      const sorted = filtered.sort((a, b) => {
+        const dateA = parseDate(getLastDateString(a)) || new Date("2099-12-31");
+        const dateB = parseDate(getLastDateString(b)) || new Date("2099-12-31");
+        return dateA - dateB; 
+      });
 
-    // 3. Filter Logic
-    const filtered = jobsData.filter(job => {
-      const isRelevant = job.category === "Latest Jobs" || job.category === "Admission";
-      if (!isRelevant) return false;
-
-      const lastDateStr = getLastDateString(job);
-      const expDate = parseDate(lastDateStr);
-
-      if (expDate) {
-        return expDate >= today;
-      }
-      return true; 
+      setActiveList(sorted);
+      setLoading(false); // डेटा लोड होने के बाद loading बंद करें
+      
+    }).catch(error => {
+        console.error("Error loading Active Jobs data:", error);
+        setActiveList([]);
+        setLoading(false);
     });
-
-    // 4. Sort Logic: Closing Soonest First
-    const sorted = filtered.sort((a, b) => {
-       const dateA = parseDate(getLastDateString(a)) || new Date("2099-12-31");
-       const dateB = parseDate(getLastDateString(b)) || new Date("2099-12-31");
-       return dateA - dateB; 
-    });
-
-    setActiveList(sorted);
   }, []);
 
   // Search Filter
@@ -69,6 +88,17 @@ const ActiveJobs = () => {
     job.shortTitle?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  // Loading Screen (डेटा लोड होने तक दिखाएँ)
+  if (loading) {
+    return (
+      <div style={{ textAlign: 'center', padding: '50px' }}>
+        <h2 style={{color: '#004080'}}>Loading Active Jobs...</h2>
+        <p>Fetching live application forms, please wait...</p>
+      </div>
+    );
+  }
+
+  // Final Render
   return (
     // ✅ REMOVED "job-container" & ADDED INLINE STYLE FOR WIDTH ONLY
     <div style={{ padding: '20px', maxWidth: '1000px', margin: '0 auto' }}>
