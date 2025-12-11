@@ -3,7 +3,121 @@ export const latestJobs = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+   // --- 36. UPSC NDA & NA (I) Exam 2026 ---
+  {
+    id: 36,
+    slug: "upsc-nda-na-1-exam-2026",
+    shortTitle: "UPSC NDA and Naval Academy Examination (I), 2026",
+    title: "UPSC NDA & NA (I) Recruitment 2026 Apply Online for 394 Posts | National Defence Academy Exam",
+    shortInfo: "Union Public Service Commission (UPSC) has released the notification for the National Defence Academy & Naval Academy Examination (I), 2026 (Advt No. 03/2026). A total of 394 vacancies are available in the Army, Navy, and Air Force wings of the NDA and for the 10+2 Cadet Entry Scheme at the Indian Naval Academy. Eligible unmarried male and female candidates can apply online from 10th December 2025.",
+    postDate: "10/12/2025",
+    category: "Latest Jobs",
+    
+    // ✅ Added State & Tags
+    state: "Central Govt",
+    tags: ["UPSC NDA 2026", "NDA NA 1 Exam", "Defence Jobs", "12th Pass Job", "Army Navy Airforce Vacancy", "Sarkari Naukri"],
 
+    salary: "Stipend ₹56,100/- per month (Level 10) during training",
+
+    importantDates: [
+      { label: "Notification Date", value: "10/12/2025" },
+      { label: "Application Begin", value: "10/12/2025" },
+      { label: "Last Date for Apply", value: "30/12/2025 (06:00 PM)" },
+      { label: "Fee Payment Last Date", value: "30/12/2025" },
+      { label: "NDA I Exam Date", value: "12/04/2026" },
+      { label: "Admit Card Available", value: "Before Exam" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC", amount: "₹100/-" },
+      { category: "SC / ST / Sons of JCOs/NCOs/ORs", amount: "₹0/- (Nil)" },
+      { category: "Female (All Categories)", amount: "₹0/- (Nil)" },
+      { category: "Payment Mode", amount: "Online (Net Banking/Debit/Credit Card/UPI)" }
+    ],
+
+    ageLimit: "Born Between 02/07/2007 and 01/07/2010. (Both dates inclusive).",
+
+    vacancyDetails: [
+      { 
+        postName: "National Defence Academy (NDA)", 
+        totalPost: "370", 
+        eligibility: "12th Class Pass of the 10+2 pattern of School Education or equivalent examination." 
+      },
+      { 
+        postName: "Naval Academy (10+2 Cadet Entry)", 
+        totalPost: "24", 
+        eligibility: "12th Class Pass with Physics, Chemistry and Mathematics of the 10+2 pattern." 
+      }
+    ],
+
+    stateTableNote: true,
+    vacancyTableTitle: "Wing Wise Vacancy Details (Total: 394 Posts)",
+    vacancyColumnName: "Wing Name",
+
+    // ✅ Detailed Wing-Wise Breakup from PDF
+    stateWiseVacancy: [
+      { "Wing Name": "Army (NDA)", "Total Posts": "208", "Gender Eligibility": "Male & Female" },
+      { "Wing Name": "Navy (NDA)", "Total Posts": "42", "Gender Eligibility": "Male & Female" },
+      { "Wing Name": "Air Force (NDA)", "Total Posts": "120", "Gender Eligibility": "Male & Female" },
+      { "Wing Name": "Naval Academy (10+2 Cadet Entry)", "Total Posts": "24", "Gender Eligibility": "Male Only" },
+      { "Wing Name": "Grand Total", "Total Posts": "394", "Gender Eligibility": "-" }
+    ],
+
+    selectionProcess: [
+      "Written Examination (900 Marks)",
+      "SSB Interview / Intelligence & Personality Test (900 Marks)",
+      "Medical Examination",
+      "Document Verification"
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Offline (Pen & Paper)",
+        "Question Type: Objective Type (MCQ)",
+        "Negative Marking: Yes (1/3rd marks deducted for wrong answers)",
+        "Language: Question papers will be bilingual (Hindi & English)"
+      ],
+      table: [
+        { subject: "Mathematics (Code 01)", questions: "120", marks: "300 (2.5 Hours)" },
+        { subject: "General Ability Test (Code 02)", questions: "150", marks: "600 (2.5 Hours)" },
+        { subject: "SSB Interview", questions: "-", marks: "900" }
+      ]
+    },
+
+    extraSections: [
+      {
+        title: "Subject Wise Eligibility",
+        list: [
+          "**For Army Wing of NDA:** 12th Class pass of the 10+2 pattern of School Education or equivalent examination conducted by a State Education Board or a University.",
+          "**For Air Force and Naval Wings of NDA and for the 10+2 Cadet Entry Scheme at the INA:** 12th Class pass with Physics, Chemistry and Mathematics of the 10+2 pattern of School Education or equivalent conducted by a State Education Board or a University.",
+          "**Note:** Candidates who are appearing in the 12th Class under the 10+2 pattern of School Education or equivalent examination can also apply."
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Step 1: Visit the official website upsconline.nic.in.",
+      "Step 2: Complete the One Time Registration (OTR) process if not already done.",
+      "Step 3: Login and click on 'Latest Notifications' -> 'NDA & NA Examination (I), 2026'.",
+      "Step 4: Fill Part-I (Basic Details) and Part-II (Payment, Center Selection, Photo/Sign Upload) of the application.",
+      "Step 5: Pay the examination fee of ₹100 online (if applicable).",
+      "Step 6: Upload scanned photograph and signature as per the specified format.",
+      "Step 7: Submit the application form and take a printout for future reference."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://upsconline.nic.in/login" },
+      { title: "Download Notification", url: "https://upsc.gov.in/sites/default/files/Notif-NDA-NA-I-2026-Engl-101225.pdf" },
+      { title: "Official Website", url: "https://upsc.gov.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the exam date for UPSC NDA 1 2026?", answer: "The exam is scheduled to be held on 12th April 2026." },
+      { question: "Can females apply for NDA 1 2026?", answer: "Yes, unmarried female candidates are eligible for Army, Navy, and Air Force wings of NDA." },
+      { question: "What is the age limit for NDA 2026?", answer: "Candidates must be born between 2nd July 2007 and 1st July 2010." },
+      { question: "Is Mathematics compulsory for NDA?", answer: "For Air Force and Navy wings, Math & Physics are compulsory. For Army wing, any stream (Arts/Commerce/Science) is allowed." }
+    ]
+  },
    // --- 35. Nainital Bank PO, SO & CSA Recruitment 2025 ---
 {
     id: 35,
