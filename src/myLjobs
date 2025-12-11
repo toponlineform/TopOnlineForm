@@ -3,7 +3,146 @@ export const latestJobs = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
-   
+   // --- 38. CSIR NCL Pune Recruitment 2025 ---
+  {
+    id: 38,
+    slug: "csir-ncl-pune-recruitment-2025-technical-staff",
+    shortTitle: "CSIR NCL Pune Technical Staff Recruitment 2025",
+    title: "CSIR NCL Pune Recruitment 2025 Apply Online for 15 Posts | Technical Assistant & Technician",
+    shortInfo: "CSIR - National Chemical Laboratory (NCL), Pune has released the official notification (Advt. No. NCL/02-2025/Technical) for the recruitment of Technical Staff including Technical Assistant and Technician (1). A total of 15 vacancies are available. Eligible candidates can apply online from 12th December 2025.",
+    postDate: "11/12/2025",
+    category: "Latest Jobs",
+    state: "Maharashtra",
+    tags: ["CSIR NCL Recruitment 2025", "NCL Pune Vacancy", "Technical Assistant Job", "Technician Vacancy", "Diploma Job", "ITI Job"],
+
+    salary: "₹19,900 - ₹1,12,400 (Level-2 & Level-6)",
+
+    importantDates: [
+      { label: "Notification Date", value: "11/12/2025" },
+      { label: "Application Begin", value: "12/12/2025 (10:00 AM)" },
+      { label: "Last Date for Apply", value: "12/01/2026 (05:00 PM)" },
+      { label: "Fee Payment Last Date", value: "12/01/2026" },
+      { label: "Exam Date", value: "To be notified later" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹100/-" },
+      { category: "SC / ST / PwBD / Women / CSIR Employees", amount: "₹0/- (Nil)" },
+      { category: "Payment Mode", amount: "Online (Net Banking/Debit/Credit Card)" }
+    ],
+
+    ageLimit: "Maximum 28 Years (As on 12/01/2026). Relaxation: SC/ST +5 Yrs, OBC +3 Yrs, PwBD +10 Yrs.",
+
+    vacancyDetails: [
+      { 
+        postName: "Technical Assistant (TA)", 
+        totalPost: "06", 
+        eligibility: "Diploma in Engineering/Tech (3 Years) OR B.Sc in relevant field with 1 year experience." 
+      },
+      { 
+        postName: "Technician (1)", 
+        totalPost: "09", 
+        eligibility: "SSC (10th Pass) with 55% Marks + ITI Certificate in relevant trade." 
+      }
+    ],
+
+    vacancyTableTitle: "Post & Category Wise Vacancy Details",
+    vacancyColumnName: "Post Name",
+
+    stateWiseVacancy: [
+      { "Post Name": "Technical Assistant (TA)", "Total": "06", "UR": 4, "OBC": 2, "SC": 0, "ST": 0, "EWS": 0 },
+      { "Post Name": "Technician (1)", "Total": "09", "UR": 5, "OBC": 2, "SC": 1, "ST": 0, "EWS": 1 }
+    ],
+
+    salaryDetails: [
+      { post: "Technical Assistant", level: "Level-6 (₹35,400 - ₹1,12,400) | Approx ₹63,803/month" },
+      { post: "Technician (1)", level: "Level-2 (₹19,900 - ₹63,200) | Approx ₹37,092/month" }
+    ],
+
+    selectionProcess: [
+      "Stage 1: Trade Test (Qualifying Nature)",
+      "Stage 2: Competitive Written Examination (OMR/CBT Based)",
+      "Document Verification",
+      "Medical Examination"
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: OMR Based or Computer Based Test (CBT)",
+        "Question Type: Multiple Choice Questions (MCQ)",
+        "Total Time: 3 Hours (Paper I, II & III)",
+        "Language: English & Hindi"
+      ],
+      stages: [
+        {
+          title: "Paper I (Mental Ability) - No Negative Marking",
+          data: [
+            { subject: "Mental Ability Test", questions: 50, marks: 100 }
+          ]
+        },
+        {
+          title: "Paper II (General Awareness & English) - 1 Mark Deduction",
+          data: [
+            { subject: "General Awareness", questions: 25, marks: 75 },
+            { subject: "English Language", questions: 25, marks: 75 }
+          ]
+        },
+        {
+          title: "Paper III (Concerned Subject) - 1 Mark Deduction",
+          data: [
+            { subject: "Concerned Subject", questions: 50, marks: 150 }
+          ]
+        }
+      ]
+    },
+
+    extraSections: [
+      {
+        title: "Trade Wise Vacancy Details (Technician-1)",
+        tableData: [
+          { "Trade": "Chemical Plant Operator", "Posts": 1 },
+          { "Trade": "Fitter", "Posts": 1 },
+          { "Trade": "Electronics Mechanic", "Posts": 2 },
+          { "Trade": "Draftsman (Civil)", "Posts": 1 },
+          { "Trade": "Computer Operator (COPA)", "Posts": 2 },
+          { "Trade": "Electrician", "Posts": 1 },
+          { "Trade": "Refrigeration & AC", "Posts": 1 }
+        ]
+      },
+      {
+        title: "Technical Assistant Subject Details",
+        list: [
+          "Chemistry (2 Posts)",
+          "Microbiology / Biotechnology (1 Post)",
+          "Instrumentation / Physics (1 Post)",
+          "Computer Engg / IT (1 Post)",
+          "Electrical Engineering (1 Post)"
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Step 1: Visit the official website recruit.ncl.res.in.",
+      "Step 2: Click on 'New Registration' and create an account.",
+      "Step 3: Log in and fill the online application form.",
+      "Step 4: Upload scanned Photo, Signature, and required Certificates (10th/Diploma/Degree/Caste).",
+      "Step 5: Pay the application fee online (if applicable).",
+      "Step 6: Submit the application and print the confirmation page."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://recruit.ncl.res.in" },
+      { title: "Download Notification", url: "https://recruit.ncl.res.in/View_Notice_PDF?SrNo=13" }, // Direct link pattern based on context
+      { title: "Official Website", url: "https://recruit.ncl.res.in" }
+    ],
+
+    faqs: [
+      { question: "What is the last date to apply for CSIR NCL Pune Recruitment 2025?", answer: "The last date is 12th January 2026." },
+      { question: "Is there any interview for Technical Assistant?", answer: "No, selection is based on Trade Test and Written Exam only." },
+      { question: "Can final year students apply?", answer: "No, candidates must have the required qualification as on the closing date (12/01/2026)." },
+      { question: "Do I need to send a hard copy of the application?", answer: "No, hard copy of the application is NOT required to be sent." }
+    ]
+  },
    // --- 37. UPSC CDS I Recruitment 2026 ---
   {
     id: 37,
