@@ -7,14 +7,14 @@ export const latestJobs = [
    // --- 35. Nainital Bank PO, SO & CSA Recruitment 2025 ---
 {
     "id": 35,
-    "slug": "nainital-bank-po-so-csa-bharti",
-    "shortTitle": "नैनीताल बैंक PO, SO, CSA भर्ती 2025",
+    "slug": "nainital-bank-po-so-csa-recruitment-2025",
+    "shortTitle": "Nainital Bank PO, SO, CSA Vacancy 2025",
     "title": "Nainital Bank PO, SO & CSA Recruitment 2025-26 Apply Online for 165 Posts | Graduation Vacancy",
-    "shortInfo": "नैनीताल बैंक लिमिटेड (Nainital Bank) ने कस्टमर सर्विस एसोसिएट (CSA), प्रोबेशनरी ऑफिसर (PO) और स्पेशलिस्ट ऑफिसर (SO) के कुल 165 पदों पर भर्ती के लिए ऑनलाइन आवेदन आमंत्रित किए हैं। आवेदन की अंतिम तिथि 01 जनवरी 2026 है। ग्रेजुएट उम्मीदवार 12 दिसंबर 2025 से ऑनलाइन आवेदन कर सकते हैं।",
+    "shortInfo": "Nainital Bank Limited has released the recruitment notification for 165 posts including Customer Service Associate (CSA), Probationary Officer (PO), and Specialist Officers (SO). Eligible candidates with a Graduation degree can apply online starting from 12th December 2025. The last date to apply for various posts is 01 January 2026.",
     "postDate": "12/12/2025",
     "category": "Latest Jobs",
-    "state": "Uttarakhand", // ✅ Added based on Head Office location (PDF Page 1)
-    "tags": ["Nainital Bank Recruitment 2025", "PO SO CSA Vacancy", "Bank Jobs 2026", "Uttarakhand Bank Jobs", "Nainital Bank PO Online Form"], // ✅ Added for SEO
+    "state": "Uttarakhand",
+    "tags": ["Nainital Bank Recruitment 2025", "PO SO CSA Vacancy", "Bank Jobs 2026", "Uttarakhand Bank Jobs", "Nainital Bank PO Online Form"],
 
     "salary": "₹48,480 - ₹93,960/- (Monthly Pay Scale for Officers)",
 
@@ -85,7 +85,7 @@ export const latestJobs = [
             "Total Questions: 200",
             "Total Marks: 200",
             "Duration: 145 Minutes",
-            "Negative Marking: 0.25 marks for each wrong answer"
+            "Negative Marking": "0.25 marks for each wrong answer"
         ]
     },
 
@@ -129,7 +129,7 @@ export const latestJobs = [
         { "question": "Is there any interview for this recruitment?", "answer": "Yes, candidates who qualify the Online Written Test will be called for a Personal Interview." },
         { "question": "What is the application fee for CSA and Officer posts?", "answer": "The fee is ₹1000 for CSA and ₹1500 for Scale I & II Officers." }
     ]
-}
+},
   // --- 34. RITES Limited Senior Technical Assistant Recruitment 2025 ---
   {
     id: 34,
