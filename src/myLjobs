@@ -3,7 +3,142 @@ export const latestJobs = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
-   // --- 36. UPSC NDA & NA (I) Exam 2026 ---
+   
+   // --- 37. UPSC CDS I Recruitment 2026 ---
+  {
+    id: 37,
+    slug: "upsc-cds-1-exam-2026",
+    shortTitle: "UPSC CDS I Examination 2026 Apply Online",
+    title: "UPSC CDS I Recruitment 2026 Apply Online for 451 Posts | Combined Defence Services Examination",
+    shortInfo: "Union Public Service Commission (UPSC) has released the notification for the Combined Defence Services Examination (I), 2026. A total of 451 vacancies are available for the Indian Military Academy (IMA), Indian Naval Academy (INA), Air Force Academy (AFA), and Officers' Training Academy (OTA). Eligible unmarried candidates can apply online from 10th December 2025.",
+    postDate: "10/12/2025",
+    category: "Latest Jobs",
+    state: "Central Govt",
+    tags: ["UPSC CDS 2026", "CDS 1 Notification", "Defence Jobs", "Graduate Jobs", "IMA INA AFA OTA Vacancy", "Sarkari Naukri"],
+
+    salary: "Stipend ₹56,100/- per month (Level 10) during training",
+
+    importantDates: [
+      { label: "Notification Date", value: "10/12/2025" },
+      { label: "Application Begin", value: "10/12/2025" },
+      { label: "Last Date for Apply", value: "30/12/2025 (06:00 PM)" },
+      { label: "Correction Window", value: "31/12/2025 to 06/01/2026" },
+      { label: "CDS I Exam Date", value: "12/04/2026" },
+      { label: "Admit Card Available", value: "March 2026" }
+    ],
+
+    applicationFee: [
+      { category: "General / OBC", amount: "₹200/-" },
+      { category: "SC / ST / Female (All Categories)", amount: "₹0/- (Nil)" },
+      { category: "Payment Mode", amount: "Online (Net Banking/Debit/Credit Card/UPI)" }
+    ],
+
+    ageLimit: "Check Notification for specific age criteria per academy.",
+    ageRelaxation: [
+      "IMA: Born between 02/01/2003 and 01/01/2008 (Unmarried Male)",
+      "INA: Born between 02/01/2003 and 01/01/2008 (Unmarried Male)",
+      "AFA: 20-24 Years as on 01/01/2027 (Born 02/01/2003 to 01/01/2007)",
+      "OTA (Men): Born between 02/01/2002 and 01/01/2008",
+      "OTA (Women): Born between 02/01/2002 and 01/01/2008"
+    ],
+
+    vacancyDetails: [
+      { 
+        postName: "Indian Military Academy (IMA) Dehradun", 
+        totalPost: "100", 
+        eligibility: "Bachelor's Degree from a recognized University." 
+      },
+      { 
+        postName: "Indian Naval Academy (INA) Ezhimala", 
+        totalPost: "26", 
+        eligibility: "Bachelor's Degree in Engineering from a recognized University." 
+      },
+      { 
+        postName: "Air Force Academy (AFA) Hyderabad", 
+        totalPost: "32", 
+        eligibility: "Bachelor's Degree (with Physics & Math at 10+2) OR Bachelor of Engineering." 
+      },
+      { 
+        postName: "Officers' Training Academy (OTA) Chennai (Men)", 
+        totalPost: "275", 
+        eligibility: "Bachelor's Degree from a recognized University." 
+      },
+      { 
+        postName: "Officers' Training Academy (OTA) Chennai (Women)", 
+        totalPost: "18", 
+        eligibility: "Bachelor's Degree from a recognized University." 
+      }
+    ],
+
+    vacancyTableTitle: "Course Wise Vacancy Details (Total: 451 Posts)",
+    vacancyColumnName: "Course Name",
+
+    // ✅ Detailed Course-Wise Breakup from PDF
+    stateWiseVacancy: [
+      { "Course Name": "IMA Dehradun", "Total Posts": "100", "Gender": "Male Only" },
+      { "Course Name": "INA Ezhimala", "Total Posts": "26", "Gender": "Male Only" },
+      { "Course Name": "AFA Hyderabad", "Total Posts": "32", "Gender": "Male Only" },
+      { "Course Name": "OTA Chennai (SSC Men)", "Total Posts": "275", "Gender": "Male Only" },
+      { "Course Name": "OTA Chennai (SSC Women)", "Total Posts": "18", "Gender": "Female Only" } 
+    ],
+
+    selectionProcess: [
+      "Written Examination (IMA/INA/AFA: 300 Marks, OTA: 200 Marks)",
+      "SSB Interview / Intelligence & Personality Test",
+      "Medical Examination",
+      "Document Verification"
+    ],
+
+    examPattern: {
+      details: [
+        "Mode: Offline (Pen & Paper)",
+        "Question Type: Objective Type (MCQ)",
+        "Negative Marking: Yes (1/3rd marks deducted for wrong answers)",
+        "Language: English & Hindi (except English paper)"
+      ],
+      table: [
+        { subject: "English (Code 01)", questions: "120", marks: "100 (2 Hours)" },
+        { subject: "General Knowledge (Code 02)", questions: "120", marks: "100 (2 Hours)" },
+        { subject: "Elementary Mathematics (Code 03)", questions: "100", marks: "100 (2 Hours)" }
+      ],
+      note: "** Note: Elementary Mathematics is NOT for OTA Candidates."
+    },
+
+    extraSections: [
+      {
+        title: "Important Note on Preferences",
+        list: [
+          "Candidates must specify their preferences for IMA, INA, AFA, and OTA clearly in the application.",
+          "Female candidates are eligible ONLY for OTA (SSC Women Non-Technical) Course.",
+          "Candidates who desire to join Air Force Academy must indicate AFA as their first choice."
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Step 1: Visit the official website upsconline.nic.in.",
+      "Step 2: Complete the One Time Registration (OTR) process if not already done.",
+      "Step 3: Login and click on 'Latest Notifications' -> 'Combined Defence Services Examination (I), 2026'.",
+      "Step 4: Fill Part-I (Basic Details) and Part-II (Payment, Center Selection, Photo/Sign Upload) of the application.",
+      "Step 5: Pay the examination fee of ₹200 online (exempted for Female/SC/ST).",
+      "Step 6: Upload scanned photograph and signature as per specifications.",
+      "Step 7: Submit the application form and take a printout for future reference."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://upsconline.nic.in/" },
+      { title: "Download Notification", url: "https://upsc.gov.in/sites/default/files/Notif-CDSE-I-2026-Engl-101225.pdf" }, // Link pattern based on PDF name
+      { title: "Official Website", url: "https://upsc.gov.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the exam date for UPSC CDS 1 2026?", answer: "The exam is scheduled for 12th April 2026." },
+      { question: "Can final year students apply for CDS?", answer: "Yes, candidates appearing in the final year/semester degree exam can apply." },
+      { question: "Can females apply for IMA or AFA?", answer: "No, female candidates are eligible only for the Officers' Training Academy (OTA)." },
+      { question: "Is there any negative marking in CDS Exam?", answer: "Yes, 1/3rd of the marks assigned to a question will be deducted for a wrong answer." }
+    ]
+  },
+// --- 36. UPSC NDA & NA (I) Exam 2026 ---
   {
     id: 36,
     slug: "upsc-nda-na-1-exam-2026",
@@ -59,8 +194,7 @@ export const latestJobs = [
       { "Wing Name": "Army (NDA)", "Total Posts": "208", "Gender Eligibility": "Male & Female" },
       { "Wing Name": "Navy (NDA)", "Total Posts": "42", "Gender Eligibility": "Male & Female" },
       { "Wing Name": "Air Force (NDA)", "Total Posts": "120", "Gender Eligibility": "Male & Female" },
-      { "Wing Name": "Naval Academy (10+2 Cadet Entry)", "Total Posts": "24", "Gender Eligibility": "Male Only" },
-      { "Wing Name": "Grand Total", "Total Posts": "394", "Gender Eligibility": "-" }
+      { "Wing Name": "Naval Academy (10+2 Cadet Entry)", "Total Posts": "24", "Gender Eligibility": "Male Only" }
     ],
 
     selectionProcess: [
