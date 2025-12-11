@@ -8,12 +8,11 @@ export const admissionData = [
     shortTitle: "Bihar DElEd Admission 2026",
     title: "Bihar DElEd Admission 2026 Apply Online for Joint Entrance Exam (JEE) | Session 2026-28",
     shortInfo: "Bihar School Examination Board (BSEB), Patna has released the official notification for the Diploma in Elementary Education (D.El.Ed) Joint Entrance Examination 2026. This entrance test is for admission into the 2-year D.El.Ed course for the session 2026-28 in various government and private colleges of Bihar. Eligible candidates can apply online from 11th December 2025.",
-    postDate: "11/12/2025",
+    postDate: "10/12/2025",
     category: "Admission",
     state: "Bihar",
     tags: ["Bihar DElEd 2026", "BSEB DElEd Admission", "Bihar Teaching Course", "D.El.Ed Entrance Exam", "Bihar Job"],
 
-    salary: "N/A (Admission Form)",
 
     importantDates: [
       { label: "Notification Released", value: "10/12/2025" },
