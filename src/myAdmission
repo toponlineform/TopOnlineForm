@@ -33,6 +33,7 @@ export const admissionData = [
 
     ageLimit: "Minimum Age: 17 Years (as on 01/01/2026). No Upper Age Limit.",
 
+    skipTotalFor: ["Session"],
     vacancyTableTitle: "Course Details",
     vacancyColumnName: "Course Name",
 
