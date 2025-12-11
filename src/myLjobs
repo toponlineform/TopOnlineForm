@@ -58,8 +58,7 @@ export const latestJobs = [
       { "Department Name": "Office of the Lokayukta", "UR": 2, "OBC": 3, "SC": 0, "ST": 0, "EWS": 1, "Total": 6 },
       { "Department Name": "Drugs Control Department", "UR": 4, "OBC": 2, "SC": 0, "ST": 0, "EWS": 0, "Total": 6 },
       { "Department Name": "Public Grievances Commission", "UR": 4, "OBC": 1, "SC": 0, "ST": 0, "EWS": 0, "Total": 5 },
-      { "Department Name": "Sahitya Kala Parishad", "UR": 3, "OBC": 0, "SC": 0, "ST": 0, "EWS": 0, "Total": 3 },
-      { "Department Name": "Grand Total", "UR": 302, "OBC": 212, "SC": 70, "ST": 53, "EWS": 77, "Total": 714 }
+      { "Department Name": "Sahitya Kala Parishad", "UR": 3, "OBC": 0, "SC": 0, "ST": 0, "EWS": 0, "Total": 3 }
     ],
 
     selectionProcess: [
