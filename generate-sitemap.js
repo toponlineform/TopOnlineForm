@@ -75,3 +75,4 @@ sitemap += `
 fs.writeFileSync('./public/sitemap.xml', sitemap);
 
 console.log("✅ Sitemap Generated Successfully with " + jobsData.length + " jobs!");
+
