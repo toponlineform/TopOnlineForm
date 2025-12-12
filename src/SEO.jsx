@@ -6,19 +6,45 @@ const SEO = ({ title, description, keywords, postDate, lastDate, salary, vacancy
   const { pathname } = useLocation();
   const siteUrl = "https://toponlineform.com";
   const currentUrl = `${siteUrl}${pathname}`;
-  const defaultImage = "https://toponlineform.com/logo-banner.png"; // Apna ek badhiya sa banner bana kar public folder me daal do
+  const defaultImage = "https://toponlineform.com/logo-banner.png"; 
 
-  // --- BRAHMASTRA: Dynamic Job Schema ---
+  // --- BRAHMASTRA: Dynamic Job Schema Logic ---
   let schemaData = null;
 
   if (type === 'JobPosting') {
+    // Salary Fix: Sirf pehla number nikalo (Min Salary)
+    let salaryValue = 0;
+    if (salary) {
+        const match = salary.match(/(\d+)/); // Sirf digits dhundo
+        if (match) salaryValue = parseInt(match[0]); // Pehla number (e.g. 18000)
+    }
+
+    // Date Fix: Safe Date Parsing
+    let validThroughDate = new Date();
+    validThroughDate.setMonth(validThroughDate.getMonth() + 2); // Default: 2 months later
+    
+    if (lastDate && lastDate.includes('/')) {
+        try {
+            // Convert DD/MM/YYYY to YYYY-MM-DD
+            const parts = lastDate.split('/');
+            if(parts.length === 3) {
+                validThroughDate = new Date(`${parts[2]}-${parts[1]}-${parts[0]}`);
+            }
+        } catch (e) { console.error("Date Parse Error", e); }
+    }
+
     schemaData = {
       "@context": "https://schema.org/",
       "@type": "JobPosting",
       "title": title,
       "description": description,
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "TopOnlineForm",
+        "value": pathname.replace('/', '') // Unique ID from URL
+      },
       "datePosted": postDate || new Date().toISOString(),
-      "validThrough": lastDate ? new Date(lastDate.split('/').reverse().join('-')).toISOString() : new Date(new Date().setMonth(new Date().getMonth() + 2)).toISOString(), // Agar last date nahi hai to 2 mahine baad ki daal do
+      "validThrough": validThroughDate.toISOString(),
       "hiringOrganization": {
         "@type": "Organization",
         "name": "Top Online Form",
@@ -38,12 +64,12 @@ const SEO = ({ title, description, keywords, postDate, lastDate, salary, vacancy
         "currency": "INR",
         "value": {
           "@type": "QuantitativeValue",
-          "value": salary ? parseInt(salary.replace(/[^0-9]/g, '')) : 0, // Salary me se text hata kar number nikalna
+          "value": salaryValue || 18000, // Default agar salary na mile
           "unitText": "MONTH"
         }
       },
       "employmentType": "FULL_TIME",
-      "vacancyCount": vacancy || "Various"
+      "vacancyCount": vacancy ? parseInt(vacancy) : 1
     };
   }
 
@@ -52,13 +78,12 @@ const SEO = ({ title, description, keywords, postDate, lastDate, salary, vacancy
       {/* Basic Meta Tags */}
       <title>{title} | Top Online Form</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords || "Sarkari Result, Govt Jobs 2025, Admit Card, Sarkari Naukri"} />
+      <meta name="keywords" content={keywords || "Sarkari Result, Govt Jobs 2025, Admit Card, Sarkari Naukri, Online Form"} />
       <link rel="canonical" href={currentUrl} />
       <meta name="robots" content="index, follow, max-image-preview:large" />
-      <meta name="googlebot" content="index, follow" />
 
-      {/* Open Graph (Facebook/WhatsApp ke liye) */}
-      <meta property="og:type" content={type} />
+      {/* Open Graph (Facebook/WhatsApp) */}
+      <meta property="og:type" content={type === 'JobPosting' ? 'article' : 'website'} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={currentUrl} />
@@ -73,7 +98,7 @@ const SEO = ({ title, description, keywords, postDate, lastDate, salary, vacancy
       <meta name="twitter:image" content={defaultImage} />
       <meta name="twitter:creator" content="@toponlineform" />
 
-      {/* Inject Schema JSON-LD */}
+      {/* Inject Schema JSON-LD (The Google Magic) */}
       {schemaData && (
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
