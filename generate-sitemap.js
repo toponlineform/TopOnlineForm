@@ -1,51 +1,41 @@
 import fs from 'fs';
+import { jobsData } from './src/jobsData.js';
 
-// 1. Sabhi Data Files ko Import karein (Kyuki ab data split ho chuka hai)
-import { latestJobs } from './src/myLjobs.js';
-import { admissionData } from './src/myAdmission.js';
-import { admitCards } from './src/myAcards.js';
-import { results } from './src/myRslt.js';
-import { newAnswerKeys } from './src/myAkey.js';
-import { syllabusData } from './src/mySyl.js';
-import { previousPapers } from './src/myPreviouspapers.js';
-
+// 1. Aapki Website ka Domain
 const DOMAIN = 'https://toponlineform.com';
 
-// 2. Static Pages (Jo change nahi hote)
+// 2. Wo pages jo fix rahenge (Static Pages)
 const staticPages = [
-  '',
+  '', // Home Page
   'active-jobs',
   'latest-jobs',
   'results',
   'admit-card',
   'answer-key',
   'syllabus',
-  'admission',
   'previous-papers',
   'about',
   'contact',
   'privacy'
 ];
 
-// 3. Sabhi Data ko ek badi list me milayein
-const allPosts = [
-  ...latestJobs, 
-  ...admissionData, 
-  ...admitCards, 
-  ...results, 
-  ...newAnswerKeys,
-  ...syllabusData,
-  ...previousPapers
-];
+// 3. XML ka Header start karo
+let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+`;
 
-// Helper: Date format karne ke liye
+// --- NEW SAFETY FEATURE: Helper function to safely format date ---
+// Ye function check karega ki date hai ya nahi. Agar galti se date miss ho gayi, to site crash nahi hogi.
 const getSafeDate = (dateStr) => {
-  if (!dateStr) return new Date().toISOString().split('T')[0];
+  if (!dateStr) {
+    // Agar date nahi hai to aaj ki date return karo (YYYY-MM-DD format mein)
+    return new Date().toISOString().split('T')[0];
+  }
+  // Agar date format galat hai ya empty hai, to bhi sambhal lo
   try {
     const parts = dateStr.split('/');
     if (parts.length === 3) {
-      // DD/MM/YYYY ko YYYY-MM-DD me badlo
-      return `${parts[2]}-${parts[1]}-${parts[0]}`;
+      return parts.reverse().join('-');
     }
     return new Date().toISOString().split('T')[0];
   } catch (e) {
@@ -53,12 +43,7 @@ const getSafeDate = (dateStr) => {
   }
 };
 
-// 4. XML Header
-let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-`;
-
-// 5. Static Pages Add karein
+// 4. Static Pages ko add karo
 staticPages.forEach(page => {
   sitemap += `
   <url>
@@ -68,25 +53,25 @@ staticPages.forEach(page => {
   </url>`;
 });
 
-// 6. Dynamic Posts Add karein (Latest Jobs, Results, etc.)
-allPosts.forEach(post => {
-  const safeSlug = post.slug ? post.slug.trim() : '';
-  if (safeSlug) {
-    sitemap += `
+// 5. Jobs Data se Loop chala kar saare Links add karo (AUTOMATIC PART)
+jobsData.forEach(job => {
+  // Slug safayi (optional but good practice)
+  const safeSlug = job.slug.trim();
+  
+  sitemap += `
   <url>
     <loc>${DOMAIN}/${safeSlug}</loc>
-    <lastmod>${getSafeDate(post.postDate)}</lastmod>
+    <lastmod>${getSafeDate(job.postDate)}</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>`;
-  }
 });
 
-// 7. XML Close
+// 6. XML close karo
 sitemap += `
 </urlset>`;
 
-// 8. File Save karein
+// 7. File ko 'public' folder mein save kar do
 fs.writeFileSync('./public/sitemap.xml', sitemap);
 
-console.log(`✅ Sitemap Updated! Total Posts: ${allPosts.length}`);
+console.log("✅ Sitemap Generated Successfully with " + jobsData.length + " jobs!");
