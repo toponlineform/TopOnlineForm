@@ -1660,6 +1660,8 @@ export const latestJobs = [
       { label: "Notification Issued", value: "22/08/2025" },
       { label: "Application Begin", value: "27/08/2025" },
       { label: "Last Date for Apply", value: "26/09/2025" },
+      { label: "Reopen Application Begin", value: "05/12/2025" },
+      { label: "Reopen Last Date for Apply", value: "12/12/2025" },
       { label: "Exam Date", value: "10.01.2026 to 13.01.2026 and 15.01.2026 to 16.01.2026" }
     ],
 
@@ -3217,7 +3219,7 @@ export const latestJobs = [
 
     links: [
       { title: "Apply Online (Link Active on 09/12/2025)", url: "https://www.drdo.gov.in/drdo/careers/ceptam-11" },
-      { title: "Download Notification (Soon)", url: "" },
+      { title: "Download Notification (Soon)", url: "https://www.drdo.gov.in/drdo/sites/default/files/vacancy/CEPTAM-11_AdvtEnglish.pdf" },
       { title: "Download Short Notice", url: "https://www.drdo.gov.in/drdo/sites/default/files/vacancy/shortadvtC11_04122025.pdf" }, // Replace with direct PDF link if hosted
       { title: "Official Website", url: "https://www.drdo.gov.in" }
     ]
@@ -3850,7 +3852,7 @@ export const latestJobs = [
     postDate: "09/10/2025",
     category: "Latest Jobs",
     salary: "As per State Govt Norms (Pay Level 6 for Clerk / Level 1 for Group D)",
-    importantDates: [{ label: "Application Begin", value: "03/11/2025" }, { label: "Last Date for Apply", value: "03/12/2025 (Upto 5:00 PM)" }, { label: "Fee Payment Last Date", value: "03/12/2025" }, { label: "Written Exam Date", value: "January 2026 (Tentative)" }],
+    importantDates: [{ label: "Application Begin", value: "03/11/2025" }, { label: "Last Date for Apply", value: "12/12/2025 (Upto 5:00 PM) [extended]" }, { label: "Fee Payment Last Date", value: "03/12/2025" }, { label: "Written Exam Date", value: "January 2026 (Tentative)" }],
     applicationFee: [{ category: "General / OBC / EWS", amount: "₹400/-" }, { category: "SC / ST / PH", amount: "₹150/-" }],
     ageLimit: "Min: 18 Years | Max: 40 Years (As on 01/01/2025)",
     ageRelaxation: ["SC/ST: 5 Years", "OBC: 3 Years", "Physically Handicapped (PH): 8 Years"],
