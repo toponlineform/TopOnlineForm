@@ -1660,8 +1660,9 @@ export const latestJobs = [
       { label: "Notification Issued", value: "22/08/2025" },
       { label: "Application Begin", value: "27/08/2025" },
       { label: "Last Date for Apply", value: "26/09/2025" },
-      { label: "Reopen Application Begin", value: "05/12/2025" },
-      { label: "Reopen Last Date for Apply", value: "12/12/2025" },
+      {Reopen},
+      { label: "Application Begin", value: "05/12/2025" },
+      { label: "Last Date for Apply", value: "12/12/2025" },
       { label: "Exam Date", value: "10.01.2026 to 13.01.2026 and 15.01.2026 to 16.01.2026" }
     ],
 
