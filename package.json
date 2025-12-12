@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node --experimental-specifier-resolution=node generate-sitemap.js && vite build",
+    "build": "node --experimental-specifier-resolution=node generate-sitemap.js && vite build && node copy-404.js",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
