@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+// Note: jobsData is now only an index, so we load full data dynamically
 import SEO from './SEO';
 
 const ActiveJobs = () => {
@@ -55,10 +56,10 @@ const ActiveJobs = () => {
   useEffect(() => {
     setLoading(true);
 
-    // ✅ FIXED: Added .js extension to imports so Vite/Node finds the files correctly
+    // Dynamic Import: Latest Jobs aur Admission data ko ek saath load karein
     Promise.all([
-      import('./myLjobs.js').then(mod => mod.latestJobs || []), // Added fallback || []
-      import('./myAdmission.js').then(mod => mod.admissionData || []), // Added fallback || []
+      import('./myLjobs').then(mod => mod.latestJobs),
+      import('./myAdmission').then(mod => mod.admissionData),
     ]).then(([latestJobsData, admissionData]) => {
       
       // Dono data ko ek saath mila lein
