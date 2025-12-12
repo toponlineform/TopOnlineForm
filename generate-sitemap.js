@@ -74,4 +74,4 @@ sitemap += `
 // 7. File ko 'public' folder mein save kar do
 fs.writeFileSync('./public/sitemap.xml', sitemap);
 
-console.log("✅ Sitemap Generated Successfully with " + jobsData.length + " jobs!")
+console.log("✅ Sitemap Generated Successfully with " + jobsData.length + " jobs!");
