@@ -1,28 +1,38 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function SEO({ title, description, keywords, url, image }) {
-  // 1. Fallback image if specific job image is missing
-  const metaImage = image || "https://toponlineform.com/logo.png"; // Make sure logo.png is in your public folder
+const SEO = ({ title, description, keywords, url, image, type = 'website', schema }) => {
+  const siteTitle = "Top Online Form";
+  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+  const metaDesc = description || "Latest Sarkari Result, Govt Jobs, Admit Card, Answer Key & Syllabus 2025.";
+  const metaUrl = url || "https://toponlineform.com";
+  const metaImage = image || "https://toponlineform.com/logo-banner.png"; 
 
   return (
     <Helmet>
-      <title>{title} | TopOnlineForm</title>
-      <meta name="description" content={description} />
+      <title>{fullTitle}</title>
+      <meta name="description" content={metaDesc} />
       <meta name="keywords" content={keywords} />
-      
-      {/* Social Media Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={metaImage} /> {/* This was missing */}
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={url} />
-      
-      {/* Twitter Cards */}
+      <link rel="canonical" href={metaUrl} />
+
+      {/* Open Graph */}
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={metaDesc} />
+      <meta property="og:url" content={metaUrl} />
+      <meta property="og:image" content={metaImage} />
+      <meta property="og:site_name" content={siteTitle} />
+
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={metaDesc} />
       <meta name="twitter:image" content={metaImage} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+
+      {/* Schema */}
+      {schema && <script type="application/ld+json">{JSON.stringify(schema)}</script>}
     </Helmet>
   );
-}
+};
+
+export default SEO;
