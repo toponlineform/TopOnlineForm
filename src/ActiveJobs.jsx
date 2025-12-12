@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// OLD: import { jobsData } from './jobsData'; // अब इसे हटा दिया गया है
+// Note: jobsData is now only an index, so we load full data dynamically
 import SEO from './SEO';
 
 const ActiveJobs = () => {
   const [activeList, setActiveList] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [loading, setLoading] = useState(true); // Loading State जोड़ा गया
+  const [loading, setLoading] = useState(true); 
 
   // 1. Helper: Parse Date nicely
   const parseDate = (dateStr) => {
     if (!dateStr) return null;
     const lowerDate = dateStr.toLowerCase();
+    
+    // Future placeholders
     if (lowerDate.includes("notify") || lowerDate.includes("soon") || lowerDate.includes("tbd")) {
       return new Date("2099-12-31");
     }
     
     try {
+      // Clean up date string (remove extra text like " (5 PM)")
       const cleanDate = dateStr.split(' ')[0].replace(/-/g, '/');
       const parts = cleanDate.split('/');
       if (parts.length === 3) {
+        // Format: DD/MM/YYYY -> YYYY, MM-1, DD
         return new Date(parts[2], parts[1] - 1, parts[0]);
       }
     } catch (e) {
@@ -28,40 +32,55 @@ const ActiveJobs = () => {
     return null;
   };
 
-  // 2. Helper: Get Last Date String safely
+  // 2. Helper: Get Last Date String safely (Updated for Re-Open Logic)
   const getLastDateString = (job) => {
-    return job.importantDates?.find(d => 
-      d.label.toLowerCase().includes("last") || 
-      d.label.toLowerCase().includes("closing")
-    )?.value || "Check Notice";
+    if (!job.importantDates) return "Check Notice";
+
+    // Priority 1: Check for "Re-Open" or "Extended" Last Date
+    const reopenDate = job.importantDates.find(d => 
+      (d.label.toLowerCase().includes("re-open") || d.label.toLowerCase().includes("extended")) &&
+      (d.label.toLowerCase().includes("last") || d.label.toLowerCase().includes("closing"))
+    );
+
+    if (reopenDate) return reopenDate.value;
+
+    // Priority 2: Check for Normal "Last Date" (but ignore "Old")
+    const normalDate = job.importantDates.find(d => 
+      (d.label.toLowerCase().includes("last") || d.label.toLowerCase().includes("closing")) &&
+      !d.label.toLowerCase().includes("old") // Old dates ko ignore karein
+    );
+
+    return normalDate ? normalDate.value : "Check Notice";
   };
 
   useEffect(() => {
     setLoading(true);
 
-    // Dynamic Import: Latest Jobs और Admission data को एक साथ लोड करें
+    // Dynamic Import: Latest Jobs aur Admission data ko ek saath load karein
     Promise.all([
       import('./myLjobs').then(mod => mod.latestJobs),
       import('./myAdmission').then(mod => mod.admissionData),
     ]).then(([latestJobsData, admissionData]) => {
       
-      // दोनों डेटा को एक साथ मिला लें
-      const jobsData = [...latestJobsData, ...admissionData];
+      // Dono data ko ek saath mila lein
+      const allJobs = [...latestJobsData, ...admissionData];
       
       const today = new Date();
       today.setHours(0, 0, 0, 0); 
 
-      // 3. Filter Logic (सक्रिय फॉर्म के लिए)
-      const filtered = jobsData.filter(job => {
+      // 3. Filter Logic (Active Forms Only)
+      const filtered = allJobs.filter(job => {
         const isRelevant = job.category === "Latest Jobs" || job.category === "Admission";
         if (!isRelevant) return false;
 
         const lastDateStr = getLastDateString(job);
         const expDate = parseDate(lastDateStr);
 
+        // Agar valid date hai, to check karein ki wo aaj ya future ki hai
         if (expDate) {
           return expDate >= today;
         }
+        // Agar date "Check Notice" ya invalid hai, to use dikhayein (safe side)
         return true; 
       });
 
@@ -73,7 +92,7 @@ const ActiveJobs = () => {
       });
 
       setActiveList(sorted);
-      setLoading(false); // डेटा लोड होने के बाद loading बंद करें
+      setLoading(false); 
       
     }).catch(error => {
         console.error("Error loading Active Jobs data:", error);
@@ -88,7 +107,7 @@ const ActiveJobs = () => {
     job.shortTitle?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Loading Screen (डेटा लोड होने तक दिखाएँ)
+  // Loading Screen
   if (loading) {
     return (
       <div style={{ textAlign: 'center', padding: '50px' }}>
@@ -100,7 +119,6 @@ const ActiveJobs = () => {
 
   // Final Render
   return (
-    // ✅ REMOVED "job-container" & ADDED INLINE STYLE FOR WIDTH ONLY
     <div style={{ padding: '20px', maxWidth: '1000px', margin: '0 auto' }}>
       <SEO 
         title="Active Govt Jobs 2025 | Live Application Forms" 
@@ -129,7 +147,7 @@ const ActiveJobs = () => {
         />
       </div>
 
-      {/* ✅ Table Container (Centered with max-width) */}
+      {/* Table Container */}
       <div style={{maxWidth: '800px', margin: '0 auto', overflowX: 'auto'}}>
         <table className="vacancy-table" style={{width: '100%', borderCollapse: 'collapse', border: '2px solid black'}}>
           <thead>
@@ -146,7 +164,7 @@ const ActiveJobs = () => {
           <tbody>
             {displayList.length > 0 ? (
               displayList.map((job) => {
-                const lastDate = job.importantDates?.find(d => d.label.toLowerCase().includes("last"))?.value || "Check Notice";
+                const lastDate = getLastDateString(job);
                 const isAdmission = job.category === "Admission";
                 
                 return (
