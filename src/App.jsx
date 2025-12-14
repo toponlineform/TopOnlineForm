@@ -189,7 +189,7 @@ function Home() {
   );
 }
 
-// --- Job Details ---
+// --- Job Details (Updated with Features) ---
 function JobDetails() {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -225,6 +225,16 @@ function JobDetails() {
   if (loading) return <div style={{textAlign:'center', padding: '50px'}}><h2 style={{color: '#ab1e1e'}}>Loading Job Details...</h2></div>;
   if (error || !job) return <div style={{textAlign:'center', padding: '50px'}}><h2>Job Not Found</h2><button onClick={() => navigate('/')} style={{padding: '10px', background: '#ab1e1e', color: 'white', border:'none', cursor:'pointer'}}>Go Home</button></div>;
 
+  // --- Logic for Simple Mode (Syllabus/Previous Papers) ---
+  const isSimpleMode = job.category.toLowerCase().includes("syllabus") || 
+                       job.category.toLowerCase().includes("previous") || 
+                       job.category.toLowerCase().includes("paper");
+
+  // --- Logic for Related Jobs ---
+  const relatedJobs = jobsData
+    .filter(j => j.category === job.category && j.id !== job.id)
+    .slice(0, 5);
+
   const convertDate = (dateStr) => {
     if(!dateStr) return new Date().toISOString().split('T')[0];
     try {
@@ -239,11 +249,14 @@ function JobDetails() {
   const datePosted = job.postDate ? convertDate(job.postDate) : new Date().toISOString().split('T')[0];
 
   let stepsHeader = "How to Apply";
-  const cat = job.category.toLowerCase();
-  if (cat.includes("admit card")) stepsHeader = "How to Download Admit Card";
-  else if (cat.includes("result")) stepsHeader = "How to Check Result";
-  else if (cat.includes("answer key")) stepsHeader = "How to Download Answer Key";
-  else if (cat.includes("admission")) stepsHeader = "How to Apply for Admission";
+  if (isSimpleMode) stepsHeader = "How to Download";
+  else {
+    const cat = job.category.toLowerCase();
+    if (cat.includes("admit card")) stepsHeader = "How to Download Admit Card";
+    else if (cat.includes("result")) stepsHeader = "How to Check Result";
+    else if (cat.includes("answer key")) stepsHeader = "How to Download Answer Key";
+    else if (cat.includes("admission")) stepsHeader = "How to Apply for Admission";
+  }
 
   const formatHeader = (key) => {
     const upperKeys = ["ur", "obc", "sc", "st", "ews", "pwbd", "esm", "gen", "ph"];
@@ -302,6 +315,15 @@ function JobDetails() {
 
   return (
     <div className="job-container">
+      {/* --- FEATURE 1: BREADCRUMBS --- */}
+      <div style={{ fontSize: '14px', color: '#666', marginBottom: '15px' }}>
+        <Link to="/" style={{ textDecoration: 'none', color: '#007bff' }}>Home</Link>
+        {' > '}
+        <span style={{ color: '#444' }}>{job.category}</span>
+        {' > '}
+        <span style={{ color: '#888' }}>{job.shortTitle || job.title.substring(0, 20) + "..."}</span>
+      </div>
+
       {/* ✅ PRO SEO INTEGRATION */}
       <SEO 
         title={job.title} 
@@ -320,26 +342,104 @@ function JobDetails() {
       {job.postDate && (<p style={{marginBottom:'10px', textAlign:'justify'}}><strong>Post Date : </strong> {job.postDate}</p>)}
       <p style={{marginBottom:'20px', textAlign:'justify'}}><strong>Short Info : </strong> {job.shortInfo}</p>
        
-      {job.importantDates && job.importantDates.length > 0 && (
+      {/* --- CONDITIONAL RENDERING (Simple Mode vs Job Mode) --- */}
+      
+      {/* Dates & Fees - Hidden in Simple Mode */}
+      {!isSimpleMode && job.importantDates && job.importantDates.length > 0 && (
         <table><tbody><tr><th className="green-header" width="50%">Dates</th><th className="green-header" width="50%">Fees</th></tr><tr><td><ul>{job.importantDates.map((d, i) => <li key={i}><strong>{d.label}:</strong> {d.value}</li>)}</ul></td><td><ul>{job.applicationFee ? job.applicationFee.map((f, i) => <li key={i}><strong>{f.category}:</strong> {f.amount}</li>) : <li>Check Notification</li>}</ul></td></tr></tbody></table>
       )}
        
-      {job.ageLimit && (<><div className="section-header">Age Limit</div><p style={{textAlign: 'center', border: '1px solid #000', padding: '10px'}}>{job.ageLimit}</p>{job.ageRelaxation && (<div style={{marginTop: '15px', padding: '0 10px'}}><strong>Age Relaxation:</strong><ul style={{listStyleType: 'disc', marginLeft: '30px', marginTop: '5px'}}>{job.ageRelaxation.map((item, index) => <li key={index} style={{marginBottom: '5px'}}>{item}</li>)}</ul></div>)}</>)}
+      {/* Age Limit - Hidden in Simple Mode */}
+      {!isSimpleMode && job.ageLimit && (<><div className="section-header">Age Limit</div><p style={{textAlign: 'center', border: '1px solid #000', padding: '10px'}}>{job.ageLimit}</p>{job.ageRelaxation && (<div style={{marginTop: '15px', padding: '0 10px'}}><strong>Age Relaxation:</strong><ul style={{listStyleType: 'disc', marginLeft: '30px', marginTop: '5px'}}>{job.ageRelaxation.map((item, index) => <li key={index} style={{marginBottom: '5px'}}>{item}</li>)}</ul></div>)}</>)}
 
-      {job.vacancyDetails && <RenderTable data={job.vacancyDetails} title="Vacancy Details" />}
-      {(job.stateWiseVacancy || job.zoneWiseGraduate) && (<>{job.stateWiseVacancy && <RenderTable data={job.stateWiseVacancy} title={job.vacancyTableTitle} overrideFirstCol={job.vacancyColumnName} showNote={job.stateTableNote} skipCols={job.skipTotalFor} />}{job.zoneWiseGraduate && <RenderTable data={job.zoneWiseGraduate} title="Graduate Level Vacancy" overrideFirstCol={job.vacancyColumnName} />}</>)}
+      {/* Vacancy Details - Hidden in Simple Mode */}
+      {!isSimpleMode && job.vacancyDetails && <RenderTable data={job.vacancyDetails} title="Vacancy Details" />}
+      
+      {/* State Wise - Hidden in Simple Mode */}
+      {!isSimpleMode && (job.stateWiseVacancy || job.zoneWiseGraduate) && (<>{job.stateWiseVacancy && <RenderTable data={job.stateWiseVacancy} title={job.vacancyTableTitle} overrideFirstCol={job.vacancyColumnName} showNote={job.stateTableNote} skipCols={job.skipTotalFor} />}{job.zoneWiseGraduate && <RenderTable data={job.zoneWiseGraduate} title="Graduate Level Vacancy" overrideFirstCol={job.vacancyColumnName} />}</>)}
 
-      {job.salary && (<><div className="section-header">Pay Scale / Salary</div><div style={{textAlign: 'center', border: '1px solid #000', padding: '15px', fontWeight: 'bold', fontSize: '16px', backgroundColor: '#f9f9f9', color: '#008000'}}>{job.salary}</div></>)}
+      {/* Salary - Hidden in Simple Mode */}
+      {!isSimpleMode && job.salary && (<><div className="section-header">Pay Scale / Salary</div><div style={{textAlign: 'center', border: '1px solid #000', padding: '15px', fontWeight: 'bold', fontSize: '16px', backgroundColor: '#f9f9f9', color: '#008000'}}>{job.salary}</div></>)}
+      {!isSimpleMode && job.salaryDetails && <RenderTable data={job.salaryDetails} title="Post Wise Salary / Pay Level" autoTotal={false} />}
+
+      {/* Selection Process */}
       {job.selectionProcess && (<><div className="section-header">Selection Process</div><ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.selectionProcess.map((item, index) => <li key={index} style={{marginBottom: '5px'}}><strong>{item}</strong></li>)}</ol></>)}
 
-      {job.examPattern && (<><div className="section-header">Exam Pattern</div><div style={{padding: '10px'}}>{job.examPattern.details && <ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>{job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}</ul>}{job.examPattern.table && <RenderSmartTable data={job.examPattern.table} />}</div></>)}
+      {/* --- FEATURE 2: EXAM PATTERN FIX (Shows All Tiers) --- */}
+      {job.examPattern && (
+        <>
+          <div className="section-header">{(job.examPattern.pet || (job.examPattern.stages && job.examPattern.stages.some(s => s.type === 'pet'))) ? "Exam Pattern & Physical Test" : "Exam Pattern"}</div>
+          <div style={{padding: '10px'}}>
+            {job.examPattern.details && <ul style={{listStyleType: 'disc', marginLeft: '20px', marginBottom: '15px'}}>{job.examPattern.details.map((item, i) => <li key={i} style={{marginBottom: '5px'}}>{item}</li>)}</ul>}
+            
+            {/* Renders all sub-tables if they exist */}
+            {job.examPattern.table && <RenderSmartTable data={job.examPattern.table} />}
+            {job.examPattern.tier1 && <RenderSmartTable data={job.examPattern.tier1} title="Tier-I Exam Pattern" />}
+            {job.examPattern.tier2 && <RenderSmartTable data={job.examPattern.tier2} title="Tier-II Exam Pattern" />}
+            {job.examPattern.cbt1 && <RenderSmartTable data={job.examPattern.cbt1} title={job.examPattern.cbt1Title || "CBT-1 Pattern"} />}
+            {job.examPattern.cbt2 && <RenderSmartTable data={job.examPattern.cbt2} title={job.examPattern.cbt2Title || "CBT-2 Pattern"} />}
+            {job.examPattern.pet && <RenderSmartTable data={job.examPattern.pet} title="Physical Efficiency Test (PET)" />}
+            
+            {job.examPattern.stages && job.examPattern.stages.map((stage, index) => (<RenderSmartTable key={index} data={stage.data} title={stage.title} />))}
+          </div>
+        </>
+      )}
 
-      {job.extraSections && job.extraSections.map((section, index) => (<div key={index}>{section.tableData ? <RenderTable data={section.tableData} title={section.title} autoTotal={false} /> : (<><div className="section-header">{section.title}</div><div style={{padding: '10px'}}>{section.text && <p style={{textAlign: 'justify'}}>{section.text}</p>}{section.list && <ul style={{listStyleType: 'disc', marginLeft: '30px'}}>{section.list.map((li, i) => <li key={i} style={{marginBottom: '5px'}}>{li}</li>)}</ul>}</div></>)}</div>))}
+      {/* Extra Sections (For Syllabus Text etc.) */}
+      {job.extraSections && job.extraSections.map((section, index) => (<div key={index}>{section.tableData ? <RenderTable data={section.tableData} title={section.title} autoTotal={false} /> : (<><div className="section-header">{section.title}</div><div style={{padding: '10px'}}>{section.text && <p style={{textAlign: 'justify', whiteSpace: 'pre-line'}}>{section.text}</p>}{section.list && <ul style={{listStyleType: 'disc', marginLeft: '30px'}}>{section.list.map((li, i) => <li key={i} style={{marginBottom: '5px'}}>{li}</li>)}</ul>}</div></>)}</div>))}
 
+      {/* How to Apply */}
       {job.howToApply && (<><div className="section-header">{stepsHeader}</div><ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.howToApply.map((item, index) => <li key={index} style={{marginBottom: '10px'}}>{item}</li>)}</ol></>)}
-      <div className="section-header">Important Links</div>
+      
+      {/* Important Links */}
+      <div className="section-header">{isSimpleMode ? "Download Links" : "Important Links"}</div>
       <table className="important-links"><tbody>{job.links && job.links.map((link, index) => (<tr key={index}><td><strong>{link.title}</strong></td><td align="center"><a href={link.url} className="click-here" target="_blank" rel="noreferrer">Click Here</a></td></tr>))}</tbody></table>
+      
+      {/* FAQs */}
       {job.faqs && (<><div className="section-header">FAQs</div><div style={{padding: '15px', border: '1px solid #ddd', marginTop: '10px'}}>{job.faqs.map((faq, index) => (<div key={index} style={{marginBottom: '15px'}}><div style={{fontWeight: 'bold', color: '#d32f2f', marginBottom: '5px'}}>Q.{index + 1}: {faq.question}</div><div style={{color: '#333'}}>Ans: {faq.answer}</div></div>))}</div></>)}
+
+      {/* --- FEATURE 3: SHARE ON WHATSAPP --- */}
+      <div style={{ margin: '30px 0', textAlign: 'center' }}>
+        <a 
+          href={`https://api.whatsapp.com/send?text=*${job.title}*%0A%0ACheck Details Here:%0Ahttps://toponlineform.com/${job.slug}`} 
+          target="_blank" 
+          rel="noreferrer"
+          style={{
+            backgroundColor: '#25D366',
+            color: 'white',
+            padding: '12px 24px',
+            fontSize: '18px',
+            fontWeight: 'bold',
+            borderRadius: '50px',
+            textDecoration: 'none',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '10px',
+            boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+          }}
+        >
+           Share on WhatsApp ✈️
+        </a>
+      </div>
+
+      {/* --- FEATURE 4: RELATED JOBS --- */}
+      {relatedJobs.length > 0 && (
+        <div style={{ marginTop: '40px', borderTop: '2px solid #eee', paddingTop: '20px' }}>
+          <h3 style={{ fontSize: '20px', color: '#d32f2f', marginBottom: '15px', borderLeft: '4px solid #d32f2f', paddingLeft: '10px' }}>
+            You May Also Like
+          </h3>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            {relatedJobs.map((rJob) => (
+              <li key={rJob.id} style={{ marginBottom: '12px', borderBottom: '1px dashed #ccc', paddingBottom: '8px' }}>
+                <Link to={`/${rJob.slug}`} style={{ textDecoration: 'none', color: '#000', fontSize: '16px', display: 'block' }} onClick={() => window.scrollTo(0, 0)}>
+                  👉 <span style={{ color: '#007bff', fontWeight: '500' }}>{rJob.shortTitle || rJob.title}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
     </div>
   );
 }
