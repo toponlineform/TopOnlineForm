@@ -49,12 +49,12 @@ export const latestJobs = [
       },
       { 
         postName: "Assistant Registrar (Group A)", 
-        totalPost: "01", 
+        totalPost: "05", 
         eligibility: "Master's Degree (55% Marks). Selection via Exam & Interview. Age Max: 40 Yrs." 
       },
       { 
         postName: "Section Officer (Group B)", 
-        totalPost: "05", 
+        totalPost: "04", 
         eligibility: "Bachelor Degree + 3 Yrs Exp as Assistant or 8 Yrs as UDC. Age Max: 35 Yrs." 
       },
       { 
