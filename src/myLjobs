@@ -3357,7 +3357,7 @@ export const latestJobs = [
   },
   
   {
-    id: 11,
+    id: 42,
     slug: "drdo-ceptam-11-recruitment-2025",
     shortTitle: "DRDO CEPTAM-11 Recruitment 2025",
     title: "DRDO CEPTAM-11 Recruitment 2025 Apply Online for 764 Posts | STA-B & Technician-A",
@@ -3368,9 +3368,12 @@ export const latestJobs = [
     salary: "Level 2 to Level 6 (7th CPC)",
 
     importantDates: [
-      { label: "Notification Released", value: "02/12/2025 (Short Notice)" },
+      { label: "Short Notification Released", value: "02/12/2025" },
+      { label: "Full Notification Released", value: "11/12/2025" },
       { label: "Application Begin", value: "09/12/2025" },
-      { label: "Last Date for Apply", value: "31/12/2025" },
+      { label: "Last Date for Apply", value: "01/01/2026 (23:55 Hours)" },
+      { label: "Last Date for Fee", value: "03/01/2026 (23:55 Hours)" },
+      { label: "Correction Window Date", value: "04/01/2026 to 06/01/2026 (23:55 Hours)" },
       { label: "Exam Date", value: "To be notified" }
     ],
 
@@ -3441,8 +3444,8 @@ export const latestJobs = [
     ],
 
     links: [
-      { title: "Apply Online (Link Active on 09/12/2025)", url: "https://www.drdo.gov.in/drdo/careers/ceptam-11" },
-      { title: "Download Notification (Soon)", url: "https://www.drdo.gov.in/drdo/sites/default/files/vacancy/CEPTAM-11_AdvtEnglish.pdf" },
+      { title: "Apply Online", url: "https://cdn.digialm.com/EForms/configuredHtml/1258/96576/Index.html" },
+      { title: "Download Notification (Soon)", url: "https://g03.tcsion.com//per/g03/pub/726/EForms/image/ImageDocUpload/71161/3/302645671.pdf" },
       { title: "Download Short Notice", url: "https://www.drdo.gov.in/drdo/sites/default/files/vacancy/shortadvtC11_04122025.pdf" }, // Replace with direct PDF link if hosted
       { title: "Official Website", url: "https://www.drdo.gov.in" }
     ]
