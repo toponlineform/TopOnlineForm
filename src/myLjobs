@@ -3,7 +3,97 @@ export const latestJobs = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
-   
+
+   // --- 40. Narnaul Court Clerk & Steno Recruitment 2025 ---
+  {
+    id: 40,
+    slug: "narnaul-court-recruitment-2025-clerk-stenographer-vacancy",
+    shortTitle: "Narnaul Court Recruitment 2025",
+    title: "Narnaul Court Clerk and Stenographer Recruitment 2025 Apply Offline for 31 Posts",
+    shortInfo: "Office of the District and Sessions Judge, Narnaul has released two separate notifications for the recruitment of Clerk (Adhoc) and Stenographer Grade-III (Adhoc). A total of 31 vacancies are available. Candidates with a Bachelor's Degree can apply offline before 22nd December 2025.",
+    postDate: "10/12/2025",
+    category: "Latest Jobs",
+    state: "Haryana",
+    tags: ["Narnaul Court Vacancy 2025", "Haryana Court Jobs", "Clerk Recruitment", "Steno Grade III", "Narnaul Court Offline Form"],
+
+    salary: "₹25,500/- Fixed Monthly (Consolidated) for both Clerk and Stenographer",
+
+    importantDates: [
+      { label: "Notification Date", value: "10/12/2025" },
+      { label: "Last Date to Apply", value: "22/12/2025 (05:00 PM)" },
+      { label: "Stenographer Exam Date", value: "25/12/2025 (01:00 PM)" },
+      { label: "Clerk Exam Date", value: "To be notified later" }
+    ],
+
+    applicationFee: [
+      { category: "All Categories (Gen/OBC/SC/ST)", amount: "₹0/- (Nil)" },
+      { category: "Payment Mode", amount: "No Fee Required" }
+    ],
+
+    ageLimit: "18-42 Years (As on 01/01/2025). Age Relaxation as per Haryana Govt rules.",
+
+    vacancyDetails: [
+      { 
+        postName: "Clerk (Adhoc)", 
+        totalPost: "18", 
+        eligibility: "Bachelor of Arts/Science or equivalent. Passed Matriculation with Hindi as one subject." 
+      },
+      { 
+        postName: "Stenographer Grade-III (Adhoc)", 
+        totalPost: "13", 
+        eligibility: "Bachelor of Arts/Science or equivalent. English Shorthand Speed: 80 WPM & Transcription: 20 WPM." 
+      }
+    ],
+
+    selectionProcess: [
+      "Written Test (For Clerk Only)",
+      "Computer Proficiency Test (For Clerk)",
+      "Shorthand Test & Computer Test (For Stenographer)",
+      "Document Verification"
+    ],
+
+    examPattern: {
+      details: [
+        "The Clerk exam will consist of two subjects.",
+        "Stenographer selection is based on Shorthand Test (80 WPM) and Computer Proficiency."
+      ],
+      table: [
+        { subject: "English Composition (For Clerk)", questions: "Subjective", marks: "50" },
+        { subject: "General Knowledge (For Clerk)", questions: "Objective/Subjective", marks: "50" }
+      ]
+    },
+
+    extraSections: [
+      {
+        title: "Stenographer Exam Venue (25 Dec)",
+        text: "The Shorthand/Computer Proficiency Test for Stenographer Gr-III will be held at: \n Yaduvanshi College, Patikara, Rewari Road, Narnaul."
+      }
+    ],
+
+    howToApply: [
+      "Step 1: Write an application on a Plain Paper.",
+      "Step 2: Mention Name, Father's Name, DOB, Sex, Education, Category, Address, Mobile No., Email ID.",
+      "Step 3: Paste a recent passport-size photograph on the application and sign it.",
+      "Step 4: Attach self-attested copies of educational certificates, age proof, and category certificate.",
+      "Step 5: Put everything in an envelope and write 'Application for the post of ____' on the top.",
+      "Step 6: Send it by Registered Post, Speed Post, or By Hand to:\n 'Office of the District and Sessions Judge, Narnaul, Haryana'."
+    ],
+
+    links: [
+      { title: "Download Clerk Application Form", url: "https://cdnbbsr.s3waas.gov.in/s3ec03706608cfdbcc1886bb7eea5513f9/uploads/2025/12/2025121260.pdf" },
+      { title: "Download Steno Application Form", url: "https://cdnbbsr.s3waas.gov.in/s3ec03706608cfdbcc1886bb7eea5513f9/uploads/2025/12/2025121273.pdf" },
+      { title: "Download Clerk Notification", url: "https://cdnbbsr.s3waas.gov.in/s3ec03706608cfdbcc1886bb7eea5513f9/uploads/2025/12/2025121168.pdf" }, 
+      { title: "Download Steno Notification", url: "https://cdnbbsr.s3waas.gov.in/s3ec03706608cfdbcc1886bb7eea5513f9/uploads/2025/12/2025121114.pdf" },
+      { title: "Official Website", url: "https://narnaul.dcourts.gov.in" }
+    ],
+
+    faqs: [
+      { question: "What is the last date for Narnaul Court Recruitment?", answer: "The last date to reach the application is 22nd December 2025 by 05:00 PM." },
+      { question: "What is the exam date for Narnaul Court Stenographer?", answer: "The exam will be held on 25th December 2025 at Yaduvanshi College, Narnaul." },
+      { question: "Is there any application fee?", answer: "No, there is no application fee for any category." },
+      { question: "What is the salary for Clerk and Steno?", answer: "The consolidated pay is ₹25,500/- per month." }
+    ]
+  },
     // --- 39. DSSSB MTS Recruitment 2025 (Job ID 39) ---
   {
     id: 39,
