@@ -3,7 +3,140 @@ export const latestJobs = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+  // --- 41. IIMC Delhi Non-Teaching Recruitment 2025 ---
+  {
+    id: 41,
+    slug: "iimc-delhi-non-teaching-recruitment-2025-online-form",
+    shortTitle: "IIMC Non-Teaching Recruitment 2025",
+    title: "IIMC Delhi Non-Teaching Recruitment 2025 Apply Online for 51 Posts (Group A, B & C)",
+    shortInfo: "Indian Institute of Mass Communication (IIMC), New Delhi has released the official notification (Advt. No. 03/2025) for the recruitment of Non-Teaching posts including UDC, Stenographer, Assistant, and others. A total of 51 vacancies are available across various centers. Candidates can apply online and must send the hard copy via Speed Post.",
+    postDate: "13/12/2025",
+    category: "Latest Jobs",
+    state: "Delhi",
+    tags: ["IIMC Delhi Recruitment 2025", "IIMC Non-Teaching Vacancy", "UDC Jobs", "Stenographer Jobs", "Central Govt Jobs", "IIMC Online Form"],
 
+    salary: "Pay Level 4 to Level 11 (Post Wise)",
+
+    importantDates: [
+      { label: "Application Start Date", value: "13/12/2025" },
+      { label: "Last Date to Apply Online", value: "12/01/2026" },
+      { label: "Last Date for Hard Copy", value: "19/01/2026 (05:00 PM)" },
+      { label: "Exam Date", value: "To be notified later" }
+    ],
+
+    applicationFee: [
+      { category: "Group A (UR/OBC)", amount: "₹1500/-" },
+      { category: "Group A (SC/ST/EWS/PwD/Women)", amount: "₹750/-" },
+      { category: "Group B (UR/OBC)", amount: "₹1000/-" },
+      { category: "Group B (SC/ST/EWS/PwD/Women)", amount: "₹500/-" },
+      { category: "Group C (UR/OBC)", amount: "₹500/-" },
+      { category: "Group C (SC/ST/EWS/PwD/Women)", amount: "₹250/-" },
+      { category: "Payment Mode", amount: "Demand Draft (DD)" }
+    ],
+
+    ageLimit: "Max 32 to 56 Years (Varies by Post). Age Relaxation as per Govt rules.",
+
+    vacancyDetails: [
+      { 
+        postName: "Library & Information Officer (Group A)", 
+        totalPost: "01", 
+        eligibility: "Master's Degree in Library Science + 5 Yrs Exp. Age Max: 40 Yrs." 
+      },
+      { 
+        postName: "Assistant Editor (Group A)", 
+        totalPost: "01", 
+        eligibility: "Master's Degree in Journalism/Mass Comm + 5 Yrs Exp. Age Max: 56 Yrs." 
+      },
+      { 
+        postName: "Assistant Registrar (Group A)", 
+        totalPost: "01", 
+        eligibility: "Master's Degree (55% Marks). Selection via Exam & Interview. Age Max: 40 Yrs." 
+      },
+      { 
+        postName: "Section Officer (Group B)", 
+        totalPost: "05", 
+        eligibility: "Bachelor Degree + 3 Yrs Exp as Assistant or 8 Yrs as UDC. Age Max: 35 Yrs." 
+      },
+      { 
+        postName: "Senior Research Assistant (Group B)", 
+        totalPost: "01", 
+        eligibility: "Master's Degree in Social Science/Mass Comm + 3 Yrs Research Exp. Age Max: 40 Yrs." 
+      },
+      { 
+        postName: "Assistant (Group B)", 
+        totalPost: "11", 
+        eligibility: "Bachelor Degree + 3 Yrs Exp as UDC/Level 4. Age Max: 35 Yrs." 
+      },
+      { 
+        postName: "Professional Assistant (Group B)", 
+        totalPost: "05", 
+        eligibility: "M.Lib + 2 Yrs Exp OR B.Lib + 3 Yrs Exp. Age Max: 35 Yrs." 
+      },
+      { 
+        postName: "Junior Programmer (Group B)", 
+        totalPost: "05", 
+        eligibility: "B.E./B.Tech (CS/IT) OR MCA/M.Sc (CS) + 2 Yrs Exp. Age Max: 35 Yrs." 
+      },
+      { 
+        postName: "Upper Division Clerk - UDC (Group C)", 
+        totalPost: "12", 
+        eligibility: "Bachelor Degree + 2 Yrs Exp as LDC. Typing Speed: 35 wpm (Eng) or 30 wpm (Hindi). Age Max: 32 Yrs." 
+      },
+      { 
+        postName: "Stenographer (Group C)", 
+        totalPost: "06", 
+        eligibility: "Bachelor Degree + Dictation: 10 min @ 80 wpm + Transcription. Age Max: 32 Yrs." 
+      }
+    ],
+
+    selectionProcess: [
+      "Written Test",
+      "Skill Test (where applicable)",
+      "Interview (For Group A Posts only)",
+      "Document Verification"
+    ],
+
+    extraSections: [
+      {
+        title: "Send Hard Copy To (Address)",
+        text: "The Deputy Registrar,\nIndian Institute of Mass Communication (IIMC),\nAruna Asaf Ali Marg, New JNU Campus,\nNew Delhi - 110067.\n\n(Must reach by 19/01/2026 via Speed Post/Registered Post only)."
+      },
+      {
+        title: "Vacancy Table (Center Wise)",
+        list: [
+          "New Delhi: 09 Posts",
+          "Dhenkanal: 08 Posts",
+          "Aizawl: 08 Posts",
+          "Amravati: 09 Posts",
+          "Jammu: 08 Posts",
+          "Kottayam: 09 Posts",
+          "Total: 51 Posts"
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Step 1: Apply Online through the link provided below.",
+      "Step 2: Pay the application fee via Demand Draft (DD) in favor of 'Indian Institute of Mass Communication', payable at New Delhi.",
+      "Step 3: Print the submitted online application form.",
+      "Step 4: Attach self-attested copies of certificates (Mark sheets, Degree, Caste, Experience, etc.) and the Original Demand Draft.",
+      "Step 5: Keep them in an envelope.",
+      "Step 6: Send it to the address mentioned above via Speed Post or Registered Post before 19th January 2026."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://iimcnt.samarth.edu.in/index.php/site/login" },
+      { title: "Download Notification PDF", url: "https://iimc.gov.in/files/vacancy_document/Advertisement-non-teaching-2025.pdf" }, 
+      { title: "Official Website", url: "https://iimc.gov.in" }
+    ],
+
+    faqs: [
+      { question: "What is the last date to apply for IIMC Recruitment?", answer: "Online applications close on 12th Jan 2026. Hard copy must reach by 19th Jan 2026." },
+      { question: "What is the age limit for UDC and Stenographer?", answer: "The maximum age limit is 32 Years." },
+      { question: "Is experience required for UDC?", answer: "Yes, 2 years of experience as LDC or equivalent is required." },
+      { question: "How to pay the application fee?", answer: "The fee must be paid via Demand Draft (DD) drawn in favor of IIMC, New Delhi." }
+    ]
+  },
    // --- 40. Narnaul Court Clerk & Steno Recruitment 2025 ---
   {
     id: 40,
