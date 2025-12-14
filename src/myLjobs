@@ -26,11 +26,11 @@ export const latestJobs = [
 
     applicationFee: [
       { category: "Group A (UR/OBC)", amount: "₹1500/-" },
-      { category: "Group A (SC/ST/EWS/PwD/Women)", amount: "₹750/-" },
+      { category: "Group A (SC/ST/EWS/ PwD/Women)", amount: "₹750/-" },
       { category: "Group B (UR/OBC)", amount: "₹1000/-" },
-      { category: "Group B (SC/ST/EWS/PwD/Women)", amount: "₹500/-" },
+      { category: "Group B (SC/ST/EWS/ PwD/Women)", amount: "₹500/-" },
       { category: "Group C (UR/OBC)", amount: "₹500/-" },
-      { category: "Group C (SC/ST/EWS/PwD/Women)", amount: "₹250/-" },
+      { category: "Group C (SC/ST/EWS/ PwD/Women)", amount: "₹250/-" },
       { category: "Payment Mode", amount: "Demand Draft (DD)" }
     ],
 
@@ -3378,9 +3378,13 @@ export const latestJobs = [
     ],
 
     applicationFee: [
-      { category: "General / OBC / EWS", amount: "₹100/- (Expected)" },
-      { category: "SC / ST / PwBD / Women", amount: "₹0 (Nil)" },
-      { category: "Payment Mode", amount: "Online" }
+      { category: "General / OBC / EWS (STA-B)", amount: "₹750/-" },
+      { category: "SC / ST / PwBD / Women (STA-B)", amount: "₹500/-" },
+      { category: "General / OBC / EWS (TECH-A)", amount: "₹750/-" },
+      { category: "SC / ST / PwBD / Women (TECH-A)", amount: "₹500/-" },
+      { category: "Payment Mode", amount: "Online" },
+      { category: "NOTE Refundable Fee:", amount: "An amount of Rs. 500/- shall be refunded only to those candidates who appear in Tier-I
+exam." }
     ],
 
     // Age Limit as per Image
@@ -3396,8 +3400,8 @@ export const latestJobs = [
     vacancyColumnName: "Post Name",
 
     stateWiseVacancy: [
-      { state: "Senior Technical Assistant-B (STA-B)", total: 561, ur: "TBD", ews: "TBD", obc: "TBD", sc: "TBD", st: "TBD" },
-      { state: "Technician-A (Tech-A)", total: 203, ur: "TBD", ews: "TBD", obc: "TBD", sc: "TBD", st: "TBD" }
+      { state: "Senior Technical Assistant-B (STA-B)", total: 561, ur: "249", ews: "50", obc: "136", sc: "83", st: "43" },
+      { state: "Technician-A (Tech-A)", total: 203, ur: "103", ews: "18", obc: "44", sc: "25", st: "13" }
     ],
     // Note: Detailed category wise breakup will be updated after full notification.
 
@@ -3445,7 +3449,7 @@ export const latestJobs = [
 
     links: [
       { title: "Apply Online", url: "https://cdn.digialm.com/EForms/configuredHtml/1258/96576/Index.html" },
-      { title: "Download Notification (Soon)", url: "https://g03.tcsion.com//per/g03/pub/726/EForms/image/ImageDocUpload/71161/3/302645671.pdf" },
+      { title: "Download Notification", url: "https://g03.tcsion.com//per/g03/pub/726/EForms/image/ImageDocUpload/71161/3/302645671.pdf" },
       { title: "Download Short Notice", url: "https://www.drdo.gov.in/drdo/sites/default/files/vacancy/shortadvtC11_04122025.pdf" }, // Replace with direct PDF link if hosted
       { title: "Official Website", url: "https://www.drdo.gov.in" }
     ]
