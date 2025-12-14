@@ -189,7 +189,7 @@ function Home() {
   );
 }
 
-// --- Job Details (Updated with Features) ---
+// --- Job Details (Completely Updated) ---
 function JobDetails() {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -225,12 +225,12 @@ function JobDetails() {
   if (loading) return <div style={{textAlign:'center', padding: '50px'}}><h2 style={{color: '#ab1e1e'}}>Loading Job Details...</h2></div>;
   if (error || !job) return <div style={{textAlign:'center', padding: '50px'}}><h2>Job Not Found</h2><button onClick={() => navigate('/')} style={{padding: '10px', background: '#ab1e1e', color: 'white', border:'none', cursor:'pointer'}}>Go Home</button></div>;
 
-  // --- Logic for Simple Mode (Syllabus/Previous Papers) ---
+  // --- 1. Logic for Simple Mode (Syllabus/Previous Papers) ---
   const isSimpleMode = job.category.toLowerCase().includes("syllabus") || 
                        job.category.toLowerCase().includes("previous") || 
                        job.category.toLowerCase().includes("paper");
 
-  // --- Logic for Related Jobs ---
+  // --- 2. Logic for Related Jobs (Same Category) ---
   const relatedJobs = jobsData
     .filter(j => j.category === job.category && j.id !== job.id)
     .slice(0, 5);
@@ -257,6 +257,10 @@ function JobDetails() {
     else if (cat.includes("answer key")) stepsHeader = "How to Download Answer Key";
     else if (cat.includes("admission")) stepsHeader = "How to Apply for Admission";
   }
+
+  // --- 3. WhatsApp Share Link (Fixed with Encoding) ---
+  const shareText = `*${job.title}*\n\nCheck Details Here:\nhttps://toponlineform.com/${job.slug}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
 
   const formatHeader = (key) => {
     const upperKeys = ["ur", "obc", "sc", "st", "ews", "pwbd", "esm", "gen", "ph"];
@@ -315,7 +319,7 @@ function JobDetails() {
 
   return (
     <div className="job-container">
-      {/* --- FEATURE 1: BREADCRUMBS --- */}
+      {/* --- FEATURE 4: BREADCRUMBS --- */}
       <div style={{ fontSize: '14px', color: '#666', marginBottom: '15px' }}>
         <Link to="/" style={{ textDecoration: 'none', color: '#007bff' }}>Home</Link>
         {' > '}
@@ -324,7 +328,6 @@ function JobDetails() {
         <span style={{ color: '#888' }}>{job.shortTitle || job.title.substring(0, 20) + "..."}</span>
       </div>
 
-      {/* ✅ PRO SEO INTEGRATION */}
       <SEO 
         title={job.title} 
         description={job.shortInfo} 
@@ -365,7 +368,7 @@ function JobDetails() {
       {/* Selection Process */}
       {job.selectionProcess && (<><div className="section-header">Selection Process</div><ol style={{marginLeft: '30px', padding: '10px 0'}}>{job.selectionProcess.map((item, index) => <li key={index} style={{marginBottom: '5px'}}><strong>{item}</strong></li>)}</ol></>)}
 
-      {/* --- FEATURE 2: EXAM PATTERN FIX (Shows All Tiers) --- */}
+      {/* --- FEATURE 5: EXAM PATTERN FIX (Shows All Tiers) --- */}
       {job.examPattern && (
         <>
           <div className="section-header">{(job.examPattern.pet || (job.examPattern.stages && job.examPattern.stages.some(s => s.type === 'pet'))) ? "Exam Pattern & Physical Test" : "Exam Pattern"}</div>
@@ -398,10 +401,10 @@ function JobDetails() {
       {/* FAQs */}
       {job.faqs && (<><div className="section-header">FAQs</div><div style={{padding: '15px', border: '1px solid #ddd', marginTop: '10px'}}>{job.faqs.map((faq, index) => (<div key={index} style={{marginBottom: '15px'}}><div style={{fontWeight: 'bold', color: '#d32f2f', marginBottom: '5px'}}>Q.{index + 1}: {faq.question}</div><div style={{color: '#333'}}>Ans: {faq.answer}</div></div>))}</div></>)}
 
-      {/* --- FEATURE 3: SHARE ON WHATSAPP --- */}
+      {/* --- WHATSAPP SHARE BUTTON --- */}
       <div style={{ margin: '30px 0', textAlign: 'center' }}>
         <a 
-          href={`https://api.whatsapp.com/send?text=*${job.title}*%0A%0ACheck Details Here:%0Ahttps://toponlineform.com/${job.slug}`} 
+          href={whatsappUrl} 
           target="_blank" 
           rel="noreferrer"
           style={{
@@ -422,7 +425,7 @@ function JobDetails() {
         </a>
       </div>
 
-      {/* --- FEATURE 4: RELATED JOBS --- */}
+      {/* --- RELATED JOBS --- */}
       {relatedJobs.length > 0 && (
         <div style={{ marginTop: '40px', borderTop: '2px solid #eee', paddingTop: '20px' }}>
           <h3 style={{ fontSize: '20px', color: '#d32f2f', marginBottom: '15px', borderLeft: '4px solid #d32f2f', paddingLeft: '10px' }}>
