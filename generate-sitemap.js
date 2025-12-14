@@ -2,14 +2,16 @@ import fs from 'fs';
 
 // --- CONFIGURATION ---
 const DOMAIN = 'https://toponlineform.com';
+
+// Hum bas file ka naam denge, code khud check karega ki .js hai ya nahi
 const FILES_TO_SCAN = [
-  './src/myLjobs',       './src/myLjobs.js',
-  './src/myAdmission',   './src/myAdmission.js',
-  './src/myAcards',      './src/myAcards.js',
-  './src/myRslt',        './src/myRslt.js',
-  './src/myAkey',        './src/myAkey.js',
-  './src/mySyl',         './src/mySyl.js',
-  './src/myPreviouspapers', './src/myPreviouspapers.js'
+  './src/myLjobs', 
+  './src/myAdmission',
+  './src/myAcards',
+  './src/myRslt',
+  './src/myAkey',
+  './src/mySyl',
+  './src/myPreviouspapers'
 ];
 
 const STATIC_PAGES = [
@@ -18,17 +20,24 @@ const STATIC_PAGES = [
   'about', 'contact', 'privacy'
 ];
 
-// --- MAIN FUNCTION ---
 const generateSitemap = () => {
-  console.log("🔍 Scanning files for slugs...");
+  console.log("🔍 Scanning files for Auto-Sitemap...");
   let slugs = [];
 
-  // 1. Files ko Read karo (As Text, not Code)
+  // 1. Files Read Logic (Smart Check)
   FILES_TO_SCAN.forEach(filePath => {
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, 'utf8');
+    let finalPath = filePath;
+    
+    // Agar bina extension ke file nahi mili, to .js laga kar check karo
+    if (!fs.existsSync(finalPath)) {
+        finalPath = filePath + '.js';
+    }
+    
+    // Agar file mil gayi (chahe wo .js wali ho ya bina extension wali)
+    if (fs.existsSync(finalPath)) {
+      const content = fs.readFileSync(finalPath, 'utf8');
       
-      // Regex: "slug" : "value" ya slug: "value" ko dhundo
+      // Regex: Slug dhundne ka logic
       const regex = /slug\s*:\s*["']([^"']+)["']/g;
       let match;
       
@@ -40,9 +49,9 @@ const generateSitemap = () => {
     }
   });
 
-  console.log(`✅ Found ${slugs.length} posts.`);
+  console.log(`✅ Found ${slugs.length} posts for Sitemap.`);
 
-  // 2. XML Content Banao
+  // 2. XML Generate
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
@@ -56,7 +65,7 @@ const generateSitemap = () => {
   </url>`;
   });
 
-  // Dynamic Slugs
+  // Dynamic Posts
   slugs.forEach(slug => {
     sitemap += `
   <url>
@@ -68,9 +77,9 @@ const generateSitemap = () => {
 
   sitemap += `\n</urlset>`;
 
-  // 3. File Save Karo
+  // 3. Write File
   fs.writeFileSync('./public/sitemap.xml', sitemap);
-  console.log("🚀 Sitemap.xml generated successfully in /public folder!");
+  console.log("🚀 Sitemap.xml updated successfully!");
 };
 
 generateSitemap();
