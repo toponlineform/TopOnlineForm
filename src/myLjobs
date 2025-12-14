@@ -3356,14 +3356,124 @@ export const latestJobs = [
     ]
   },
   
+  // --- 42. DRDO CEPTAM-11 Recruitment 2025 (Full Notification) ---
   {
+    id: 43,
+    slug: "drdo-ceptam-11-recruitment-2025-2026",
+    shortTitle: "DRDO CEPTAM-11 Recruitment 2025",
+    title: "DRDO CEPTAM-11 Recruitment 2025 Apply Online for 764 Posts | STA-B & Technician-A",
+    shortInfo: "Defence Research & Development Organisation (DRDO), Center for Personnel Talent Management (CEPTAM) has released the detailed advertisement (CEPTAM-11) for the recruitment of Senior Technical Assistant-B (STA-B) and Technician-A (Tech-A). A total of 764 vacancies are available. Candidates can apply online from 11th December 2025.",
+    postDate: "11/12/2025",
+    category: "Latest Jobs",
+    state: "All India",
+    tags: ["DRDO CEPTAM 11", "DRDO Recruitment 2025", "STA-B Vacancy", "Technician-A Jobs", "Defence Govt Jobs", "DRDO Online Form"],
+
+    salary: "Level 2 (Tech-A) & Level 6 (STA-B)",
+
+    importantDates: [
+      { label: "Notification Released", value: "11/12/2025" },
+      { label: "Application Begin", value: "11/12/2025" },
+      { label: "Last Date for Apply", value: "01/01/2026 (23:55 Hours)" },
+      { label: "Last Date for Fee Payment", value: "03/01/2026 (23:55 Hours)" },
+      { label: "Correction Window", value: "04/01/2026 to 06/01/2026" },
+      { label: "Tier-I Exam Date", value: "To be notified later" }
+    ],
+
+    applicationFee: [
+      { category: "STA-B: Gen / OBC / EWS", amount: "₹750/- (₹250 App Fee + ₹500 Refundable)" },
+      { category: "Tech-A: Gen / OBC / EWS", amount: "₹600/- (₹100 App Fee + ₹500 Refundable)" },
+      { category: "All Women / SC / ST / PwBD / ESM", amount: "₹500/- (Full Refundable)" },
+      { category: "Payment Mode", amount: "Online (Debit/Credit/UPI)" },
+      { category: "Refund Note", amount: "The refundable amount (₹500) will be returned ONLY if the candidate appears in the Tier-I Exam." }
+    ],
+
+    ageLimit: "18-28 Years (As on 01/01/2026). Age Relaxation: OBC 3 Yrs, SC/ST 5 Yrs.",
+
+    vacancyDetails: [
+      { 
+        postName: "Senior Technical Assistant-B (STA-B)", 
+        totalPost: "561", 
+        eligibility: "Bachelor's Degree in Science (B.Sc) OR 3-Year Diploma in Engineering/Technology (Automobile, Chemical, Civil, CS, Electrical, E&C, Mech, etc.)." 
+      },
+      { 
+        postName: "Technician-A (Tech-A)", 
+        totalPost: "203", 
+        eligibility: "10th Class Pass AND ITI Certificate in relevant trade (Book Binder, Carpenter, COPA, Electrician, Electronics, Fitter, Machinist, Welder, etc.)." 
+      }
+    ],
+
+    vacancyTableTitle: "Category Wise Vacancy Details",
+    vacancyColumnName: "Post Name",
+
+    stateWiseVacancy: [
+      { "Post Name": "Senior Technical Assistant-B (STA-B)", "UR": 249, "EWS": 50, "OBC": 136, "SC": 83, "ST": 43, "Total": 561 },
+      { "Post Name": "Technician-A (Tech-A)", "UR": 103, "EWS": 18, "OBC": 44, "SC": 25, "ST": 13, "Total": 203 }
+    ],
+
+    salaryDetails: [
+      { post: "Senior Technical Assistant-B (STA-B)", level: "Pay Level-6 (₹35,400 - ₹1,12,400) + Allowances" },
+      { post: "Technician-A (Tech-A)", level: "Pay Level-2 (₹19,900 - ₹63,200) + Allowances" }
+    ],
+
+    selectionProcess: [
+      "Tier-I: Computer Based Test (CBT) - Screening",
+      "Tier-II: Subject Specific Test (For STA-B Selection)",
+      "Trade Test: Practical Skill Test (Qualifying for Tech-A)",
+      "Document Verification",
+      "Medical Examination"
+    ],
+
+    examPattern: {
+      details: [
+        "Exam Mode: Computer Based Test (CBT)",
+        "Negative Marking: 0.25 marks for each wrong answer",
+        "Language: Hindi and English",
+        "Qualifying Marks: 40% for UR/OBC/EWS and 35% for SC/ST"
+      ],
+      tier1: [
+        { subject: "Quantitative Ability & General Intelligence", questions: "Combined", marks: "-" },
+        { subject: "General Awareness & English Language", questions: "Combined", marks: "-" },
+        { subject: "General Science", questions: "Combined", marks: "-" },
+        { subject: "Total (Tier-I Common for All)", questions: "120", marks: "120" }
+      ],
+      tier2: [
+        { subject: "Specific to Subject/Post Code (Tier-II)", questions: "100", marks: "100" }
+      ]
+    },
+
+    howToApply: [
+      "Step 1: Visit the official DRDO website (link below) and click on 'CEPTAM-11 Advertisement'.",
+      "Step 2: Register using a valid Email ID and Mobile Number.",
+      "Step 3: Log in and fill out the personal details and educational qualifications.",
+      "Step 4: Upload scanned Photo, Signature, 10th Certificate (for DOB), and Qualification Certificates.",
+      "Step 5: Pay the application fee online (keep the transaction details).",
+      "Step 6: Submit the form and take a printout of the confirmation page."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://www.drdo.gov.in" },
+      { title: "Download Full Notification PDF", url: "https://www.drdo.gov.in" }, 
+      { title: "Official Website", url: "https://www.drdo.gov.in" }
+    ],
+
+    faqs: [
+      { question: "What is the start date for DRDO CEPTAM 11 Application?", answer: "Online applications start from 11th December 2025." },
+      { question: "Is the application fee refundable?", answer: "Yes, ₹500 is refundable for all categories, BUT only if you appear for the Tier-I exam." },
+      { question: "What is the age limit?", answer: "Candidate must be between 18 to 28 years as on 01/01/2026." },
+      { question: "Is there negative marking?", answer: "Yes, 0.25 marks will be deducted for every wrong answer." }
+    ]
+  },
+    // --- 11. DRDO CEPTAM-11 Recruitment 2025 (Updated) ---
+  {  
     id: 42,
     slug: "drdo-ceptam-11-recruitment-2025",
     shortTitle: "DRDO CEPTAM-11 Recruitment 2025",
     title: "DRDO CEPTAM-11 Recruitment 2025 Apply Online for 764 Posts | STA-B & Technician-A",
-    shortInfo: "Defence Research & Development Organisation (DRDO), Center for Personnel Talent Management (CEPTAM) has released a short notice for the recruitment of Senior Technical Assistant-B (STA-B) and Technician-A (Tech-A). A total of 764 vacancies have been announced. Online applications are tentatively scheduled to begin from 09th December 2025.",
-    postDate: "02/12/2025",
+    shortInfo: "Defence Research & Development Organisation (DRDO), Center for Personnel Talent Management (CEPTAM) has released the detailed notification for the recruitment of Senior Technical Assistant-B (STA-B) and Technician-A (Tech-A). A total of 764 vacancies have been announced. Online applications are scheduled to begin from 09th December 2025.",
+    postDate: "11/12/2025",
     category: "Latest Jobs",
+    state: "All India",
+    tags: ["DRDO CEPTAM 11", "DRDO Recruitment 2025", "STA-B Vacancy", "Technician-A Jobs", "Defence Jobs"],
 
     salary: "Level 2 to Level 6 (7th CPC)",
 
@@ -3373,7 +3483,7 @@ export const latestJobs = [
       { label: "Application Begin", value: "09/12/2025" },
       { label: "Last Date for Apply", value: "01/01/2026 (23:55 Hours)" },
       { label: "Last Date for Fee", value: "03/01/2026 (23:55 Hours)" },
-      { label: "Correction Window Date", value: "04/01/2026 to 06/01/2026 (23:55 Hours)" },
+      { label: "Correction Window", value: "04/01/2026 to 06/01/2026" },
       { label: "Exam Date", value: "To be notified" }
     ],
 
@@ -3383,27 +3493,23 @@ export const latestJobs = [
       { category: "General / OBC / EWS (TECH-A)", amount: "₹750/-" },
       { category: "SC / ST / PwBD / Women (TECH-A)", amount: "₹500/-" },
       { category: "Payment Mode", amount: "Online" },
-      { category: "NOTE Refundable Fee:", amount: "An amount of Rs. 500/- shall be refunded only to those candidates who appear in Tier-I
-exam." }
+      { category: "Refund Note", amount: "Rs. 500/- will be refunded only to those who appear in Tier-I exam." }
     ],
 
-    // Age Limit as per Image
-    ageLimit: "18-28 Years (As on 09/12/2025). Relaxation as per Govt Rules.",
+    ageLimit: "18-28 Years (As on 09/12/2025). Age Relaxation as per Govt Rules.",
 
     vacancyDetails: [
-      { postName: "Senior Technical Assistant-B (STA-B)", totalPost: 561, eligibility: "B.Sc. Degree OR Diploma in Engineering (Auto/Civil/Elect/Mech/CS etc.)" },
-      { postName: "Technician-A (Tech-A)", totalPost: 203, eligibility: "10th Pass + ITI Certificate in relevant trade" }
+      { postName: "Senior Technical Assistant-B (STA-B)", totalPost: "561", eligibility: "B.Sc. Degree OR Diploma in Engineering (Auto/Civil/Elect/Mech/CS etc.)" },
+      { postName: "Technician-A (Tech-A)", totalPost: "203", eligibility: "10th Pass + ITI Certificate in relevant trade" }
     ],
 
-    // Smart Table for Post Wise Vacancy
-    vacancyTableTitle: "Post Wise Vacancy & Pay Scale",
+    vacancyTableTitle: "Post Wise Vacancy & Category Breakup",
     vacancyColumnName: "Post Name",
 
     stateWiseVacancy: [
-      { state: "Senior Technical Assistant-B (STA-B)", total: 561, ur: "249", ews: "50", obc: "136", sc: "83", st: "43" },
-      { state: "Technician-A (Tech-A)", total: 203, ur: "103", ews: "18", obc: "44", sc: "25", st: "13" }
+      { "Post Name": "Senior Technical Assistant-B (STA-B)", "Total": 561, "UR": 249, "EWS": 50, "OBC": 136, "SC": 83, "ST": 43 },
+      { "Post Name": "Technician-A (Tech-A)", "Total": 203, "UR": 103, "EWS": 18, "OBC": 44, "SC": 25, "ST": 13 }
     ],
-    // Note: Detailed category wise breakup will be updated after full notification.
 
     salaryDetails: [
       { post: "Senior Technical Assistant-B (STA-B)", level: "Pay Level-6 (₹35,400 - ₹1,12,400)" },
@@ -3411,8 +3517,8 @@ exam." }
     ],
 
     selectionProcess: [
-      "Tier-I: Computer Based Test (CBT) - Screening/Provisional Selection",
-      "Tier-II: Trade Test (For Tech-A) / Selection Test (For STA-B)",
+      "Tier-I: Computer Based Test (CBT) - Screening/Selection",
+      "Tier-II: Trade Test (Tech-A) / Selection Test (STA-B)",
       "Document Verification",
       "Medical Examination"
     ],
@@ -3420,41 +3526,45 @@ exam." }
     examPattern: {
       details: [
         "Mode: Computer Based Test (CBT)",
-        "Exam Type: Objective Multiple Choice Questions (MCQ)",
+        "Type: Objective Multiple Choice Questions (MCQ)",
         "Language: Hindi and English",
-        "Negative Marking: No (Usually)"
+        "Negative Marking: No negative marking for wrong answers."
       ],
-      // Tier 1 Table (Screening for STA-B)
       tier1: [
-        { subject: "Quantitative Ability & General Intelligence", questions: 40, marks: 40 },
-        { subject: "General Awareness & English Language", questions: 40, marks: 40 },
-        { subject: "General Science", questions: 40, marks: 40 }
+        { subject: "Quantitative Ability & General Intelligence", questions: "40", marks: "40" },
+        { subject: "General Awareness & English Language", questions: "40", marks: "40" },
+        { subject: "General Science", questions: "40", marks: "40" }
       ],
-      // Tier 2 Table (Selection for STA-B / Trade Test for Tech-A)
       tier2: [
-        { subject: "Test specific to the subject of post (STA-B)", questions: 100, marks: 100 },
+        { subject: "Test specific to the subject of post (STA-B)", questions: "100", marks: "100" },
         { subject: "Trade Test (Technician-A)", questions: "Qualifying", marks: "-" }
       ]
     },
 
     howToApply: [
-      "Visit the official website drdo.gov.in once the link activates.",
-      "Navigate to 'Careers' -> 'CEPTAM-11 Advertisement'.",
-      "Register with basic details and contact information.",
-      "Fill the application form for STA-B or Tech-A post.",
-      "Upload scanned Photo, Signature, and 10th/ITI/Diploma certificates.",
-      "Pay the application fee (if applicable).",
-      "Submit the form and print the acknowledgement."
+      "Step 1: Visit the official website drdo.gov.in.",
+      "Step 2: Navigate to 'Careers' -> 'CEPTAM-11 Advertisement'.",
+      "Step 3: Register with basic details and contact information.",
+      "Step 4: Fill the application form for STA-B or Tech-A post.",
+      "Step 5: Upload scanned Photo, Signature, and 10th/ITI/Diploma certificates.",
+      "Step 6: Pay the application fee online.",
+      "Step 7: Submit the form and print the acknowledgement."
     ],
 
     links: [
       { title: "Apply Online", url: "https://cdn.digialm.com/EForms/configuredHtml/1258/96576/Index.html" },
-      { title: "Download Notification", url: "https://g03.tcsion.com//per/g03/pub/726/EForms/image/ImageDocUpload/71161/3/302645671.pdf" },
-      { title: "Download Short Notice", url: "https://www.drdo.gov.in/drdo/sites/default/files/vacancy/shortadvtC11_04122025.pdf" }, // Replace with direct PDF link if hosted
+      { title: "Download Full Notification", url: "https://g03.tcsion.com//per/g03/pub/726/EForms/image/ImageDocUpload/71161/3/302645671.pdf" },
+      { title: "Download Short Notice", url: "https://www.drdo.gov.in/drdo/sites/default/files/vacancy/shortadvtC11_04122025.pdf" },
       { title: "Official Website", url: "https://www.drdo.gov.in" }
+    ],
+
+    faqs: [
+      { question: "What is the last date to apply for DRDO CEPTAM 11?", answer: "The last date is 01 January 2026." },
+      { question: "Is there negative marking in DRDO exam?", answer: "No, there is usually no negative marking." },
+      { question: "Can I apply for both STA-B and Tech-A?", answer: "Yes, if you meet the eligibility for both, you can apply separately." }
     ]
   },
-  // --- 0. SBI SCO Wealth Management (NEWEST - SUPER SMART) ---
+  // --- 10. SBI SCO Wealth Management (NEWEST - SUPER SMART) ---
   {
     id: 10,
     slug: "sbi-sco-wealth-management-recruitment-2025",
