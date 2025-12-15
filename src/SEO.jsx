@@ -2,14 +2,25 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
-const SEO = ({ title, description, keywords, postDate, lastDate, salary, vacancy, location, type = 'website' }) => {
+const SEO = ({ 
+  title, 
+  description, 
+  keywords, 
+  postDate, 
+  lastDate, 
+  salary, 
+  vacancy, 
+  location, 
+  type = 'website',
+  faqs // ✅ New Prop for FAQ Schema
+}) => {
   const { pathname } = useLocation();
   const siteUrl = "https://toponlineform.com";
   const currentUrl = `${siteUrl}${pathname}`;
   const defaultImage = "https://toponlineform.com/logo-banner.png"; 
 
-  // --- BRAHMASTRA: Dynamic Job Schema Logic ---
-  let schemaData = null;
+  // --- 1. Job Schema Logic (BRAHMASTRA) ---
+  let jobSchema = null;
 
   if (type === 'JobPosting') {
     // Salary Fix: Sirf pehla number nikalo (Min Salary)
@@ -31,9 +42,15 @@ const SEO = ({ title, description, keywords, postDate, lastDate, salary, vacancy
                 validThroughDate = new Date(`${parts[2]}-${parts[1]}-${parts[0]}`);
             }
         } catch (e) { console.error("Date Parse Error", e); }
+    } else if (lastDate) {
+        // If date is already in ISO or convertible format
+        try {
+            const parsed = new Date(lastDate);
+            if (!isNaN(parsed)) validThroughDate = parsed;
+        } catch(e) {}
     }
 
-    schemaData = {
+    jobSchema = {
       "@context": "https://schema.org/",
       "@type": "JobPosting",
       "title": title,
@@ -73,6 +90,23 @@ const SEO = ({ title, description, keywords, postDate, lastDate, salary, vacancy
     };
   }
 
+  // --- 2. FAQ Schema Logic (New Feature) ---
+  let faqSchema = null;
+  if (faqs && faqs.length > 0) {
+    faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+  }
+
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -98,10 +132,17 @@ const SEO = ({ title, description, keywords, postDate, lastDate, salary, vacancy
       <meta name="twitter:image" content={defaultImage} />
       <meta name="twitter:creator" content="@toponlineform" />
 
-      {/* Inject Schema JSON-LD (The Google Magic) */}
-      {schemaData && (
+      {/* Inject Job Schema (If exists) */}
+      {jobSchema && (
         <script type="application/ld+json">
-          {JSON.stringify(schemaData)}
+          {JSON.stringify(jobSchema)}
+        </script>
+      )}
+
+      {/* Inject FAQ Schema (If exists) */}
+      {faqSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
         </script>
       )}
     </Helmet>
