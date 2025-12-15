@@ -16,8 +16,11 @@ import StatePage from './StatePage';
 import WhatsAppPopup from './WhatsAppPopup';
 
 // ✅ TOOLS IMPORTS
+import ToolsPage from './ToolsPage';
 import AgeCalculator from './tools/AgeCalculator';
-import ToolsPage from './ToolsPage'; 
+import ImageResizer from './tools/ImageResizer';
+import TypingTest from './tools/TypingTest';
+import JpgToPdf from './tools/JpgToPdf';
 
 // --- Navbar ---
 function Navbar() {
@@ -193,7 +196,7 @@ function Home() {
       <JobBox title="Answer Key" jobs={homeJobs.answerKeys} linkTo="/answer-key" />
       <JobBox title="Admission" jobs={homeJobs.admissions} linkTo="/admission" />
       <JobBox title="Previous Paper" jobs={homeJobs.previousPapers} linkTo="/previous-papers" />
-      <JobBox title="Syllabus" jobs={homeJobs.syllabus} linkTo="/syllabus" />
+      {/* ❌ Syllabus JobBox Removed from Homepage */}
     </div>
   );
 }
@@ -442,6 +445,9 @@ function App() {
         {/* ✅ TOOLS ROUTES */}
         <Route path="/tools" element={<ToolsPage />} />
         <Route path="/tools/age-calculator" element={<AgeCalculator />} />
+        <Route path="/tools/image-resizer" element={<ImageResizer />} />
+        <Route path="/tools/typing-test" element={<TypingTest />} />
+        <Route path="/tools/jpg-to-pdf" element={<JpgToPdf />} />
       </Routes>
       
       <div className="floating-container">
