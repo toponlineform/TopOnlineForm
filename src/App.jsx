@@ -15,12 +15,9 @@ import SearchResults from './SearchResults';
 import StatePage from './StatePage';
 import WhatsAppPopup from './WhatsAppPopup';
 
-// ✅ TOOLS IMPORTS (ALL TOOLS ADDED)
-import ToolsPage from './ToolsPage';
+// ✅ TOOLS IMPORTS
 import AgeCalculator from './tools/AgeCalculator';
-import ImageResizer from './tools/ImageResizer';
-import TypingTest from './tools/TypingTest';
-import JpgToPdf from './tools/JpgToPdf';
+import ToolsPage from './ToolsPage'; 
 
 // --- Navbar ---
 function Navbar() {
@@ -28,6 +25,7 @@ function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
   const [isMoreOpen, setIsMoreOpen] = useState(false);
+  // Tools dropdown state removed as we are using a direct link now
   const navigate = useNavigate();
 
   const handleInputChange = (e) => {
@@ -195,7 +193,7 @@ function Home() {
       <JobBox title="Answer Key" jobs={homeJobs.answerKeys} linkTo="/answer-key" />
       <JobBox title="Admission" jobs={homeJobs.admissions} linkTo="/admission" />
       <JobBox title="Previous Paper" jobs={homeJobs.previousPapers} linkTo="/previous-papers" />
-      {/* ❌ Syllabus Box REMOVED */}
+      <JobBox title="Syllabus" jobs={homeJobs.syllabus} linkTo="/syllabus" />
     </div>
   );
 }
@@ -444,9 +442,6 @@ function App() {
         {/* ✅ TOOLS ROUTES */}
         <Route path="/tools" element={<ToolsPage />} />
         <Route path="/tools/age-calculator" element={<AgeCalculator />} />
-        <Route path="/tools/image-resizer" element={<ImageResizer />} />
-        <Route path="/tools/typing-test" element={<TypingTest />} />
-        <Route path="/tools/jpg-to-pdf" element={<JpgToPdf />} />
       </Routes>
       
       <div className="floating-container">
