@@ -339,6 +339,7 @@ function JobDetails() {
         vacancy={job.vacancyDetails?.reduce((acc, curr) => acc + (parseInt(curr.totalPost) || 0), 0) || job.totalPost}
         location={job.state}
         type="JobPosting"
+        faqs={job.faqs}
       />
 
       <h1 className="job-title">{job.title}</h1>
