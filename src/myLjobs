@@ -3,55 +3,129 @@ export const latestJobs = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
-
     {
-    id: 43, // Check last ID and increment
-    title: "Bihar BSSC 2nd Inter Level Recruitment 2025 (Date Extended)",
+    id: 43,
+    title: "Bihar BSSC Inter Level Vacancy 2025 Apply Online (23,175 Posts)",
     shortTitle: "BSSC Inter Level 2025",
     category: "Latest Jobs",
     state: "Bihar",
     slug: "bssc-inter-level-recruitment-2025",
-    postDate: "16/12/2025",
-    shortInfo: "Bihar Staff Selection Commission (BSSC) has increased the total vacancies to 24,492 for the Second Inter Level Combined Competitive Examination 2025. The last date to apply online has also been extended to 15th January 2026. Interested candidates who have passed 10+2 Intermediate can apply online for LDC, Clerk, Revenue Employee, and other posts.",
-    totalPost: "24,492 Posts (Increased)",
-    salary: "Level-2 to Level-4 (As per Post)",
-    ageLimit: "Min: 18 Years | Max: 37 Years (Male), 40 Years (Female) | Age as on 01/08/2025",
+    postDate: "17/12/2025",
+    shortInfo: "Bihar Staff Selection Commission (BSSC) has released the detailed notification for the 2nd Inter-Level Combined Competitive Examination 2025. A massive recruitment drive for 23,175 vacancies (including 7,394 for Women) has been announced. Posts include LDC, Revenue Staff, Panchayat Secretary, and Filariasis Inspector. Check Syllabus, Exam Pattern, and Apply Online.",
+    totalPost: "23,175 Posts (7,394 Reserved for Women)",
+    salary: "Pay Level-2 to Pay Level-4 (₹19,900 - ₹81,100)",
+    ageLimit: "Min: 18 Years | Max: 37 (Male), 40 (Female) | Age Relaxation: SC/ST (5 Yrs), OBC (3 Yrs).",
+    
+    // 🔥 100x SEO Tags (Google Keywords)
+    tags: "BSSC Inter Level 2025, Bihar SSC Vacancy 2025, BSSC LDC Recruitment, Panchayat Secretary Salary, BSSC Syllabus 2025, Bihar 10+2 Vacancy, Sarkari Result Bihar, BSSC Exam Date",
+
     importantDates: [
-      { label: "Application Start", value: "15 October 2025" },
-      { label: "Last Date for Registration (Extended)", value: "13 January 2026" },
-      { label: "Last Date for Fee Payment", value: "13 January 2026" },
-      { label: "Final Submission Last Date", value: "15 January 2026" },
-      { label: "Exam Date", value: "To be notified soon" },
-      { label: "Admit Card", value: "Before Exam" },
+      { label: "Notification Released", value: "December 2025" },
+      { label: "Application Start Date", value: "15 October 2025" },
+      { label: "Last Date to Apply Online", value: "27 November 2025" },
+      { label: "Last Date for Fee Payment", value: "27 November 2025" },
+      { label: "Correction Window", value: "To be notified" },
+      { label: "BSSC Inter Level Exam Date", value: "Notify Soon" },
+      { label: "Admit Card Status", value: "Before Exam" },
     ],
+
     applicationFee: [
-      { category: "General / OBC / EWS", amount: "₹ 540/-" },
+      { category: "General / OBC / EBC (Male)", amount: "₹ 540/-" },
       { category: "SC / ST (Bihar Domicile)", amount: "₹ 135/-" },
-      { category: "Female (All Categories of Bihar)", amount: "₹ 135/-" },
-      { category: "PWD / Divyang", amount: "₹ 135/-" },
+      { category: "All Female Candidates (Bihar)", amount: "₹ 135/-" },
+      { category: "PwD / Divyang Candidates", amount: "₹ 135/-" },
+      { category: "Candidates from Other States", amount: "₹ 540/-" },
     ],
+
     eligibility: [
-      "Passed 10+2 (Intermediate) Exam from any recognized Board in India.",
-      "For some specific posts: Computer Typing and Computer Knowledge is required.",
-      "Read the official notification for post-wise eligibility details."
+      "**Educational Qualification:** Passed 10+2 (Intermediate) Exam from any recognized Board in India.",
+      "**Technical Qualification:** Computer Typing and Computer Operation knowledge is required for Clerical posts (LDC, Clerk-cum-Typist).",
+      "**Physical Standards:** Required only for specific posts like 'Department of Environment & Forest' (if applicable)."
     ],
+
+    selectionProcess: [
+      "Stage 1: Preliminary Examination (Objective Type - 600 Marks)",
+      "Stage 2: Mains Examination (2 Papers)",
+      "Stage 3: Skill Test / Typing Test / Stenography (Post Wise)",
+      "Stage 4: Document Verification (DV)"
+    ],
+
+    // 💎 RICH DATA: Exact numbers from Screenshot (IMG_7807)
     vacancyDetails: [
-      { postName: "Lower Division Clerk (LDC)", total: "Various Depts", eligibility: "10+2 Intermediate + Typing" },
-      { postName: "Revenue Staff (Rajaswa Karamchari)", total: "Massive Vacancy", eligibility: "10+2 Intermediate Pass" },
-      { postName: "Panchayat Secretary", total: "High Vacancy", eligibility: "10+2 Pass" },
-      { postName: "Filaria Inspector", total: "Specific Dept", eligibility: "10+2 (Science)" },
-      { postName: "Assistant Instructor (Typing)", total: "Various", eligibility: "10+2 + Typing" },
-      { postName: "Tank-Sah-Clerk", total: "Various", eligibility: "10+2 + Typing" }
+      { postName: "Lower Division Clerk (LDC)", total: "22,072", extra: "🔥 7,124 for Women" },
+      { postName: "Animal Husbandry Helper", total: "549", extra: "184 for Women" },
+      { postName: "Junior Regional Investigator", total: "534", extra: "81 for Women" },
+      { postName: "Bench Clerk", total: "16", extra: "04 for Women" },
+      { postName: "Clerk-cum-Typist", total: "04", extra: "01 for Women" },
+      { postName: "TOTAL VACANCY", total: "23,175", extra: "7,394 Reserved for Women" }
     ],
+
+    // 💎 RICH DATA: Exact Pay Levels from Screenshot (IMG_7810)
+    salaryDetails: [
+      { post: "Lower Class Clerk (LDC)", level: "Pay Level 2 (₹19,900 – ₹63,200)" },
+      { post: "Revenue Staff", level: "Pay Level 2 (₹19,900 – ₹63,200)" },
+      { post: "Panchayat Secretary", level: "Pay Level 3 (₹21,700 – ₹69,100)" },
+      { post: "Filariasis Inspector", level: "Pay Level 4 (₹25,500 – ₹81,100)" },
+      { post: "Typist cum Clerk", level: "Pay Level 4 (₹25,500 – ₹81,100)" },
+      { post: "Assistant Instructor", level: "Pay Level 4 (₹25,500 – ₹81,100)" }
+    ],
+
+    // 💎 RICH DATA: Exam Pattern from Screenshot (IMG_7808)
+    examPattern: {
+      details: [
+        "**Mode:** Computer Based Test (CBT) / OMR",
+        "**Type:** Objective Multiple Choice Questions (MCQs)",
+        "**Marking Scheme:** +4 Marks for Correct Answer",
+        "**Negative Marking:** -1 Mark for Wrong Answer",
+        "**Duration:** 2 Hours 15 Minutes",
+        "**Language:** Hindi & English"
+      ],
+      // Prelims Pattern
+      table: [
+        { subject: "General Studies", questions: "50", marks: "200" },
+        { subject: "General Science & Mathematics", questions: "50", marks: "200" },
+        { subject: "Mental Ability (Comprehension/Logic)", questions: "50", marks: "200" },
+        { subject: "Total", questions: "150", marks: "600" }
+      ],
+      // Mains Pattern Added Clearly
+      tier2: [
+        { subject: "Paper 1: Hindi Language", questions: "100 Qs", marks: "400 Marks (Qualifying Nature)" },
+        { subject: "Paper 2: General Knowledge/Maths/Reasoning", questions: "150 Qs", marks: "600 Marks (Merit Based)" }
+      ]
+    },
+
+    // 💎 RICH DATA: Detailed Syllabus from Screenshot (IMG_7809)
+    extraSections: [
+      {
+        title: "BSSC Inter Level Syllabus 2025 (Detailed)",
+        list: [
+          "**🧠 General Studies:** Current Affairs, Indian History, Physical Features, Climate, Demography, Economic & Social Development, Poverty Alleviation, Planning, Constitution, Panchayati Raj.",
+          "**🔬 General Science:** Physics, Chemistry, Biology (Topics from Matric/10th Standard).",
+          "**➗ Mathematics:** Number System, Arithmetic, Algebra, Geometry, Statistics, Profit & Loss, Percentage, Time & Work, Interest.",
+          "**🧩 Mental Ability (Reasoning):** Venn Diagrams, Number Series, Coding-Decoding, Problem Solving, Statement & Conclusion, Arithmetical Reasoning, Non-verbal series, Seating Arrangements."
+        ]
+      },
+      {
+        title: "Minimum Qualifying Marks",
+        tableData: [
+          { category: "General", percentage: "40%" },
+          { category: "BC (Backward Class)", percentage: "36.50%" },
+          { category: "EBC", percentage: "34%" },
+          { category: "SC / ST / Female / PwD", percentage: "32%" }
+        ]
+      }
+    ],
+
     howToApply: [
-      "Candidates can apply online through the official website onlinebssc.com or bssc.bihar.gov.in.",
-      "First, complete the Registration process by 13th January 2026.",
-      "After registration and fee payment, fill in the remaining application form details.",
-      "Upload scanned Photo (with date), Signature, and 10th/12th Marksheets as required.",
-      "The Live Photo will be captured via Webcam during the application process.",
-      "Review the application form carefully before final submission.",
-      "Take a printout of the final submitted form for future reference."
+      "Visit the official website **bssc.bihar.gov.in**.",
+      "Click on 'Notice Board' -> 'Apply Online for Inter Level 2025'.",
+      "Complete the **Registration** using Mobile No & Email.",
+      "Login and fill in personal details, educational qualifications, and technical skills.",
+      "**Upload Documents:** Live Photo (Webcam), Scanned Signature, 10th/12th Marksheets.",
+      "Pay the examination fee online via Debit Card/Credit Card/UPI.",
+      "Submit the form and **Print** the confirmation page."
     ],
+  
     links: [
       { title: "Apply Online (Date Extended)", url: "https://www.onlinebssc.com/" },
       { title: "Download Date Extension Notice", url: "https://bssc.bihar.gov.in/Advertisement/02_23_A_5077_notice.pdf" },
@@ -60,9 +134,9 @@ export const latestJobs = [
       { title: "Official Website", url: "https://bssc.bihar.gov.in/" }
     ],
     faqs: [
-      { question: "What is the new last date for BSSC Inter Level 2025?", answer: "The last date to apply is now 15th January 2026 (Registration closes on 13th Jan)." },
-      { question: "How many vacancies are there in BSSC Inter Level 2025?", answer: "Total vacancies have been increased to 24,492." },
-      { question: "Is typing mandatory for all posts?", answer: "No, typing is required only for LDC and Clerk posts. Revenue Employee and Panchayat Secretary posts generally do not require typing certificates at the time of applying (check notification)." }
+      { question: "What is the total vacancy?", answer: "Total 23,175 vacancies have been announced." },
+      { question: "What is the application date?", answer: "Applications start from 15th October 2025 to 27th November 2025." },
+      { question: "Is there negative marking?", answer: "Yes, 1 mark will be deducted for each wrong answer." }
     ]
   },
    // --- 42. Haryana HTET January 2026 Application Form ---
