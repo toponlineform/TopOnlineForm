@@ -1,0 +1,152 @@
+/* src/tools/ResumeBuilder.css */
+
+/* Print Logic - Isse PDF ekdum perfect A4 size aayega */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .resume-preview-area, .resume-preview-area * {
+    visibility: visible;
+  }
+  .resume-preview-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Screen Logic */
+.resume-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.editor-section {
+  flex: 1;
+  min-width: 350px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  height: fit-content;
+}
+
+.preview-section {
+  flex: 1.5;
+  min-width: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+/* A4 Paper Look */
+.resume-paper {
+  width: 210mm;
+  min-height: 297mm;
+  background: white;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Resume Template Design */
+.res-header {
+  border-bottom: 2px solid;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+.res-name {
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+}
+.res-contact {
+  font-size: 14px;
+  margin-top: 5px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.res-section-head {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ccc;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 2px;
+  letter-spacing: 1px;
+}
+.res-item {
+  margin-bottom: 12px;
+}
+.res-item-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+.res-item-subtitle {
+  font-style: italic;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+}
+.res-list {
+  padding-left: 20px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+.res-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.res-skill-tag {
+  background: #f0f0f0;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+}
