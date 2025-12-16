@@ -20,7 +20,7 @@ import ToolsPage from './ToolsPage';
 import AgeCalculator from './tools/AgeCalculator';
 import ImageResizer from './tools/ImageResizer';
 import TypingTest from './tools/TypingTest'; 
-// import JpgToPdf from './tools/JpgToPdf'; // ⚠️ Isko abhi rok rakha hai (PDF Library missing ho sakti hai)
+import JpgToPdf from './tools/JpgToPdf';
 
 // --- Navbar ---
 function Navbar() {
@@ -447,7 +447,7 @@ function App() {
         <Route path="/tools/image-resizer" element={<ImageResizer />} />
         <Route path="/tools/typing-test" element={<TypingTest />} />
         {/* PDF Tool abhi disabled hai, jab install ho jaye tab uncomment karein */}
-        {/* <Route path="/tools/jpg-to-pdf" element={<JpgToPdf />} /> */}
+        <Route path="/tools/jpg-to-pdf" element={<JpgToPdf />} />
       </Routes>
       
       <div className="floating-container">
