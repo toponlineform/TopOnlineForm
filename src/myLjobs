@@ -42,7 +42,7 @@ export const latestJobs = [
       "**Physical Standards:** Must meet the Height & Chest criteria mentioned below.",
       "**Note:** Candidates can apply for multiple posts with a single registration."
     ],
-
+     skipTotalFor: ["age"],
     // 💎 RICH DATA: Consolidated Vacancy Table (All 5 Notifications)
     vacancyDetails: [
       { 
