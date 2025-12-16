@@ -11,7 +11,7 @@ export const latestJobs = [
     state: "Bihar",
     slug: "bssc-inter-level-recruitment-2025",
     postDate: "17/12/2025",
-    shortInfo: "Bihar Staff Selection Commission (BSSC) has released the detailed notification for the 2nd Inter-Level Combined Competitive Examination 2025. A massive recruitment drive for 23,175 vacancies (including 7,394 for Women) has been announced. Posts include LDC, Revenue Staff, Panchayat Secretary, and Filariasis Inspector. Check Syllabus, Exam Pattern, and Apply Online.",
+    shortInfo: "Bihar Staff Selection Commission (BSSC) has released the detailed notification for the 2nd Inter-Level Combined Competitive Examination 2025. A massive recruitment drive for 23,175 vacancies (including 7,394 for Women) has been announced. Posts include LDC, Revenue Staff, Panchayat Secretary, and Filariasis Inspector. Candidates who missed the earlier deadline can now apply online till 15th January 2026. Check Syllabus, Exam Pattern, and Apply Online.",
     totalPost: "23,175 Posts (7,394 Reserved for Women)",
     salary: "Pay Level-2 to Pay Level-4 (₹19,900 - ₹81,100)",
     ageLimit: "Min: 18 Years | Max: 37 (Male), 40 (Female) | Age Relaxation: SC/ST (5 Yrs), OBC (3 Yrs).",
@@ -20,10 +20,11 @@ export const latestJobs = [
     tags: "BSSC Inter Level 2025, Bihar SSC Vacancy 2025, BSSC LDC Recruitment, Panchayat Secretary Salary, BSSC Syllabus 2025, Bihar 10+2 Vacancy, Sarkari Result Bihar, BSSC Exam Date",
 
     importantDates: [
-      { label: "Notification Released", value: "December 2025" },
+      { label: "Notification Released", value: "27 September 2025" },
       { label: "Application Start Date", value: "15 October 2025" },
-      { label: "Last Date to Apply Online", value: "27 November 2025" },
-      { label: "Last Date for Fee Payment", value: "27 November 2025" },
+      { label: "Last Date to Apply Online", value: "15 January 2025 (Extended)" },
+      { label: "Last Date for Fee Payment", value: "15 January 2025" },
+      { label: "Final Submission Date", value: "18 January 2025" },
       { label: "Correction Window", value: "To be notified" },
       { label: "BSSC Inter Level Exam Date", value: "Notify Soon" },
       { label: "Admit Card Status", value: "Before Exam" },
