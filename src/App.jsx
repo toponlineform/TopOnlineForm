@@ -133,13 +133,13 @@ function Home() {
 
   const sortNewest = (a, b) => b.id - a.id;
 
-  // ✨ FIXED: Tools Banner (Added Padding to prevent clipping)
+  // ✨ FIXED: Tools Banner (EXTRA Padding Added)
   const ToolsBanner = () => (
     <div style={{ 
       gridColumn: '1 / -1', 
       width: '100%', 
       minWidth: 0,
-      marginBottom: '10px', // Thoda gap kam kiya niche se
+      marginBottom: '10px', 
       marginTop: '10px' 
     }}>
       <style>{`
@@ -154,14 +154,12 @@ function Home() {
         <Link to="/tools" style={{ fontSize: '14px', color: '#007bff', fontWeight: 'bold', textDecoration: 'none' }}>View All &rarr;</Link>
       </div>
       
-      {/* ✅ FIX: Added padding: '10px 5px 15px 5px' 
-         Top: 10px, Bottom: 15px -> Ye extra space shadow aur hover k liye hai.
-      */}
+      {/* ✅ FIX: Added Much More Padding: '25px 5px 30px 5px' */}
       <div className="tools-scroll-container" style={{ 
         display: 'flex', 
         gap: '12px', 
         overflowX: 'auto', 
-        padding: '10px 5px 15px 5px', // 🔥 YE WALI LINE MAGIC KAREGI (Clipping Fix)
+        padding: '25px 5px 30px 5px', // 🔥 Extra Vertical Space Added
         whiteSpace: 'nowrap'
       }}>
         {[
