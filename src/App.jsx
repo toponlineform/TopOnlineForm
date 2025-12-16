@@ -133,13 +133,13 @@ function Home() {
 
   const sortNewest = (a, b) => b.id - a.id;
 
-  // ✨ FIXED TOOLS BANNER (NO STRETCHING)
+  // ✨ FIXED: Tools Banner (Added Padding to prevent clipping)
   const ToolsBanner = () => (
     <div style={{ 
-      gridColumn: '1 / -1', // Use full width of grid
+      gridColumn: '1 / -1', 
       width: '100%', 
-      minWidth: 0,          // 🔥 VITAL FIX: Prevents grid from stretching on mobile
-      marginBottom: '20px',
+      minWidth: 0,
+      marginBottom: '10px', // Thoda gap kam kiya niche se
       marginTop: '10px' 
     }}>
       <style>{`
@@ -147,21 +147,21 @@ function Home() {
         .tools-scroll-container { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
 
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px', padding: '0 5px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px', padding: '0 5px' }}>
         <h3 style={{ margin: 0, fontSize: '18px', color: '#333', display: 'flex', alignItems: 'center', gap: '8px' }}>
-          🔥 Useful Tools <span style={{fontSize:'12px', background:'#ffcc00', padding:'2px 6px', borderRadius:'4px', color:'black'}}>Free</span>
+          🔥 Student Tools <span style={{fontSize:'12px', background:'#ffcc00', padding:'2px 6px', borderRadius:'4px', color:'black'}}>Free</span>
         </h3>
         <Link to="/tools" style={{ fontSize: '14px', color: '#007bff', fontWeight: 'bold', textDecoration: 'none' }}>View All &rarr;</Link>
       </div>
       
-      {/* Horizontal Scroll Area */}
+      {/* ✅ FIX: Added padding: '10px 5px 15px 5px' 
+         Top: 10px, Bottom: 15px -> Ye extra space shadow aur hover k liye hai.
+      */}
       <div className="tools-scroll-container" style={{ 
         display: 'flex', 
         gap: '12px', 
         overflowX: 'auto', 
-        paddingBottom: '5px',
-        paddingLeft: '2px', 
-        paddingRight: '2px',
+        padding: '10px 5px 15px 5px', // 🔥 YE WALI LINE MAGIC KAREGI (Clipping Fix)
         whiteSpace: 'nowrap'
       }}>
         {[
@@ -177,12 +177,16 @@ function Home() {
         ].map((tool, index) => (
           <Link to={tool.link} key={index} style={{ textDecoration: 'none', flexShrink: 0 }}>
             <div style={{ 
-              width: '100px', // ✅ Fixed width makes it app-like & consistent
+              width: '100px', 
               background: 'white', padding: '12px 5px', borderRadius: '12px', 
               border: '1px solid #eee', textAlign: 'center', boxShadow: '0 2px 5px rgba(0,0,0,0.05)',
               display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px',
-              height: '100%'
-            }}>
+              height: '100%', transition: 'transform 0.2s'
+            }}
+            // Hover effect
+            onMouseEnter={(e) => e.currentTarget.style.transform = "translateY(-5px)"}
+            onMouseLeave={(e) => e.currentTarget.style.transform = "translateY(0)"}
+            >
               <div style={{ background: tool.bg, padding: '10px', borderRadius: '50%' }}>{tool.icon}</div>
               <span style={{ fontSize: '11px', fontWeight: 'bold', color: '#444', lineHeight:'1.2' }}>{tool.title}</span>
             </div>
@@ -245,7 +249,7 @@ function Home() {
     <div className="main-grid">
       <SEO title="Sarkari Result 2025" description="Latest Govt Jobs" keywords="Sarkari Result" url="https://toponlineform.com/" />
       
-      {/* ✅ Banner at Top - No Stretching */}
+      {/* ✅ Responsive Banner */}
       <ToolsBanner />
 
       <div className="action-cell"><a href="https://whatsapp.com/channel/0029Vb7TcG06LwHoTXhZKn2D" target="_blank" className="social-btn whatsapp full-width">Join WhatsApp Group</a></div>
