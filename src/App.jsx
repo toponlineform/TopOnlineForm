@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link, useParams, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, X, ChevronDown } from 'lucide-react';
+// ✅ Added Icons for Tools Banner
+import { Search, X, ChevronDown, Calculator, Camera, Briefcase, Keyboard } from 'lucide-react';
 import { jobsData } from './jobsData'; // Search Index
 
 // Components
@@ -15,11 +16,11 @@ import SearchResults from './SearchResults';
 import StatePage from './StatePage';
 import WhatsAppPopup from './WhatsAppPopup';
 
-// ✅ TOOLS IMPORTS
+// ✅ TOOLS IMPORTS (ALL ACTIVE)
 import ToolsPage from './ToolsPage';
 import AgeCalculator from './tools/AgeCalculator';
 import ImageResizer from './tools/ImageResizer';
-import TypingTest from './tools/TypingTest'; 
+import TypingTest from './tools/TypingTest';
 import JpgToPdf from './tools/JpgToPdf';
 import ResumeBuilder from './tools/ResumeBuilder';
 import DateOnPhoto from './tools/DateOnPhoto';
@@ -134,6 +135,41 @@ function Home() {
 
   const sortNewest = (a, b) => b.id - a.id;
 
+  // ✨ NEW: Tools Banner Component (Internal)
+  const ToolsBanner = () => (
+    <div style={{ margin: '20px 0 10px 0' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px', padding: '0 5px' }}>
+        <h3 style={{ margin: 0, fontSize: '18px', color: '#333', display: 'flex', alignItems: 'center', gap: '8px' }}>
+          🔥 Useful Tools <span style={{fontSize:'12px', background:'#ffcc00', padding:'2px 6px', borderRadius:'4px', color:'black'}}>New</span>
+        </h3>
+        <Link to="/tools" style={{ fontSize: '14px', color: '#007bff', fontWeight: 'bold', textDecoration: 'none' }}>View All &rarr;</Link>
+      </div>
+      
+      <div style={{ 
+        display: 'flex', gap: '15px', overflowX: 'auto', paddingBottom: '10px', 
+        scrollbarWidth: 'none', msOverflowStyle: 'none' 
+      }}>
+        {[
+          { icon: <Camera size={24} color="#007bff"/>, title: "Date on Photo", link: "/tools/date-on-photo", bg: "#e3f2fd" },
+          { icon: <Briefcase size={24} color="#673ab7"/>, title: "Resume Builder", link: "/tools/resume-builder", bg: "#ede7f6" },
+          { icon: <Keyboard size={24} color="#ef6c00"/>, title: "Typing Test", link: "/tools/typing-test", bg: "#fff3e0" },
+          { icon: <Calculator size={24} color="#2e7d32"/>, title: "Age Calculator", link: "/tools/age-calculator", bg: "#e8f5e9" },
+        ].map((tool, index) => (
+          <Link to={tool.link} key={index} style={{ textDecoration: 'none' }}>
+            <div style={{ 
+              minWidth: '130px', background: 'white', padding: '15px', borderRadius: '12px', 
+              border: '1px solid #eee', textAlign: 'center', boxShadow: '0 2px 5px rgba(0,0,0,0.05)',
+              display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px'
+            }}>
+              <div style={{ background: tool.bg, padding: '10px', borderRadius: '50%' }}>{tool.icon}</div>
+              <span style={{ fontSize: '13px', fontWeight: 'bold', color: '#444' }}>{tool.title}</span>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+
   const JobBox = ({ title, jobs, linkTo }) => (
     <div className="box-column">
       <div className="box-header">{title}</div>
@@ -194,6 +230,10 @@ function Home() {
             <button type="submit">Search</button>
          </form>
       </div>
+
+      {/* ✅ HERE IS THE NEW TOOLS BANNER */}
+      <ToolsBanner />
+
       <JobBox title="Latest Jobs" jobs={homeJobs.latestJobs} linkTo="/latest-jobs" />
       <JobBox title="Admit Card" jobs={homeJobs.admitCards} linkTo="/admit-card" />
       <JobBox title="Result" jobs={homeJobs.results} linkTo="/results" />
@@ -451,7 +491,6 @@ function App() {
         <Route path="/tools/age-calculator" element={<AgeCalculator />} />
         <Route path="/tools/image-resizer" element={<ImageResizer />} />
         <Route path="/tools/typing-test" element={<TypingTest />} />
-        {/* PDF Tool abhi disabled hai, jab install ho jaye tab uncomment karein */}
         <Route path="/tools/jpg-to-pdf" element={<JpgToPdf />} />
         <Route path="/tools/resume-builder" element={<ResumeBuilder />} />
         <Route path="/tools/date-on-photo" element={<DateOnPhoto />} />
