@@ -93,12 +93,7 @@ export const latestJobs = [
         eligibility: "B.Sc (Science/IT/CS)", 
         age: "20-24 Yrs" 
       },
-      {
-        postName: "Total Posts",
-        total: "2,350",
-        eligibility: "Various Qualifications",
-        age: "-"
-      }
+    
     ],
 
     // 💎 RICH DATA: Physical Standards (PST) & Selection
