@@ -3,6 +3,156 @@ export const latestJobs = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+    
+    
+    {
+    id: 44,
+    title: "Assam Police Recruitment 2026 Apply Online for 2,350 Posts (Constable, SI, Driver, Grade IV)",
+    shortTitle: "Assam Police Recruitment 2026",
+    category: "Latest Jobs",
+    state: "Assam",
+    slug: "assam-police-recruitment-2026-slprb",
+    postDate: "17/12/2025",
+    shortInfo: "State Level Police Recruitment Board (SLPRB), Assam has released 5 massive notifications for the recruitment of 2,350 vacancies including Constable (AB/UB), Sub Inspector (SI), Driver, Assistant Jailor, and Safai Karmachari. The best part is there is NO Application Fee. Eligible candidates (10th, 12th, Graduate) can apply online from 16th December 2025.",
+    totalPost: "2,350 Posts (Combined)",
+    salary: "Pay Level-2 (₹14,000 - ₹70,000) + Grade Pay",
+    ageLimit: "Varies by Post (18-25, 20-24, 20-26, 18-40 Years)",
+    
+    // 🔥 Pro SEO Tags
+    tags: "Assam Police Recruitment 2026, SLPRB Assam Constable Vacancy, Assam Police SI Recruitment, Assam Forest Driver, APRO Constable, Sarkari Result Assam, SLPRB Online Form 2026, Assam Police Constable Apply Online",
+
+    importantDates: [
+      { label: "Notification Date", value: "12 December 2025" },
+      { label: "Application Start Date", value: "16 December 2025" },
+      { label: "Last Date to Apply", value: "16 January 2026" },
+      { label: "Exam Date", value: "To be notified later" },
+      { label: "Admit Card", value: "Before PET/PST" },
+    ],
+
+    applicationFee: [
+      { category: "General / OBC / MOBC", amount: "₹ 0/- (Nil)" },
+      { category: "SC / ST", amount: "₹ 0/- (Nil)" },
+      { category: "EWS / Women", amount: "₹ 0/- (Nil)" },
+      { category: "Payment Mode", amount: "No Fee Required" },
+    ],
+
+    eligibility: [
+      "**Residency:** Must be a permanent resident of Assam & registered with Employment Exchange.",
+      "**Language:** Must speak Assamese or other state language fluently.",
+      "**Physical Standards:** Must meet the Height & Chest criteria mentioned below.",
+      "**Note:** Candidates can apply for multiple posts with a single registration."
+    ],
+
+    // 💎 RICH DATA: Consolidated Vacancy Table (All 5 Notifications)
+    vacancyDetails: [
+      { 
+        postName: "Constable (Unarmed Branch - UB)", 
+        total: "1,052", 
+        eligibility: "12th (H.S.) Passed", 
+        age: "18-25 Yrs" 
+      },
+      { 
+        postName: "Constable (Armed Branch - AB)", 
+        total: "663", 
+        eligibility: "10th (HSLC) Passed", 
+        age: "18-25 Yrs" 
+      },
+      { 
+        postName: "Sub Inspector (UB)", 
+        total: "48", 
+        eligibility: "Graduate (Arts/Sci/Comm)", 
+        age: "20-26 Yrs" 
+      },
+      { 
+        postName: "Sub Inspector (AB - Commando)", 
+        total: "47", 
+        eligibility: "Graduate (Arts/Sci/Comm)", 
+        age: "20-24 Yrs" 
+      },
+      { 
+        postName: "Assistant Jailor", 
+        total: "39", 
+        eligibility: "Graduate (Any Stream)", 
+        age: "21-40 Yrs" 
+      },
+      { 
+        postName: "Driver Constable & Drivers", 
+        total: "371", 
+        eligibility: "10th Pass + Valid Driving License (LMV/MMV/HMV)", 
+        age: "18-25 / 18-40" 
+      },
+      { 
+        postName: "Safai Karmachari (Grade IV)", 
+        total: "112", 
+        eligibility: "Class VI Pass (Max Class XII)", 
+        age: "18-40 Yrs" 
+      },
+      { 
+        postName: "Other Posts (SI Comm, Station Officer etc.)", 
+        total: "18", 
+        eligibility: "B.Sc (Science/IT/CS)", 
+        age: "20-24 Yrs" 
+      },
+      {
+        postName: "Total Posts",
+        total: "2,350",
+        eligibility: "Various Qualifications",
+        age: "-"
+      }
+    ],
+
+    // 💎 RICH DATA: Physical Standards (PST) & Selection
+    extraSections: [
+      {
+        title: "Physical Standards (Height & Chest)",
+        tableData: [
+          { category: "Height (Gen/OBC/SC)", details: "Male: 162.5 cm | Female: 154 cm" },
+          { category: "Height (ST-P / ST-H)", details: "Male: 160 cm | Female: 152 cm" },
+          { category: "Chest (Male Only)", details: "Gen/OBC/SC: 80-85 cm | ST(H): 78-83 cm" },
+          { category: "Note", details: "Height for Commando & Safai Karmachari varies. Check Official Notification." }
+        ]
+      },
+      {
+        title: "Selection Process",
+        list: [
+          "**PST & PET:** Physical Standard Test & Physical Efficiency Test (Running, Long Jump, Chin up).",
+          "**Written Test:** OMR Based (100 Questions / 50 Marks). No negative marking for some posts.",
+          "**Skill Test:** Driving Test (for Drivers) or Trade Test (for Safai Karmachari).",
+          "**Oral/Viva Voce:** 5 Marks Interview.",
+          "**Medical Examination:** Final verification of health standards."
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Visit the official website **slprbassam.in**.",
+      "Click on 'Online Application Portal'.",
+      "Register using your Mobile Number and Date of Birth.",
+      "**One Time Registration:** You need to register only once for all 5 advertisements.",
+      "Select the posts you want to apply for (Constable, SI, Driver, etc.).",
+      "Upload Passport Photo (450KB) and Signature (100KB).",
+      "Submit the form. **No Fee Payment is required.**",
+      "Print the Acknowledgement Slip."
+    ],
+
+    links: [
+      { title: "Apply Online (Link Active 16 Dec)", url: "https://slprbassam.in/" },
+      { title: "Download Notification (Constable UB/AB)", url: "https://sarkariresult.com.im/wp-content/uploads/2025/12/Assam-Police-Constable-Notification.pdf" }, // Link to PDF 5
+      { title: "Download Notification (SI & Asst Jailor)", url: "https://slprbassam.in/pdf/Notice2025/12122025/adv_SI_UB_communication_station_officer_etc.pdf" }, // Link to PDF 4
+      { title: "Download Notification (Commando SI/Constable)", url: "https://slprbassam.in/pdf/Notice2025/12122025/adv_SI(AB)-CDO_Bn.pdf" }, // Link to PDF 3
+      { title: "Download Notification (Driver Posts)", url: "https://slprbassam.in/pdf/Notice2025/12122025/adv_driver_constable_equivalent.pdf" }, // Link to PDF 1
+      { title: "Download Notification (Safai Karmachari)", url: "https://slprbassam.in/pdf/Notice2025/12122025/adv_safai-karmachari.pdf/" }, // Link to PDF 2
+      { title: "Official Website", url: "https://slprbassam.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the last date for Assam Police Recruitment 2026?", answer: "The last date to apply for all posts is 16th January 2026." },
+      { question: "Is there any application fee?", answer: "No, there is no application fee for any category." },
+      { question: "Can I apply for multiple posts?", answer: "Yes, you can apply for multiple posts using a single Application ID." },
+      { question: "What is the total vacancy?", answer: "A total of 2,350 vacancies have been released across 5 notifications." }
+    ]
+  },
+
     {
     id: 43,
     title: "Bihar BSSC Inter Level Vacancy 2025 Apply Online (23,175 Posts)",
