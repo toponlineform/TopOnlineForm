@@ -97,8 +97,8 @@ const ToolsPage = () => {
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-        gap: '40px', // 🔥 Gap Increased (25px -> 40px)
-        padding: '10px' // 🔥 Added Padding to container
+        gap: '50px', // 🔥 Gap Increased to 50px
+        padding: '20px' // 🔥 Padding Increased to 20px
       }}>
         {toolsList.map((tool) => (
           <Link to={tool.link} key={tool.id} style={{textDecoration: 'none'}}>
@@ -108,18 +108,18 @@ const ToolsPage = () => {
               borderRadius: '16px',
               padding: '25px',
               textAlign: 'center',
-              transition: 'transform 0.3s, box-shadow 0.3s', // Smooth Animation
+              transition: 'transform 0.3s, box-shadow 0.3s',
               cursor: 'pointer',
               height: '100%',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              boxShadow: '0 4px 10px rgba(0,0,0,0.05)', // Softer Shadow
+              boxShadow: '0 4px 10px rgba(0,0,0,0.05)',
               position: 'relative',
               top: 0
             }}
             onMouseOver={(e) => {
-              e.currentTarget.style.transform = 'translateY(-8px)'; // Thoda aur upar uthega
+              e.currentTarget.style.transform = 'translateY(-8px)';
               e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
             }}
             onMouseOut={(e) => {
