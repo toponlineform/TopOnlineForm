@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from './SEO';
-import { Calculator, Image, Keyboard, FileText } from 'lucide-react';
+// ✅ Added 'FileUser' icon for Resume Builder
+import { Calculator, Image, Keyboard, FileText, FileUser } from 'lucide-react';
 
 const ToolsPage = () => {
   const toolsList = [
@@ -36,15 +37,24 @@ const ToolsPage = () => {
       icon: <FileText size={32} color="#c2185b" />,
       link: "/tools/jpg-to-pdf",
       bg: "#fce4ec", border: "#f8bbd0"
+    },
+    // ✅ NEW RESUME BUILDER TOOL ADDED HERE
+    {
+      id: 5,
+      title: "Resume Builder",
+      desc: "Create professional ATS-friendly resumes in minutes.",
+      icon: <FileUser size={32} color="#673ab7" />, // Purple Icon
+      link: "/tools/resume-builder",
+      bg: "#ede7f6", border: "#d1c4e9" // Light Purple Theme
     }
   ];
 
   return (
     <div style={{ padding: '40px 15px', maxWidth: '1000px', margin: '0 auto' }}>
       <SEO 
-        title="Free Online Tools - Age Calculator, PDF Converter & More" 
-        description="Access free pro tools: Age Calculator, Image Resizer, Typing Test, and PDF Converter. Best utility tools for students and professionals." 
-        keywords="Online Tools, Age Calculator, Image Resizer, Typing Test, PDF Converter"
+        title="Free Online Tools - Resume Builder, Age Calculator & More" 
+        description="Access free pro tools: Resume Builder, Age Calculator, Image Resizer, Typing Test, and PDF Converter. Best utility tools for students and professionals." 
+        keywords="Online Tools, Resume Builder, Age Calculator, Image Resizer, Typing Test, PDF Converter"
         url="https://toponlineform.com/tools"
       />
 
