@@ -47,7 +47,7 @@ export const latestJobs = [
     vacancyDetails: [
       { 
         postName: "Constable (Unarmed Branch - UB)", 
-        total: "1,052", 
+        total: "1052", 
         eligibility: "12th (H.S.) Passed", 
         age: "18-25 Yrs" 
       },
