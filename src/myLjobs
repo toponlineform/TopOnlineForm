@@ -5,7 +5,7 @@ export const latestJobs = [
 
 
     {
-    id: 106, // Check last ID and increment
+    id: 43, // Check last ID and increment
     title: "Bihar BSSC 2nd Inter Level Recruitment 2025 (Date Extended)",
     shortTitle: "BSSC Inter Level 2025",
     category: "Latest Jobs",
