@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from './SEO';
-// ✅ Added 'FileUser' icon for Resume Builder
-import { Calculator, Image, Keyboard, FileText, FileUser } from 'lucide-react';
+// ✅ Safe Icons Import
+import { Calculator, Image, Keyboard, FileText, Briefcase } from 'lucide-react';
 
 const ToolsPage = () => {
   const toolsList = [
@@ -38,14 +38,14 @@ const ToolsPage = () => {
       link: "/tools/jpg-to-pdf",
       bg: "#fce4ec", border: "#f8bbd0"
     },
-    // ✅ NEW RESUME BUILDER TOOL ADDED HERE
+    // ✅ RESUME BUILDER (Updated Icon to Briefcase)
     {
       id: 5,
       title: "Resume Builder",
       desc: "Create professional ATS-friendly resumes in minutes.",
-      icon: <FileUser size={32} color="#673ab7" />, // Purple Icon
+      icon: <Briefcase size={32} color="#673ab7" />, 
       link: "/tools/resume-builder",
-      bg: "#ede7f6", border: "#d1c4e9" // Light Purple Theme
+      bg: "#ede7f6", border: "#d1c4e9"
     }
   ];
 
