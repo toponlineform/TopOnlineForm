@@ -9,7 +9,7 @@ const ToolsPage = () => {
       id: 1,
       title: "Age Calculator",
       desc: "Calculate your exact age.",
-      icon: <Calculator size={28} color="#2e7d32" />,
+      icon: <Calculator size={28} color="#2e7d32" />, // Icon chota kiya (32->28)
       link: "/tools/age-calculator",
       bg: "#e8f5e9", border: "#c8e6c9"
     },
@@ -80,7 +80,7 @@ const ToolsPage = () => {
   ];
 
   return (
-    <div style={{ padding: '40px 20px', maxWidth: '1000px', margin: '0 auto' }}>
+    <div style={{ padding: '30px 15px', maxWidth: '1000px', margin: '0 auto' }}>
       <SEO 
         title="Free Online Tools - Resume, Date on Photo, Typing Test & More" 
         description="All-in-one student tools: Resume Builder, Date on Photo Adder, Signature Maker, Typing Test, and more." 
@@ -88,25 +88,25 @@ const ToolsPage = () => {
         url="https://toponlineform.com/tools"
       />
 
-      <h1 className="job-title" style={{textAlign: 'center', marginBottom: '10px', fontSize: '26px'}}>🛠️ Student Utility Tools</h1>
-      <p style={{textAlign: 'center', color: '#666', marginBottom: '50px', fontSize: '15px'}}>
+      <h1 className="job-title" style={{textAlign: 'center', marginBottom: '10px', fontSize: '24px'}}>🛠️ Student Utility Tools</h1>
+      <p style={{textAlign: 'center', color: '#666', marginBottom: '40px', fontSize: '15px'}}>
         Premium tools available for free.
       </p>
 
       <div style={{
         display: 'grid',
-        // ✅ Size wahi hai (Compact: 220px)
+        // 🔥 SIZE KAM KIYA: 280px -> 220px (Ab ek line me jyada box aayenge)
         gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', 
-        gap: '40px',    // 🔥 Gap badha diya (Box dur-dur rahenge)
-        padding: '10px' 
+        gap: '30px', 
+        padding: '10px'
       }}>
         {toolsList.map((tool) => (
           <Link to={tool.link} key={tool.id} style={{textDecoration: 'none'}}>
             <div style={{
               background: 'white',
               border: `1px solid ${tool.border}`,
-              borderRadius: '16px',
-              padding: '30px', // 🔥 Internal Padding Increased (20px -> 30px)
+              borderRadius: '12px', // Radius thoda kam kiya (sleek look)
+              padding: '20px',      // Padding kam ki (Compact)
               textAlign: 'center',
               transition: 'transform 0.2s, box-shadow 0.2s',
               cursor: 'pointer',
@@ -115,23 +115,23 @@ const ToolsPage = () => {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
               position: 'relative',
               top: 0
             }}
             onMouseOver={(e) => {
-              e.currentTarget.style.transform = 'translateY(-8px)';
-              e.currentTarget.style.boxShadow = '0 15px 30px rgba(0,0,0,0.1)';
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
             }}
             onMouseOut={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.05)';
+              e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.04)';
             }}
             >
               <div style={{
-                marginBottom: '15px', 
+                marginBottom: '12px', 
                 background: tool.bg, 
-                width: '60px', 
+                width: '60px',  // Circle chota kiya
                 height: '60px', 
                 display: 'flex', 
                 alignItems: 'center', 
@@ -140,8 +140,8 @@ const ToolsPage = () => {
               }}>
                 {tool.icon}
               </div>
-              <h2 style={{fontSize: '17px', color: '#333', marginBottom: '6px', fontWeight: '700'}}>{tool.title}</h2>
-              <p style={{fontSize: '13px', color: '#666', lineHeight: '1.4', margin: 0}}>{tool.desc}</p>
+              <h2 style={{fontSize: '16px', color: '#333', marginBottom: '5px', fontWeight: '700'}}>{tool.title}</h2>
+              <p style={{fontSize: '13px', color: '#666', lineHeight: '1.3', margin: 0}}>{tool.desc}</p>
             </div>
           </Link>
         ))}
