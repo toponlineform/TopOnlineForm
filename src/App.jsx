@@ -19,7 +19,7 @@ import WhatsAppPopup from './WhatsAppPopup';
 import ToolsPage from './ToolsPage';
 import AgeCalculator from './tools/AgeCalculator';
 import ImageResizer from './tools/ImageResizer'; // ✅ Added Image Resizer
-// import TypingTest from './tools/TypingTest';     // (Abhi Ruka hua hai)
+import JpgToPdf from './tools/JpgToPdf';
 // import JpgToPdf from './tools/JpgToPdf';         // (Abhi Ruka hua hai)
 
 // --- Navbar ---
@@ -445,6 +445,7 @@ function App() {
         <Route path="/tools" element={<ToolsPage />} />
         <Route path="/tools/age-calculator" element={<AgeCalculator />} />
         <Route path="/tools/image-resizer" element={<ImageResizer />} />
+        <Route path="/tools/jpg-to-pdf" element={<JpgToPdf />} />
         {/* Uncomment below when files exist */}
         {/* <Route path="/tools/typing-test" element={<TypingTest />} /> */}
         {/* <Route path="/tools/jpg-to-pdf" element={<JpgToPdf />} /> */}
