@@ -52,12 +52,11 @@ export const latestJobs = [
 
     // 💎 RICH DATA: Exact numbers from Screenshot (IMG_7807)
     vacancyDetails: [
-      { postName: "Lower Division Clerk (LDC)", total: "22,072", extra: "🔥 7,124 for Women" },
+      { postName: "Lower Division Clerk (LDC)", total: "22072", extra: "7124 for Women" },
       { postName: "Animal Husbandry Helper", total: "549", extra: "184 for Women" },
       { postName: "Junior Regional Investigator", total: "534", extra: "81 for Women" },
       { postName: "Bench Clerk", total: "16", extra: "04 for Women" },
-      { postName: "Clerk-cum-Typist", total: "04", extra: "01 for Women" },
-      { postName: "TOTAL VACANCY", total: "23,175", extra: "7,394 Reserved for Women" }
+      { postName: "Clerk-cum-Typist", total: "04", extra: "01 for Women" }
     ],
 
     // 💎 RICH DATA: Exact Pay Levels from Screenshot (IMG_7810)
