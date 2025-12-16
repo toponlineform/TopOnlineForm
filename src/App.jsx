@@ -22,6 +22,10 @@ import ImageResizer from './tools/ImageResizer';
 import TypingTest from './tools/TypingTest'; 
 import JpgToPdf from './tools/JpgToPdf';
 import ResumeBuilder from './tools/ResumeBuilder';
+import DateOnPhoto from './tools/DateOnPhoto';
+import SignatureMaker from './tools/SignatureMaker';
+import PassportPhoto from './tools/PassportPhoto';
+import CgpaCalculator from './tools/CgpaCalculator';
 
 // --- Navbar ---
 function Navbar() {
@@ -450,6 +454,10 @@ function App() {
         {/* PDF Tool abhi disabled hai, jab install ho jaye tab uncomment karein */}
         <Route path="/tools/jpg-to-pdf" element={<JpgToPdf />} />
         <Route path="/tools/resume-builder" element={<ResumeBuilder />} />
+        <Route path="/tools/date-on-photo" element={<DateOnPhoto />} />
+        <Route path="/tools/signature-maker" element={<SignatureMaker />} />
+        <Route path="/tools/passport-photo-maker" element={<PassportPhoto />} />
+        <Route path="/tools/cgpa-calculator" element={<CgpaCalculator />} />
       </Routes>
       
       <div className="floating-container">
