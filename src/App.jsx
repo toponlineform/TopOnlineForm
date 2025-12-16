@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link, useParams, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-// ✅ Added Icons for Tools Banner
-import { Search, X, ChevronDown, Calculator, Camera, Briefcase, Keyboard } from 'lucide-react';
-import { jobsData } from './jobsData'; // Search Index
+// ✅ Icons Import
+import { Search, X, ChevronDown, Calculator, Camera, Briefcase, Keyboard, Image, FileText, PenTool, Printer, Percent } from 'lucide-react';
+import { jobsData } from './jobsData'; 
 
 // Components
 import About from './About';
@@ -16,7 +16,7 @@ import SearchResults from './SearchResults';
 import StatePage from './StatePage';
 import WhatsAppPopup from './WhatsAppPopup';
 
-// ✅ TOOLS IMPORTS (ALL ACTIVE)
+// ✅ TOOLS IMPORTS
 import ToolsPage from './ToolsPage';
 import AgeCalculator from './tools/AgeCalculator';
 import ImageResizer from './tools/ImageResizer';
@@ -81,8 +81,6 @@ function Navbar() {
                 <Link to="/results">Results</Link>
                 <Link to="/admit-card">Admit Card</Link>
                 <Link to="/answer-key">Answer Key</Link>
-                
-                {/* ✅ TOOLS LINK */}
                 <Link to="/tools" style={{ color: '#ffcc00', fontWeight: 'bold' }}>Tools</Link>
 
                 <div className="dropdown" onMouseEnter={() => setIsMoreOpen(true)} onMouseLeave={() => setIsMoreOpen(false)} style={{position: 'relative', display: 'inline-block'}}>
@@ -135,39 +133,58 @@ function Home() {
 
   const sortNewest = (a, b) => b.id - a.id;
 
-  // ✨ Tools Banner Component
+  // ✨ FIXED TOOLS BANNER (NO STRETCHING)
   const ToolsBanner = () => (
     <div style={{ 
-      gridColumn: '1 / -1', // 🔥 This forces full width at the top
+      gridColumn: '1 / -1', // Use full width of grid
       width: '100%', 
-      marginBottom: '15px',
-      marginTop: '5px' 
+      minWidth: 0,          // 🔥 VITAL FIX: Prevents grid from stretching on mobile
+      marginBottom: '20px',
+      marginTop: '10px' 
     }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px', padding: '0 5px' }}>
+      <style>{`
+        .tools-scroll-container::-webkit-scrollbar { display: none; }
+        .tools-scroll-container { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
+
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px', padding: '0 5px' }}>
         <h3 style={{ margin: 0, fontSize: '18px', color: '#333', display: 'flex', alignItems: 'center', gap: '8px' }}>
-          🔥 Useful Tools <span style={{fontSize:'12px', background:'#ffcc00', padding:'2px 6px', borderRadius:'4px', color:'black'}}>New</span>
+          🔥 Useful Tools <span style={{fontSize:'12px', background:'#ffcc00', padding:'2px 6px', borderRadius:'4px', color:'black'}}>Free</span>
         </h3>
         <Link to="/tools" style={{ fontSize: '14px', color: '#007bff', fontWeight: 'bold', textDecoration: 'none' }}>View All &rarr;</Link>
       </div>
       
-      <div style={{ 
-        display: 'flex', gap: '15px', overflowX: 'auto', paddingBottom: '10px', 
-        scrollbarWidth: 'none', msOverflowStyle: 'none' 
+      {/* Horizontal Scroll Area */}
+      <div className="tools-scroll-container" style={{ 
+        display: 'flex', 
+        gap: '12px', 
+        overflowX: 'auto', 
+        paddingBottom: '5px',
+        paddingLeft: '2px', 
+        paddingRight: '2px',
+        whiteSpace: 'nowrap'
       }}>
         {[
-          { icon: <Camera size={24} color="#007bff"/>, title: "Date on Photo", link: "/tools/date-on-photo", bg: "#e3f2fd" },
-          { icon: <Briefcase size={24} color="#673ab7"/>, title: "Resume Builder", link: "/tools/resume-builder", bg: "#ede7f6" },
-          { icon: <Keyboard size={24} color="#ef6c00"/>, title: "Typing Test", link: "/tools/typing-test", bg: "#fff3e0" },
-          { icon: <Calculator size={24} color="#2e7d32"/>, title: "Age Calculator", link: "/tools/age-calculator", bg: "#e8f5e9" },
+          { icon: <Briefcase size={22} color="#673ab7"/>, title: "Resume", link: "/tools/resume-builder", bg: "#ede7f6" },
+          { icon: <Camera size={22} color="#007bff"/>, title: "Date Photo", link: "/tools/date-on-photo", bg: "#e3f2fd" },
+          { icon: <Keyboard size={22} color="#ef6c00"/>, title: "Typing", link: "/tools/typing-test", bg: "#fff3e0" },
+          { icon: <Calculator size={22} color="#2e7d32"/>, title: "Age Calc", link: "/tools/age-calculator", bg: "#e8f5e9" },
+          { icon: <Image size={22} color="#1565c0"/>, title: "Resizer", link: "/tools/image-resizer", bg: "#e3f2fd" },
+          { icon: <PenTool size={22} color="#43a047"/>, title: "Sign Maker", link: "/tools/signature-maker", bg: "#e8f5e9" },
+          { icon: <Printer size={22} color="#006064"/>, title: "Passport", link: "/tools/passport-photo-maker", bg: "#e0f7fa" },
+          { icon: <FileText size={22} color="#c2185b"/>, title: "To PDF", link: "/tools/jpg-to-pdf", bg: "#fce4ec" },
+          { icon: <Percent size={22} color="#ff5722"/>, title: "CGPA %", link: "/tools/cgpa-calculator", bg: "#fbe9e7" },
         ].map((tool, index) => (
-          <Link to={tool.link} key={index} style={{ textDecoration: 'none' }}>
+          <Link to={tool.link} key={index} style={{ textDecoration: 'none', flexShrink: 0 }}>
             <div style={{ 
-              minWidth: '130px', background: 'white', padding: '15px', borderRadius: '12px', 
+              width: '100px', // ✅ Fixed width makes it app-like & consistent
+              background: 'white', padding: '12px 5px', borderRadius: '12px', 
               border: '1px solid #eee', textAlign: 'center', boxShadow: '0 2px 5px rgba(0,0,0,0.05)',
-              display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px'
+              display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px',
+              height: '100%'
             }}>
               <div style={{ background: tool.bg, padding: '10px', borderRadius: '50%' }}>{tool.icon}</div>
-              <span style={{ fontSize: '13px', fontWeight: 'bold', color: '#444' }}>{tool.title}</span>
+              <span style={{ fontSize: '11px', fontWeight: 'bold', color: '#444', lineHeight:'1.2' }}>{tool.title}</span>
             </div>
           </Link>
         ))}
@@ -228,7 +245,7 @@ function Home() {
     <div className="main-grid">
       <SEO title="Sarkari Result 2025" description="Latest Govt Jobs" keywords="Sarkari Result" url="https://toponlineform.com/" />
       
-      {/* ✅ MOVED TOOLS BANNER HERE (TOP - Full Width) */}
+      {/* ✅ Banner at Top - No Stretching */}
       <ToolsBanner />
 
       <div className="action-cell"><a href="https://whatsapp.com/channel/0029Vb7TcG06LwHoTXhZKn2D" target="_blank" className="social-btn whatsapp full-width">Join WhatsApp Group</a></div>
@@ -246,7 +263,6 @@ function Home() {
       <JobBox title="Answer Key" jobs={homeJobs.answerKeys} linkTo="/answer-key" />
       <JobBox title="Admission" jobs={homeJobs.admissions} linkTo="/admission" />
       <JobBox title="Previous Paper" jobs={homeJobs.previousPapers} linkTo="/previous-papers" />
-      {/* ❌ Syllabus Box REMOVED */}
     </div>
   );
 }
