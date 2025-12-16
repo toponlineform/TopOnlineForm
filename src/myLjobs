@@ -3,6 +3,66 @@ export const latestJobs = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+   // --- 42. Haryana HTET January 2026 Application Form ---
+   {
+    id: 42,
+    title: "Haryana HTET January 2026 Application Form",
+    shortTitle: "HTET Jan 2026",
+    category: "Latest Jobs",
+    state: "Haryana",
+    slug: "htet-january-2026-application-form",
+    postDate: "16/12/2025",
+    shortInfo: "Board of School Education, Haryana (BSEH) Bhiwani has released the tentative schedule for the Haryana Teacher Eligibility Test (HTET) January 2026. Candidates who want to become teachers (PRT, TGT, PGT) in Haryana Govt Schools can apply online. The written exam is scheduled for 17th and 18th January 2026.",
+    totalPost: "Eligibility Test",
+    salary: "As per Govt Rules",
+    ageLimit: "Minimum Age: 18 Years | Maximum Age: 42 Years (Relaxation Extra as per Rules)",
+    importantDates: [
+      { label: "Application Begin", value: "December 2025 (Last Week)" },
+      { label: "Last Date for Apply Online", value: "January 2026 (First Week)" },
+      { label: "Pay Exam Fee Last Date", value: "January 2026" },
+      { label: "Correction Dates", value: "To be notified" },
+      { label: "HTET Exam Date", value: "17 & 18 January 2026" },
+      { label: "Admit Card Available", value: "Before Exam" },
+    ],
+    applicationFee: [
+      { category: "Single Level (Gen/OBC/Other State)", amount: "₹ 1000/-" },
+      { category: "Single Level (SC/PH of Haryana)", amount: "₹ 500/-" },
+      { category: "Two Levels (Gen/OBC/Other State)", amount: "₹ 1800/-" },
+      { category: "Two Levels (SC/PH of Haryana)", amount: "₹ 900/-" },
+      { category: "Three Levels (Gen/OBC/Other State)", amount: "₹ 2400/-" },
+      { category: "Three Levels (SC/PH of Haryana)", amount: "₹ 1200/-" },
+    ],
+    eligibility: [
+      "Level 1 (PRT - Primary Teacher): Class 1 to 5 - 10+2 with 50% Marks and 2 Year Diploma in Elementary Education (JBT/D.El.Ed) OR B.El.Ed.",
+      "Level 2 (TGT - Trained Graduate Teacher): Class 6 to 8 - Bachelor Degree in Related Subject with 50% Marks and B.Ed / 2 Year Diploma.",
+      "Level 3 (PGT - Post Graduate Teacher): Level 3 - Master Degree in Concerned Subject with 50% Marks and B.Ed Degree.",
+    ],
+    vacancyDetails: [
+      { level: "Level I", postName: "PRT Teacher (Class 1-5)", eligibility: "12th + D.Ed / JBT / B.El.Ed" },
+      { level: "Level II", postName: "TGT Teacher (Class 6-8)", eligibility: "Bachelor Degree + B.Ed" },
+      { level: "Level III", postName: "PGT Teacher (Class 9-12)", eligibility: "Master Degree + B.Ed" }
+    ],
+    howToApply: [
+      "Board of School Education Haryana (BSEH) will conduct HTET January 2026 Exam.",
+      "Candidates can apply online through the official website bseh.org.in.",
+      "Read the full notification before applying to check subject-wise eligibility.",
+      "Keep your scanned photo, signature, and thumb impression ready as per BSEH guidelines.",
+      "Aadhar Card is mandatory for registration.",
+      "Pay the examination fee according to the number of levels you are applying for.",
+      "Take a printout of the final confirmation page for future reference."
+    ],
+    links: [
+      { title: "Apply Online (Link Active Soon)", url: "https://bseh.org.in/" },
+      { title: "Download Exam Schedule Notice (Soon)", url: "https://bseh.org.in/" },
+      { title: "HTET January 2026 Exam Date Latest News", url: "https://t.me/toponlineform/5" },
+      { title: "Official Website", url: "https://bseh.org.in/" }
+    ],
+    faqs: [
+      { question: "When is the HTET Jan 2026 Exam?", answer: "The exam is scheduled for 17th and 18th January 2026." },
+      { question: "Is B.Ed mandatory for PRT?", answer: "No, for Level 1 (PRT), a Diploma in Elementary Education (D.Ed/JBT) is required." },
+      { question: "Can Other State candidates apply?", answer: "Yes, candidates from other states can apply as General category." }
+    ]
+  },
   // --- 41. IIMC Delhi Non-Teaching Recruitment 2025 ---
   {
     id: 41,
@@ -3358,7 +3418,7 @@ export const latestJobs = [
   
   // --- 11. DRDO CEPTAM-11 Recruitment 2025 (Full Notification) ---
   {
-    id: 42,
+    id: 11,
     slug: "drdo-ceptam-11-recruitment-2025",
     shortTitle: "DRDO CEPTAM-11 Recruitment 2025",
     title: "DRDO CEPTAM-11 Recruitment 2025 Apply Online for 764 Posts | STA-B & Technician-A",
