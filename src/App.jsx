@@ -370,7 +370,9 @@ function JobDetails() {
         headers.forEach(header => {
             if (skipCols.includes(header)) return;
             const h = header.toLowerCase();
-            if (h.includes("eligibility") || h.includes("name") || h.includes("qualification")) return;
+            // ✅ Updated: 'age' is now permanently skipped from totaling
+            if (h.includes("eligibility") || h.includes("name") || h.includes("qualification") || h.includes("age")) return;
+            
             const sum = data.reduce((acc, row) => acc + (parseFloat(row[header]) || 0), 0);
             if (sum > 0) { colTotals[header] = sum; showTotal = true; }
         });
