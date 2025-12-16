@@ -3,6 +3,68 @@ export const latestJobs = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
+
+    {
+    id: 106, // Check last ID and increment
+    title: "Bihar BSSC 2nd Inter Level Recruitment 2025 (Date Extended)",
+    shortTitle: "BSSC Inter Level 2025",
+    category: "Latest Jobs",
+    state: "Bihar",
+    slug: "bssc-inter-level-recruitment-2025",
+    postDate: "16/12/2025",
+    shortInfo: "Bihar Staff Selection Commission (BSSC) has increased the total vacancies to 24,492 for the Second Inter Level Combined Competitive Examination 2025. The last date to apply online has also been extended to 15th January 2026. Interested candidates who have passed 10+2 Intermediate can apply online for LDC, Clerk, Revenue Employee, and other posts.",
+    totalPost: "24,492 Posts (Increased)",
+    salary: "Level-2 to Level-4 (As per Post)",
+    ageLimit: "Min: 18 Years | Max: 37 Years (Male), 40 Years (Female) | Age as on 01/08/2025",
+    importantDates: [
+      { label: "Application Start", value: "15 October 2025" },
+      { label: "Last Date for Registration (Extended)", value: "13 January 2026" },
+      { label: "Last Date for Fee Payment", value: "13 January 2026" },
+      { label: "Final Submission Last Date", value: "15 January 2026" },
+      { label: "Exam Date", value: "To be notified soon" },
+      { label: "Admit Card", value: "Before Exam" },
+    ],
+    applicationFee: [
+      { category: "General / OBC / EWS", amount: "₹ 540/-" },
+      { category: "SC / ST (Bihar Domicile)", amount: "₹ 135/-" },
+      { category: "Female (All Categories of Bihar)", amount: "₹ 135/-" },
+      { category: "PWD / Divyang", amount: "₹ 135/-" },
+    ],
+    eligibility: [
+      "Passed 10+2 (Intermediate) Exam from any recognized Board in India.",
+      "For some specific posts: Computer Typing and Computer Knowledge is required.",
+      "Read the official notification for post-wise eligibility details."
+    ],
+    vacancyDetails: [
+      { postName: "Lower Division Clerk (LDC)", total: "Various Depts", eligibility: "10+2 Intermediate + Typing" },
+      { postName: "Revenue Staff (Rajaswa Karamchari)", total: "Massive Vacancy", eligibility: "10+2 Intermediate Pass" },
+      { postName: "Panchayat Secretary", total: "High Vacancy", eligibility: "10+2 Pass" },
+      { postName: "Filaria Inspector", total: "Specific Dept", eligibility: "10+2 (Science)" },
+      { postName: "Assistant Instructor (Typing)", total: "Various", eligibility: "10+2 + Typing" },
+      { postName: "Tank-Sah-Clerk", total: "Various", eligibility: "10+2 + Typing" }
+    ],
+    howToApply: [
+      "Candidates can apply online through the official website onlinebssc.com or bssc.bihar.gov.in.",
+      "First, complete the Registration process by 13th January 2026.",
+      "After registration and fee payment, fill in the remaining application form details.",
+      "Upload scanned Photo (with date), Signature, and 10th/12th Marksheets as required.",
+      "The Live Photo will be captured via Webcam during the application process.",
+      "Review the application form carefully before final submission.",
+      "Take a printout of the final submitted form for future reference."
+    ],
+    links: [
+      { title: "Apply Online (Date Extended)", url: "https://www.onlinebssc.com/" },
+      { title: "Download Date Extension Notice", url: "https://bssc.bihar.gov.in/Advertisement/02_23_A_5077_notice.pdf" },
+      { title: "Download DQ Scribe Format", url: "https://bssc.bihar.gov.in/Advertisement/2568.pdf" },
+      { title: "Download Full Notification", url: "https://bssc.bihar.gov.in/Advertisement/02_23A_Advt.pdf" },
+      { title: "Official Website", url: "https://bssc.bihar.gov.in/" }
+    ],
+    faqs: [
+      { question: "What is the new last date for BSSC Inter Level 2025?", answer: "The last date to apply is now 15th January 2026 (Registration closes on 13th Jan)." },
+      { question: "How many vacancies are there in BSSC Inter Level 2025?", answer: "Total vacancies have been increased to 24,492." },
+      { question: "Is typing mandatory for all posts?", answer: "No, typing is required only for LDC and Clerk posts. Revenue Employee and Panchayat Secretary posts generally do not require typing certificates at the time of applying (check notification)." }
+    ]
+  },
    // --- 42. Haryana HTET January 2026 Application Form ---
    {
     id: 42,
