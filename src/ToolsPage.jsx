@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from './SEO';
-// Import New Icons
+// ✅ Import All Icons
 import { Calculator, Image, Keyboard, FileText, Briefcase, Camera, PenTool, Printer, Percent } from 'lucide-react';
 
 const ToolsPage = () => {
@@ -81,7 +81,7 @@ const ToolsPage = () => {
   ];
 
   return (
-    <div style={{ padding: '40px 15px', maxWidth: '1000px', margin: '0 auto' }}>
+    <div style={{ padding: '40px 15px', maxWidth: '1100px', margin: '0 auto' }}>
       <SEO 
         title="Free Online Tools - Resume, Date on Photo, Typing Test & More" 
         description="All-in-one student tools: Resume Builder, Date on Photo Adder, Signature Maker, Typing Test, and more." 
@@ -90,14 +90,15 @@ const ToolsPage = () => {
       />
 
       <h1 className="job-title" style={{textAlign: 'center', marginBottom: '10px'}}>🛠️ Student Utility Tools</h1>
-      <p style={{textAlign: 'center', color: '#666', marginBottom: '40px', fontSize: '16px'}}>
+      <p style={{textAlign: 'center', color: '#666', marginBottom: '50px', fontSize: '16px'}}>
         Everything you need for your Exam Preparation & Form Filling.
       </p>
 
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-        gap: '25px',
+        gap: '40px', // 🔥 Gap Increased (25px -> 40px)
+        padding: '10px' // 🔥 Added Padding to container
       }}>
         {toolsList.map((tool) => (
           <Link to={tool.link} key={tool.id} style={{textDecoration: 'none'}}>
@@ -107,21 +108,23 @@ const ToolsPage = () => {
               borderRadius: '16px',
               padding: '25px',
               textAlign: 'center',
-              transition: 'transform 0.2s, box-shadow 0.2s',
+              transition: 'transform 0.3s, box-shadow 0.3s', // Smooth Animation
               cursor: 'pointer',
               height: '100%',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              boxShadow: '0 4px 6px rgba(0,0,0,0.02)'
+              boxShadow: '0 4px 10px rgba(0,0,0,0.05)', // Softer Shadow
+              position: 'relative',
+              top: 0
             }}
             onMouseOver={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.boxShadow = '0 15px 30px rgba(0,0,0,0.1)';
+              e.currentTarget.style.transform = 'translateY(-8px)'; // Thoda aur upar uthega
+              e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
             }}
             onMouseOut={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.02)';
+              e.currentTarget.style.boxShadow = '0 4px 10px rgba(0,0,0,0.05)';
             }}
             >
               <div style={{
