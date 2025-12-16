@@ -135,9 +135,9 @@ function Home() {
 
   const sortNewest = (a, b) => b.id - a.id;
 
-  // ✨ NEW: Tools Banner Component (Internal)
+  // ✨ Tools Banner Component (Internal)
   const ToolsBanner = () => (
-    <div style={{ margin: '20px 0 10px 0' }}>
+    <div style={{ margin: '10px 0 20px 0' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px', padding: '0 5px' }}>
         <h3 style={{ margin: 0, fontSize: '18px', color: '#333', display: 'flex', alignItems: 'center', gap: '8px' }}>
           🔥 Useful Tools <span style={{fontSize:'12px', background:'#ffcc00', padding:'2px 6px', borderRadius:'4px', color:'black'}}>New</span>
@@ -222,6 +222,10 @@ function Home() {
   return (
     <div className="main-grid">
       <SEO title="Sarkari Result 2025" description="Latest Govt Jobs" keywords="Sarkari Result" url="https://toponlineform.com/" />
+      
+      {/* ✅ MOVED TOOLS BANNER HERE (AT THE TOP) */}
+      <ToolsBanner />
+
       <div className="action-cell"><a href="https://whatsapp.com/channel/0029Vb7TcG06LwHoTXhZKn2D" target="_blank" className="social-btn whatsapp full-width">Join WhatsApp Group</a></div>
       <div className="action-cell"><a href="https://t.me/toponlineform" target="_blank" className="social-btn telegram full-width">Join Telegram Channel</a></div>
       <div className="action-cell">
@@ -230,9 +234,6 @@ function Home() {
             <button type="submit">Search</button>
          </form>
       </div>
-
-      {/* ✅ HERE IS THE NEW TOOLS BANNER */}
-      <ToolsBanner />
 
       <JobBox title="Latest Jobs" jobs={homeJobs.latestJobs} linkTo="/latest-jobs" />
       <JobBox title="Admit Card" jobs={homeJobs.admitCards} linkTo="/admit-card" />
