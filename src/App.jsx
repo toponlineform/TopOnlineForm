@@ -15,12 +15,12 @@ import SearchResults from './SearchResults';
 import StatePage from './StatePage';
 import WhatsAppPopup from './WhatsAppPopup';
 
-// ✅ TOOLS IMPORTS (ALL TOOLS ACTIVE)
+// ✅ TOOLS IMPORTS
 import ToolsPage from './ToolsPage';
 import AgeCalculator from './tools/AgeCalculator';
 import ImageResizer from './tools/ImageResizer';
-import TypingTest from './tools/TypingTest'; // ✅ Uncommented
-import JpgToPdf from './tools/JpgToPdf';     // ✅ Uncommented
+import TypingTest from './tools/TypingTest'; 
+// import JpgToPdf from './tools/JpgToPdf'; // ⚠️ Isko abhi rok rakha hai (PDF Library missing ho sakti hai)
 
 // --- Navbar ---
 function Navbar() {
@@ -195,7 +195,7 @@ function Home() {
       <JobBox title="Answer Key" jobs={homeJobs.answerKeys} linkTo="/answer-key" />
       <JobBox title="Admission" jobs={homeJobs.admissions} linkTo="/admission" />
       <JobBox title="Previous Paper" jobs={homeJobs.previousPapers} linkTo="/previous-papers" />
-      {/* ❌ Syllabus Box Removed */}
+      {/* ❌ Syllabus Box REMOVED */}
     </div>
   );
 }
@@ -441,12 +441,13 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
         
-        {/* ✅ ALL TOOLS ROUTES ACTIVE */}
+        {/* ✅ TOOLS ROUTES */}
         <Route path="/tools" element={<ToolsPage />} />
         <Route path="/tools/age-calculator" element={<AgeCalculator />} />
         <Route path="/tools/image-resizer" element={<ImageResizer />} />
         <Route path="/tools/typing-test" element={<TypingTest />} />
-        <Route path="/tools/jpg-to-pdf" element={<JpgToPdf />} />
+        {/* PDF Tool abhi disabled hai, jab install ho jaye tab uncomment karein */}
+        {/* <Route path="/tools/jpg-to-pdf" element={<JpgToPdf />} /> */}
       </Routes>
       
       <div className="floating-container">
