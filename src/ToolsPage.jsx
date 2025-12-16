@@ -89,7 +89,7 @@ const ToolsPage = () => {
       />
 
       <h1 className="job-title" style={{textAlign: 'center', marginBottom: '10px', fontSize: '24px'}}>🛠️ Student Utility Tools</h1>
-      <p style={{textAlign: 'center', color: '#666', marginBottom: '60px', fontSize: '15px'}}>
+      <p style={{textAlign: 'center', color: '#666', marginBottom: '40px', fontSize: '15px'}}>
         Premium tools available for free.
       </p>
 
