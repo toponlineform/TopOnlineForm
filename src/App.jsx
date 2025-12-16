@@ -16,8 +16,11 @@ import StatePage from './StatePage';
 import WhatsAppPopup from './WhatsAppPopup';
 
 // ✅ TOOLS IMPORTS
+import ToolsPage from './ToolsPage';
 import AgeCalculator from './tools/AgeCalculator';
-import ToolsPage from './ToolsPage'; 
+import ImageResizer from './tools/ImageResizer'; // ✅ Added Image Resizer
+// import TypingTest from './tools/TypingTest';     // (Abhi Ruka hua hai)
+// import JpgToPdf from './tools/JpgToPdf';         // (Abhi Ruka hua hai)
 
 // --- Navbar ---
 function Navbar() {
@@ -25,7 +28,6 @@ function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
   const [isMoreOpen, setIsMoreOpen] = useState(false);
-  // Tools dropdown state removed as we are using a direct link now
   const navigate = useNavigate();
 
   const handleInputChange = (e) => {
@@ -74,7 +76,7 @@ function Navbar() {
                 <Link to="/admit-card">Admit Card</Link>
                 <Link to="/answer-key">Answer Key</Link>
                 
-                {/* ✅ TOOLS LINK (Direct Link to Tools Dashboard) */}
+                {/* ✅ TOOLS LINK */}
                 <Link to="/tools" style={{ color: '#ffcc00', fontWeight: 'bold' }}>Tools</Link>
 
                 <div className="dropdown" onMouseEnter={() => setIsMoreOpen(true)} onMouseLeave={() => setIsMoreOpen(false)} style={{position: 'relative', display: 'inline-block'}}>
@@ -193,7 +195,7 @@ function Home() {
       <JobBox title="Answer Key" jobs={homeJobs.answerKeys} linkTo="/answer-key" />
       <JobBox title="Admission" jobs={homeJobs.admissions} linkTo="/admission" />
       <JobBox title="Previous Paper" jobs={homeJobs.previousPapers} linkTo="/previous-papers" />
-      <JobBox title="Syllabus" jobs={homeJobs.syllabus} linkTo="/syllabus" />
+      {/* ❌ Syllabus Box REMOVED as requested */}
     </div>
   );
 }
@@ -442,6 +444,10 @@ function App() {
         {/* ✅ TOOLS ROUTES */}
         <Route path="/tools" element={<ToolsPage />} />
         <Route path="/tools/age-calculator" element={<AgeCalculator />} />
+        <Route path="/tools/image-resizer" element={<ImageResizer />} />
+        {/* Uncomment below when files exist */}
+        {/* <Route path="/tools/typing-test" element={<TypingTest />} /> */}
+        {/* <Route path="/tools/jpg-to-pdf" element={<JpgToPdf />} /> */}
       </Routes>
       
       <div className="floating-container">
