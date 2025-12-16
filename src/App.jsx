@@ -21,6 +21,7 @@ import AgeCalculator from './tools/AgeCalculator';
 import ImageResizer from './tools/ImageResizer';
 import TypingTest from './tools/TypingTest'; 
 import JpgToPdf from './tools/JpgToPdf';
+import ResumeBuilder from './tools/ResumeBuilder';
 
 // --- Navbar ---
 function Navbar() {
@@ -448,6 +449,7 @@ function App() {
         <Route path="/tools/typing-test" element={<TypingTest />} />
         {/* PDF Tool abhi disabled hai, jab install ho jaye tab uncomment karein */}
         <Route path="/tools/jpg-to-pdf" element={<JpgToPdf />} />
+        <Route path="/tools/resume-builder" element={<ResumeBuilder />} />
       </Routes>
       
       <div className="floating-container">
