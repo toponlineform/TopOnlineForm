@@ -95,17 +95,18 @@ const ToolsPage = () => {
 
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', // Compact width kept
-        gap: '40px',    // 🔥 Gap Increased (30px -> 40px)
-        padding: '20px' // 🔥 Container Padding Increased
+        // ✅ Size wahi hai (Compact: 220px)
+        gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', 
+        gap: '40px',    // 🔥 Gap badha diya (Box dur-dur rahenge)
+        padding: '10px' 
       }}>
         {toolsList.map((tool) => (
           <Link to={tool.link} key={tool.id} style={{textDecoration: 'none'}}>
             <div style={{
               background: 'white',
               border: `1px solid ${tool.border}`,
-              borderRadius: '16px', 
-              padding: '25px',      // 🔥 Card Internal Padding Increased (20px -> 25px)
+              borderRadius: '16px',
+              padding: '30px', // 🔥 Internal Padding Increased (20px -> 30px)
               textAlign: 'center',
               transition: 'transform 0.2s, box-shadow 0.2s',
               cursor: 'pointer',
@@ -114,7 +115,7 @@ const ToolsPage = () => {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.05)', // Shadow slightly enhanced
+              boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
               position: 'relative',
               top: 0
             }}
