@@ -3,7 +3,117 @@ export const latestJobs = [
   //                  LATEST JOBS (ID 1 - 1000)
   // ==================================================
 
-    
+
+    {
+    id: 46,
+    title: "Chhattisgarh CGPSC State Service Exam 2025 Apply Online (238 Posts)",
+    shortTitle: "CGPSC SSE 2025",
+    category: "Latest Jobs",
+    state: "Chhattisgarh",
+    slug: "cgpsc-sse-2025-recruitment-online-form",
+    postDate: "26/11/2025",
+    shortInfo: "Chhattisgarh Public Service Commission (CGPSC) has released the official notification (Advt No. 06/2025) for the State Service Examination (SSE) 2025. A total of 238 vacancies are available for posts like Deputy Collector, DSP, Naib Tehsildar, and others. Candidates with a Bachelor's Degree can apply online from 1st December 2025.",
+    totalPost: "238 Posts",
+    salary: "Level-12, Level-9, Level-7 (Post Wise)",
+    ageLimit: "21-30 Years (Other State) | 21-35 Years (CG Domicile)",
+
+    // 🔥 SEO Tags
+    tags: "CGPSC SSE 2025, Chhattisgarh PSC Recruitment, CG State Service Exam, Deputy Collector Vacancy, CGPSC Pre Exam Date 2026, Sarkari Result CGPSC, CGPSC Online Form",
+
+    importantDates: [
+      { label: "Notification Issued", value: "26 November 2025" },
+      { label: "Application Start Date", value: "01 December 2025" },
+      { label: "Last Date to Apply", value: "30 December 2025" },
+      { label: "Correction Dates", value: "31 Dec 2025 to 02 Jan 2026" },
+      { label: "CGPSC Prelims Exam Date", value: "22 February 2026" },
+      { label: "CGPSC Mains Exam Date", value: "16, 17, 18, 19 May 2026" },
+      { label: "Admit Card", value: "10 Days Before Exam" },
+    ],
+
+    applicationFee: [
+      { category: "Chhattisgarh Domicile (All Categories)", amount: "₹ 0/- (Nil)" },
+      { category: "Other State Candidates", amount: "₹ 400/-" },
+      { category: "Portal/Correction Charge", amount: "₹ 500/-" },
+      { category: "Payment Mode", amount: "Online (Debit/Credit/Net Banking)" },
+    ],
+
+    eligibility: [
+      "**Education:** Bachelor's Degree in any stream from a recognized University in India.",
+      "**Final Year:** Candidates in the final year of graduation can also apply (conditions apply).",
+      "**Physical Standards:** Required only for Police (DSP), Excise, and Jail related posts."
+    ],
+
+    selectionProcess: [
+      "Preliminary Examination (Objective Type - 2 Papers)",
+      "Mains Examination (Written/Subjective)",
+      "Interview / Personality Test",
+      "Document Verification"
+    ],
+
+    // 💎 RICH DATA: Exam Pattern
+    examPattern: {
+      details: [
+        "**Prelims Paper 1 (GS):** 100 Questions, 200 Marks, 2 Hours.",
+        "**Prelims Paper 2 (Aptitude):** 100 Questions, 200 Marks, 2 Hours (Qualifying Nature).",
+        "**Negative Marking:** 1/3rd mark deducted for every wrong answer.",
+        "**Mains:** Total 7 Papers (Language, Essay, GS-1 to GS-5)."
+      ]
+    },
+
+    // 💎 RICH DATA: Vacancy Table
+    vacancyDetails: [
+      { postName: "State Service Exam 2025 (Various Posts)", total: "238", eligibility: "Bachelor Degree", age: "21-30/35 Yrs" }
+    ],
+
+    // 💎 RICH DATA: Post Wise Breakdown (Generic List)
+    extraSections: [
+      {
+        title: "Posts Included in SSE 2025",
+        list: [
+          "Deputy Collector",
+          "Deputy Superintendent of Police (DSP)",
+          "State Finance Service Officer",
+          "Assistant Director / District Women & Child Development Officer",
+          "District Registrar",
+          "State Tax Assistant Commissioner",
+          "Superintendent District Jail / Assistant Jailor",
+          "Naib Tehsildar",
+          "Labour Officer",
+          "Assistant Registrar (Cooperative Societies)"
+        ]
+      },
+      {
+        title: "Physical Standards (For Uniform Posts)",
+        tableData: [
+          { category: "Post Name", details: "Height (Male) | Height (Female) | Chest (Male)" },
+          { category: "Dy. Superintendent of Police (DSP)", details: "168 cm | 155 cm | 84-89 cm" },
+          { category: "District Excise Officer", details: "163 cm | 152.4 cm | 79-84 cm" },
+          { category: "Assistant Jailor", details: "1.65 m | 1.58 m | 0.80 m (Chest)" }
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Visit the official website **psc.cg.gov.in**.",
+      "Click on 'Online Application' > 'State Service Examination 2025'.",
+      "Register using Name, Mobile, and Email.",
+      "Fill in the detailed form and upload Photo & Signature.",
+      "**Fee Payment:** CG Domicile candidates pay ₹0 (Processing fee may apply). Other state candidates pay ₹400.",
+      "Submit the form and print the final receipt."
+    ],
+
+    links: [
+      { title: "Apply Online", url: "https://online.ecgpsconline.in/auth/login" },
+      { title: "Download Notification", url: "https://psc.cg.gov.in/pdf/Advertisement/ADV_SSE2025_26112025.PDF" },
+      { title: "Official Website", url: "https://psc.cg.gov.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the exam date for CGPSC Pre 2025?", answer: "The preliminary exam will be held on 22nd February 2026." },
+      { question: "Is there any application fee for CG candidates?", answer: "No, candidates from Chhattisgarh are exempted from the application fee." },
+      { question: "Can final year students apply?", answer: "Yes, final year students can appear for Prelims, but must have the degree before the Mains application form deadline." }
+    ]
+  },
     {
     id: 45,
     title: "SHS Delhi Multipurpose Health Worker Recruitment 2025 (200 Posts)",
