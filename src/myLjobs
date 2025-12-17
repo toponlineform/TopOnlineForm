@@ -5,7 +5,7 @@ export const latestJobs = [
 
 
     {
-    id: 109,
+    id: 45,
     title: "Chhattisgarh CGPSC State Service Exam 2025 Apply Online (238 Posts)",
     shortTitle: "CGPSC SSE 2025",
     category: "Latest Jobs",
