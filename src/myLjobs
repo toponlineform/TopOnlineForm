@@ -97,8 +97,7 @@ export const latestJobs = [
       { postName: "Assistant Registrar (Cooperative)", total: "02", eligibility: "Bachelor Degree", age: "21-30/35" },
       { postName: "Employment Officer", total: "01", eligibility: "Bachelor Degree", age: "21-30/35" },
       { postName: "Excise Sub Inspector", total: "01", eligibility: "Degree + Physical", age: "21-30/35" },
-      { postName: "Cooperative Inspector / Extension Officer", total: "12", eligibility: "Bachelor Degree", age: "21-30/35" },
-      { postName: "Total Vacancy", total: "238", eligibility: "-", age: "-" }
+      { postName: "Cooperative Inspector / Extension Officer", total: "12", eligibility: "Bachelor Degree", age: "21-30/35" }
     ],
 
     // 💎 RICH DATA: Physical Standards
