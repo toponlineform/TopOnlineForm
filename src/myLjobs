@@ -11,7 +11,7 @@ export const latestJobs = [
     category: "Latest Jobs",
     state: "Delhi",
     slug: "shs-delhi-multipurpose-health-worker-recruitment-2025",
-    postDate: "17/12/2025",
+    postDate: "08/12/2025",
     shortInfo: "State Health Society (SHS) Delhi, under Delhi State Health Mission (DSHM), has released an official notification for the recruitment of 200 Multipurpose Health Workers (MPHW) on a contractual basis. Eligible candidates (ANM / 12th Pass) can register online for the interview before 23rd December 2025. Salary is ₹30,240/- per month.",
     totalPost: "200 Posts",
     salary: "₹ 30,240/- per month",
