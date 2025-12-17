@@ -429,6 +429,20 @@ function JobDetails() {
        
       {!isSimpleMode && job.ageLimit && (<><div className="section-header">Age Limit</div><p style={{textAlign: 'center', border: '1px solid #000', padding: '10px'}}>{job.ageLimit}</p>{job.ageRelaxation && (<div style={{marginTop: '15px', padding: '0 10px'}}><strong>Age Relaxation:</strong><ul style={{listStyleType: 'disc', marginLeft: '30px', marginTop: '5px'}}>{job.ageRelaxation.map((item, index) => <li key={index} style={{marginBottom: '5px'}}>{item}</li>)}</ul></div>)}</>)}
 
+      {job.eligibility && (
+        <>
+          <div className="section-header">Eligibility Criteria</div>
+          <ul style={{ listStyleType: 'disc', marginLeft: '30px', padding: '10px 0' }}>
+            {job.eligibility.map((item, index) => (
+              <li key={index} style={{ marginBottom: '5px', lineHeight: '1.5' }}>
+                {/* Removes ** markers for cleaner text */}
+                {item.replace(/\*\*/g, '')} 
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+      
       {!isSimpleMode && job.vacancyDetails && <RenderTable data={job.vacancyDetails} title="Vacancy Details" />}
       
       {!isSimpleMode && (job.stateWiseVacancy || job.zoneWiseGraduate) && (<>{job.stateWiseVacancy && <RenderTable data={job.stateWiseVacancy} title={job.vacancyTableTitle} overrideFirstCol={job.vacancyColumnName} showNote={job.stateTableNote} skipCols={job.skipTotalFor} />}{job.zoneWiseGraduate && <RenderTable data={job.zoneWiseGraduate} title="Graduate Level Vacancy" overrideFirstCol={job.vacancyColumnName} />}</>)}
