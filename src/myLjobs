@@ -4,7 +4,92 @@ export const latestJobs = [
   // ==================================================
 
     
+    {
+    id: 45,
+    title: "SHS Delhi Multipurpose Health Worker Recruitment 2025 (200 Posts)",
+    shortTitle: "SHS Delhi MPHW 2025 (200 Posts)",
+    category: "Latest Jobs",
+    state: "Delhi",
+    slug: "shs-delhi-multipurpose-health-worker-recruitment-2025",
+    postDate: "17/12/2025",
+    shortInfo: "State Health Society (SHS) Delhi, under Delhi State Health Mission (DSHM), has released an official notification for the recruitment of 200 Multipurpose Health Workers (MPHW) on a contractual basis. Eligible candidates (ANM / 12th Pass) can register online for the interview before 23rd December 2025. Salary is ₹30,240/- per month.",
+    totalPost: "200 Posts",
+    salary: "₹ 30,240/- per month",
+    ageLimit: "Max 30 Years (One-time relaxation of 10 Years available)",
     
+    // 🔥 SEO Tags
+    tags: "SHS Delhi Recruitment 2025, DSHM MPHW Vacancy, Delhi Health Worker Jobs, ANM Vacancy Delhi, MPHW Contract Job, Delhi Sarkari Result, DSHM Online Form 2025",
+
+    importantDates: [
+      { label: "Notification Date", value: "08 December 2025" },
+      { label: "Registration Start", value: "Started" },
+      { label: "Last Date for Registration", value: "23 December 2025 (05:00 PM)" },
+      { label: "Interview Date", value: "Notify Soon" },
+      { label: "Result Date", value: "After Interview" },
+    ],
+
+    applicationFee: [
+      { category: "All Candidates", amount: "No Fee Mentioned" },
+      { category: "Payment Mode", amount: "N/A" },
+    ],
+
+    eligibility: [
+      "**Option 1:** Auxiliary Nurse Midwife (ANM) or above course registered with Delhi Nursing Council.",
+      "**Option 2:** 12th Pass + Multipurpose Health Worker (MPHW) course from a recognized Institute.",
+      "**Desirable:** 2 Years work experience & Knowledge of Computer."
+    ],
+
+    selectionProcess: [
+      "Online Registration (Mandatory)",
+      "Document Verification",
+      "Personal Interview"
+    ],
+
+    // 💎 RICH DATA: Category Wise Vacancy
+    vacancyDetails: [
+      { postName: "Multipurpose Health Worker (MPHW)", total: "81 (UR)", eligibility: "ANM / 12th+MPHW", age: "Max 30 Yrs" },
+      { postName: "MPHW (OBC)", total: "54", eligibility: "As above", age: "Relaxation Extra" },
+      { postName: "MPHW (SC)", total: "30", eligibility: "As above", age: "Relaxation Extra" },
+      { postName: "MPHW (ST)", total: "15", eligibility: "As above", age: "Relaxation Extra" },
+      { postName: "MPHW (EWS)", total: "20", eligibility: "As above", age: "Relaxation Extra" }
+    ],
+
+    // 💎 RICH DATA: Salary & Documents
+    extraSections: [
+      {
+        title: "Documents Required for Interview",
+        list: [
+          "Printout of Online Registration Acknowledgement Slip.",
+          "10th Certificate (Date of Birth Proof).",
+          "Marksheets, Degree & Certificates of Educational Qualification.",
+          "Experience Certificates (if any).",
+          "Caste / EWS / PWD Certificate (if applicable).",
+          "One set of self-attested photocopies of all documents."
+        ]
+      }
+    ],
+
+    howToApply: [
+      "Visit the official registration link given below.",
+      "Fill in your basic details (Name, DOB, Qualification).",
+      "Submit the form and take a printout of the **Acknowledgement Slip**.",
+      "Wait for the Interview Schedule (to be updated on dshm.delhi.gov.in).",
+      "Carry original documents and the slip to the interview venue."
+    ],
+
+    links: [
+      { title: "Register Online", url: "https://dshm.delhi.gov.in/mis/(S(dzerfimaeg4lysdqdobykbkq))/VaccinationSite/RegistrationForm.aspx" },
+      { title: "Download Notification PDF", url: "https://dshm.delhi.gov.in/(S(i2ni02g32f3qfbcg350s4cvr))/PDF/Advertisement_for_the_Post_of_MPHW.pdf" },
+      { title: "Official Website", url: "https://dshm.delhi.gov.in/" }
+    ],
+
+    faqs: [
+      { question: "What is the last date to register?", answer: "The last date is 23rd December 2025 till 05:00 PM." },
+      { question: "Is there any exam?", answer: "No, selection is based on Interview and Document Verification." },
+      { question: "Is this a permanent job?", answer: "No, this is a contractual post under National Health Mission (PM-ABHIM)." },
+      { question: "What is the salary?", answer: "Fixed monthly remuneration of ₹ 30,240/-." }
+    ]
+  },
     {
     id: 44,
     title: "Assam Police Recruitment 2026 Apply Online for 2,350 Posts (Constable, SI, Driver, Grade IV)",
