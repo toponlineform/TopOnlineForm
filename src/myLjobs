@@ -11,7 +11,7 @@ export const latestJobs = [
     category: "Latest Jobs",
     state: "Chhattisgarh",
     slug: "cgpsc-sse-2025-recruitment-online-form",
-    postDate: "17/12/2025",
+    postDate: "26/11/2025",
     shortInfo: "Chhattisgarh Public Service Commission (CGPSC) has released the official notification (Advt No. 06/2025) for the State Service Examination (SSE) 2025. A total of 238 vacancies are available for posts like Deputy Collector, DSP, Naib Tehsildar, and others. Candidates with a Bachelor's Degree can apply online from 1st December 2025.",
     totalPost: "238 Posts",
     salary: "Level-12, Level-9, Level-7 (Post Wise)",
