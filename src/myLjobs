@@ -77,23 +77,31 @@ export const latestJobs = [
       { postName: "State Service Exam 2025 (Various Posts)", total: "238", eligibility: "Bachelor Degree", age: "21-30/35 Yrs" }
     ],
 
-    // 💎 RICH DATA: Post Wise Breakdown (Generic List)
-    extraSections: [
-      {
-        title: "Posts Included in SSE 2025",
-        list: [
-          "Deputy Collector",
-          "Deputy Superintendent of Police (DSP)",
-          "State Finance Service Officer",
-          "Assistant Director / District Women & Child Development Officer",
-          "District Registrar",
-          "State Tax Assistant Commissioner",
-          "Superintendent District Jail / Assistant Jailor",
-          "Naib Tehsildar",
-          "Labour Officer",
-          "Assistant Registrar (Cooperative Societies)"
-        ]
-      },
+    // 💎 RICH DATA: Post Wise Breakdown
+    vacancyDetails: [
+      { postName: "Deputy Collector", total: "02", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "Dy. Superintendent of Police (DSP)", total: "03", eligibility: "Degree + Physical", age: "21-28/33" },
+      { postName: "State Finance Service Officer", total: "03", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "District Excise Officer", total: "01", eligibility: "Degree + Physical", age: "21-30/35" },
+      { postName: "Assistant Director (Adim Jati/Anusuchit Jati)", total: "03", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "Assistant Director (Panchayat)", total: "05", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "Assistant Director (WCD)", total: "02", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "District Registrar", total: "01", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "State Tax Assistant Commissioner", total: "01", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "Superintendent District Jail", total: "01", eligibility: "Degree + Physical", age: "21-30/35" },
+      { postName: "Chief Executive Officer (Janpad Panchayat)", total: "04", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "Child Development Project Officer (CDPO)", total: "02", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "Subordinate Accounts Service Officer", total: "60", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "Naib Tehsildar", total: "40", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "State Tax Inspector", total: "33", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "Assistant Jailor", total: "60", eligibility: "Degree + Physical", age: "21-30/35" },
+      { postName: "Labour Officer", total: "01", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "Assistant Registrar (Cooperative)", total: "02", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "Employment Officer", total: "01", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "Excise Sub Inspector", total: "01", eligibility: "Degree + Physical", age: "21-30/35" },
+      { postName: "Cooperative Inspector / Extension Officer", total: "12", eligibility: "Bachelor Degree", age: "21-30/35" },
+      { postName: "Total Vacancy", total: "238", eligibility: "-", age: "-" }
+    ],
       {
         title: "Physical Standards (For Uniform Posts)",
         tableData: [
