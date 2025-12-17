@@ -5,17 +5,20 @@ export const latestJobs = [
 
 
     {
-    id: 46,
+    id: 109,
     title: "Chhattisgarh CGPSC State Service Exam 2025 Apply Online (238 Posts)",
     shortTitle: "CGPSC SSE 2025",
     category: "Latest Jobs",
     state: "Chhattisgarh",
     slug: "cgpsc-sse-2025-recruitment-online-form",
-    postDate: "26/11/2025",
+    postDate: "17/12/2025",
     shortInfo: "Chhattisgarh Public Service Commission (CGPSC) has released the official notification (Advt No. 06/2025) for the State Service Examination (SSE) 2025. A total of 238 vacancies are available for posts like Deputy Collector, DSP, Naib Tehsildar, and others. Candidates with a Bachelor's Degree can apply online from 1st December 2025.",
     totalPost: "238 Posts",
     salary: "Level-12, Level-9, Level-7 (Post Wise)",
     ageLimit: "21-30 Years (Other State) | 21-35 Years (CG Domicile)",
+    
+    // ✅ Age column total rokne ke liye
+    skipTotalFor: ["age"],
 
     // 🔥 SEO Tags
     tags: "CGPSC SSE 2025, Chhattisgarh PSC Recruitment, CG State Service Exam, Deputy Collector Vacancy, CGPSC Pre Exam Date 2026, Sarkari Result CGPSC, CGPSC Online Form",
@@ -72,11 +75,6 @@ export const latestJobs = [
       ]
     },
 
-    // 💎 RICH DATA: Vacancy Table
-    vacancyDetails: [
-      { postName: "State Service Exam 2025 (Various Posts)", total: "238", eligibility: "Bachelor Degree", age: "21-30/35 Yrs" }
-    ],
-
     // 💎 RICH DATA: Post Wise Breakdown
     vacancyDetails: [
       { postName: "Deputy Collector", total: "02", eligibility: "Bachelor Degree", age: "21-30/35" },
@@ -102,13 +100,17 @@ export const latestJobs = [
       { postName: "Cooperative Inspector / Extension Officer", total: "12", eligibility: "Bachelor Degree", age: "21-30/35" },
       { postName: "Total Vacancy", total: "238", eligibility: "-", age: "-" }
     ],
+
+    // 💎 RICH DATA: Physical Standards
+    extraSections: [
       {
         title: "Physical Standards (For Uniform Posts)",
         tableData: [
           { category: "Post Name", details: "Height (Male) | Height (Female) | Chest (Male)" },
           { category: "Dy. Superintendent of Police (DSP)", details: "168 cm | 155 cm | 84-89 cm" },
           { category: "District Excise Officer", details: "163 cm | 152.4 cm | 79-84 cm" },
-          { category: "Assistant Jailor", details: "1.65 m | 1.58 m | 0.80 m (Chest)" }
+          { category: "Assistant Jailor", details: "1.65 m | 1.58 m | 0.80 m (Chest)" },
+          { category: "Excise Sub Inspector", details: "165 cm | 152.4 cm | 81-86 cm" }
         ]
       }
     ],
